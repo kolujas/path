@@ -1,0 +1,22 @@
+.text.text-uno{
+    color: var(--color-uno);
+}
+
+.text.text-dos{
+    color: var(--color-dos);
+}
+
+/* * MD */
+@media(min-width: 768px){
+    /**/
+}
+
+/* LG */
+@media(min-width: 1024px){
+    /**/
+}
+
+/* XL */
+@media(min-width: 1200px){
+    /**/
+}

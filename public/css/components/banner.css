@@ -1,0 +1,21 @@
+.banner{
+    min-height: calc(100vh - 4.6rem);
+    background-image: url('/img/banners/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* * MD */
+@media(min-width: 768px){
+    /**/
+}
+
+/* LG */
+@media(min-width: 1024px){
+    /**/
+}
+
+/* XL */
+@media(min-width: 1200px){
+    /**/
+}
