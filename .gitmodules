@@ -1,0 +1,9 @@
+[submodule "public/submodules/NavMenuJS"]
+	path = public/submodules/NavMenuJS
+	url = https://github.com/JuanCruzAGB/NavMenuJS.git
+[submodule "public/submodules/SidebarJS"]
+	path = public/submodules/SidebarJS
+	url = https://github.com/JuanCruzAGB/SidebarJS.git
+[submodule "public/submodules/ScrollDetectionJS"]
+	path = public/submodules/ScrollDetectionJS
+	url = https://github.com/JuanCruzAGB/ScrollDetectionJS.git
