@@ -3,14 +3,18 @@
 
 /** AuthController */
     Route::get('/', 'AuthController@showLogin')->name('auth.showLogin');
-    Route::post('/', 'AuthController@doLogin')->name('auth.doLogin');
+    Route::post('/login', 'AuthController@doLogin')->name('auth.doLogin');
 
 /** ExamController */
-    Route::get('/exam1', 'ExamController@exam1')->name('exam.exam1');
-
+    Route::middleware('auth')->group(function(){
+        Route::middleware('access_granted')->group(function(){
+            Route::get('/exam/{id_exam}', 'ExamController@show')->name('exam.show');
+        });
+        
 /** UserController */
-    Route::post('/user/create', 'UserController@doCreate')->name('user.doCreate');
-    Route::put('/user/{id_user}/edit', 'UserController@doEdit')->name('user.doEdit');
+        Route::post('/user/create', 'UserController@doCreate')->name('user.doCreate');
+        Route::put('/user/{id_user}/edit', 'UserController@doEdit')->name('user.doEdit');
 
 /** WebController */
-    Route::get('/panel', 'WebController@panel')->name('web.panel');
+        Route::get('/panel', 'WebController@panel')->name('web.panel');
+    });

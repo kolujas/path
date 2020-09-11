@@ -2,7 +2,7 @@
 
 @section('head')
     <!-- Layout CSS -->
-    <link href="{{ asset('css/layouts/panel.css') }}" rel="stylesheet">
+    <link href={{ asset('css/layouts/panel.css') }} rel="stylesheet">
 
     <!-- Section CSS -->
     @yield('css')
@@ -28,7 +28,7 @@
 
 @section('extras')
     <!-- Layout CSS -->
-    <script src="{{asset('js/layouts/panel.js')}}"></script>
+    <script src={{ asset('js/layouts/panel.js') }}></script>
 
     <!-- Section JS -->
     @yield('js')

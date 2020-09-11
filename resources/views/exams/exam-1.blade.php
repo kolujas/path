@@ -5,7 +5,7 @@
 @endsection
 
 @section('nav')
-    @component('components.nav.global', ['current' => 'inicio'])
+    @component('components.nav.exam', ['current' => 'exam-1'])
     @endcomponent
 @endsection
 
@@ -57,11 +57,10 @@
 @endsection
 
 @section('js')
-    <script src="{{asset('js/Jquery/jquery-3.0.0.min.js')}}"></script>
-    <script type="module" src="{{asset('js/exams/exam-1.js')}}"></script>
+    <script type="module" src={{ asset('js/exams/exam-1.js') }}></script>
 @endsection
 
 @section('footer')
-    @component('components.footer.global', [])
+    @component('components.footer.call_to_action', [])
     @endcomponent
 @endsection

@@ -9,12 +9,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
         <!-- External repositories CSS -->
-        <link rel="stylesheet" href="{{asset('submodules/SidebarJS/css/styles.css')}}">
-        <link rel="stylesheet" href="{{asset('submodules/NavMenuJS/css/styles.css')}}">
+        <link rel="stylesheet" href={{ asset('submodules/SidebarJS/css/styles.css') }}>
+        <link rel="stylesheet" href={{ asset('submodules/NavMenuJS/css/styles.css') }}>
 
         <!-- Layout CSS -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+        <link href={{ asset('css/app.css') }} rel="stylesheet">
+        <link href={{ asset('css/styles.css') }} rel="stylesheet">
 
         <!-- Section CSS -->
         @yield('head')
@@ -23,6 +23,7 @@
         @yield('body')
 
         <!-- Layout JS -->
+        <script src={{ asset('js/Jquery/jquery-3.0.0.min.js') }}></script>
         <script type="module" src={{asset('js/app.js')}}></script>
 
         <!-- Added extras section -->

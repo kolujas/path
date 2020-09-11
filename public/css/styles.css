@@ -7,15 +7,17 @@
 
 body {
     /* * Given colors. */
-    --color-one: #0F1626;
-    --color-two: #AB987A;
-    --color-three: #BC3F31;
-    --color-four: #F5F5F5;
+    --color-one: #014969;
+    --color-two: #0091B7;
+    --color-three: #757DA4;
+    --color-four: #8B9999;
+    --color-five: #79A786;
+    --color-six: #CEA574;
+    --color-seven: #CA574B;
     /* * Help colors. */
-    --color-five: #000;
-    --color-six: #fff;
-    --color-seven: #FCFCFC;
-    --color-eight: #ddd;
+    --color-eight: #222;
+    --color-nine: #ddd;
+    --color-ten: #bbb;
     /* * Given fonts. */
     --font-one: 'sans-serif';
     --font-two: 'calibri';

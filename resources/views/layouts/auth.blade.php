@@ -2,7 +2,7 @@
 
 @section('head')
     <!-- Layout CSS -->
-    <link href="{{ asset('css/layouts/login.css') }}" rel="stylesheet">
+    <link href={{ asset('css/layouts/auth.css') }} rel="stylesheet">
 
     <!-- Section CSS -->
     @yield('css')
@@ -20,7 +20,7 @@
 
 @section('extras')
     <!-- Layout CSS -->
-    <script src="{{asset('js/layouts/login.js')}}"></script>
+    <script src={{ asset('js/layouts/auth.js') }}></script>
 
     <!-- Section JS -->
     @yield('js')
