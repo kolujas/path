@@ -1,14 +1,28 @@
+/* login centrado */
+
+.centrar-form {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
 /* * MD */
+
 @media(min-width: 768px) {
     /**/
 }
 
+
 /* * LG */
+
 @media(min-width: 1024px) {
     /**/
 }
 
+
 /* * XL */
+
 @media(min-width: 1200px) {
     /**/
 }

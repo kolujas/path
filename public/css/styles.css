@@ -1,8 +1,23 @@
+@import './components/background.css';
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+}
+
+
+/* saco el box-shadow de los input al hacer focus */
+
+input.form-control:focus {
+    box-shadow: none;
+}
+
+
+/* border-color de los input al hacer focus */
+
+input.form-control:focus {
+    border-color: var(--color-two);
 }
 
 body {
@@ -26,17 +41,23 @@ body {
     --font-four: 'calibri';
 }
 
+
 /* * MD */
+
 @media(min-width: 768px) {
     /**/
 }
 
+
 /* * LG */
+
 @media(min-width: 1024px) {
     /**/
 }
 
+
 /* * XL */
+
 @media(min-width: 1200px) {
     /**/
 }
