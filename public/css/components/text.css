@@ -1,22 +1,44 @@
-.text.text-uno{
-    color: var(--color-uno);
+.text.text-one {
+    color: var(--color-one);
 }
 
-.text.text-dos{
-    color: var(--color-dos);
+.text.text-two {
+    color: var(--color-two);
 }
+
+.text.text-three {
+    color: var(--color-three);
+}
+
+.text.text-four {
+    color: var(--color-four);
+}
+
+.text.text-five {
+    color: var(--color-five);
+}
+
+.text.text-six {
+    color: var(--color-six);
+}
+
 
 /* * MD */
-@media(min-width: 768px){
+
+@media(min-width: 768px) {
     /**/
 }
+
 
 /* LG */
-@media(min-width: 1024px){
+
+@media(min-width: 1024px) {
     /**/
 }
 
+
 /* XL */
-@media(min-width: 1200px){
+
+@media(min-width: 1200px) {
     /**/
 }
