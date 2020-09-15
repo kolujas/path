@@ -7,6 +7,12 @@
     list-style: none;
 }
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 h2,
 h3 {
     color: var(--color-one);

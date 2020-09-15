@@ -44,11 +44,9 @@ Rules
                     <label class="custom-file-label" for="inputGroupFile04">Elige tu foto</label>
                 </div>
                 <div class="col-5 d-flex justify-content-end pb-4">
-                    <button type="submit"
-                        class="ingresarBtn btn background background-one text-white">Comenzar</button>
+                    <button type="submit" class="ingresarBtn btn background background-one text-white">Comenzar</button>
                 </div>
             </div>
-
         </div>
     </main>
 </section>
