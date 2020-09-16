@@ -43,7 +43,7 @@ Rules
                         aria-describedby="inputGroupFileAddon04">
                     <label class="custom-file-label" for="inputGroupFile04">Elige tu foto</label>
                 </div>
-                <div class="col-5 d-flex justify-content-end pb-4">
+                <div class="col-5 d-flex justify-content-end pb-3">
                     <button type="submit" class="ingresarBtn btn background background-one text-white">Comenzar</button>
                 </div>
             </div>

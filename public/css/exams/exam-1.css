@@ -1,14 +1,81 @@
+/* ? PRIMERA CONSIGNA */
+
+
+/* * encabezado line-height */
+
+.dropdown-menu-content header h2 {
+    line-height: 1.5rem;
+}
+
+.dropdown-header {
+    white-space: break-spaces;
+    font-size: 1.3rem;
+}
+
+
+/* * bg mark del highlight */
+
+.dropdown .dropdown-header span mark {
+    padding: 0;
+    margin-left: .5rem;
+    background: none;
+    color: var(--color-two);
+}
+
+
+/* * input */
+
+.card .card-body .input-one-question-one {
+    outline: none;
+    border: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px dotted var(--color-one);
+    width: 100%;
+}
+
+
+/* * input focus */
+
+.card .card-body .input-one-question-one:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px dotted var(--color-one);
+}
+
+
+/* * pistas sueltas */
+
+.answer-words li {
+    display: inline;
+    font-size: 1rem;
+}
+
+.answer-words li:nth-of-type(1) {
+    text-decoration: line-through;
+}
+
+
+/* ? SEGUNDA CONSIGNA */
+
+
 /* * MD */
+
 @media(min-width: 768px) {
     /**/
 }
 
+
 /* * LG */
+
 @media(min-width: 1024px) {
     /**/
 }
 
+
 /* * XL */
+
 @media(min-width: 1200px) {
     /**/
 }

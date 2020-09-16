@@ -1,20 +1,20 @@
 @extends('layouts.exam')
 
 @section('css')
-    <link href={{ asset('css/exams/exam-1.css') }} rel="stylesheet">
+<link href={{ asset('css/exams/exam-1.css') }} rel="stylesheet">
 @endsection
 
 @section('nav')
-    @component('components.nav.exam', ['current' => 'exam-1'])
-    @endcomponent
+@component('components.nav.exam', ['current' => 'exam-1'])
+@endcomponent
 @endsection
 
 @section('title')
-    Path
+Path
 @endsection
 
 @section('main')
-    <!-- <section class="col-12 mt-4">
+<!-- <section class="col-12 mt-4">
         <main class="row">
             <div class="col-4">
                 <button type="button" class="btn btn-info text-white text-uppercase">Module 1: writing</button>
@@ -24,43 +24,50 @@
             </div>
         </main>
     </section> -->
-    <section class="questions col-12">
-        <div class="row">
-            <section id="dropdown-question-1" class="question dropdown dropdown-click closed col-12">
-                <a href="#" class="dropdown-header">
-                    <span><i class="fas fa-alert"></i>Pregunta salvaje</span>
-                    <button class="dropdown-button">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
-                    </button>
-                </a>
-                <main class="dropdown-menu-content">
-                    <header>
-                        <h2>¿Está usted seguro de que le gusta el arte?</h2>
-                    </header>
-                    <div>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+<section class="questions col-12">
+    <div class="row">
+        <section id="dropdown-question-1" class="question dropdown dropdown-click closed col-12">
+            <a href="#" class="dropdown-header">
+                <span>1. Match the words to the images.<mark>One is done for you.</mark></span>
+                <button class="dropdown-button">
+                    <i class="dropdown-icon fas fa-sort-down"></i>
+                </button>
+            </a>
+            <main class="dropdown-menu-content">
+                <header>
+                    
+                    <ol class ="my-4 answer-words d-flex justify-content-around">
+                        <li class="inline">Bedroom</li>
+                        <li class="inline">garden</li>
+                        <li class="inline">kitchen</li>
+                        <li class="inline">lounge</li>
+                        <li class="inline">bathroom</li>
+                    </ol>
+                </header>
+                <div class="mb-4">
+                    <div class="card">
+                        <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
+                        <div class="card-body mx-auto">
+                            <input class="input-one-question-one" type="text" name="answer_one">
+                        </div>
                     </div>
-                </main>
-            </section>
-            <section id="dropdown-question-2" class="question dropdown dropdown-click closed col-12">
-                <a href="#" class="dropdown-header">
-                    <span><i class="fas fa-alert"></i>Pregunta salvaje</span>
-                    <button class="dropdown-button">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
-                    </button>
-                </a>
-                <main class="dropdown-menu-content">
-                    <header>
-                        <h2>¿Está usted seguro de que le gusta el arte?</h2>
-                    </header>
-                    <div>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                </main>
-            </section>
-        </div>
-    </section>
-    <!-- <section class="col-12 mt-4">
+                </div>
+            </main>
+        </section>
+        <section id="dropdown-question-2" class="question dropdown dropdown-click closed col-12">
+            <a href="#" class="dropdown-header">
+                <span><i class="fas fa-alert"></i>Pregunta salvaje</span>
+                <button class="dropdown-button">
+                    <i class="dropdown-icon fas fa-sort-down"></i>
+                </button>
+            </a>
+            <main class="dropdown-menu-content">
+
+            </main>
+        </section>
+    </div>
+</section>
+<!-- <section class="col-12 mt-4">
         <div class="input-group estilo-select mb-3 w-100">
             <div class="d-flex d-flex justify-content-center align-items-center text-center numeroDePregunta">
                 <span class="border rounded-circle border-info text-info">1</span>
@@ -93,10 +100,10 @@
 @endsection
 
 @section('js')
-    <script type="module" src={{ asset('js/exams/example-exam.js') }}></script>
+<script type="module" src={{ asset('js/exams/example-exam.js') }}></script>
 @endsection
 
 @section('footer')
-    <!-- @component('components.footer.call_to_action', [])
+<!-- @component('components.footer.call_to_action', [])
     @endcomponent -->
 @endsection
