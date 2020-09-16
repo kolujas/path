@@ -13,4 +13,12 @@
                 //
             ]);
         }
+
+        /**
+         * * Log the User in.
+         * @return [type]
+         */
+        public function doLogin(){
+            
+        }
     }

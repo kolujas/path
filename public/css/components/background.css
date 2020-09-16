@@ -22,6 +22,14 @@
     background-color: var(--color-six);
 }
 
+.background.background-seven {
+    background-color: var(--color-seven);
+}
+
+.background.background-linear {
+    background-image: linear-gradient(45deg, rgba(0, 145, 183, 0.9), rgba(1, 73, 105, 0.9));
+}
+
 
 /* * MD */
 

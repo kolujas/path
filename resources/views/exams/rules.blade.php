@@ -16,7 +16,7 @@ Rules
 @section('main')
 <section class="col-12 rules-container">
     <header class="text-center mb-5">
-        <h2 class="h1 mb-4">Titulo del examen</h2>
+        <h2 class="h1 mb-4 background background-linear">Titulo del examen</h2>
         <span class="text-center timer">00:13:54</span>
     </header>
 
@@ -44,7 +44,7 @@ Rules
                     <label class="custom-file-label" for="inputGroupFile04">Elige tu foto</label>
                 </div>
                 <div class="col-5 d-flex justify-content-end pb-4">
-                    <button type="submit" class="ingresarBtn btn background background-one text-white">Comenzar</button>
+                    <button type="submit" class="btn btn-one">Comenzar</button>
                 </div>
             </div>
         </div>

@@ -1,10 +1,19 @@
 <?php
+    namespace App\Models;
 
-namespace App\Models;
+    use Illuminate\Database\Eloquent\Model;
 
-use Illuminate\Database\Eloquent\Model;
+    class Student extends Model{
+        
+        /** @var string Student primary key. */
+        protected $primaryKey = 'id_student';
 
-class Student extends Model
-{
-    //
-}
+        /**
+         * The attributes that are mass assignable.
+         *
+         * @var array
+         */
+        protected $fillable = [
+            'id_user', 'id_exam',
+        ];
+    }
