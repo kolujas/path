@@ -2,7 +2,6 @@
 
 @section('head')
     <!-- Layout CSS -->
-    <link href={{ asset('submodules/DropdownJS/css/styles.css') }} rel="stylesheet">
     <link href={{ asset('css/layouts/exam.css') }} rel="stylesheet">
 
     <!-- Section CSS -->

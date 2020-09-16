@@ -1,16 +1,47 @@
-.dropdown-header{
+.dropdown {
+    --dropdown-color-one: var(--color-one);
+    /* * Titles */
+    --dropdown-color-one-alternative: var(--color-two);
+    /* * Titles efects */
+    --dropdown-color-two: var(--color-three);
+    /* * Buttons */
+    --dropdown-color-two-alternative: var(--color-four);
+    /* * Buttons effects */
+    --dropdown-color-three: var(--color-three);
+    /* * Background */
+    --dropdown-color-three-alternative: var(--color-seven);
+    /* * Background efects */
+    --dropdown-color-four: var(--color-eight);
+    /* * Borders efects */
+    --dropdown-color-four-alternative: var(--color-nine);
+    /* * Borders efects */
+    --dropdown-color-five: var(--color-ten);
+    /* * Icons */
+    --dropdown-color-five-alternative: var(--color-eleven);
+    /* * Icons efects */
+}
+
+.dropdown-header {
     width: 100%;
 }
 
+
 /* * MD */
+
 @media(min-width: 768px) {
     /**/
 }
+
+
 /* LG */
+
 @media(min-width: 1024px) {
     /**/
 }
+
+
 /* XL */
+
 @media(min-width: 1200px) {
     /**/
 }

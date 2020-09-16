@@ -1,15 +1,13 @@
-.dropdown,
-.nav-menu,
-.sidebar{
-    --color-one: var(--color-tres); /* * Titles */
-    --color-two: var(--color-uno); /* * Buttons */
-    --color-two-alternative: var(--color-dos); /* * Buttons efects */
-    --color-three: var(--color-cuatro); /* * Background */
-    --color-three-alternative: var(--color-cuatro); /* * Background efects */
-    --color-four: var(--color-dos); /* * Borders efects */
-    --color-four-alternative: var(--color-dos); /* * Borders efects */
-    --color-five: var(--color-tres); /* * Icons */
-    --color-five-alternative: var(--color-tres); /* * Icons efects */
+.nav-menu{
+    --navmenu-color-one: var(--color-tres); /* * Titles */
+    --navmenu-color-two: var(--color-uno); /* * Buttons */
+    --navmenu-color-two-alternative: var(--color-dos); /* * Buttons efects */
+    --navmenu-color-three: var(--color-cuatro); /* * Background */
+    --navmenu-color-three-alternative: var(--color-cuatro); /* * Background efects */
+    --navmenu-color-four: var(--color-dos); /* * Borders efects */
+    --navmenu-color-four-alternative: var(--color-dos); /* * Borders efects */
+    --navmenu-color-five: var(--color-tres); /* * Icons */
+    --navmenu-color-five-alternative: var(--color-tres); /* * Icons efects */
 }
 
 .sidebar .sidebar-header{
