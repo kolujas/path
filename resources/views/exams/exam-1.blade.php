@@ -14,7 +14,7 @@
 @endsection
 
 @section('main')
-    <!-- <section class="col-12 mt-4">
+    <section class="col-12 mt-4">
         <main class="row">
             <div class="col-4">
                 <button type="button" class="btn btn-info text-white text-uppercase">Module 1: writing</button>
@@ -53,7 +53,7 @@
         <ol class="pl-0 pt-3" type="a">
             <li class="pr-1">Read about Alice, then fill spaces with am, is or are.</li>
         <ol>
-    </section> -->
+    </section>
 @endsection
 
 @section('js')

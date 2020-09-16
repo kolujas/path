@@ -12,7 +12,7 @@
 
 @section('body')
     <main class="main container-fluid">
-        <div class="row">
+        <div class="row d-flex justify-content-center form-container">
             @yield('main')
         </div>
     </main>

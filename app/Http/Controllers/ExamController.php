@@ -8,8 +8,14 @@
          * * Show the 'panel' page.
          * @return [type]
          */
-        public function examem1(){
+        public function exam1(){
             return view('exams.exam-1', [
+                //
+            ]);
+        }
+
+        public function rules(){
+            return view('exams.rules', [
                 //
             ]);
         }

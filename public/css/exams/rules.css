@@ -1,0 +1,67 @@
+/* * h2 mobile */
+
+
+/* * saco padding del main */
+
+.main {
+    padding: 0;
+}
+
+
+/* *bg del h2 */
+
+.rules-container header h2 {
+    background-color: var(--color-two);
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.rules-container {
+    padding: 0;
+}
+
+
+/* TODO timer */
+
+.timer {
+    font-size: 2rem;
+}
+
+
+/* * reglas del examen párrafo */
+
+.rules-p {
+    line-height: 1.65rem;
+    font-size: 1.1rem;
+}
+
+.checkbox-container label {
+    font-size: .95rem;
+}
+
+
+/* * MD */
+
+@media(min-width: 768px) {
+    /**/
+}
+
+
+/* * LG */
+
+@media(min-width: 1024px) {
+    /**/
+    .rules-box {
+        padding: 0 6rem;
+    }
+}
+
+
+/* * XL */
+
+@media(min-width: 1200px) {
+    /**/
+    .rules-box {
+        padding: 0 14rem;
+    }
+}
