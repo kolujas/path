@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('layouts.panel')
 
 @section('css')
     <link href={{ asset('css/web/panel.css') }} rel="stylesheet">
