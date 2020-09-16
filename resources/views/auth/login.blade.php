@@ -9,29 +9,28 @@ Log In Path
 @endsection
 
 @section('main')
-<section class="centrar-form col-10">
+<section class="centrar-form col-12 col-lg-10">
     <div class="col-12 col-lg-6 form-image-container d-none d-lg-block p-0">
         <img class="img-fluid" src="img/recursos/form-image.jpg" alt="">
     </div>
-    <form class="col-10 col-lg-6" method="post">
-        <div class="text-center my-4">
+    <form class="col-10 col-lg-6 p-lg-4" method="post">
+        <div class="text-center mb-4">
             <!-- <img src="img/recursos/logo.png" alt="Logo de path"> -->
-            <h2 class="text-center text-uppercase mb-2">Path</h2>
+            <h2 class="text-center text-uppercase m-0">Path</h2>
         </div>
-        <div class="form-group">
+        <div class="form-group mb-4">
             <!-- <label class="text-white text-lg-dark" for="email">Email</label> -->
             <input id="email" type="number" name="usuario" class="form-control col-md-6 mx-md-auto col-lg-10 col-xl-8"
                 placeholder="Usuario">
         </div>
-        <div class="form-group mt-4">
+        <div class="form-group mb-4">
             <!-- <label class="text-white text-lg-dark" for="pass">Contraseña</label> -->
             <input id="pass" type="password" name="clave" class="form-control col-md-6 mx-md-auto col-lg-10 col-xl-8"
                 placeholder="Contraseña">
         </div>
-        <div class="col-12 col-lg-10 col-xl-8 ml-lg-3 ml-xl-5 d-flex justify-content-center d-lg-block">
-            <button type="submit" class="ingresarBtn btn background background-one text-white mt-2">Ingresar</button>
+        <div class="col-12 col-lg-10 mx-lg-auto col-xl-8 p-0 d-flex justify-content-center d-lg-block">
+            <button type="submit" class="btn btn-two-transparent">Ingresar</button>
         </div>
-
     </form>
 </section>
 @endsection

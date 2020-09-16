@@ -1,5 +1,8 @@
+@import './components/button.css';
+@import './components/input.css';
 @import './components/background.css';
 @import './components/text.css';
+@import './components/dropdown.css';
 * {
     margin: 0;
     padding: 0;

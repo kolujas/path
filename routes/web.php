@@ -8,9 +8,9 @@
 /** ExamController */
     // Route::middleware('auth')->group(function(){
     //     Route::middleware('access_granted')->group(function(){
+            Route::get('/rules', 'ExamController@rules')->name('exam.rules');
             Route::get('/exam/{id_exam}', 'ExamController@show')->name('exam.show');
         // });
-            Route::get('/rules', 'ExamController@rules')->name('exam.rules');
         
 /** UserController */
         Route::post('/user/create', 'UserController@doCreate')->name('user.doCreate');

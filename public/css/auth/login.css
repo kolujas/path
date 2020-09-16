@@ -21,6 +21,12 @@ h2 {
     color: #fff;
 }
 
+/* * btn two transparent para el login */
+
+.btn.btn-two-transparent{
+    border-color: white;
+    color: white;
+}
 
 /* * MD */
 
@@ -67,6 +73,12 @@ h2 {
     /* * ingresar btn lg*/
     .ingresarBtn {
         margin-left: 1px;
+    }
+
+    /* * btn two transparent para el login para desktop */
+    .btn.btn-two-transparent{
+        border-color: var(--color-two);
+        color: var(--color-one);
     }
 }
 

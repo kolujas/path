@@ -7,3 +7,12 @@
 [submodule "public/submodules/ScrollDetectionJS"]
 	path = public/submodules/ScrollDetectionJS
 	url = https://github.com/JuanCruzAGB/ScrollDetectionJS.git
+[submodule ".\\public\\submodules\\DropdownJS"]
+	path = public/submodules/DropdownJS
+	url = https://github.com/JuanCruzAGB/DropdownJS.git
+[submodule ".\\public\\submodules\\ValidationJS"]
+	path = public/submodules/ValidationJS
+	url = https://github.com/JuanCruzAGB/ValidationJS.git
+[submodule ".\\public\\submodules\\TabMenuJS"]
+	path = public/submodules/TabMenuJS
+	url = https://github.com/JuanCruzAGB/TabMenuJS.git

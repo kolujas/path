@@ -5,17 +5,22 @@
 
     class ExamController extends Controller{
         /**
-         * * Show the 'panel' page.
+         * * Show the 'exam rules' page.
          * @return [type]
          */
-        public function exam1(){
-            return view('exams.exam-1', [
+        public function rules(){
+            return view('exams.rules', [
                 //
             ]);
         }
-
-        public function rules(){
-            return view('exams.rules', [
+        
+        /**
+         * * Show the 'panel' page.
+         * @param null|string $id_exam - Exam primary key.
+         * @return [type]
+         */
+        public function show($id_exam = null){
+            return view('exams.example-exam', [
                 //
             ]);
         }

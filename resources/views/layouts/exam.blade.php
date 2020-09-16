@@ -2,6 +2,7 @@
 
 @section('head')
     <!-- Layout CSS -->
+    <link href={{ asset('submodules/DropdownJS/css/styles.css') }} rel="stylesheet">
     <link href={{ asset('css/layouts/exam.css') }} rel="stylesheet">
 
     <!-- Section CSS -->
@@ -28,7 +29,7 @@
 
 @section('extras')
     <!-- Layout CSS -->
-    <script src={{ asset('js/layouts/exam.js') }}></script>
+    <script type="module" src={{ asset('js/layouts/exam.js') }}></script>
 
     <!-- Section JS -->
     @yield('js')

@@ -11,7 +11,7 @@
 
         <div class="ok-modal flex justify-end p-2">
             <button class="btn btn-tres p-1 flex justify-center mx-2 cancelar">Cancelar</button>
-            <button class="btn btn-dos p-1 flex justify-center mx-2 aceptar">Aceptar</button>
+            <button class="btn btn-seven p-1 flex justify-center mx-2 aceptar">Aceptar</button>
         </div>
     </div>
 </div>
