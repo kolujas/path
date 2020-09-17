@@ -25,8 +25,8 @@ Path
         </main>
     </section> -->
 <section class="questions col-12">
-    <div class="row">
-        <section id="dropdown-question-1" class="question dropdown dropdown-click closed col-12">
+    <div class="row px-4">
+        <section id="dropdown-question-1" class="question dropdown dropdown-click closed col-12 mb-4 mt-5">
             <a href="#" class="dropdown-header">
                 <span>1. Match the words to the images.<mark>One is done for you.</mark></span>
                 <button class="dropdown-button">
@@ -34,16 +34,15 @@ Path
                 </button>
             </a>
             <main class="dropdown-menu-content">
-                <header>
-                    
+                <div>
                     <ol class ="my-4 answer-words d-flex justify-content-around">
                         <li class="inline">Bedroom</li>
-                        <li class="inline">garden</li>
-                        <li class="inline">kitchen</li>
-                        <li class="inline">lounge</li>
-                        <li class="inline">bathroom</li>
+                        <li class="inline">Garden</li>
+                        <li class="inline">Kitchen</li>
+                        <li class="inline">Lounge</li>
+                        <li class="inline">Bathroom</li>
                     </ol>
-                </header>
+                </div>
                 <div class="mb-4">
                     <div class="card">
                         <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
@@ -54,9 +53,9 @@ Path
                 </div>
             </main>
         </section>
-        <section id="dropdown-question-2" class="question dropdown dropdown-click closed col-12">
+        <section id="dropdown-question-2" class="question dropdown dropdown-click closed col-12 mb-4">
             <a href="#" class="dropdown-header">
-                <span><i class="fas fa-alert"></i>Pregunta salvaje</span>
+                <span>2. Complete</span>
                 <button class="dropdown-button">
                     <i class="dropdown-icon fas fa-sort-down"></i>
                 </button>
