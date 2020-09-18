@@ -11,7 +11,7 @@
 @endsection
 
 @section('body')
-    <main class="main container-fluid">
+    <main class="main container-fluid background background-linear">
         <div class="row d-flex justify-content-center form-container">
             @yield('main')
         </div>

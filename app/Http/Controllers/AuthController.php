@@ -18,7 +18,9 @@
          * * Log the User in.
          * @return [type]
          */
-        public function doLogin(){
-            
+        public function doLogin(Request $request){
+            $input = (object)$request->input();
+            dd($input);
+            // Auth::login($user, true);
         }
     }
