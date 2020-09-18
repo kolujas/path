@@ -32,33 +32,70 @@
         /** @var array The validation rules & messages. */
         public static $validation = [
             'login' => [
-
-            ], 'crear' => [
+                'email' => 'required|email|max:100|unique:users',
+                'password' => 'required|min:4|max:40',
+            ], 'create' => [
                 'rules' => [
-                    'id_suscriptor' => 'nullable|numeric|unique:users',
-                    'nombre' => 'required|min:2|max:60',
-                    'correo' => 'required|email|max:100|unique:users',
-                    'clave' => 'required|min:4|max:40|confirmed',
-                    'id_nivel' => 'required',
+                    'candidate_number' => 'required|numeric|unique:users',
+                    'name' => 'required|min:2|max:60',
+                    'email' => 'required|email|unique:users',
+                    'password' => 'nullable|min:4|max:40|confirmed',
+                    'level' => 'required|numeric',
+                    'id_member' => 'required|numeric|unique:users',
+                    'member' => 'required',
                 ], 'messages' => [
                     'es' => [
-                        'id_suscriptor.numeric' => 'El Número de Suscriptor debe ser formato numérico.',
-                        'id_suscriptor.unique' => 'El Número de Suscriptor ya está en uso.',
-                        'nombre.required' => 'El Nombre es obligatorio.',
-                        'nombre.min' => 'El Nombre no puede tener menos de :min caracteres.',
-                        'nombre.max' => 'El Nombre no puede tener más de :max caracteres.',
-                        'correo.required' => 'El Correo es obligatorio.',
-                        'correo.email' => 'El Correo debe ser formato email (ejemplo@correo.com).',
-                        'correo.unique' => 'El Correo ya está en uso.',
-                        'clave.required' => 'La Contraseña es obligatoria.',
-                        'clave.min' => 'La Contraseña no puede tener menos de :min caracteres.',
-                        'clave.max' => 'La Contraseña no puede tener más de :max caracteres.',
-                        'clave.confirmed' => 'Las Contraseñas no coinciden.',
-                        'id_nivel.required' => 'El Nivel de Usuario es obligatorio.',
+                        'candidate_number.required' => 'El número de candidato es obligatorio.',
+                        'candidate_number.numeric' => 'El número de candidato debe ser formato numérico.',
+                        'candidate_number.unique' => 'El número de candidato ya está en uso.',
+                        'name.required' => 'El nombre es obligatorio.',
+                        'name.min' => 'El nombre no puede tener menos de :min caracteres.',
+                        'name.max' => 'El nombre no puede tener más de :max caracteres.',
+                        'email.required' => 'El correo es obligatorio.',
+                        'email.email' => 'El correo debe ser formato email (ejemplo@mail.com).',
+                        'email.unique' => 'El correo ya está en uso.',
+                        'password.min' => 'La contraseña no puede tener menos de :min caracteres.',
+                        'password.max' => 'La contraseña no puede tener más de :max caracteres.',
+                        'password.confirmed' => 'Las contraseñas no coinciden.',
+                        'level.required' => 'El nivel es obligatorio.',
+                        'level.numeric' => 'El nivel debe ser formato numérico.',
+                        'id_member.required' => 'El número de miembro es obligatorio.',
+                        'id_member.numeric' => 'El número de miembro debe ser formato numérico.',
+                        'id_member.unique' => 'El número de miembro ya está en uso.',
+                        'member.required' => 'MENSAJE POR DEFECTO.',
                     ],
                 ],
-            ],'editar' => [
-                //
+            ],'edit' => [
+                'rules' => [
+                    'candidate_number' => 'required|numeric|unique:users',
+                    'name' => 'required|min:2|max:60',
+                    'email' => 'required|email|unique:users',
+                    'password' => 'nullable|min:4|max:40|confirmed',
+                    'level' => 'required|numeric',
+                    'id_member' => 'required|numeric|unique:users',
+                    'member' => 'required',
+                ], 'messages' => [
+                    'es' => [
+                        'candidate_number.required' => 'El número de candidato es obligatorio.',
+                        'candidate_number.numeric' => 'El número de candidato debe ser formato numérico.',
+                        'candidate_number.unique' => 'El número de candidato ya está en uso.',
+                        'name.required' => 'El nombre es obligatorio.',
+                        'name.min' => 'El nombre no puede tener menos de :min caracteres.',
+                        'name.max' => 'El nombre no puede tener más de :max caracteres.',
+                        'email.required' => 'El correo es obligatorio.',
+                        'email.email' => 'El correo debe ser formato email (ejemplo@mail.com).',
+                        'email.unique' => 'El correo ya está en uso.',
+                        'password.min' => 'La contraseña no puede tener menos de :min caracteres.',
+                        'password.max' => 'La contraseña no puede tener más de :max caracteres.',
+                        'password.confirmed' => 'Las contraseñas no coinciden.',
+                        'level.required' => 'El nivel es obligatorio.',
+                        'level.numeric' => 'El nivel debe ser formato numérico.',
+                        'id_member.required' => 'El número de miembro es obligatorio.',
+                        'id_member.numeric' => 'El número de miembro debe ser formato numérico.',
+                        'id_member.unique' => 'El número de miembro ya está en uso.',
+                        'member.required' => 'MENSAJE POR DEFECTO.',
+                    ],
+                ],
             ],
         ];
     }
