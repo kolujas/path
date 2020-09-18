@@ -1,11 +1,11 @@
 @extends('layouts.exam')
 
 @section('css')
-<link href={{ asset('css/exams/exam-1.css') }} rel="stylesheet">
+<link href={{ asset('css/exams/example-exam.css') }} rel="stylesheet">
 @endsection
 
 @section('nav')
-@component('components.nav.exam', ['current' => 'exam-1'])
+@component('components.nav.exam', ['current' => 'example-exam'])
 @endcomponent
 @endsection
 

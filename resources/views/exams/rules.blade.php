@@ -1,12 +1,14 @@
-@extends('layouts.auth')
+@extends('layouts.exam')
 
 @section('css')
 <link href={{ asset('css/exams/rules.css') }} rel="stylesheet">
 @endsection
 
 @section('nav')
-<!-- @component('components.nav.exam', ['current' => 'exam-1'])
-    @endcomponent -->
+    <div class="text-center mb-5">
+        <h2 class="h1 mb-4 background background-linear">Titulo del examen</h2>
+        <span class="text-center timer">00:13:54</span>
+    </div>
 @endsection
 
 @section('title')
@@ -15,11 +17,6 @@ Rules
 
 @section('main')
 <section class="col-12 rules-container">
-    <header class="text-center mb-5">
-        <h2 class="h1 mb-4 background background-linear">Titulo del examen</h2>
-        <span class="text-center timer">00:13:54</span>
-    </header>
-
     <main class="rules-box mt-4">
         <p class="h3 text-left text-uppercase mt-4 pl-4 text text-one">Recordá:</p>
         <p class="rules-p mt-3 px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit facilis illo sunt

@@ -1,4 +1,4 @@
-<nav id="nav-1" class="nav-menu">
+<nav id="nav-exam" class="nav-menu">
     <div class="nav-row">
         <a href="#menu" class="sidebar-button open-btn left">
             <i class="sidebar-icon fas fa-bars"></i>
