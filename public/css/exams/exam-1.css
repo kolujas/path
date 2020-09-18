@@ -1,11 +1,25 @@
-body{
+body {
     min-height: 100vh;
 }
 
-.nav-menu{
-    --navmenu-color-two: #fff; /* * Buttons */
-    --navmenu-color-one: #fff; /* * titles */
-    --navmenu-color-three: transparent; /* * Background */
+/* * input underline */
+
+.input-underline{
+    outline: none;
+    border: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid var(--color-one);
+}
+
+.nav-menu {
+    --navmenu-color-two: #fff;
+    /* * Buttons */
+    --navmenu-color-one: #fff;
+    /* * titles */
+    --navmenu-color-three: transparent;
+    /* * Background */
     background-image: linear-gradient(45deg, rgba(0, 145, 183, 0.9), rgba(1, 73, 105, 0.9));
 }
 
@@ -70,6 +84,66 @@ body{
 
 /* ? SEGUNDA CONSIGNA */
 
+/* * input que hay que completar */
+.input-one-question-two {
+    outline: none;
+    border: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid var(--color-one);
+    width: 4rem;
+}
+
+/* * parrafono a completar */
+
+.second-question-container p {
+    font-size: 1.1rem;
+}
+
+/* * parte remarcada del parrafono */
+.second-question-container strong {
+    color: var(--color-one);
+}
+
+/* ? TERCERA CONSIGNA */
+
+/* ? CUARTA CONSIGNA */
+
+.input-one-question-four{
+    width: 12%;
+}
+
+.input-one-question-four[value]{
+    padding-left: 1rem;
+    color: var(--color-two);
+}
+
+/* ? SEXTA CONSIGAN */
+
+/* * sangria del textarea */
+
+.my-friend{
+    position: absolute;
+    left: .5rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    color: var(--color-two);
+}
+
+.fifth-question-container textarea{
+    outline: none;
+    resize: none;
+    width: 20rem;
+    height: 10rem;
+    line-height: 1.9rem;
+    text-indent: 5rem;
+}
+
+textarea{
+    color: var(--color-two);
+    
+}
 
 /* * MD */
 
@@ -81,7 +155,14 @@ body{
 /* * LG */
 
 @media(min-width: 1024px) {
-    /**/
+    /* * ancho por defecto en lg */
+    .card-min-width{
+        min-width: 19%;
+    }
+
+    .dropdown.opened .second-question-container{
+        padding: 0 1rem 1rem 1rem;
+    }
 }
 
 
