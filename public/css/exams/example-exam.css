@@ -114,9 +114,13 @@ body {
     width: 12%;
 }
 
+.input-one-question-four{
+    width: 2rem;
+}
+
 .input-one-question-four[value]{
-    padding-left: 1rem;
     color: var(--color-two);
+    text-align: center;
 }
 
 /* ? SEXTA CONSIGAN */
@@ -148,7 +152,10 @@ textarea{
 /* * MD */
 
 @media(min-width: 768px) {
-    /**/
+    .fifth-question-container textarea{
+        width: 40rem;
+        height: 13rem;
+    }
 }
 
 
@@ -162,6 +169,11 @@ textarea{
 
     .dropdown.opened .second-question-container{
         padding: 0 1rem 1rem 1rem;
+    }
+
+    .fifth-question-container textarea{
+        width: 50rem;
+        height: 13rem;
     }
 }
 

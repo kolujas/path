@@ -125,7 +125,7 @@ Path
             </a>
             <main class="dropdown-menu-content second-question-container">
                 <div>
-                    <p>Hello! My friend Beth and I <input class="input-underline input-one-question-four" type="text"> good friends. She <input class="input-underline input-one-question-four" type="text">10 years old and I <input class="input-underline input-one-question-four" type="text">.My hair <input class="input-underline input-one-question-four" value="is" type="text">short. Beth's hair <input class="input-underline input-one-question-four" type="text">long. </p>
+                    <p>Hello! My friend Beth and I <input class="input-underline input-one-question-four" type="text"> good friends. She <input class="input-underline input-one-question-four" type="text">10 years old and I <input class="input-underline input-one-question-four" type="text">.My hair <input class="input-underline input-one-question-four" disabled value="is" type="text">short. Beth's hair <input class="input-underline input-one-question-four" type="text">long. </p>
                 </div>
             </main>
         </section>
