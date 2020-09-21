@@ -128,36 +128,48 @@ body {
 /* * sangria del textarea */
 
 .my-friend{
+    /* left: .5rem; */
     position: absolute;
-    left: .5rem;
+    left: calc(15px + .2rem);
     line-height: 2rem;
     font-size: 1rem;
     color: var(--color-two);
 }
 
 .fifth-question-container textarea{
+    /* width: 20rem; */
+    /* text-indent: 5rem; */
     outline: none;
     resize: none;
-    width: 20rem;
+    width: 100%;
     height: 10rem;
     line-height: 1.9rem;
-    text-indent: 5rem;
+    text-indent: 4.5rem;
 }
 
 textarea{
     color: var(--color-two);
-    
+}
+
+/* * card */
+
+.card{
+    border: none;
 }
 
 /* * MD */
 
 @media(min-width: 768px) {
     .fifth-question-container textarea{
-        width: 40rem;
+        /* width: 40rem; */
         height: 13rem;
     }
-}
 
+    .questions > .row {
+        width: 100%;
+        margin: 0;
+    }
+}
 
 /* * LG */
 
@@ -168,11 +180,11 @@ textarea{
     }
 
     .dropdown.opened .second-question-container{
-        padding: 0 1rem 1rem 1rem;
+        /* padding: 0 1rem 1rem 1rem; */
     }
 
     .fifth-question-container textarea{
-        width: 50rem;
+        /* width: 50rem; */
         height: 13rem;
     }
 }

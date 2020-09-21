@@ -1,3 +1,6 @@
+@import '../components/floating.css';
+@import '../components/tab.css';
+
 /* * MD */
 @media(min-width: 768px) {
     /**/

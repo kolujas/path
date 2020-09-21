@@ -16,3 +16,6 @@
 [submodule ".\\public\\submodules\\TabMenuJS"]
 	path = public/submodules/TabMenuJS
 	url = https://github.com/JuanCruzAGB/TabMenuJS.git
+[submodule ".\\public\\submodules\\FloatingMenuJS"]
+	path = .\\public\\submodules\\FloatingMenuJS
+	url = https://github.com/JuanCruzAGB/FloatingMenuJS.git

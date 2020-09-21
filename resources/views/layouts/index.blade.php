@@ -9,9 +9,11 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
         <!-- External repositories CSS -->
+        <link rel="stylesheet" href={{ asset('submodules/FloatingMenuJS/css/styles.css') }}>
         <link rel="stylesheet" href={{ asset('submodules/SidebarJS/css/styles.css') }}>
         <link rel="stylesheet" href={{ asset('submodules/NavMenuJS/css/styles.css') }}>
         <link rel="stylesheet" href={{ asset('submodules/DropdownJS/css/styles.css') }}>
+        <link rel="stylesheet" href={{ asset('submodules/TabMenuJS/css/styles.css') }}>
 
         <!-- Layout CSS -->
         <link href={{ asset('css/app.css') }} rel="stylesheet">

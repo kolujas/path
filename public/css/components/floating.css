@@ -1,0 +1,27 @@
+.floating-menu {
+    display: flex;
+    align-items: center;
+    height: 4.6rem;
+    --floatingmenu-color-one: var(--color-one);
+    --floatingmenu-color-two: #fff;
+}
+
+.floating-menu .floating-button {
+    border-radius: 50%;
+}
+
+/* * MD */
+@media (min-width: 768px) {
+    /**/
+}
+
+/* * LG */
+@media (min-width: 1024px) {
+    /**/
+}
+
+
+/* * XL */
+@media (min-width: 1200px) {
+    /**/
+}

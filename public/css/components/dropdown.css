@@ -11,17 +11,47 @@
     --dropdown-color-five-alternative: var(--color-eleven); /* * Icons efects */
     background-color: #fff;
     box-shadow: 4px 5px 9px 1px rgba(0, 0, 0, 0.3);
+    border-radius: .25rem;
+    overflow: hidden;
+    padding: 0;
 }
 
-.dropdown-header {
+.dropdown.opened{
+    overflow: hidden;
+}
+
+.dropdown .dropdown-header{
     width: 100%;
+    line-height: 1.2;
+    border-radius: 0;
+    min-height: 5rem;
+    padding: 1rem .5rem;
+    transition: 500ms;
 }
 
+.dropdown:hover .dropdown-header,
+.dropdown.opened .dropdown-header {
+    background-color: var(--color-one);
+    color: var(--color-nine);
+}
+
+.dropdown .dropdown-header .dropdown-button {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.dropdown .dropdown-menu-list, .dropdown .dropdown-menu-content {
+    margin-top: 0;
+}
 
 /* * MD */
 
 @media(min-width: 768px) {
-    /**/
+    .dropdown .dropdown-header,
+    .dropdown.opened .dropdown-header {
+        padding: 1rem;
+    }
 }
 
 

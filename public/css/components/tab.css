@@ -1,0 +1,32 @@
+.tab-menu {
+    --tabmenu-title-color: #222;
+    --tabmenu-button-color: var(--color-one);
+    --tabmenu-button-color-alternative: var(--color-two);
+    --tabmenu-background-color: #fff;
+    --tabmenu-background-color-alternative: #fff;
+    --tabmenu-border-color: #ddd;
+    --tabmenu-border-color-alternative: #ddd;
+    --tabmenu-icon-color: #ddd;
+    --tabmenu-icon-color-alternative: #ddd;
+    --tabmenu-shadow-color: #32B1DA;
+}
+
+.tab-menu.horizontal .tab-menu-list {
+    padding-left: calc(((100% - 83.3333333333%) / 2 + 1rem));
+}
+
+/* * MD */
+@media (min-width: 768px) {
+    /**/
+}
+
+/* * LG */
+@media (min-width: 1024px) {
+    /**/
+}
+
+
+/* * XL */
+@media (min-width: 1200px) {
+    /**/
+}
