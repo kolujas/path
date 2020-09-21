@@ -1,16 +1,16 @@
 @extends('layouts.exam')
 
 @section('css')
-<link href={{ asset('css/exams/example-exam.css') }} rel="stylesheet">
+    <link href={{ asset('css/exams/example-exam.css') }} rel="stylesheet">
 @endsection
 
 @section('nav')
-@component('components.nav.exam', ['current' => 'example-exam'])
-@endcomponent
+    @component('components.nav.exam', ['current' => 'example-exam'])
+    @endcomponent
 @endsection
 
 @section('title')
-Path
+    Path
 @endsection
 
 @section('main')
@@ -30,23 +30,13 @@ Path
             @endcomponent
 		</section>
 	</div>
-<!-- <section class="col-12 mt-4">
-        <main class="row">
-            <div class="col-4">
-                <button type="button" class="btn btn-info text-white text-uppercase">Module 1: writing</button>
-            </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-info text-white text-uppercase">Module 2: listening</button>
-            </div>
-        </main>
-    </section> -->
 @endsection
 
 @section('js')
-<script type="module" src={{ asset('js/exams/example-exam.js') }}></script>
+    <script type="module" src={{ asset('js/exams/example-exam.js') }}></script>
 @endsection
 
 @section('footer')
-<!-- @component('components.footer.call_to_action', [])
+    <!-- @component('components.footer.call_to_action', [])
     @endcomponent -->
 @endsection
