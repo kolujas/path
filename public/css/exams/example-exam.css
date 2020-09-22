@@ -157,6 +157,34 @@ textarea{
     border: none;
 }
 
+/* ? LISTENING MODULE */
+
+.input-tabla{
+    width: 2rem;
+}
+
+.table-question-3{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.question-listening table th{
+         border: 1px solid #ccc;
+}
+
+
+/* table th{
+    width: 50%;
+}
+
+.input-letters::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} */
+
 /* * MD */
 
 @media(min-width: 768px) {
@@ -179,13 +207,23 @@ textarea{
         min-width: 19%;
     }
 
-    .dropdown.opened .second-question-container{
-        /* padding: 0 1rem 1rem 1rem; */
-    }
+    
 
     .fifth-question-container textarea{
         /* width: 50rem; */
         height: 13rem;
+    }
+
+    /* ? tabla consigna 3 listening */
+
+    .table-question-3{
+        width: 60%;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+    
+    .table-question-3 th{
+        border: 1px solid #ccc;
     }
 }
 
