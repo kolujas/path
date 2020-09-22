@@ -12,7 +12,7 @@ export class URL{
      */
     static findHashParameter(){
         let hash = /#/
-        if(hash.exec(window.location.href)){
+        if(!hash.exec(window.location.href)){
             return false;
         }
         return window.location.href.split('#').pop().split('?').shift();

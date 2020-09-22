@@ -4,8 +4,9 @@
             <i class="sidebar-icon fas fa-bars"></i>
         </a>
         
-        <a href="/" class="nav-title">
-            <h1>NavMenuJS</h1>
+        <a href="/" class="nav-title logo flex items-center">
+            <img src="/img/recursos/logo_white.png" alt="Path">
+            <h1>Path</h1>
         </a>
         
         <a href="#filters" class="sidebar-button open-btn right">

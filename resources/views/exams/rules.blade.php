@@ -20,7 +20,7 @@
         <main class="rules-box mt-4">
             <form action="/auth/exam/{{$exam->id_exam}}" method="post" enctype="multipart/form-data">
                 @csrf
-                <p class="h3 text-left text-uppercase mt-4 pl-4 text text-one">Recordá:</p>
+                <p class="h3 text-left text-uppercase mt-4 pl-4 text text-one">Rememeber:</p>
                 <p class="rules-p mt-3 px-4">{{ $exam->rules }}</p>
                 <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">
                     <input class="form-check-input" type="checkbox" name="accept" id="defaultCheck1">
@@ -49,7 +49,7 @@
                             @endif
                         </div>
                         <div class="col-5 d-flex justify-content-end pb-4 p-0">
-                            <button type="submit" class="btn btn-one">Comenzar</button>
+                            <button type="submit" class="btn btn-one">Start</button>
                         </div>
                     </div>
                 </div>

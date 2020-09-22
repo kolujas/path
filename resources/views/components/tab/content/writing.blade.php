@@ -1,4 +1,4 @@
-<section id="writing" class="tab-content opened">
+<section id="writing" class="tab-content closed">
     <section class="questions">
         <div class="row px-4 py-md-4 justify-content-lg-center">
             <section id="dropdown-question-1" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">

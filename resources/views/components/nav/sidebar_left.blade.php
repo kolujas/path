@@ -1,6 +1,7 @@
 <div id="menu" class="sidebar left closed push-body">
     <div class="sidebar-header">
-        <div class="sidebar-title">
+        <div class="sidebar-title logo">
+            <img src="/img/recursos/logo.png" alt="Path">
             <h2>Menu</h2>
         </div>
         <a href="#" class="sidebar-button close-btn left">

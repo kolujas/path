@@ -16,8 +16,8 @@
         <form class="col-10 col-lg-6 p-lg-4" method="post" action="/login">
             @csrf
             <div class="text-center mb-4">
-                <!-- <img src="img/recursos/logo.png" alt="Logo de path"> -->
-                <h2 class="text-center text-uppercase m-0">Path</h2>
+                <img class="logo" src="img/recursos/logo.png" alt="Logo de path">
+                <!-- <h2 class="text-center text-uppercase m-0">Path</h2> -->
             </div>
             <div class="form-group mb-4">
                 <input id="data" type="text" name="data" class="form-control col-md-6 mx-md-auto col-lg-10 col-xl-8"
