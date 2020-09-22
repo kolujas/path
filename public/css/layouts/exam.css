@@ -1,5 +1,6 @@
-@import '../components/floating.css';
-@import '../components/tab.css';
+.input-img{
+    position: absolute;
+}
 
 /* * MD */
 @media(min-width: 768px) {

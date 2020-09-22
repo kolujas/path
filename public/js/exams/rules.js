@@ -1,28 +1,31 @@
-// function chrono() {
-//     var startTime = 0,
-//         start = 0,
-//         end = 0,
-//         diff = 0,
-//         timerID = 0;
+import { InputFileMaker as InputFileMakerJS } from "../../submodules/InputFileMakerJS/js/InputFileMaker.js";
+import { CountDown } from "../CountDown.js";
+import { Notification as NotificationJS } from "../../submodules/NotificationJS/js/Notification.js";
 
-//     end = new Date();
-//     diff = end - start;
-//     diff = new Date(diff);
-//     var msec = diff.getMilliseconds();
-//     var sec = diff.getSeconds();
-//     var min = diff.getMinutes();
-//     var hr = diff.getHours();
+document.addEventListener('DOMContentLoaded', function(e){
+    let input = new InputFileMakerJS({
+        id: 'ID',
+    });
 
-//     if (min < 10) { min = "0" + min; }
-//     if (sec < 10) { sec = "0" + sec; }
+    let countDown = new CountDown({
+        scheduled_date_time: exam.scheduled_date_time,
+        timer: {
+            days: true,
+            hours: true,
+            minutes: true,
+            seconds: true,
+        }, message: 'Exam started'
+    }, document.querySelector(".timer"));
 
-//     document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec;
-//     timerID = setTimeout("chrono()", 10)
-// }
-
-// function chronoStart() {
-//     start = new Date();
-//     chrono();
-// }
-
-// chronoStart();
+    let notifications = [];
+    if(status){
+        notifications.push(new NotificationJS({
+            id: 'notification-1',
+            code: status.code,
+            message: status.message,
+        }, { show: true }, {
+            element: document.querySelector('body'),
+            insertBefore: document.querySelector('body').children[0]
+        }));
+    }
+});

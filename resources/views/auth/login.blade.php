@@ -20,20 +20,38 @@
                 <h2 class="text-center text-uppercase m-0">Path</h2>
             </div>
             <div class="form-group mb-4">
-                <input id="email" type="text" name="data" class="form-control col-md-6 mx-md-auto col-lg-10 col-xl-8"
-                    placeholder="Usuario">
+                <input id="data" type="text" name="data" class="form-control col-md-6 mx-md-auto col-lg-10 col-xl-8"
+                    placeholder="User Name" title="Required">
+                @if($errors->has("data"))
+                    <span class="support support-box support-data error w-full">{{ $errors->first("data") }}</span>
+                @else
+                    <span class="support support-box support-data error w-full"></span>
+                @endif
             </div>
-            <div class="form-group mb-4">
-                <input id="pass" type="password" name="password" class="form-control col-md-6 mx-md-auto col-lg-10 col-xl-8"
-                    placeholder="Contraseña">
+            <div class="form-group mb-4 position-relative">
+                <label for='password' class="see-password">
+                    <i class="fas fa-eye"></i>
+                </label>
+                <input id="password" type="password" name="password" class="form-control col-md-6 mx-md-auto col-lg-10 col-xl-8"
+                    placeholder="Password" title="Required">
+                @if($errors->has("password"))
+                    <span class="support support-box support-password error w-full">{{ $errors->first("password") }}</span>
+                @else
+                    <span class="support support-box support-password error w-full"></span>
+                @endif
             </div>
             <div class="col-12 col-lg-10 mx-lg-auto col-xl-8 p-0 d-flex justify-content-center d-lg-block">
-                <button type="submit" class="btn btn-two-transparent">Ingresar</button>
+                <button type="submit" class="btn btn-two-transparent">Log In</button>
             </div>
         </form>
     </section>
 @endsection
 
 @section('js')
+    <script>
+        @if(Session::has('status'))
+        const status = @json(Session::get('status'));
+        @endif
+    </script>
     <script type="module" src={{ asset('js/auth/login.js') }}></script>
 @endsection

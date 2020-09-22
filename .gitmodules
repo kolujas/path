@@ -17,5 +17,11 @@
 	path = public/submodules/TabMenuJS
 	url = https://github.com/JuanCruzAGB/TabMenuJS.git
 [submodule ".\\public\\submodules\\FloatingMenuJS"]
-	path = .\\public\\submodules\\FloatingMenuJS
+	path = public/submodules/FloatingMenuJS
 	url = https://github.com/JuanCruzAGB/FloatingMenuJS.git
+[submodule ".\\public\\submodules\\NotificationJS"]
+	path = public/submodules/NotificationJS
+	url = https://github.com/JuanCruzAGB/NotificationJS.git
+[submodule ".\\public\\submodules\\InputFileMakerJS"]
+	path = public/submodules/InputFileMakerJS
+	url = https://github.com/JuanCruzAGB/InputFileMakerJS.git

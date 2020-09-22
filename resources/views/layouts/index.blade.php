@@ -14,6 +14,8 @@
         <link rel="stylesheet" href={{ asset('submodules/NavMenuJS/css/styles.css') }}>
         <link rel="stylesheet" href={{ asset('submodules/DropdownJS/css/styles.css') }}>
         <link rel="stylesheet" href={{ asset('submodules/TabMenuJS/css/styles.css') }}>
+        <link rel="stylesheet" href={{ asset('submodules/NotificationJS/css/styles.css') }}>
+        <link rel="stylesheet" href={{ asset('submodules/InputFileMakerJS/css/styles.css') }}>
 
         <!-- Layout CSS -->
         <link href={{ asset('css/app.css') }} rel="stylesheet">

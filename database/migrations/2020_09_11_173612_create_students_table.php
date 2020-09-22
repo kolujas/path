@@ -14,6 +14,7 @@
                 $table->increments('id_student')->unique();
                 $table->unsignedInteger('id_user');
                 $table->unsignedInteger('id_exam');
+                $table->string('file')->nullable();
                 $table->timestamps();
             });
         }

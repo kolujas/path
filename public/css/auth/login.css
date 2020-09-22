@@ -1,3 +1,30 @@
+/* * notification js */
+.notification{
+    position: fixed;
+    z-index: 1;
+}
+
+/* * ver contraseña */
+.see-password {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: calc(100% - 1px);
+    color: var(--color-one);
+    transition: 500ms;
+    z-index: 1;
+}
+
+.see-password.active,
+.see-password:hover {
+    color: var(--color-two);
+}
+
 /* * login centrado */
 
 .centrar-form {
@@ -17,7 +44,7 @@
 
 /* * color del h2 */
 
-h2 {
+.main h2 {
     color: #fff;
 }
 
@@ -31,21 +58,28 @@ h2 {
 /* * MD */
 
 @media(min-width: 768px) {
-    /**/
+    /* * ver contraseña */
+    .see-password {
+        right: 25%;
+    }
 }
 
 
 /* * LG */
 
 @media(min-width: 1024px) {
-    /**/
+    /* * ver contraseña */
+    .see-password {
+        right: calc( ( 100% - 83.3333333333% ) / 2 );
+    }
+
     /* * background login-wrapper lg */
     .form-container {
         min-height: 100vh;
         align-items: center;
     }
     /* *color del h2 en laptop */
-    h2 {
+    .main h2 {
         color: #222;
     }
     .centrar-form {
@@ -86,7 +120,12 @@ h2 {
 /* * XL */
 
 @media(min-width: 1200px) {
-    /**/
+    /* * ver contraseña */
+    .see-password {
+        right: calc( ( 100% - 83.3333333333% ) / 2 );
+        right: calc( ( 100% - 66.6666666667% ) / 2 );
+    }
+
     .ingresarBtn {
         margin-left: 1.5rem;
     }

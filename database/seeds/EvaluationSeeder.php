@@ -2,7 +2,7 @@
     use App\Models\Evaluation;
     use Illuminate\Database\Seeder;
 
-    class EvalutionSeeder extends Seeder {
+    class EvaluationSeeder extends Seeder {
         /**
          * Run the database seeds.
          *

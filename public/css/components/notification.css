@@ -1,0 +1,23 @@
+.notification{
+    --success: var(--color-five);
+    --error: var(--color-seven);
+    --info: var(--color-one);
+    --warning: var(--color-six);
+    --question: var(--color-three);
+}
+
+/* * MD */
+@media(min-width: 768px){
+    /**/
+}
+
+/* * LG */
+@media(min-width: 1024px){
+    /**/
+}
+
+
+/* * XL */
+@media(min-width: 1200px){
+    /**/
+}

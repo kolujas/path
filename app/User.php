@@ -17,7 +17,7 @@
          * @var array
          */
         protected $fillable = [
-            'candidate_number', 'name', 'email', 'password', 'date_of_birth', 'level', 'id_member', 'member',
+            'candidate_number', 'name', 'email', 'password', 'date_of_birth', 'level', 'id_role', 'id_member', 'member',
         ];
 
         /**
@@ -28,12 +28,42 @@
         protected $hidden = [
             'password', 'remember_token',
         ];
+
+        public function role(){
+            $role = [];
+            switch ($this->id_role) {
+                case 1:
+                    $role['id_role'] = 1;
+                    $role['name'] = 'Student';
+                    break;
+                case 2:
+                    $role['id_role'] = 2;
+                    $role['name'] = 'Administrator';
+                    break;
+            }
+            $this->attributes['role'] = (object) $role;
+            return (object) $role;
+        }
         
         /** @var array The validation rules & messages. */
         public static $validation = [
             'login' => [
-                'email' => 'required|email|max:100|unique:users',
-                'password' => 'required|min:4|max:40',
+                'rules' => [
+                    'data' => 'required',
+                    'password' => 'required|min:4|max:40',
+                ], 'messages' => [
+                    'en' => [
+                        'data.required' => 'The Data is required.',
+                        'password.required' => 'The Password is required.',
+                        'password.min' => 'The Password cannot be less than :min characters.',
+                        'password.max' => 'The Password cannot be more than :max characters.',
+                    ], 'es' => [
+                        'data.required' => 'El Dato es obligatorio.',
+                        'password.required' => 'La Contraseña es obligatoria.',
+                        'password.min' => 'La Contraseña no puede tener menos de :min caracteres.',
+                        'password.max' => 'La Contraseña no puede tener más de :max caracteres.',
+                    ],
+                ]
             ], 'create' => [
                 'rules' => [
                     'candidate_number' => 'required|numeric|unique:users',

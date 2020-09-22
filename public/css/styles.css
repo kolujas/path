@@ -3,6 +3,10 @@
 @import './components/background.css';
 @import './components/text.css';
 @import './components/dropdown.css';
+@import './components/floating.css';
+@import './components/floating.css';
+@import './components/tab.css';
+
 * {
     margin: 0;
     padding: 0;

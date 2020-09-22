@@ -13,7 +13,7 @@
             Schema::create('exams', function (Blueprint $table) {
                 $table->increments('id_exam')->unique();
                 $table->string('name');
-                $table->text('rules');
+                $table->text('rules')->nullable();
                 $table->string('password');
                 $table->date('scheduled_date_time');
                 $table->timestamps();

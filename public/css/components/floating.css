@@ -1,9 +1,12 @@
 .floating-menu {
+    position: absolute;
     display: flex;
     align-items: center;
     height: 4.6rem;
     --floatingmenu-color-one: var(--color-one);
     --floatingmenu-color-two: #fff;
+    width: calc(((100% - 83.3333333333%) / 2 + 1rem));
+    justify-content: center;
 }
 
 .floating-menu .floating-button {
@@ -17,7 +20,9 @@
 
 /* * LG */
 @media (min-width: 1024px) {
-    /**/
+    .floating-menu {
+        position: fixed;
+    }
 }
 
 

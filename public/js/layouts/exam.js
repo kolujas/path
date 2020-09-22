@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function(e){
         }));
     }
 
-    let tab = new TabMenuJS({
-        id: 'tab-exam',
-    }, {
-        open: [document.querySelector('.tab-content').id],
-        active: URL.findHashParameter(),
-    });
-
-    console.log(tab);
+    if(document.querySelector('.tab-content')){
+        let tab = new TabMenuJS({
+            id: 'tab-exam',
+        }, {
+            open: [document.querySelector('.tab-content').id],
+            active: URL.findHashParameter(),
+        });
+    }
 });
