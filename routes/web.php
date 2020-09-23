@@ -19,13 +19,15 @@
                 Route::get('/exam/{id_exam}', 'ExamController@show')->name('exam.show');
             // });
         // });
+        // Route::middleware('admin')->group(function(){
+            Route::get('/panel/exams', 'ExamController@panel')->name('exam.panel');
         
     /** 
      * ! UserController
      */
-        // Route::middleware('admin')->group(function(){
             Route::post('/user/create', 'UserController@doCreate')->name('user.doCreate');
             Route::put('/user/{id_user}/edit', 'UserController@doEdit')->name('user.doEdit');
+            Route::get('/panel/users', 'UserController@panel')->name('user.panel');
 
     /** 
      * ! WebController

@@ -1,3 +1,17 @@
+.tab-menu {
+    --tabmenu-title-color: var(--color-nine);
+    --tabmenu-button-color: var(--color-nine);
+    --tabmenu-button-color-alternative: var(--color-one);
+    --tabmenu-background-color: transparent;
+    --tabmenu-background-color-alternative: transparent;
+    --tabmenu-border-color: #ddd;
+    --tabmenu-border-color-alternative: #ddd;
+    --tabmenu-icon-color: #ddd;
+    --tabmenu-icon-color-alternative: #ddd;
+    --tabmenu-shadow-color: #32B1DA;
+    min-height: 100vh;
+}
+
 /* * MD */
 @media(min-width: 768px) {
     /**/
