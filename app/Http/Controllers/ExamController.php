@@ -52,7 +52,7 @@
          * @return [type]
          */
         public function show($id_exam = null){
-            if(!Exam::find($id_exam)){
+            if(!$exam = Exam::find($id_exam)){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
                     'message' => 'Exam not found.',
@@ -60,7 +60,8 @@
             }
 
             return view('exams.example-exam', [
-                //
+                'modules' => $this->getModules($exam->level),
+                'exam' => $exam,
             ]);
         }
         
@@ -147,5 +148,9 @@
                 'code' => 200,
                 'message' => "Exam deleted correctly.",
             ]);
+        }
+
+        public function getModules($level = null){
+            dd($level);
         }
     }

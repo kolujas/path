@@ -20,13 +20,15 @@
         </span>
     </div>
     <div id="tab-exam" class="col-12 relative tab-menu horizontal p-0">
-		@component('components.tab.tab.modules')
+		@component('components.tab.tab.modules', [
+            'modules' => $modules,
+        ])
 		@endcomponent
 
 		<section class="tab-content-list mx-auto">
-            @component('components.tab.content.writing')
+            @component("components.tab.content.$exam->level.writing")
             @endcomponent
-            @component('components.tab.content.listening')
+            @component("components.tab.content.$exam->level.listening")
             @endcomponent
 		</section>
 	</div>
