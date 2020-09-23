@@ -25,6 +25,10 @@ h3 {
     color: var(--color-one);
 }
 
+audio{
+    outline: none;
+}
+
 
 /* * saco el box-shadow de los input al hacer focus */
 

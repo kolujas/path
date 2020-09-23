@@ -159,9 +159,21 @@ textarea{
 
 /* ? LISTENING MODULE */
 
+/* color de fondo de los inputs en listening */
+
+.question-listening input{
+    background-color: transparent;
+    text-align: center;
+
+}
+
+/* input tabla */
+
 .input-tabla{
     width: 2rem;
 }
+
+/* tabla question 3 */
 
 .table-question-3{
     width: 60%;
@@ -169,21 +181,23 @@ textarea{
     margin-bottom: 3rem;
 }
 
+/* borde del th */
+
 .question-listening table th{
          border: 1px solid #ccc;
 }
 
+/* borde del td */
 
-/* table th{
-    width: 50%;
+.first-question-container table td{
+    border: 1px solid #ccc;
 }
 
-.input-letters::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-} */
+/* tamaño de los iconos */
+
+.face-icons{
+    font-size: 2rem;
+}
 
 /* * MD */
 

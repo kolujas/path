@@ -9,7 +9,7 @@
                         <i class="dropdown-icon fas fa-sort-down"></i>
                     </button>
                 </a>
-                <main class="dropdown-menu-content second-question-container">
+                <main class="dropdown-menu-content first-question-container px-xl-4 mb-xl-4">
                     <div class="d-flex justify-content-center my-4">
                         <audio controls controlsList="nodownload">
                             <source src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg" type="audio/ogg">
@@ -57,7 +57,7 @@
                         <i class="dropdown-icon fas fa-sort-down"></i>
                     </button>
                 </a>
-                <main class="dropdown-menu-content second-question-container">
+                <main class="dropdown-menu-content second-question-container px-xl-4 mb-xl-4">
                 <div class="d-flex justify-content-center my-4">
                         <audio controls controlsList="nodownload">
                             <source src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg" type="audio/ogg">
@@ -67,7 +67,7 @@
                     <table class="table table-striped mb-4">
                         <thead>
                             <tr>
-                                <th scope="col"><i class="far fa-smile"></i>    </th>
+                                <th class="text-center" scope="col"><i class="face-icons far fa-smile "></i>    </th>
                                 <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" value="fri" type="text">day</th>
                                 <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
                                 <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
@@ -75,7 +75,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row"><i class="far fa-frown"></i></th>
+                                <th class="text-center" scope="row"><i class="face-icons far fa-frown text-center"></i></th>
                                 <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" value="fri" type="text">day</th>
                                 <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
                                 <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
@@ -92,7 +92,7 @@
                         <i class="dropdown-icon fas fa-sort-down"></i>
                     </button>
                 </a>
-                <main class="dropdown-menu-content second-question-container">
+                <main class="dropdown-menu-content second-question-container px-xl-4 mb-xl-4">
                 <div class="d-flex justify-content-center my-4">
                         <audio controls controlsList="nodownload">
                             <source src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg" type="audio/ogg">
