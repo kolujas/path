@@ -12,23 +12,25 @@
         protected $primaryKey = 'id_user';
 
         /**
-         * The attributes that are mass assignable.
-         *
+         * * The attributes that are mass assignable.
          * @var array
          */
         protected $fillable = [
-            'candidate_number', 'name', 'email', 'password', 'date_of_birth', 'level', 'id_role', 'id_member', 'member',
+            'candidate_number', 'name', 'email', 'password', 'date_of_birth', 'level', 'id_role', 'id_member', 'member', 'slug',
         ];
 
         /**
-         * The attributes that should be hidden for arrays.
-         *
+         * * The attributes that should be hidden for arrays.
          * @var array
          */
         protected $hidden = [
             'password', 'remember_token',
         ];
 
+        /**
+         * * Create and return the User role.
+         * @return [type]
+         */
         public function role(){
             $role = [];
             switch ($this->id_role) {
@@ -41,7 +43,9 @@
                     $role['name'] = 'Administrator';
                     break;
             }
-            $this->attributes['role'] = (object) $role;
+            if(!isset($this->attributes['role'])){
+                $this->attributes['role'] = (object) $role;
+            }
             return (object) $role;
         }
         
@@ -57,75 +61,111 @@
                         'password.required' => 'The Password is required.',
                         'password.min' => 'The Password cannot be less than :min characters.',
                         'password.max' => 'The Password cannot be more than :max characters.',
-                    ], 'es' => [
-                        'data.required' => 'El Dato es obligatorio.',
-                        'password.required' => 'La Contraseña es obligatoria.',
-                        'password.min' => 'La Contraseña no puede tener menos de :min caracteres.',
-                        'password.max' => 'La Contraseña no puede tener más de :max caracteres.',
                     ],
                 ]
             ], 'create' => [
-                'rules' => [
-                    'candidate_number' => 'required|numeric|unique:users',
-                    'name' => 'required|min:2|max:60',
-                    'email' => 'required|email|unique:users',
-                    'password' => 'nullable|min:4|max:40|confirmed',
-                    'level' => 'required|numeric',
-                    'id_member' => 'required|numeric|unique:users',
-                    'member' => 'required',
-                ], 'messages' => [
-                    'es' => [
-                        'candidate_number.required' => 'El número de candidato es obligatorio.',
-                        'candidate_number.numeric' => 'El número de candidato debe ser formato numérico.',
-                        'candidate_number.unique' => 'El número de candidato ya está en uso.',
-                        'name.required' => 'El nombre es obligatorio.',
-                        'name.min' => 'El nombre no puede tener menos de :min caracteres.',
-                        'name.max' => 'El nombre no puede tener más de :max caracteres.',
-                        'email.required' => 'El correo es obligatorio.',
-                        'email.email' => 'El correo debe ser formato email (ejemplo@mail.com).',
-                        'email.unique' => 'El correo ya está en uso.',
-                        'password.min' => 'La contraseña no puede tener menos de :min caracteres.',
-                        'password.max' => 'La contraseña no puede tener más de :max caracteres.',
-                        'password.confirmed' => 'Las contraseñas no coinciden.',
-                        'level.required' => 'El nivel es obligatorio.',
-                        'level.numeric' => 'El nivel debe ser formato numérico.',
-                        'id_member.required' => 'El número de miembro es obligatorio.',
-                        'id_member.numeric' => 'El número de miembro debe ser formato numérico.',
-                        'id_member.unique' => 'El número de miembro ya está en uso.',
-                        'member.required' => 'MENSAJE POR DEFECTO.',
+                'general' => [
+                    'rules' => [
+                        'name' => 'required|min:2|max:60',
+                        'email' => 'required|email|unique:users',
+                        'password' => 'nullable|min:4|max:40|confirmed',
+                        'id_role' => 'required',
+                    ], 'messages' => [
+                        'en' => [
+                            'name.required' => 'The Name is required.',
+                            'name.min' => 'The Name cannot be less than :min characters.',
+                            'name.max' => 'The Name cannot be more than :max characters.',
+                            'email.required' => 'The Email is required.',
+                            'email.email' => 'The Email must be a valid mail (example@mail.com).',
+                            'email.unique' => 'The Email it\'s used.',
+                            'password.min' => 'The Password cannot be less than :min characters.',
+                            'password.max' => 'The Password cannot be more than :max characters.',
+                            'password.confirmed' => 'The Passwords do not match.',
+                            'id_role.required' => 'The Role is required.',
+                        ],
+                    ],
+                ], 'admin' => [
+                    'rules' => [
+                        'password' => 'required',
+                    ], 'messages' => [
+                        'en' => [
+                            'password.required' => 'The Password is required.',
+                        ],
+                    ],
+                ], 'student' => [
+                    'rules' => [
+                        'candidate_number' => 'required|numeric|unique:users',
+                        'level' => 'required|numeric',
+                        'id_member' => 'required|numeric|unique:users',
+                        'member' => 'required',
+                    ], 'messages' => [
+                        'en' => [
+                            'candidate_number.required' => 'The Candidate Number is required.',
+                            'candidate_number.numeric' => 'The Candidate Number must be numeric.',
+                            'candidate_number.unique' => 'The Candidate Number it\'s used.',
+                            'level.required' => 'The Level is required.',
+                            'level.numeric' => 'The Level must be numeric.',
+                            'id_member.required' => 'The Memeber ID is required.',
+                            'id_member.numeric' => 'The Memeber ID must be numeric.',
+                            'id_member.unique' => 'The Memeber ID it\'s used.',
+                            'member.required' => 'The User must be Member from something.',
+                        ],
                     ],
                 ],
             ],'edit' => [
-                'rules' => [
-                    'candidate_number' => 'required|numeric|unique:users',
-                    'name' => 'required|min:2|max:60',
-                    'email' => 'required|email|unique:users',
-                    'password' => 'nullable|min:4|max:40|confirmed',
-                    'level' => 'required|numeric',
-                    'id_member' => 'required|numeric|unique:users',
-                    'member' => 'required',
-                ], 'messages' => [
-                    'es' => [
-                        'candidate_number.required' => 'El número de candidato es obligatorio.',
-                        'candidate_number.numeric' => 'El número de candidato debe ser formato numérico.',
-                        'candidate_number.unique' => 'El número de candidato ya está en uso.',
-                        'name.required' => 'El nombre es obligatorio.',
-                        'name.min' => 'El nombre no puede tener menos de :min caracteres.',
-                        'name.max' => 'El nombre no puede tener más de :max caracteres.',
-                        'email.required' => 'El correo es obligatorio.',
-                        'email.email' => 'El correo debe ser formato email (ejemplo@mail.com).',
-                        'email.unique' => 'El correo ya está en uso.',
-                        'password.min' => 'La contraseña no puede tener menos de :min caracteres.',
-                        'password.max' => 'La contraseña no puede tener más de :max caracteres.',
-                        'password.confirmed' => 'Las contraseñas no coinciden.',
-                        'level.required' => 'El nivel es obligatorio.',
-                        'level.numeric' => 'El nivel debe ser formato numérico.',
-                        'id_member.required' => 'El número de miembro es obligatorio.',
-                        'id_member.numeric' => 'El número de miembro debe ser formato numérico.',
-                        'id_member.unique' => 'El número de miembro ya está en uso.',
-                        'member.required' => 'MENSAJE POR DEFECTO.',
+                'general' => [
+                    'rules' => [
+                        'name' => 'required|min:2|max:60',
+                        'email' => 'required|email|unique:users',
+                        'password' => 'nullable|min:4|max:40|confirmed',
+                        'id_role' => 'required',
+                    ], 'messages' => [
+                        'en' => [
+                            'name.required' => 'The Name is required.',
+                            'name.min' => 'The Name cannot be less than :min characters.',
+                            'name.max' => 'The Name cannot be more than :max characters.',
+                            'email.required' => 'The Email is required.',
+                            'email.email' => 'The Email must be a valid mail (example@mail.com).',
+                            'email.unique' => 'The Email it\'s used.',
+                            'password.min' => 'The Password cannot be less than :min characters.',
+                            'password.max' => 'The Password cannot be more than :max characters.',
+                            'password.confirmed' => 'The Passwords do not match.',
+                            'id_role.required' => 'The Role is required.',
+                        ],
+                    ],
+                ], 'student' => [
+                    'rules' => [
+                        'candidate_number' => 'required|numeric|unique:users',
+                        'level' => 'required|numeric',
+                        'id_member' => 'required|numeric|unique:users',
+                        'member' => 'required',
+                    ], 'messages' => [
+                        'en' => [
+                            'candidate_number.required' => 'The Candidate Number is required.',
+                            'candidate_number.numeric' => 'The Candidate Number must be numeric.',
+                            'candidate_number.unique' => 'The Candidate Number it\'s used.',
+                            'level.required' => 'The Level is required.',
+                            'level.numeric' => 'The Level must be numeric.',
+                            'id_member.required' => 'The Memeber ID is required.',
+                            'id_member.numeric' => 'The Memeber ID must be numeric.',
+                            'id_member.unique' => 'The Memeber ID it\'s used.',
+                            'member.required' => 'The User must be Member from something.',
+                        ],
                     ],
                 ],
             ],
         ];
+        
+        /**
+         * * The Sluggable configuration for the Model.
+         * @return array
+         */
+        public function sluggable(){
+            return [
+                'slug' => [
+                    'source'	=> 'name',
+                    'onUpdate'	=> true,
+                ]
+            ];
+        }
     }

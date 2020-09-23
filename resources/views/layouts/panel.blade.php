@@ -11,10 +11,6 @@
 @endsection
 
 @section('body')
-    <header>
-        @yield('nav')
-    </header>
-            
     <main class="main container-fluid">
         <div class="row">
             @yield('main')

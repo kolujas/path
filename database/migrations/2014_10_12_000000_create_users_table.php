@@ -21,6 +21,7 @@
                 $table->bigInteger('id_member')->unique()->nullable();
                 $table->text('member')->nullable();
                 $table->tinyInteger('id_role')->default(1);
+                $table->string('slug');
                 $table->rememberToken();
                 $table->timestamps();
             });

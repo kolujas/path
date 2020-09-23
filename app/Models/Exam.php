@@ -9,17 +9,15 @@
         protected $primaryKey = 'id_exam';
 
         /**
-         * The attributes that are mass assignable.
-         *
+         * * The attributes that are mass assignable.
          * @var array
          */
         protected $fillable = [
-            'name', 'rules', 'password', 'scheduled_date_time',
+            'name', 'rules', 'password', 'scheduled_date_time', 'slug',
         ];
 
         /**
-         * The attributes that should be hidden for arrays.
-         *
+         * * The attributes that should be hidden for arrays.
          * @var array
          */
         protected $hidden = [
@@ -45,12 +43,56 @@
                         'accept.required' => 'Accept the rules first.',
                         'ID.required' => 'The ID is required.',
                         'ID.mimimetypesn' => 'The ID must be an image JPG/JPEG, or PNG.',
-                    ], 'es' => [
-                        'accept.required' => 'Accepta las reglas y coindiciones primero.',
-                        'ID.required' => 'El DNI es obligatorio.',
-                        'ID.min' => 'El DNI debe ser formato JPG/JPEG, o PNG.',
                     ],
                 ]
-            ], 
+            ], 'create' => [
+                'rules' => [
+                    'name' => 'required|min:2|max:60',
+                    'password' => 'required|min:4|max:40|confirmed',
+                    'scheduled_date_time' => 'required|date',
+                ], 'messages' => [
+                    'en' => [
+                        'name.required' => 'The Name is required.',
+                        'name.min' => 'The Name cannot be less than :min characters.',
+                        'name.max' => 'The Name cannot be more than :max characters.',
+                        'password.required' => 'The Password is required.',
+                        'password.min' => 'The Password cannot be less than :min characters.',
+                        'password.max' => 'The Password cannot be more than :max characters.',
+                        'password.confirmed' => 'The Passwords do not match.',
+                        'scheduled_date_time.required' => 'The Scheduled Date Time is required.',
+                        'scheduled_date_time.date' => 'The Scheduled Date Time must be a valid date.',
+                    ],
+                ],
+            ],'edit' => [
+                'rules' => [
+                    'name' => 'required|min:2|max:60',
+                    'password' => 'nullable|min:4|max:40|confirmed',
+                    'scheduled_date_time' => 'required|date',
+                ], 'messages' => [
+                    'en' => [
+                        'name.required' => 'The Name is required.',
+                        'name.min' => 'The Name cannot be less than :min characters.',
+                        'name.max' => 'The Name cannot be more than :max characters.',
+                        'password.min' => 'The Password cannot be less than :min characters.',
+                        'password.max' => 'The Password cannot be more than :max characters.',
+                        'password.confirmed' => 'The Passwords do not match.',
+                        'scheduled_date_time.required' => 'The Scheduled Date Time is required.',
+                        'scheduled_date_time.date' => 'The Scheduled Date Time must be a valid date.',
+                    ],
+                ],
+            ],
         ];
+        
+        /**
+         * * The Sluggable configuration for the Model.
+         * @return array
+         */
+        public function sluggable(){
+            return [
+                'slug' => [
+                    'source'	=> 'name',
+                    'onUpdate'	=> true,
+                ]
+            ];
+        }
     }

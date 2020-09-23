@@ -16,6 +16,7 @@
                 $table->text('rules')->nullable();
                 $table->string('password');
                 $table->date('scheduled_date_time');
+                $table->string('slug');
                 $table->timestamps();
             });
         }
