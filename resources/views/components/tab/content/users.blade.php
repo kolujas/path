@@ -1,10 +1,92 @@
 <section id="users" class="tab-content closed">
     <main class="row">
-        <section class="table">
-            
+        <section class="table px-2">
+            <h2 class="text-center my-5">Candidatos</h2>
+            <div class="mb-4 px-4">
+            <h3>Buscar por</h3>
+                <button type="button" class="btn btn-primary text-white">Fecha</button>
+                <button type="button" class="btn btn-primary text-white">Nombre [A-Z]</button>
+            </div>
+            <div class="mb-4 mx-4">
+                <span class="icono-buscar"><i class="fas fa-search"></i></span>
+                <input class="btn buscador text-left" placeholder="Buscar" type="search">
+            </div>
+            <table class="table">
+                <thead class="background background-one text-white">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
-        <section class="details">
+        <section class="details mt-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Detalles</h3>
+                </div>
+                <div class="card-body py-5">
+                    <ul class="pl-4">
+                        <span class="list-label">Name</span>
+                        <li class="list-datos">Pepe Diaz</li>
+                        <span class="list-label">DNI</span>
+                        <li class="list-datos">Pepe Diaz</li>
+                        <span class="list-label">Telephone</span>
+                        <li class="list-datos">11-5750-4166</li>
+                        <span class="list-label">Email</span>
+                        <li class="list-datos">Pepe.diaz@gmail.com</li>
+                        <span class="list-label">Exams</span>
+                        <li class="list-datos">Exam A</li>
+                        <li class="list-datos">Exam B</li>
 
+                    </ul>
+                    <div class="d-flex justify-content-start pl-4">
+                        <a href="#" class="btn background background-one text-white mr-2">Edit</a>
+                        <a href="#" class="btn background background-one text-white mr-2">Examine</a>
+                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
 </section>
