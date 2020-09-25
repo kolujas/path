@@ -8,11 +8,10 @@
          * @return void
          */
         public function run() {
+            $this->call(CandidateSeeder::class);
             $this->call(EvaluationSeeder::class);
             $this->call(ExamSeeder::class);
-            $this->call(ModuleSeeder::class);
             $this->call(RecordSeeder::class);
-            $this->call(StudentSeeder::class);
             $this->call(UserSeeder::class);
         }
     }

@@ -1,6 +1,8 @@
 <?php
     namespace App\Models;
     
+    use App\Models\Evaluation;
+    use App\Models\Module;
     use App\Models\Student;
     use Illuminate\Database\Eloquent\Model;
 
@@ -13,7 +15,7 @@
          * @var array
          */
         protected $fillable = [
-            'name', 'rules', 'password', 'scheduled_date_time', 'slug',
+            'name', 'rules', 'password', 'scheduled_date_time', 'level', 'slug',
         ];
 
         /**
@@ -25,11 +27,11 @@
         ];
 
         /**
-         * * Get all the Students who match with the primary key.
+         * * Get all the Evaluations who match with the primary key.
          * @return [type]
          */
-        public function students(){
-            return $this->hasMany(Student::class, 'id_exam', 'id_exam');
+        public function evaluations(){
+            return $this->hasMany(Evaluation::class, 'id_exam', 'id_exam');
         }
         
         /** @var array The validation rules & messages. */
@@ -50,6 +52,8 @@
                     'name' => 'required|min:2|max:60',
                     'password' => 'required|min:4|max:40|confirmed',
                     'scheduled_date_time' => 'required|date',
+                    'modules' => 'required',
+                    'students' => 'required',
                 ], 'messages' => [
                     'en' => [
                         'name.required' => 'The Name is required.',
@@ -61,6 +65,8 @@
                         'password.confirmed' => 'The Passwords do not match.',
                         'scheduled_date_time.required' => 'The Scheduled Date Time is required.',
                         'scheduled_date_time.date' => 'The Scheduled Date Time must be a valid date.',
+                        'modules.required' => 'A Module is required.',
+                        'students.required' => 'A Student is required.',
                     ],
                 ],
             ],'edit' => [
@@ -68,6 +74,8 @@
                     'name' => 'required|min:2|max:60',
                     'password' => 'nullable|min:4|max:40|confirmed',
                     'scheduled_date_time' => 'required|date',
+                    'modules' => 'required',
+                    'students' => 'required',
                 ], 'messages' => [
                     'en' => [
                         'name.required' => 'The Name is required.',
@@ -78,6 +86,8 @@
                         'password.confirmed' => 'The Passwords do not match.',
                         'scheduled_date_time.required' => 'The Scheduled Date Time is required.',
                         'scheduled_date_time.date' => 'The Scheduled Date Time must be a valid date.',
+                        'modules.required' => 'A Module is required.',
+                        'students.required' => 'A Student is required.',
                     ],
                 ],
             ],

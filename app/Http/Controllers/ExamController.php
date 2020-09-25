@@ -2,6 +2,7 @@
     namespace App\Http\Controllers;
 
     use App\Models\Exam;
+    use Auth;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Validator;
 
@@ -58,9 +59,11 @@
                     'message' => 'Exam not found.',
                 ]);
             }
+            
+            $candidate = Auth::guard('candidates')->user();
+            $exam->modules = $candidate->modules();
 
             return view('exams.example-exam', [
-                'modules' => $this->getModules($exam->level),
                 'exam' => $exam,
             ]);
         }
@@ -72,6 +75,7 @@
         public function panel(){
             return view('exams.panel', [
                 'exams' => Exam::all(),
+                'users' => User::all(),
             ]);
         }
 
@@ -148,9 +152,5 @@
                 'code' => 200,
                 'message' => "Exam deleted correctly.",
             ]);
-        }
-
-        public function getModules($level = null){
-            dd($level);
         }
     }

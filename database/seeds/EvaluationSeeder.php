@@ -17,19 +17,7 @@
             } else {
                 Evaluation::create( [
                     'id_exam' => 1,
-                    'id_module' => 1,
-                ] );
-                Evaluation::create( [
-                    'id_exam' => 1,
-                    'id_module' => 2,
-                ] );
-                Evaluation::create( [
-                    'id_exam' => 2,
-                    'id_module' => 1,
-                ] );
-                Evaluation::create( [
-                    'id_exam' => 2,
-                    'id_module' => 2,
+                    'id_candidate' => 1,
                 ] );
             }
         }

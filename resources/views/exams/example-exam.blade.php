@@ -20,17 +20,20 @@
         </span>
     </div>
     <div id="tab-exam" class="col-12 relative tab-menu horizontal p-0">
-		@component('components.tab.tab.modules', [
-            'modules' => $modules,
-        ])
-		@endcomponent
+        <section class="tabs">
+            @component('components.tab.tab.modules', [
+            'modules' => $exam->modules,
+            ])
+            @endcomponent
+        </section>
 
-		<section class="tab-content-list mx-auto">
-            @component("components.tab.content.$exam->level.writing")
-            @endcomponent
-            @component("components.tab.content.$exam->level.listening")
-            @endcomponent
-		</section>
+		<form class="tab-content-list mx-auto" action="/exam/{{$exam->id_exam}}/record" method="post">
+            @csrf
+            @foreach($exam->modules as $module)
+                @component("components.tab.content.$exam->level.$module->initials.$module->file")
+                @endcomponent
+            @endforeach
+		</form>
 	</div>
 @endsection
 

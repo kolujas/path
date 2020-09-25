@@ -1,8 +1,10 @@
 <?php
     namespace App\Http\Controllers;
 
+    use App\Models\Auth as AuthModel;
+    use App\Models\Candidate;
+    use App\Models\Evaluation;
     use App\Models\Exam;
-    use App\Models\Student;
     use App\User;
     use Auth;
     use Illuminate\Http\Request;
@@ -15,12 +17,30 @@
          * @return [type]
          */
         public function showLogin(Request $request){
-            if(!Auth::user()){
-                return view('auth.login', [
-                    //
-                ]);
-            }else{
-                dd(Auth::user());
+            $authenticated = false;
+            if(Auth::guard('candidates')->check()){
+                $authenticated = 'candidates';
+            }else if(Auth::guard('web')->check()){
+                $authenticated = 'users';
+            }
+            switch ($authenticated) {
+                case 'candidates':
+                    // dd(Auth::guard('candidates')->user());
+                    return view('auth.login', [
+                        //
+                    ]);
+                    break;
+                case 'users':
+                    // dd(Auth::guard('web')->user());
+                    return view('auth.login', [
+                        //
+                    ]);
+                    break;
+                default:
+                    return view('auth.login', [
+                        //
+                    ]);
+                    break;
             }
         }
 
@@ -30,7 +50,7 @@
          */
         public function doLogIn(Request $request){
             $input = (object)$request->input();
-            $validator = Validator::make( $request->all(), User::$validation['login']['rules'], User::$validation['login']['messages']['en'] );
+            $validator = Validator::make( $request->all(), AuthModel::$validation['login']['rules'], AuthModel::$validation['login']['messages']['en'] );
             if($validator->fails()){
                 return redirect()->route('auth.showLogin')->withErrors($validator)->withInput();
             }
@@ -42,21 +62,19 @@
                 ] );
             }
 
-            // TODO Preguntar a Juan que opina de la validación especifica.
-            if(!User::where( 'candidate_number', '=', $input->data )->get()){
+            if(!$candidate = Candidate::where('candidate_number', '=', $input->data)->get()){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
-                    'message' => 'Incorrect user name.',
+                    'message' => 'Incorrect candidate number.',
                 ] );
             }
 
-            $user = User::where('candidate_number', '=', $input->data)->get();
-            $user = $user[0];
-            $students = Student::where('id_user', '=', $user->id_user)->get();
+            $candidate = $candidate[0];
+            $evaluations = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
 
             $found = false;
-            foreach ( $students as $student ) {
-                $exam = Exam::find($student->id_exam);
+            foreach($evaluations as $evaluation){
+                $exam = Exam::find($evaluation->id_exam);
                 if(\Hash::check($input->password, $exam->password)){
                     $found = true;
                     break;
@@ -69,13 +87,9 @@
                     'message' => 'Exam not found.',
                 ]);
             }
-            
-            // TODO Retornar al examen o al usuario (¿Como les gustaría?).
-            Auth::login($user, true);
-            return redirect("exam/$exam->id_exam")->with('status', [
-                'code' => 200,
-                'message' => 'Session started.',
-            ]);
+
+            Auth::guard('candidates')->login($candidate, true);
+            return redirect("exam/$exam->id_exam/rules");
         }
 
         /**

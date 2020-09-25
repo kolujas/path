@@ -1,3 +1,29 @@
+/* * nav menu */
+
+.nav-menu{
+    --navmenu-title-color: #fff;
+    --navmenu-button-color: #fff;
+    --navmenu-button-color-alternative: #ddd;
+    --navmenu-background-color: var(--color-one);
+    --navmenu-background-color-alternative: var(--color-one);
+    --navmenu-border-color: #ddd;
+    --navmenu-border-color-alternative: #ddd;
+    --navmenu-icon-color: #ddd;
+    --navmenu-icon-color-alternative: #888;
+}
+
+.sidebar{
+    --sidebar-title-color: #222;
+    --sidebar-button-color: #222;
+    --sidebar-button-color-alternative: #000;
+    --sidebar-background-color: #fff;
+    --sidebar-background-color-alternative: var(--color-one);
+    --sidebar-border-color: #ddd;
+    --sidebar-border-color-alternative: #ddd;
+    --sidebar-icon-color: #ddd;
+    --sidebar-icon-color-alternative: #ddd;
+}
+
 body {
     min-height: 100vh;
 }
@@ -25,8 +51,9 @@ body {
 
 /* ? PRIMERA CONSIGNA */
 
-
-/* * encabezado line-height */
+.dropdown{
+    z-index: 1;
+}
 
 .dropdown-menu-content header h2 {
     line-height: 1.5rem;

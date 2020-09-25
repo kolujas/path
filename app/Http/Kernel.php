@@ -66,5 +66,7 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\Administrator::class,
         'student' => \App\Http\Middleware\Student::class,
         'scheduled_date_time' => \App\Http\Middleware\ScheduledDateTime::class,
+        'evaluation_confirmed' => \App\Http\Middleware\EvaluationConfirmed::class,
+        'auth.guards' => \App\Http\Middleware\AuthenticateGuards::class,
     ];
 }
