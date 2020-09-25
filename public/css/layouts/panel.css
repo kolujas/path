@@ -1,16 +1,61 @@
 .tab-menu {
     --tabmenu-title-color: var(--color-nine);
     --tabmenu-button-color: var(--color-nine);
-    --tabmenu-button-color-alternative: var(--color-one);
+    --tabmenu-button-color-alternative: #fff;
     --tabmenu-background-color: transparent;
     --tabmenu-background-color-alternative: transparent;
     --tabmenu-border-color: #ddd;
     --tabmenu-border-color-alternative: #ddd;
     --tabmenu-icon-color: #ddd;
     --tabmenu-icon-color-alternative: #ddd;
-    --tabmenu-shadow-color: #32B1DA;
-    min-height: 100vh;
+    --tabmenu-shadow-color: #32B1DA; 
 }
+
+/* tab menu list items */
+.tab-menu-list .tab-button{
+    display: flex;
+    justify-content: center !important;
+}
+
+/* tamaño de los list items del tab menu */
+.tab-menu-list li{
+    font-size: 1.2rem;
+}
+
+/* buscador */
+
+.icono-buscar{
+    position: relative;
+    left: 2rem;
+}
+
+.buscador{
+    padding-left: 2rem;
+    outline: none;
+    border: 1px solid var(--color-one);
+}
+
+.buscador:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+/* detalles width */
+.details{
+    width: 100%;
+}
+
+/* detalles label */
+.details .list-label{
+    font-size: 1rem;
+}
+
+/* detalles datos  */
+.details .list-datos{
+    font-size: 1.2rem;
+}
+ 
+
 
 /* * MD */
 @media(min-width: 768px) {
@@ -19,7 +64,14 @@
 
 /* * LG */
 @media(min-width: 1024px) {
-    /**/
+    .tab-menu{
+        min-height: 100vh;
+    }
+
+    .tab-menu-list{
+        display: block
+    }
+    
 }
 
 /* * XL */
