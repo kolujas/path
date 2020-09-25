@@ -8,7 +8,7 @@
 *   PREGUNTAS   *
 =================
 
-Preguntar por "level" para los examenes
+Preguntar donde les gustaría ver el DNI (ya que nunca lo especificamos)
 Preguntar cual es el timpo máximo y mínimo del examen (mínimo: scheduled_date_time ¿Máximo?)
 ¿Checkbox parar seleccionar estudiantes en el "create/edit exam" o dónde se elije?
 Al loguear ¿Redirigir al examen o al panel del candidato?.

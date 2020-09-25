@@ -21,10 +21,10 @@
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">Me</th>
-                                <th scope="col"><input name="listening-1[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">ther</th>
-                                <th scope="col"><input name="listening-1[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">ther</th>
+                                <th scope="col"><input name="A1:L1[2]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">ther</th>
+                                <th scope="col"><input name="A1:L1[4]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">ther</th>
                                 <th scope="col">sister</th>
-                                <th scope="col"><input name="listening-1[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">er</th>
+                                <th scope="col"><input name="A1:L1[6]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">er</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -38,11 +38,11 @@
                             </tr>
                             <tr>
                                 <th scope="row">Age</th>
-                                <td><input name="listening-1[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
+                                <td><input name="A1:L1[1]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
                                 <td>40</td>
                                 <td>38</td>
-                                <td><input name="listening-1[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
-                                <td><input name="listening-1[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
+                                <td><input name="A1:L1[7]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
+                                <td><input name="A1:L1[8]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -67,16 +67,16 @@
                             <tr>
                                 <th class="text-center" scope="col"><i class="face-icons far fa-smile "></i>    </th>
                                 <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" value="fri" type="text">day</th>
-                                <th scope="col"><input name="listening-2[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
-                                <th scope="col"><input name="listening-2[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[1]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[2]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row"><i class="face-icons far fa-frown text-center"></i></th>
-                                <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" value="fri" type="text">day</th>
-                                <th scope="col"><input name="listening-2[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
-                                <th scope="col"><input name="listening-2[]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[3]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[4]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[5]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
                             </tr>
                         </tbody>
                     </table>
