@@ -2,6 +2,7 @@
     namespace App\Http\Controllers;
 
     use App\Models\Exam;
+    use Auth;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Validator;
 
@@ -52,15 +53,18 @@
          * @return [type]
          */
         public function show($id_exam = null){
-            if(!Exam::find($id_exam)){
+            if(!$exam = Exam::find($id_exam)){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
                     'message' => 'Exam not found.',
                 ]);
             }
+            
+            $candidate = Auth::guard('candidates')->user();
+            $exam->modules = $candidate->modules();
 
             return view('exams.example-exam', [
-                //
+                'exam' => $exam,
             ]);
         }
         
@@ -71,6 +75,7 @@
         public function panel(){
             return view('exams.panel', [
                 'exams' => Exam::all(),
+                'users' => User::all(),
             ]);
         }
 

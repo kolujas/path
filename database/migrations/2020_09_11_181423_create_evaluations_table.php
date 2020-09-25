@@ -13,7 +13,8 @@
             Schema::create('evaluations', function (Blueprint $table) {
                 $table->increments('id_evaluation')->unique();
                 $table->unsignedInteger('id_exam');
-                $table->unsignedInteger('id_module');
+                $table->unsignedInteger('id_candidate');
+                $table->boolean('confirmed')->default(false);
                 $table->timestamps();
             });
         }

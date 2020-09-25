@@ -2,14 +2,13 @@
     <section class="questions question-listening">
         <div class="row px-4 py-md-4 justify-content-lg-center">
             <section id="dropdown-listing-1" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
-
                 <a href="#" class="dropdown-header">
                     <span>1. Look at the table below. Listen to Susana talking about her family, and complete the spaces in the table. You can listen twice.<mark>One is done for you.</mark> </span>
                     <button class="dropdown-button text-right">
                         <i class="dropdown-icon fas fa-sort-down"></i>
                     </button>
                 </a>
-                <main class="dropdown-menu-content first-question-container px-xl-4 mb-xl-4">
+                <main class="dropdown-menu-content first-question-container px-xl-4">
                     <div class="d-flex justify-content-center my-4">
                         <audio controls controlsList="nodownload">
                             <source src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg" type="audio/ogg">
@@ -22,10 +21,10 @@
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">Me</th>
-                                <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">ther</th>
-                                <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">ther</th>
+                                <th scope="col"><input name="A1:L1[2]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">ther</th>
+                                <th scope="col"><input name="A1:L1[4]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">ther</th>
                                 <th scope="col">sister</th>
-                                <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">er</th>
+                                <th scope="col"><input name="A1:L1[6]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">er</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,25 +38,24 @@
                             </tr>
                             <tr>
                                 <th scope="row">Age</th>
-                                <td><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
+                                <td><input name="A1:L1[1]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
                                 <td>40</td>
                                 <td>38</td>
-                                <td><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
-                                <td><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
+                                <td><input name="A1:L1[7]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
+                                <td><input name="A1:L1[8]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text"></td>
                             </tr>
                         </tbody>
                     </table>
                 </main>
             </section>
             <section id="dropdown-listing-2" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
-
                 <a href="#" class="dropdown-header">
                     <span>2. You will hear Susana talking about happy days and sad days. Which are happy, and which are sad?<mark>One is done for you.</mark></span>
                     <button class="dropdown-button text-right">
                         <i class="dropdown-icon fas fa-sort-down"></i>
                     </button>
                 </a>
-                <main class="dropdown-menu-content second-question-container px-xl-4 mb-xl-4">
+                <main class="dropdown-menu-content second-question-container px-xl-4">
                 <div class="d-flex justify-content-center my-4">
                         <audio controls controlsList="nodownload">
                             <source src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg" type="audio/ogg">
@@ -69,30 +67,29 @@
                             <tr>
                                 <th class="text-center" scope="col"><i class="face-icons far fa-smile "></i>    </th>
                                 <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" value="fri" type="text">day</th>
-                                <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
-                                <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[1]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[2]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row"><i class="face-icons far fa-frown text-center"></i></th>
-                                <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" value="fri" type="text">day</th>
-                                <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
-                                <th scope="col"><input class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[3]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[4]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
+                                <th scope="col"><input name="A1:L2[5]" class="input-letters input-tabla position-relative input-underline" data-letters="2" type="text">day</th>
                             </tr>
                         </tbody>
                     </table>
                 </main>
             </section>
             <section id="dropdown-listing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
-
                 <a href="#" class="dropdown-header">
                     <span>3. Where Jack lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers<mark>Two are done for you.</mark></span>
                     <button class="dropdown-button text-right">
                         <i class="dropdown-icon fas fa-sort-down"></i>
                     </button>
                 </a>
-                <main class="dropdown-menu-content second-question-container px-xl-4 mb-xl-4">
+                <main class="dropdown-menu-content second-question-container px-xl-4">
                 <div class="d-flex justify-content-center my-4">
                         <audio controls controlsList="nodownload">
                             <source src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg" type="audio/ogg">

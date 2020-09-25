@@ -1,10 +1,11 @@
 <?php
     namespace App\Models;
 
+    use Models\Candidate;
+    use Models\Exam;
     use Illuminate\Database\Eloquent\Model;
 
     class Evaluation extends Model{
-        
         /** @var string Evaluation primary key. */
         protected $primaryKey = 'id_evaluation';
 
@@ -14,6 +15,22 @@
          * @var array
          */
         protected $fillable = [
-            'id_exam', 'id_module',
+            'id_exam', 'id_candidate',
         ];
+        
+        /**
+         * * Get the Candidate who match with the foreign key.
+         * @return [type]
+         */
+        public function candidate(){
+            return $this->belongsTo(Candidate::class, 'id_candidate', 'id_candidate');
+        }
+        
+        /**
+         * * Get the Exam who match with the foreign key.
+         * @return [type]
+         */
+        public function exam(){
+            return $this->belongsTo(Exam::class, 'id_exam', 'id_exam');
+        }
     }

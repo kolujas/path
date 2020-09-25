@@ -21,7 +21,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <input class="input-one-question-one" type="text" name="answer_one">
+                                    <input class="input-one-question-one" type="text" name="A1:W1[1]">
                                 </div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <input class="input-one-question-one" type="text" name="answer_two">
+                                    <input class="input-one-question-one" type="text" name="A1:W1[2]">
                                 </div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <input class="input-one-question-one" type="text" name="answer_three">
+                                    <input class="input-one-question-one" type="text" value="1">
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <input class="input-one-question-one" type="text" name="answer_four">
+                                    <input class="input-one-question-one" type="text" name="A1:W1[3]">
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <input class="input-one-question-one" type="text" name="answer_five">
+                                    <input class="input-one-question-one" type="text" name="A1:W1[4]">
                                 </div>
                             </div>
                         </div>
@@ -69,11 +69,11 @@
                 </a>
                 <main class="dropdown-menu-content second-question-container">
                     <div class="py-4 px-2 px-md-3">
-                        <p class="mb-4">In the bedroom, I can see <strong>a bed</strong> and <input class="input-one-question-two"
+                        <p class="mb-4">In the bedroom, I can see <strong>a bed</strong> and <input name="A1:W2[1]"class="input-one-question-two"
                                 type="text">.</p>
-                        <p class="mb-4">In the bathroom, I can see <input class="input-one-question-two" type="text"> and <input
+                        <p class="mb-4">In the bathroom, I can see <input name="A1:W2[2]" class="input-one-question-two" type="text"> and <input name="A1:W2[3]"
                                 class="input-one-question-two" type="text">.</p>
-                        <p class="mb-0">In the kitchen, I can see <input class="input-one-question-two" type="text"> and <input
+                        <p class="mb-0">In the kitchen, I can see <input name="A1:W2[4]" class="input-one-question-two" type="text"> and <input name="A1:W2[5]"
                                 class="input-one-question-two" type="text">.</p>
                     </div>
                 </main>
@@ -98,7 +98,7 @@
                 </a>
                 <main class="dropdown-menu-content second-question-container">
                     <div class="py-4 px-2 px-md-3">
-                        <p class="mb-0">Hello! My friend Beth and I <input class="input-underline input-one-question-four" type="text"> good friends. She <input class="input-underline input-one-question-four" type="text">10 years old and I <input class="input-underline input-one-question-four" type="text">.My hair <input class="input-underline input-one-question-four" disabled value="is" type="text">short. Beth's hair <input class="input-underline input-one-question-four" type="text">long. </p>
+                        <p class="mb-0">Hello! My friend Beth and I <input name="A1:W4A[1]" class="input-underline input-one-question-four" type="text"> good friends. She <input name="A1:W4A[2]" class="input-underline input-one-question-four" type="text">10 years old and I <input name="A1:W4A[3]" class="input-underline input-one-question-four" type="text">.My hair <input class="input-underline input-one-question-four" disabled value="is" type="text">short. Beth's hair <input name="A1:W4A[4]" class="input-underline input-one-question-four" type="text">long. </p>
                     </div>
                 </main>
             </section>
@@ -115,7 +115,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <input class="input-one-question-one" type="text" name="answer_five_one">
+                                    <input name="A1:W4B[1]" class="input-one-question-one" type="text" name="answer_five_one">
                                 </div>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <input class="input-one-question-one" type="text" name="answer_five_two">
+                                    <input name="A1:W4B[2]" class="input-one-question-one" type="text" name="answer_five_two">
                                 </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
                     <div class="py-4">
                         <div class="col-12 col-lg-10 mx-auto position-relative">
                             <span class="my-friend">My friend:</span>
-                            <textarea name="data_text" class="pl-2"></textarea>
+                            <textarea name="A1:W5[1]" class="pl-2"></textarea>
                         </div>
                     </div>
                 </main>

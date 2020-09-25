@@ -12,7 +12,9 @@
 
     <div class="nav-row">
         <ul class="nav-menu-list">
-            <!--  -->
+            <li><button class="submit-exam nav-button">
+                <span class="link-text">Submit</span>
+            </button></li>
         </ul>
     </div>
 

@@ -11,7 +11,7 @@
     --tabmenu-shadow-color: #32B1DA;
 }
 
-.tab-menu.horizontal .tab-menu-list {
+.tab-menu.horizontal .tabs {
     padding-left: calc(((100% - 83.3333333333%) / 2 + 1rem));
 }
 

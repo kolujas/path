@@ -12,7 +12,7 @@
         public function up(){
             Schema::create('records', function (Blueprint $table) {
                 $table->increments('id_record')->unique();
-                $table->unsignedInteger('id_student');
+                $table->unsignedInteger('id_evaluation');
                 $table->string('file');
                 $table->timestamps();
             });

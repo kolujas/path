@@ -1,14 +1,14 @@
 /**
- * * URL controls the url correctly.
+ * * URLServiceProvider controls the URL correctly.
  * @export
- * @class URL
+ * @class URLServiceProvider
  */
-export class URL{
+export class URLServiceProvider{
     /**
-     * * Returns the url #hash.
+     * * Returns the URL #hash.
      * @static
      * @returns
-     * @memberof URL
+     * @memberof URLServiceProvider
      */
     static findHashParameter(){
         let hash = /#/
@@ -19,11 +19,11 @@ export class URL{
     }
 
     /**
-     * * Returns an specific url parameter.
+     * * Returns an specific URL parameter.
      * @static
      * @param {*} parameterName
      * @returns
-     * @memberof URL
+     * @memberof URLServiceProvider
      */
     static findGetParameter(parameterName){
         var result = false;
@@ -45,7 +45,7 @@ export class URL{
     /**
      * * Returns the route without the #hash.
      * @static
-     * @memberof URL
+     * @memberof URLServiceProvider
      */
     static findOriginalRoute(){
         return window.location.pathname;

@@ -15,14 +15,7 @@
                     # code...
                 }
             } else {
-                Record::create( [
-                    'id_student' => 1,
-                    'file' => 'records/1.pdf',
-                ] );
-                Record::create( [
-                    'id_student' => 2,
-                    'file' => 'records/2.pdf',
-                ] );
+                # code...
             }
         }
     }
