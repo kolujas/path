@@ -1,13 +1,13 @@
 <section id="users" class="tab-content closed">
     <main class="row">
-        <section class="table px-2 col-xl-5">
+        <section class="table px-2 col-xl-6">
             <h2 class="text-center my-5">Candidatos</h2>
             <div class="mb-4 px-4 search-container">
             <h3>Buscar por</h3>
                 <button type="button" class="btn btn-primary text-white">Fecha</button>
                 <button type="button" class="btn btn-primary text-white">Nombre [A-Z]</button>
             </div>
-            <div class="mb-4 mx-4">
+            <div class="mb-4 mx-4 search-input-container">
                 <span class="icon-search"><i class="fas fa-search"></i></span>
                 <input class="btn search text-left" placeholder="Buscar" type="search">
             </div>
@@ -60,7 +60,7 @@
                 </tbody>
             </table>
         </section>
-        <section class="details mt-4 col-xl-5">
+        <section class="details mt-4 col-xl-5 mr-xl-5">
             <div class="card">
                 <div class="card-header">
                     <h3 class="text-center">Detalles</h3>

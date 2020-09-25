@@ -6,7 +6,7 @@
      */
     Route::get('/', 'AuthController@showLogin')->name('auth.showLogin');
     Route::post('/login', 'AuthController@doLogIn')->name('auth.doLogIn');
-    Route::middleware('auth.guards')->group(function(){
+    // Route::middleware('auth.guards')->group(function(){
         Route::get('/logoff', 'AuthController@doLogOff')->name('auth.doLogOff');
 
     /** 
@@ -49,4 +49,4 @@
      */
             Route::get('/panel', 'WebController@panel')->name('web.panel');
         // });
-    });
+    // });

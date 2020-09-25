@@ -84,10 +84,24 @@
     .tab-menu-list{
         display: block
     }
+
+    .tab-menu-list .tab-button{
+        font-size: 1.3rem;
+    }
     
 }
 
 /* * XL */
-@media(min-width: 1200px) {
-    /**/
+@media(min-width: 1200px){
+    .search-container{
+        margin-left: 2rem;
+    }
+
+    .icon-search, .search{
+        margin-left: .4rem;
+    }
+
+    .card{
+        margin-top: 9rem;
+    }
 }
