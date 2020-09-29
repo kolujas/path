@@ -77,8 +77,7 @@
             </section>
             <section id="dropdown-listing-2" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
                 <a href="#" class="dropdown-header">
-                    <span>2. You will hear Susana talking about happy days and sad days. Which are happy, and which are
-                        sad?<mark>One is done for you.</mark></span>
+                    <span>2. You will hear Susana talking about happy days and sad days. Which are happy, and which are sad?<mark>One is done for you.</mark></span>
                     <button class="dropdown-button text-right">
                         <i class="dropdown-icon fas fa-sort-down"></i>
                     </button>
@@ -133,7 +132,7 @@
                         <i class="dropdown-icon fas fa-sort-down"></i>
                     </button>
                 </a>
-                <main class="dropdown-menu-content second-question-container px-xl-4">
+                <main class="dropdown-menu-content third-question-container px-xl-4">
                     <div class="d-flex justify-content-center my-4">
                         <audio controls controlsList="nodownload">
                             <source

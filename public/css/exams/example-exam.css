@@ -198,7 +198,7 @@ textarea{
 
 /* color de fondo de los inputs en listening */
 
-.question-listening input{
+.question-listening .second-question-container input{
     background-color: transparent;
     text-align: center;
     color: var(--color-two);
