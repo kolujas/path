@@ -37,6 +37,7 @@ body {
     border-right: none;
     border-top: none;
     border-bottom: 1px solid var(--color-one);
+    background-color: transparent;
 }
 
 .nav-menu {
@@ -47,6 +48,14 @@ body {
     --navmenu-color-three: transparent;
     /* * Background */
     background-image: linear-gradient(45deg, rgba(0, 145, 183, 0.9), rgba(1, 73, 105, 0.9));
+}
+
+
+/* resaltado de las consignas */
+
+strong{
+    font-weight: 100;
+    color: var(--color-two);
 }
 
 /* ? PRIMERA CONSIGNA */
@@ -130,7 +139,8 @@ body {
 
 /* * parte remarcada del parrafono */
 .second-question-container strong {
-    color: var(--color-one);
+    color: var(--color-two);
+    font-weight: 100;
 }
 
 /* ? TERCERA CONSIGNA */
@@ -191,6 +201,7 @@ textarea{
 .question-listening input{
     background-color: transparent;
     text-align: center;
+    color: var(--color-two);
 
 }
 
