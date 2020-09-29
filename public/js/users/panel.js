@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             id: 'tab-users',
         }, {
             open: ['users'],
+            active: 'users',
         });
     }
 });

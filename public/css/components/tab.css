@@ -15,6 +15,27 @@
     padding-left: calc(((100% - 83.3333333333%) / 2 + 1rem));
 }
 
+.tab-menu.vertical .tab-header.logo h1{
+    font-size: 0;
+}
+
+.tab-menu.vertical .tabs .tab-menu-list .tab .tab-button {
+    width: 50%;
+    min-height: 2.3rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.tab-menu.vertical .tabs .tab-menu-list .tab .tab-button:hover {
+    color: var(--color-eight);
+}
+
+.tab-menu .tabs .tab-menu-list .tab.active .tab-button.btn.btn-nine-transparent{
+    background-color: var(--color-nine);
+    color: var(--color-eight);
+}
+
 /* * MD */
 @media (min-width: 768px) {
     /**/
@@ -22,7 +43,13 @@
 
 /* * LG */
 @media (min-width: 1024px) {
-    /**/
+    .tab-menu.vertical .tabs{
+        width: 20%;
+    }
+    
+    .tab-menu.vertical .tab-content-list{
+        width: 80%;
+    }
 }
 
 

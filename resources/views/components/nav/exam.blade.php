@@ -5,14 +5,14 @@
         </a>
         
         <a href="/" class="nav-title logo flex items-center">
-            <img src="/img/recursos/logo_white.png" alt="Path">
+            <img src={{ asset('img/recursos/logo_white.png') }} alt="Path">
             <h1>Path</h1>
         </a>
     </div>
 
     <div class="nav-row">
         <ul class="nav-menu-list">
-            <li><button class="submit-exam nav-button">
+            <li><button class="submit-exam nav-button btn btn-nine-transparent">
                 <span class="link-text">Submit</span>
             </button></li>
         </ul>

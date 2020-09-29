@@ -1,54 +1,11 @@
-.nav-menu{
-    --navmenu-color-one: var(--color-tres); /* * Titles */
-    --navmenu-color-two: var(--color-uno); /* * Buttons */
-    --navmenu-color-two-alternative: var(--color-dos); /* * Buttons efects */
-    --navmenu-color-three: var(--color-cuatro); /* * Background */
-    --navmenu-color-three-alternative: var(--color-cuatro); /* * Background efects */
-    --navmenu-color-four: var(--color-dos); /* * Borders efects */
-    --navmenu-color-four-alternative: var(--color-dos); /* * Borders efects */
-    --navmenu-color-five: var(--color-tres); /* * Icons */
-    --navmenu-color-five-alternative: var(--color-tres); /* * Icons efects */
+.sidebar.opened .sidebar-header .sidebar-button::before{
+    background-color: rgba(255,255,255,.5);
 }
 
-.sidebar .sidebar-header{
-    background-color: var(--color-cuatro);
-    border: none;
-}
-
-#tab .dropdown .dropdown .dropdown-title{
-    padding: 0 .75rem;
-}
-
-#tab .dropdown .dropdown .dropdown-title{
-    padding: 0 .75rem;
-}
-
-#tab .dropdown .dropdown .dropdown-link{
-    padding: 0 1.25rem;
-}
-
-#tab .dropdown .dropdown-menu-list{
-    background-color: var(--color-cuatro);
-    background-color: rgba(235, 244, 255, var(--bg-opacity));
-}
-
-#tab .dropdown .dropdown-menu-list .dropdown-menu-list{
-    --bg-opacity: 1;
-    background-color: #c3dafe;
-    background-color: rgba(195, 218, 254, var(--bg-opacity));
-}
-
-#tab .dropdown .dropdown .dropdown-title{
-    background-color: var(--color-cuatro);
-}
-
-.sidebar .sidebar-content .sidebar-menu-list li li:last-of-type{
-    padding-bottom: 1rem;
-}
-
-.sidebar .sidebar-content .sidebar-menu-list li.opened,
-.sidebar .sidebar-content .sidebar-menu-list li li.opened{
-    padding-bottom: 0;
+.sidebar .sidebar-content .sidebar-menu-list .sidebar-button{
+    width: 100%;
+    justify-content: center;
+    color: var(--color-nine);
 }
 
 /* * MD */

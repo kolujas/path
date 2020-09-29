@@ -1,0 +1,34 @@
+.thx{
+    min-height: 100vh;
+}
+
+.logo {
+    position: relative;
+    height: 12rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.text {
+    color: var(--color-one);
+    font-size: 2rem;
+}
+
+/* * MD */
+@media(min-width: 768px) {
+    /**/
+}
+
+/* * LG */
+@media(min-width: 1024px) {
+    /**/
+}
+
+/* * XL */
+@media(min-width: 1200px) {
+    /**/
+}

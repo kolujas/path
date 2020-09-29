@@ -3,61 +3,51 @@
         <section class="table px-2 col-xl-6">
             <h2 class="text-center my-5">Candidatos</h2>
             <div class="mb-4 px-4 search-container">
-            <h3>Buscar por</h3>
-                <button type="button" class="btn btn-primary text-white">Fecha</button>
-                <button type="button" class="btn btn-primary text-white">Nombre [A-Z]</button>
+                <h3>Buscar por</h3>
+                <button type="button" class="btn btn-two mr-2">Fecha</button>
+                <button type="button" class="btn btn-two">Nombre [A-Z]</button>
             </div>
             <div class="mb-4 mx-4 search-input-container">
                 <span class="icon-search"><i class="fas fa-search"></i></span>
                 <input class="btn search text-left" placeholder="Buscar" type="search">
             </div>
             <table class="table">
-                <thead class="background background-one text-white">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
             </table>
         </section>
         <section class="details mt-4 col-xl-5 mr-xl-5">
@@ -78,13 +68,11 @@
                         <span class="list-label">Exams</span>
                         <li class="list-datos">Exam A</li>
                         <li class="list-datos">Exam B</li>
-
                     </ul>
                     <div class="d-flex justify-content-start pl-4">
-                        <a href="#" class="btn background background-one text-white mr-2">Edit</a>
-                        <a href="#" class="btn background background-one text-white mr-2">Examine</a>
+                        <a href="#" class="btn btn-one mr-2">Edit</a>
+                        <a href="#" class="btn btn-one mr-2">Examine</a>
                     </div>
-
                 </div>
             </div>
         </section>

@@ -18,7 +18,7 @@
 @section('main')
     <section class="col-12 rules-container">
         <main class="rules-box mt-4">
-            <form action="/auth/exam/{{$exam->id_exam}}" method="post" enctype="multipart/form-data">
+            <form action="auth/exam/{{$exam->id_exam}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <p class="h3 text-left text-uppercase mt-4 pl-4 text text-one">Rememeber:</p>
                 <p class="rules-p mt-3 px-4">{{ $exam->rules }}</p>
