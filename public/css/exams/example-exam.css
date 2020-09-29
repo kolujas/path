@@ -28,18 +28,6 @@ body {
     min-height: 100vh;
 }
 
-/* * input underline */
-
-.input-underline{
-    outline: none;
-    border: none;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: 1px solid var(--color-one);
-    background-color: transparent;
-}
-
 .nav-menu {
     --navmenu-color-two: #fff;
     /* * Buttons */
@@ -83,29 +71,6 @@ strong{
     color: var(--color-two);
 }
 
-
-/* * input */
-
-.card .card-body .input-one-question-one {
-    outline: none;
-    border: none;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: 1px solid var(--color-one);
-    width: 100%;
-}
-
-
-/* * input focus */
-
-.card .card-body .input-one-question-one:focus {
-    outline: none;
-    border: none;
-    border-bottom: 1px solid var(--color-one);
-}
-
-
 /* * pistas sueltas */
 
 .answer-words li {
@@ -113,23 +78,12 @@ strong{
     font-size: 1rem;
 }
 
-.answer-words li:nth-of-type(1) {
+.answer-words li.crossed {
     text-decoration: line-through;
 }
 
 
 /* ? SEGUNDA CONSIGNA */
-
-/* * input que hay que completar */
-.input-one-question-two {
-    outline: none;
-    border: none;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: 1px solid var(--color-one);
-    width: 4rem;
-}
 
 /* * parrafono a completar */
 
@@ -146,14 +100,6 @@ strong{
 /* ? TERCERA CONSIGNA */
 
 /* ? CUARTA CONSIGNA */
-
-.input-one-question-four{
-    width: 12%;
-}
-
-.input-one-question-four{
-    width: 2rem;
-}
 
 .input-one-question-four[value]{
     color: var(--color-two);
@@ -205,12 +151,6 @@ textarea{
 
 }
 
-/* input tabla */
-
-.input-tabla{
-    width: 2rem;
-}
-
 /* tabla question 3 */
 
 .table-question-3{
@@ -235,6 +175,60 @@ textarea{
 
 .face-icons{
     font-size: 2rem;
+}
+
+/* * inputs */
+
+.input {
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: transparent;
+    width: 2rem;
+    color: var(--color-two);
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.input-underline{
+    border: none;
+    position: relative;
+    letter-spacing: .3rem;
+}
+
+.underlines{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+}
+
+.underlines .underline{
+    height: 1px;
+    background-color: var(--color-one);
+    margin-right: .25rem;
+}
+
+.input-medium {
+    width: 4rem;
+}
+
+.input-long {
+    outline: none;
+    border: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid var(--color-one);
+    width: 100%;
+}
+
+.input:not(.input-letters):focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color-one);
 }
 
 /* * MD */
