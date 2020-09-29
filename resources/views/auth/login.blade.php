@@ -11,12 +11,12 @@
 @section('main')
     <section class="centrar-form col-12 col-lg-10">
         <div class="col-12 col-lg-6 form-image-container d-none d-lg-block p-0">
-            <img class="img-fluid" src="img/recursos/form-image.jpg" alt="">
+            <img class="img-fluid" src={{ asset('img/recursos/form-image.jpg') }} alt="Visual image">
         </div>
-        <form class="col-10 col-lg-6 p-lg-4" method="post" action="/login">
+        <form class="col-10 col-lg-6 p-lg-4" method="post" action="login">
             @csrf
             <div class="text-center mb-4">
-                <img class="logo" src="img/recursos/logo.png" alt="Logo de path">
+                <img class="logo" src={{ asset('img/recursos/logo.png') }} alt="Logo de path">
                 <!-- <h2 class="text-center text-uppercase m-0">Path</h2> -->
             </div>
             <div class="form-group mb-4">

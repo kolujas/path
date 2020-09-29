@@ -153,4 +153,15 @@
                 'message' => "Exam deleted correctly.",
             ]);
         }
+        
+        /**
+         * * Show the 'exams panel' page.
+         * @param null|string $id_exam - Exam primary key.
+         * @return [type]
+         */
+        public function finished($id_exam){
+            return view('exams.finished', [
+                //
+            ]);
+        }
     }

@@ -9,13 +9,14 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
+        "carlos-meneses/laravel-mpdf": "^2.1",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3",
         "intervention/image": "^2.5",
         "laravel/framework": "^7.22.2",
-        "laravel/tinker": "^2.0",
         "laravel/passport": "^9.3",
+        "laravel/tinker": "^2.0",
         "laravel/ui": "^2.2"
     },
     "require-dev": {
