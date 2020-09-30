@@ -1,10 +1,36 @@
 =================
 *   TODO LIST   *
 =================
-
-/- Añadir a Student file
--/ Padding al rules
 -/ Usar tipografia
+
+=> LogIn
+    -/ Cambiar color rojo de validación
+    -/ Logo blanco para mobile
+    -/ Desktop el height supera el limite cuando es invalido, corregir
+    /- Redirigir
+
+=> Rules
+    -/ Acomodar el ancho del contenido
+    -/ Acomodar CSS validación
+    /- Añadir a Student file
+
+=> Exam
+    -/ Revisar CSS en mobile
+    -/ Tooltip
+    -/ SVG
+    -/ Letter focus
+    -/ Validar strikes
+    -/ Audio 2 veces
+    /- Boton submit en mobile arriba a la derecha
+
+=> Panel Candidates
+    -/ Cambiar palabras users por candidates
+
+=> Panel Exams
+    -/- Crear
+
+=> Panel Records
+    -/- Crear
 
 ¿Checkbox parar seleccionar candidatos en el "create/edit exam" o dónde se elije?
 

@@ -1,4 +1,4 @@
-// import { Validation } from "../../submodules/ValidationJS/js/Validation.js";
+import { Validation as ValidationJS } from "../../submodules/ValidationJS/js/Validation.js";
 import { Notification as NotificationJS } from "../../submodules/NotificationJS/js/Notification.js";
 
 document.addEventListener('DOMContentLoaded', function(e){
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         }));
     }
 
-    // new Validation({
-    //     id: 'cambiar_clave',
-    // });
+    let validation = new ValidationJS({
+        id: 'login-form',
+    }, rules, messages);
 });
