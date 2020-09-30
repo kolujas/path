@@ -32,6 +32,8 @@
             $evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get();
             $evaluation = $evaluation[0];
 
+            $filePath = "storage/records/$evaluation->id_evaluation.pdf";
+
             $pdf = PDF::loadView('pdf.exam', [
                 'exam' => $exam,
             ], [ ], [
@@ -46,8 +48,12 @@
                 'margin_footer'        => 0,
                 'title'                => 'PDF creado desde la página de path',
                 'author'               => 'Path',
-            ])->save("storage/records/$evaluation->id_evaluation.pdf");
-
+            ]);
+            try {
+                $pdf->save($filePath);
+            } catch (\Throwable $th) {
+                return $pdf->stream();
+            }
             return redirect("/exam/$id_exam/finished");
         }
 

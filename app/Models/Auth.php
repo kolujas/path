@@ -12,7 +12,7 @@
                     'password' => 'required|min:4|max:40',
                 ], 'messages' => [
                     'en' => [
-                        'data.required' => 'The Data is required.',
+                        'data.required' => 'The Username is required.',
                         'password.required' => 'The Password is required.',
                         'password.min' => 'The Password cannot be less than :min characters.',
                         'password.max' => 'The Password cannot be more than :max characters.',

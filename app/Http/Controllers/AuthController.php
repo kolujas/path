@@ -27,18 +27,27 @@
                 case 'candidates':
                     // dd(Auth::guard('candidates')->user());
                     return view('auth.login', [
-                        //
+                        'validation' => (object)[
+                            'rules' => AuthModel::$validation['login']['rules'],
+                            'messages' => AuthModel::$validation['login']['messages']['en'],
+                        ],
                     ]);
                     break;
                 case 'users':
                     // dd(Auth::guard('web')->user());
                     return view('auth.login', [
-                        //
+                        'validation' => (object)[
+                            'rules' => AuthModel::$validation['login']['rules'],
+                            'messages' => AuthModel::$validation['login']['messages']['en'],
+                        ],
                     ]);
                     break;
                 default:
                     return view('auth.login', [
-                        //
+                        'validation' => (object)[
+                            'rules' => AuthModel::$validation['login']['rules'],
+                            'messages' => AuthModel::$validation['login']['messages']['en'],
+                        ],
                     ]);
                     break;
             }
