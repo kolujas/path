@@ -74,3 +74,59 @@ document.addEventListener('DOMContentLoaded', function(e){
         }
     }
 });
+
+
+// Audios
+
+const audio = document.querySelectorAll('.audio');
+const audioBtn = document.querySelectorAll('.audioBtn');
+console.log(audioBtn);
+
+
+
+for (const key in audioBtn) {
+        const btn = audioBtn[key];
+        console.log(btn);
+        btn.addEventListener('click', function(e){
+            if(!this.dataset.count){
+                this.dataset.count = 0;
+            }
+        
+        e.preventDefault();
+        this.dataset.count = parseInt(this.dataset.count)+1;
+        if(parseInt(this.dataset.count) < 2){
+            ponePlay(key);
+        }else{            
+                audio[key].src = "";
+        }
+        })     
+    
+}
+
+// audio.addEventListener('timeupdate', function(e){
+//     e.preventDefault();
+//     console.log("Current time", this.currentTime);
+// });
+
+
+function ponePlay(key){
+    audio[key].play();
+}
+
+// Desactivar F5 (actualizar pagina)
+
+$(document).on("keydown", disableF5);
+
+function disableF5(e) { 
+    if ((e.which || e.keyCode) == 116) e.preventDefault(); 
+};
+
+// Mensaje si quiere salir de la pagina
+
+$(document).mouseleave(function () {
+    // alert("Strike one");
+});
+
+
+
+
