@@ -32,18 +32,8 @@
             $evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get();
             $evaluation = $evaluation[0];
 
-            $filetype = pathinfo('/img/recursos/logo_white.png', PATHINFO_EXTENSION);
-
-            if ($filetype==='svg'){
-                $filetype .= '+xml';
-            }
-    
-            $get_img = file_get_contents('img/recursos/logo_white.png');
-            $img = 'data:image/' . $filetype . ';base64,' . base64_encode($get_img );
-
             $pdf = PDF::loadView('pdf.exam', [
                 'exam' => $exam,
-                'img' => $img,
             ], [ ], [
                 'format'               => 'A4',
                 'default_font_size'    => '12',
@@ -62,9 +52,7 @@
         }
 
         public function crealo(){
-            $pdf = PDF::loadView('pdf.exam', [ ], [
-                //
-            ], [
+            $pdf = PDF::loadView('pdf.exam', [ ], [ ], [
                 'format'               => 'A4',
                 'default_font_size'    => '12',
                 'default_font'         => 'sans-serif',
@@ -74,11 +62,14 @@
                 'margin_bottom'        => 20,
                 'margin_header'        => 0,
                 'margin_footer'        => 0,
-                'title'                => 'PDF creado desde la página de path',
+                'title'                => 'PDF creado desde la página de Path',
                 'author'               => 'Path',
-            ])->save("storage/records/1.pdf");
-            return view('pdf.exam', [
-                //
             ]);
+            try {
+                $pdf->save("storage/records/1.pdf");
+            } catch (\Throwable $th) {
+                return $pdf->stream();
+            }
+	        return $pdf->stream();
         }
     }

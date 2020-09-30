@@ -34,7 +34,7 @@
     </htmlpageheader>
 
     <main>
-        <h2>Example Exam 1</h2>
+        <h2>Example Exam</h2>
     </main>
 
     <htmlpagefooter name="page-footer">
