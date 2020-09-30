@@ -1,41 +1,48 @@
-import { TabMenu as TabMenuJS } from "../../submodules/TabMenuJS/js/TabMenu.js";
-import { NavMenu } from "../../submodules/NavMenuJS/js/NavMenu.js";
-import { URLServiceProvider } from "../providers/URLServiceProvider.js";
+import {
+    TabMenu as TabMenuJS
+} from "../../submodules/TabMenuJS/js/TabMenu.js";
+import {
+    NavMenu
+} from "../../submodules/NavMenuJS/js/NavMenu.js";
+import {
+    URLServiceProvider
+} from "../providers/URLServiceProvider.js";
 
-function crossWord(){
+function crossWord() {
     let answers = document.querySelectorAll('.answers:not(first-of-type)');
     let selects = document.querySelectorAll('select');
     for (const answer of answers) {
         answer.classList.remove('crossed');
         for (const select of selects) {
-            if(select.options[select.selectedIndex].innerHTML == answer.innerHTML && !answer.classList.contains('crossed')){
+            if (select.options[select.selectedIndex].innerHTML == answer.innerHTML && !answer.classList.contains('crossed')) {
                 answer.classList.add('crossed');
             }
         }
     }
 }
 
-document.addEventListener('DOMContentLoaded', function(e){
+document.addEventListener('DOMContentLoaded', function (e) {
     let choosen = document.querySelector('.tab-content').id;
     for (const content of document.querySelectorAll('.tab-content')) {
-        if(content.id == URLServiceProvider.findHashParameter()){
+        if (content.id == URLServiceProvider.findHashParameter()) {
             choosen = content.id;
         }
     }
-    if(document.querySelector('.tab-content')){
+    if (document.querySelector('.tab-content')) {
         let tab = new TabMenuJS({
             id: 'tab-exam',
         }, {
             open: [choosen],
         });
     }
-    
+
     let navmenu = new NavMenu({
         id: 'nav-exam',
         sidebar: {
             id: ['menu'],
             position: ['left'],
-        }, dropdown:{
+        },
+        dropdown: {
             //
         },
     }, {
@@ -45,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function(e){
 
     let submitBtns = document.querySelectorAll('.submit-exam');
     for (const btn of submitBtns) {
-        btn.addEventListener('click', function(e){
+        btn.addEventListener('click', function (e) {
             e.preventDefault();
             document.querySelector('form').submit();
         });
@@ -53,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function(e){
 
     let selects = document.querySelectorAll('select');
     for (const select of selects) {
-        select.addEventListener('change', function(e){
+        select.addEventListener('change', function (e) {
             crossWord(this.options[this.selectedIndex].innerHTML);
         });
     }
@@ -62,9 +69,9 @@ document.addEventListener('DOMContentLoaded', function(e){
     for (const input of inputLetters) {
         let letters = parseInt(input.dataset.letters);
         let span = input.parentNode;
-            let div = document.createElement('div');
-            div.classList.add('underlines');
-            span.appendChild(div);
+        let div = document.createElement('div');
+        div.classList.add('underlines');
+        span.appendChild(div);
 
         for (let index = 0; index < letters; index++) {
             let underline = document.createElement('div');
@@ -80,27 +87,40 @@ document.addEventListener('DOMContentLoaded', function(e){
 
 const audio = document.querySelectorAll('.audio');
 const audioBtn = document.querySelectorAll('.audioBtn');
-console.log(audioBtn);
-
-
 
 for (const key in audioBtn) {
-        const btn = audioBtn[key];
-        console.log(btn);
-        btn.addEventListener('click', function(e){
-            if(!this.dataset.count){
-                this.dataset.count = 0;
+    const btn = audioBtn[key];
+    if(typeof btn === "object"){
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if(!this.classList.contains('playing')){
+                if (!this.dataset.count) {
+                    this.dataset.count = 0;
+                }
+                this.dataset.count = parseInt(this.dataset.count) + 1;
+                if (parseInt(this.dataset.count) < 3) {
+                    ponePlay(key);
+                } else {
+                    this.classList.add('finished');
+                    audio[key].src = "";
+                }
             }
-        
-        e.preventDefault();
-        this.dataset.count = parseInt(this.dataset.count)+1;
-        if(parseInt(this.dataset.count) < 2){
-            ponePlay(key);
-        }else{            
-                audio[key].src = "";
-        }
-        })     
+            
+        })
+    }
     
+
+}
+
+
+for (const key in audio) {
+        const input = audio[key]; 
+        if(typeof input  === "object"){
+            input.addEventListener('play', function(e){
+                audioBtn[key].classList.add('playing');
+            });
+        }       
+        
 }
 
 // audio.addEventListener('timeupdate', function(e){
@@ -109,7 +129,7 @@ for (const key in audioBtn) {
 // });
 
 
-function ponePlay(key){
+function ponePlay(key) {
     audio[key].play();
 }
 
@@ -117,8 +137,8 @@ function ponePlay(key){
 
 $(document).on("keydown", disableF5);
 
-function disableF5(e) { 
-    if ((e.which || e.keyCode) == 116) e.preventDefault(); 
+function disableF5(e) {
+    if ((e.which || e.keyCode) == 116) e.preventDefault();
 };
 
 // Mensaje si quiere salir de la pagina
@@ -126,7 +146,3 @@ function disableF5(e) {
 $(document).mouseleave(function () {
     // alert("Strike one");
 });
-
-
-
-

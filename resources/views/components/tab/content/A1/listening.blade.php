@@ -12,13 +12,15 @@
                     <div class="d-flex justify-content-center my-4">
                         
                         {{-- <button onclick="pauseAudio()" type="button">Pause Audio</button>  --}}
-                        <audio class="audio" controls controlsList="nodownload">
+                        <audio class="audio d-none" controls controlsList="nodownload">
                             <source
                                 src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
                                 type="audio/ogg">
                             Tu navegador no soporta el audio.
                         </audio>
-                        <button class="audioBtn" type="button">Play Audio</button>
+                        <div>
+                            <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
+                        </div>
                     </div>
 
                     <table class="table table-striped mb-4">
@@ -86,13 +88,16 @@
                 </a>
                 <main class="dropdown-menu-content second-question-container px-xl-4">
                     <div class="d-flex justify-content-center my-4">
-                        <audio class="audio" controls controlsList="nodownload">
+                        <audio class="audio d-none" controls controlsList="nodownload">
                             <source
                                 src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
                                 type="audio/ogg">
                             Tu navegador no soporta el audio.
                         </audio>
-                        <button class="audioBtn" type="button">Play Audio</button>
+                        <div>
+                            <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
+                        </div>
+                        
                     </div>
                     <table class="table table-striped mb-4">
                         <thead>
@@ -136,13 +141,15 @@
                 </a>
                 <main class="dropdown-menu-content third-question-container px-xl-4">
                     <div class="d-flex justify-content-center my-4">
-                        <audio class="audio" controls controlsList="nodownload">
+                        <audio class="audio d-none" controls controlsList="nodownload">
                             <source
                                 src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
                                 type="audio/ogg">
                             Tu navegador no soporta el audio.
                         </audio>
-                        <button class="audioBtn" type="button">Play Audio</button>
+                        <div>
+                            <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
+                        </div>
                     </div>
                     <table class="table table-striped mb-4 table-question-3">
                         <thead>
