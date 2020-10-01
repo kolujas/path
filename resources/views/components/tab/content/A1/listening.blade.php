@@ -23,16 +23,10 @@
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">Me</th>
-                                <th scope="col"><span class="input-underline"><input name="A1:L1[2]"
-                                        class="input-letters input position-relative input-underline"
-                                        data-letters="2" type="text"></span>ther</th>
-                                <th scope="col"><span class="input-underline"><input name="A1:L1[4]"
-                                        class="input-letters input position-relative input-underline"
-                                        data-letters="2" type="text"></span>ther</th>
+                                <th scope="col"><input name="A1:L1[2a]" class="input-small input position-relative" type="text"><input name="A1:L1[2b]" class="input-small input position-relative last" type="text">ther</th>
+                                <th scope="col"><input name="A1:L1[4a]" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[4b]" class="input-small input position-relative last" type="text">ther</th>
                                 <th scope="col">sister</th>
-                                <th scope="col"><span class="input-underline"><input name="A1:L1[6]"
-                                        class="input-letters input position-relative input-underline"
-                                        data-letters="2" type="text"></span>er</th>
+                                <th scope="col"><input name="A1:L1[6a]" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[6b]" class="input-small input position-relative last" type="text">er</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,27 +40,17 @@
                             </tr>
                             <tr>
                                 <th scope="row">Age</th>
-                                <td><span class="input-underline"><input name="A1:L1[1]"
-                                        class="input-letters input position-relative input-underline"
-                                        data-letters="2" type="text"></span></td>
+                                <td><input name="A1:L1[1a]" class="input-small input position-relative" type="text"><input name="A1:L1[1b]" class="input-small input position-relative" type="text"></td>
                                 <td>40</td>
                                 <td>38</td>
-                                <td><span class="input-underline"><input name="A1:L1[7]"
-                                        class="input-letters input position-relative input-underline"
-                                        data-letters="2" type="text"></span></td>
-                                <td><span class="input-underline"><input name="A1:L1[8]"
-                                        class="input-letters input position-relative input-underline"
-                                        data-letters="2" type="text"></span></td>
+                                <td><input name="A1:L1[7a]" class="input-small input position-relative" type="text"><input name="A1:L1[7b]" class="input-small input position-relative" type="text"></td>
+                                <td><input name="A1:L1[8a]" class="input-small input position-relative" type="text"><input name="A1:L1[8b]" class="input-small input position-relative" type="text"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Job</th>
                                 <td class="text-center">-</td>
-                                <td>te<span class="input-underline"><input name="A1:L1[7]"
-                                        class="input-letters input position-relative input-underline"
-                                        data-letters="2" type="text"></span>er</td>
-                                <td>doc<span class="input-underline"><input name="A1:L1[7]"
-                                        class="input-letters input position-relative input-underline"
-                                        data-letters="2" type="text"></span>or</td>
+                                <td>te<input name="A1:L1[7a]" class="input-small input position-relative first" type="text"><input name="A1:L1[7b]" class="input-small input position-relative" type="text"><input name="A1:L1[7v]" class="input-small input position-relative last" type="text">er</td>
+                                <td>doc<input name="A1:L1[7a]" class="input-small input position-relative first" type="text"><input name="A1:L1[7b]" class="input-small input position-relative last" type="text">or</td>
                                 <td class="text-center">-</td>
                                 <td class="text-center">-</td>
                             </tr>
@@ -94,30 +78,18 @@
                         <thead>
                             <tr>
                                 <th class="text-center" scope="col"><i class="face-icons far fa-smile "></i> </th>
-                                <th scope="col"><input
-                                        class="input position-relative"
-                                        value="fri" disabled type="text"></span>day</th>
-                                <th scope="col"><input name="A1:L2[1]"
-                                        class="input position-relative"
-                                        type="text"></span>day</th>
-                                <th scope="col"><input name="A1:L2[2]"
-                                        class="input position-relative"
-                                        type="text"></span>day</th>
+                                <th scope="col"><input class="input position-relative" value="fri" disabled type="text"></span>day</th>
+                                <th scope="col"><input name="A1:L2[1]" class="input position-relative" type="text"></span>day</th>
+                                <th scope="col"><input name="A1:L2[2]" class="input position-relative" type="text"></span>day</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th class="text-center" scope="row"><i class="face-icons far fa-frown text-center"></i>
                                 </th>
-                                <th scope="col"><input name="A1:L2[3]"
-                                        class="input position-relative"
-                                        type="text"></span>day</th>
-                                <th scope="col"><input name="A1:L2[4]"
-                                        class="input position-relative"
-                                        type="text"></span>day</th>
-                                <th scope="col"><input name="A1:L2[5]"
-                                        class="input position-relative"
-                                        type="text"></span>day</th>
+                                <th scope="col"><input name="A1:L2[3]" class="input position-relative" type="text"></span>day</th>
+                                <th scope="col"><input name="A1:L2[4]" class="input position-relative" type="text"></span>day</th>
+                                <th scope="col"><input name="A1:L2[5]" class="input position-relative" type="text"></span>day</th>
                             </tr>
                         </tbody>
                     </table>
@@ -159,38 +131,28 @@
                             </tr>
                             <tr>
                                 <th scope="col">A nurse lives at numbers..</th>
-                                <th scope="col"><input name="A1:L2[4]"
-                                        class="d-block mx-auto input position-relative"
-                                        data-letters="1" type="text"></th>
+                                <th scope="col"><input name="A1:L2[4]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                                 <th scope="col"></th>
                             </tr>
                             <tr>
                                 <th scope="col">My aunt Wendy lives at number..</th>
-                                <th scope="col"><input name="A1:L2[4]"
-                                        class="d-block mx-auto input position-relative"
-                                        data-letters="1" type="text"></th>
+                                <th scope="col"><input name="A1:L2[4]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                                 <th scope="col"></th>
                             </tr>
                             <tr>
                                 <th scope="col">I don't know who lives at number..</th>
-                                <th scope="col"><input name="A1:L2[4]"
-                                        class="d-block mx-auto input position-relative"
-                                        data-letters="1" type="text"></th>
+                                <th scope="col"><input name="A1:L2[4]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                                 <th scope="col"></th>
                             </tr>
                             <tr>
                                 <th scope="col">I don't know who lives at number..</th>
-                                <th scope="col"><input name="A1:L2[4]"
-                                        class="d-block mx-auto input position-relative"
-                                        data-letters="1" type="text"></th>
+                                <th scope="col"><input name="A1:L2[4]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                                 <th scope="col"></th>
 
                             </tr>
                             <tr>
                                 <th scope="col">Number..</th>
-                                <th scope="col"><input name="A1:L2[4]"
-                                        class="d-block mx-auto input position-relative"
-                                        data-letters="1" type="text"></th>
+                                <th scope="col"><input name="A1:L2[4]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                                 <th scope="col">is a cafe</th>
                             </tr>
                         </tbody>

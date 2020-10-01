@@ -1,3 +1,4 @@
+import { Validation as ValidationJS } from "../../submodules/ValidationJS/js/Validation.js";
 import { InputFileMaker as InputFileMakerJS } from "../../submodules/InputFileMakerJS/js/InputFileMaker.js";
 import { CountDown } from "../CountDown.js";
 import { Notification as NotificationJS } from "../../submodules/NotificationJS/js/Notification.js";
@@ -28,4 +29,8 @@ document.addEventListener('DOMContentLoaded', function(e){
             insertBefore: document.querySelector('body').children[0]
         }));
     }
+
+    let validation = new ValidationJS({
+        id: 'rules-form',
+    }, rules, messages);
 });

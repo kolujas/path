@@ -22,6 +22,7 @@
     -/ Validar strikes
     -/ Audio 2 veces
     /- Boton submit en mobile arriba a la derecha
+    /- Agregar strikes en la tabla
 
 => Panel Candidates
     -/ Cambiar palabras users por candidates

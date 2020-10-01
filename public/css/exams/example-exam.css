@@ -187,28 +187,25 @@ textarea{
     background-color: transparent;
     width: 2rem;
     color: var(--color-two);
-    border-bottom: 1px solid #000;
     text-align: center;
+    border-bottom: 1px solid #222;
 }
 
-.input-underline{
-    border: none;
+.input-small {
     position: relative;
-    letter-spacing: .3rem;
+    width: 1rem;
 }
 
-.underlines{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-}
-
-.underlines .underline{
-    height: 1px;
-    background-color: var(--color-one);
+.input-small:not(:last-child) {
     margin-right: .25rem;
+}
+
+.input-small.first {
+    margin-left: .5rem;
+}
+
+.input-small.last {
+    margin-right: .5rem;
 }
 
 .input-medium {
@@ -221,7 +218,6 @@ textarea{
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom: 1px solid var(--color-one);
     width: 100%;
 }
 
