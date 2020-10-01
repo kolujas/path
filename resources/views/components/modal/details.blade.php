@@ -29,7 +29,7 @@
             </ul>
             <div class="d-flex justify-content-start px-4">
                 <a href="#" class="btn btn-one mr-2">Edit</a>
-                <a href="#" class="btn btn-one mr-2">Examine</a>
+                <a href="#" class="btn btn-one mr-2">Delete</a>
             </div>
         </div>
     </div>
