@@ -1,15 +1,15 @@
 @extends('layouts.panel')
 
 @section('css')
-    <link href={{ asset('css/users/panel.css') }} rel="stylesheet">
+    <link href={{ asset('css/candidates/panel.css') }} rel="stylesheet">
 @endsection
 
 @section('title')
-    Admin panel - Users
+    Admin panel - Candidates
 @endsection
 
 @section('main')
-    <div id="tab-users" class="col-12 relative tab-menu vertical p-0">
+    <div id="tab-candidates" class="col-12 relative tab-menu vertical p-0">
         <section class="tabs background background-linear">
             <header class="tab-header logo">
                 <img src={{ asset('img/recursos/logo_white.png') }} alt="Path">
@@ -25,14 +25,14 @@
         </section>
 
 		<section class="tab-content-list mx-auto">
-            @component('components.tab.content.users')
+            @component('components.tab.content.candidates')
             @endcomponent
 		</section>
 	</div>
 @endsection
 
 @section('js')
-    <script type="module" src={{ asset('js/users/panel.js') }}></script>
+    <script type="module" src={{ asset('js/candidates/panel.js') }}></script>
 @endsection
 
 @section('footer')

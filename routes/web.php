@@ -40,10 +40,10 @@
         
         // Route::middleware('admin')->group(function(){
     /** 
-     * ! UserController
+     * ! CandidateController
      */
-            Route::post('/user/create', 'UserController@doCreate')->name('user.doCreate');
-            Route::put('/user/{id_user}/edit', 'UserController@doEdit')->name('user.doEdit');
-            Route::get('/panel/users', 'UserController@panel')->name('user.panel');
+            Route::post('/candidate/create', 'CandidateController@doCreate')->name('candidate.doCreate');
+            Route::put('/candidate/{id_candidate}/edit', 'CandidateController@doEdit')->name('candidate.doEdit');
+            Route::get('/panel/candidates', 'CandidateController@panel')->name('candidate.panel');
         // });
     // });

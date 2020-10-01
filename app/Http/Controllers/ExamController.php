@@ -22,6 +22,10 @@
 
             return view('exams.rules', [
                 'exam' => $exam,
+                'validation' => (object)[
+                    'rules' => Exam::$validation['auth']['rules'],
+                    'messages' => Exam::$validation['auth']['messages']['en'],
+                ],
             ]);
         }
 
@@ -32,7 +36,7 @@
          */
         public function auth(Request $request, $id_exam = null){
             $input = (object)$request->input();
-            $validator = Validator::make( $request->all(), Exam::$validation['auth']['rules'], Exam::$validation['auth']['messages']['en'] );
+            $validator = Validator::make($request->all(), Exam::$validation['auth']['rules'], Exam::$validation['auth']['messages']['en']);
             if($validator->fails()){
                 return redirect("/exam/$id_exam/rules")->withErrors($validator)->withInput();
             }
