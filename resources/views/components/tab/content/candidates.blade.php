@@ -10,7 +10,7 @@
             <div class="pointer-events mb-4 px-2 px-md-0">
                 <div class="search-bar">
                     <label for="search" class="label-search m-0 px-3"><i class="icon-search fas fa-search"></i></label>
-                    <input id="search" class="input-search" placeholder="Type for search..." type="search">
+                    <input id="search" class="input-search" placeholder="Type to search..." type="search">
                 </div>
             </div>
         </header>
