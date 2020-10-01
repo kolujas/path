@@ -88,7 +88,7 @@ header h2 {
 @media(min-width: 1024px) {
     /**/
     .rules-box {
-        padding: 0 6rem;
+        padding: 0 10rem;
     }
 }
 
@@ -98,6 +98,6 @@ header h2 {
 @media(min-width: 1200px) {
     /**/
     .rules-box {
-        padding: 0 14rem;
+        padding: 0 30rem;
     }
 }

@@ -144,12 +144,47 @@ textarea{
 
 /* color de fondo de los inputs en listening */
 
-.question-listening input{
+.question-listening .second-question-container input{
     background-color: transparent;
     text-align: center;
     color: var(--color-two);
 
 }
+
+/* play button */
+
+.audioBtn{
+    outline: none;
+    border: 0;
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    background-color: var(--color-one);
+    color: #fff;
+    padding: .5rem 2rem;
+}
+
+.playing{
+    background-color: var(--color-two);
+}
+
+.finished{
+    background-color: var(--color-one);
+}
+
+.audioBtn:focus{
+    outline: none;
+}
+
+/* play icon */
+
+.play-icon{
+    position: relative;
+    left: 1.5rem;
+    color: #fff;
+}
+
+
 
 /* tabla question 3 */
 
