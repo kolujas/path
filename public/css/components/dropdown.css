@@ -1,19 +1,20 @@
 .dropdown {
-    --dropdown-title-color: var(--color-one); /* * Titles */
-    --dropdown-title-color-alternative: var(--color-one); /* * Titles efects */
-    --dropdown-button-color: var(--color-three); /* * Buttons */
-    --dropdown-button-color-alternative: var(--color-four); /* * Buttons effects */
-    --dropdown-background-color: #fff; /* * Background */
-    --dropdown-background-color-alternative: #fff; /* * Background efects */
-    --dropdown-border-color: var(--color-eight); /* * Borders efects */
-    --dropdown-border-color-alternative: var(--color-nine); /* * Borders efects */
-    --dropdown-icon-color: var(--color-ten); /* * Icons */
-    --dropdown-icon-color-alternative: var(--color-eleven); /* * Icons efects */
+    --dropdown-title-color: var(--color-one);
+    --dropdown-title-color-alternative: var(--color-one);
+    --dropdown-button-color: var(--color-three);
+    --dropdown-button-color-alternative: var(--color-four);
+    --dropdown-background-color: #fff;
+    --dropdown-background-color-alternative: #fff;
+    --dropdown-border-color: var(--color-eight);
+    --dropdown-border-color-alternative: var(--color-nine);
+    --dropdown-icon-color: var(--color-one);
+    --dropdown-icon-color-alternative: var(--color-one);
     background-color: #fff;
-    box-shadow: 4px 5px 9px 1px rgba(0, 0, 0, 0.3);
     border-radius: .25rem;
     overflow: hidden;
     padding: 0;
+    border: 2px solid transparent;
+    transition: 500ms;
 }
 
 .dropdown.opened{
@@ -29,10 +30,9 @@
     transition: 500ms;
 }
 
-.dropdown:hover .dropdown-header,
-.dropdown.opened .dropdown-header {
-    background-color: var(--color-one);
-    color: var(--color-nine);
+.dropdown:hover,
+.dropdown.opened {
+    border-color: var(--color-one);
 }
 
 .dropdown .dropdown-header .dropdown-button {

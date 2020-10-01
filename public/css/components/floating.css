@@ -22,6 +22,7 @@
 @media (min-width: 1024px) {
     .floating-menu {
         position: fixed;
+        width: calc(((100% - 66.6666666667%) / 2 + 1rem));
     }
 }
 

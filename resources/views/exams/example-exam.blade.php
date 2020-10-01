@@ -5,7 +5,9 @@
 @endsection
 
 @section('nav')
-    @component('components.nav.exam', ['current' => 'example-exam'])
+    @component('components.nav.exam', [
+        'exam' => $exam,
+    ])
     @endcomponent
 @endsection
 

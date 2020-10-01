@@ -35,7 +35,7 @@ body {
     /* * titles */
     --navmenu-color-three: transparent;
     /* * Background */
-    background-image: linear-gradient(45deg, rgba(0, 145, 183, 0.9), rgba(1, 73, 105, 0.9));
+    background-color: var(--color-one);
 }
 
 
@@ -184,8 +184,6 @@ textarea{
     color: #fff;
 }
 
-
-
 /* tabla question 3 */
 
 .table-question-3{
@@ -262,6 +260,34 @@ textarea{
     border-bottom: 1px solid var(--color-one);
 }
 
+/* * tab */
+.tab-menu .tabs .tab-menu-list .tab {
+    margin: 1rem 1rem 1rem 0;
+}
+.tab-menu .tabs .tab-menu-list .tab .tab-button {
+    padding: 0 1rem;
+    min-height: fit-content;
+    margin: 1;
+    border: 2px solid var(--color-nine);
+    color: var(--color-nine);
+}
+.tab-menu .tabs .tab-menu-list .tab .tab-button.opened {
+    color: var(--color-one);
+    border: 2px solid var(--color-one);
+}
+.tab-menu .tabs .tab-menu-list .tab .tab-button:hover:not(.opened){
+    color: var(--color-nine);
+}
+.tab-menu .tabs .tab-menu-list .tab .tab-button:not(.opened) {
+    /* pointer-events: none; */
+    background: unset;
+}
+.tab-menu .tabs .tab-menu-list .tab:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 /* * MD */
 
 @media(min-width: 768px) {
@@ -279,6 +305,10 @@ textarea{
 /* * LG */
 
 @media(min-width: 1024px) {
+    .nav-menu {
+        padding: 0 calc(((100% - 66.6666666667%) / 2 + 1rem));
+    }
+
     /* * ancho por defecto en lg */
     .card-min-width{
         min-width: 19%;

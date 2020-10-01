@@ -12,9 +12,9 @@
 
     <div class="nav-row">
         <ul class="nav-menu-list">
-            <li><button class="submit-exam nav-button btn btn-nine-transparent">
-                <span class="link-text">Submit</span>
-            </button></li>
+            <li>
+                <span class="nav-text">{{ $exam->name }}</span>
+            </li>
         </ul>
     </div>
 

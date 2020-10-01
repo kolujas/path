@@ -83,10 +83,6 @@ tr:hover{
         display: block
     }
 
-    .tab-menu-list .tab-button{
-        font-size: 1.3rem;
-    }
-
     header.content-header {
         padding-left: calc(3rem - 15px);
         padding-right: 2rem;
