@@ -5,7 +5,9 @@
 @endsection
 
 @section('nav')
-    @component('components.nav.exam', ['current' => 'example-exam'])
+    @component('components.nav.exam', [
+        'exam' => $exam,
+    ])
     @endcomponent
 @endsection
 
@@ -14,7 +16,7 @@
 @endsection
 
 @section('main')
-    <div class="floating-menu top left">
+    <div class="example-exam floating-menu top left">
         <span class="floating-button">
             <i class="fas fa-exclamation"></i>
         </span>

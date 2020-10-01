@@ -1,11 +1,11 @@
 <section id="writing" class="tab-content closed">
     <section class="questions">
         <div class="row px-4 py-md-4 justify-content-lg-center">
-            <section id="dropdown-question-1" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
+            <section id="dropdown-question-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
                 <a href="#" class="dropdown-header">
                     <span>1. Match the words to the images.<mark>One is done for you.</mark></span>
                     <button class="dropdown-button text-right">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
+                        <i class="dropdown-icon fas fa-angle-down"></i>
                     </button>
                 </a>
                 <main class="dropdown-menu-content">
@@ -86,11 +86,11 @@
                     </div>
                 </main>
             </section>
-            <section id="dropdown-question-2" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
+            <section id="dropdown-question-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
                 <a href="#" class="dropdown-header">
                     <span>2. Complete</span>
                     <button class="dropdown-button text-right">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
+                        <i class="dropdown-icon fas fa-angle-down"></i>
                     </button>
                 </a>
                 <main class="dropdown-menu-content second-question-container">
@@ -105,22 +105,22 @@
                     </div>
                 </main>
             </section>
-            <section id="dropdown-question-3" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
+            <section id="dropdown-question-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
                 <a href="#" class="dropdown-header">
                     <span>3. Complete the names of the animals.<mark>One is done for you.</mark></span>
                     <button class="dropdown-button text-right">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
+                        <i class="dropdown-icon fas fa-angle-down"></i>
                     </button>
                 </a>
                 <main class="dropdown-menu-content second-question-container">
                     <div class="py-4"></div>
                 </main>
             </section>
-            <section id="dropdown-question-4" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
+            <section id="dropdown-question-4" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
                 <a href="#" class="dropdown-header">
                     <span>4a. Read about Alice, then fill the spaces with <strong>am, is </strong>or <strong>are</strong>.<mark>One is done for you.</mark></span>
                     <button class="dropdown-button text-right">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
+                        <i class="dropdown-icon fas fa-angle-down"></i>
                     </button>
                 </a>
                 <main class="dropdown-menu-content second-question-container">
@@ -129,11 +129,11 @@
                     </div>
                 </main>
             </section>
-            <section id="dropdown-question-5" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
+            <section id="dropdown-question-5" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
                 <a href="#" class="dropdown-header">
                     <span>4b. Who is Alice? Who is Beth? Write their names under the pictures.</span>
                     <button class="dropdown-button text-right">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
+                        <i class="dropdown-icon fas fa-angle-down"></i>
                     </button>
                 </a>
                 <main class="dropdown-menu-content second-question-container">
@@ -157,16 +157,16 @@
                     </div>
                 </main>
             </section>
-            <section id="dropdown-question-6" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
+            <section id="dropdown-question-6" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
                 <a href="#" class="dropdown-header">
                     <span>5. Write about your friend.</span>
                     <button class="dropdown-button text-right">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
+                        <i class="dropdown-icon fas fa-angle-down"></i>
                     </button>
                 </a>
                 <main class="dropdown-menu-content fifth-question-container">
                     <div class="py-4">
-                        <div class="col-12 col-lg-10 mx-auto position-relative">
+                        <div class="col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                             <span class="my-friend">My friend:</span>
                             <textarea name="A1:W5[1]" class="pl-2"></textarea>
                         </div>

@@ -1,7 +1,7 @@
 <section id="listening" class="tab-content closed">
     <section class="questions question-listening">
         <div class="row px-4 py-md-4 justify-content-lg-center">
-            <section id="dropdown-listing-1" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
+            <section id="dropdown-listing-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
                 <a href="#" class="dropdown-header">
                     <span>1. Look at the table below. Listen to Susana talking about her family, and complete the spaces in the table. You can listen twice.<mark>One is done for you.</mark> </span>
                     <button class="dropdown-button text-right">
@@ -63,7 +63,7 @@
                     </table>
                 </main>
             </section>
-            <section id="dropdown-listing-2" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
+            <section id="dropdown-listing-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
                 <a href="#" class="dropdown-header">
                     <span>2. You will hear Susana talking about happy days and sad days. Which are happy, and which are sad?<mark>One is done for you.</mark></span>
                     <button class="dropdown-button text-right">
@@ -104,7 +104,7 @@
                     </table>
                 </main>
             </section>
-            <section id="dropdown-listing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 mb-4">
+            <section id="dropdown-listing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
                 <a href="#" class="dropdown-header">
                     <span>3. Where Jack lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers<mark>Two are done for you.</mark></span>
                     <button class="dropdown-button text-right">

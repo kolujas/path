@@ -27,6 +27,7 @@
     width: fit-content;
     border: 2px solid #222;
     background-color: white;
+    border-radius: .25rem;
 }
 
 .search-bar .label-search {
@@ -51,12 +52,22 @@
 /* detalles label */
 .details .list-label{
     font-size: 1rem;
+    padding: 0 calc(.5rem + 2px);
 }
 
 /* detalles datos  */
 .details .list-datos{
     font-size: 1.2rem;
     color: var(--color-two);
+    border: 1px solid var(--color-one);
+    background-color: transparent;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    width: 100%;
+    outline: none;
+}
+.details .list-datos[disabled] {
+    border-color: transparent;
 }
 
 tr{
@@ -65,6 +76,7 @@ tr{
 }
 
 tr:hover{
+    position: relative;
     background-color: #d6d6d6;
 }
 
@@ -81,10 +93,6 @@ tr:hover{
 
     .tab-menu-list{
         display: block
-    }
-
-    .tab-menu-list .tab-button{
-        font-size: 1.3rem;
     }
 
     header.content-header {
@@ -114,11 +122,17 @@ tr:hover{
     .details {
         padding-right: calc(15px + 3rem);
         position: fixed;
-        top: 11.8rem;
+        top: 8.5rem;
         right: 0;
         padding-left: 2rem;
         z-index: 2;
         pointer-events: none;
+    }
+
+    .details .card-body {
+        max-height: 24rem;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .details .card,
@@ -142,5 +156,10 @@ tr:hover{
 
     .details {
         padding-right: calc(15px + 4rem);
+        top: 11.8rem;
+    }
+
+    .details .card-body {
+        max-height: 24rem;
     }
 }
