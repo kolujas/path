@@ -34,7 +34,7 @@
     </htmlpageheader>
 
     <main>
-        <h2>Example Exam</h2>
+        <h2 class="bg-danger">Example Exam</h2>
     </main>
 
     <htmlpagefooter name="page-footer">

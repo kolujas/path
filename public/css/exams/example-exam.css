@@ -169,7 +169,7 @@ textarea{
 }
 
 .finished{
-    background-color: var(--color-one);
+    background-color: var(--color-four);
 }
 
 .audioBtn:focus{
