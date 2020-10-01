@@ -4,19 +4,46 @@
     }
 
     header {
-        background-image: linear-gradient(45deg, rgba(0, 145, 183, 0.9), rgba(1, 73, 105, 0.9));
+        background-color: #014969;
         text-align: center;
         width: 100%;
     }
 
     main {
-        padding: 1rem;
+        border: 1rem;
     }
+
+    h3{
+        text-align: left;
+        margin: 2rem 0;
+        padding: 0 2rem;
+    }
+
+    mark{
+        background: none;
+        color: #0091B7;
+    }
+
+    table{
+        margin: auto;
+        border: 1px solid #ccc;
+        padding: 0;
+    }
+
+    /* table th, table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6; */
+
+    tr, th{
+        padding: 2rem;
+    }
+
 
     footer {
         text-align: right;
         color: rgba(1, 73, 105, 0.9);
-        padding: 1rem;
+        border: 1rem;
     }
 
     @page {
@@ -34,7 +61,119 @@
     </htmlpageheader>
 
     <main>
-        <h2 class="bg-danger">Example Exam</h2>
+        <h2 style="text-align: center;">Example Exam</h2>
+        <h3>1. Look at the table below. Listen to Susana talking about her family, and complete the spaces in the table. You can listen twice.<mark> One is done for you.</mark></h3>
+        <table style="margin: auto; border: 1px solid #ccc;">
+            <thead>
+                <tr style="background-color: #fff;">
+                    <th style="padding: 1rem 2rem;" scope="col"></th>
+                    <th style="padding: 1rem 2rem;" scope="col">Me</th>
+                    <th style="padding: 1rem 2rem;" scope="col">ther</th>
+                    <th style="padding: 1rem 2rem;" scope="col">ther</th>
+                    <th style="padding: 1rem 2rem;" scope="col">sister</th>
+                    <th style="padding: 1rem 2rem;" scope="col">er</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" style="background-color: #ccc; padding: 1rem 2rem;">Name</th>
+                    <td style="background-color: #ccc; border: 0; padding: 1rem 2rem;">Susana</td>
+                    <td style="background-color: #ccc; border: 0; padding: 1rem 2rem;">Lee</td>
+                    <td style="background-color: #ccc; border: 0; padding: 1rem 2rem;">Alex</td>
+                    <td style="background-color: #ccc; border: 0; padding: 1rem 2rem;">Gemma</td>
+                    <td style="background-color: #ccc; border: 0; padding: 1rem 2rem;">Phil</td>
+                </tr>
+                <tr>
+                    <th style="padding: 1rem 2rem;" scope="row">Age</th>
+                    <td></td>
+                    <td style="text-align: center">40</td>
+                    <td style="text-align: center">38</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th style="background-color: #ccc; border: 0; padding: 1rem 2rem;" scope="row">Job</th>
+                    <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">-</td>
+                    <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">teer</td>
+                    <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">docor</td>
+                    <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">-</td>
+                    <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. You will hear Susana talking about happy days and sad days. Which are happy, and which are sad? <mark>One is done for you.</mark></h3>
+
+        <table class="table table-striped mb-4">
+            <thead>
+                <tr>
+                    <th class="text-center" scope="col"><i class="face-icons far fa-smile "></i>OK</th>
+                    <th scope="col"></span>day</th>
+                    <th scope="col"></span>day</th>
+                    <th scope="col"></span>day</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="text-center" scope="row"><i class="face-icons far fa-frown text-center"></i>BAD
+                    </th>
+                    <th style="background-color: #ccc; border-left: 1px solid #ccc;" scope="col"></span>day</th>
+                    <th style="background-color: #ccc; border: 0;" scope="col"></span>day</th>
+                    <th style="background-color: #ccc; border: 0;" scope="col"></span>day</th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>3. Where Jack lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers <mark>Two are done for you.</mark></h3>
+
+        <table class="table table-striped mb-4 table-question-3">
+            <thead>
+                <tr>
+                    <th style="border-bottom: 1px solid #ccc" scope="col">I live at..</th>
+                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="border-bottom: 1px solid #ccc" scope="col">North street</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th style="border-bottom: 1px solid #ccc" scope="col">A teacher lives at number..</th>
+                    <th style="background-color: #ccc;" scope="col">1</th>
+                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+                </tr>
+                <tr>
+                    <th style="border-bottom: 1px solid #ccc" scope="col">A nurse lives at numbers..</th>
+                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+                </tr>
+                <tr>
+                    <th style="border-bottom: 1px solid #ccc" scope="col">My aunt Wendy lives at number..</th>
+                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+                </tr>
+                <tr>
+                    <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
+                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+                </tr>
+                <tr>
+                    <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
+                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+
+                </tr>
+                <tr>
+                    <th style="border-bottom: 1px solid #ccc" scope="col">Number..</th>
+                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="border-bottom: 1px solid #ccc" scope="col">is a cafe</th>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <htmlpagefooter name="page-footer">
