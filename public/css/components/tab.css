@@ -43,6 +43,10 @@
 
 /* * LG */
 @media (min-width: 1024px) {
+    .tab-menu .tabs .tab-header.logo img {
+        height: 8rem;
+    }
+
     .tab-menu.horizontal .tabs {
         padding: 0 calc(((100% - 66.6666666667%) / 2 + 1rem));
     }

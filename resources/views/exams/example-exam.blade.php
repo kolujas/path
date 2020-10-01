@@ -16,7 +16,7 @@
 @endsection
 
 @section('main')
-    <div class="floating-menu top left">
+    <div class="example-exam floating-menu top left">
         <span class="floating-button">
             <i class="fas fa-exclamation"></i>
         </span>

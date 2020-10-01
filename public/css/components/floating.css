@@ -1,16 +1,27 @@
 .floating-menu {
+    --floatingmenu-background-color: var(--color-one);
+    --floatingmenu-background-color-alternative: var(--color-one);
+    --floatingmenu-icon-color: #fff;
+    --floatingmenu-icon-color-alternative: #ddd;
+}
+
+.example-exam.floating-menu {
     position: absolute;
     display: flex;
     align-items: center;
     height: 4.6rem;
-    --floatingmenu-color-one: var(--color-one);
-    --floatingmenu-color-two: #fff;
     width: calc(((100% - 83.3333333333%) / 2 + 1rem));
     justify-content: center;
 }
 
 .floating-menu .floating-button {
     border-radius: 50%;
+}
+
+.panel.floating-menu .floating-button {
+    min-width: 3rem;
+    min-height: 3rem;
+    font-size: 1.5rem;
 }
 
 /* * MD */
@@ -20,7 +31,7 @@
 
 /* * LG */
 @media (min-width: 1024px) {
-    .floating-menu {
+    .example-exam.floating-menu {
         position: fixed;
         width: calc(((100% - 66.6666666667%) / 2 + 1rem));
     }
