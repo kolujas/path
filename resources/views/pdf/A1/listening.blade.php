@@ -1,15 +1,18 @@
-@extends('pdf.exam', [
-    'exam' => $exam,
-])
+@extends('pdf.exam')
 
 @section('css')
     
+@endsection
+
+@section('title')
+    Example exam 1
 @endsection
 
 @section('main')
     <header>
         <h2 style="text-align: center;">Listening</h2>
     </header>
+
     <section>
         <header>
             <h3>1. Look at the table below. Listen to Susana talking about her family, and complete the spaces in the table. You can listen twice.<mark> One is done for you.</mark></h3>
@@ -80,7 +83,7 @@
     </section>
 
     <pagebreak />
-
+    
     <section>
         <header>
             <h3>3. Where Jack lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers <mark>Two are done for you.</mark></h3>

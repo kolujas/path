@@ -65,6 +65,9 @@
             $modules = $candidate->modules();
             $exam = Exam::find(1);
             $pdf = false;
+            $data = [
+                'exam' => $exam,
+            ];
             foreach($modules as $module) {
                 if(!$pdf) {
                     $pdf = PDF::loadView("pdf.$module->folder.$module->file", [
