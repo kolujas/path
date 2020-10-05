@@ -22,7 +22,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
-                    'modules' => 'A1:listening,A1:writing',
+                    'modules' => 'A1:L,A1:W',
                     'password' => \Hash::make( '12345678' ),
                     'slug' => 'pepe-diaz',
                 ] );

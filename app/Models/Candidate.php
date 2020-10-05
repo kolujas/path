@@ -1,6 +1,7 @@
 <?php
     namespace App\Models;
 
+    use App\Models\Module;
     use Illuminate\Contracts\Auth\MustVerifyEmail;
     use Illuminate\Foundation\Auth\User as Authenticatable;
     use Illuminate\Notifications\Notifiable;
@@ -36,12 +37,7 @@
             $auxData = explode(',', $this->modules);
             $modules = collect([]);
             foreach ($auxData as $module) {
-                $moduleData = explode(':', $module);
-                $modules->push((object)[
-                    'initials' => $moduleData[0],
-                    'name' => ucfirst($moduleData[1]),
-                    'file' => $moduleData[1],
-                ]);
+                $modules->push((object)Module::$array[$module]);
             }
             return $modules;
         }
