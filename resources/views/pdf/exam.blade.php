@@ -198,7 +198,52 @@
         
         <div class="writing">
             <div class="writing-question-one">
-                
+                <div class="row justify-content-md-between justify-content-lg-center py-4">
+                    <ol class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
+                        <li class="answers crossed inline mx-lg-2">Bedroom</li>
+                        <li class="answers inline mx-lg-2">Garden</li>
+                        <li class="answers inline mx-lg-2">Kitchen</li>
+                        <li class="answers inline mx-lg-2">Lounge</li>
+                        <li class="answers inline mx-lg-2">Bathroom</li>
+                    </ol>
+                    <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
+                        <div class="card">
+                            <img src="" class="img-fluid" alt="image-one-question-one">
+                            <div class="card-body mx-auto">
+                                <select clas="input-long" name="A1:W1[1]">
+                                    <option disabled selected>Bedroom</option>
+                                    <option>Garden</option>
+                                    <option>Kitchen</option>
+                                    <option>Lounge</option>
+                                    <option>Bathroom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
+                        <div class="card">
+                            <img src="" class="img-fluid" alt="image-one-question-one">
+                            <div class="card-body mx-auto">
+                                <select clas="input-long" name="A1:W1[2]">
+                                    <option disabled selected>Bedroom</option>
+                                    <option>Garden</option>
+                                    <option>Kitchen</option>
+                                    <option>Lounge</option>
+                                    <option>Bathroom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
+                        <div class="card">
+                            <img src="" class="img-fluid" alt="image-one-question-one">
+                            <div class="card-body mx-auto">
+                                <select clas="input-long" disabled name="A1:W1[3]">
+                                    <option selected>Bedroom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
             </div>
             <div class="writing-question-two">
                 <h3 style="margin-left: 2rem;">2. Complete</h3>
