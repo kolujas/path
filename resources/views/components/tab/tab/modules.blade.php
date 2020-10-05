@@ -5,7 +5,7 @@
     @foreach($modules as $module)
         <li class="tab">
             <a href="#{{ $module->file }}" class="tab-button btn">
-                <span class="link-text">{{ $module->name }}</span>
+                <span class="link-text">{{ $module->file }}</span>
             </a>
         </li>
     @endforeach

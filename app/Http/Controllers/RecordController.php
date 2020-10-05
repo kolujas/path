@@ -3,9 +3,11 @@
 
     use App\Models\Evaluation;
     use App\Models\Exam;
+    use App\Models\Module;
     use App\Models\Record;
     use Auth;
     use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\View;
     use PDF;
     use Storage;
 
@@ -34,7 +36,7 @@
 
             $filePath = "storage/records/$evaluation->id_evaluation.pdf";
 
-            $pdf = PDF::loadView('pdf.exam', [
+            $pdf = PDF::loadView('pdf.A1.listening', [
                 'exam' => $exam,
             ], [ ], [
                 'format'               => 'A4',
@@ -49,6 +51,7 @@
                 'title'                => 'PDF creado desde la página de path',
                 'author'               => 'Path',
             ]);
+            $pdf->getMpdf()->AddPage('pdf.A1.writing');
             try {
                 $pdf->save($filePath);
             } catch (\Throwable $th) {
@@ -58,19 +61,32 @@
         }
 
         public function crealo(){
-            $pdf = PDF::loadView('pdf.exam', [ ], [ ], [
-                'format'               => 'A4',
-                'default_font_size'    => '12',
-                'default_font'         => 'sans-serif',
-                'margin_left'          => 0,
-                'margin_right'         => 0,
-                'margin_top'           => 20,
-                'margin_bottom'        => 20,
-                'margin_header'        => 0,
-                'margin_footer'        => 0,
-                'title'                => 'PDF creado desde la página de Path',
-                'author'               => 'Path',
-            ]);
+            $candidate = Auth::guard('candidates')->user();
+            $modules = $candidate->modules();
+            $exam = Exam::find(1);
+            $pdf = false;
+            foreach($modules as $module) {
+                if(!$pdf) {
+                    $pdf = PDF::loadView("pdf.$module->folder.$module->file", [
+                        'exam' => $exam,
+                    ], [ ], [
+                        'format'               => 'A4',
+                        'default_font_size'    => '12',
+                        'default_font'         => 'sans-serif',
+                        'margin_left'          => 0,
+                        'margin_right'         => 0,
+                        'margin_top'           => 20,
+                        'margin_bottom'        => 20,
+                        'margin_header'        => 0,
+                        'margin_footer'        => 0,
+                        'title'                => 'PDF creado desde la página de Path',
+                        'author'               => 'Path',
+                    ]);
+                }else{
+                    $pdf->getMpdf()->AddPage();
+                    $pdf->getMpdf()->WriteHTML(View::make("pdf.$module->folder.$module->file", [], [])->render());
+                }
+            }
             try {
                 $pdf->save("storage/records/1.pdf");
             } catch (\Throwable $th) {
