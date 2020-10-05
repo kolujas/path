@@ -11,6 +11,7 @@
 
     main {
         border: 1rem;
+        background-color: #f8fafc;
     }
 
     h3{
@@ -37,6 +38,24 @@
 
     tr, th{
         padding: 2rem;
+    }
+
+
+    /* Writening */
+
+    .writing-question-two{
+        background-color: #fff;
+        padding: 4rem 2rem;
+    }
+
+
+    .writing-question-two span, .writing-question-four-a span{
+        color: #0091B7;
+    }
+
+    .writing-question-four-a{
+        padding-top: 2rem;
+        padding: 4rem 2rem;
     }
 
 
@@ -132,48 +151,88 @@
         <br>
         <h3>3. Where Jack lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers <mark>Two are done for you.</mark></h3>
 
-        <table class="table table-striped mb-4 table-question-3">
-            <thead>
-                <tr>
-                    <th style="border-bottom: 1px solid #ccc" scope="col">I live at..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
-                    <th style="border-bottom: 1px solid #ccc" scope="col">North street</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th style="border-bottom: 1px solid #ccc" scope="col">A teacher lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col">1</th>
-                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
-                </tr>
-                <tr>
-                    <th style="border-bottom: 1px solid #ccc" scope="col">A nurse lives at numbers..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
-                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
-                </tr>
-                <tr>
-                    <th style="border-bottom: 1px solid #ccc" scope="col">My aunt Wendy lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
-                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
-                </tr>
-                <tr>
-                    <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
-                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
-                </tr>
-                <tr>
-                    <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
-                    <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+        <div class="listening">
+            <table class="table table-striped mb-4 table-question-3">
+                <thead>
+                    <tr>
+                        <th style="border-bottom: 1px solid #ccc" scope="col">I live at..</th>
+                        <th style="background-color: #ccc;" scope="col"></th>
+                        <th style="border-bottom: 1px solid #ccc" scope="col">North street</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th style="border-bottom: 1px solid #ccc" scope="col">A teacher lives at number..</th>
+                        <th style="background-color: #ccc;" scope="col">1</th>
+                        <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+                    </tr>
+                    <tr>
+                        <th style="border-bottom: 1px solid #ccc" scope="col">A nurse lives at numbers..</th>
+                        <th style="background-color: #ccc;" scope="col"></th>
+                        <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+                    </tr>
+                    <tr>
+                        <th style="border-bottom: 1px solid #ccc" scope="col">My aunt Wendy lives at number..</th>
+                        <th style="background-color: #ccc;" scope="col"></th>
+                        <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+                    </tr>
+                    <tr>
+                        <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
+                        <th style="background-color: #ccc;" scope="col"></th>
+                        <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+                    </tr>
+                    <tr>
+                        <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
+                        <th style="background-color: #ccc;" scope="col"></th>
+                        <th style="border-bottom: 1px solid #ccc" scope="col"></th>
+    
+                    </tr>
+                    <tr>
+                        <th style="border-bottom: 1px solid #ccc" scope="col">Number..</th>
+                        <th style="background-color: #ccc;" scope="col"></th>
+                        <th style="border-bottom: 1px solid #ccc" scope="col">is a cafe</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="writing">
+            <div class="writing-question-one">
+                
+            </div>
+            <div class="writing-question-two">
+                <h3 style="margin-left: 2rem;">2. Complete</h3>
+                <div style="margin-left: 4rem;" class="py-4 px-2 px-md-3">
+                    <p class="mb-4">In the bedroom, I can see <span>dummy</span> and <span>dummy</span>.</p>
+                    <p class="mb-4">In the bathroom, I can see <span>dummy</span> and <span>dummy</span>.</p>
+                    <p class="mb-0">In the kitchen, I can see <span>dummy</span> and <span>dummy</span>.</p>
+                </div>
+            </div>
+            <div class="writing-question-three">
 
-                </tr>
-                <tr>
-                    <th style="border-bottom: 1px solid #ccc" scope="col">Number..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
-                    <th style="border-bottom: 1px solid #ccc" scope="col">is a cafe</th>
-                </tr>
-            </tbody>
-        </table>
+            </div>
+            <div class="writing-question-four-a">
+                <h3 style="margin-left: 2rem;">4a. Read about Alice, then fill the spaces with <strong>am, is </strong>or <strong>are</strong>.<mark>One is done for you.</mark>
+                </h3> 
+                <div style="margin-left: 4rem;">
+                    <p>Hello! My friend Beth and I <span>dummy</span> good friends. She <span>dummy</span> 10 years old and I <span>dummy</span>.
+                    My hair <span>dummy</span> short. Beth's hair <span>dummy</span> long. </p>
+                </div>
+            </div>
+            <div class="writing-question-four-b">
+
+            </div>
+            <div class="writing-question-five">
+                <h3 style="margin-left: 2rem;">5. Write about your friend.</h3>
+                <div style="padding: 4rem 0">
+                    <div>
+                        <div style="margin-left: 4rem;">
+                            <p><span style="color: #0091B7;">My friend:</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis sit eligendi tempora mollitia. Dignissimos illo adipisci alias doloribus. Tempore corporis voluptatibus tenetur eaque nihil ducimus qui vero, architecto odio? Reiciendis excepturi, ipsa voluptas nulla consectetur reprehenderit eius. Suscipit, laboriosam facere!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <htmlpagefooter name="page-footer">
