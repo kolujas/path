@@ -48,6 +48,25 @@
 .details{
     width: 100%;
 }
+.modal.details:not(.d-none){
+    display: block;
+    left: initial;
+}
+
+.confirm-box{
+    background-color: var(--color-nine);
+    border-radius: .25rem;
+    padding: calc(.5rem + 2px);
+}
+
+.confirm-message,
+.confirm-span {
+    width: 100%;
+}
+
+.confirm-span {
+    color: var(--color-three);
+}
 
 /* detalles label */
 .details .list-label{
@@ -60,7 +79,7 @@
     font-size: 1.2rem;
     color: var(--color-two);
     border: 1px solid var(--color-one);
-    background-color: transparent;
+    background-color: white;
     border-radius: .25rem;
     padding: 0 .5rem;
     width: 100%;

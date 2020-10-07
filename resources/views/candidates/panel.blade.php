@@ -31,13 +31,16 @@
     </div>
     
     <div class="panel floating-menu bottom right">
-        <button class="floating-button">
+        <button class="add-data floating-button">
             <i class="fas fa-plus"></i>
         </button>
     </div>
 @endsection
 
 @section('js')
+    <script>
+        const candidates = @json($candidates);
+    </script>
     <script type="module" src={{ asset('js/candidates/panel.js') }}></script>
 @endsection
 

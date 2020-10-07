@@ -19,7 +19,7 @@
                         </ol>
                         <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                             <div class="card">
-                                <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/hector.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
                                     <select clas="input-long" name="A1:W1[1]">
                                         <option disabled selected>Bedroom</option>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                             <div class="card">
-                                <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/hector.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
                                     <select clas="input-long" name="A1:W1[2]">
                                         <option disabled selected>Bedroom</option>
@@ -47,7 +47,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                             <div class="card">
-                                <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/hector.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
                                     <select clas="input-long" disabled name="A1:W1[3]">
                                         <option selected>Bedroom</option>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                             <div class="card">
-                                <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/hector.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
                                     <select clas="input-long" name="A1:W1[4]">
                                         <option disabled selected>Bedroom</option>
@@ -71,7 +71,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-2 card-min-width">
                             <div class="card">
-                                <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/hector.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
                                     <select clas="input-long" name="A1:W1[5]">
                                         <option disabled selected>Bedroom</option>
@@ -140,7 +140,7 @@
                     <div class="row justify-content-center py-4">
                         <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                             <div class="card">
-                                <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/hector.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
                                     <input name="A1:W4B[1]" class="input input-long" type="text" name="answer_five_one">
                                 </div>
@@ -148,7 +148,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-2 card-min-width">
                             <div class="card">
-                                <img src="../../img/recursos/form-image.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/hector.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
                                     <input name="A1:W4B[2]" class="input input-long" type="text" name="answer_five_two">
                                 </div>
