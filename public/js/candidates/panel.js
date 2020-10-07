@@ -25,17 +25,34 @@ function changeContent(params = {
     table: undefined,
     data: [],
 }){
-    $('.filter-pagination').pagination({
-        dataSource: params.data,
-        pageSize: 10,
-        autoHidePrevious: true,
-        autoHideNext: true,
-        prevText: '',
-        nextText: '',
-        callback: function(data, pagination) {
-            params.table.changeData(data);
-        }
-    });
+    if(params.data && params.data.length){
+        $('.filter-pagination').pagination({
+            dataSource: params.data,
+            pageSize: 10,
+            autoHidePrevious: true,
+            autoHideNext: true,
+            prevText: '',
+            nextText: '',
+            callback: function(data, pagination) {
+                params.table.changeData(data);
+                if(!document.querySelector('.modal.details').classList.contains('d-none')){
+                    for (const tr of document.querySelectorAll('tr')) {
+                        if(tr.classList.contains('active')){
+                            tr.classList.remove('active');
+                        }
+                    }
+                    for (const tr of document.querySelectorAll('tr')) {
+                        if(tr.dataset.id_candidate == document.querySelector('.modal.details #id_candidate').value){
+                            tr.classList.add('active');
+                        }
+                    }
+                }
+            }
+        });
+    }else{
+        params.table.changeData([]);
+        document.querySelector('.filter-pagination').innerHTML = '';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function(e){
@@ -104,6 +121,13 @@ document.addEventListener('DOMContentLoaded', function(e){
         setActions({
             type: 'add'
         }, modal);
+        if(!document.querySelector('.modal.details').classList.contains('d-none')){
+            for (const tr of document.querySelectorAll('tr')) {
+                if(tr.classList.contains('active')){
+                    tr.classList.remove('active');
+                }
+            }
+        }
     });
 
     // document.querySelector('').addEventListener('click', function(e){

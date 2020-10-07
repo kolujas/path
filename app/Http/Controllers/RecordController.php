@@ -17,8 +17,13 @@
          * @return [type]
          */
         public function panel(){
+            $records = Record::all();
+            foreach ($records as $record) {
+                $record->candidate = $record->candidate();
+                $record->exam = $record->exam();
+            }
             return view('records.panel', [
-                'records' => Record::all(),
+                'records' => $records,
             ]);
         }
 

@@ -11,11 +11,24 @@
         public function run() {
             $records = Record::get();
             if ( count( $records ) ) {
-                foreach ($records as $record) {
-                    # code...
-                }
+                //
             } else {
-                # code...
+                Record::create( [
+                    'id_evaluation' => 8,
+                    'file' => 1,
+                ] );
+                Record::create( [
+                    'id_evaluation' => 9,
+                    'file' => 2,
+                ] );
+                Record::create( [
+                    'id_evaluation' => 10,
+                    'file' => 3,
+                ] );
+                Record::create( [
+                    'id_evaluation' => 11,
+                    'file' => 4,
+                ] );
             }
         }
     }

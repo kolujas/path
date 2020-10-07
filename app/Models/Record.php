@@ -1,7 +1,9 @@
 <?php
     namespace App\Models;
 
+    use App\Models\Candidate;
     use App\Models\Evaluation;
+    use App\Models\Exam;
     use Illuminate\Database\Eloquent\Model;
 
     class Record extends Model{
@@ -23,5 +25,23 @@
          */
         public function evaluation(){
             return $this->belongsTo(Evaluation::class, 'id_evaluation', 'id_evaluation');
+        }
+
+        /**
+         * * Create and returns the Record Candidate.
+         * @return [type]
+         */
+        public function candidate(){
+            return Candidate::find($this->evaluation->id_candidate);
+        }
+
+        /**
+         * * Create and returns the Record Exam.
+         * @return [type]
+         */
+        public function exam(){
+            $exam = Exam::find($this->evaluation->id_exam);
+            $exam->candidates = $exam->candidates();
+            return $exam;
         }
     }

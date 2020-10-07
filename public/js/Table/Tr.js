@@ -63,23 +63,53 @@ export class Tr{
         this.html = document.createElement('tr');
         if(properties.data.hasOwnProperty('id_candidate')){
             this.html.dataset.id_candidate = properties.data.id_candidate;
+            this.html.addEventListener('click', function(e){
+                e.preventDefault();
+                let modal = createModal([
+                    {title: '', name: 'id_candidate', type: 'hidden', disabled: true},
+                    {title: 'Candidate Number', name: 'candidate_number', type: 'number'},
+                    {title: 'Full Name', name: 'full_name', type: 'text'},
+                    {title: 'Email', name: 'email', type: 'text'},
+                    {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
+                    {title: 'Member', name: 'member', type: 'text'},
+                    {title: 'Member ID', name: 'id_member', type: 'number'},
+                    {title: 'Date Added', name: 'created_at', type: 'date', disabled: true},
+                ], properties.data);
+                setActions({
+                    type: 'info'
+                }, modal);
+                Tr.clickTr(this.dataset.id_candidate);
+            });
+        } else if (properties.data.hasOwnProperty('id_exam')){
+            this.html.dataset.id_exam = properties.data.id_exam;
+            this.html.addEventListener('click', function(e){
+                e.preventDefault();
+                let modal = createModal([
+                    {title: '', name: 'id_exam', type: 'hidden', disabled: true},
+                    {title: 'Name', name: 'name', type: 'text'},
+                    {title: 'Candidates', name: 'candidates', type: 'checkbox', disabled: true},
+                    {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date'},
+                ], properties.data);
+                setActions({
+                    type: 'info'
+                }, modal);
+                Tr.clickTr(this.dataset.id_exam);
+            });
+        } else if (properties.data.hasOwnProperty('id_record')){
+            this.html.dataset.id_record = properties.data.id_record;
+            this.html.addEventListener('click', function(e){
+                e.preventDefault();
+                let modal = createModal([
+                    {title: '', name: 'id_record', type: 'hidden', disabled: true},
+                    {title: 'Name', name: 'exam:name', type: 'text'},
+                    {title: 'File', name: 'file', disabled: true},
+                ], properties.data);
+                setActions({
+                    type: 'info'
+                }, modal);
+                Tr.clickTr(this.dataset.id_record);
+            });
         }
-        this.html.addEventListener('click', function(e){
-            e.preventDefault();
-            let modal = createModal([
-                {title: '', name: 'id_candidate', type: 'hidden', disabled: true},
-                {title: 'Candidate Number', name: 'candidate_number', type: 'number'},
-                {title: 'Full Name', name: 'full_name', type: 'text'},
-                {title: 'Email', name: 'email', type: 'text'},
-                {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
-                {title: 'Member', name: 'member', type: 'text'},
-                {title: 'Member ID', name: 'id_member', type: 'number'},
-                {title: 'Date Added', name: 'created_at', type: 'date', disabled: true},
-            ], properties.data);
-            setActions({
-                type: 'info'
-            }, modal);
-        });
         switch(this.type){
             case 'thead':
                     for(const th of this.ths){
@@ -91,6 +121,19 @@ export class Tr{
                         this.html.appendChild(td.html);
                     }
                 break;
+        }
+    }
+
+    static clickTr(id){
+        for (const tr of document.querySelectorAll('tr')) {
+            if(tr.classList.contains('active')){
+                tr.classList.remove('active');
+            }
+        }
+        for (const tr of document.querySelectorAll('tr')) {
+            if(tr.dataset.id_candidate == id || tr.dataset.id_exam == id || tr.dataset.id_record == id){
+                tr.classList.add('active');
+            }
         }
     }
 

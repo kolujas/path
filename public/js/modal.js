@@ -65,22 +65,33 @@ class Modal{
                 this.list.innerHTML = '';
                 for (const element of this.properties.list) {
                     if(this.data) {
-                        if (this.data.hasOwnProperty(element.name)) {
-                            let value = this.data[element.name];
-                            if(element.name == 'created_at'){
-                                let date = new Date(value);
-                                let year = date.getFullYear();
-                                let month = date.getMonth();
-                                if(month.toString().length < 2){
-                                    month = `0${month}`;
+                        if(element.name.split(':').length <= 1){
+                            if (this.data.hasOwnProperty(element.name)) {
+                                let value = this.data[element.name];
+                                if(element.name == 'created_at'){
+                                    let date = new Date(value);
+                                    let year = date.getFullYear();
+                                    let month = date.getMonth();
+                                    if(month.toString().length < 2){
+                                        month = `0${month}`;
+                                    }
+                                    let day = date.getDay();
+                                    if(day.toString().length < 2){
+                                        day = `0${day}`;
+                                    }
+                                    value = `${year}-${month}-${day}`;
                                 }
-                                let day = date.getDay();
-                                if(day.toString().length < 2){
-                                    day = `0${day}`;
-                                }
-                                value = `${year}-${month}-${day}`;
+                                this.createLi(element, value, true);
                             }
-                            this.createLi(element, value, true);
+                        }else{
+                            let elementToSearch = element.name.split(':')[0];
+                            let valueToSearch = element.name.split(':')[1];
+                            if (this.data.hasOwnProperty(elementToSearch)) {
+                                if (this.data[elementToSearch].hasOwnProperty(valueToSearch)) {
+                                    let value = this.data[elementToSearch][valueToSearch];
+                                    this.createLi(element, value, true);
+                                }
+                            }
                         }
                     } else {
                         this.createLi(element, '');
@@ -98,17 +109,42 @@ class Modal{
             title.innerHTML = element.title;
             li.appendChild(title);
 
-            let input = document.createElement('input');
-            input.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');
-            if(element.hasOwnProperty('disabled') && element.disabled){
-                input.classList.add('ever-disabled');
+            if(element.name == 'candidates'){
+                let span = document.createElement('span');
+                let length = 0;
+                if(value){
+                    for (const candidate of value) {
+                        length++;
+                    }
+                }
+                span.classList.add('ml-2');
+                title.classList.add('d-block', 'list-label', 'mb-2');
+                span.innerHTML = `(${length})`;
+                title.appendChild(span);
+            }else if(element.name == 'file'){
+                let btn = document.createElement('button');
+                btn.classList.add('d-block', 'mb-2', 'btn', 'btn-one');
+                li.appendChild(btn);
+                btn.addEventListener('click', function(e){
+                    e.preventDefault();
+                    console.log('click');
+                });
+                    let icon = document.createElement('i');
+                    icon.classList.add('far', 'fa-file');
+                    btn.appendChild(icon);
+            }else{
+                let input = document.createElement('input');
+                input.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');
+                if(element.hasOwnProperty('disabled') && element.disabled){
+                    input.classList.add('ever-disabled');
+                }
+                input.id = element.name;
+                input.type = element.type;
+                input.name = element.name;
+                input.value = value;
+                input.disabled = disabled;
+                li.appendChild(input);
             }
-            input.id = element.name;
-            input.type = element.type;
-            input.name = element.name;
-            input.value = value;
-            input.disabled = disabled;
-            li.appendChild(input);
     }
 
     open(){

@@ -101,14 +101,35 @@ export class Td {
             }
         }
         switch (properties.data) {
+            case 'candidate:full_name':
+                this.html.innerHTML = this.createCandidateFullName();
+                break;
+            case 'candidates':
+                this.html.innerHTML = this.createCandidates();
+                break;
             case 'email':
                 this.html.innerHTML = this.createString();
+                break;
+            case 'exam':
+                this.html.appendChild(this.createFile());
+                break;
+            case 'exam:name':
+                this.html.innerHTML = this.createExamName();
+                break;
+            case 'exam:scheduled_date_time':
+                this.html.innerHTML = this.createExamScheduledDateTime();
                 break;
             case 'full_name':
                 this.html.innerHTML = this.createString();
                 break;
+            case 'name':
+                this.html.innerHTML = this.createString();
+                break;
             case 'profile':
                 this.html.appendChild(this.createProfile());
+                break;
+            case 'scheduled_date_time':
+                this.html.innerHTML = this.createString();
                 break;
         }
     }
@@ -126,9 +147,62 @@ export class Td {
         }
     }
 
+    /**
+     * * Create a string from the data.
+     * @returns
+     * @memberof Td
+     */
+    createCandidateFullName() {
+        if (this.data.candidate.full_name !== null) {
+            return this.data.candidate.full_name;
+        } else {
+            return 'null';
+        }
+    }
+
+    /**
+     * * Create a string from the data.
+     * @returns
+     * @memberof Td
+     */
+    createExamName() {
+        if (this.data.exam.name !== null) {
+            return this.data.exam.name;
+        } else {
+            return 'null';
+        }
+    }
+
+    /**
+     * * Create a string from the data.
+     * @returns
+     * @memberof Td
+     */
+    createExamScheduledDateTime() {
+        if (this.data.exam.scheduled_date_time !== null) {
+            return this.data.exam.scheduled_date_time;
+        } else {
+            return 'null';
+        }
+    }
+
+    createCandidates(){
+        let length = 0;
+        for (const candidate of this.data) {
+            length++;
+        }
+        return `Candidates ${length}`;
+    }
+
     createProfile(){
         let icon = document.createElement('i');
         icon.classList.add('far', 'fa-user');
+        return icon;
+    }
+
+    createFile(){
+        let icon = document.createElement('i');
+        icon.classList.add('far', 'fa-file');
         return icon;
     }
 
@@ -371,20 +445,34 @@ export class Td {
             let auxData = {};
             for (const info in data) {
                 for (const dataName of dataToSearch) {
-                    if(dataName == '{all}'){
-                        auxData[dataName] = data;
-                    }else if (info == dataName) {
-                        auxData[info] = data[info];
+                    if(dataName.split(':').length <= 1){
+                        if(dataName == '{all}'){
+                            auxData[dataName] = data;
+                        }else if (info == dataName) {
+                            auxData[info] = data[info];
+                        }
+                    }else{
+                        // TODO
                     }
                 }
             }
-            return auxData
+            return auxData;
         } else {
             for (const info in data) {
-                if(properties.data == '{all}'){
-                    return data;
-                }else if (info == properties.data) {
-                    return data[info];
+                if(properties.data.split(':').length <= 1){
+                    if(properties.data == '{all}'){
+                        return data;
+                    }else if (info == properties.data) {
+                        return data[info];
+                    }
+                }else{
+                    let element = properties.data.split(':')[0];
+                    let value = properties.data.split(':')[1];
+                    if(data.hasOwnProperty(element)){
+                        if(data[element].hasOwnProperty(value)){
+                            return data;
+                        }
+                    }
                 }
             }
         }
