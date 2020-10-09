@@ -113,7 +113,9 @@
                     </button>
                 </a>
                 <main class="dropdown-menu-content second-question-container">
-                    <div class="py-4"></div>
+                    <div class="py-4">
+                        <img src="{{ asset('img/svg/animales.jpg') }}" class="img-fluid" alt="image-one-question-three">
+                    </div>
                 </main>
             </section>
             <section id="dropdown-question-4" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">

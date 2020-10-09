@@ -27,7 +27,7 @@
             </ol>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="" class="img-fluid" alt="image-one-question-one">
+                    <img src="{{ asset('') }}" class="img-fluid" alt="image-one-question-one">
                     <div class="card-body mx-auto">
                         <span>Bedroom</span>
                     </div>
