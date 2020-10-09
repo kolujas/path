@@ -89,8 +89,6 @@ document.addEventListener('DOMContentLoaded', function(e){
         order: {
             by: 'id_candidate',
         },
-        // limit: 10,
-        // pagination: true,
     }, {}, [{
         type: 'search',
         target: 'full_name,email',
@@ -102,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function(e){
         },
     }], candidates);
 
-    // table.changeData(filter.execute());
     changeContent({
         table: table,
         data: filter.execute(),
@@ -117,9 +114,10 @@ document.addEventListener('DOMContentLoaded', function(e){
             {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
             {title: 'Member', name: 'member', type: 'text'},
             {title: 'Member ID', name: 'id_member', type: 'number'},
+            {title: 'Modules', name: 'modules', type: 'checkbox'},
         ]);
         setActions({
-            type: 'add'
+            type: 'create'
         }, modal);
         if(!document.querySelector('.modal.details').classList.contains('d-none')){
             for (const tr of document.querySelectorAll('tr')) {

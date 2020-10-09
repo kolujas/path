@@ -107,6 +107,9 @@ export class Td {
             case 'candidates':
                 this.html.innerHTML = this.createCandidates();
                 break;
+            case 'checkbox':
+                this.html.appendChild(this.createCheckbox());
+                break;
             case 'email':
                 this.html.innerHTML = this.createString();
                 break;
@@ -198,6 +201,12 @@ export class Td {
         let icon = document.createElement('i');
         icon.classList.add('far', 'fa-user');
         return icon;
+    }
+
+    createCheckbox(){
+        let input = document.createElement('input');
+        input.type = 'checkbox';
+        return input;
     }
 
     createFile(){

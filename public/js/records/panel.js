@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         },
     }, {}, [{
         type: 'search',
-        target: 'name,scheduled_date_time',
+        target: 'name,exam:scheduled_date_time',
         event: {
             function: changeContent,
             params: {

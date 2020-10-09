@@ -80,6 +80,9 @@ body {
     --font-four: 'calibri';
 }
 
+.support-box{
+    --invalid-color: var(--color-seven);
+}
 
 /* * MD */
 

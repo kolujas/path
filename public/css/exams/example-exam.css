@@ -1,3 +1,8 @@
+/* * floating menu */
+.floating-menu.left{
+    left: 0;
+}
+
 /* * nav menu */
 
 .nav-menu{
@@ -281,10 +286,9 @@ textarea{
     /* pointer-events: none; */
     background: unset;
 }
-.tab-menu .tabs .tab-menu-list .tab:last-child {
-    position: absolute;
-    top: 0;
-    right: 0;
+.tab-menu .tabs .tab-menu-list .tab:last-child button{
+    white-space: nowrap;
+    margin-right: calc(((100% - 83.3333333333%) / 2 + 1rem));
 }
 
 /* * MD */
@@ -298,6 +302,16 @@ textarea{
     .questions > .row {
         width: 100%;
         margin: 0;
+    }
+    
+    .tab-menu .tabs .tab-menu-list .tab:last-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .tab-menu .tabs .tab-menu-list .tab:last-child button{
+        margin-right: 0;
     }
 }
 

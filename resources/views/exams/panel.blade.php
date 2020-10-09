@@ -39,7 +39,10 @@
 
 @section('js')
     <script>
+        const rules = @json($validation->rules);
+        const messages = @json($validation->messages);
         const exams = @json($exams);
+        const candidates = @json($candidates);
     </script>
     <script type="module" src={{ asset('js/exams/panel.js') }}></script>
 @endsection

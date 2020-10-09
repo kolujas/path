@@ -24,6 +24,7 @@
             }
             return view('records.panel', [
                 'records' => $records,
+                'modules' => Module::$array,
             ]);
         }
 

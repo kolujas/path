@@ -1,4 +1,8 @@
 import { URLServiceProvider } from "../submodules/ProvidersJS/URLServiceProvider.js";
+import { Validation as ValidationJS } from '../submodules/ValidationJS/js/Validation.js';
+import { Filter as FilterJS } from "../../submodules/FilterJS/js/Filter.js";
+
+import { Table } from "./Table/Table.js";
 
 class Modal{
     constructor(properties = {
@@ -108,43 +112,141 @@ class Modal{
             title.classList.add('d-block', 'list-label');
             title.innerHTML = element.title;
             li.appendChild(title);
-
             if(element.name == 'candidates'){
-                let span = document.createElement('span');
-                let length = 0;
-                if(value){
-                    for (const candidate of value) {
-                        length++;
-                    }
-                }
-                span.classList.add('ml-2');
-                title.classList.add('d-block', 'list-label', 'mb-2');
-                span.innerHTML = `(${length})`;
-                title.appendChild(span);
+                this.createCandidates(element, value, title, disabled, li);
+            }else if(element.name == 'modules' || element.name == 'candidate:modules'){
+                this.createModules(element, value, disabled, li);
             }else if(element.name == 'file'){
-                let btn = document.createElement('button');
-                btn.classList.add('d-block', 'mb-2', 'btn', 'btn-one');
-                li.appendChild(btn);
-                btn.addEventListener('click', function(e){
-                    e.preventDefault();
-                    console.log('click');
-                });
-                    let icon = document.createElement('i');
-                    icon.classList.add('far', 'fa-file');
-                    btn.appendChild(icon);
+                this.createFiles(li);
             }else{
-                let input = document.createElement('input');
-                input.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');
-                if(element.hasOwnProperty('disabled') && element.disabled){
-                    input.classList.add('ever-disabled');
-                }
-                input.id = element.name;
-                input.type = element.type;
-                input.name = element.name;
-                input.value = value;
-                input.disabled = disabled;
-                li.appendChild(input);
+                this.createInputs(element, value, disabled, li);
             }
+    }
+
+    createCandidates(element, candidates, title, disabled, li){
+        let span = document.createElement('span');
+        let length = 0;
+        if(candidates){
+            for (const candidate of candidates) {
+                length++;
+            }
+        }
+        span.classList.add('ml-2');
+        title.classList.add('d-block', 'list-label', 'mb-2');
+        span.innerHTML = `(${length})`;
+        title.appendChild(span);
+
+        let input = document.createElement('input');
+        input.classList.add('form-input');
+        input.id = element.name;
+        input.type = element.type;
+        input.name = element.name;
+        for (const candidate of candidates) {
+            if(input.value){
+                input.value += `,${candidate.id_candidate}`;
+                input.dataset.original += `,${candidate.id_candidate}`;
+            }else{
+                input.value = candidate.id_candidate;
+                input.dataset.original = candidate.id_candidate;
+            }
+        }
+        input.disabled = disabled;
+        title.appendChild(input);
+
+        if(!(/id_candidate/.exec(element.name) && /id_exam/.exec(element.name) && /id_record/.exec(element.name))){
+            let support = document.createElement('span');
+            support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
+            li.appendChild(support);
+        }
+    }
+
+    createModules(element, value, disabled, li){
+        let div = document.createElement('div');
+        div.classList.add('d-flex', 'flex-wrap', 'align-items-center');
+        li.appendChild(div);
+        value = value.split(',');
+        for (const module in modules) {
+            let input = document.createElement('input');
+            input.classList.add('d-inline-block', 'form-input', 'list-datos', 'mb-2', 'mr-2');
+            if(element.hasOwnProperty('disabled') && element.disabled){
+                input.classList.add('ever-disabled');
+            }
+            input.id = module;
+            input.type = element.type;
+            input.name = `${element.name}[]`;
+            input.value = module;
+            input.dataset.original = true;
+            input.disabled = disabled;
+            for (const moduleSelected of value) {
+                if(moduleSelected == module){
+                    input.checked = true;
+                }
+            }
+            div.appendChild(input);
+
+            let label = document.createElement('label');
+            label.classList.add('mr-3', 'mb-2');
+            label.htmlFor = module;
+            label.innerHTML = module;
+            div.appendChild(label);
+        }
+        if(!(/id_candidate/.exec(element.name) && /id_exam/.exec(element.name) && /id_record/.exec(element.name))){
+            let support = document.createElement('span');
+            support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
+            li.appendChild(support);
+        }
+    }
+
+    createFiles(li){
+        let selected;
+        for (const record of records) {
+            if (document.querySelector('.details #id_record').value == record.id_record) {
+                selected = record;
+            }
+        }
+        let div = document.createElement('div');
+        div.classList.add('d-flex');
+        li.appendChild(div);
+            let btnFile = document.createElement('a');
+            btnFile.href = `/storage/${selected.file}`;
+            btnFile.target = '_blank';
+            btnFile.classList.add('d-block', 'mb-2', 'mr-2', 'btn', 'btn-two-transparent', 'btn-icon');
+            div.appendChild(btnFile);
+                let iconFile = document.createElement('i');
+                iconFile.classList.add('far', 'fa-file');
+                btnFile.appendChild(iconFile);
+
+            let btnID = document.createElement('a');
+            btnID.href = `/storage/${selected.id}`;
+            btnID.target = '_blank';
+            btnID.classList.add('d-block', 'mb-2', 'btn', 'btn-two-transparent', 'btn-icon');
+            div.appendChild(btnID);
+                let iconID = document.createElement('i');
+                iconID.classList.add('far', 'fa-id-card');
+                btnID.appendChild(iconID);
+    }
+
+    createInputs(element, value, disabled, li){
+        let input = document.createElement('input');
+        input.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');
+        if(element.name == 'id_candidate' || element.name == 'id_exam' || element.name == 'id_record'){
+            input.classList.add('input-id');
+        }
+        if(element.hasOwnProperty('disabled') && element.disabled){
+            input.classList.add('ever-disabled');
+        }
+        input.id = element.name;
+        input.type = element.type;
+        input.name = element.name;
+        input.value = value;
+        input.dataset.original = value;
+        input.disabled = disabled;
+        li.appendChild(input);
+        if(!(/id_candidate/.exec(element.name) && /id_exam/.exec(element.name) && /id_record/.exec(element.name))){
+            let support = document.createElement('span');
+            support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
+            li.appendChild(support);
+        }
     }
 
     open(){
@@ -168,49 +270,59 @@ class Modal{
     }
 }
 
+function refreshData(){
+    for(const input of document.querySelectorAll(`.modal ul [data-original]`)){
+        if(input.type == 'checkbox'){
+            input.checked = input.dataset.original;
+        }else{
+            if(input.id == 'candidates'){
+                input.previousElementSibling.innerHTML = `(${input.dataset.original.split(',').length})`;
+            }
+            input.value = input.dataset.original;
+        }
+    }
+}
+
+function orderCandidates(data){
+    // for (const value of document.querySelector('.modal.details #candidates').value.split(',')) {
+        
+    // }
+}
+
+function changeCandidateContent(params = {
+    table: undefined,
+    data: [],
+}){
+    orderCandidates(params.data);
+    if(params.data && params.data.length){
+        $('.filter-pagination-candidates').pagination({
+            dataSource: params.data,
+            pageSize: 10,
+            autoHidePrevious: true,
+            autoHideNext: true,
+            prevText: '',
+            nextText: '',
+            callback: function(data, pagination) {
+                params.table.changeData(data);
+                for (const tr of document.querySelectorAll('tr')) {
+                    for (const value of document.querySelector('.modal.details #candidates').value.split(',')) {
+                        if(tr.dataset.id_candidate == value){
+                            tr.children[0].children[0].checked = true;
+                        }
+                    }
+                }
+            }
+        });
+    }else{
+        params.table.changeData([]);
+        document.querySelector('.filter-pagination').innerHTML = '';
+    }
+}
+
 function closeModal(params = {
     modal: undefined,
 }){
     params.modal.close();
-}
-
-function sendForm(params = {
-    type: undefined,
-}){
-    let url = URLServiceProvider.findOriginalRoute();
-    url = url.split('/').pop();
-    let form = document.querySelector('form');
-    let id, input;
-    if(!document.querySelector('.method')) {
-        input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = '_method';
-        input.classList.add('method');
-        form.appendChild(input);
-    } else {
-        input = document.querySelector('.method');
-    }
-    switch (params.type) {
-        case 'add':
-            input.value = 'POST';
-            form.action = `/${url}/add`;
-            form.submit();
-            break;
-        case 'delete':
-            input.value = 'DELETE';
-            id = document.querySelector('#id_candidate').value;
-            form.action = `/${url}/${id}/delete`;
-            if(document.querySelector('.confirm-input').value == 'DELETE') {
-                form.submit();
-            }
-            break;
-        case 'edit':
-            input.value = 'PUT';
-            id = document.querySelector('#id_candidate').value;
-            form.action = `/${url}/${id}/edit`;
-            form.submit();
-            break;
-    }
 }
 
 function disableInputs(){
@@ -238,19 +350,123 @@ function createCancelBtn(event, params) {
         btn.addEventListener('click', function(e){
             e.preventDefault();
             event(params);
+            if(URLServiceProvider.findOriginalRoute().split('/').pop() == 'exams' && (params.type == 'create' || params.type == 'info')){
+                showTable();
+            }
         });
 }
 
-function createAcceptBtn(event, params) {
+function createAcceptBtn(params) {
     let div = document.querySelector('.modal-actions');
         let btn = document.createElement('button');
-        btn.classList.add('accept-data', 'btn', 'btn-one', 'mr-2');
+        btn.classList.add('accept-data', 'form-submit', 'action-form', 'btn', 'btn-one-transparent', 'mr-2');
+        btn.type = 'submit';
         btn.innerHTML = 'Accept';
         div.appendChild(btn);
-        btn.addEventListener('click', function(e){
-            e.preventDefault();
-            event(params);
-        });
+    let url = URLServiceProvider.findOriginalRoute();
+    url = url.split('/').pop();
+    let form = document.querySelector('form');
+    let id, input, validation;
+    if(!document.querySelector('.method')) {
+        input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_method';
+        input.classList.add('method');
+        form.appendChild(input);
+    } else {
+        input = document.querySelector('.method');
+    }
+    switch (params.type) {
+        case 'create':
+            if(url == 'exams'){
+                createCandidatesCheckboxes();
+            }
+            input.value = 'POST';
+            form.action = `/${url}/create`;
+            validation = new ValidationJS({
+                id: 'action-form',
+            }, rules, messages);
+            break;
+        case 'delete':
+            input.value = 'DELETE';
+            id = document.querySelector('.input-id').value;
+            form.action = `/${url}/${id}/delete`;
+            btn.addEventListener('click', function(e){
+                e.preventDefault();
+                if(document.querySelector('.confirm-input').value == 'DELETE') {
+                    form.submit();
+                }
+            });
+            break;
+        case 'edit':
+            if(url == 'exams'){
+                createCandidatesCheckboxes();
+            }
+            input.value = 'PUT';
+            id = document.querySelector('.input-id').value;
+            form.action = `/${url}/${id}/edit`;
+            validation = new ValidationJS({
+                id: 'action-form',
+            }, rules, messages);
+            break;
+    }
+}
+
+function hideTable(){
+    document.querySelector('#exams table.table').classList.add('d-none');
+    document.querySelector('#exams .filter-pagination').classList.add('d-none');
+}
+
+function showTable(){
+    document.querySelector('#exams table.table').classList.remove('d-none');
+    document.querySelector('#exams .filter-pagination').classList.remove('d-none');
+    document.querySelector('#exams table.subtable').parentNode.removeChild(document.querySelector('#exams table.subtable'));
+    document.querySelector('#exams .filter-pagination-candidates').parentNode.removeChild(document.querySelector('#exams .filter-pagination-candidates'));
+}
+
+function createCandidatesCheckboxes(){
+    hideTable();
+
+    let cols = [ { 
+        data: 'checkbox'
+    }, { 
+        data: 'full_name'
+    }, {
+        data: 'email'
+    } ];
+
+    let html = document.createElement('table');
+    html.classList.add('table', 'subtable');
+    document.querySelector('#exams table').parentNode.appendChild(html);
+    let div = document.createElement('div');
+    div.classList.add('filter-pagination-candidates');
+    document.querySelector('#exams table').parentNode.appendChild(div);
+
+    let newTable = new Table({
+        cols: cols,
+        data: [],
+    }, html);
+    
+    let newFilter = new FilterJS({
+        id: 'candidates',
+        order: {
+            by: 'id_candidate',
+        },
+    }, {}, [{
+        type: 'search',
+        target: 'full_name,email',
+        event: {
+            function: changeCandidateContent,
+            params: {
+                table: newTable,
+            },
+        },
+    }], candidates);
+
+    changeCandidateContent({
+        table: newTable,
+        data: newFilter.execute(),
+    });
 }
 
 function createEditBtn() {
@@ -270,7 +486,7 @@ function createEditBtn() {
 function createDeleteBtn() {
     let div = document.querySelector('.modal-actions');
         let btn = document.createElement('button');
-        btn.classList.add('delete-data', 'btn', 'btn-one', 'mr-2');
+        btn.classList.add('delete-data', 'btn', 'btn-one-transparent', 'mr-2');
         btn.innerHTML = 'Delete';
         div.appendChild(btn);
         btn.addEventListener('click', function(e){
@@ -304,8 +520,9 @@ function createConfirmMessage() {
 
 function createConfirmForm(params){
     createConfirmMessage();
+    params.return = true;
     createCancelBtn(setActions, params);
-    createAcceptBtn(sendForm, {
+    createAcceptBtn({
         type: 'delete',
     });
 }
@@ -324,11 +541,11 @@ export function setActions(params = {
 }, modal){
     document.querySelector('.modal-actions').innerHTML = '';
     switch (params.type) {
-        case 'add':
+        case 'create':
             params.modal = modal;
             createCancelBtn(closeModal, params);
-            createAcceptBtn(sendForm, {
-                type: 'add',
+            createAcceptBtn({
+                type: 'create',
             });
             break;
         case 'delete':
@@ -337,15 +554,21 @@ export function setActions(params = {
             break;
         case 'edit':
             params.type = 'info';
+            params.return = true;
             createCancelBtn(setActions, params);
-            createAcceptBtn(sendForm, {
+            createAcceptBtn({
                 type: 'edit',
             });
             enableInputs();
             break;
         case 'info':
-            createEditBtn();
-            createDeleteBtn();
+            if(!params.url || params.url != 'records'){
+                createEditBtn();
+                createDeleteBtn();
+            }
+            if(params.return){
+                refreshData();
+            }
             disableInputs();
             break;
     }

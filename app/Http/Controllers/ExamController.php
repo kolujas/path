@@ -1,7 +1,9 @@
 <?php
     namespace App\Http\Controllers;
 
+    use App\Models\Candidate;
     use App\Models\Exam;
+    use App\Models\Module;
     use Auth;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Validator;
@@ -81,8 +83,14 @@
             foreach ($exams as $exam) {
                 $exam->candidates = $exam->candidates();
             }
+            $candidates = Candidate::all();
             return view('exams.panel', [
                 'exams' => $exams,
+                'candidates' => $candidates,
+                'validation' => (object)[
+                    'rules' => Exam::$validation['create']['rules'],
+                    'messages' => Exam::$validation['create']['messages']['en'],
+                ],
             ]);
         }
 

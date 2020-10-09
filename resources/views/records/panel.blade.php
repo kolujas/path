@@ -34,6 +34,7 @@
 @section('js')
     <script>
         const records = @json($records);
+        const modules = @json($modules);
     </script>
     <script type="module" src={{ asset('js/records/panel.js') }}></script>
 @endsection

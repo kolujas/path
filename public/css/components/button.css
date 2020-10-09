@@ -73,7 +73,7 @@
 
 .btn.btn-two-transparent{
     background-color: transparent;
-    color: var(--color-one);
+    color: var(--color-two);
     border: 2px solid var(--color-two);
     background-image: linear-gradient(90deg,var(--color-two) 50%,transparent 50%);
 }
@@ -109,6 +109,13 @@
     color: var(--color-eight);
     border-color: var(--color-nine);
     background-image: linear-gradient(90deg,var(--color-nine) 50%,transparent 50%);
+}
+
+.btn.btn-icon{
+    border-color: transparent;
+    font-size: 1.5rem;
+    line-height: normal;
+    padding: .5rem;
 }
 
 /* * MD */

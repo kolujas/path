@@ -111,11 +111,12 @@ document.addEventListener('DOMContentLoaded', function(e){
         e.preventDefault();
         let modal = createModal([
             {title: 'Name', name: 'name', type: 'text'},
-            {title: 'Candidates', name: 'candidates', type: 'checkbox', disabled: true},
+            {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true},
+            {title: 'Password', name: 'password', type: 'password'},
             {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date'},
         ]);
         setActions({
-            type: 'add'
+            type: 'create'
         }, modal);
         if(!document.querySelector('.modal.details').classList.contains('d-none')){
             for (const tr of document.querySelectorAll('tr')) {

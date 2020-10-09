@@ -4,7 +4,6 @@
     use App\Models\Candidate;
     use App\Models\Evaluation;
     use App\Models\Module;
-    use App\Models\Student;
     use Illuminate\Database\Eloquent\Model;
 
     class Exam extends Model{
@@ -65,21 +64,19 @@
                     'name' => 'required|min:2|max:60',
                     'password' => 'required|min:4|max:40|confirmed',
                     'scheduled_date_time' => 'required|date',
-                    'modules' => 'required',
-                    'students' => 'required',
+                    'candidates' => 'required',
                 ], 'messages' => [
                     'en' => [
-                        'name.required' => 'The Name is required.',
-                        'name.min' => 'The Name cannot be less than :min characters.',
-                        'name.max' => 'The Name cannot be more than :max characters.',
-                        'password.required' => 'The Password is required.',
-                        'password.min' => 'The Password cannot be less than :min characters.',
-                        'password.max' => 'The Password cannot be more than :max characters.',
-                        'password.confirmed' => 'The Passwords do not match.',
-                        'scheduled_date_time.required' => 'The Scheduled Date Time is required.',
-                        'scheduled_date_time.date' => 'The Scheduled Date Time must be a valid date.',
-                        'modules.required' => 'A Module is required.',
-                        'students.required' => 'A Student is required.',
+                        'name.required' => 'Name is required.',
+                        'name.min' => 'Name cannot be less than :min characters.',
+                        'name.max' => 'Name cannot be more than :max characters.',
+                        'password.required' => 'Password is required.',
+                        'password.min' => 'Password cannot be less than :min characters.',
+                        'password.max' => 'Password cannot be more than :max characters.',
+                        'password.confirmed' => 'Passwords do not match.',
+                        'scheduled_date_time.required' => 'Scheduled Date Time is required.',
+                        'scheduled_date_time.date' => 'Scheduled Date Time must be a valid date.',
+                        'candidates.required' => 'A Candidate is required.',
                     ],
                 ],
             ],'edit' => [
@@ -87,20 +84,18 @@
                     'name' => 'required|min:2|max:60',
                     'password' => 'nullable|min:4|max:40|confirmed',
                     'scheduled_date_time' => 'required|date',
-                    'modules' => 'required',
-                    'students' => 'required',
+                    'candidates' => 'required',
                 ], 'messages' => [
                     'en' => [
-                        'name.required' => 'The Name is required.',
-                        'name.min' => 'The Name cannot be less than :min characters.',
-                        'name.max' => 'The Name cannot be more than :max characters.',
-                        'password.min' => 'The Password cannot be less than :min characters.',
-                        'password.max' => 'The Password cannot be more than :max characters.',
-                        'password.confirmed' => 'The Passwords do not match.',
-                        'scheduled_date_time.required' => 'The Scheduled Date Time is required.',
-                        'scheduled_date_time.date' => 'The Scheduled Date Time must be a valid date.',
-                        'modules.required' => 'A Module is required.',
-                        'students.required' => 'A Student is required.',
+                        'name.required' => 'Name is required.',
+                        'name.min' => 'Name cannot be less than :min characters.',
+                        'name.max' => 'Name cannot be more than :max characters.',
+                        'password.min' => 'Password cannot be less than :min characters.',
+                        'password.max' => 'Password cannot be more than :max characters.',
+                        'password.confirmed' => 'Passwords do not match.',
+                        'scheduled_date_time.required' => 'Scheduled Date Time is required.',
+                        'scheduled_date_time.date' => 'Scheduled Date Time must be a valid date.',
+                        'candidates.required' => 'A Candidate is required.',
                     ],
                 ],
             ],

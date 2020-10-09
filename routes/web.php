@@ -23,8 +23,8 @@
             // });
         // });s
         // Route::middleware('admin')->group(function(){
-            Route::post('/exam/create', 'ExamController@doCreate')->name('exam.doCreate');
-            Route::put('/exam/{id_exam}/edit', 'ExamController@doEdit')->name('exam.doEdit');
+            Route::post('/exams/create', 'ExamController@doCreate')->name('exam.doCreate');
+            Route::put('/exams/{id_exam}/edit', 'ExamController@doEdit')->name('exam.doEdit');
             Route::get('/panel/exams', 'ExamController@panel')->name('exam.panel');
         // });
         
@@ -44,8 +44,8 @@
     /** 
      * ! CandidateController
      */
-            Route::post('/candidate/create', 'CandidateController@doCreate')->name('candidate.doCreate');
-            Route::put('/candidate/{id_candidate}/edit', 'CandidateController@doEdit')->name('candidate.doEdit');
+            Route::post('/candidates/create', 'CandidateController@doCreate')->name('candidate.doCreate');
+            Route::put('/candidates/{id_candidate}/edit', 'CandidateController@doEdit')->name('candidate.doEdit');
             Route::get('/panel/candidates', 'CandidateController@panel')->name('candidate.panel');
         // });
     // });

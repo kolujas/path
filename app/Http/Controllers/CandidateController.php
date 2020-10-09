@@ -2,6 +2,7 @@
     namespace App\Http\Controllers;
 
     use App\Models\Candidate;
+    use App\Models\Module;
     use Illuminate\Http\Request;
 
     class CandidateController extends Controller{
@@ -12,6 +13,11 @@
         public function panel(){
             return view('candidates.panel', [
                 'candidates' => Candidate::all(),
+                'modules' => Module::$array,
+                'validation' => (object)[
+                    'rules' => Candidate::$validation['create']['rules'],
+                    'messages' => Candidate::$validation['create']['messages']['en'],
+                ],
             ]);
         }
 
@@ -22,6 +28,7 @@
          */
         public function doCreate(Request $request){
             $input = (object) $request->all();
+            dd($input);
             $validator = Validator::make($request->all(), Candidate::$validation['create']['general']['rules'], Candidate::$validation['create']['general']['messages']['en']);
             if($validator->fails()){
                 return redirect("/panel/candidates#details")->withErrors($validator)->withInput();
@@ -63,6 +70,7 @@
             $candidate = Candidate::find($id_candidate);
 
             $input = (object) $request->all();
+            dd($input);
             $validator = Validator::make($request->all(), $this->replaceString(Candidate::$validation['edit']['general']['rules'], "({[a-z_]*})", $id_candidate), Candidate::$validation['edit']['general']['messages']['en']);
             if($validator->fails()){
                 return redirect("/panel/candidates#details?id=$id_candidate")->withErrors($validator)->withInput();
@@ -106,6 +114,7 @@
          * @return [type]
          */
         public function doEliminar($id_candidate){
+            dd($id_candidate);
             $candidate = Candidate::find($id_candidate);
                 
             $candidate->delete();
