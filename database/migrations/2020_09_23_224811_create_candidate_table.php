@@ -16,7 +16,7 @@
                 $table->string('full_name');
                 $table->string('email')->unique();
                 $table->date('date_of_birth')->nullable();
-                $table->bigInteger('id_member')->unique()->nullable();
+                $table->bigInteger('id_member')->nullable();
                 $table->text('member')->nullable();
                 $table->string('modules');
                 $table->string('file')->nullable();

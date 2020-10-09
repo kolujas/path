@@ -77,9 +77,12 @@
          * @return [type]
          */
         public function panel(){
+            $exams = Exam::all();
+            foreach ($exams as $exam) {
+                $exam->candidates = $exam->candidates();
+            }
             return view('exams.panel', [
-                'exams' => Exam::all(),
-                'users' => User::all(),
+                'exams' => $exams,
             ]);
         }
 

@@ -1,6 +1,7 @@
 <?php
     namespace App\Models;
     
+    use App\Models\Candidate;
     use App\Models\Evaluation;
     use App\Models\Module;
     use App\Models\Student;
@@ -32,6 +33,18 @@
          */
         public function evaluations(){
             return $this->hasMany(Evaluation::class, 'id_exam', 'id_exam');
+        }
+
+        /**
+         * * Create and returns the Exam Candidates.
+         * @return [type]
+         */
+        public function candidates(){
+            $candidates = collect([]);
+            foreach ($this->evaluations as $evaluation) {
+                $candidates->push(Candidate::find($evaluation->id_candidate));
+            }
+            return $candidates;
         }
         
         /** @var array The validation rules & messages. */

@@ -23,6 +23,8 @@
             // });
         // });s
         // Route::middleware('admin')->group(function(){
+            Route::post('/exam/create', 'ExamController@doCreate')->name('exam.doCreate');
+            Route::put('/exam/{id_exam}/edit', 'ExamController@doEdit')->name('exam.doEdit');
             Route::get('/panel/exams', 'ExamController@panel')->name('exam.panel');
         // });
         
@@ -37,8 +39,8 @@
                 // });
             // });
         // });
-        
         // Route::middleware('admin')->group(function(){
+            Route::get('/panel/records', 'RecordController@panel')->name('record.panel');
     /** 
      * ! CandidateController
      */

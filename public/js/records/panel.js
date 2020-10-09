@@ -1,0 +1,108 @@
+import { Filter as FilterJS } from "../../submodules/FilterJS/js/Filter.js";
+import { TabMenu as TabMenuJS } from "../../submodules/TabMenuJS/js/TabMenu.js";
+import { ScrollDetection as ScrollDetectionJS } from "../../submodules/ScrollDetectionJS/js/ScrollDetection.js";
+
+import { Table } from "../Table/Table.js";
+
+let cols = [ { 
+    data: 'exam'
+}, { 
+    data: 'candidate:full_name'
+}, { 
+    data: 'exam:name'
+}, {
+    data: 'exam:scheduled_date_time'
+} ];
+
+function putShadow(params){
+    document.querySelector('header.content-header').classList.add('header-shadow');
+}
+
+function deleteShadow(params){
+    document.querySelector('header.content-header').classList.remove('header-shadow');
+}
+
+function changeContent(params = {
+    table: undefined,
+    data: [],
+}){
+    if(params.data && params.data.length){
+        $('.filter-pagination').pagination({
+            dataSource: params.data,
+            pageSize: 10,
+            autoHidePrevious: true,
+            autoHideNext: true,
+            prevText: '',
+            nextText: '',
+            callback: function(data, pagination) {
+                params.table.changeData(data);
+                if(!document.querySelector('.modal.details').classList.contains('d-none')){
+                    for (const tr of document.querySelectorAll('tr')) {
+                        if(tr.classList.contains('active')){
+                            tr.classList.remove('active');
+                        }
+                    }
+                    for (const tr of document.querySelectorAll('tr')) {
+                        if(tr.dataset.id_record == document.querySelector('.modal.details #id_record').value){
+                            tr.classList.add('active');
+                        }
+                    }
+                }
+            }
+        });
+    }else{
+        params.table.changeData([]);
+        document.querySelector('.filter-pagination').innerHTML = '';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function(e){
+    if(document.querySelector('.tab-content')){
+        let tab = new TabMenuJS({
+            id: 'tab-records',
+        }, {
+            open: ['records'],
+            active: '/panel/records',
+        });
+    }
+
+    let scrolldetection = new ScrollDetectionJS({
+        location: {
+            min: 0,
+            max: 1,
+        }, direction: 'Y'
+    }, {
+        success: {
+            functionName: deleteShadow,
+            params: {},
+        }, error: {
+            functionName: putShadow,
+            params: {},
+    }, }, document.querySelector('.tab-menu.vertical .tab-content-list'));
+
+    let table = new Table({
+        cols: cols,
+        data: [],
+    }, document.querySelector('#records table'));
+    
+    let filter = new FilterJS({
+        id: 'records',
+        order: {
+            by: 'updated_at',
+        },
+    }, {}, [{
+        type: 'search',
+        target: 'name,scheduled_date_time',
+        event: {
+            function: changeContent,
+            params: {
+                table: table,
+            },
+        },
+    }], records);
+
+    changeContent({
+        table: table,
+        data: filter.execute(),
+    });
+});

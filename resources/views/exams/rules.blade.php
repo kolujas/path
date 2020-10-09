@@ -6,7 +6,11 @@
 
 @section('nav')
     <div class="text-center mb-5">
-        <h2 class="h1 mb-4 background background-linear">{{ $exam->name }}</h2>
+        <div class=" background background-one mb-4">
+            <img src={{ asset('img/recursos/logo_white.png') }} alt="Path">
+            <h1 class="h1">Path</h1>
+        </div>
+        <h2 class="mb-2">{{ $exam->name }}</h2>
         <span class="text-center timer">Scheduled time: {{ $exam->scheduled_date_time }}</span>
     </div>
 @endsection
@@ -18,7 +22,7 @@
 @section('main')
     <section class="col-12 rules-container">
         <main class="rules-box mt-4">
-            <form id="rules-form" action="auth/exam/{{$exam->id_exam}}" method="post" enctype="multipart/form-data">
+            <form id="rules-form" action="/auth/exam/{{$exam->id_exam}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <p class="h3 text-left text-uppercase mt-4 pl-4 text text-one">Remember:</p>
                 <p class="rules-p mt-3 px-4">{{ $exam->rules }}</p>
@@ -34,8 +38,8 @@
                     <span class="support support-box support-accept col-12 pl-4 hidden"></span>
                 @endif
                 <div class="input-group col-12 mt-5 pb-5">
-                    <div class="row d-flex justify-content-between w-100 pl-4">
-                        <div class="col-5 p-0">
+                    <div class="row d-flex justify-content-center w-100 pl-4">
+                        <div class="col-12 col-md-3 p-0 mb-4">
                             <input id="ID"
                                 class="form-input input-maked"
                                 type="file"
@@ -48,7 +52,7 @@
                                 <span class="support support-box support-ID hidden"></span>
                             @endif
                         </div>
-                        <div class="col-5 d-flex justify-content-end pb-4 p-0">
+                        <div class="col-12 col-md-3 d-flex justify-content-center pb-4 p-0">
                             <button type="submit" class="form-submit rules-form btn btn-one">Start</button>
                         </div>
                     </div>

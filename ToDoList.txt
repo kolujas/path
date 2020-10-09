@@ -25,13 +25,13 @@
     /- Agregar strikes en la tabla
 
 => Panel Candidates
-    -/ Cambiar palabras users por candidates
+    -/ Funcional
 
 => Panel Exams
-    -/- Crear
+    -/- Funcional
 
 => Panel Records
-    -/- Crear
+    -/- Funcional
 
 ¿Checkbox parar seleccionar candidatos en el "create/edit exam" o dónde se elije?
 
