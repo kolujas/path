@@ -146,3 +146,8 @@ function disableF5(e) {
 $(document).mouseleave(function () {
     // alert("Strike one");
 });
+
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
