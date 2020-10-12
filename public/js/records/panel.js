@@ -89,16 +89,17 @@ document.addEventListener('DOMContentLoaded', function(e){
         id: 'records',
         order: {
             by: 'updated_at',
+            btn: true,
         },
-    }, {}, [{
-        type: 'search',
-        target: 'name,exam:scheduled_date_time',
         event: {
             function: changeContent,
             params: {
                 table: table,
             },
         },
+    }, {}, [{
+        type: 'search',
+        target: 'name,exam:scheduled_date_time',
     }], records);
 
     changeContent({

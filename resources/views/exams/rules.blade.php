@@ -12,6 +12,13 @@
         </div>
         <h2 class="mb-2">{{ $exam->name }}</h2>
         <span class="text-center timer">Scheduled time: {{ $exam->scheduled_date_time }}</span>
+        {{-- <span class="text-center timer">
+            <span class="hour">10684</span>
+            <span class="dots">:</span>
+            <span class="minute">06</span>
+            <span class="dots">:</span>
+            <span class="second">06</span>
+        </span> --}}
     </div>
 @endsection
 
@@ -24,8 +31,10 @@
         <main class="rules-box mt-4">
             <form id="rules-form" action="/auth/exam/{{$exam->id_exam}}" method="post" enctype="multipart/form-data">
                 @csrf
-                <p class="h3 text-left text-uppercase mt-4 pl-4 text text-one">Remember:</p>
-                <p class="rules-p mt-3 px-4">{{ $exam->rules }}</p>
+                <div class="text">
+                    <p class="h3 text-left text-uppercase mt-4 pl-4 text text-one">Remember:</p>
+                    <p class="rules-p mt-3 px-4">{{ $exam->rules }}</p>
+                </div>
                 <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">
                     <input class="form-input form-check-input" type="checkbox" name="accept" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">

@@ -4,8 +4,14 @@
             <h2 class="text-uppercase text-left mt-4 mb-3 px-2 px-md-0">Candidates</h2>
             <div class="pointer-events mx-0 mb-3 px-2 px-md-0 d-flex align-items-center">
                 <p class="filter-title mb-0 mr-3">Order by:</p>
-                <button type="button" class="filter-button btn btn-two mr-3">Date</button>
-                <button type="button" class="filter-button btn btn-two">Name [A-Z]</button>
+                <button type="button" data-by="created_at" data-type="ASC" class="filter-candidates filter-order btn btn-two mr-3">
+                    <span class="btn-text">Date</span>
+                    <i class="filter-icon fas fa-chevron-down"></i>
+                </button>
+                <button type="button" data-by="full_name" data-type="DESC" class="filter-candidates filter-order btn btn-two">
+                    <span class="btn-text">Name</span>
+                    <i class="filter-icon fas fa-chevron-down"></i>
+                </button>
             </div>
             <div class="pointer-events mb-4 px-2 px-md-0">
                 <div class="search-bar">

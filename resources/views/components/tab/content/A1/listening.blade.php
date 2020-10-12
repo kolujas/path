@@ -28,10 +28,10 @@
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">Me</th>
-                                <th scope="col"><input name="A1:L1[2a]" class="input-small input position-relative" type="text"><input name="A1:L1[2b]" class="input-small input position-relative last" type="text">ther</th>
-                                <th scope="col"><input name="A1:L1[4a]" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[4b]" class="input-small input position-relative last" type="text">ther</th>
+                                <th scope="col" class="input-letters"><input name="A1:L1[2a]" class="input-small input position-relative" type="text"><input name="A1:L1[2b]" class="input-small input position-relative last" type="text">ther</th>
+                                <th scope="col" class="input-letters"><input name="A1:L1[4a]" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[4b]" class="input-small input position-relative last" type="text">ther</th>
                                 <th scope="col">sister</th>
-                                <th scope="col"><input name="A1:L1[6a]" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[6b]" class="input-small input position-relative last" type="text">er</th>
+                                <th scope="col" class="input-letters"><input name="A1:L1[6a]" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[6b]" class="input-small input position-relative" type="text"><input name="A1:L1[6c]" class="input-small input position-relative" type="text"><input name="A1:L1[6d]" class="input-small input position-relative" type="text"><input name="A1:L1[6e]" class="input-small input position-relative last" type="text">er</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,17 +45,17 @@
                             </tr>
                             <tr>
                                 <th scope="row">Age</th>
-                                <td><input name="A1:L1[1a]" class="input-small input position-relative" type="text"><input name="A1:L1[1b]" class="input-small input position-relative" type="text"></td>
+                                <td class="input-letters"><input name="A1:L1[1a]" class="input-small input position-relative" type="text"><input name="A1:L1[1b]" class="input-small input position-relative" type="text"></td>
                                 <td>40</td>
                                 <td>38</td>
-                                <td><input name="A1:L1[7a]" class="input-small input position-relative" type="text"><input name="A1:L1[7b]" class="input-small input position-relative" type="text"></td>
-                                <td><input name="A1:L1[8a]" class="input-small input position-relative" type="text"><input name="A1:L1[8b]" class="input-small input position-relative" type="text"></td>
+                                <td class="input-letters"><input name="A1:L1[7a]" class="input-small input position-relative" type="text"><input name="A1:L1[7b]" class="input-small input position-relative" type="text"></td>
+                                <td class="input-letters"><input name="A1:L1[8a]" class="input-small input position-relative" type="text"><input name="A1:L1[8b]" class="input-small input position-relative" type="text"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Job</th>
                                 <td class="text-center">-</td>
-                                <td>te<input name="A1:L1[7a]" class="input-small input position-relative first" type="text"><input name="A1:L1[7b]" class="input-small input position-relative" type="text"><input name="A1:L1[7v]" class="input-small input position-relative last" type="text">er</td>
-                                <td>doc<input name="A1:L1[7a]" class="input-small input position-relative first" type="text"><input name="A1:L1[7b]" class="input-small input position-relative last" type="text">or</td>
+                                <td class="input-letters">te<input name="A1:L1[7a]" class="input-small input position-relative first" type="text"><input name="A1:L1[7b]" class="input-small input position-relative" type="text"><input name="A1:L1[7v]" class="input-small input position-relative last" type="text">er</td>
+                                <td class="input-letters">doc<input name="A1:L1[7a]" class="input-small input position-relative first" type="text"><input name="A1:L1[7b]" class="input-small input position-relative last" type="text">r</td>
                                 <td class="text-center">-</td>
                                 <td class="text-center">-</td>
                             </tr>

@@ -45,9 +45,36 @@ header h2 {
 /* TODO timer */
 
 .timer {
+    display: flex;
+    justify-content: center;
     font-size: 2rem;
 }
 
+.timer span{
+    display: block;
+    width: 2rem;
+}
+
+.timer span:not(.dots){
+    width: 3rem;
+}
+
+.timer span.dots{
+    width: .5rem;
+    margin: 0 .5rem;
+}
+
+.timer span.hour{
+    direction: rtl;
+}
+
+.timer span.minute{
+    text-align: center;
+}
+
+.timer span.second{
+    direction: ltr;
+}
 
 /* * reglas del examen párrafo */
 
@@ -118,43 +145,36 @@ header h2 {
 .input-file .input-button{
     min-width: 6rem;
     max-height: 3rem;
-    line-height: 3rem;
 }
 
 
 /* * MD */
-
 @media(min-width: 768px) {
     .rules-box {
         padding: 0 1.5rem;
     }
 }
 
-
 /* * LG */
-
 @media(min-width: 1024px) {
-    /**/
+    header .background img{
+        width: 25%;
+    }
+
     .rules-box {
         padding: 0 10rem;
     }
 }
 
-
 /* * XL */
-
 @media(min-width: 1200px) {
-    /**/
     .rules-box {
         padding: 0 20rem;
     }
 }
 
-
 /* * XXL */
-
 @media(min-width: 1400px) {
-    /**/
     .rules-box {
         padding: 0 30rem;
     }

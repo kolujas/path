@@ -33,7 +33,7 @@
 .background.background-auth {
     position: relative;
     background: url('../../img/recursos/background/auth.jpg') no-repeat center center;
-    background-size: 130%;
+    background-size: cover;
 }
 
 .background.background-auth::before {
@@ -50,7 +50,9 @@
 /* * MD */
 
 @media(min-width: 768px) {
-    /**/
+    .background.background-auth {
+        background-size: 130%;
+    }
 }
 
 

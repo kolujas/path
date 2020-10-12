@@ -20,9 +20,12 @@ export class CountDown{
             minutes: true,
             seconds: true,
         }, message: 'Expired scheduled date time'
-    }, html = undefined){
+    }, event = {
+        current: undefined,
+        end: undefined,
+    }){
         this.setProperties(properties);
-        this.setHTML(html);
+        this.setEvent(event);
         this.makeInterval();
     }
 
@@ -40,7 +43,7 @@ export class CountDown{
             hours: true,
             minutes: true,
             seconds: true,
-        }, message: 'Expired scheduled date time'
+        },
     }){
         this.properties = {};
         this.setScheduledDateTime(properties);
@@ -76,24 +79,25 @@ export class CountDown{
         this.properties.timer = properties.timer;
     }
 
-    /**
-     * * Set the CountDown expired message.
-     * @param {object} properties - CountDown properties.
-     * @memberof CountDown
-     */
-    setMessage(properties = {
-        message: 'Expired scheduled date time'
+    setEvent(event = {
+        current: undefined,
+        end: undefined,
     }){
-        this.properties.message = properties.message;
+        this.event = {};
+        this.setCurrentFunction(event);
+        this.setEndFunction(event);
     }
 
-    /**
-     * * Set the CountDown HTML Element.
-     * @param {HTMLElement} html - CountDown HTML Element.
-     * @memberof CountDown
-     */
-    setHTML(html = undefined){
-        this.html = html;
+    setEndFunction(event = {
+        end: undefined,
+    }){
+        this.event.end = event.end;
+    }
+
+    setCurrentFunction(event = {
+        current: undefined,
+    }){
+        this.event.current = event.current;
     }
 
     /**
@@ -105,32 +109,38 @@ export class CountDown{
         let interval = setInterval(function(){
             let now = new Date().getTime();
             let distance = instance.properties.scheduled_date_time - now;
-            let days = 0, hours = 0, minutes = 0, seconds = 0;
+            instance.days = 0;
+            instance.hours = 0;
+            instance.minutes = 0;
+            instance.seconds = 0;
             if(instance.properties.timer.days){
-                days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                instance.days = Math.floor(distance / (1000 * 60 * 60 * 24));
             }
             if(instance.properties.timer.hours){
-                hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                if(hours.toString().length < 2){
-                    hours = `0${hours}`;
+                instance.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                if(!instance.properties.timer.days){
+                    instance.hours = Math.floor(distance / (1000 * 60 * 60));
+                }
+                if(instance.hours.toString().length < 2){
+                    instance.hours = `0${instance.hours}`;
                 }
             }
             if(instance.properties.timer.minutes){
-                minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                if(minutes.toString().length < 2){
-                    minutes = `0${minutes}`;
+                instance.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                if(instance.minutes.toString().length < 2){
+                    instance.minutes = `0${instance.minutes}`;
                 }
             }
             if(instance.properties.timer.seconds){
-                seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                if(seconds.toString().length < 2){
-                    seconds = `0${seconds}`;
+                instance.seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                if(instance.seconds.toString().length < 2){
+                    instance.seconds = `0${instance.seconds}`;
                 }
             }
-            instance.html.innerHTML = `${days}d ${hours}:${minutes}:${seconds}`;
+            instance.event.current(instance);
             if(distance < 0){
                 clearInterval(interval);
-                instance.html.innerHTML = instance.properties.message;
+                instance.event.end(instance);
             }
         });
     }

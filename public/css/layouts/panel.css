@@ -130,7 +130,7 @@ tr:hover{
     color: var(--color-three);
 }
 
-.filter-button.btn.btn-two {
+.filter-order.btn.btn-two {
     padding: .25rem;
     height: 2rem;
     line-height: 1rem;
@@ -263,7 +263,7 @@ tr:hover{
     }
 
     .details .card,
-    .pointer-events .filter-button,
+    .pointer-events .filter-order,
     .pointer-events .search-bar {
         pointer-events: all;
     } 

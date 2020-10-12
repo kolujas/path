@@ -3,6 +3,72 @@ import { InputFileMaker as InputFileMakerJS } from "../../submodules/InputFileMa
 import { CountDown } from "../CountDown.js";
 import { Notification as NotificationJS } from "../../submodules/NotificationJS/js/Notification.js";
 
+function addDots(){
+    let timer = document.querySelector('.timer');
+        let dots = document.createElement('span');
+        dots.innerHTML += ':';
+        dots.classList.add('dots')
+        timer.appendChild(dots);
+}
+
+function createHours(hours = undefined){
+    let html, timer = document.querySelector('.timer');
+    if(!document.querySelector('.hour')){
+        timer.innerHTML = '';
+        html = document.createElement('span');
+        html.classList.add('hour');
+        html.innerHTML = hours;
+        timer.appendChild(html);
+        addDots();
+    }else{
+        html = document.querySelector('.hour');
+        if(html.innerHTML != hours){
+            html.innerHTML = hours;
+        }
+    }
+}
+
+function createMinutes(minutes = undefined){
+    let html, timer = document.querySelector('.timer');
+    if(!document.querySelector('.minute')){
+        let html = document.createElement('span');
+        html.classList.add('minute');
+        html.innerHTML = minutes;
+        timer.appendChild(html);
+        addDots();
+    }else{
+        html = document.querySelector('.minute');
+        if(html.innerHTML != minutes){
+            html.innerHTML = minutes;
+        }
+    }
+}
+
+function createSeconds(seconds = undefined){
+    let html, timer = document.querySelector('.timer');
+    if(!document.querySelector('.second')){
+        let html = document.createElement('span');
+        html.classList.add('second');
+        html.innerHTML = seconds;
+        timer.appendChild(html);
+    }else{
+        html = document.querySelector('.second');
+        if(html.innerHTML != seconds){
+            html.innerHTML = seconds;
+        }
+    }
+}
+
+function current(countdown = undefined){
+    createHours(countdown.hours)
+    createMinutes(countdown.minutes)
+    createSeconds(countdown.seconds)
+}
+
+function end(countdown = undefined){
+
+}
+
 document.addEventListener('DOMContentLoaded', function(e){
     let input = new InputFileMakerJS({
         id: 'ID',
@@ -11,12 +77,14 @@ document.addEventListener('DOMContentLoaded', function(e){
     let countDown = new CountDown({
         scheduled_date_time: exam.scheduled_date_time,
         timer: {
-            days: true,
             hours: true,
             minutes: true,
             seconds: true,
-        }, message: 'Exam started'
-    }, document.querySelector(".timer"));
+        }
+    }, {
+        current: current,
+        end: end,
+    });
 
     let notifications = [];
     if(status){

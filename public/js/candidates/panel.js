@@ -88,16 +88,17 @@ document.addEventListener('DOMContentLoaded', function(e){
         id: 'candidates',
         order: {
             by: 'id_candidate',
+            btn: true,
         },
-    }, {}, [{
-        type: 'search',
-        target: 'full_name,email',
         event: {
             function: changeContent,
             params: {
                 table: table,
             },
         },
+    }, {}, [{
+        type: 'search',
+        target: 'full_name,email',
     }], candidates);
 
     changeContent({

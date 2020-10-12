@@ -151,3 +151,18 @@ $(document).mouseleave(function () {
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
   });
+
+document.addEventListener('DOMContentLoaded', function(e){
+    for(const td of document.querySelectorAll('.input-letters')){
+        for (const key in td.children) {
+            const input = td.children[key]
+            if((parseInt(key) + 1) <= td.children.length){
+                input.addEventListener('keyup', function(e){
+                    if(this.value){
+                        this.nextElementSibling.focus();
+                    }
+                });
+            }
+        }
+    }
+});
