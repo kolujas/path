@@ -39,6 +39,14 @@
 
 @section('js')
     <script>
+        @if($errors->any())
+        const errors = @json($errors->messages());
+        @else
+        const errors = [];
+        @endif
+        @if(Session::has('status'))
+        const status = @json(Session::get('status'));
+        @endif
         const rules = @json($validation->rules);
         const messages = @json($validation->messages);
         const exams = @json($exams);

@@ -14,4 +14,15 @@ class Controller extends BaseController
     // public function __construct(){
     //     ini_set('max_execution_time', 300);
     // }
+
+    /**
+     * * Replace a string with another.
+     * @param mixed $string
+     * @param mixed $regexp
+     * @param mixed $newString
+     * @return [type]
+     */
+    public function replaceString($string, $regexp, $newString){
+        return preg_replace("/$regexp/", $newString, $string);
+    }
 }

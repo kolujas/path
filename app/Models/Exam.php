@@ -15,7 +15,7 @@
          * @var array
          */
         protected $fillable = [
-            'name', 'rules', 'password', 'scheduled_date_time', 'level', 'slug',
+            'name', 'rules', 'password', 'scheduled_date_time', 'slug',
         ];
 
         /**

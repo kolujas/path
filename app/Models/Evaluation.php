@@ -15,7 +15,7 @@
          * @var array
          */
         protected $fillable = [
-            'id_exam', 'id_candidate',
+            'id_exam', 'id_candidate', 'confirmed',
         ];
         
         /**

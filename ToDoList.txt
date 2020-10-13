@@ -2,30 +2,6 @@
 *   TODO LIST   *
 =================
 
-=> Rules
-    /- Añadir a Student file
-
-=> Exam
-    -/ Revisar CSS en mobile
-    -/ Tooltip
-    -/ SVG
-    -/ Letter focus
-    -/ Validar strikes
-    -/ Audio 2 veces
-    /- Boton submit en mobile arriba a la derecha
-    /- Agregar strikes en la tabla
-
-=> Panel Candidates
-    -/ Funcional
-
-=> Panel Exams
-    -/- Funcional
-
-=> Panel Records
-    -/- Funcional
-
-¿Checkbox parar seleccionar candidatos en el "create/edit exam" o dónde se elije?
-
 =================
 *   PREGUNTAS   *
 =================

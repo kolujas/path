@@ -1,6 +1,7 @@
 import { Filter as FilterJS } from "../../submodules/FilterJS/js/Filter.js";
 import { TabMenu as TabMenuJS } from "../../submodules/TabMenuJS/js/TabMenu.js";
 import { ScrollDetection as ScrollDetectionJS } from "../../submodules/ScrollDetectionJS/js/ScrollDetection.js";
+import { URLServiceProvider } from "../../submodules/ProvidersJS/URLServiceProvider.js";
 
 import { createModal, setActions } from "../modal.js";
 import { Table } from "../Table/Table.js";
@@ -42,7 +43,7 @@ function changeContent(params = {
                         }
                     }
                     for (const tr of document.querySelectorAll('tr')) {
-                        if(tr.dataset.id_candidate == document.querySelector('.modal.details #id_candidate').value){
+                        if(document.querySelector('.modal.details #id_candidate') && tr.dataset.id_candidate == document.querySelector('.modal.details #id_candidate').value){
                             tr.classList.add('active');
                         }
                     }
@@ -55,7 +56,49 @@ function changeContent(params = {
     }
 }
 
+function getCandidate(){
+    const id = URLServiceProvider.findGetParameter('id');
+    for (const candidate of candidates) {
+        if(candidate.id_candidate == id){
+            return candidate;
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function(e){
+    if(URLServiceProvider.findHashParameter() == 'details'){
+        if(!URLServiceProvider.findGetParameter('id')){
+            let modal = createModal([
+                {title: 'Candidate Number', name: 'candidate_number', type: 'number'},
+                {title: 'Full Name', name: 'full_name', type: 'text'},
+                {title: 'Email', name: 'email', type: 'text'},
+                {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
+                {title: 'Member', name: 'member', type: 'text'},
+                {title: 'Member ID', name: 'id_member', type: 'number'},
+                {title: 'Modules', name: 'modules', type: 'checkbox'},
+            ]);
+            setActions({
+                type: 'create'
+            }, modal);
+        }else{
+            let modal = createModal([
+                {title: '', name: 'id_candidate', type: 'hidden', disabled: true},
+                {title: 'Candidate Number', name: 'candidate_number', type: 'number'},
+                {title: 'Full Name', name: 'full_name', type: 'text'},
+                {title: 'Email', name: 'email', type: 'text'},
+                {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
+                {title: 'Member', name: 'member', type: 'text'},
+                {title: 'Member ID', name: 'id_member', type: 'number'},
+                {title: 'Modules', name: 'modules', type: 'checkbox'},
+                {title: 'Date Added', name: 'created_at', type: 'date', disabled: true},
+            ], getCandidate());
+            setActions({
+                type: 'info',
+                url: 'candidates'
+            }, modal);
+        }
+    }
+
     if(document.querySelector('.tab-content')){
         let tab = new TabMenuJS({
             id: 'tab-candidates',
@@ -128,21 +171,4 @@ document.addEventListener('DOMContentLoaded', function(e){
             }
         }
     });
-
-    // document.querySelector('').addEventListener('click', function(e){
-    //     e.preventDefault();
-    //     filter.changeOrder({
-    //         by: this.dataset.by,
-    //         type: this.dataset.type,
-    //     });
-    //     if(this.dataset.type == 'DESC'){
-    //         this.dataset.type = 'ASC';
-    //     }else{
-    //         this.dataset.type = 'DESC';
-    //     }
-    //     changeContent({
-    //         table: table,
-    //         data: filter.execute(),
-    //     });
-    // });
 });

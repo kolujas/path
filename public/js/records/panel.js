@@ -43,7 +43,7 @@ function changeContent(params = {
                         }
                     }
                     for (const tr of document.querySelectorAll('tr')) {
-                        if(tr.dataset.id_record == document.querySelector('.modal.details #id_record').value){
+                        if(document.querySelector('.modal.details #id_record') && tr.dataset.id_record == document.querySelector('.modal.details #id_record').value){
                             tr.classList.add('active');
                         }
                     }

@@ -33,6 +33,14 @@
 
 @section('js')
     <script>
+        @if($errors->any())
+        const errors = @json($errors->messages());
+        @else
+        const errors = [];
+        @endif
+        @if(Session::has('status'))
+        const status = @json(Session::get('status'));
+        @endif
         const records = @json($records);
         const modules = @json($modules);
     </script>

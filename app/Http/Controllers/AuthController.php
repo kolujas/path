@@ -25,23 +25,12 @@
             }
             switch ($authenticated) {
                 case 'candidates':
-                    // dd(Auth::guard('candidates')->user());
-                    return view('auth.login', [
-                        'validation' => (object)[
-                            'rules' => AuthModel::$validation['login']['rules'],
-                            'messages' => AuthModel::$validation['login']['messages']['en'],
-                        ],
-                    ]);
-                    break;
+                    $candidate = Auth::guard('candidates')->user();
+                    $evaluation = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
+                    $evaluation = $evaluation[0];
+                    return redirect("/exam/$evaluation->id_exam/rules");
                 case 'users':
-                    // dd(Auth::guard('web')->user());
-                    return view('auth.login', [
-                        'validation' => (object)[
-                            'rules' => AuthModel::$validation['login']['rules'],
-                            'messages' => AuthModel::$validation['login']['messages']['en'],
-                        ],
-                    ]);
-                    break;
+                    return redirect("/panel/candidates");
                 default:
                     return view('auth.login', [
                         'validation' => (object)[
@@ -49,7 +38,6 @@
                             'messages' => AuthModel::$validation['login']['messages']['en'],
                         ],
                     ]);
-                    break;
             }
         }
 
@@ -102,11 +90,23 @@
         }
 
         /**
-         * * Log the User off.
+         * * Log the User out.
          * @return [type]
          */
-        public function doLogOff() {
-            Auth::logout();
+        public function doLogOut() {
+            if(Auth::guard('candidates')->check()){
+                $authenticated = 'candidates';
+            }else if(Auth::guard('web')->check()){
+                $authenticated = 'users';
+            }
+            switch ($authenticated) {
+                case 'candidates':
+                    Auth::guard('candidates')->logout();
+                    break;
+                case 'users':
+                    Auth::logout();
+                    break;
+            }
             return redirect()->route('auth.showLogin')->with('status', [
                 'code' => 200,
                 'message' => 'Session ended.',

@@ -1,6 +1,7 @@
 import { Filter as FilterJS } from "../../submodules/FilterJS/js/Filter.js";
 import { TabMenu as TabMenuJS } from "../../submodules/TabMenuJS/js/TabMenu.js";
 import { ScrollDetection as ScrollDetectionJS } from "../../submodules/ScrollDetectionJS/js/ScrollDetection.js";
+import { URLServiceProvider } from "../../submodules/ProvidersJS/URLServiceProvider.js";
 
 import { createModal, setActions } from "../modal.js";
 import { Table } from "../Table/Table.js";
@@ -44,7 +45,7 @@ function changeContent(params = {
                         }
                     }
                     for (const tr of document.querySelectorAll('tr')) {
-                        if(tr.dataset.id_exam == document.querySelector('.modal.details #id_exam').value){
+                        if(document.querySelector('.modal.details #id_exam') && tr.dataset.id_exam == document.querySelector('.modal.details #id_exam').value){
                             tr.classList.add('active');
                         }
                     }
@@ -57,7 +58,42 @@ function changeContent(params = {
     }
 }
 
+function getExam(){
+    const id = URLServiceProvider.findGetParameter('id');
+    for (const exam of exams) {
+        if(exam.id_exam == id){
+            return exam;
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function(e){
+    if(URLServiceProvider.findHashParameter() == 'details'){
+        if(!URLServiceProvider.findGetParameter('id')){
+            let modal = createModal([
+                {title: 'Name', name: 'name', type: 'text'},
+                {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true},
+                {title: 'Password', name: 'password', type: 'password'},
+                {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date'},
+            ]);
+            setActions({
+                type: 'create'
+            }, modal);
+        }else{
+            let modal = createModal([
+                {title: '', name: 'id_exam', type: 'hidden', disabled: true},
+                {title: 'Name', name: 'name', type: 'text'},
+                {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true},
+                {title: 'Modules', name: 'modules', type: 'checkbox'},
+                {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date'},
+            ], getExam());
+            setActions({
+                type: 'info',
+                url: 'exams'
+            }, modal);
+        }
+    }
+    
     if(document.querySelector('.tab-content')){
         let tab = new TabMenuJS({
             id: 'tab-exams',

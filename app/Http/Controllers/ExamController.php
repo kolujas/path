@@ -5,6 +5,7 @@
     use App\Models\Exam;
     use App\Models\Module;
     use Auth;
+    use Cviebrock\EloquentSluggable\Services\SlugService;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Validator;
 

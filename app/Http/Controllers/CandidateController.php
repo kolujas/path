@@ -3,7 +3,9 @@
 
     use App\Models\Candidate;
     use App\Models\Module;
+    use Cviebrock\EloquentSluggable\Services\SlugService;
     use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\Validator;
 
     class CandidateController extends Controller{
         /**
@@ -28,33 +30,27 @@
          */
         public function doCreate(Request $request){
             $input = (object) $request->all();
-            dd($input);
-            $validator = Validator::make($request->all(), Candidate::$validation['create']['general']['rules'], Candidate::$validation['create']['general']['messages']['en']);
+            $validator = Validator::make($request->all(), Candidate::$validation['create']['rules'], Candidate::$validation['create']['messages']['en']);
             if($validator->fails()){
                 return redirect("/panel/candidates#details")->withErrors($validator)->withInput();
             }
 
-            if(isset($input->id_role) && $input->id_role == 1){
-                $validator = Validator::make($request->all(), $this->replaceString(Candidate::$validation['create']['admin']['rules'], "({[a-z_]*})", $id_candidate), Candidate::$validation['create']['admin']['messages']['en']);
-                if($validator->fails()){
-                    return redirect("/panel/candidates#details")->withErrors($validator)->withInput();
+            $modules = $input->modules;
+            $input->modules = '';
+
+            foreach ($modules as $key => $module) {
+                if(!$input->modules){
+                    $input->modules = $module;
+                }else{
+                    $input->modules = "$input->modules,$module";
                 }
-            }else if(isset($input->id_role) && $input->id_role == 2){
-                $validator = Validator::make($request->all(), $this->replaceString(Candidate::$validation['create']['student']['rules'], "({[a-z_]*})", $id_candidate), Candidate::$validation['create']['student']['messages']['en']);
-                if($validator->fails()){
-                    return redirect("/panel/candidates#details")->withErrors($validator)->withInput();
-                }
-            }
-    
-            if(isset($input->password)){
-                $input->password = \Hash::make($input->password);
             }
 
-            $input->slug = SlugService::createSlug(Candidate::class, 'slug', $input->name);
+            $input->slug = SlugService::createSlug(Candidate::class, 'slug', $input->full_name);
             
             $candidate = Candidate::create((array) $input);
             
-            return redirect("/panel/candidates#details&id=$candidate->id_candidate")->with('status', [
+            return redirect("/panel/candidates#details?id=$candidate->id_candidate")->with('status', [
                 'code' => 200,
                 'message' => 'Candidate created correcttly.',
             ]);
@@ -70,41 +66,39 @@
             $candidate = Candidate::find($id_candidate);
 
             $input = (object) $request->all();
-            dd($input);
-            $validator = Validator::make($request->all(), $this->replaceString(Candidate::$validation['edit']['general']['rules'], "({[a-z_]*})", $id_candidate), Candidate::$validation['edit']['general']['messages']['en']);
+            $validator = Validator::make($request->all(), $this->replaceString(Candidate::$validation['edit']['rules'], "({[a-z_]*})", $id_candidate), Candidate::$validation['edit']['messages']['en']);
             if($validator->fails()){
                 return redirect("/panel/candidates#details?id=$id_candidate")->withErrors($validator)->withInput();
             }
 
-            if(isset($input->id_role) && $input->id_role == 1){
-                $validator = Validator::make($request->all(), $this->replaceString(Candidate::$validation['edit']['admin']['rules'], "({[a-z_]*})", $id_candidate), Candidate::$validation['edit']['admin']['messages']['en']);
-                if($validator->fails()){
-                    return redirect("/panel/candidates#details?id=$id_candidate")->withErrors($validator)->withInput();
-                }
-            }else if(isset($input->id_role) && $input->id_role == 2){
-                $validator = Validator::make($request->all(), $this->replaceString(Candidate::$validation['edit']['student']['rules'], "({[a-z_]*})", $id_candidate), Candidate::$validation['edit']['student']['messages']['en']);
-                if($validator->fails()){
-                    return redirect("/panel/candidates#details?id=$id_candidate")->withErrors($validator)->withInput();
-                }
-            }
-    
-            if(isset($input->password)){
-                $input->password = \Hash::make($input->password);
-            }else if($candidate->password){
-                $input->password = $candidate->password;
-            }
-
-            if($candidate->name != $input->name){
-                $input->slug = SlugService::createSlug(Candidate::class, 'slug', $input->name);
+            if($candidate->full_name != $input->full_name){
+                $input->slug = SlugService::createSlug(Candidate::class, 'slug', $input->full_name);
             }else{
                 $input->slug = $candidate->slug;
             }
+
+            $modules = $input->modules;
+            $input->modules = '';
+
+            foreach ($modules as $key => $module) {
+                if(!$input->modules){
+                    $input->modules = $module;
+                }else{
+                    $input->modules = "$input->modules,$module";
+                }
+            }
             
             $candidate->update((array) $input);
+
+            if($candidate->full_name){
+                $msg = "Candidate: \"$candidate->full_name\" edited correctly.";
+            }else{
+                $msg = "Candidate edited correctly.";
+            }
             
-            return redirect("/panel/candidates#details&id=$id_candidate")->with('status', [
+            return redirect("/panel/candidates#details?id=$id_candidate")->with('status', [
                 'code' => 200,
-                'message' => "Candidate: \"$candidate->name\" edited correctly.",
+                'message' => $msg,
             ]);
         }
 
@@ -113,15 +107,14 @@
          * @param mixed $id_candidate - Candidate primary key.
          * @return [type]
          */
-        public function doEliminar($id_candidate){
-            dd($id_candidate);
+        public function doDelete($id_candidate){
             $candidate = Candidate::find($id_candidate);
                 
             $candidate->delete();
             
-            return redirect()->route('web.panel')->with('status', [
+            return redirect("/panel/candidates")->with('status', [
                 'code' => 200,
-                'message' => "Candidate deleted correctly.",
+                'message' => 'Candidate deleted correctly.',
             ]);
         }
     }

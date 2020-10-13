@@ -6,9 +6,11 @@
     use Illuminate\Foundation\Auth\User as Authenticatable;
     use Illuminate\Notifications\Notifiable;
     use Laravel\Passport\HasApiTokens;
+    use Cviebrock\EloquentSluggable\Sluggable;
+    use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
     class Candidate extends Authenticatable{
-        use HasApiTokens, Notifiable;
+        use HasApiTokens, Notifiable, Sluggable, SluggableScopeHelpers;
 
         /** @var string User primary key. */
         protected $primaryKey = 'id_candidate';
@@ -18,7 +20,7 @@
          * @var array
          */
         protected $fillable = [
-            'candidate_number', 'full_name', 'email', 'date_of_birth', 'level', 'id_member', 'member', 'modules', 'file', 'slug',
+            'candidate_number', 'full_name', 'email', 'date_of_birth', 'id_member', 'member', 'modules', 'file', 'slug',
         ];
 
         /**
@@ -46,11 +48,11 @@
         public static $validation = [
             'create' => [
                 'rules' => [
-                    'candidate_number' => 'required|numeric|unique:users',
+                    'candidate_number' => 'required|numeric|unique:candidates',
                     'full_name' => 'nullable|min:2|max:60',
-                    'email' => 'required|email|unique:users',
+                    'email' => 'required|email|unique:candidates',
                     'date_of_birth' => 'nullable|date',
-                    'id_member' => 'nullable|numeric|unique:users',
+                    'id_member' => 'nullable|numeric',
                     'modules' => 'required',
                 ], 'messages' => [
                     'en' => [
@@ -65,17 +67,16 @@
                         'date_of_birth.date' => 'Date of birth must be a valid date (1999-05-24).',
                         'id_member.required' => 'Memeber ID is required.',
                         'id_member.numeric' => 'Memeber ID must be numeric.',
-                        'id_member.unique' => 'Memeber ID it\'s used.',
                         'modules.required' => 'A Module must be selected.',
                     ],
                 ],
             ],'edit' => [
                 'rules' => [
-                    'candidate_number' => 'required|numeric|unique:users',
+                    'candidate_number' => 'required|numeric|unique:candidates,candidate_number,{id_candidate},id_candidate',
                     'full_name' => 'nullable|min:2|max:60',
-                    'email' => 'required|email|unique:users',
+                    'email' => 'required|email|unique:candidates,email,{id_candidate},id_candidate',
                     'date_of_birth' => 'nullable|date',
-                    'id_member' => 'nullable|numeric|unique:users',
+                    'id_member' => 'nullable|numeric',
                     'modules' => 'required',
                 ], 'messages' => [
                     'en' => [
@@ -90,7 +91,6 @@
                         'date_of_birth.date' => 'Date of birth must be a valid date (1999-05-24).',
                         'id_member.required' => 'Memeber ID is required.',
                         'id_member.numeric' => 'Memeber ID must be numeric.',
-                        'id_member.unique' => 'Memeber ID it\'s used.',
                         'modules.required' => 'A Module must be selected.',
                     ],
                 ],

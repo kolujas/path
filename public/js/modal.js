@@ -118,9 +118,15 @@ class Modal{
                 this.createModules(element, value, disabled, li);
             }else if(element.name == 'file'){
                 this.createFiles(li);
+            }else if(element.name == 'password'){
+                this.createPassword();
             }else{
                 this.createInputs(element, value, disabled, li);
             }
+    }
+
+    createPassword(){
+        
     }
 
     createCandidates(element, candidates, title, disabled, li){
@@ -157,6 +163,12 @@ class Modal{
             let support = document.createElement('span');
             support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
             li.appendChild(support);
+            if(errors && errors.candidates && errors.candidates[0]){
+                support.classList.add('support', 'support-box', `support-${element.name}`, 'mb-2');
+                support.innerHTML = errors.candidates[0];
+            }else{
+                support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
+            }
         }
     }
 
@@ -192,8 +204,13 @@ class Modal{
         }
         if(!(/id_candidate/.exec(element.name) && /id_exam/.exec(element.name) && /id_record/.exec(element.name))){
             let support = document.createElement('span');
-            support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
             li.appendChild(support);
+            if(errors && errors.modules && errors.modules[0]){
+                support.classList.add('support', 'support-box', `support-${element.name}`, 'mb-2');
+                support.innerHTML = errors.modules[0];
+            }else{
+                support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
+            }
         }
     }
 
@@ -238,14 +255,25 @@ class Modal{
         input.id = element.name;
         input.type = element.type;
         input.name = element.name;
-        input.value = value;
-        input.dataset.original = value;
+        if(value){
+            input.value = value;
+            input.dataset.original = value;
+        }else{
+            input.value = '';
+            input.placeholder = element.title;
+            input.dataset.original = '';
+        }
         input.disabled = disabled;
         li.appendChild(input);
         if(!(/id_candidate/.exec(element.name) && /id_exam/.exec(element.name) && /id_record/.exec(element.name))){
             let support = document.createElement('span');
-            support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
             li.appendChild(support);
+            if(errors && errors[element.name] && errors[element.name][0]){
+                support.classList.add('support', 'support-box', `support-${element.name}`, 'mb-2');
+                support.innerHTML = errors[element.name][0];
+            }else{
+                support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
+            }
         }
     }
 
@@ -328,7 +356,9 @@ function closeModal(params = {
 function disableInputs(){
     let inputs = document.querySelectorAll('.modal.details input');
     for(const input of inputs) {
-        input.disabled = true;
+        if(input.type != 'hidden'){
+            input.disabled = true;
+        }
     }
 }
 

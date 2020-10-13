@@ -1,3 +1,14 @@
+.notification{
+    justify-content: flex-start;
+    padding: 0 .5rem;
+    z-index: 2;
+    position: relative;
+}
+
+.notification .notification-body header {
+    justify-content: flex-start;
+}
+
 .tab-menu {
     --tabmenu-title-color: var(--color-nine);
     --tabmenu-button-color: var(--color-nine);
@@ -207,6 +218,14 @@ tr:hover{
     content: "\f061";
 }
 
+.floating-menu{
+    z-index: 1051;
+}
+
+.modal {
+    position: initial;
+}
+
 /* * MD */
 @media(min-width: 768px) {
     /**/
@@ -214,6 +233,19 @@ tr:hover{
 
 /* * LG */
 @media(min-width: 1024px) {
+    .notification{
+        padding: 0 2rem;
+    }
+
+    .modal {
+        position: fixed;
+    }
+
+    .notification + .tab-content .content-header,
+    .notification + .tab-content {
+        padding-top: 4.6rem;
+    }
+
     .tab-menu{
         min-height: 100vh;
     }
@@ -242,8 +274,12 @@ tr:hover{
 
     section.table {
         margin-top: 12rem;
-        padding-left: calc(15px + 3rem);
+        padding-left: calc(15px + 2rem);
         padding-right: 2rem;
+    }
+
+    .notification + .tab-content section.table {
+        margin-top: 7rem;
     }
 
     .details {
@@ -254,6 +290,10 @@ tr:hover{
         padding-left: 2rem;
         z-index: 2;
         pointer-events: none;
+    }
+
+    .notification + .tab-content .details {
+        top: 6rem;
     }
 
     .details .card-body {
@@ -271,19 +311,33 @@ tr:hover{
 
 /* * XL */
 @media(min-width: 1200px){
+    .notification{
+        padding: 0 3rem;
+    }
+
     header.content-header {
         padding-left: calc(4rem - 15px);
         padding-right: 2rem;
     }
 
-    section header {
+    /* section header {
         padding-left: calc(15px + 4rem);
+        padding-right: 2rem;
+    } */
+
+    section.table {
+        margin-top: 12rem;
+        padding-left: calc(15px + 3rem);
         padding-right: 2rem;
     }
 
     .details {
         padding-right: calc(15px + 4rem);
         top: 11.8rem;
+    }
+
+    .notification + .tab-content .details {
+        top: 12.8rem;
     }
 
     .details .card-body {

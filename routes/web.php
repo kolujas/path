@@ -7,7 +7,7 @@
     Route::get('/', 'AuthController@showLogin')->name('auth.showLogin');
     Route::post('/login', 'AuthController@doLogIn')->name('auth.doLogIn');
     // Route::middleware('auth.guards')->group(function(){
-        Route::get('/logoff', 'AuthController@doLogOff')->name('auth.doLogOff');
+        Route::get('/logout', 'AuthController@doLogOut')->name('auth.doLogOut');
 
     /** 
      * ! ExamController
@@ -46,6 +46,7 @@
      */
             Route::post('/candidates/create', 'CandidateController@doCreate')->name('candidate.doCreate');
             Route::put('/candidates/{id_candidate}/edit', 'CandidateController@doEdit')->name('candidate.doEdit');
+            Route::delete('/candidates/{id_candidate}/delete', 'CandidateController@doDelete')->name('candidate.doDelete');
             Route::get('/panel/candidates', 'CandidateController@panel')->name('candidate.panel');
         // });
     // });
