@@ -37,11 +37,11 @@
                         <tbody>
                             <tr>
                                 <th scope="row">Name</th>
-                                <td>Susana</td>
-                                <td>Lee</td>
-                                <td>Alex</td>
-                                <td>Gemma</td>
-                                <td>Phil</td>
+                                <td class="text-center">Susana</td>
+                                <td class="text-center">Lee</td>
+                                <td class="text-center">Alex</td>
+                                <td class="text-center">Gemma</td>
+                                <td class="text-center">Phil</td>
                             </tr>
                             <tr>
                                 <th scope="row">Age</th>

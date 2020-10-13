@@ -160,7 +160,7 @@ $(document).mouseleave(function () {
         }
     }
     console.log(document.querySelector('.strikes').value);
-    $('.modal').modal();
+    // $('.modal').modal();
 });
 
 

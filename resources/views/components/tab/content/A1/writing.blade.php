@@ -112,9 +112,12 @@
                         <i class="dropdown-icon fas fa-angle-down"></i>
                     </button>
                 </a>
-                <main class="dropdown-menu-content second-question-container">
-                    <div class="py-4">
-                        <img src="{{ asset('img/svg/animales.jpg') }}" class="img-fluid" alt="image-one-question-three">
+                <main class="dropdown-menu-content second-question-container d-flex justify-content-center">
+                    <div class="py-4 svg-width">
+                        {{-- <img src="{{ asset('animales.jpg') }}" class="img-fluid" alt="image-one-question-three"> --}}
+                        @component('components.tab.content.A1.prueba-animales')
+                            
+                        @endcomponent
                     </div>
                 </main>
             </section>
