@@ -103,4 +103,5 @@
             <p><span style="color: #0091B7;">My friend:</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis sit eligendi tempora mollitia. Dignissimos illo adipisci alias doloribus. Tempore corporis voluptatibus tenetur eaque nihil ducimus qui vero, architecto odio? Reiciendis excepturi, ipsa voluptas nulla consectetur reprehenderit eius. Suscipit, laboriosam facere!</p>
         </main>
     </section>
+
 @endsection

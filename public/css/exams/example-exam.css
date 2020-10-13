@@ -291,6 +291,10 @@ textarea{
     margin-right: calc(((100% - 83.3333333333%) / 2 + 1rem));
 }
 
+.show{
+    display: block;
+}
+
 /* * MD */
 
 @media(min-width: 768px) {
