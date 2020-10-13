@@ -93,7 +93,7 @@ for (const key in audioBtn) {
     if(typeof btn === "object"){
         btn.addEventListener('click', function (e) {
             e.preventDefault();
-            if(!this.classList.contains('playing')){
+            if(!this.classList.contains('playing') && !this.classList.contains('finished')){
                 if (!this.dataset.count) {
                     this.dataset.count = 0;
                 }
@@ -119,6 +119,9 @@ for (const key in audio) {
             input.addEventListener('play', function(e){
                 audioBtn[key].classList.add('playing');
             });
+            input.addEventListener('ended', function(e){
+                audioBtn[key].classList.remove('playing');
+            });
         }       
         
 }
@@ -143,10 +146,25 @@ function disableF5(e) {
 
 // Mensaje si quiere salir de la pagina
 
+const modal = document.querySelector('.modal');
+
+
 $(document).mouseleave(function () {
-    // alert("Strike one");
+    if(!document.querySelector('.strikes').value){
+        document.querySelector('.strikes').value = 1;
+    }else{
+        document.querySelector('.strikes').value++;
+        if(document.querySelector('.strikes').value >= 2){
+            const modalBody = document.querySelector('.modal-body p');
+            modalBody.innerHTML = "Si volves a salir reprobas por mamerto";
+        }
+    }
+    console.log(document.querySelector('.strikes').value);
+    // $('.modal').modal();
 });
 
+
+;
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   

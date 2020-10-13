@@ -200,13 +200,18 @@ textarea{
 /* borde del th */
 
 .question-listening table th{
-         border: 1px solid #ccc;
+    border: 1px solid #ccc;
+    padding: 0 0 2rem 0;
+    text-align: center;
+    padding-top: 1rem;
 }
 
 /* borde del td */
 
 .first-question-container table td{
     border: 1px solid #ccc;
+    padding: 1rem 0 2rem 0;
+    text-align: center;
 }
 
 /* tamaño de los iconos */
@@ -216,6 +221,10 @@ textarea{
 }
 
 /* * inputs */
+
+th{
+    
+}
 
 .input {
     outline: none;
@@ -291,6 +300,14 @@ textarea{
     margin-right: calc(((100% - 83.3333333333%) / 2 + 1rem));
 }
 
+.show{
+    display: block;
+}
+
+.svg-width{
+    width: 50%;
+}
+
 /* * MD */
 
 @media(min-width: 768px) {
@@ -344,6 +361,12 @@ textarea{
     
     .table-question-3 th{
         border: 1px solid #ccc;
+    }
+
+    .first-question-container table td{
+        border: 1px solid #ccc;
+        padding: 1rem;
+        text-align: center;
     }
 }
 

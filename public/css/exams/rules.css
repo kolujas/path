@@ -150,6 +150,12 @@ header h2 {
 
 /* * MD */
 @media(min-width: 768px) {
+
+    .logo{
+        object-position: left;
+        padding-left: 10rem;
+    }
+
     .rules-box {
         padding: 0 1.5rem;
     }
@@ -164,10 +170,23 @@ header h2 {
     .rules-box {
         padding: 0 10rem;
     }
+
+    .rules-rem{
+        padding: 2rem 4rem 0 4rem;
+    }
+
+    .rules-p{
+        padding: 2rem 4rem;
+    }
 }
 
 /* * XL */
 @media(min-width: 1200px) {
+    .logo{
+        object-position: left;
+        padding-left: 30rem;
+    }
+
     .rules-box {
         padding: 0 20rem;
     }

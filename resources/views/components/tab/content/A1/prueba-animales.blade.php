@@ -73,7 +73,7 @@
 	font-family: 'Montserrat';
 	letter-spacing: 2px;
 	font-size: 14px;
-	transform: translateY(-5%);
+	transform: translateY(30%);
 }
 
 </style>
@@ -94,7 +94,7 @@
 	<!-- .st4{font-family:'Montserrat';} -->
 	.st5{font-size:12px;}
 </style>
-<image style="overflow:visible;" width="513" height="256" xlink:href="animales.jpg"  transform="matrix(0.9999 0 0 0.9999 0 0)">
+<image style="overflow:visible;" width="513" height="256" xlink:href="{{ asset('img/52194D69.jpg') }}"  transform="matrix(0.9999 0 0 0.9999 0 0)">
 </image>
 <path class="st0" d="M72.3,46.9H12.1c-3,0-5.5-2.5-5.5-5.5V27c0-3,2.5-5.5,5.5-5.5h60.2c3,0,5.5,2.5,5.5,5.5v14.4
 	C77.8,44.4,75.3,46.9,72.3,46.9z"/>

@@ -10,22 +10,22 @@
 
 @section('main')
     <header>
-        <h2 style="text-align: center;">Listening</h2>
+        <h2 style="text-align: center; padding-top: 2rem;">Listening</h2>
     </header>
 
     <section>
         <header>
-            <h3>1. Look at the table below. Listen to Susana talking about her family, and complete the spaces in the table. You can listen twice.<mark> One is done for you.</mark></h3>
+            <h3 style="padding-top: 2rem;">1. Look at the table below. Listen to Susana talking about her family, and complete the spaces in the table. You can listen twice.<mark> One is done for you.</mark></h3>
         </header>
         <table style="margin: auto; border: 1px solid #ccc;">
             <thead>
                 <tr style="background-color: #fff;">
                     <th style="padding: 1rem 2rem;" scope="col"></th>
                     <th style="padding: 1rem 2rem;" scope="col">Me</th>
-                    <th style="padding: 1rem 2rem;" scope="col">ther</th>
-                    <th style="padding: 1rem 2rem;" scope="col">ther</th>
+                    <th style="padding: 1rem 2rem;" scope="col">pepether</th>
+                    <th style="padding: 1rem 2rem;" scope="col">pepether</th>
                     <th style="padding: 1rem 2rem;" scope="col">sister</th>
-                    <th style="padding: 1rem 2rem;" scope="col">er</th>
+                    <th style="padding: 1rem 2rem;" scope="col">pepeer</th>
                 </tr>
             </thead>
             <tbody>
@@ -59,24 +59,24 @@
 
     <section>
         <header>
-            <h3>2. You will hear Susana talking about happy days and sad days. Which are happy, and which are sad? <mark>One is done for you.</mark></h3>
+            <h3 style="padding-top: 2rem;">2. You will hear Susana talking about happy days and sad days. Which are happy, and which are sad? <mark>One is done for you.</mark></h3>
         </header>
         <table class="table table-striped mb-4">
             <thead>
                 <tr>
                     <th class="text-center" scope="col"><i class="face-icons far fa-smile "></i>OK</th>
-                    <th scope="col"></span>day</th>
-                    <th scope="col"></span>day</th>
-                    <th scope="col"></span>day</th>
+                    <th scope="col">pepe</span>day</th>
+                    <th scope="col">pepe</span>day</th>
+                    <th scope="col">pepe</span>day</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th class="text-center" scope="row"><i class="face-icons far fa-frown text-center"></i>BAD
                     </th>
-                    <th style="background-color: #ccc; border-left: 1px solid #ccc;" scope="col"></span>day</th>
-                    <th style="background-color: #ccc; border: 0;" scope="col"></span>day</th>
-                    <th style="background-color: #ccc; border: 0;" scope="col"></span>day</th>
+                    <th style="background-color: #ccc; border-left: 1px solid #ccc;" scope="col">pepe</span>day</th>
+                    <th style="background-color: #ccc; border: 0;" scope="col">pepe</span>day</th>
+                    <th style="background-color: #ccc; border: 0;" scope="col">pepe</span>day</th>
                 </tr>
             </tbody>
         </table>
@@ -86,7 +86,7 @@
     
     <section>
         <header>
-            <h3>3. Where Jack lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers <mark>Two are done for you.</mark></h3>
+            <h3 style="padding-top: 2rem;">3. Where Jack lives pepethere are ten houses. Listening to him tell you about each house, then complete the table with the numbers <mark>Two are done for you.</mark></h3>
         </header>
         <table class="table table-striped mb-4 table-question-3">
             <thead>
@@ -104,28 +104,28 @@
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">A nurse lives at numbers..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="background-color: #ccc;" scope="col">p</th>
                     <th style="border-bottom: 1px solid #ccc" scope="col"></th>
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">My aunt Wendy lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="background-color: #ccc;" scope="col">p</th>
                     <th style="border-bottom: 1px solid #ccc" scope="col"></th>
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="background-color: #ccc;" scope="col">p</th>
                     <th style="border-bottom: 1px solid #ccc" scope="col"></th>
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="background-color: #ccc;" scope="col">p</th>
                     <th style="border-bottom: 1px solid #ccc" scope="col"></th>
 
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">Number..</th>
-                    <th style="background-color: #ccc;" scope="col"></th>
+                    <th style="background-color: #ccc;" scope="col">p</th>
                     <th style="border-bottom: 1px solid #ccc" scope="col">is a cafe</th>
                 </tr>
             </tbody>
