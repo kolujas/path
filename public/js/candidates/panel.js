@@ -69,13 +69,13 @@ document.addEventListener('DOMContentLoaded', function(e){
     if(URLServiceProvider.findHashParameter() == 'details'){
         if(!URLServiceProvider.findGetParameter('id')){
             let modal = createModal([
-                {title: 'Candidate Number', name: 'candidate_number', type: 'number'},
+                {title: 'Candidate Number', name: 'candidate_number', type: 'number', required: true},
                 {title: 'Full Name', name: 'full_name', type: 'text'},
-                {title: 'Email', name: 'email', type: 'text'},
+                {title: 'Email', name: 'email', type: 'text', required: true},
                 {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
                 {title: 'Member', name: 'member', type: 'text'},
                 {title: 'Member ID', name: 'id_member', type: 'number'},
-                {title: 'Modules', name: 'modules', type: 'checkbox'},
+                {title: 'Modules', name: 'modules', type: 'checkbox', required: true},
             ]);
             setActions({
                 type: 'create'
@@ -83,13 +83,13 @@ document.addEventListener('DOMContentLoaded', function(e){
         }else{
             let modal = createModal([
                 {title: '', name: 'id_candidate', type: 'hidden', disabled: true},
-                {title: 'Candidate Number', name: 'candidate_number', type: 'number'},
+                {title: 'Candidate Number', name: 'candidate_number', type: 'number', required: true},
                 {title: 'Full Name', name: 'full_name', type: 'text'},
-                {title: 'Email', name: 'email', type: 'text'},
+                {title: 'Email', name: 'email', type: 'text', required: true},
                 {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
                 {title: 'Member', name: 'member', type: 'text'},
                 {title: 'Member ID', name: 'id_member', type: 'number'},
-                {title: 'Modules', name: 'modules', type: 'checkbox'},
+                {title: 'Modules', name: 'modules', type: 'checkbox', required: true},
                 {title: 'Date Added', name: 'created_at', type: 'date', disabled: true},
             ], getCandidate());
             setActions({
@@ -152,13 +152,13 @@ document.addEventListener('DOMContentLoaded', function(e){
     document.querySelector('.add-data').addEventListener('click', function(e){
         e.preventDefault();
         let modal = createModal([
-            {title: 'Candidate Number', name: 'candidate_number', type: 'number'},
+            {title: 'Candidate Number', name: 'candidate_number', type: 'number', required: true},
             {title: 'Full Name', name: 'full_name', type: 'text'},
-            {title: 'Email', name: 'email', type: 'text'},
+            {title: 'Email', name: 'email', type: 'text', required: true},
             {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
             {title: 'Member', name: 'member', type: 'text'},
             {title: 'Member ID', name: 'id_member', type: 'number'},
-            {title: 'Modules', name: 'modules', type: 'checkbox'},
+            {title: 'Modules', name: 'modules', type: 'checkbox', required: true},
         ]);
         setActions({
             type: 'create'

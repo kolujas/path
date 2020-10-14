@@ -70,8 +70,9 @@ class Modal{
                 for (const element of this.properties.list) {
                     if(this.data) {
                         if(element.name.split(':').length <= 1){
+                            let value = '';
                             if (this.data.hasOwnProperty(element.name)) {
-                                let value = this.data[element.name];
+                                value = this.data[element.name];
                                 if(element.name == 'created_at'){
                                     let date = new Date(value);
                                     let year = date.getFullYear();
@@ -85,8 +86,8 @@ class Modal{
                                     }
                                     value = `${year}-${month}-${day}`;
                                 }
-                                this.createLi(element, value, true);
                             }
+                            this.createLi(element, value, true);
                         }else{
                             let elementToSearch = element.name.split(':')[0];
                             let valueToSearch = element.name.split(':')[1];
@@ -112,32 +113,40 @@ class Modal{
             title.classList.add('d-block', 'list-label');
             title.innerHTML = element.title;
             li.appendChild(title);
+            if(element.hide){
+                li.classList.add('hide');
+                li.dataset.hide = 1;
+            }
+            if(element.required){
+                li.dataset.required = 1;
+                let required = document.createElement('span');
+                required.innerHTML = '*';
+                required.classList.add('required', 'ml-2');
+                title.appendChild(required);
+                title.title = 'Required';
+            }
             if(element.name == 'candidates'){
                 this.createCandidates(element, value, title, disabled, li);
             }else if(element.name == 'modules' || element.name == 'candidate:modules'){
                 this.createModules(element, value, disabled, li);
             }else if(element.name == 'file'){
                 this.createFiles(li);
-            }else if(element.name == 'password'){
-                this.createPassword();
+            }else if(element.name == 'rules'){
+                this.createRules(element, value, disabled, li);
             }else{
                 this.createInputs(element, value, disabled, li);
             }
     }
 
-    createPassword(){
-        
-    }
-
-    createCandidates(element, candidates, title, disabled, li){
+    createCandidates(element, candidatesToFor, title, disabled, li){
         let span = document.createElement('span');
         let length = 0;
-        if(candidates){
-            for (const candidate of candidates) {
+        if(candidatesToFor){
+            for (const candidate of candidatesToFor) {
                 length++;
             }
         }
-        span.classList.add('ml-2');
+        span.classList.add('candidates', 'ml-2');
         title.classList.add('d-block', 'list-label', 'mb-2');
         span.innerHTML = `(${length})`;
         title.appendChild(span);
@@ -147,13 +156,15 @@ class Modal{
         input.id = element.name;
         input.type = element.type;
         input.name = element.name;
-        for (const candidate of candidates) {
-            if(input.value){
-                input.value += `,${candidate.id_candidate}`;
-                input.dataset.original += `,${candidate.id_candidate}`;
-            }else{
-                input.value = candidate.id_candidate;
-                input.dataset.original = candidate.id_candidate;
+        for (const candidate of candidatesToFor) {
+            if(candidate){
+                if(input.value){
+                    input.value += `,${candidate.id_candidate}`;
+                    input.dataset.original += `,${candidate.id_candidate}`;
+                }else{
+                    input.value = candidate.id_candidate;
+                    input.dataset.original = candidate.id_candidate;
+                }
             }
         }
         input.disabled = disabled;
@@ -255,16 +266,49 @@ class Modal{
         input.id = element.name;
         input.type = element.type;
         input.name = element.name;
+        input.placeholder = element.title;
         if(value){
             input.value = value;
             input.dataset.original = value;
         }else{
             input.value = '';
-            input.placeholder = element.title;
             input.dataset.original = '';
         }
         input.disabled = disabled;
         li.appendChild(input);
+        if(!(/id_candidate/.exec(element.name) && /id_exam/.exec(element.name) && /id_record/.exec(element.name))){
+            let support = document.createElement('span');
+            li.appendChild(support);
+            if(errors && errors[element.name] && errors[element.name][0]){
+                support.classList.add('support', 'support-box', `support-${element.name}`, 'mb-2');
+                support.innerHTML = errors[element.name][0];
+            }else{
+                support.classList.add('support', 'support-box', `support-${element.name}`, 'hidden', 'mb-2');
+            }
+        }
+    }
+
+    createRules(element, value, disabled, li){
+        let textarea = document.createElement('textarea');
+        textarea.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');
+        if(element.name == 'id_candidate' || element.name == 'id_exam' || element.name == 'id_record'){
+            textarea.classList.add('input-id');
+        }
+        if(element.hasOwnProperty('disabled') && element.disabled){
+            textarea.classList.add('ever-disabled');
+        }
+        textarea.id = element.name;
+        textarea.name = element.name;
+        textarea.placeholder = element.title;
+        if(value){
+            textarea.innerHTML = value;
+            textarea.dataset.original = value;
+        }else{
+            textarea.innerHTML = '';
+            textarea.dataset.original = '';
+        }
+        textarea.disabled = disabled;
+        li.appendChild(textarea);
         if(!(/id_candidate/.exec(element.name) && /id_exam/.exec(element.name) && /id_record/.exec(element.name))){
             let support = document.createElement('span');
             li.appendChild(support);
@@ -302,6 +346,9 @@ function refreshData(){
     for(const input of document.querySelectorAll(`.modal ul [data-original]`)){
         if(input.type == 'checkbox'){
             input.checked = input.dataset.original;
+        }else if(input.nodeName == 'TEXTAREA'){
+            input.innerHTML = input.dataset.original;
+            input.value = input.dataset.original;
         }else{
             if(input.id == 'candidates'){
                 input.previousElementSibling.innerHTML = `(${input.dataset.original.split(',').length})`;
@@ -312,9 +359,15 @@ function refreshData(){
 }
 
 function orderCandidates(data){
-    // for (const value of document.querySelector('.modal.details #candidates').value.split(',')) {
-        
-    // }
+    for (const key in data) {
+        const candidate = data[key];
+        for (const value of document.querySelector('.modal.details #candidates').value.split(',')) {
+            if(value == candidate.id_candidate){
+                let element = data.splice(key, 1);
+                data.unshift(element.pop());
+            }
+        }
+    }
 }
 
 function changeCandidateContent(params = {
@@ -354,19 +407,53 @@ function closeModal(params = {
 }
 
 function disableInputs(){
-    let inputs = document.querySelectorAll('.modal.details input');
+    let inputs = document.querySelectorAll('.modal.details .form-input');
     for(const input of inputs) {
-        if(input.type != 'hidden'){
+        if(input.type != 'hidden' || !input.type){
             input.disabled = true;
+        }
+        if(input.parentNode.nodeName == 'LI'){
+            let parent = input.parentNode;
+            if(parent.dataset.hide){
+                parent.classList.add('hide');
+            }
+            if(parent.dataset.required){
+                parent.children[0].children[0].classList.add('hide')
+            }
+        }else{
+            let parent = input.parentNode.parentNode;
+            if(parent.dataset.hide){
+                parent.classList.add('hide');
+            }
+            if(parent.dataset.required){
+                parent.children[0].children[0].classList.add('hide')
+            }
         }
     }
 }
 
 function enableInputs(){
-    let inputs = document.querySelectorAll('.modal.details input');
+    let inputs = document.querySelectorAll('.modal.details .form-input');
     for(const input of inputs) {
-        if(!input.classList.contains('ever-disabled')){
+        if(!input.classList.contains('ever-disabled') || !input.type){
             input.disabled = false;
+        }
+        if(input.parentNode.nodeName == 'LI'){
+            let parent = input.parentNode;
+            if(parent.dataset.hide){
+                parent.classList.remove('hide');
+            }
+            if(parent.dataset.required){
+                parent.children[0].children[0].classList.remove('hide')
+            }
+        }else{
+            let parent = input.parentNode.parentNode;
+            if(parent.dataset.hide){
+                parent.classList.remove('hide');
+            }
+            if(parent.dataset.required){
+                parent.children[0].children[0].classList.remove('hide')
+            }
         }
     }
 }
@@ -445,6 +532,10 @@ function createAcceptBtn(params) {
 function hideTable(){
     document.querySelector('#exams table.table').classList.add('d-none');
     document.querySelector('#exams .filter-pagination').classList.add('d-none');
+    if(document.querySelector('#exams table.subtable')){
+        document.querySelector('#exams table.subtable').parentNode.removeChild(document.querySelector('#exams table.subtable'));
+        document.querySelector('#exams .filter-pagination-candidates').parentNode.removeChild(document.querySelector('#exams .filter-pagination-candidates'));
+    }
 }
 
 function showTable(){
@@ -482,15 +573,15 @@ function createCandidatesCheckboxes(){
         order: {
             by: 'id_candidate',
         },
-    }, {}, [{
-        type: 'search',
-        target: 'full_name,email',
         event: {
             function: changeCandidateContent,
             params: {
                 table: newTable,
             },
         },
+    }, {}, [{
+        type: 'search',
+        target: 'full_name,email',
     }], candidates);
 
     changeCandidateContent({

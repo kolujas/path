@@ -109,12 +109,18 @@
          */
         public function doDelete($id_candidate){
             $candidate = Candidate::find($id_candidate);
-                
-            $candidate->delete();
             
-            return redirect("/panel/candidates")->with('status', [
-                'code' => 200,
-                'message' => 'Candidate deleted correctly.',
-            ]);
+            $candidate->delete();
+
+            try {
+                EvaluationController::DeleteByCandidate($id_candidate);
+
+                return redirect("/panel/candidates")->with('status', [
+                    'code' => 200,
+                    'message' => 'Candidate deleted correctly.',
+                ]);
+            } catch (\Throwable $th) {
+                dd($th);
+            }
         }
     }

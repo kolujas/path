@@ -6,7 +6,7 @@
 
 @section('nav')
     <div class="text-center mb-5">
-        <div class=" background background-one mb-4">
+        <div class=" background background-linear mb-4">
             <img class="logo" src={{ asset('img/recursos/logo_white.png') }} alt="Path">
             <h1 class="h1">Path</h1>
         </div>
@@ -28,11 +28,13 @@
 
 @section('main')
     <section class="col-12 rules-container">
-        <main class="rules-box mt-4">
+        <main class="rules-box">
             <form id="rules-form" action="/auth/exam/{{$exam->id_exam}}" method="post" enctype="multipart/form-data">
                 @csrf
-                <p class="h3 rules-rem text-left text-uppercase mt-4 mb-0 text text-one bg-white">Remember:</p>
-                <p class="rules-p bg-white">{{ $exam->rules }}</p>
+                <div class="rules-text bg-white p-4">
+                    <p class="h3 rules-rem text-left text-uppercase mb-0 text text-one">Remember:</p>
+                    <p class="rules-p">{{ $exam->rules }}</p>
+                </div>
                 <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">
                     <input class="form-input form-check-input" type="checkbox" name="accept" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">

@@ -71,13 +71,13 @@ export class Tr{
                     e.preventDefault();
                     let modal = createModal([
                         {title: '', name: 'id_candidate', type: 'hidden', disabled: true},
-                        {title: 'Candidate Number', name: 'candidate_number', type: 'number'},
+                        {title: 'Candidate Number', name: 'candidate_number', type: 'number', required: true},
                         {title: 'Full Name', name: 'full_name', type: 'text'},
-                        {title: 'Email', name: 'email', type: 'text'},
+                        {title: 'Email', name: 'email', type: 'text', required: true},
                         {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
                         {title: 'Member', name: 'member', type: 'text'},
                         {title: 'Member ID', name: 'id_member', type: 'number'},
-                        {title: 'Modules', name: 'modules', type: 'checkbox'},
+                        {title: 'Modules', name: 'modules', type: 'checkbox', required: true},
                         {title: 'Date Added', name: 'created_at', type: 'date', disabled: true},
                     ], properties.data);
                     setActions({
@@ -98,10 +98,12 @@ export class Tr{
                 e.preventDefault();
                 let modal = createModal([
                     {title: '', name: 'id_exam', type: 'hidden', disabled: true},
-                    {title: 'Name', name: 'name', type: 'text'},
-                    {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true},
-                    {title: 'Modules', name: 'modules', type: 'checkbox'},
-                    {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date'},
+                    {title: 'Name', name: 'name', type: 'text', required: true},
+                    {title: 'Rules', name: 'rules', type: 'textarea'},
+                    {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, required: true},
+                    {title: 'Password', name: 'password', type: 'password', hide: true},
+                    {title: 'Confirm Password', name: 'password_confirmation', type: 'password', hide: true},
+                    {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date', required: true},
                 ], properties.data);
                 setActions({
                     type: 'info',
@@ -126,6 +128,11 @@ export class Tr{
                 }, modal);
                 Tr.clickTr(this.dataset.id_record);
             });
+        }
+        for (const col of properties.cols) {
+            if(col.data == 'checkbox'){
+                this.html.classList.add('candidates-trigger');
+            }
         }
         switch(this.type){
             case 'thead':
@@ -155,9 +162,9 @@ export class Tr{
     }
 
     static clickCheckbox(id){
-        let span = document.querySelector('#candidates').parentNode.children[0];
+        let span = document.querySelector('#candidates').parentNode.children[1];
         let length = parseInt(span.innerHTML.split('(').pop().split(')').shift());
-        let input = document.querySelector('#candidates').parentNode.children[1];
+        let input = document.querySelector('#candidates').parentNode.children[2];
         for (const tr of document.querySelectorAll('tr')) {
             if(tr.dataset.id_candidate == id){
                 tr.children[0].children[0].checked = !tr.children[0].children[0].checked;

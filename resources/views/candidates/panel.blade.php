@@ -10,7 +10,7 @@
 
 @section('main')
     <div id="tab-candidates" class="col-12 relative tab-menu vertical p-0">
-        <section class="tabs background background-one">
+        <section class="tabs background background-linear">
             <header class="tab-header logo">
                 <img src={{ asset('img/recursos/logo_white.png') }} alt="Path">
                 <h1 class="mb-0">Path</h1>

@@ -93,13 +93,17 @@
     color: var(--color-three);
 }
 
-/* detalles label */
+/* detalles */
+.details .hide{
+    display: none;
+}
+
 .details .list-label{
     font-size: 1rem;
     padding: 0 calc(.5rem + 2px);
 }
 
-.list-label span{
+.list-label .candidates{
     color: var(--color-two);
 }
 
@@ -119,6 +123,10 @@
 .details .list-datos.ever-disabled,
 .details .list-datos[disabled] {
     border-color: transparent;
+}
+.details textarea.list-datos[disabled] {
+    background-color: #f7f7f7;
+    border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .details label{
@@ -224,6 +232,11 @@ tr:hover{
 
 .modal {
     position: initial;
+}
+
+textarea{
+    height: 150px;
+    resize: none;
 }
 
 /* * MD */

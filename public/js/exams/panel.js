@@ -71,10 +71,12 @@ document.addEventListener('DOMContentLoaded', function(e){
     if(URLServiceProvider.findHashParameter() == 'details'){
         if(!URLServiceProvider.findGetParameter('id')){
             let modal = createModal([
-                {title: 'Name', name: 'name', type: 'text'},
-                {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true},
-                {title: 'Password', name: 'password', type: 'password'},
-                {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date'},
+                {title: 'Name', name: 'name', type: 'text', required: true},
+                {title: 'Rules', name: 'rules', type: 'textarea'},
+                {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, required: true},
+                {title: 'Password', name: 'password', type: 'password', required: true},
+                {title: 'Confirm Password', name: 'password_confirmation', type: 'password', required: true},
+                {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date', required: true},
             ]);
             setActions({
                 type: 'create'
@@ -82,10 +84,12 @@ document.addEventListener('DOMContentLoaded', function(e){
         }else{
             let modal = createModal([
                 {title: '', name: 'id_exam', type: 'hidden', disabled: true},
-                {title: 'Name', name: 'name', type: 'text'},
-                {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true},
-                {title: 'Modules', name: 'modules', type: 'checkbox'},
-                {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date'},
+                {title: 'Name', name: 'name', type: 'text', required: true},
+                {title: 'Rules', name: 'rules', type: 'textarea'},
+                {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, hide: true},
+                {title: 'Password', name: 'password', type: 'password', hide: true},
+                {title: 'Confirm Password', name: 'password_confirmation', type: 'password', required: true},
+                {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date', required: true},
             ], getExam());
             setActions({
                 type: 'info',
@@ -147,10 +151,12 @@ document.addEventListener('DOMContentLoaded', function(e){
     document.querySelector('.add-data').addEventListener('click', function(e){
         e.preventDefault();
         let modal = createModal([
-            {title: 'Name', name: 'name', type: 'text'},
-            {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true},
-            {title: 'Password', name: 'password', type: 'password'},
-            {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date'},
+            {title: 'Name', name: 'name', type: 'text', required: true},
+            {title: 'Rules', name: 'rules', type: 'textarea'},
+            {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, required: true},
+            {title: 'Password', name: 'password', type: 'password', required: true},
+            {title: 'Confirm Password', name: 'password_confirmation', type: 'password', required: true},
+            {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date', required: true},
         ]);
         setActions({
             type: 'create'
