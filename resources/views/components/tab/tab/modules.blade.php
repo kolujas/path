@@ -4,8 +4,12 @@
     </li>
     @foreach($modules as $module)
         <li class="tab">
-            <a href="#{{ $module->file }}" class="tab-button btn">
+            <a id="{{ $module->folder }}-{{ $module->name }}" href="#{{ $module->file }}" class="tab-button btn">
                 <span class="link-text">{{ $module->file }}</span>
+                <div class="clock">
+                    <div class='second-hand'>I</div>
+                </div>
+                <span class="time">{{ $module->time }}</span>
             </a>
         </li>
     @endforeach

@@ -49,7 +49,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <select clas="input-long" disabled name="A1:W1[3]">
+                                    <select clas="input-long" disabled>
                                         <option selected>Bedroom</option>
                                     </select>
                                 </div>
@@ -59,7 +59,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/writing-1-4.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <select clas="input-long" name="A1:W1[4]">
+                                    <select clas="input-long" name="A1:W1[3]">
                                         <option disabled selected>Bedroom</option>
                                         <option>Garden</option>
                                         <option>Kitchen</option>
@@ -73,7 +73,7 @@
                             <div class="card">
                                 <img src="../../img/recursos/writing-1-5.jpg" class="img-fluid" alt="image-one-question-one">
                                 <div class="card-body mx-auto">
-                                    <select clas="input-long" name="A1:W1[5]">
+                                    <select clas="input-long" name="A1:W1[4]">
                                         <option disabled selected>Bedroom</option>
                                         <option>Garden</option>
                                         <option>Kitchen</option>
@@ -95,7 +95,7 @@
                 </a>
                 <main class="dropdown-menu-content second-question-container">
                     <div class="py-4 px-2 px-md-3">
-                        <p class="mb-4">In the bedroom, I can see <input name="A1:W2[1]"class="input input-medium text-center"
+                        <p class="mb-4">In the bedroom, I can see <input class="input input-medium text-center"
                             value="a bed" disabled type="text"> and <input name="A1:W2[1]"class="input input-medium text-center"
                                 type="text">.</p>
                         <p class="mb-4">In the bathroom, I can see <input name="A1:W2[2]" class="input input-medium text-center" type="text"> and <input name="A1:W2[3]"
@@ -114,9 +114,7 @@
                 </a>
                 <main class="dropdown-menu-content second-question-container d-flex justify-content-center">
                     <div class="py-4 svg-width">
-                        {{-- <img src="{{ asset('animales.jpg') }}" class="img-fluid" alt="image-one-question-three"> --}}
                         @component('components.tab.content.A1.prueba-animales')
-                            
                         @endcomponent
                     </div>
                 </main>

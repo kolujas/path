@@ -13,6 +13,7 @@ export class Td {
      * @memberof Td
      */
     constructor(type = 'tbody', properties = { title: '', data: '', actions: {} }, data = false) {
+        this.setProperties(properties);
         this.setType(type);
         this.setData(data);
         switch (this.type) {
@@ -29,6 +30,19 @@ export class Td {
                 this.createEmpty();
                 break;
         }
+    }
+
+    setProperties(properties = {
+        id: 'td-1',
+    }){
+        this.properties = {};
+        this.setId(properties);
+    }
+
+    setId(properties = {
+        id: 'td-1',
+    }){
+        this.properties.id = properties.id;
     }
 
     /**
@@ -100,7 +114,11 @@ export class Td {
                 this.html.classList.add(className);
             }
         }
+        this.html.classList.add(this.properties.id);
         switch (properties.data) {
+            case 'candidate_number':
+                this.html.innerHTML = this.createString();
+                break;
             case 'candidate:full_name':
                 this.html.innerHTML = this.createCandidateFullName();
                 break;
@@ -109,9 +127,6 @@ export class Td {
                 break;
             case 'checkbox':
                 this.html.appendChild(this.createCheckbox());
-                break;
-            case 'email':
-                this.html.innerHTML = this.createString();
                 break;
             case 'exam':
                 this.html.appendChild(this.createFile());

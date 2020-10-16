@@ -47,8 +47,7 @@
         @if(Session::has('status'))
         const status = @json(Session::get('status'));
         @endif
-        const rules = @json($validation->rules);
-        const messages = @json($validation->messages);
+        const validation = @json($validation);
         const exams = @json($exams);
         const candidates = @json($candidates);
     </script>

@@ -59,13 +59,13 @@ function createSeconds(seconds = undefined){
     }
 }
 
-function current(countdown = undefined){
-    createHours(countdown.hours)
-    createMinutes(countdown.minutes)
-    createSeconds(countdown.seconds)
+function current(data = undefined){
+    createHours(data.countdown.hours)
+    createMinutes(data.countdown.minutes)
+    createSeconds(data.countdown.seconds)
 }
 
-function end(countdown = undefined){
+function end(data = undefined){
 
 }
 
@@ -82,8 +82,17 @@ document.addEventListener('DOMContentLoaded', function(e){
             seconds: true,
         }
     }, {
-        current: current,
-        end: end,
+        current: {
+            functionName: current,
+            params: {
+                
+            },
+        }, end: {
+            functionName: end,
+            params: {
+                
+            },
+        }
     });
 
     let notifications = [];

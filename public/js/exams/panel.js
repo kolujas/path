@@ -7,12 +7,16 @@ import { createModal, setActions } from "../modal.js";
 import { Table } from "../Table/Table.js";
 
 let cols = [ { 
+    id: 'table-icon',
     data: 'exam'
 }, { 
+    id: 'name',
     data: 'name'
 }, { 
+    id: 'candidates',
     data: 'candidates'
 }, {
+    id: 'scheduled_date_time',
     data: 'scheduled_date_time'
 } ];
 

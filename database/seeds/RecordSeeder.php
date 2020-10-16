@@ -20,14 +20,17 @@
                 Record::create( [
                     'id_evaluation' => 9,
                     'file' => 2,
+                    'strikes' => 4,
                 ] );
                 Record::create( [
                     'id_evaluation' => 10,
                     'file' => 3,
+                    'strikes' => 8,
                 ] );
                 Record::create( [
                     'id_evaluation' => 11,
                     'file' => 4,
+                    'strikes' => 1,
                 ] );
             }
         }

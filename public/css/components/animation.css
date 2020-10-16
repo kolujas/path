@@ -1,3 +1,56 @@
+.clock{
+	--color: var(--color-one);
+	font-family: sans-serif;
+	font-size: 2rem;
+	text-align: center;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border: 5px solid var(--color) ;
+	width:3rem;
+	height:3rem;
+    position:relative;
+    overflow: hidden;
+}
+/* .center{
+	position: absolute;
+	width:calc(3rem - 10px);
+	height:calc(3rem - 10px);
+	text-align: center;
+	margin-top: 6px;
+	color: var(--color) ;
+} */
+.second-hand{
+	position: absolute;
+	width:calc(3rem - 10px);
+	height:calc(3rem - 10px);
+	text-align: center;
+	color: var(--color) !important;
+	animation: rotateit 60s linear infinite;
+}
+/* .minute-hand{
+	position: absolute;
+	width:calc(3rem - 10px);
+	height:calc(3rem - 10px);
+	text-align: center;
+	color: var(--color);
+	animation: rotateit 3600s linear infinite;
+}
+.hour-hand{
+	position: absolute;
+	width:calc(3rem - 10px);
+	height:calc(3rem - 10px);
+	text-align: center;
+	animation: rotateit 86400s linear infinite;
+} */
+@keyframes rotateit {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 @keyframes pulse{
     0%{
         box-shadow: 0 0 0 0 var(--color-one);

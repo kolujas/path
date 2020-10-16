@@ -226,17 +226,11 @@ class Modal{
     }
 
     createFiles(li){
-        let selected;
-        for (const record of records) {
-            if (document.querySelector('.details #id_record').value == record.id_record) {
-                selected = record;
-            }
-        }
         let div = document.createElement('div');
         div.classList.add('d-flex');
         li.appendChild(div);
             let btnFile = document.createElement('a');
-            btnFile.href = `/storage/${selected.file}`;
+            btnFile.href = `/storage/records/${this.data.id_record}/file`;
             btnFile.target = '_blank';
             btnFile.classList.add('d-block', 'mb-2', 'mr-2', 'btn', 'btn-two-transparent', 'btn-icon');
             div.appendChild(btnFile);
@@ -245,7 +239,7 @@ class Modal{
                 btnFile.appendChild(iconFile);
 
             let btnID = document.createElement('a');
-            btnID.href = `/storage/${selected.id}`;
+            btnID.href = `/storage/candidates/${this.data.candidate.id_candidate}/file`;
             btnID.target = '_blank';
             btnID.classList.add('d-block', 'mb-2', 'btn', 'btn-two-transparent', 'btn-icon');
             div.appendChild(btnID);
@@ -483,7 +477,7 @@ function createAcceptBtn(params) {
     let url = URLServiceProvider.findOriginalRoute();
     url = url.split('/').pop();
     let form = document.querySelector('form');
-    let id, input, validation;
+    let id, input, validationjs;
     if(!document.querySelector('.method')) {
         input = document.createElement('input');
         input.type = 'hidden';
@@ -500,9 +494,9 @@ function createAcceptBtn(params) {
             }
             input.value = 'POST';
             form.action = `/${url}/create`;
-            validation = new ValidationJS({
+            validationjs = new ValidationJS({
                 id: 'action-form',
-            }, rules, messages);
+            }, validation.create.rules, validation.create.messages);
             break;
         case 'delete':
             input.value = 'DELETE';
@@ -522,9 +516,9 @@ function createAcceptBtn(params) {
             input.value = 'PUT';
             id = document.querySelector('.input-id').value;
             form.action = `/${url}/${id}/edit`;
-            validation = new ValidationJS({
+            validationjs = new ValidationJS({
                 id: 'action-form',
-            }, rules, messages);
+            }, validation.edit.rules, validation.edit.messages);
             break;
     }
 }
@@ -548,12 +542,20 @@ function showTable(){
 function createCandidatesCheckboxes(){
     hideTable();
 
+    let candidatesToList = candidates;
+    for (const candidate of candidatesToList) {
+        // console.log(candidate.evaluations);
+    }
+
     let cols = [ { 
+        id: 'checkbox',
         data: 'checkbox'
     }, { 
-        data: 'full_name'
+        id: 'candidate_number',
+        data: 'candidate_number'
     }, {
-        data: 'email'
+        id: 'full_name',
+        data: 'full_name'
     } ];
 
     let html = document.createElement('table');
@@ -581,8 +583,8 @@ function createCandidatesCheckboxes(){
         },
     }, {}, [{
         type: 'search',
-        target: 'full_name,email',
-    }], candidates);
+        target: 'candidate_number,full_name',
+    }], candidatesToList);
 
     changeCandidateContent({
         table: newTable,

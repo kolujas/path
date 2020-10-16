@@ -44,4 +44,17 @@
             $exam->candidates = $exam->candidates();
             return $exam;
         }
+        
+        /** @var array The validation rules & messages. */
+        public static $validation = [
+            'create' => [
+                'rules' => [
+                    'strikes' => 'required',
+                ], 'messages' => [
+                    'en' => [
+                        'strikes.required' => 'The Strikes are required.',
+                    ],
+                ],
+            ],
+        ];
     }

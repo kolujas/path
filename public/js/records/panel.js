@@ -5,12 +5,16 @@ import { ScrollDetection as ScrollDetectionJS } from "../../submodules/ScrollDet
 import { Table } from "../Table/Table.js";
 
 let cols = [ { 
+    id: 'table-icon',
     data: 'exam'
 }, { 
+    id: 'full_name',
     data: 'candidate:full_name'
 }, { 
+    id: 'name',
     data: 'exam:name'
 }, {
+    id: 'scheduled_date_time',
     data: 'exam:scheduled_date_time'
 } ];
 

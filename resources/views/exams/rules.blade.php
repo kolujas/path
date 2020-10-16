@@ -12,6 +12,9 @@
         </div>
         <h2 class="mb-2">{{ $exam->name }}</h2>
         <span class="text-center timer">Scheduled time: {{ $exam->scheduled_date_time }}</span>
+        <div class="clock m-auto">
+			<div class='second-hand'>I</div>
+		</div>
         {{-- <span class="text-center timer">
             <span class="hour">10684</span>
             <span class="dots">:</span>

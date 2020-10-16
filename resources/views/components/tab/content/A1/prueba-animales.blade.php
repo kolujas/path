@@ -169,10 +169,10 @@
 <div id="chicken-cont" class="animal-cont">
 	<div>
 		<p>c</p>
-		<input maxlength="1" type="text">
+		<input name="A1:W3[1]" maxlength="1" type="text">
 		<p>i</p>
 		<p>c</p>
-		<input maxlength="1" type="text">
+		<input name="A1:W3[1c]" maxlength="1" type="text">
 		<p>e</p>
 		<p>n</p>
 
@@ -182,7 +182,7 @@
 <div id="pig-cont" class="animal-cont">
 	<div>
 		<p>p</p>
-		<input maxlength="1" type="text">
+		<input name="A1:W3[3]" maxlength="1" type="text">
 		<p>g</p>
 
 	</div>
@@ -190,10 +190,10 @@
 
 <div id="sheep-cont" class="animal-cont">
 	<div>
-		<input maxlength="1" type="text">
-		<input maxlength="1" type="text">
+		<input name="A1:W3[4a]" maxlength="1" type="text">
+		<input name="A1:W3[4b]" maxlength="1" type="text">
 		<p>e</p>
-		<input maxlength="1" type="text">
+		<input name="A1:W3[4c]" maxlength="1" type="text">
 		<p>p</p>
 	</div>
 </div>
@@ -201,8 +201,8 @@
 <div id="cow-cont" class="animal-cont">
 	<div>
 		<p>c</p>
-		<input maxlength="1" type="text">
-		<input maxlength="1" type="text">
+		<input name="A1:W3[5a]" maxlength="1" type="text">
+		<input name="A1:W3[5b]" maxlength="1" type="text">
 	</div>
 </div>
 

@@ -1,3 +1,29 @@
+.clock{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 2px;
+    margin-left: .5rem;
+    font-size: 1.75rem;
+    display: none;
+}
+.second-hand{
+	width:calc(1.5rem - 4px);
+	height:calc(1.5rem - 4px);
+}
+
+.btn.opened .clock{
+    display: block;
+}
+
+.time{
+    display: none;
+    margin-left: .5rem;
+}
+
+.btn.opened .time{
+    display: block;
+}
+
 /* * floating menu */
 .floating-menu.left{
     left: 0;
@@ -280,9 +306,9 @@ th{
 .tab-menu .tabs .tab-menu-list .tab .tab-button {
     padding: 0 1rem;
     min-height: fit-content;
-    margin: 1;
     border: 2px solid var(--color-nine);
     color: var(--color-nine);
+    flex-wrap: nowrap;
 }
 .tab-menu .tabs .tab-menu-list .tab .tab-button.opened {
     color: var(--color-one);

@@ -81,16 +81,23 @@
          */
         public function panel(){
             $exams = Exam::all();
+
             foreach ($exams as $exam) {
                 $exam->candidates = $exam->candidates();
             }
-            $candidates = Candidate::all();
+            $candidates = Candidate::with('evaluations')->get();
+
             return view('exams.panel', [
                 'exams' => $exams,
                 'candidates' => $candidates,
                 'validation' => (object)[
-                    'rules' => Exam::$validation['create']['rules'],
-                    'messages' => Exam::$validation['create']['messages']['en'],
+                    'create' => (object)[
+                        'rules' => Exam::$validation['create']['rules'],
+                        'messages' => Exam::$validation['create']['messages']['en'],
+                    ], 'edit' => (object)[
+                        'rules' => Exam::$validation['edit']['rules'],
+                        'messages' => Exam::$validation['edit']['messages']['en'],
+                    ],
                 ],
             ]);
         }
@@ -113,6 +120,17 @@
             
             $exam = Exam::create((array) $input);
             
+            foreach(explode(',', $input->candidates) as $id_candidate){
+                if($candidate = Candidate::find($id_candidate)){
+                    $candidate->update(['password' => $input->password]);
+                    $auxInput = (object) [
+                        'id_exam' => $exam->id_exam,
+                        'id_candidate' => $id_candidate,
+                    ];
+                    $response = EvaluationController::doCreate($auxInput);
+                }
+            }
+            
             return redirect("/panel/exams#details&id=$exam->id_exam")->with('status', [
                 'code' => 200,
                 'message' => 'Exam created correcttly.',
@@ -129,29 +147,46 @@
             $exam = Exam::find($id_exam);
 
             $input = (object) $request->all();
-            $validator = Validator::make($request->all(), $this->replaceString(Exam::$validation['edit']['rules'], "({[a-z_]*})", $id_exam), Exam::$validation['edit']['messages']['en']);
+            $validator = Validator::make($request->all(), Exam::$validation['edit']['rules'], Exam::$validation['edit']['messages']['en']);
             if($validator->fails()){
-                return redirect("/panel/exams#details?id=$id_exam")->withErrors($validator)->withInput();
+                return redirect("/panel/exams#details")->withErrors($validator)->withInput();
             }
     
-            if(isset($input->password)){
+            if($input->password){
                 $input->password = \Hash::make($input->password);
             }else{
                 $input->password = $exam->password;
             }
 
             if($exam->name != $input->name){
-                $input->slug = SlugService::createSlug(Exam::class, 'slug', $input->name);
+                $input->slug = SlugService::createSlug(User::class, 'slug', $input->name);
             }else{
                 $input->slug = $exam->slug;
             }
             
             $exam->update((array) $input);
+
+            try {
+                $response = EvaluationController::DeleteByExam($id_exam);
             
-            return redirect("/panel/exams#details&id=$id_exam")->with('status', [
-                'code' => 200,
-                'message' => "Exam: \"$exam->name\" edited correctly.",
-            ]);
+                foreach(explode(',', $input->candidates) as $id_candidate){
+                    if($candidate = Candidate::find($id_candidate)){
+                        $candidate->update(['password' => $input->password]);
+                        $auxInput = (object) [
+                            'id_exam' => $exam->id_exam,
+                            'id_candidate' => $id_candidate,
+                        ];
+                        $evaluation = EvaluationController::doCreate($auxInput);
+                    }
+                }
+                
+                return redirect("/panel/exams#details&id=$id_exam")->with('status', [
+                    'code' => 200,
+                    'message' => "Exam: \"$exam->name\" edited correctly.",
+                ]);
+            } catch (\Throwable $th) {
+                dd($th);
+            }
         }
 
         /**
@@ -159,15 +194,21 @@
          * @param mixed $id_exam - Exam primary key.
          * @return [type]
          */
-        public function doEliminar($id_exam){
+        public function doDelete($id_exam){
             $exam = Exam::find($id_exam);
-                
-            $exam->delete();
             
-            return redirect()->route('web.panel')->with('status', [
-                'code' => 200,
-                'message' => "Exam deleted correctly.",
-            ]);
+            $exam->delete();
+
+            try {
+                $response = EvaluationController::DeleteByExam($id_exam);
+
+                return redirect("/panel/exams")->with('status', [
+                    'code' => 200,
+                    'message' => 'Exam deleted correctly.',
+                ]);
+            } catch (\Throwable $th) {
+                dd($th);
+            }
         }
         
         /**

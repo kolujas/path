@@ -20,12 +20,17 @@ export class CountDown{
             minutes: true,
             seconds: true,
         }, message: 'Expired scheduled date time'
-    }, event = {
-        current: undefined,
-        end: undefined,
+    }, events = {
+        current: {
+            functionName: function() { console.log('SUCCESS') },
+            params: {},
+        }, end: {
+            functionName: function() { console.log('ERROR') },
+            params: {},
+        }
     }){
         this.setProperties(properties);
-        this.setEvent(event);
+        this.setEvents(events);
         this.makeInterval();
     }
 
@@ -79,25 +84,42 @@ export class CountDown{
         this.properties.timer = properties.timer;
     }
 
-    setEvent(event = {
-        current: undefined,
-        end: undefined,
+    setEvents(events = {
+        current: {
+            functionName: function() { console.log('SUCCESS') },
+            params: {},
+        }, end: {
+            functionName: function() { console.log('ERROR') },
+            params: {},
+        }
     }){
-        this.event = {};
-        this.setCurrentFunction(event);
-        this.setEndFunction(event);
+        this.events = {};
+        this.setCurrentFunction(events);
+        this.setEndFunction(events);
     }
 
-    setEndFunction(event = {
-        end: undefined,
+    setEndFunction(events = {
+        current: {
+            functionName: function() { console.log('SUCCESS') },
+            params: {},
+        }
     }){
-        this.event.end = event.end;
+        this.events.end = {
+            functionName: events.end.functionName,
+            params: (events.end.params && typeof events.end.params == 'object') ? events.end.params : {},
+        };
     }
 
-    setCurrentFunction(event = {
-        current: undefined,
+    setCurrentFunction(events = {
+        end: {
+            functionName: function() { console.log('ERROR') },
+            params: {},
+        }
     }){
-        this.event.current = event.current;
+        this.events.current = {
+            functionName: events.current.functionName,
+            params: (events.current.params && typeof events.current.params == 'object') ? events.current.params : {},
+        };
     }
 
     /**
@@ -137,10 +159,14 @@ export class CountDown{
                     instance.seconds = `0${instance.seconds}`;
                 }
             }
-            instance.event.current(instance);
+            let params = instance.events.current.params;
+            params.countdown = instance;
+            instance.events.current.functionName(params);
             if(distance < 0){
                 clearInterval(interval);
-                instance.event.end(instance);
+                params = instance.events.end.params;
+                params.countdown = instance;
+                instance.events.end.functionName(params);
             }
         });
     }

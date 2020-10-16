@@ -11,7 +11,9 @@
         public function run(){
             $candidates = Candidate::get();
             if ( count( $candidates ) ) {
-                //
+                foreach ($candidates as $candidate) {
+                    //
+                }
             } else {
                 Candidate::create( [
                     'candidate_number' => 1,
@@ -100,6 +102,7 @@
                     'modules' => 'A1:L,A1:W',
                     'password' => \Hash::make( '12345678' ),
                     'slug' => 'antonio-gutierrez',
+                    'file' => 'candidates/1.png',
                 ] );
                 Candidate::create( [
                     'candidate_number' => 9,
@@ -111,6 +114,7 @@
                     'modules' => 'A1:L,A1:W',
                     'password' => \Hash::make( '12345678' ),
                     'slug' => 'lola-lopez',
+                    'file' => 'candidates/1.png',
                 ] );
                 Candidate::create( [
                     'candidate_number' => 10,
@@ -122,6 +126,7 @@
                     'modules' => 'A1:L,A1:W',
                     'password' => \Hash::make( '12345678' ),
                     'slug' => 'hector-image',
+                    'file' => 'candidates/1.png',
                 ] );
                 Candidate::create( [
                     'candidate_number' => 11,
@@ -133,6 +138,7 @@
                     'modules' => 'A1:L,A1:W',
                     'password' => \Hash::make( '12345678' ),
                     'slug' => 'pepe-diaz',
+                    'file' => 'candidates/1.png',
                 ] );
                 Candidate::create( [
                     'candidate_number' => 12,

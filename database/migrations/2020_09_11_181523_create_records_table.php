@@ -14,6 +14,7 @@
                 $table->increments('id_record')->unique();
                 $table->unsignedInteger('id_evaluation');
                 $table->string('file');
+                $table->string('strikes')->nullable();
                 $table->timestamps();
             });
         }

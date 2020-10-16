@@ -4,7 +4,8 @@
     /** 
      * ! AuthController
      */
-    Route::get('/', 'AuthController@showLogin')->name('auth.showLogin');
+    Route::get('/', 'AuthController@showLogin')->name('web.index');
+    Route::get('/login', 'AuthController@showLogin')->name('auth.showLogin');
     Route::post('/login', 'AuthController@doLogIn')->name('auth.doLogIn');
     // Route::middleware('auth.guards')->group(function(){
         Route::get('/logout', 'AuthController@doLogOut')->name('auth.doLogOut');
@@ -25,6 +26,7 @@
         // Route::middleware('admin')->group(function(){
             Route::post('/exams/create', 'ExamController@doCreate')->name('exam.doCreate');
             Route::put('/exams/{id_exam}/edit', 'ExamController@doEdit')->name('exam.doEdit');
+            Route::delete('/exams/{id_exam}/delete', 'ExamController@doDelete')->name('exam.doDelete');
             Route::get('/panel/exams', 'ExamController@panel')->name('exam.panel');
         // });
         
@@ -35,12 +37,16 @@
             // Route::middleware('scheduled_date_time')->group(function(){
                 // Route::middleware('evaluation_confirmed')->group(function(){
                     Route::post('/exam/{id_exam}/record', 'RecordController@doCreate')->name('record.doCreate');
-                    Route::get('/pdf', 'RecordController@crealo')->name('record.crealo');
                 // });
             // });
         // });
         // Route::middleware('admin')->group(function(){
             Route::get('/panel/records', 'RecordController@panel')->name('record.panel');
+    /** 
+     * ! StorageController
+     */
+            Route::get('/storage/records/{id_record}/file', 'StorageController@showRecordFile')->name('storage.showRecordFile');
+            Route::get('/storage/candidates/{id_candidate}/file', 'StorageController@showCandidateFile')->name('storage.showCandidateFile');
     /** 
      * ! CandidateController
      */

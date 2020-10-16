@@ -38,7 +38,7 @@
 
 		<form class="tab-content-list mx-auto" action="{{$exam->id_exam}}/record" method="post">
             @csrf
-            <input class="strikes" type="hidden" name="strikes">
+            <input class="strikes" type="hidden" name="strikes" value="0">
             @foreach($exam->modules as $module)
                 @component("components.tab.content.$exam->level.$module->folder.$module->file")
                 @endcomponent
@@ -63,6 +63,9 @@
 @endsection
 
 @section('js')
+    <script>
+        const exam = @json($exam);
+    </script>
     <script type="module" src={{ asset('js/exams/example-exam.js') }}></script>
 @endsection
 

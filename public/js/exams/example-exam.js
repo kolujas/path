@@ -1,12 +1,7 @@
-import {
-    TabMenu as TabMenuJS
-} from "../../submodules/TabMenuJS/js/TabMenu.js";
-import {
-    NavMenu
-} from "../../submodules/NavMenuJS/js/NavMenu.js";
-import {
-    URLServiceProvider
-} from "../providers/URLServiceProvider.js";
+import { TabMenu as TabMenuJS } from "../../submodules/TabMenuJS/js/TabMenu.js";
+import { NavMenu } from "../../submodules/NavMenuJS/js/NavMenu.js";
+import { URLServiceProvider } from "../providers/URLServiceProvider.js";
+import { CountDown } from "../CountDown.js";
 
 function crossWord() {
     let answers = document.querySelectorAll('.answers:not(first-of-type)');
@@ -112,7 +107,6 @@ for (const key in audioBtn) {
 
 }
 
-
 for (const key in audio) {
         const input = audio[key]; 
         if(typeof input  === "object"){
@@ -131,7 +125,6 @@ for (const key in audio) {
 //     console.log("Current time", this.currentTime);
 // });
 
-
 function ponePlay(key) {
     audio[key].play();
 }
@@ -148,7 +141,6 @@ function disableF5(e) {
 
 const modal = document.querySelector('.modal');
 
-
 $(document).mouseleave(function () {
     if(!document.querySelector('.strikes').value){
         document.querySelector('.strikes').value = 1;
@@ -163,8 +155,13 @@ $(document).mouseleave(function () {
     // $('.modal').modal();
 });
 
+function current(data = undefined){
+    document.querySelector(`#${data.module.folder}-${data.module.name} .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+}
 
-;
+function end(data = undefined){
+    console.log(data);
+}
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
@@ -182,5 +179,41 @@ document.addEventListener('DOMContentLoaded', function(e){
                 });
             }
         }
+    }
+    let hours = 0, minutes = 0, seconds = 0;
+    for(const module of exam.modules){
+        hours = parseInt(hours) + parseInt(module.time.split(':')[0]);
+        if(hours.toString().length < 2){
+            hours = `0${hours}`;
+        }
+        minutes = parseInt(minutes) + parseInt(module.time.split(':')[1]);
+        if(minutes.toString().length < 2){
+            minutes = `0${minutes}`;
+        }
+        seconds = parseInt(seconds) + parseInt(module.time.split(':')[2]);
+        if(seconds.toString().length < 2){
+            seconds = `0${seconds}`;
+        }
+        let time = `${exam.scheduled_date_time} ${hours}:${minutes}:${seconds}`;
+        let countDown = new CountDown({
+            scheduled_date_time: time,
+            timer: {
+                hours: true,
+                minutes: true,
+                seconds: true,
+            }
+        }, {
+            current: {
+                functionName: current,
+                params: {
+                    module: module,
+                },
+            }, end: {
+                functionName: end,
+                params: {
+                    module: module,
+                },
+            }
+        });
     }
 });

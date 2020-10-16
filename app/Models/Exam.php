@@ -4,9 +4,13 @@
     use App\Models\Candidate;
     use App\Models\Evaluation;
     use App\Models\Module;
+    use Cviebrock\EloquentSluggable\Sluggable;
+    use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
     use Illuminate\Database\Eloquent\Model;
 
     class Exam extends Model{
+        use Sluggable, SluggableScopeHelpers;
+
         /** @var string Exam primary key. */
         protected $primaryKey = 'id_exam';
 

@@ -1,6 +1,7 @@
 <?php
     namespace App\Models;
 
+    use App\Models\Evaluation;
     use App\Models\Module;
     use Illuminate\Contracts\Auth\MustVerifyEmail;
     use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -30,6 +31,14 @@
         protected $hidden = [
             'password',
         ];
+
+        /**
+         * * Get all the Evaluations who match with the primary key.
+         * @return [type]
+         */
+        public function evaluations(){
+            return $this->hasMany(Evaluation::class, 'id_Candidate', 'id_Candidate');
+        }
 
         /**
          * * Create and returns the Candidate modules.

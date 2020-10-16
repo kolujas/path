@@ -17,8 +17,13 @@
                 'candidates' => Candidate::all(),
                 'modules' => Module::$array,
                 'validation' => (object)[
-                    'rules' => Candidate::$validation['create']['rules'],
-                    'messages' => Candidate::$validation['create']['messages']['en'],
+                    'create' => (object)[
+                        'rules' => Candidate::$validation['create']['rules'],
+                        'messages' => Candidate::$validation['create']['messages']['en'],
+                    ], 'edit' => (object)[
+                        'rules' => Candidate::$validation['edit']['rules'],
+                        'messages' => Candidate::$validation['edit']['messages']['en'],
+                    ],
                 ],
             ]);
         }
@@ -113,7 +118,7 @@
             $candidate->delete();
 
             try {
-                EvaluationController::DeleteByCandidate($id_candidate);
+                $response = EvaluationController::DeleteByCandidate($id_candidate);
 
                 return redirect("/panel/candidates")->with('status', [
                     'code' => 200,

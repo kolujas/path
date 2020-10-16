@@ -7,11 +7,14 @@ import { createModal, setActions } from "../modal.js";
 import { Table } from "../Table/Table.js";
 
 let cols = [ { 
+    id: 'table-icon',
     data: 'profile'
 }, { 
-    data: 'full_name'
+    id: 'candidate_number',
+    data: 'candidate_number'
 }, {
-    data: 'email'
+    id: 'full_name',
+    data: 'full_name'
 } ];
 
 function putShadow(params){
@@ -141,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         },
     }, {}, [{
         type: 'search',
-        target: 'full_name,email',
+        target: 'candidate_number,full_name',
     }], candidates);
 
     changeContent({
