@@ -3,12 +3,12 @@
 
     use App\Models\Evaluation;
     use App\Models\Module;
+    use Cviebrock\EloquentSluggable\Sluggable;
+    use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
     use Illuminate\Contracts\Auth\MustVerifyEmail;
     use Illuminate\Foundation\Auth\User as Authenticatable;
     use Illuminate\Notifications\Notifiable;
     use Laravel\Passport\HasApiTokens;
-    use Cviebrock\EloquentSluggable\Sluggable;
-    use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
     class Candidate extends Authenticatable{
         use HasApiTokens, Notifiable, Sluggable, SluggableScopeHelpers;
@@ -24,12 +24,9 @@
             'candidate_number', 'full_name', 'email', 'date_of_birth', 'id_member', 'member', 'modules', 'file', 'slug',
         ];
 
-        /**
-         * * The attributes that should be hidden for arrays.
-         * @var array
-         */
+        /** @var array The attributes to hidde. */
         protected $hidden = [
-            'password',
+            'remember_token',
         ];
 
         /**

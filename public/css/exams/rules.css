@@ -132,6 +132,15 @@ header h2 {
     max-height: 3rem;
 }
 
+.support-accept{
+    width: fit-content;
+}
+
+.support-ID{
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
 
 /* * MD */
 @media(min-width: 768px) {

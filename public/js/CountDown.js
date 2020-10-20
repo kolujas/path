@@ -128,7 +128,7 @@ export class CountDown{
      */
     makeInterval(){
         let instance = this;
-        let interval = setInterval(function(){
+        this.interval = setInterval(function(){
             let now = new Date().getTime();
             let distance = instance.properties.scheduled_date_time - now;
             instance.days = 0;
@@ -163,11 +163,19 @@ export class CountDown{
             params.countdown = instance;
             instance.events.current.functionName(params);
             if(distance < 0){
-                clearInterval(interval);
+                clearInterval(instance.interval);
                 params = instance.events.end.params;
                 params.countdown = instance;
                 instance.events.end.functionName(params);
             }
         });
+    }
+
+    /**
+     * * Stops the interval.
+     * @memberof CountDown
+     */
+    stop(){
+        clearInterval(this.interval);
     }
 }

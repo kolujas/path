@@ -15,13 +15,6 @@
         <div class="clock m-auto">
 			<div class='second-hand'>I</div>
 		</div>
-        {{-- <span class="text-center timer">
-            <span class="hour">10684</span>
-            <span class="dots">:</span>
-            <span class="minute">06</span>
-            <span class="dots">:</span>
-            <span class="second">06</span>
-        </span> --}}
     </div>
 @endsection
 
@@ -36,18 +29,19 @@
                 @csrf
                 <div class="rules-text bg-white p-4">
                     <p class="h3 rules-rem text-left text-uppercase mb-0 text text-one">Remember:</p>
+                    <p class="rules-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem accusamus nemo sit molestias est minus eum odit illum aut vel non magnam, sunt eveniet facilis error deleniti quibusdam, voluptate nihil.</p>
                     <p class="rules-p">{{ $exam->rules }}</p>
                 </div>
                 <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">
-                    <input class="form-input form-check-input" type="checkbox" name="accept" id="defaultCheck1">
+                    <input class="form-input form-check-input" type="checkbox" name="confirmed" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
                         I have read and understand the exam rules
                     </label>
                 </div>
-                @if($errors->has("accept"))
-                    <span class="support support-box support-accept col-12 pl-4 hidden">{{ $errors->first("accept") }}</span>
+                @if($errors->has("confirmed"))
+                    <span class="support support-box support-confirmed col-12 pl-4 hidden">{{ $errors->first("confirmed") }}</span>
                 @else
-                    <span class="support support-box support-accept col-12 pl-4 hidden"></span>
+                    <span class="support support-box support-confirmed col-12 pl-4 hidden"></span>
                 @endif
                 <div class="input-group col-12 mt-5 pb-5">
                     <div class="row d-flex justify-content-center w-100 pl-4">

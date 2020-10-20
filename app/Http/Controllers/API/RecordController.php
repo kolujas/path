@@ -1,10 +1,12 @@
 <?php
-    namespace App\Http\Controllers;
+    namespace App\Http\Controllers\API;
 
+    use App\Models\Candidate;
     use App\Models\Evaluation;
     use App\Models\Exam;
     use App\Models\Module;
     use App\Models\Record;
+    use App\Http\Controllers\Controller;
     use Auth;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Validator;
@@ -14,38 +16,38 @@
 
     class RecordController extends Controller{
         /**
-         * * Show the 'records panel' page.
-         * @return [type]
-         */
-        public function panel(){
-            $records = Record::all();
-            foreach ($records as $record) {
-                $record->candidate = $record->candidate();
-                $record->exam = $record->exam();
-            }
-            return view('records.panel', [
-                'records' => $records,
-                'modules' => Module::$array,
-            ]);
-        }
-
-        /**
-         * * Create a Record.
+         * * Save the Record.
          * @param Request $request
          * @param mixed $id_exam - Exam to Record.
          * @return [type]
          */
-        public function doCreate(Request $request, $id_exam){
-            $candidate = Auth::guard('candidates')->user();
+        public function save(Request $request, $id_exam){
+            $candidate = $request->user();
             $modules = $candidate->modules();
             $exam = Exam::find($id_exam);
-            $evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get();
+            $evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', 1]])->get();
             $evaluation = $evaluation[0];
 
-            $input = (object) $request->all();
+            $input = $request->all();
+            foreach ($input as $key => $value) {
+                if(preg_match("/\[/", $key)){
+                    $subkey = preg_split("/\[/", $key);
+                    $subkey = preg_split("/\]/", $subkey[1])[0];
+                    $key = preg_replace("/\[.*\]/", '', $key);
+                    if(!isset($input[$key])){
+                        $input[$key] = [];
+                    }
+                    $input[$key][$subkey] = $value;
+                }
+            }
+
             $validator = Validator::make($request->all(), Record::$validation['create']['rules'], Record::$validation['create']['messages']['en']);
             if($validator->fails()){
-                return redirect("/exam/$id_exam/rules")->withErrors($validator)->withInput();
+                return response()->json([
+                    'code' => 404,
+                    'data' => $validator->errors()->messages(),
+                    'message' => 'Validation error.',
+                ]);
             }
 
             $filePath = "storage/records/$evaluation->id_evaluation.pdf";
@@ -53,7 +55,7 @@
             $data = (object) [
                 'exam' => $exam,
                 'candidate' => $candidate,
-                'answers' => $request->all(),
+                'answers' => $input,
             ];
             foreach($modules as $module) {
                 $data->module = $module;
@@ -82,16 +84,23 @@
             try {
                 $pdf->save("storage/../private/$filePath");
             } catch (\Throwable $th) {
-                dd($th);
+                return response()->json([
+                    'code' => 500,
+                    'data' => $th,
+                    'message' => 'PDF upload error.',
+                ]);
             }
-                
+            
             if(!Record::where('id_evaluation', '=', $evaluation->id_evaluation)){
-                $input->id_evaluation = $evaluation->id_evaluation;
-                $input->file = $filePath;
+                $input['id_evaluation'] = $evaluation->id_evaluation;
+                $input['file'] = $filePath;
     
                 $record = Record::create((array) $input);
             }
-
-            return redirect("/exam/$id_exam/finished");
+            
+            return response()->json([
+                'code' => 200,
+                'message' => 'Exam saved.',
+            ]);
         }
     }

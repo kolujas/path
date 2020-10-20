@@ -5,7 +5,7 @@
                 <a href="#" class="dropdown-header">
                     <span>1. Look at the table below. Listen to Susana talking about her family, and complete the spaces in the table. You can listen twice.<mark>One is done for you.</mark> </span>
                     <button class="dropdown-button text-right">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
+                        <i class="dropdown-icon fas fa-chevron-down"></i>
                     </button>
                 </a>
                 <main class="dropdown-menu-content first-question-container px-xl-4">
@@ -28,10 +28,10 @@
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">Me</th>
-                                <th scope="col" class="input-letters"><input name="A1:L1[2a]" class="input-small input position-relative" type="text"><input name="A1:L1[2b]" class="input-small input position-relative last" type="text">ther</th>
-                                <th scope="col" class="input-letters"><input name="A1:L1[4a]" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[4b]" class="input-small input position-relative last" type="text">ther</th>
+                                <th scope="col" class="input-letters"><input name="A1:L1[2a]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[2b]" maxlength="1" class="input-small input position-relative last" type="text">ther</th>
+                                <th scope="col" class="input-letters"><input name="A1:L1[4a]" maxlength="1" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[4b]" maxlength="1" class="input-small input position-relative last" type="text">ther</th>
                                 <th scope="col">sister</th>
-                                <th scope="col" class="input-letters"><input name="A1:L1[6a]" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[6b]" class="input-small input position-relative" type="text"><input name="A1:L1[6c]" class="input-small input position-relative" type="text"><input name="A1:L1[6d]" class="input-small input position-relative" type="text"><input name="A1:L1[6e]" class="input-small input position-relative last" type="text">er</th>
+                                <th scope="col" class="input-letters"><input name="A1:L1[6a]" maxlength="1" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[6b]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[6c]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[6d]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[6e]" maxlength="1" class="input-small input position-relative last" type="text">er</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,17 +45,17 @@
                             </tr>
                             <tr>
                                 <th scope="row">Age</th>
-                                <td class="input-letters"><input name="A1:L1[1a]" class="input-small input position-relative" type="text"><input name="A1:L1[1b]" class="input-small input position-relative" type="text"></td>
+                                <td class="input-letters"><input name="A1:L1[1a]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[1b]" maxlength="1" class="input-small input position-relative" type="text"></td>
                                 <td>40</td>
                                 <td>38</td>
-                                <td class="input-letters"><input name="A1:L1[7a]" class="input-small input position-relative" type="text"><input name="A1:L1[7b]" class="input-small input position-relative" type="text"></td>
-                                <td class="input-letters"><input name="A1:L1[8]" class="input-small input position-relative" type="text"></td>
+                                <td class="input-letters"><input name="A1:L1[7a]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[7b]" maxlength="1" class="input-small input position-relative" type="text"></td>
+                                <td class="input-letters"><input name="A1:L1[8]" maxlength="1" class="input-small input position-relative" type="text"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Job</th>
                                 <td class="text-center">-</td>
-                                <td class="input-letters">te<input name="A1:L1[3a]" class="input-small input position-relative first" type="text"><input name="A1:L1[3b]" class="input-small input position-relative" type="text"><input name="A1:L1[3c]" class="input-small input position-relative last" type="text">er</td>
-                                <td class="input-letters">doc<input name="A1:L1[5a]" class="input-small input position-relative first" type="text"><input name="A1:L1[5b]" class="input-small input position-relative last" type="text">r</td>
+                                <td class="input-letters">te<input name="A1:L1[3a]" maxlength="1" class="input-small input position-relative first" type="text"><input name="A1:L1[3b]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[3c]" maxlength="1" class="input-small input position-relative last" type="text">er</td>
+                                <td class="input-letters">doc<input name="A1:L1[5a]" maxlength="1" class="input-small input position-relative first" type="text"><input name="A1:L1[5b]" maxlength="1" class="input-small input position-relative last" type="text">r</td>
                                 <td class="text-center">-</td>
                                 <td class="text-center">-</td>
                             </tr>
@@ -67,7 +67,7 @@
                 <a href="#" class="dropdown-header">
                     <span>2. You will hear Susana talking about happy days and sad days. Which are happy, and which are sad?<mark>One is done for you.</mark></span>
                     <button class="dropdown-button text-right">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
+                        <i class="dropdown-icon fas fa-chevron-down"></i>
                     </button>
                 </a>
                 <main class="dropdown-menu-content second-question-container px-xl-4">
@@ -108,7 +108,7 @@
                 <a href="#" class="dropdown-header">
                     <span>3. Where Jack lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers<mark>Two are done for you.</mark></span>
                     <button class="dropdown-button text-right">
-                        <i class="dropdown-icon fas fa-sort-down"></i>
+                        <i class="dropdown-icon fas fa-chevron-down"></i>
                     </button>
                 </a>
                 <main class="dropdown-menu-content third-question-container px-xl-4">

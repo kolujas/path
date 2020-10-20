@@ -54,13 +54,13 @@
         public static $validation = [
             'auth' => [
                 'rules' => [
-                    'accept' => 'required',
+                    'confirmed' => 'required',
                     'ID' => 'required|mimetypes:image/jpeg,image/png',
                 ], 'messages' => [
                     'en' => [
-                        'accept.required' => 'Accept the rules first.',
+                        'confirmed.required' => 'Accept the rules first.',
                         'ID.required' => 'The ID is required.',
-                        'ID.mimimetypesn' => 'The ID must be an image JPG/JPEG, or PNG.',
+                        'ID.mimetypes' => 'The ID must be an image JPG/JPEG, or PNG.',
                     ],
                 ]
             ], 'create' => [

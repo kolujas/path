@@ -16,6 +16,7 @@
         @else
             <h3 style="text-align: center; color: #0091B7;">Candidate Number ({{ $candidate->candidate_number }})</h3>
         @endif
+        <p style="text-align: center;">Strikes: {{ $answers['strikes'] }}</p>
     </header>
 
     <section>

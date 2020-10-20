@@ -98,12 +98,20 @@
                 $authenticated = 'candidates';
             }else if(Auth::guard('web')->check()){
                 $authenticated = 'users';
+            }else{
+                $authenticated = false;
             }
             switch ($authenticated) {
                 case 'candidates':
+                    foreach (Auth::guard('candidates')->user()->tokens as $token) {
+                        $token->delete();
+                    }
                     Auth::guard('candidates')->logout();
                     break;
                 case 'users':
+                    foreach (Auth::user()->tokens as $token) {
+                        $token->delete();
+                    }
                     Auth::logout();
                     break;
             }

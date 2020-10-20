@@ -23,7 +23,6 @@
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'pepe-diaz',
                 ] );
                 Candidate::create( [
@@ -34,7 +33,6 @@
                     'id_member' => 1,
                     'member' => 'Belen\'s barquito',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'manolo-gomez',
                 ] );
                 Candidate::create( [
@@ -45,7 +43,6 @@
                     'id_member' => 1,
                     'member' => 'Only Pros',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'antonio-gutierrez',
                 ] );
                 Candidate::create( [
@@ -56,7 +53,6 @@
                     'id_member' => 1,
                     'member' => 'Beauty Asociados',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'lola-lopez',
                 ] );
                 Candidate::create( [
@@ -67,7 +63,6 @@
                     'id_member' => 1,
                     'member' => 'Hector\'s House',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'hector-image',
                 ] );
                 Candidate::create( [
@@ -78,7 +73,6 @@
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'pepe-diaz',
                 ] );
                 Candidate::create( [
@@ -89,7 +83,6 @@
                     'id_member' => 1,
                     'member' => 'Belen\'s barquito',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'manolo-gomez',
                 ] );
                 Candidate::create( [
@@ -100,7 +93,6 @@
                     'id_member' => 1,
                     'member' => 'Only Pros',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'antonio-gutierrez',
                     'file' => 'candidates/1.png',
                 ] );
@@ -112,7 +104,6 @@
                     'id_member' => 1,
                     'member' => 'Beauty Asociados',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'lola-lopez',
                     'file' => 'candidates/1.png',
                 ] );
@@ -124,7 +115,6 @@
                     'id_member' => 1,
                     'member' => 'Hector\'s House',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'hector-image',
                     'file' => 'candidates/1.png',
                 ] );
@@ -136,7 +126,6 @@
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'pepe-diaz',
                     'file' => 'candidates/1.png',
                 ] );
@@ -148,7 +137,6 @@
                     'id_member' => 1,
                     'member' => 'Belen\'s barquito',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'manolo-gomez',
                 ] );
                 Candidate::create( [
@@ -159,7 +147,6 @@
                     'id_member' => 1,
                     'member' => 'Only Pros',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'antonio-gutierrez',
                 ] );
                 Candidate::create( [
@@ -170,7 +157,6 @@
                     'id_member' => 1,
                     'member' => 'Beauty Asociados',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'lola-lopez',
                 ] );
                 Candidate::create( [
@@ -181,7 +167,6 @@
                     'id_member' => 1,
                     'member' => 'Hector\'s House',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'hector-image',
                 ] );
                 Candidate::create( [
@@ -192,7 +177,6 @@
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'pepe-diaz',
                 ] );
                 Candidate::create( [
@@ -203,7 +187,6 @@
                     'id_member' => 1,
                     'member' => 'Belen\'s barquito',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'manolo-gomez',
                 ] );
                 Candidate::create( [
@@ -214,7 +197,6 @@
                     'id_member' => 1,
                     'member' => 'Only Pros',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'antonio-gutierrez',
                 ] );
                 Candidate::create( [
@@ -225,7 +207,6 @@
                     'id_member' => 1,
                     'member' => 'Beauty Asociados',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'lola-lopez',
                 ] );
                 Candidate::create( [
@@ -236,7 +217,6 @@
                     'id_member' => 1,
                     'member' => 'Hector\'s House',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'hector-image',
                 ] );
                 Candidate::create( [
@@ -247,7 +227,6 @@
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'pepe-diaz',
                 ] );
                 Candidate::create( [
@@ -258,7 +237,6 @@
                     'id_member' => 1,
                     'member' => 'Belen\'s barquito',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'manolo-gomez',
                 ] );
                 Candidate::create( [
@@ -269,7 +247,6 @@
                     'id_member' => 1,
                     'member' => 'Only Pros',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'antonio-gutierrez',
                 ] );
                 Candidate::create( [
@@ -280,7 +257,6 @@
                     'id_member' => 1,
                     'member' => 'Beauty Asociados',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'lola-lopez',
                 ] );
                 Candidate::create( [
@@ -291,7 +267,6 @@
                     'id_member' => 1,
                     'member' => 'Hector\'s House',
                     'modules' => 'A1:L,A1:W',
-                    'password' => \Hash::make( '12345678' ),
                     'slug' => 'hector-image',
                 ] );
             }

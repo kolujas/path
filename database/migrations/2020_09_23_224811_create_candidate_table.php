@@ -20,7 +20,6 @@
                 $table->text('member')->nullable();
                 $table->string('modules');
                 $table->string('file')->nullable();
-                $table->string('password')->nullable();
                 $table->string('slug');
                 $table->rememberToken();
                 $table->timestamps();

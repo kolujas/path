@@ -1,7 +1,45 @@
 import { TabMenu as TabMenuJS } from "../../submodules/TabMenuJS/js/TabMenu.js";
 import { NavMenu } from "../../submodules/NavMenuJS/js/NavMenu.js";
 import { URLServiceProvider } from "../providers/URLServiceProvider.js";
+import { FetchServiceProvider } from "../providers/FetchServiceProvider.js";
 import { CountDown } from "../CountDown.js";
+import { LocalStorageServiceProvider } from "../providers/LocalStorageServiceProvider.js";
+
+function updateSaveTimer(data = undefined){
+    if(document.querySelector('.save-button.countdown')){
+        let timer = document.querySelector('.save-button .timer');
+        timer.innerHTML = `(${data.countdown.seconds})`;
+    }else{
+        data.countdown.stop();
+    }
+}
+
+function setTimeIntervalAutoSave(){
+    if(!document.querySelector('.save-button.countdown')){
+        let btn = document.querySelector('.save-button');
+        btn.classList.add('countdown');
+        let date = new Date();
+        date.setMinutes(date.getMinutes() + 1);
+        let countDown = new CountDown({
+            scheduled_date_time: date.getTime(),
+            timer: {
+                seconds: true,
+            }
+        }, {
+            current: {
+                functionName: updateSaveTimer,
+                params: {
+                    //
+                },
+            }, end: {
+                functionName: sendData,
+                params: {
+                    //
+                },
+            }
+        });
+    }
+}
 
 function crossWord() {
     let answers = document.querySelectorAll('.answers:not(first-of-type)');
@@ -16,7 +54,52 @@ function crossWord() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function (e) {
+function current(data = undefined){
+    document.querySelector(`#${data.module.folder}-${data.module.name} .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+}
+
+function end(data = undefined){
+    console.log(data);
+}
+
+function setLoadingState(){
+    let btn = document.querySelector('.save-button');
+    btn.innerHTML= '';
+    btn.classList.add('loading-dots');
+    btn.removeEventListener('click', sendData);
+}
+
+function setFinishState(){
+    let btn = document.querySelector('.save-button');
+    btn.innerHTML = 'SAVE';
+    btn.classList.remove('loading-dots');
+    btn.addEventListener('click', sendData);
+        let timer = document.createElement('b');
+        timer.classList.add('timer', 'ml-1');
+        btn.appendChild(timer);
+        setTimeIntervalAutoSave();
+}
+
+async function sendData(){
+    let btn = document.querySelector('.save-button').classList.remove('countdown');
+    let formData = new FormData(document.querySelector('form'));
+    let token = formData.get('_token');
+    formData.delete('_token');
+    setLoadingState();
+    let localStorageService = LocalStorageServiceProvider.getData('Path_Candidate_Token');
+    let response = await FetchServiceProvider.setData({
+        method: 'POST',
+        url: `/api/exam/${exam.id_exam}/record`,
+    }, {
+        'Accept': 'application/json',
+        'Content-type': 'application/json; charset=UTF-8',
+        'X-CSRF-TOKEN': token,
+        'Authorization': "Bearer " + localStorageService.data,
+    }, formData);
+    setFinishState();
+}
+
+document.addEventListener('DOMContentLoaded', async function (e) {
     let choosen = document.querySelector('.tab-content').id;
     for (const content of document.querySelectorAll('.tab-content')) {
         if (content.id == URLServiceProvider.findHashParameter()) {
@@ -75,6 +158,64 @@ document.addEventListener('DOMContentLoaded', function (e) {
             underline.style.width = `calc((100% - .25rem) / ${letters})`;
         }
     }
+    
+    for(const td of document.querySelectorAll('.input-letters')){
+        for (const key in td.children) {
+            const input = td.children[key]
+            if((parseInt(key) + 1) <= td.children.length){
+                input.addEventListener('keyup', function(e){
+                    if(this.value){
+                        if(this.nextElementSibling){
+                            this.nextElementSibling.focus();
+                        }
+                    }
+                });
+            }
+        }
+    }
+    let hours = 0, minutes = 0, seconds = 0;
+    for(const module of exam.modules){
+        hours = parseInt(hours) + parseInt(module.time.split(':')[0]);
+        if(hours.toString().length < 2){
+            hours = `0${hours}`;
+        }
+        minutes = parseInt(minutes) + parseInt(module.time.split(':')[1]);
+        if(minutes.toString().length < 2){
+            minutes = `0${minutes}`;
+        }
+        seconds = parseInt(seconds) + parseInt(module.time.split(':')[2]);
+        if(seconds.toString().length < 2){
+            seconds = `0${seconds}`;
+        }
+        let time = `${exam.scheduled_date_time} ${hours}:${minutes}:${seconds}`;
+        let countDown = new CountDown({
+            scheduled_date_time: time,
+            timer: {
+                hours: true,
+                minutes: true,
+                seconds: true,
+            }
+        }, {
+            current: {
+                functionName: current,
+                params: {
+                    module: module,
+                },
+            }, end: {
+                functionName: end,
+                params: {
+                    module: module,
+                },
+            }
+        });
+    }
+
+    let saveButton = document.querySelector('.save-button');
+    saveButton.classList.remove('hidden');
+
+    saveButton.addEventListener('click', sendData);
+
+    setTimeIntervalAutoSave();
 });
 
 
@@ -151,69 +292,9 @@ $(document).mouseleave(function () {
             modalBody.innerHTML = "Si volves a salir reprobas por mamerto";
         }
     }
-    console.log(document.querySelector('.strikes').value);
     // $('.modal').modal();
 });
 
-function current(data = undefined){
-    document.querySelector(`#${data.module.folder}-${data.module.name} .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
-}
-
-function end(data = undefined){
-    console.log(data);
-}
-
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
-  });
-
-document.addEventListener('DOMContentLoaded', function(e){
-    for(const td of document.querySelectorAll('.input-letters')){
-        for (const key in td.children) {
-            const input = td.children[key]
-            if((parseInt(key) + 1) <= td.children.length){
-                input.addEventListener('keyup', function(e){
-                    if(this.value){
-                        this.nextElementSibling.focus();
-                    }
-                });
-            }
-        }
-    }
-    let hours = 0, minutes = 0, seconds = 0;
-    for(const module of exam.modules){
-        hours = parseInt(hours) + parseInt(module.time.split(':')[0]);
-        if(hours.toString().length < 2){
-            hours = `0${hours}`;
-        }
-        minutes = parseInt(minutes) + parseInt(module.time.split(':')[1]);
-        if(minutes.toString().length < 2){
-            minutes = `0${minutes}`;
-        }
-        seconds = parseInt(seconds) + parseInt(module.time.split(':')[2]);
-        if(seconds.toString().length < 2){
-            seconds = `0${seconds}`;
-        }
-        let time = `${exam.scheduled_date_time} ${hours}:${minutes}:${seconds}`;
-        let countDown = new CountDown({
-            scheduled_date_time: time,
-            timer: {
-                hours: true,
-                minutes: true,
-                seconds: true,
-            }
-        }, {
-            current: {
-                functionName: current,
-                params: {
-                    module: module,
-                },
-            }, end: {
-                functionName: end,
-                params: {
-                    module: module,
-                },
-            }
-        });
-    }
 });

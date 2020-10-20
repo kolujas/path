@@ -45,7 +45,7 @@
                     @endif
                 </div>
                 <div class="col-12 col-md-6 mx-md-auto col-lg-10 col-xl-12 p-0 d-flex justify-content-center d-lg-block">
-                    <button type="submit" class="form-submit login-form btn btn-two">Log In</button>
+                    <button class="form-submit login-form btn btn-two">Log In</button>
                 </div>
             </form>
         </div>

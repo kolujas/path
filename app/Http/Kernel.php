@@ -68,5 +68,6 @@ class Kernel extends HttpKernel
         'scheduled_date_time' => \App\Http\Middleware\ScheduledDateTime::class,
         'evaluation_confirmed' => \App\Http\Middleware\EvaluationConfirmed::class,
         'auth.guards' => \App\Http\Middleware\AuthenticateGuards::class,
+        'scope' => \App\Http\Middleware\CheckForAllScopes::class,
     ];
 }

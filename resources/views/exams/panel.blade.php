@@ -20,7 +20,9 @@
             @endcomponent
 
             <footer class="tab-footer">
-                <!--  -->
+                <a href="#" class="btn btn-nine-transparent borderless">
+                    
+                </a>
             </footer>
         </section>
 

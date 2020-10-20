@@ -50,6 +50,11 @@ return [
             'driver' => 'session',
             'provider' => 'candidates',
         ],
+
+        'NAFIE' => [
+            'driver' => 'passport',
+            'provider' => 'candidates',
+        ],
     ],
 
     /*

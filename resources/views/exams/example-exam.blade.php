@@ -12,7 +12,7 @@
 @endsection
 
 @section('title')
-    Path
+    {{ $exam->name }}
 @endsection
 
 @section('main')
@@ -23,8 +23,9 @@
     </div>
 
     <div class="example-exam floating-menu bottom right">
-        <button class="btn btn-one mr-4">
+        <button class="save-button btn btn-one mr-4 hidden">
             SAVE
+            <b class="timer ml-1"></b>
         </button>
     </div>
     
@@ -36,7 +37,7 @@
             @endcomponent
         </section>
 
-		<form class="tab-content-list mx-auto" action="{{$exam->id_exam}}/record" method="post">
+		<form class="tab-content-list mx-auto" action="/exam/{{$exam->id_exam}}/record" method="post">
             @csrf
             <input class="strikes" type="hidden" name="strikes" value="0">
             @foreach($exam->modules as $module)
@@ -47,19 +48,19 @@
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">WARNING!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">WARNING!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>No te copies porque te vas funado</p>
+                </div>
             </div>
-            <div class="modal-body">
-              <p>No te copies porque te vas funado</p>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 @endsection
 
 @section('js')

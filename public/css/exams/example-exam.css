@@ -11,7 +11,7 @@
 	height:calc(1.5rem - 4px);
 }
 
-.btn.opened .clock{
+.btn.active .clock{
     display: block;
 }
 
@@ -20,7 +20,7 @@
     margin-left: .5rem;
 }
 
-.btn.opened .time{
+.btn.active .time{
     display: block;
 }
 
@@ -310,14 +310,14 @@ th{
     color: var(--color-nine);
     flex-wrap: nowrap;
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-button.opened {
+.tab-menu .tabs .tab-menu-list .tab .tab-button.active {
     color: var(--color-one);
     border: 2px solid var(--color-one);
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-button:hover:not(.opened){
+.tab-menu .tabs .tab-menu-list .tab .tab-button:hover:not(.active){
     color: var(--color-nine);
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-button:not(.opened) {
+.tab-menu .tabs .tab-menu-list .tab .tab-button:not(.active) {
     /* pointer-events: none; */
     background: unset;
 }
@@ -332,6 +332,10 @@ th{
 
 .svg-width{
     width: 50%;
+}
+
+.save-button.hidden{
+    display: none;
 }
 
 /* * MD */

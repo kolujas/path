@@ -2,12 +2,15 @@
     namespace App\Http\Controllers;
 
     use App\Models\Candidate;
+    use App\Models\Evaluation;
     use App\Models\Exam;
     use App\Models\Module;
     use Auth;
     use Cviebrock\EloquentSluggable\Services\SlugService;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Validator;
+    use Intervention\Image\ImageManagerStatic as Image;
+    use Storage;
 
     class ExamController extends Controller{
         /**
@@ -50,6 +53,33 @@
                     'message' => 'Exam not found.',
                 ]);
             }
+
+            $candidate = Auth::guard('candidates')->user();
+
+            if(!$evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get()){
+                return redirect()->route('auth.showLogin')->with('status', [
+                    'code' => 404,
+                    'message' => 'Evaluation not found.',
+                ]);
+            }
+            $evaluation = $evaluation[0];
+
+            $input->confirmed = 1;
+            
+            $filepath = $request->file('ID')->hashName('candidates');
+            
+            $file = Image::make($request->file('ID'))
+                    ->resize(400, 400, function($constrait){
+                        $constrait->aspectRatio();
+                        $constrait->upsize();
+                    });
+                    
+            Storage::put($filepath, (string) $file->encode());
+            
+            $input->file = $filepath;
+
+            $evaluation->update((array) $input);
+            $candidate->update((array) $input);
             
             return redirect("/exam/$id_exam");
         }
@@ -122,7 +152,6 @@
             
             foreach(explode(',', $input->candidates) as $id_candidate){
                 if($candidate = Candidate::find($id_candidate)){
-                    $candidate->update(['password' => $input->password]);
                     $auxInput = (object) [
                         'id_exam' => $exam->id_exam,
                         'id_candidate' => $id_candidate,
@@ -171,7 +200,6 @@
             
                 foreach(explode(',', $input->candidates) as $id_candidate){
                     if($candidate = Candidate::find($id_candidate)){
-                        $candidate->update(['password' => $input->password]);
                         $auxInput = (object) [
                             'id_exam' => $exam->id_exam,
                             'id_candidate' => $id_candidate,
