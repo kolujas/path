@@ -73,11 +73,15 @@ body {
     --color-ten: #bbb;
     --color-eleven: #333;
     /* * Given fonts. */
-    --font-one: 'sans-serif';
+    --font-one: 'Montserrat', sans-serif;
     --font-two: 'calibri';
     /* * Help fonts. */
     --font-three: 'sans-serif';
     --font-four: 'calibri';
+}
+
+li, a, span, p, h1, h2, h3, h4, button, input{
+    font-family: var(--font-one);
 }
 
 .support-box{
