@@ -54,14 +54,15 @@
 }
 .animal-cont>div>input{
 	width: 14px;
-    margin: 0 1px;
+	margin: 4px 1px 0 1px;
+    height: 14px;
     background: #fafafa;
     border: none;
     border-bottom: 2px solid #ddd;
 	transition: .2s;
 	text-align:center;
 	font-family: 'Montserrat';
-	font-size: 14px;
+	font-size: 12px;
 	/* transform: translateY(%); */
 
 }
@@ -71,8 +72,9 @@
 }
 .animal-cont>div>p{
 	font-family: 'Montserrat';
+	margin-top: 10px;
 	letter-spacing: 2px;
-	font-size: 14px;
+	font-size: 11px;
 	transform: translateY(30%);
 }
 
