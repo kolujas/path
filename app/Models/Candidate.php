@@ -34,7 +34,7 @@
          * @return [type]
          */
         public function evaluations(){
-            return $this->hasMany(Evaluation::class, 'id_Candidate', 'id_Candidate');
+            return $this->hasMany(Evaluation::class, 'id_candidate', 'id_candidate');
         }
 
         /**

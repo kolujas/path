@@ -12,7 +12,7 @@
 .tab-menu {
     --tabmenu-title-color: var(--color-nine);
     --tabmenu-button-color: var(--color-nine);
-    --tabmenu-button-color-alternative: #fff;
+    --tabmenu-button-color-alternative: var(--color-eight);
     --tabmenu-background-color: transparent;
     --tabmenu-background-color-alternative: transparent;
     --tabmenu-border-color: #ddd;
@@ -20,6 +20,10 @@
     --tabmenu-icon-color: #ddd;
     --tabmenu-icon-color-alternative: #ddd;
     --tabmenu-shadow-color: #32B1DA;
+}
+
+.tab-menu .tabs .tab-menu-list .tab .tab-link.active, .tab-menu .tabs .tab-menu-list .tab .tab-button.active, .tab-menu .tabs .tab-menu-list .tab .tab-link:hover, .tab-menu .tabs .tab-menu-list .tab .tab-button:hover{
+    --tabmenu-background-color-alternative: var(--color-nine);
 }
 
 .btn.btn-icon{

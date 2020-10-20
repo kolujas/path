@@ -1,3 +1,24 @@
+/* * ver contraseña */
+.see-password {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 32px;
+    color: var(--color-one);
+    transition: 500ms;
+    z-index: 1;
+}
+
+.see-password.active,
+.see-password:hover {
+    color: var(--color-two);
+}
+
 /* * MD */
 @media(min-width: 768px) {
     /**/

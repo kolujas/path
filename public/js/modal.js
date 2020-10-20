@@ -249,6 +249,39 @@ class Modal{
     }
 
     createInputs(element, value, disabled, li){
+        if(element.name == 'password' || element.name == 'password_confirmation'){
+            let parent = li;
+            li = document.createElement('div');
+            li.classList.add('position-relative');
+            parent.appendChild(li);
+
+            let label = document.createElement('label');
+            label.htmlFor = element.name;
+            label.classList.add('see-password');
+            li.appendChild(label);
+                let icon = document.createElement('i');
+                icon.classList.add('fas','fa-eye');
+                label.appendChild(icon);
+            
+            label.addEventListener('click', function(e){
+                e.preventDefault();
+                let input = this.nextElementSibling;
+                switch(input.type){
+                    case 'password':
+                        input.type = 'text';
+                        this.classList.add( 'active' );
+                        this.children[0].classList.remove('fa-eye');
+                        this.children[0].classList.add('fa-eye-slash');
+                        break;
+                    case 'text':
+                        input.type = 'password';
+                        this.classList.remove( 'active' );
+                        this.children[0].classList.remove('fa-eye-slash');
+                        this.children[0].classList.add('fa-eye');
+                        break;
+                }
+            });
+        }
         let input = document.createElement('input');
         input.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');
         if(element.name == 'id_candidate' || element.name == 'id_exam' || element.name == 'id_record'){
@@ -542,13 +575,21 @@ function showTable(){
 function createCandidatesCheckboxes(){
     hideTable();
 
-    let candidatesToList = candidates;
-    for (const candidate of candidatesToList) {
-        // console.log(candidate.evaluations);
+    let candidatesToList = [];
+    for (const candidate of candidates) {
+        if(candidate.evaluations.length <= 0){
+            candidatesToList.push(candidate);
+        }else if(document.querySelector('#id_exam')){
+            for(const evaluation of candidate.evaluations){
+                if(evaluation.id_exam == document.querySelector('#id_exam').value){
+                    candidatesToList.push(candidate);
+                }
+            }
+        }
     }
 
     let cols = [ { 
-        id: 'checkbox',
+        id: 'td-checkbox',
         data: 'checkbox'
     }, { 
         id: 'candidate_number',

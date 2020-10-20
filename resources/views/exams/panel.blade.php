@@ -19,9 +19,10 @@
             @component('components.tab.tab.panel')
             @endcomponent
 
-            <footer class="tab-footer">
-                <a href="#" class="btn btn-nine-transparent borderless">
-                    
+            <footer class="tab-footer mb-4">
+                <a href="/logout" class="btn btn-nine-transparent btn-small borderless">
+                    <i class="link-icon left fas fa-sign-out-alt"></i>
+                    <span class="link-text">Log Out</span>
                 </a>
             </footer>
         </section>
