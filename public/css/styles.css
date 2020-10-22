@@ -88,6 +88,7 @@ li, a, span, p, h1, h2, h3, h4, button, input{
     --invalid-color: var(--color-seven);
 }
 
+
 /* * MD */
 
 @media(min-width: 768px) {
