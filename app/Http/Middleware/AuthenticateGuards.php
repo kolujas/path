@@ -14,7 +14,7 @@
          */
         public function handle($request, Closure $next){
             if(!Auth::guard('candidates')->user() && !Auth::user()){
-                return route('auth.showLogin');
+                return redirect('/');
             }
             return $next($request);
         }

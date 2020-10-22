@@ -39,7 +39,7 @@ async function sendData(){
     setFinishState();
     if(!form.classList.contains('invalid')){
         let response = fetchService.getResponse();
-        let localStorageService = LocalStorageServiceProvider.setData('Path_Candidate_Token', response.data);
+        let localStorageService = LocalStorageServiceProvider.setData('Path_Candidate_Token', response.data, true);
         form.submit();
     }
 }

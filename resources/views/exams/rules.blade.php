@@ -11,7 +11,7 @@
             <h1 class="h1">Path</h1>
         </div>
         <h2 class="mb-2">{{ $exam->name }}</h2>
-        <span class="text-center timer">Scheduled time: {{ $exam->scheduled_date_time }}</span>
+        <span class="text-center timer">Scheduled date time: {{ $exam->scheduled_date_time }}</span>
         <div class="clock m-auto">
 			<div class='second-hand'>I</div>
 		</div>

@@ -103,7 +103,7 @@ export class Tr{
                     {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, required: true},
                     {title: 'Password', name: 'password', type: 'password', hide: true},
                     {title: 'Confirm Password', name: 'password_confirmation', type: 'password', hide: true},
-                    {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date', required: true},
+                    {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
                 ], properties.data);
                 setActions({
                     type: 'info',

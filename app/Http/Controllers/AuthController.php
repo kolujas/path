@@ -53,7 +53,7 @@
             }
 
             if(Auth::attempt(['password' => $input->password, 'email' => $input->data], true)){
-                return redirect()->route('web.panel')->with('status', [
+                return redirect()->route('candidate.panel')->with('status', [
                     'code' => 200,
                     'message' => 'Session started.',
                 ] );

@@ -11,7 +11,11 @@
         public function run() {
             $exams = Exam::get();
             if ( count( $exams ) ) {
-                //
+                foreach ($exams as $exam) {
+                    $exam->update([
+                        'scheduled_date_time' => '2022/01/01 12:00:00',
+                    ]);
+                }
             } else {
                 Exam::create( [
                     'name' => 'Example exam 1',

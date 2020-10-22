@@ -91,6 +91,11 @@
     
                 $record = Record::create((array) $input);
             }
+            
+            foreach (Auth::guard('candidates')->user()->tokens as $token) {
+                $token->delete();
+            }
+            Auth::guard('candidates')->logout();
 
             return redirect("/exam/$id_exam/finished");
         }

@@ -173,21 +173,32 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             }
         }
     }
-    let hours = 0, minutes = 0, seconds = 0;
+    let years = 0, months = 0, days = 0, hours = 0, minutes = 0, seconds = 0;
+    console.log(exam.scheduled_date_time);
     for(const module of exam.modules){
-        hours = parseInt(hours) + parseInt(module.time.split(':')[0]);
+        years = parseInt(exam.scheduled_date_time.split(' ')[0].split('/')[0]);
+        months = parseInt(exam.scheduled_date_time.split(' ')[0].split('/')[1]);
+        if(months.toString().length < 2){
+            months = `0${months}`;
+        }
+        days = parseInt(exam.scheduled_date_time.split(' ')[0].split('/')[2]);
+        if(days.toString().length < 2){
+            days = `0${days}`;
+        }
+        hours = parseInt(exam.scheduled_date_time.split(' ')[1].split(':')[0]) + parseInt(module.time.split(':')[0]);
         if(hours.toString().length < 2){
             hours = `0${hours}`;
         }
-        minutes = parseInt(minutes) + parseInt(module.time.split(':')[1]);
+        minutes = parseInt(exam.scheduled_date_time.split(' ')[1].split(':')[1]) + parseInt(module.time.split(':')[1]);
         if(minutes.toString().length < 2){
             minutes = `0${minutes}`;
         }
-        seconds = parseInt(seconds) + parseInt(module.time.split(':')[2]);
+        seconds = parseInt(exam.scheduled_date_time.split(' ')[1].split(':')[2]) + parseInt(module.time.split(':')[2]);
         if(seconds.toString().length < 2){
             seconds = `0${seconds}`;
         }
-        let time = `${exam.scheduled_date_time} ${hours}:${minutes}:${seconds}`;
+        let time = `${years}/${months}/${days} ${hours}:${minutes}:${seconds}`;
+        console.log(time);
         let countDown = new CountDown({
             scheduled_date_time: time,
             timer: {

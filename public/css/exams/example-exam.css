@@ -341,6 +341,10 @@ textarea{
     display: none;
 }
 
+.loading-dots::after{
+    transform: translateX(-350%);
+}
+
 /* * MD */
 
 @media(min-width: 768px) {

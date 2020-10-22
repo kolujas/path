@@ -66,7 +66,7 @@ function current(data = undefined){
 }
 
 function end(data = undefined){
-
+    console.log(data);
 }
 
 document.addEventListener('DOMContentLoaded', function(e){

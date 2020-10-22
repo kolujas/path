@@ -11,7 +11,11 @@
         public function run() {
             $records = Record::get();
             if ( count( $records ) ) {
-                //
+                foreach ($records as $record) {
+                    $record->update([
+                        'file' => 'records/1.pdf',
+                    ]);
+                }
             } else {
                 Record::create( [
                     'id_evaluation' => 8,

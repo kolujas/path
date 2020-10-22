@@ -22,7 +22,7 @@
     --tabmenu-shadow-color: #32B1DA;
 }
 
-.tab-menu .tabs .tab-menu-list .tab .tab-link.active, .tab-menu .tabs .tab-menu-list .tab .tab-button.active, .tab-menu .tabs .tab-menu-list .tab .tab-link:hover, .tab-menu .tabs .tab-menu-list .tab .tab-button:hover{
+.tab-menu .tabs .tab-menu-list .tab .tab-link.active, .tab-menu .tabs .tab-menu-list .tab .tab-link.active, .tab-menu .tabs .tab-menu-list .tab .tab-link:hover, .tab-menu .tabs .tab-menu-list .tab .tab-link:hover{
     --tabmenu-background-color-alternative: var(--color-nine);
 }
 
@@ -41,7 +41,7 @@
 }
 
 /* tab menu list items */
-.tab-menu-list .tab-button{
+.tab-menu-list .tab-link{
     display: flex;
     justify-content: center !important;
 }

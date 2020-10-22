@@ -19,7 +19,8 @@
     font-size: 0;
 }
 
-.tab-menu.vertical .tabs .tab-menu-list .tab .tab-button {
+.tab-menu.vertical .tabs .tab-menu-list .tab .tab-button,
+.tab-menu.vertical .tabs .tab-menu-list .tab .tab-link {
     width: 50%;
     min-height: 2.3rem;
     margin: auto;
@@ -27,11 +28,13 @@
     padding: 0;
 }
 
-.tab-menu.vertical .tabs .tab-menu-list .tab .tab-button:hover {
+.tab-menu.vertical .tabs .tab-menu-list .tab .tab-button:hover,
+.tab-menu.vertical .tabs .tab-menu-list .tab .tab-link:hover {
     color: var(--color-eight);
 }
 
-.tab-menu .tabs .tab-menu-list .tab.active .tab-button.btn.btn-nine-transparent{
+.tab-menu .tabs .tab-menu-list .tab.active .tab-button.btn.btn-nine-transparent,
+.tab-menu .tabs .tab-menu-list .tab.active .tab-link.btn.btn-nine-transparent {
     background-color: var(--color-nine);
     color: var(--color-eight);
 }

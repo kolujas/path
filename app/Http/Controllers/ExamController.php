@@ -147,6 +147,9 @@
             $input->password = \Hash::make($input->password);
 
             $input->slug = SlugService::createSlug(Exam::class, 'slug', $input->name);
+
+            $input->scheduled_date_time = preg_replace('/T/', ' ', $input->scheduled_date_time);
+            $input->scheduled_date_time = preg_replace('/-/', '/', $input->scheduled_date_time);
             
             $exam = Exam::create((array) $input);
             
@@ -192,6 +195,9 @@
             }else{
                 $input->slug = $exam->slug;
             }
+
+            $input->scheduled_date_time = preg_replace('/T/', ' ', $input->scheduled_date_time);
+            $input->scheduled_date_time = preg_replace('/-/', '/', $input->scheduled_date_time);
             
             $exam->update((array) $input);
 

@@ -281,6 +281,12 @@ class Modal{
                         break;
                 }
             });
+        }else if(element.name == 'scheduled_date_time'){
+            let time = value.split(' ');
+            let year = time[0].split('/')[0];
+            let month = time[0].split('/')[1];
+            let day = time[0].split('/')[2];
+            value = `${year}-${month}-${day}\T${time[1]}`;
         }
         let input = document.createElement('input');
         input.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');

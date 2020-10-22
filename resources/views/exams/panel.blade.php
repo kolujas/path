@@ -11,20 +11,8 @@
 @section('main')
     <div id="tab-exams" class="col-12 relative tab-menu vertical p-0">
         <section class="tabs background background-linear">
-            <header class="tab-header logo">
-                <img src={{ asset('img/recursos/logo_white.png') }} alt="Path">
-                <h1 class="mb-0">Path</h1>
-            </header>
-
             @component('components.tab.tab.panel')
             @endcomponent
-
-            <footer class="tab-footer mb-4">
-                <a href="/logout" class="btn btn-nine-transparent btn-small borderless">
-                    <i class="link-icon left fas fa-sign-out-alt"></i>
-                    <span class="link-text">Log Out</span>
-                </a>
-            </footer>
         </section>
 
 		<section class="tab-content-list mx-auto">

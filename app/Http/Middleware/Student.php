@@ -15,11 +15,11 @@
          * @return mixed
          */
         public function handle($request, Closure $next){
-            $user = Auth::user();
+            $candidate = Auth::guard('candidates')->user();
             $exam = Exam::find($request->route('id_exam'));
             $isStudent = false;
-            foreach ($exam->students as $student) {
-                if($user->id_user == $student->id_user){
+            foreach ($exam->candidates() as $candidate) {
+                if($candidate->id_candidate == $candidate->id_candidate){
                     $isStudent = true;
                 }
             }
@@ -29,7 +29,7 @@
             }else{
                 return redirect()->route('auth.showLogIn')->with('status', [
                     'code' => 403,
-                    'message' => 'You are not a student from this exam.',
+                    'message' => 'You are not a candidate from this exam.',
                 ]);
             }
         }
