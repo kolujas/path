@@ -17,7 +17,7 @@
 
 @section('main')
     <div class="example-exam floating-menu top left">
-        <span class="floating-button mr-2 mr-lg-0" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus dignissimos? Modi doloremque tempora quisquam ea vero asperiores nobis molestiae.">
+    <span class="floating-button mr-2 mr-lg-0" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus dignissimos? Modi doloremque tempora quisquam ea vero asperiores nobis molestiae. <br /> <br /> {{ $exam->rules }}">
             <i class="fas fa-exclamation"></i>
         </span>
     </div>

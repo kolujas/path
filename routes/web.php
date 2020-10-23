@@ -7,9 +7,9 @@
     Route::get('/', 'AuthController@showLogin')->name('web.index');
     Route::get('/login', 'AuthController@showLogin')->name('auth.showLogin');
     Route::post('/login', 'AuthController@doLogIn')->name('auth.doLogIn');
-    Route::middleware('auth.guards')->group(function(){
+    // Route::middleware('auth.guards')->group(function(){
         Route::get('/logout', 'AuthController@doLogOut')->name('auth.doLogOut');
-    });
+    // });
 
     /** 
      * ! ExamController
@@ -28,7 +28,7 @@
             Route::put('/exams/{id_exam}/edit', 'ExamController@doEdit')->name('exam.doEdit');
             Route::delete('/exams/{id_exam}/delete', 'ExamController@doDelete')->name('exam.doDelete');
             Route::get('/panel/exams', 'ExamController@panel')->name('exam.panel');
-        });
+        // });
         
     /** 
      * ! RecordController
@@ -52,5 +52,8 @@
             Route::put('/candidates/{id_candidate}/edit', 'CandidateController@doEdit')->name('candidate.doEdit');
             Route::delete('/candidates/{id_candidate}/delete', 'CandidateController@doDelete')->name('candidate.doDelete');
             Route::get('/panel/candidates', 'CandidateController@panel')->name('candidate.panel');
-        });
-    });
+        // });
+    // });
+
+
+ 
