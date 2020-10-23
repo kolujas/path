@@ -18,10 +18,10 @@
     Route::middleware('auth.guards')->group(function(){
         Route::middleware(['ended', 'student', 'status'])->group(function(){
             Route::get('/exam/{id_exam}/rules', 'ExamController@rules')->name('exam.rules');
-            Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
+            // Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
                 Route::post('/auth/exam/{id_exam}', 'ExamController@auth')->name('exam.auth');
                 Route::get('/exam/{id_exam}', 'ExamController@show')->name('exam.show');
-            });
+        //     });
         });
         Route::middleware('admin')->group(function(){
             Route::post('/exams/create', 'ExamController@doCreate')->name('exam.doCreate');
@@ -34,9 +34,9 @@
      * ! RecordController
      */
         Route::middleware(['ended', 'student', 'status'])->group(function(){
-            Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
+            // Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
                 Route::post('/exam/{id_exam}/record', 'RecordController@doCreate')->name('record.doCreate');
-            });
+            // });
         });
         Route::middleware('admin')->group(function(){
             Route::get('/panel/records', 'RecordController@panel')->name('record.panel');

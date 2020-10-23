@@ -18,6 +18,10 @@
                         ]);
                     }
                 }
+                Evaluation::create( [
+                    'id_exam' => 1,
+                    'id_candidate' => 26,
+                ] );
             } else {
                 Evaluation::create( [
                     'id_exam' => 1,
