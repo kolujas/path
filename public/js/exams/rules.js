@@ -66,7 +66,9 @@ function current(data = undefined){
 }
 
 function end(data = undefined){
-    console.log(data);
+    document.querySelector('.timer').innerHTML = 'Started';
+    document.querySelector('.timer').classList.add('text', 'text-two');
+    document.querySelector('.clock').style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', function(e){
@@ -102,8 +104,8 @@ document.addEventListener('DOMContentLoaded', function(e){
             code: status.code,
             message: status.message,
         }, { show: true }, {
-            element: document.querySelector('body'),
-            insertBefore: document.querySelector('body').children[0]
+            element: document.querySelector('.rules-header'),
+            insertBefore: document.querySelector('.rules-header').children[1]
         }));
     }
 

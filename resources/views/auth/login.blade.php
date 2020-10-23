@@ -56,6 +56,8 @@
     <script>
         @if(Session::has('status'))
         const status = @json(Session::get('status'));
+        @elseif(isset($status))
+        const status = @json($status);
         @endif
         const rules = @json($validation->rules);
         const messages = @json($validation->messages);

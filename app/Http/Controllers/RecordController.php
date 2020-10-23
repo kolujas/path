@@ -55,6 +55,7 @@
                 'candidate' => $candidate,
                 'answers' => $request->all(),
             ];
+
             foreach($modules as $module) {
                 $data->module = $module;
                 if(!$pdf) {
@@ -91,6 +92,8 @@
     
                 $record = Record::create((array) $input);
             }
+
+            $evaluation->update(['id_status' => 1]);
             
             foreach (Auth::guard('candidates')->user()->tokens as $token) {
                 $token->delete();

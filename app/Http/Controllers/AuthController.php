@@ -14,6 +14,7 @@
     class AuthController extends Controller{
         /**
          * * Show the 'log in' page.
+         * @param Request $request
          * @return [type]
          */
         public function showLogin(Request $request){
@@ -32,17 +33,30 @@
                 case 'users':
                     return redirect("/panel/candidates");
                 default:
-                    return view('auth.login', [
-                        'validation' => (object)[
-                            'rules' => AuthModel::$validation['login']['rules'],
-                            'messages' => AuthModel::$validation['login']['messages']['en'],
-                        ],
-                    ]);
+                    if($request->session()->has('error')){
+                        $error = (object) $request->session()->pull('error');
+                        return view('auth.login', [
+                            'validation' => (object)[
+                                'rules' => AuthModel::$validation['login']['rules'],
+                                'messages' => AuthModel::$validation['login']['messages']['en'],
+                            ], 'status' => (object)[
+                                'code' => $error->code,
+                                'message' => $error->message,
+                        ]]);
+                    }else{
+                        return view('auth.login', [
+                            'validation' => (object)[
+                                'rules' => AuthModel::$validation['login']['rules'],
+                                'messages' => AuthModel::$validation['login']['messages']['en'],
+                            ],
+                        ]);
+                    }
             }
         }
 
         /**
          * * Log the User in.
+         * @param Request $request
          * @return [type]
          */
         public function doLogIn(Request $request){
@@ -91,9 +105,10 @@
 
         /**
          * * Log the User out.
+         * @param Request $request
          * @return [type]
          */
-        public function doLogOut() {
+        public function doLogOut(Request $request) {
             if(Auth::guard('candidates')->check()){
                 $authenticated = 'candidates';
             }else if(Auth::guard('web')->check()){
@@ -115,9 +130,17 @@
                     Auth::logout();
                     break;
             }
-            return redirect()->route('auth.showLogin')->with('status', [
-                'code' => 200,
-                'message' => 'Session ended.',
-            ] );
+            if($request->session()->has('error')){
+                $error = (object) $request->session()->pull('error');
+                return redirect()->route('auth.showLogin')->with('status', [
+                    'code' => $error->code,
+                    'message' => $error->message,
+                ] );
+            }else{
+                return redirect()->route('auth.showLogin')->with('status', [
+                    'code' => 200,
+                    'message' => 'Session ended.',
+                ] );
+            }
         }
     }

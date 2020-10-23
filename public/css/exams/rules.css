@@ -22,7 +22,7 @@ header .background h1{
     display: none;
 }
 
-header h2 {
+header .rules-header > h2 {
     color: #000;
     padding-top: 1rem;
 }
@@ -140,6 +140,11 @@ header h2 {
     display: block;
     width: fit-content;
     margin: auto;
+}
+
+.notification {
+    position: initial;
+    margin-top: -1.5rem;
 }
 
 /* * MD */

@@ -21,7 +21,7 @@
          * @var array
          */
         protected $fillable = [
-            'candidate_number', 'full_name', 'email', 'date_of_birth', 'id_member', 'member', 'modules', 'file', 'slug',
+            'candidate_number', 'full_name', 'email', 'date_of_birth', 'id_member', 'member', 'modules', 'file', '->id_candidate', 'slug',
         ];
 
         /** @var array The attributes to hidde. */

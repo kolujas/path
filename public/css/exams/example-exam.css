@@ -302,21 +302,21 @@ textarea{
 .tab-menu .tabs .tab-menu-list .tab {
     margin: 1rem 1rem 1rem 0;
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-button {
+.tab-menu .tabs .tab-menu-list .tab .tab-link {
     padding: 0 1rem;
     min-height: fit-content;
     border: 2px solid var(--color-nine);
     color: var(--color-nine);
     flex-wrap: nowrap;
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-button.active {
+.tab-menu .tabs .tab-menu-list .tab .tab-link.active {
     color: var(--color-one);
     border: 2px solid var(--color-one);
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-button:hover:not(.active){
+.tab-menu .tabs .tab-menu-list .tab .tab-link:hover:not(.active){
     color: var(--color-nine);
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-button:not(.active) {
+.tab-menu .tabs .tab-menu-list .tab .tab-link:not(.active) {
     /* pointer-events: none; */
     background: unset;
 }

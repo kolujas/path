@@ -10,8 +10,8 @@
 
     <div class="sidebar-content background background-linear">
         <ul class="sidebar-menu-list">
-            <li><button class="submit-exam sidebar-button nav-button btn btn-nine-transparent">
-                Submit
+            <li><button class="submit-exam sidebar-button nav-button btn btn-nine-transparent" data-module="1">
+                Continue
             </button></li>
         </ul>
     </div>

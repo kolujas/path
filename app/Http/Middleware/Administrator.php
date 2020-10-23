@@ -16,7 +16,11 @@
             if(Auth::user()){
                 return $next($request);
             }else{
-                return redirect()->route('auth.showLogin');
+                $request->session()->put('error', [
+                    'code' => 403,
+                    'message' => 'User logged must be admin.',
+                ]);
+                return redirect('/logout');
             }
         }
     }

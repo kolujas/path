@@ -11,7 +11,13 @@
         public function run() {
             $evaluations = Evaluation::get();
             if ( count( $evaluations ) ) {
-                //
+                foreach ($evaluations as $evaluation) {
+                    if($evaluation->id_evaluation == 8 || $evaluation->id_evaluation == 9 || $evaluation->id_evaluation == 10 || $evaluation->id_evaluation == 11){
+                        $evaluation->update([
+                            'id_status' => 1,
+                        ]);
+                    }
+                }
             } else {
                 Evaluation::create( [
                     'id_exam' => 1,
@@ -44,18 +50,22 @@
                 Evaluation::create( [
                     'id_exam' => 2,
                     'id_candidate' => 8,
+                    'id_status' => 1,
                 ] );
                 Evaluation::create( [
                     'id_exam' => 2,
                     'id_candidate' => 9,
+                    'id_status' => 1,
                 ] );
                 Evaluation::create( [
                     'id_exam' => 2,
                     'id_candidate' => 10,
+                    'id_status' => 1,
                 ] );
                 Evaluation::create( [
                     'id_exam' => 2,
                     'id_candidate' => 11,
+                    'id_status' => 1,
                 ] );
                 Evaluation::create( [
                     'id_exam' => 3,

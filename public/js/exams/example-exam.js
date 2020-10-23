@@ -59,7 +59,21 @@ function current(data = undefined){
 }
 
 function end(data = undefined){
-    console.log(data);
+    document.querySelector('.clock').style.display = 'none';
+    let time = document.querySelector(`#${data.module.folder}-${data.module.name} .time`);
+    time.innerHTML = 'ended';
+    time.classList.add('text', 'text-two');
+    let index;
+    for (const key in exam.modules) {
+        if(exam.modules[key] == data.module){
+            index = parseInt(key) + 1;
+        }
+    }
+    if(index >= exam.modules.length){
+        document.querySelector('form').submit();
+    }else{
+        nextModule(data.tab);
+    }
 }
 
 function setLoadingState(){
@@ -99,6 +113,132 @@ async function sendData(){
     setFinishState();
 }
 
+function addTime(scheduled_date_time, index) {
+    let years = parseInt(scheduled_date_time.split(' ')[0].split('-')[0]),
+        months = parseInt(scheduled_date_time.split(' ')[0].split('-')[1]),
+        days = parseInt(scheduled_date_time.split(' ')[0].split('-')[2]),
+        hours = parseInt(scheduled_date_time.split(' ')[1].split(':')[0]),
+        minutes = parseInt(scheduled_date_time.split(' ')[1].split(':')[1]),
+        seconds = parseInt(scheduled_date_time.split(' ')[1].split(':')[2]);
+    for (const key in exam.modules) {
+        if(key < index){
+            const module = exam.modules[key];
+            if(months < 10){
+                months = `0${months}`;
+            }
+            if(days < 10){
+                days = `0${days}`;
+            }
+            hours = hours + parseInt(module.time.split(':')[0]);
+            minutes = minutes + parseInt(module.time.split(':')[1]);
+            if(minutes > 59){
+                minutes = minutes - 60;
+                hours++;
+            }
+            if(minutes < 10){
+                minutes = `0${minutes}`;
+            }
+            if(hours < 10){
+                hours = `0${hours}`;
+            }
+            seconds = seconds + parseInt(module.time.split(':')[2]);
+            if(seconds < 10){
+                seconds = `0${seconds}`;
+            }
+            scheduled_date_time = `${years}-${months}-${days} ${hours}:${minutes}:${seconds}`;
+        }
+    }
+    return scheduled_date_time;
+}
+
+function setTimer(module, tab){
+    let scheduled_date_time = exam.scheduled_date_time;
+    for (const key in exam.modules) {
+        if(exam.modules[key] == module && key > 0){
+            scheduled_date_time = addTime(scheduled_date_time, key);
+        }
+    }
+    let years = parseInt(scheduled_date_time.split(' ')[0].split('-')[0]);
+    let months = parseInt(scheduled_date_time.split(' ')[0].split('-')[1]);
+    if(months < 10){
+        months = `0${months}`;
+    }
+    let days = parseInt(scheduled_date_time.split(' ')[0].split('-')[2]);
+    if(days < 10){
+        days = `0${days}`;
+    }
+    let hours = parseInt(scheduled_date_time.split(' ')[1].split(':')[0]) + parseInt(module.time.split(':')[0]);
+    let minutes = parseInt(scheduled_date_time.split(' ')[1].split(':')[1]) + parseInt(module.time.split(':')[1]);
+    if(minutes > 59){
+        minutes = minutes - 60;
+        hours++;
+    }
+    if(minutes < 10){
+        minutes = `0${minutes}`;
+    }
+    if(hours < 10){
+        hours = `0${hours}`;
+    }
+    let seconds = parseInt(scheduled_date_time.split(' ')[1].split(':')[2]) + parseInt(module.time.split(':')[2]);
+    if(seconds < 10){
+        seconds = `0${seconds}`;
+    }
+    let time = `${years}-${months}-${days} ${hours}:${minutes}:${seconds}`;
+    let countDown = new CountDown({
+        scheduled_date_time: time,
+        timer: {
+            hours: true,
+            minutes: true,
+            seconds: true,
+        }
+    }, {
+        current: {
+            functionName: current,
+            params: {
+                module: module,
+            },
+        }, end: {
+            functionName: end,
+            params: {
+                module: module,
+                tab: tab,
+            },
+        }
+    });
+}
+
+function nextModule(tab){
+    let submitBtns = document.querySelectorAll('.submit-exam');
+    let index;
+    for (const btn of submitBtns) {
+        index = btn.dataset.module;
+        btn.dataset.module++;
+        if(btn.dataset.module >= exam.modules.length){
+            if(btn.children.length){
+                btn.children[0].innerHTML = 'Submit Exam';
+            }else{
+                btn.innerHTML = 'Submit Exam';
+            }
+        }else{
+            if(btn.children.length){
+                btn.children[0].innerHTML = 'Continue';
+            }else{
+                btn.innerHTML = 'Continue';
+            }
+        }
+    }
+    tab.open([exam.modules[index].file], exam.modules[index].file);
+    setTimer(getModule(document.querySelectorAll('.module-button')[document.querySelector('.submit-exam').dataset.module - 1].id), tab);
+}
+
+function getModule(id) {
+    for(const module of exam.modules){
+        if(`${module.folder}-${module.name}` == id){
+            return module;
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async function (e) {
     let choosen = document.querySelector('.tab-content').id;
     for (const content of document.querySelectorAll('.tab-content')) {
@@ -106,8 +246,9 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             choosen = content.id;
         }
     }
+    let tab
     if (document.querySelector('.tab-content')) {
-        let tab = new TabMenuJS({
+        tab = new TabMenuJS({
             id: 'tab-exam',
         }, {
             open: [choosen],
@@ -132,7 +273,11 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     for (const btn of submitBtns) {
         btn.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector('form').submit();
+            if(this.dataset.module >= exam.modules.length){
+                document.querySelector('form').submit();
+            }else{
+                nextModule(tab);
+            }
         });
     }
 
@@ -173,51 +318,37 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             }
         }
     }
-    let years = 0, months = 0, days = 0, hours = 0, minutes = 0, seconds = 0;
-    console.log(exam.scheduled_date_time);
-    for(const module of exam.modules){
-        years = parseInt(exam.scheduled_date_time.split(' ')[0].split('/')[0]);
-        months = parseInt(exam.scheduled_date_time.split(' ')[0].split('/')[1]);
-        if(months.toString().length < 2){
-            months = `0${months}`;
-        }
-        days = parseInt(exam.scheduled_date_time.split(' ')[0].split('/')[2]);
-        if(days.toString().length < 2){
-            days = `0${days}`;
-        }
-        hours = parseInt(exam.scheduled_date_time.split(' ')[1].split(':')[0]) + parseInt(module.time.split(':')[0]);
-        if(hours.toString().length < 2){
-            hours = `0${hours}`;
-        }
-        minutes = parseInt(exam.scheduled_date_time.split(' ')[1].split(':')[1]) + parseInt(module.time.split(':')[1]);
-        if(minutes.toString().length < 2){
-            minutes = `0${minutes}`;
-        }
-        seconds = parseInt(exam.scheduled_date_time.split(' ')[1].split(':')[2]) + parseInt(module.time.split(':')[2]);
-        if(seconds.toString().length < 2){
-            seconds = `0${seconds}`;
-        }
-        let time = `${years}/${months}/${days} ${hours}:${minutes}:${seconds}`;
-        console.log(time);
-        let countDown = new CountDown({
-            scheduled_date_time: time,
-            timer: {
-                hours: true,
-                minutes: true,
-                seconds: true,
+
+    setTimer(exam.modules[0], tab);
+
+    let moduleBtns = document.querySelectorAll('.module-button');
+    for (const btn of moduleBtns) {
+        btn.addEventListener('click', function(e){
+            e.preventDefault();
+            let index;
+            for (const key in exam.modules) {
+                if(exam.modules[key] == getModule(this.id)){
+                    index = parseInt(key) + 1;
+                }
             }
-        }, {
-            current: {
-                functionName: current,
-                params: {
-                    module: module,
-                },
-            }, end: {
-                functionName: end,
-                params: {
-                    module: module,
-                },
+            let submitBtns = document.querySelectorAll('.submit-exam');
+            for (const btn of submitBtns) {
+                btn.dataset.module = index;
+                if(btn.dataset.module >= exam.modules.length){
+                    if(btn.children.length){
+                        btn.children[0].innerHTML = 'Submit Exam';
+                    }else{
+                        btn.innerHTML = 'Submit Exam';
+                    }
+                }else{
+                    if(btn.children.length){
+                        btn.children[0].innerHTML = 'Continue';
+                    }else{
+                        btn.innerHTML = 'Continue';
+                    }
+                }
             }
+            setTimer(getModule(this.id), tab);
         });
     }
 

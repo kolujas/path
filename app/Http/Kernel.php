@@ -63,11 +63,14 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'scope' => \App\Http\Middleware\CheckForAllScopes::class,
         'admin' => \App\Http\Middleware\Administrator::class,
         'student' => \App\Http\Middleware\Student::class,
         'scheduled_date_time' => \App\Http\Middleware\ScheduledDateTime::class,
+        'ended' => \App\Http\Middleware\Ended::class,
         'evaluation_confirmed' => \App\Http\Middleware\EvaluationConfirmed::class,
         'auth.guards' => \App\Http\Middleware\AuthenticateGuards::class,
-        'scope' => \App\Http\Middleware\CheckForAllScopes::class,
+        'confirmed' => \App\Http\Middleware\Confirmed::class,
+        'status' => \App\Http\Middleware\Status::class,
     ];
 }

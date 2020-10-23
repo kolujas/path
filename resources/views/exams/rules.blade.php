@@ -5,8 +5,8 @@
 @endsection
 
 @section('nav')
-    <div class="text-center mb-5">
-        <div class=" background background-linear mb-4">
+    <div class="rules-header text-center mb-5">
+        <div class="background background-linear mb-4">
             <img class="logo" src={{ asset('img/recursos/logo_white.png') }} alt="Path">
             <h1 class="h1">Path</h1>
         </div>
@@ -73,6 +73,8 @@
         const exam = @json($exam);
         @if(Session::has('status'))
         const status = @json(Session::get('status'));
+        @elseif(isset($status))
+        const status = @json($status);
         @endif
         const rules = @json($validation->rules);
         const messages = @json($validation->messages);

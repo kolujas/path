@@ -14,6 +14,10 @@
          */
         public function handle($request, Closure $next){
             if(!Auth::guard('candidates')->user() && !Auth::user()){
+                $request->session()->put('error', [
+                    'code' => 403,
+                    'message' => 'Log in first to get access at the Exam.',
+                ]);
                 return redirect('/');
             }
             return $next($request);

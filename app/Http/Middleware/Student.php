@@ -27,10 +27,11 @@
             if($isStudent){
                 return $next($request);
             }else{
-                return redirect()->route('auth.showLogIn')->with('status', [
+                $request->session()->put('error', [
                     'code' => 403,
-                    'message' => 'You are not a candidate from this exam.',
+                    'message' => 'You are not a Candidate in this Exam.',
                 ]);
+                return redirect('/');
             }
         }
     }
