@@ -5,7 +5,203 @@ import { FetchServiceProvider } from "../providers/FetchServiceProvider.js";
 import { CountDown } from "../CountDown.js";
 import { LocalStorageServiceProvider } from "../providers/LocalStorageServiceProvider.js";
 
-function updateSaveTimer(data = undefined){
+let tab;
+
+// Audios (kolujAs)
+
+const audio = document.querySelectorAll('.audio');
+const audioBtn = document.querySelectorAll('.audioBtn');
+
+for (const key in audioBtn) {
+    const btn = audioBtn[key];
+    if(typeof btn === "object"){
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if(!this.classList.contains('playing') && !this.classList.contains('finished')){
+                if (!this.dataset.count) {
+                    this.dataset.count = 0;
+                }
+                this.dataset.count = parseInt(this.dataset.count) + 1;
+                if (parseInt(this.dataset.count) < 3) {
+                    ponePlay(key);
+                } else {
+                    this.classList.add('finished');
+                    audio[key].src = "";
+                }
+            }
+            
+        })
+    }
+    
+
+}
+
+for (const key in audio) {
+        const input = audio[key]; 
+        if(typeof input  === "object"){
+            input.addEventListener('play', function(e){
+                audioBtn[key].classList.add('playing');
+            });
+            input.addEventListener('ended', function(e){
+                audioBtn[key].classList.remove('playing');
+            });
+        }       
+        
+}
+
+// audio.addEventListener('timeupdate', function(e){
+//     e.preventDefault();
+//     console.log("Current time", this.currentTime);
+// });
+
+function ponePlay(key) {
+    audio[key].play();
+}
+
+// Desactivar F5 (actualizar pagina)
+
+// $(document).on("keydown", disableF5);
+
+function disableF5(e) {
+    if ((e.which || e.keyCode) == 116) e.preventDefault();
+};
+
+// Mensaje si quiere salir de la pagina
+
+const modal = document.querySelector('.modal-strikes');
+
+
+// document.addEventListener('visibilitychange', function(){ 
+   
+//     if(document.visibilityState == 'hidden'){
+//         if(!document.querySelector('.strikes').value){
+//         document.querySelector('.strikes').value = 1;
+//         }else{
+//             document.querySelector('.strikes').value++;
+//             if(document.querySelector('.strikes').value >= 1){
+//                 const modalBody = document.querySelector('.modal-body p');
+//                 modalBody.innerHTML = "Reprobaste";
+//                 $('.modal-strikes').modal();
+//             }
+//         }
+//     }
+//  });
+
+// $(document).mouseleave(function () {
+//     if(!document.querySelector('.strikes').value){
+//         document.querySelector('.strikes').value = 0;
+//     }else{
+//     //     document.querySelector('.strikes').value++;
+//         if(document.querySelector('.strikes').value == 0){
+//             const modalBody = document.querySelector('.modal-body p');
+//             modalBody.innerHTML = "Si salis de la pagina reprobás";
+//             $('.modal-strikes').modal();
+//         }
+//     }
+    
+// });
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+
+
+(function () {
+    var onload = window.onload;
+
+    window.onload = function () {
+        if (typeof onload == "function") {
+            onload.apply(this, arguments);
+        }
+
+        var fields = [];
+        var inputs = document.getElementsByTagName("input");
+        var textareas = document.getElementsByTagName("textarea");
+
+        for (var i = 0; i < inputs.length; i++) {
+            fields.push(inputs[i]);
+        }
+
+        for (var i = 0; i < textareas.length; i++) {
+            fields.push(textareas[i]);
+        }
+
+        for (var i = 0; i < fields.length; i++) {
+            var field = fields[i];
+
+            if (typeof field.onpaste != "function" && !!field.getAttribute("onpaste")) {
+                field.onpaste = eval("(function () { " + field.getAttribute("onpaste") + " })");
+            }
+
+            if (typeof field.onpaste == "function") {
+                var oninput = field.oninput;
+
+                field.oninput = function () {
+                    if (typeof oninput == "function") {
+                        oninput.apply(this, arguments);
+                    }
+
+                    if (typeof this.previousValue == "undefined") {
+                        this.previousValue = this.value;
+                    }
+
+                    var pasted = (Math.abs(this.previousValue.length - this.value.length) > 1 && this.value != "");
+
+                    if (pasted && !this.onpaste.apply(this, arguments)) {
+                        this.value = this.previousValue;
+                    }
+
+                    this.previousValue = this.value;
+                };
+
+                if (field.addEventListener) {
+                    field.addEventListener("input", field.oninput, false);
+                } else if (field.attachEvent) {
+                    field.attachEvent("oninput", field.oninput);
+                }
+            }
+        }
+    }
+})();
+
+$('body').on('copy paste', 'input', function (e)
+    { e.preventDefault();
+ });
+
+$('body').on('copy paste', 'textarea', function (e)
+    { e.preventDefault();
+ });
+
+
+ const okConfirm = document.querySelector('.ok-confirm');
+ const cancelConfirm = document.querySelector('.cancel-confirm');
+ const submitsExam = document.querySelectorAll('.submit-exam');
+ const modalTwo = document.querySelector('.modal-two');
+
+for (const submit of submitsExam) {
+    submit.addEventListener('click', function(e){
+        $('.modal-two').modal();
+     })
+}
+
+ okConfirm.addEventListener('click', function(e){
+    e.preventDefault();
+    if(submitsExam[0].dataset.module >= exam.modules.length){
+        document.querySelector('form').submit();
+    }else{
+        nextModule(tab);
+    }
+    
+ })
+ 
+ cancelConfirm.addEventListener('click', function(e){
+    e.preventDefault();
+ })
+
+
+ // Archimak
+
+ function updateSaveTimer(data = undefined){
     if(document.querySelector('.save-button.countdown')){
         let timer = document.querySelector('.save-button .timer');
         timer.innerHTML = `(${data.countdown.seconds})`;
@@ -167,6 +363,7 @@ function setTimer(module, tab){
     if(days < 10){
         days = `0${days}`;
     }
+
     let hours = parseInt(scheduled_date_time.split(' ')[1].split(':')[0]) + parseInt(module.time.split(':')[0]);
     let minutes = parseInt(scheduled_date_time.split(' ')[1].split(':')[1]) + parseInt(module.time.split(':')[1]);
     if(minutes > 59){
@@ -246,7 +443,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             choosen = content.id;
         }
     }
-    let tab
+    
     if (document.querySelector('.tab-content')) {
         tab = new TabMenuJS({
             id: 'tab-exam',
@@ -270,16 +467,19 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     });
 
     let submitBtns = document.querySelectorAll('.submit-exam');
-    for (const btn of submitBtns) {
-        btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            if(this.dataset.module >= exam.modules.length){
-                document.querySelector('form').submit();
-            }else{
-                nextModule(tab);
-            }
-        });
-    }
+    // for (const btn of submitBtns) {
+    //     btn.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         if(confirmar()){
+    //             if(this.dataset.module >= exam.modules.length){
+    //                 document.querySelector('form').submit();
+    //             }else{
+    //                 nextModule(tab);
+    //             }
+    //         }
+           
+    //     });
+    // }
 
     let selects = document.querySelectorAll('select');
     for (const select of selects) {
@@ -360,150 +560,4 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     setTimeIntervalAutoSave();
 });
 
-
-// Audios
-
-const audio = document.querySelectorAll('.audio');
-const audioBtn = document.querySelectorAll('.audioBtn');
-
-for (const key in audioBtn) {
-    const btn = audioBtn[key];
-    if(typeof btn === "object"){
-        btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            if(!this.classList.contains('playing') && !this.classList.contains('finished')){
-                if (!this.dataset.count) {
-                    this.dataset.count = 0;
-                }
-                this.dataset.count = parseInt(this.dataset.count) + 1;
-                if (parseInt(this.dataset.count) < 3) {
-                    ponePlay(key);
-                } else {
-                    this.classList.add('finished');
-                    audio[key].src = "";
-                }
-            }
-            
-        })
-    }
-    
-
-}
-
-for (const key in audio) {
-        const input = audio[key]; 
-        if(typeof input  === "object"){
-            input.addEventListener('play', function(e){
-                audioBtn[key].classList.add('playing');
-            });
-            input.addEventListener('ended', function(e){
-                audioBtn[key].classList.remove('playing');
-            });
-        }       
-        
-}
-
-// audio.addEventListener('timeupdate', function(e){
-//     e.preventDefault();
-//     console.log("Current time", this.currentTime);
-// });
-
-function ponePlay(key) {
-    audio[key].play();
-}
-
-// Desactivar F5 (actualizar pagina)
-
-// $(document).on("keydown", disableF5);
-
-function disableF5(e) {
-    if ((e.which || e.keyCode) == 116) e.preventDefault();
-};
-
-// Mensaje si quiere salir de la pagina
-
-const modal = document.querySelector('.modal');
-
-$(document).mouseleave(function () {
-    if(!document.querySelector('.strikes').value){
-        document.querySelector('.strikes').value = 1;
-    }else{
-        document.querySelector('.strikes').value++;
-        if(document.querySelector('.strikes').value >= 2){
-            const modalBody = document.querySelector('.modal-body p');
-            modalBody.innerHTML = "Si volves a salir reprobas por mamerto";
-        }
-    }
-    // $('.modal').modal();
-});
-
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
-});
-
-
-(function () {
-    var onload = window.onload;
-
-    window.onload = function () {
-        if (typeof onload == "function") {
-            onload.apply(this, arguments);
-        }
-
-        var fields = [];
-        var inputs = document.getElementsByTagName("input");
-        var textareas = document.getElementsByTagName("textarea");
-
-        for (var i = 0; i < inputs.length; i++) {
-            fields.push(inputs[i]);
-        }
-
-        for (var i = 0; i < textareas.length; i++) {
-            fields.push(textareas[i]);
-        }
-
-        for (var i = 0; i < fields.length; i++) {
-            var field = fields[i];
-
-            if (typeof field.onpaste != "function" && !!field.getAttribute("onpaste")) {
-                field.onpaste = eval("(function () { " + field.getAttribute("onpaste") + " })");
-            }
-
-            if (typeof field.onpaste == "function") {
-                var oninput = field.oninput;
-
-                field.oninput = function () {
-                    if (typeof oninput == "function") {
-                        oninput.apply(this, arguments);
-                    }
-
-                    if (typeof this.previousValue == "undefined") {
-                        this.previousValue = this.value;
-                    }
-
-                    var pasted = (Math.abs(this.previousValue.length - this.value.length) > 1 && this.value != "");
-
-                    if (pasted && !this.onpaste.apply(this, arguments)) {
-                        this.value = this.previousValue;
-                    }
-
-                    this.previousValue = this.value;
-                };
-
-                if (field.addEventListener) {
-                    field.addEventListener("input", field.oninput, false);
-                } else if (field.attachEvent) {
-                    field.attachEvent("oninput", field.oninput);
-                }
-            }
-        }
-    }
-})();
-
-$('body').on('copy paste', 'input', function (e)
-    { e.preventDefault();
- });
-
-$('body').on('copy paste', 'textarea', function (e)
-    { e.preventDefault();
- });
+ 
