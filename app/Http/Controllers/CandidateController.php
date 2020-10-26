@@ -60,6 +60,16 @@
                 'message' => 'Candidate created correcttly.',
             ]);
         }
+
+        /**
+         * * Create multiple Candidates by CSV file.
+         * @param Request $request
+         * @return [type]
+         */
+        public function doCreateByCSV(Request $request){
+            $input = (object) $request->all();
+            dd($input);
+        }
         
         /**
          * * Edit a Candidate.

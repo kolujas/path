@@ -1,8 +1,8 @@
-<div class="modal modal-strikes fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal modal-strikes fade" id="StrikesModal" tabindex="-1" aria-labelledby="StrikesModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">WARNING!</h5>
+                <h5 class="modal-title" id="StrikesModalLabel">WARNING!</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

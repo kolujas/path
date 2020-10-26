@@ -2,6 +2,7 @@ import { Filter as FilterJS } from "../../submodules/FilterJS/js/Filter.js";
 import { TabMenu as TabMenuJS } from "../../submodules/TabMenuJS/js/TabMenu.js";
 import { ScrollDetection as ScrollDetectionJS } from "../../submodules/ScrollDetectionJS/js/ScrollDetection.js";
 import { URLServiceProvider } from "../../submodules/ProvidersJS/URLServiceProvider.js";
+import { InputFileMaker as InputFileMakerJS } from "../../submodules/InputFileMakerJS/js/InputFileMaker.js";
 
 import { createModal, setActions } from "../modal.js";
 import { Table } from "../Table/Table.js";
@@ -19,6 +20,31 @@ let cols = [ {
     id: 'scheduled_date_time',
     data: 'scheduled_date_time'
 } ];
+
+function csvJSON(csv){
+    let lines = csv.split("\n");
+  
+    let result = [];
+
+    let headers = lines[0].split(",");
+  
+    for(let i=1;i<lines.length;i++){
+        let obj = {};
+        let currentline=lines[i].split(",");
+  
+        for(let j=0;j<headers.length;j++){
+            obj[headers[j]] = currentline[j];
+        }
+  
+        result.push(obj);
+    }
+  
+    return JSON.stringify(result);
+}
+
+function ShowCSV(params = undefined){
+    console.log(csvJSON(params.inputfile.files[0]));
+}
 
 function putShadow(params){
     document.querySelector('header.content-header').classList.add('header-shadow');
@@ -171,6 +197,16 @@ document.addEventListener('DOMContentLoaded', function(e){
                     tr.classList.remove('active');
                 }
             }
+        }
+    });
+
+    let input = new InputFileMakerJS({
+        id: 'csv',
+        callback: {
+            functionName: ShowCSV,
+            params: [
+                //
+            ],
         }
     });
 });

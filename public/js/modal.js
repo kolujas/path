@@ -491,6 +491,18 @@ function enableInputs(){
     }
 }
 
+function createCSVBtn() {
+    let div = document.querySelector('.modal-actions');
+        let btn = document.createElement('button');
+        btn.classList.add('csv-data', 'btn', 'btn-one', 'mr-2');
+        btn.innerHTML = 'CSV';
+        div.appendChild(btn);
+        btn.addEventListener('click', function(e){
+            e.preventDefault();
+            $('#CSVModal').modal();
+        });
+}
+
 function createCancelBtn(event, params) {
     let div = document.querySelector('.modal-actions');
         let btn = document.createElement('button');
@@ -717,6 +729,7 @@ export function setActions(params = {
             createAcceptBtn({
                 type: 'create',
             });
+            createCSVBtn();
             break;
         case 'delete':
             params.type = 'info';

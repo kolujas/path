@@ -26,6 +26,9 @@
             <i class="fas fa-plus"></i>
         </button>
     </div>
+
+    @component('components.modal.csv')
+    @endcomponent
 @endsection
 
 @section('js')

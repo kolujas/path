@@ -24,6 +24,7 @@
             // });
         // });
         Route::middleware('admin')->group(function(){
+            Route::post('/exams/create/csv', 'ExamController@doCreateByCSV')->name('exam.doCreateByCSV');
             Route::post('/exams/create', 'ExamController@doCreate')->name('exam.doCreate');
             Route::put('/exams/{id_exam}/edit', 'ExamController@doEdit')->name('exam.doEdit');
             Route::delete('/exams/{id_exam}/delete', 'ExamController@doDelete')->name('exam.doDelete');
@@ -40,16 +41,17 @@
         // });
         Route::middleware('admin')->group(function(){
             Route::get('/panel/records', 'RecordController@panel')->name('record.panel');
-            
+
     /** 
      * ! StorageController
      */
             Route::get('/storage/records/{id_record}/file', 'StorageController@showRecordFile')->name('storage.showRecordFile');
             Route::get('/storage/candidates/{id_candidate}/file', 'StorageController@showCandidateFile')->name('storage.showCandidateFile');
-            
+
     /** 
      * ! CandidateController
      */
+            Route::post('/candidates/create/csv', 'CandidateController@doCreateByCSV')->name('candidate.doCreateByCSV');
             Route::post('/candidates/create', 'CandidateController@doCreate')->name('candidate.doCreate');
             Route::put('/candidates/{id_candidate}/edit', 'CandidateController@doEdit')->name('candidate.doEdit');
             Route::delete('/candidates/{id_candidate}/delete', 'CandidateController@doDelete')->name('candidate.doDelete');
