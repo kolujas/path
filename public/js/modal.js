@@ -283,12 +283,15 @@ class Modal{
             });
         }else if(element.name == 'scheduled_date_time'){
             let time = value.split(' ');
-            value = `${time}\T${time[1]}`;
+            value = `${time[0]}\T${time[1]}`;
         }
         let input = document.createElement('input');
         input.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');
         if(element.name == 'id_candidate' || element.name == 'id_exam' || element.name == 'id_record'){
             input.classList.add('input-id');
+        }
+        if(element.name == 'password'){
+            input.classList.add('confirmation');
         }
         if(element.hasOwnProperty('disabled') && element.disabled){
             input.classList.add('ever-disabled');

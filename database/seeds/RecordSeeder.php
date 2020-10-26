@@ -19,21 +19,21 @@
             } else {
                 Record::create( [
                     'id_evaluation' => 8,
-                    'file' => 1,
+                    'file' => 'records/1.pdf',
                 ] );
                 Record::create( [
                     'id_evaluation' => 9,
-                    'file' => 2,
+                    'file' => 'records/1.pdf',
                     'strikes' => 4,
                 ] );
                 Record::create( [
                     'id_evaluation' => 10,
-                    'file' => 3,
+                    'file' => 'records/1.pdf',
                     'strikes' => 8,
                 ] );
                 Record::create( [
                     'id_evaluation' => 11,
-                    'file' => 4,
+                    'file' => 'records/1.pdf',
                     'strikes' => 1,
                 ] );
             }
