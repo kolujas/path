@@ -40,11 +40,13 @@
         // });
         Route::middleware('admin')->group(function(){
             Route::get('/panel/records', 'RecordController@panel')->name('record.panel');
+            
     /** 
      * ! StorageController
      */
             Route::get('/storage/records/{id_record}/file', 'StorageController@showRecordFile')->name('storage.showRecordFile');
             Route::get('/storage/candidates/{id_candidate}/file', 'StorageController@showCandidateFile')->name('storage.showCandidateFile');
+            
     /** 
      * ! CandidateController
      */
