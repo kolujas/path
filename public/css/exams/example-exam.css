@@ -334,7 +334,7 @@ textarea{
 /* svg */
 
 .svg-width{
-    width: 50%;
+    width: 100%;
 }
 
 .save-button.hidden{
@@ -383,7 +383,9 @@ textarea{
         min-width: 19%;
     }
 
-    
+    .svg-width{
+        width: 75%;
+    }
 
     .fifth-question-container textarea{
         /* width: 50rem; */
@@ -409,9 +411,16 @@ textarea{
     }
 }
 
-
 /* * XL */
 
 @media(min-width: 1200px) {
-    /**/
+    /*  */
+}
+
+/* * XXL */
+
+@media(min-width: 1400px) {
+    .svg-width{
+        width: 50%;
+    }
 }

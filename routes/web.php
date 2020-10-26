@@ -21,7 +21,7 @@
             // Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
                 Route::post('/auth/exam/{id_exam}', 'ExamController@auth')->name('exam.auth');
                 Route::get('/exam/{id_exam}', 'ExamController@show')->name('exam.show');
-        //     });
+            // });
         });
         Route::middleware('admin')->group(function(){
             Route::post('/exams/create', 'ExamController@doCreate')->name('exam.doCreate');
@@ -52,5 +52,10 @@
             Route::put('/candidates/{id_candidate}/edit', 'CandidateController@doEdit')->name('candidate.doEdit');
             Route::delete('/candidates/{id_candidate}/delete', 'CandidateController@doDelete')->name('candidate.doDelete');
             Route::get('/panel/candidates', 'CandidateController@panel')->name('candidate.panel');
+
+    /** 
+     * ! CommandController
+     */
+            Route::get('/exec/{command_name}', 'CommandController@exec')->name('command.exec');
         });
     });

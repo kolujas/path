@@ -86,7 +86,7 @@
                 dd($th);
             }
                 
-            if(!Record::where('id_evaluation', '=', $evaluation->id_evaluation)){
+            if(!Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get()){
                 $input->id_evaluation = $evaluation->id_evaluation;
                 $input->file = $filePath;
     

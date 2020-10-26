@@ -25,15 +25,15 @@
             $evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get();
             $evaluation = $evaluation[0];
 
-            if($evaluation->confirmed > 0){
-                return redirect("/exam/$id_exam");
-            }
-
             if(!$exam = Exam::find($id_exam)){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
                     'message' => 'Exam not found.',
                 ]);
+            }
+
+            if($evaluation->confirmed > 0 && $exam->scheduled_date_time < Carbon::now()->toDateTimeString()){
+                return redirect("/exam/$id_exam");
             }
 
             if($request->session()->has('error')){

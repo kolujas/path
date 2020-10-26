@@ -17,7 +17,7 @@
 
 @section('main')
     <div class="example-exam floating-menu top left">
-    <span class="floating-button mr-2 mr-lg-0" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus dignissimos? Modi doloremque tempora quisquam ea vero asperiores nobis molestiae. <br /> <br /> {{ $exam->rules }}">
+        <span class="floating-button mr-2 mr-lg-0" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatibus dignissimos? Modi doloremque tempora quisquam ea vero asperiores nobis molestiae. <br /> <br /> {{ $exam->rules }}">
             <i class="fas fa-exclamation"></i>
         </span>
     </div>
@@ -41,7 +41,9 @@
             @csrf
             <input class="strikes" type="hidden" name="strikes" value="0">
             @foreach($exam->modules as $module)
-                @component("components.tab.content.$exam->level.$module->folder.$module->file")
+                @component("components.tab.content.$module->file", [
+                    'module' => $module
+                ])
                 @endcomponent
             @endforeach
 		</form>
