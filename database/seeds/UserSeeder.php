@@ -11,21 +11,21 @@
         public function run() {
             $users = User::get();
             if ( count( $users ) ) {
-                // foreach ($users as $user) {
+                foreach ($users as $user) {
                     # code...
-                // }
-                User::create( [
-                    'name' => 'Destroyer man',
-                    'email' => 'juanchaher99@gmail.com',
-                    'password' => \Hash::make( '12345678' ),
-                    'slug' => 'destroyer-man',
-                ] );
-                User::create( [
-                    'name' => 'Path tester',
-                    'email' => 'test@path.com',
-                    'password' => \Hash::make( 'PathTester20' ),
-                    'slug' => 'path-tester',
-                ] );
+                }
+                // User::create( [
+                //     'name' => 'Destroyer man',
+                //     'email' => 'juanchaher99@gmail.com',
+                //     'password' => \Hash::make( '12345678' ),
+                //     'slug' => 'destroyer-man',
+                // ] );
+                // User::create( [
+                //     'name' => 'Path tester',
+                //     'email' => 'test@path.com',
+                //     'password' => \Hash::make( 'PathTester20' ),
+                //     'slug' => 'path-tester',
+                // ] );
             } else {
                 User::create( [
                     'name' => 'Archimak',
