@@ -7,7 +7,8 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form class="modal-body" action="{{ preg_replace("/panel/", '', Request::path()) }}/create/csv">
+            <form id="csv-form" class="modal-body" action="{{ preg_replace("/panel/", '', Request::path()) }}/create/csv" method="post" enctype="multipart/form-data">
+                @csrf
                 <input id="csv"
                     class="form-input input-maked"
                     accept=".csv"
@@ -15,6 +16,16 @@
                     name="csv"
                     data-text="csv"
                     data-notfound="CSV not choose." title="Required">
+                    @if($errors->has("csv"))
+                        <span class="support support-box support-csv hidden">{{ $errors->first("csv") }}</span>
+                    @else
+                        <span class="support support-box support-csv hidden"></span>
+                    @endif
+                <div class="d-flex justify-content-end col-12 mt-3">
+                    <button type="submit" class="form-submit csv-form btn btn-one">
+                        Submit
+                    </button>
+                </div>
             </form>
         </div>
     </div>

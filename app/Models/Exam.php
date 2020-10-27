@@ -102,6 +102,15 @@
                         'candidates.required' => 'A Candidate is required.',
                     ],
                 ],
+            ],'csv' => [
+                'rules' => [
+                    'csv' => 'required|mimetypes:application/csvm+json,text/csv,text/csv-schema,application/vnd.ms-excel',
+                ], 'messages' => [
+                    'en' => [
+                        'csv.required' => 'CSV file is required.',
+                        'csv.mimetypes' => 'File must be a CSV.',
+                    ],
+                ],
             ],
         ];
         

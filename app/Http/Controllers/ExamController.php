@@ -151,6 +151,9 @@
                     ], 'edit' => (object)[
                         'rules' => Exam::$validation['edit']['rules'],
                         'messages' => Exam::$validation['edit']['messages']['en'],
+                    ], 'csv' => (object)[
+                        'rules' => Candidate::$validation['csv']['rules'],
+                        'messages' => Candidate::$validation['csv']['messages']['en'],
                     ],
                 ],
             ]);

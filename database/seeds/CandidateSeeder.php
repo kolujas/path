@@ -11,19 +11,19 @@
         public function run(){
             $candidates = Candidate::get();
             if ( count( $candidates ) ) {
-                // foreach ($candidates as $candidate) {
+                foreach ($candidates as $candidate) {
                     //
-                // }
-                Candidate::create( [
-                    'candidate_number' => 26,
-                    'full_name' => 'Candidate Test',
-                    'email' => 'correo@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Path',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'candidate-test',
-                ] );
+                }
+                // Candidate::create( [
+                //     'candidate_number' => 26,
+                //     'full_name' => 'Candidate Test',
+                //     'email' => 'correo@gmail.com',
+                //     'date_of_birth' => '1997-08-12',
+                //     'id_member' => 1,
+                //     'member' => 'Path',
+                //     'modules' => 'A1:L,A1:W',
+                //     'slug' => 'candidate-test',
+                // ] );
             } else {
                 Candidate::create( [
                     'candidate_number' => 1,

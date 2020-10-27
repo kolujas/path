@@ -23,6 +23,9 @@
                     ], 'edit' => (object)[
                         'rules' => Candidate::$validation['edit']['rules'],
                         'messages' => Candidate::$validation['edit']['messages']['en'],
+                    ], 'csv' => (object)[
+                        'rules' => Candidate::$validation['csv']['rules'],
+                        'messages' => Candidate::$validation['csv']['messages']['en'],
                     ],
                 ],
             ]);
@@ -67,7 +70,18 @@
          * @return [type]
          */
         public function doCreateByCSV(Request $request){
-            $input = (object) $request->all();
+            $filepath = $request->file('csv');
+            $file = fopen($filepath, "r");
+            $input = array();
+            $i = 0;
+            while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+                $num = count($filedata);
+                for ($c=0; $c < $num; $c++) {
+                    $input[$i][] = $filedata [$c];
+                }
+                $i++;
+            }
+            fclose($file);
             dd($input);
         }
         
