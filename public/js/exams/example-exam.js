@@ -24,10 +24,15 @@ for (const key in audioBtn) {
                 this.dataset.count = parseInt(this.dataset.count) + 1;
                 if (parseInt(this.dataset.count) < 3) {
                     ponePlay(key);
+                    document.querySelectorAll('.audio-div i')[key].classList.replace('fa-play', 'fa-pause');
                 } else {
                     this.classList.add('finished');
                     audio[key].src = "";
                 }
+            }
+            else{
+                audio[key].pause();
+                document.querySelectorAll('.audio-div i')[key].classList.replace('fa-pause', 'fa-play');
             }
             
         })
@@ -43,6 +48,9 @@ for (const key in audio) {
                 audioBtn[key].classList.add('playing');
             });
             input.addEventListener('ended', function(e){
+                audioBtn[key].classList.remove('playing');
+            });
+            input.addEventListener('pause', function(e){
                 audioBtn[key].classList.remove('playing');
             });
         }       

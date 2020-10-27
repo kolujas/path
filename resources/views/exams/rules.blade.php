@@ -28,8 +28,7 @@
             <form id="rules-form" action="/auth/exam/{{$exam->id_exam}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="rules-text bg-white p-4">
-                    <p class="h3 rules-rem text-left text-uppercase mb-0 text text-one">Remember:</p>
-                    <p class="rules-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem accusamus nemo sit molestias est minus eum odit illum aut vel non magnam, sunt eveniet facilis error deleniti quibusdam, voluptate nihil.</p>
+                    <p class="h3 rules-rem text-left mb-4">Remember:</p>
                     <p class="rules-p">{{ $exam->rules }}</p>
                 </div>
                 <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">

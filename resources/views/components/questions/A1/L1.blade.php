@@ -13,7 +13,7 @@
                     type="audio/ogg">
                 Tu navegador no soporta el audio.
             </audio>
-            <div>
+            <div class="audio-div">
                 <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
             </div>
         </div>
