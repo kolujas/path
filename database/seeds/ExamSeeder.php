@@ -14,7 +14,7 @@
             if ( count( $exams ) ) {
                 foreach ($exams as $exam) {
                     $exam->update([
-                        'scheduled_date_time' => '2022-01-01 12:00:00',
+                        'rules' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit facilis illo sunt dolor sit nisi maiores porro asperiores doloribus totam explicabo impedit voluptatum delectus, tenetur velit! Cum ipsum nam reiciendis labore quibusdam quis?',
                     ]);
                 }
             } else {
