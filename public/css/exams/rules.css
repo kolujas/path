@@ -104,12 +104,10 @@ header .rules-header > h2 {
     border-radius: .25rem;
     font-size: .8rem;
     text-transform: uppercase;
-
     background-color: transparent;
     color: var(--color-one);
     border: 2px solid var(--color-one);
     background-image: linear-gradient(90deg,var(--color-one) 50%,transparent 50%);
-
     box-shadow: none;
 }
 
@@ -128,7 +126,7 @@ header .rules-header > h2 {
 
 .btn,
 .input-file .input-button{
-    min-width: 6rem;
+    min-width: 7rem;
     max-height: 3rem;
 }
 
@@ -187,6 +185,6 @@ header .rules-header > h2 {
 /* * XXL */
 @media(min-width: 1400px) {
     .rules-box {
-        padding: 0 30rem;
+        padding: 0 20rem;
     }
 }

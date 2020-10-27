@@ -19,6 +19,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: var(--font-one) !important;
 }
 
 html,
@@ -78,10 +79,6 @@ body {
     /* * Help fonts. */
     --font-three: 'sans-serif';
     --font-four: 'calibri';
-}
-
-li, a, span, p, h1, h2, h3, h4, button, input{
-    font-family: var(--font-one);
 }
 
 .support-box{
