@@ -12,7 +12,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary text-white mx-2 ok-confirm" data-dismiss="modal">OK</button>
-          <button type="button" class="btn btn-primary text-white mx-2 cancel-confirm">Cancel</button>
+          <button type="button" class="btn btn-primary text-white mx-2 cancel-confirm" data-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
