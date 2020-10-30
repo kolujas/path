@@ -202,8 +202,54 @@
          * @return [type]
          */
         public function doCreateByCSV(Request $request){
-            $input = (object) $request->all();
-            dd($input);
+            $filepath = $request->file('csv');
+            $file = fopen($filepath, "r");
+            $exams = collect([]);
+            $candidates = [];
+            $input = [];
+            $indexes = [];
+            $i = 0;
+            while(($filedata = fgetcsv($file, 1000, ",")) !== false){
+                $num = count($filedata);
+                for($c = 0; $c < $num; $c++){
+                    if($i == 0){
+                        $indexes[] = $filedata[$c];
+                    }else{
+                        foreach ($indexes as $index => $value) {
+                            if($c == $index){
+                                $input[$i][$value] = $filedata[$c];
+                                if($value == 'password'){
+                                    $input[$i]['password'] = \Hash::make($filedata[$c]);
+                                }
+                                if($value == 'name'){
+                                    $input[$i]['slug'] = SlugService::createSlug(Exam::class, 'slug', $filedata[$c]);
+                                }
+                            }
+                        }
+                    }
+                }
+                if($i > 0){
+                    $exam = Exam::create((array) $input[$i]);
+                    $exams->push($exam);
+
+                    foreach(explode(',', $input[$i]['candidates']) as $id_candidate){
+                        if($candidate = Candidate::find($id_candidate)){
+                            $auxInput = (object) [
+                                'id_exam' => $exam['id_exam'],
+                                'id_candidate' => $id_candidate,
+                            ];
+                            $response = EvaluationController::doCreate($auxInput);
+                        }
+                    }
+                }
+                $i++;
+            }
+            fclose($file);
+            
+            return redirect("/panel/exams")->with('status', [
+                'code' => 200,
+                'message' => 'Exams created correctly.',
+            ]);
         }
         
         /**

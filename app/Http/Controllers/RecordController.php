@@ -48,7 +48,6 @@
                 return redirect("/exam/$id_exam/rules")->withErrors($validator)->withInput();
             }
 
-            $filePath = "storage/records/$evaluation->id_evaluation.pdf";
             $pdf = false;
             $data = (object) [
                 'exam' => $exam,
@@ -86,14 +85,15 @@
                 dd($th);
             }
                 
-            if(!Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get()){
+            if(!count($records = Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
                 $input->id_evaluation = $evaluation->id_evaluation;
                 $input->file = $filePath;
     
                 $record = Record::create((array) $input);
             }
 
-            $evaluation->update(['id_status' => 1]);
+            $evaluation->id_status = 1;
+            $evaluation->save();
             
             foreach (Auth::guard('candidates')->user()->tokens as $token) {
                 $token->delete();

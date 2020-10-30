@@ -29,7 +29,7 @@ class AuthServiceProvider extends ServiceProvider
         Passport::routes();
         Passport::tokensCan([
             'users' => 'Admin user',
-            'NAFIE' => 'Candidate user',
+            'candidates_api' => 'Candidate user',
         ]);
     }
 }

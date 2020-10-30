@@ -26,12 +26,10 @@
             $time = explode(' ', $exam->scheduled_date_time)[1];
             $hours = explode(':', $time)[0];
             $minutes = explode(':', $time)[1];
-            $seconds = explode(':', $time)[2];
             foreach ($candidate->modules() as $module) {
                 $module_time = explode(':', $module->time);
                 $hours += $module_time[0];
                 $minutes += $module_time[1];
-                $seconds += $module_time[2];
             }
             if($request->route()->getName() == 'record.doCreate'){
                 $minutes += 3;
@@ -46,10 +44,7 @@
             if($hours < 10){
                 $hours = "0$hours";
             }
-            if($seconds < 10){
-                $seconds = "0$seconds";
-            }
-            $end_time = Carbon::parse("$date $hours:$minutes:$seconds")->toDateTimeString();
+            $end_time = Carbon::parse("$date $hours:$minutes:00")->toDateTimeString();
 
             if($now > $end_time){
                 $request->session()->put('error', [

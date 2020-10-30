@@ -55,7 +55,7 @@
 
             Auth::guard('candidates')->login($candidate, true);
             $candidate = Auth::guard('candidates')->user();
-            $candidate->token =  $candidate->createToken('Path Access Token', ['NAFIE'])->accessToken;
+            $candidate->token =  $candidate->createToken('Path Access Token', ['candidates_api'])->accessToken;
 
             return response()->json([
                 'code' => 200,

@@ -282,8 +282,21 @@ class Modal{
                 }
             });
         }else if(element.name == 'scheduled_date_time'){
-            let time = value.split(' ');
-            value = `${time[0]}\T${time[1]}`;
+            let date = value.split(' ')[0];
+            if(/\//.exec(date)){
+                let years = parseInt(date.split('/')[0]);
+                let months = parseInt(date.split('/')[1]);
+                let days = parseInt(date.split('/')[2]);
+                if(months < 10){
+                    months = `0${months}`;
+                }
+                if(days < 10){
+                    days = `0${days}`;
+                }
+                date = `${years}-${months}-${days}`;
+            }
+            let time = value.split(' ')[1];
+            value = `${date}\T${time}`;
         }
         let input = document.createElement('input');
         input.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');

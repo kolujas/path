@@ -51,7 +51,7 @@ return [
             'provider' => 'candidates',
         ],
 
-        'NAFIE' => [
+        'candidates_api' => [
             'driver' => 'passport',
             'provider' => 'candidates',
         ],

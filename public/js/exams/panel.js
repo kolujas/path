@@ -137,8 +137,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         order: {
             by: 'scheduled_date_time',
             btn: true,
-        },
-        event: {
+        }, event: {
             function: changeContent,
             params: {
                 table: table,
@@ -162,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, required: true},
             {title: 'Password', name: 'password', type: 'password', required: true},
             {title: 'Confirm Password', name: 'password_confirmation', type: 'password', required: true},
-            {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'date', required: true},
+            {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
         ]);
         setActions({
             type: 'create'

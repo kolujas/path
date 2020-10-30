@@ -318,12 +318,22 @@ async function sendData(){
 }
 
 function addTime(scheduled_date_time, index) {
-    let years = parseInt(scheduled_date_time.split(' ')[0].split('-')[0]),
-        months = parseInt(scheduled_date_time.split(' ')[0].split('-')[1]),
-        days = parseInt(scheduled_date_time.split(' ')[0].split('-')[2]),
-        hours = parseInt(scheduled_date_time.split(' ')[1].split(':')[0]),
-        minutes = parseInt(scheduled_date_time.split(' ')[1].split(':')[1]),
-        seconds = parseInt(scheduled_date_time.split(' ')[1].split(':')[2]);
+    let date = scheduled_date_time.split(' ')[0],
+        time = scheduled_date_time.split(' ')[1],
+        years, months, days,
+        hours, minutes, seconds = '00';
+    if(/-/.exec(date)){
+        years = parseInt(date.split('-')[0]);
+        months = parseInt(date.split('-')[1]);
+        days = parseInt(date.split('-')[2]);
+    }else if(/\//.exec(date)){
+        years = parseInt(date.split('/')[0]);
+        months = parseInt(date.split('/')[1]);
+        days = parseInt(date.split('/')[2]);
+    }
+
+    hours = parseInt(time.split(':')[0]);
+    minutes = parseInt(time.split(':')[1]);
     for (const key in exam.modules) {
         if(key < index){
             const module = exam.modules[key];
@@ -345,10 +355,6 @@ function addTime(scheduled_date_time, index) {
             if(hours < 10){
                 hours = `0${hours}`;
             }
-            seconds = seconds + parseInt(module.time.split(':')[2]);
-            if(seconds < 10){
-                seconds = `0${seconds}`;
-            }
             scheduled_date_time = `${years}-${months}-${days} ${hours}:${minutes}:${seconds}`;
         }
     }
@@ -362,18 +368,29 @@ function setTimer(module, tab){
             scheduled_date_time = addTime(scheduled_date_time, key);
         }
     }
-    let years = parseInt(scheduled_date_time.split(' ')[0].split('-')[0]);
-    let months = parseInt(scheduled_date_time.split(' ')[0].split('-')[1]);
+    let date = scheduled_date_time.split(' ')[0],
+        time = scheduled_date_time.split(' ')[1],
+        years, months, days,
+        hours, minutes, seconds = '00';
+    if(/-/.exec(date)){
+        years = parseInt(date.split('-')[0]);
+        months = parseInt(date.split('-')[1]);
+        days = parseInt(date.split('-')[2]);
+    }else if(/\//.exec(date)){
+        years = parseInt(date.split('/')[0]);
+        months = parseInt(date.split('/')[1]);
+        days = parseInt(date.split('/')[2]);
+    }
+
+    hours = parseInt(time.split(':')[0]) + parseInt(module.time.split(':')[0]);
+    minutes = parseInt(time.split(':')[1]) + parseInt(module.time.split(':')[1]);
+
     if(months < 10){
         months = `0${months}`;
     }
-    let days = parseInt(scheduled_date_time.split(' ')[0].split('-')[2]);
     if(days < 10){
         days = `0${days}`;
     }
-
-    let hours = parseInt(scheduled_date_time.split(' ')[1].split(':')[0]) + parseInt(module.time.split(':')[0]);
-    let minutes = parseInt(scheduled_date_time.split(' ')[1].split(':')[1]) + parseInt(module.time.split(':')[1]);
     if(minutes > 59){
         minutes = minutes - 60;
         hours++;
@@ -384,13 +401,10 @@ function setTimer(module, tab){
     if(hours < 10){
         hours = `0${hours}`;
     }
-    let seconds = parseInt(scheduled_date_time.split(' ')[1].split(':')[2]) + parseInt(module.time.split(':')[2]);
-    if(seconds < 10){
-        seconds = `0${seconds}`;
-    }
-    let time = `${years}-${months}-${days} ${hours}:${minutes}:${seconds}`;
+
+    let full_time = `${years}-${months}-${days} ${hours}:${minutes}:${seconds}`;
     let countDown = new CountDown({
-        scheduled_date_time: time,
+        scheduled_date_time: full_time,
         timer: {
             hours: true,
             minutes: true,

@@ -16,7 +16,6 @@
     text-decoration: none;
     transition: .17s ease-in-out;
     transition-property: color, background-color, background-position, border-color, box-shadow;
-    font-family: 'Open Sans';
     font-weight: 100;
     font-style: normal;
     background-origin: border-box;
@@ -26,6 +25,7 @@
     font-size: .8rem;
     text-transform: uppercase;
     border: 2px solid;
+    font-family: var(--font-one) !important;
 }
 
 .btn.btn-small{

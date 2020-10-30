@@ -72,17 +72,37 @@
         public function doCreateByCSV(Request $request){
             $filepath = $request->file('csv');
             $file = fopen($filepath, "r");
-            $input = array();
+            $candidates = collect([]);
+            $input = [];
+            $indexes = [];
             $i = 0;
-            while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
+            while(($filedata = fgetcsv($file, 1000, ",")) !== false){
                 $num = count($filedata);
-                for ($c=0; $c < $num; $c++) {
-                    $input[$i][] = $filedata [$c];
+                for($c = 0; $c < $num; $c++){
+                    if($i == 0){
+                        $indexes[] = $filedata[$c];
+                    }else{
+                        foreach ($indexes as $index => $value) {
+                            if($c == $index){
+                                $input[$i][$value] = $filedata[$c];
+                                if($value == 'full_name'){
+                                    $input[$i]['slug'] = SlugService::createSlug(Candidate::class, 'slug', $filedata[$c]);
+                                }
+                            }
+                        }
+                    }
+                }
+                if($i > 0){
+                    $candidates->push(Candidate::create((array) $input[$i]));
                 }
                 $i++;
             }
             fclose($file);
-            dd($input);
+            
+            return redirect("/panel/candidates")->with('status', [
+                'code' => 200,
+                'message' => 'Candidates created correctly.',
+            ]);
         }
         
         /**
