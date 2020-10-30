@@ -21,8 +21,8 @@ for (const key in audioBtn) {
                 if (!this.dataset.count) {
                     this.dataset.count = 0;
                 }
-                this.dataset.count = parseInt(this.dataset.count) + 1;
-                if (parseInt(this.dataset.count) < 3) {
+                // this.dataset.count = parseInt(this.dataset.count) + 1;
+                if (parseInt(this.dataset.count) < 2) {
                     ponePlay(key);
                     document.querySelectorAll('.audio-div i')[key].classList.replace('fa-play', 'fa-pause');
                 } else {
@@ -49,6 +49,10 @@ for (const key in audio) {
             });
             input.addEventListener('ended', function(e){
                 audioBtn[key].classList.remove('playing');
+                this.nextElementSibling.children[1].dataset.count = parseInt(this.nextElementSibling.children[1].dataset.count) + 1; 
+                if(parseInt(this.nextElementSibling.children[1].dataset.count) >= 2){
+                    this.classList.add('finished');
+                }               
             });
             input.addEventListener('pause', function(e){
                 audioBtn[key].classList.remove('playing');
@@ -79,35 +83,39 @@ function disableF5(e) {
 const modal = document.querySelector('.modal-strikes');
 
 
-// document.addEventListener('visibilitychange', function(){ 
-   
-//     if(document.visibilityState == 'hidden'){
-//         if(!document.querySelector('.strikes').value){
-//         document.querySelector('.strikes').value = 1;
-//         }else{
-//             document.querySelector('.strikes').value++;
-//             if(document.querySelector('.strikes').value >= 1){
-//                 const modalBody = document.querySelector('.modal-body p');
-//                 modalBody.innerHTML = "Reprobaste";
-//                 $('.modal-strikes').modal();
-//             }
-//         }
-//     }
-//  });
+document.addEventListener('visibilitychange', function(){ 
+    if(document.visibilityState == 'hidden'){
+        if(!document.querySelector('.strikes').value){
+            document.querySelector('.strikes').value = 0;        
+        }
+            if(document.querySelector('.strikes').value >= 1){
+                const modalBody = document.querySelector('.modal-body p');
+                modalBody.innerHTML = "Tu mensaje ha sido marcado";
+                $('.modal-strikes').modal();
+            }else{
+                const modalBody = document.querySelector('.modal-body p');
+                document.querySelector('.strikes').value++;
+                modalBody.innerHTML = "Si volves a salir te marcaremos el examen";
+                $('.modal-strikes').modal();
+            }
+         
+        
+    }
+ });
 
-// $(document).mouseleave(function () {
-//     if(!document.querySelector('.strikes').value){
-//         document.querySelector('.strikes').value = 0;
-//     }else{
-//     //     document.querySelector('.strikes').value++;
-//         if(document.querySelector('.strikes').value == 0){
-//             const modalBody = document.querySelector('.modal-body p');
-//             modalBody.innerHTML = "Si salis de la pagina reprobás";
-//             $('.modal-strikes').modal();
-//         }
-//     }
+$(document).mouseleave(function () {
+    if(!document.querySelector('.strikes').value){
+        document.querySelector('.strikes').value = 0;
+    }else{
+    //     document.querySelector('.strikes').value++;
+        if(document.querySelector('.strikes').value == 0){
+            const modalBody = document.querySelector('.modal-body p');
+            modalBody.innerHTML = "Si salis de la pagina te marcaremos el examen";
+            $('.modal-strikes').modal();
+        }
+    }
     
-// });
+});
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
@@ -205,6 +213,7 @@ for (const submit of submitsExam) {
  cancelConfirm.addEventListener('click', function(e){
     e.preventDefault();
  })
+ 
 
 
  // Archimak
