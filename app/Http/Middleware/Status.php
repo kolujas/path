@@ -15,6 +15,7 @@
          */
         public function handle($request, Closure $next){
             $candidate = Auth::guard('candidates')->user();
+            $id_evaluation = $request->route('id_evaluation');
             $evaluation = Evaluation::find($id_evaluation);
 
             if(!$evaluation = Evaluation::where([['id_exam', '=', $evaluation->id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get()){
