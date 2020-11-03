@@ -15,22 +15,22 @@
      * ! ExamController
      */
     Route::get('/exam/{id_exam}/finished', 'ExamController@finished')->name('exam.finished');
-    // Route::middleware('auth.guards')->group(function(){
-        // Route::middleware(['ended', 'student', 'status'])->group(function(){
+    Route::middleware('auth.guards')->group(function(){
+        Route::middleware(['ended', 'student', 'status'])->group(function(){
             Route::get('/exam/{id_exam}/rules', 'ExamController@rules')->name('exam.rules');
             Route::post('/auth/exam/{id_exam}', 'ExamController@auth')->name('exam.auth');
             Route::middleware(['scheduled_date_time'])->group(function(){
             // Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
                 Route::get('/exam/{id_exam}', 'ExamController@show')->name('exam.show');
-            // });
-        // });
-        // Route::middleware('admin')->group(function(){
+            });
+        });
+        Route::middleware('admin')->group(function(){
             Route::post('/exams/create/csv', 'ExamController@doCreateByCSV')->name('exam.doCreateByCSV');
             Route::post('/exams/create', 'ExamController@doCreate')->name('exam.doCreate');
             Route::put('/exams/{id_exam}/edit', 'ExamController@doEdit')->name('exam.doEdit');
             Route::delete('/exams/{id_exam}/delete', 'ExamController@doDelete')->name('exam.doDelete');
             Route::get('/panel/exams', 'ExamController@panel')->name('exam.panel');
-        // });
+        });
         
     /** 
      * ! RecordController
@@ -39,9 +39,9 @@
             Route::middleware(['scheduled_date_time'])->group(function(){
             // Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
                 Route::post('/exam/{id_exam}/record', 'RecordController@doCreate')->name('record.doCreate');
-            // });
-        // });
-        // Route::middleware('admin')->group(function(){
+            });
+        });
+        Route::middleware('admin')->group(function(){
             Route::get('/panel/records', 'RecordController@panel')->name('record.panel');
 
     /** 
@@ -63,5 +63,5 @@
      * ! CommandController
      */
             Route::get('/exec/{command_name}', 'CommandController@exec')->name('command.exec');
-        // });
-    // });
+        });
+    });

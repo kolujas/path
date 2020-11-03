@@ -91,12 +91,12 @@ document.addEventListener('visibilitychange', function(){
             if(document.querySelector('.strikes').value >= 1){
                 const modalBody = document.querySelector('.modal-body p');
                 modalBody.innerHTML = "Tu mensaje ha sido marcado";
-                $('.modal-strikes').modal();
+                // $('.modal-strikes').modal();
             }else{
                 const modalBody = document.querySelector('.modal-body p');
                 document.querySelector('.strikes').value++;
                 modalBody.innerHTML = "Si volves a salir te marcaremos el examen";
-                $('.modal-strikes').modal();
+                // $('.modal-strikes').modal();
             }
          
         
@@ -111,7 +111,7 @@ $(document).mouseleave(function () {
         if(document.querySelector('.strikes').value == 0){
             const modalBody = document.querySelector('.modal-body p');
             modalBody.innerHTML = "Si salis de la pagina te marcaremos el examen";
-            $('.modal-strikes').modal();
+            // $('.modal-strikes').modal();
         }
     }
     
@@ -267,8 +267,15 @@ function crossWord() {
     }
 }
 
+function parseSpaces(text){
+    if (/ /.exec(text)) {
+        text = text.replace(/ /, '_');
+    }
+    return text;
+}
+
 function current(data = undefined){
-    document.querySelector(`#${data.module.folder}-${data.module.name} .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+    document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name} .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
 }
 
 function end(data = undefined){

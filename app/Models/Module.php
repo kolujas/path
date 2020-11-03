@@ -9,6 +9,7 @@
          * @var array
          */
         static $array = [
+            // 1
             'A1:L' => [
                 'name' => 'L',
                 'folder' => 'A1',
@@ -21,7 +22,9 @@
                 'file' => 'writing',
                 'time' => '00:15:00',
                 'questions' => 6,
-            ], 'A1 Entry:L' => [
+            ],
+            // 2
+            'A1 Entry:L' => [
                 'name' => 'L',
                 'folder' => 'A1 Entry',
                 'file' => 'listening',
@@ -33,7 +36,9 @@
                 'file' => 'writing',
                 'time' => '00:15:00',
                 'questions' => 5,
-            ], 'A1 Access:L' => [
+            ],
+            // 3
+            'A1 Access:L' => [
                 'name' => 'L',
                 'folder' => 'A1 Access',
                 'file' => 'listening',
@@ -45,7 +50,9 @@
                 'file' => 'writing',
                 'time' => '00:15:00',
                 'questions' => 4,
-            ], 'A1 Achiever:L' => [
+            ],
+            // 4
+            'A1 Achiever:L' => [
                 'name' => 'L',
                 'folder' => 'A1 Achiever',
                 'file' => 'listening',
@@ -57,7 +64,9 @@
                 'file' => 'writing',
                 'time' => '00:15:00',
                 'questions' => 5,
-            ], 'A2 Preliminary:L' => [
+            ],
+            // 5
+            'A2 Preliminary:L' => [
                 'name' => 'L',
                 'folder' => 'A2 Preliminary',
                 'file' => 'listening',
@@ -69,7 +78,9 @@
                 'file' => 'writing',
                 'time' => '00:15:00',
                 'questions' => 5,
-            ], 'A2 Elementary:L' => [
+            ],
+            // 6
+            'A2 Elementary:L' => [
                 'name' => 'L',
                 'folder' => 'A2 Elementary',
                 'file' => 'listening',
@@ -81,7 +92,9 @@
                 'file' => 'writing',
                 'time' => '00:15:00',
                 'questions' => 5,
-            ], 'B1 Progress:L' => [
+            ],
+            // 7
+            'B1 Progress:L' => [
                 'name' => 'L',
                 'folder' => 'B1 Progress',
                 'file' => 'listening',
@@ -93,7 +106,9 @@
                 'file' => 'writing',
                 'time' => '00:15:00',
                 'questions' => 5,
-            ], 'B2 Competency:L' => [
+            ],
+            // 8
+            'B2 Competency:L' => [
                 'name' => 'L',
                 'folder' => 'B2 Competency',
                 'file' => 'listening',
