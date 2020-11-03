@@ -16,16 +16,15 @@
     class ExamController extends Controller{
         /**
          * * Show the 'exam rules' page.
-         * @param null|string $id_exam - Exam primary key.
+         * @param null|string $id_evaluation - Evaluation primary key.
          * @param Request $request
          * @return [type]
          */
-        public function rules(Request $request, $id_exam = null){
+        public function rules(Request $request, $id_evaluation = null){
             $candidate = Auth::guard('candidates')->user();
-            $evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get();
-            $evaluation = $evaluation[0];
+            $evaluation = Evaluation::find($id_evaluation);
 
-            if(!$exam = Exam::find($id_exam)){
+            if(!$exam = Exam::find($evaluation->id_exam)){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
                     'message' => 'Exam not found.',
@@ -33,7 +32,7 @@
             }
 
             if($evaluation->confirmed > 0 && $exam->scheduled_date_time < Carbon::now()->toDateTimeString()){
-                return redirect("/exam/$id_exam");
+                return redirect("/exam/$evaluation->id_exam");
             }
 
             if($request->session()->has('error')){
@@ -110,11 +109,13 @@
         
         /**
          * * Show the 'exam' page.
-         * @param null|string $id_exam - Exam primary key.
+         * @param null|string $id_evaluation - Evaluation primary key.
          * @return [type]
          */
-        public function show($id_exam = null){
-            if(!$exam = Exam::find($id_exam)){
+        public function show($id_evaluation = null){
+            $evaluation = Evaluation::find($id_evaluation);
+
+            if(!$exam = Exam::find($evaluation->id_exam)){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
                     'message' => 'Exam not found.',
@@ -330,10 +331,10 @@
         
         /**
          * * Show the 'exams panel' page.
-         * @param null|string $id_exam - Exam primary key.
+         * @param null|string $id_evaluation - Evaluation primary key.
          * @return [type]
          */
-        public function finished($id_exam){
+        public function finished($id_evaluation){
             return view('exams.finished', [
                 //
             ]);

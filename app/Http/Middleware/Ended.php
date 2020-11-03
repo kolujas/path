@@ -2,6 +2,7 @@
     namespace App\Http\Middleware;
 
     use App\Exceptions\Handler;
+    use App\Models\Evaluation;
     use App\Models\Exam;
     use Auth;
     use Carbon\Carbon;
@@ -17,8 +18,9 @@
          */
         public function handle($request, Closure $next){
             $candidate = Auth::guard('candidates')->user();
-            $id_exam = $request->route('id_exam');
-            $exam = Exam::find($id_exam);
+            $id_evaluation = $request->route('id_evaluation');
+            $evaluation = Evaluation::find($id_evaluation);
+            $exam = Exam::find($evaluation->id_exam);
 
             $now = Carbon::now()->toDateTimeString();
 
