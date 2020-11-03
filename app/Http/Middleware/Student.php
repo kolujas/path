@@ -1,8 +1,8 @@
 <?php
     namespace App\Http\Middleware;
 
-    use App\Models\Exam;
     use App\Models\Evaluation;
+    use App\Models\Exam;
     use Auth;
     use Closure;
 
@@ -16,7 +16,9 @@
          */
         public function handle($request, Closure $next){
             $candidate = Auth::guard('candidates')->user();
-            $exam = Exam::find($request->route('id_exam'));
+            $evaluation = Evaluation::find($id_evaluation);
+            $exam = Exam::find($evaluation->id_exam);
+
             $isStudent = false;
             foreach ($exam->candidates() as $candidate) {
                 if($candidate->id_candidate == $candidate->id_candidate){

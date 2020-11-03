@@ -15,9 +15,9 @@
          */
         public function handle($request, Closure $next){
             $candidate = Auth::guard('candidates')->user();
-            $id_exam = $request->route('id_exam');
+            $evaluation = Evaluation::find($id_evaluation);
 
-            if(!$evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get()){
+            if(!$evaluation = Evaluation::where([['id_exam', '=', $evaluation->id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get()){
                 $request->session()->put('error', [
                     'code' => 403,
                     'message' => 'Evaluation not found.',

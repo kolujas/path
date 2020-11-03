@@ -1,6 +1,7 @@
 <?php
     namespace App\Http\Middleware;
 
+    use App\Models\Evaluation;
     use App\Models\Exam;
     use Auth;
     use Carbon\Carbon;
@@ -16,8 +17,9 @@
          */
         public function handle($request, Closure $next){
             $candidate = Auth::guard('candidates')->user();
-            $id_exam = $request->route('id_exam');
-            $exam = Exam::find($id_exam);
+            $id_evaluation = $request->route('id_evaluation');
+            $evaluation = Evaluation::find($id_evaluation);
+            $exam = Exam::find($evaluation->id_exam);
 
             $now = Carbon::now()->toDateTimeString();
             
@@ -26,7 +28,7 @@
                     'code' => 403,
                     'message' => 'Exam did not start.',
                 ]);
-                return redirect("/exam/$id_exam/rules");
+                return redirect("/exam/$evaluation->id_exam/rules");
             }
             
             return $next($request);
