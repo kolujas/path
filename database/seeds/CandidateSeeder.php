@@ -14,16 +14,6 @@
                 foreach ($candidates as $candidate) {
                     //
                 }
-                // Candidate::create( [
-                //     'candidate_number' => 26,
-                //     'full_name' => 'Candidate Test',
-                //     'email' => 'correo@gmail.com',
-                //     'date_of_birth' => '1997-08-12',
-                //     'id_member' => 1,
-                //     'member' => 'Path',
-                //     'modules' => 'A1:L,A1:W',
-                //     'slug' => 'candidate-test',
-                // ] );
             } else {
                 Candidate::create( [
                     'candidate_number' => 1,
@@ -42,7 +32,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Belen\'s barquito',
-                    'modules' => 'A1:L,A1:W',
+                    'modules' => 'A1 Entry:L,A1 Entry:W',
                     'slug' => 'manolo-gomez',
                 ] );
                 Candidate::create( [
@@ -52,7 +42,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Only Pros',
-                    'modules' => 'A1:L,A1:W',
+                    'modules' => 'A1 Access:L,A1 Access:W',
                     'slug' => 'antonio-gutierrez',
                 ] );
                 Candidate::create( [
@@ -62,7 +52,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Beauty Asociados',
-                    'modules' => 'A1:L,A1:W',
+                    'modules' => 'A1 Achiever:L,A1 Achiever:W',
                     'slug' => 'lola-lopez',
                 ] );
                 Candidate::create( [
@@ -72,7 +62,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Hector\'s House',
-                    'modules' => 'A1:L,A1:W',
+                    'modules' => 'A2 Elementary:L,A2 Elementary:W',
                     'slug' => 'hector-image',
                 ] );
                 Candidate::create( [
@@ -82,7 +72,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
-                    'modules' => 'A1:L,A1:W',
+                    'modules' => 'A2 Preliminary:L,A2 Preliminary:W',
                     'slug' => 'pepe-diaz',
                 ] );
                 Candidate::create( [
@@ -92,7 +82,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Belen\'s barquito',
-                    'modules' => 'A1:L,A1:W',
+                    'modules' => 'B1 Progress:L,B1 Progress:W',
                     'slug' => 'manolo-gomez',
                 ] );
                 Candidate::create( [
@@ -102,182 +92,9 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Only Pros',
-                    'modules' => 'A1:L,A1:W',
+                    'modules' => 'B2 Competency:L,B2 Competency:W',
                     'slug' => 'antonio-gutierrez',
                     'file' => 'candidates/1.png',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 9,
-                    'full_name' => 'Lola Lopez',
-                    'email' => 'correo-4@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Beauty Asociados',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'lola-lopez',
-                    'file' => 'candidates/1.png',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 10,
-                    'full_name' => 'Héctor Image',
-                    'email' => 'correo-5@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Hector\'s House',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'hector-image',
-                    'file' => 'candidates/1.png',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 11,
-                    'full_name' => 'Pepe Diaz',
-                    'email' => 'correo-6@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Wayne Enterprises',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'pepe-diaz',
-                    'file' => 'candidates/1.png',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 12,
-                    'full_name' => 'Manolo Gomez',
-                    'email' => 'correo-7@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Belen\'s barquito',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'manolo-gomez',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 13,
-                    'full_name' => 'Antonio Gutierrez',
-                    'email' => 'correo-8@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Only Pros',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'antonio-gutierrez',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 14,
-                    'full_name' => 'Lola Lopez',
-                    'email' => 'correo-9@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Beauty Asociados',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'lola-lopez',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 15,
-                    'full_name' => 'Héctor Image',
-                    'email' => 'correo-10@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Hector\'s House',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'hector-image',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 16,
-                    'full_name' => 'Pepe Diaz',
-                    'email' => 'correo-11@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Wayne Enterprises',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'pepe-diaz',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 17,
-                    'full_name' => 'Manolo Gomez',
-                    'email' => 'correo-12@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Belen\'s barquito',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'manolo-gomez',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 18,
-                    'full_name' => 'Antonio Gutierrez',
-                    'email' => 'correo-13@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Only Pros',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'antonio-gutierrez',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 19,
-                    'full_name' => 'Lola Lopez',
-                    'email' => 'correo-14@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Beauty Asociados',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'lola-lopez',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 20,
-                    'full_name' => 'Héctor Image',
-                    'email' => 'correo-15@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Hector\'s House',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'hector-image',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 21,
-                    'full_name' => 'Pepe Diaz',
-                    'email' => 'correo-16@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Wayne Enterprises',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'pepe-diaz',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 22,
-                    'full_name' => 'Manolo Gomez',
-                    'email' => 'correo-17@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Belen\'s barquito',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'manolo-gomez',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 23,
-                    'full_name' => 'Antonio Gutierrez',
-                    'email' => 'correo-18@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Only Pros',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'antonio-gutierrez',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 24,
-                    'full_name' => 'Lola Lopez',
-                    'email' => 'correo-19@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Beauty Asociados',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'lola-lopez',
-                ] );
-                Candidate::create( [
-                    'candidate_number' => 25,
-                    'full_name' => 'Héctor Image',
-                    'email' => 'correo-20@gmail.com',
-                    'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Hector\'s House',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'hector-image',
                 ] );
             }
         }

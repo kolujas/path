@@ -7,6 +7,7 @@
     use App\Models\Exam;
     use App\User;
     use Auth;
+    use Carbon\Carbon;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Session;
     use Illuminate\Support\Facades\Validator;
@@ -99,6 +100,7 @@
                 ]);
             }
 
+            $exam->update(['scheduled_date_time' => Carbon::now()->addSeconds(15)->toDateTimeString()]);
             Auth::guard('candidates')->login($candidate, true);
             return redirect("exam/$exam->id_exam/rules");
         }

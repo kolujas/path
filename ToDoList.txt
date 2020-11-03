@@ -1,7 +1,105 @@
 =================
 *   TODO LIST   *
 =================
+- Cambiarle el nombre a los Módulos
 
 =================
 *   PREGUNTAS   *
 =================
+
+=================
+*     NOTAS     *
+=================
+A1 Entry Listening:
+    - Es tal cual el A1 Listening que ya tenemos, cambiando la información.
+
+A1 Entry Writing:
+    - Es tal cual el A1 Writing que ya tenemos, cambiando la información.
+    - Tiene un nuevo SVG que tenemos que pedir.
+    - Pero a diferencia del que tenemos el ejercicio 4B ya no está.
+
+A1 Access Listening:
+    Ejercicios:
+    1  Además del audio, usa cards al estilo "A1 Entry Writing ejercicio 1" e inputs de una sola letra.
+    2  Además del audio, es similar al "A1 Entry Listening ejercicio 3" pero en vez de tener inputs son radio buttons.
+    3  Además del audio, es similar al "A1 Entry Writing ejercicio 4".
+    
+A1 Access Writing:
+    Ejercicios:
+    1  Misma logica que el "A1 Entry Writing ejercicio 1", pero las cards son reemplazadas.
+    2a Es una fusion entre el "A1 Entry Listening ejercicio 1" y las cards del "A1 Entry Writing ejercicio 1".
+    2b Es similar al "A1 Entry Writing ejercicio 4".
+    3  Una tabla que antes no se creo, pero que no sabemos si usar selects o inputs.
+    4  Es similar al "A1 Entry Writing ejercicio 5".
+
+A1 Achiever Listening:
+    Ejercicios:
+    1  Además del audio, usa la misma logica que el "A1 Entry Writing ejercicio 1" pero con list items verticales.
+    2  Además del audio, agregar 3 tablitas de bingo que tienen checkboxes que al estar seleccionadas el checkbox esta tachado, tiene tambien un input para determinar cual tabla es la correcta.
+    3  Además del audio, usa la misma logica que el "A1 Entry Writing ejercicio 1", pero con list items horizontales.
+    
+A1 Achiever Writing:
+    Ejercicios:
+    1  Tiene una parrafo con una imagen, y radio buttons.
+    2  Es similar al "A1 Entry Writing ejercicio 4" pero sin imagen.
+    3  Consultar exactamente como es la idea para éste ejercicio.
+    4a Es similar al "A1 Entry Writing ejercicio 1".
+    4b 2 textareas de 2 renglones.
+    5  1 textarea y un parrafo.
+
+A2 Preliminary Listening:
+    Ejercicios:
+    1  Además del audio, es similar que el "A1 Entry Writing ejercicio 1" pero se repite 3 veces.
+    2  Además del audio, es similar que el "A1 Achiever Writing ejercicio 4b" pero en vez de textareas usa inputs.
+    3  Consultar exactamente como hacer éste ejercicio.
+    
+A2 Preliminary Writing:
+    Ejercicios:
+    1a 4 cards con imagenes, una tabla que dentro tiene 3 textareas de 2 renglones.
+    1b Es similar que el "A2 Preliminary Listening ejercicio 2" pero con 1 único input.
+    2  Es similar al "A1 Entry Writing ejercicio 2" pero con 1 input.
+    3  3 list items y un textarea.
+    4  Es similar al ejercicio 2 y tiene un parrafo.
+    5  1 textarea.
+
+A2 Elementary Listening:
+    Ejercicios:
+    1  Además del audio, es similar que el "A1 Access Listening ejercicio 2".
+    2  Además del audio, es similar que el "A1 Achiever Writing ejercicio 4b".
+    3  Consultar exactamente como hacer éste ejercicio.
+    
+A2 Elementary Writing:
+    Ejercicios:
+    1  Es similar que el "A1 Achiever Writing ejercicio 4b" pero con un parrafo.
+    2  Es similar al "A1 Entry Writing ejercicio 2" pero con 1 input.
+    3  Es similar al "A1 Entry Writing ejercicio 2" pero con 1 input.
+    4  1 textarea.
+    5  1 textarea.
+
+B1 Progress Listening:
+    Ejercicios:
+    1  Además del audio, tiene list items con radio buttons.
+    2  Además del audio, es similar que el "A1 Achiever Writing ejercicio 4b".
+    3  Además del audio, 1 textarea.
+    
+B1 Progress Writing:
+    Ejercicios:
+    1  Es similar que el "A2 Elementary Writing ejercicio 1".
+    2  Es similar que el "A2 Elementary Writing ejercicio 1".
+    3  Es similar que el "A2 Elementary Writing ejercicio 1" pero con 1 textarea.
+    4  Consultar exactamente como hacer éste ejercicio.
+    5  1 textarea con 2 list items.
+
+B2 Competency Listening:
+    Ejercicios:
+    1  Además del audio, es similar que el "B1 Progress Listening".
+    2  Además del audio, es similar que el "A1 Achiever Writing ejercicio 4b".
+    3  Además del audio, tiene 2 textareas.
+    
+B2 Competency Writing:
+    Ejercicios:
+    1  Es similar que el "A2 Elementary Writing ejercicio 1".
+    2  Es similar que el "A2 Elementary Writing ejercicio 2".
+    3  Es similar que el "A2 Elementary Writing ejercicio 1" pero con list items.
+    4  Consultar exactamente como hacer éste ejercicio.
+    5  Es similar que el "A2 Elementary Writing ejercicio 1" pero con 3 parrafos.
