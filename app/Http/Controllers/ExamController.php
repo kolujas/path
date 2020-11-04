@@ -20,25 +20,24 @@
          * @param Request $request
          * @return [type]
          */
-        public function rules(Request $request, $id_evaluation = null){
+        public function rules(Request $request, $id_evaluation){
             $candidate = Auth::guard('candidates')->user();
-            $evaluation = Evaluation::find($id_evaluation);
 
-            if(!$exam = Exam::find($evaluation->id_exam)){
+            if(!$evaluation = Evaluation::find($id_evaluation)){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
-                    'message' => 'Exam not found.',
+                    'message' => 'Evaluation not found.',
                 ]);
             }
 
-            if($evaluation->confirmed > 0 && $exam->scheduled_date_time < Carbon::now()->toDateTimeString()){
+            if($evaluation->confirmed > 0 && $evaluation->exam->scheduled_date_time < Carbon::now()->toDateTimeString()){
                 return redirect("/exam/$evaluation->id_exam");
             }
 
             if($request->session()->has('error')){
                 $error = (object) $request->session()->pull('error');
                 return view('exams.rules', [
-                    'exam' => $exam,
+                    'evaluation' => $evaluation,
                     'validation' => (object)[
                         'rules' => Exam::$validation['auth']['rules'],
                         'messages' => Exam::$validation['auth']['messages']['en'],
@@ -48,7 +47,7 @@
                 ]]);
             }else{
                 return view('exams.rules', [
-                    'exam' => $exam,
+                    'evaluation' => $evaluation,
                     'validation' => (object)[
                         'rules' => Exam::$validation['auth']['rules'],
                         'messages' => Exam::$validation['auth']['messages']['en'],
@@ -59,33 +58,25 @@
 
         /**
          * * Auth the 'show exam page'.
-         * @param null|string $id_exam - Exam primary key.
+         * @param null|string $id_evaluation - Exam primary key.
          * @param Request $request
          * @return [type]
          */
-        public function auth(Request $request, $id_exam = null){
+        public function auth(Request $request, $id_evaluation){
             $input = (object)$request->input();
             $validator = Validator::make($request->all(), Exam::$validation['auth']['rules'], Exam::$validation['auth']['messages']['en']);
             if($validator->fails()){
-                return redirect("/exam/$id_exam/rules")->withErrors($validator)->withInput();
+                return redirect("/exam/$id_evaluation/rules")->withErrors($validator)->withInput();
             }
 
-            if(!$exam = Exam::find($id_exam)){
-                return redirect()->route('auth.showLogin')->with('status', [
-                    'code' => 404,
-                    'message' => 'Exam not found.',
-                ]);
-            }
-
-            $candidate = Auth::guard('candidates')->user();
-
-            if(!$evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get()){
+            if(!$evaluation = Evaluation::find($id_evaluation)){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
                     'message' => 'Evaluation not found.',
                 ]);
             }
-            $evaluation = $evaluation[0];
+
+            $candidate = Auth::guard('candidates')->user();
 
             $input->confirmed = 1;
             
@@ -104,7 +95,7 @@
             $evaluation->update((array) $input);
             $candidate->update((array) $input);
             
-            return redirect("/exam/$id_exam");
+            return redirect("/exam/$evaluation->id_evaluation");
         }
         
         /**
@@ -113,20 +104,18 @@
          * @return [type]
          */
         public function show($id_evaluation = null){
-            $evaluation = Evaluation::find($id_evaluation);
-
-            if(!$exam = Exam::find($evaluation->id_exam)){
+            if(!$evaluation = Evaluation::find($id_evaluation)){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
-                    'message' => 'Exam not found.',
+                    'message' => 'Evaluation not found.',
                 ]);
             }
             
             $candidate = Auth::guard('candidates')->user();
-            $exam->modules = $candidate->modules();
+            $evaluation->exam->modules = $candidate->modules();
 
             return view('exams.example-exam', [
-                'exam' => $exam,
+                'evaluation' => $evaluation,
             ]);
         }
         

@@ -16,7 +16,7 @@
      */
     Route::get('/exam/{id_evaluation}/finished', 'ExamController@finished')->name('exam.finished');
     Route::middleware('auth.guards')->group(function(){
-        Route::middleware(['ended', 'student', 'status'])->group(function(){
+        Route::middleware(['auth.id_evaluation', 'ended', 'student', 'status'])->group(function(){
             Route::get('/exam/{id_evaluation}/rules', 'ExamController@rules')->name('exam.rules');
             Route::post('/auth/exam/{id_evaluation}', 'ExamController@auth')->name('exam.auth');
             Route::middleware(['scheduled_date_time'])->group(function(){

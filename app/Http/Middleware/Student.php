@@ -18,11 +18,10 @@
             $candidate = Auth::guard('candidates')->user();
             $id_evaluation = $request->route('id_evaluation');
             $evaluation = Evaluation::find($id_evaluation);
-            $exam = Exam::find($evaluation->id_exam);
 
             $isStudent = false;
-            foreach ($exam->candidates() as $candidate) {
-                if($candidate->id_candidate == $candidate->id_candidate){
+            foreach ($evaluation->exam->evaluations as $evaluationToCheck) {
+                if($evaluationToCheck->id_evaluation == $evaluation->id_evaluation && $evaluation->id_candidate == $candidate->id_candidate){
                     $isStudent = true;
                 }
             }

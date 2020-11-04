@@ -202,7 +202,7 @@ for (const submit of submitsExam) {
 
  okConfirm.addEventListener('click', function(e){
     e.preventDefault();
-    if(submitsExam[0].dataset.module >= exam.modules.length){
+    if(submitsExam[0].dataset.module >= evaluation.exam.modules.length){
         document.querySelector('form').submit();
     }else{
         nextModule(tab);
@@ -284,12 +284,12 @@ function end(data = undefined){
     time.innerHTML = 'ended';
     time.classList.add('text', 'text-two');
     let index;
-    for (const key in exam.modules) {
-        if(exam.modules[key] == data.module){
+    for (const key in evaluation.exam.modules) {
+        if(evaluation.exam.modules[key] == data.module){
             index = parseInt(key) + 1;
         }
     }
-    if(index >= exam.modules.length){
+    if(index >= evaluation.exam.modules.length){
         document.querySelector('form').submit();
     }else{
         nextModule(data.tab);
@@ -323,7 +323,7 @@ async function sendData(){
     let localStorageService = LocalStorageServiceProvider.getData('Path_Candidate_Token');
     let response = await FetchServiceProvider.setData({
         method: 'POST',
-        url: `/api/exam/${exam.id_exam}/record`,
+        url: `/api/exam/${evaluation.id_evaluation}/record`,
     }, {
         'Accept': 'application/json',
         'Content-type': 'application/json; charset=UTF-8',
@@ -350,9 +350,9 @@ function addTime(scheduled_date_time, index) {
 
     hours = parseInt(time.split(':')[0]);
     minutes = parseInt(time.split(':')[1]);
-    for (const key in exam.modules) {
+    for (const key in evaluation.exam.modules) {
         if(key < index){
-            const module = exam.modules[key];
+            const module = evaluation.exam.modules[key];
             if(months < 10){
                 months = `0${months}`;
             }
@@ -378,9 +378,9 @@ function addTime(scheduled_date_time, index) {
 }
 
 function setTimer(module, tab){
-    let scheduled_date_time = exam.scheduled_date_time;
-    for (const key in exam.modules) {
-        if(exam.modules[key] == module && key > 0){
+    let scheduled_date_time = evaluation.exam.scheduled_date_time;
+    for (const key in evaluation.exam.modules) {
+        if(evaluation.exam.modules[key] == module && key > 0){
             scheduled_date_time = addTime(scheduled_date_time, key);
         }
     }
@@ -448,7 +448,7 @@ function nextModule(tab){
     for (const btn of submitBtns) {
         index = btn.dataset.module;
         btn.dataset.module++;
-        if(btn.dataset.module >= exam.modules.length){
+        if(btn.dataset.module >= evaluation.exam.modules.length){
             if(btn.children.length){
                 btn.children[0].innerHTML = 'Submit Exam';
             }else{
@@ -462,12 +462,12 @@ function nextModule(tab){
             }
         }
     }
-    tab.open([exam.modules[index].file], exam.modules[index].file);
+    tab.open([evaluation.exam.modules[index].file], evaluation.exam.modules[index].file);
     setTimer(getModule(document.querySelectorAll('.module-button')[document.querySelector('.submit-exam').dataset.module - 1].id), tab);
 }
 
 function getModule(id) {
-    for(const module of exam.modules){
+    for(const module of evaluation.exam.modules){
         if(`${module.folder}-${module.name}` == id){
             return module;
         }
@@ -557,22 +557,22 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         }
     }
 
-    setTimer(exam.modules[0], tab);
+    setTimer(evaluation.exam.modules[0], tab);
 
     let moduleBtns = document.querySelectorAll('.module-button');
     for (const btn of moduleBtns) {
         btn.addEventListener('click', function(e){
             e.preventDefault();
             let index;
-            for (const key in exam.modules) {
-                if(exam.modules[key] == getModule(this.id)){
+            for (const key in evaluation.exam.modules) {
+                if(evaluation.exam.modules[key] == getModule(this.id)){
                     index = parseInt(key) + 1;
                 }
             }
             let submitBtns = document.querySelectorAll('.submit-exam');
             for (const btn of submitBtns) {
                 btn.dataset.module = index;
-                if(btn.dataset.module >= exam.modules.length){
+                if(btn.dataset.module >= evaluation.exam.modules.length){
                     if(btn.children.length){
                         btn.children[0].innerHTML = 'Submit Exam';
                     }else{

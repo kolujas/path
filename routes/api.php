@@ -11,6 +11,6 @@
      * ! RecordController
      */
         Route::middleware(['auth:candidates_api','scope:candidates_api'])->group(function(){
-            Route::post('/exam/{id_exam}/record', 'API\RecordController@save')->name('record.save');
+            Route::post('/exam/{id_evaluation}/record', 'API\RecordController@save')->name('record.save');
         });
     });

@@ -30,7 +30,7 @@
                     $candidate = Auth::guard('candidates')->user();
                     $evaluation = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
                     $evaluation = $evaluation[0];
-                    return redirect("/exam/$evaluation->id_exam/rules");
+                    return redirect("/exam/$evaluation->id_evaluation/rules");
                 case 'users':
                     return redirect("/panel/candidates");
                 default:
@@ -102,7 +102,7 @@
 
             $exam->update(['scheduled_date_time' => Carbon::now()->addSeconds(15)->toDateTimeString()]);
             Auth::guard('candidates')->login($candidate, true);
-            return redirect("exam/$exam->id_exam/rules");
+            return redirect("exam/$evaluation->id_evaluation/rules");
         }
 
         /**

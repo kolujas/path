@@ -20,12 +20,11 @@
             $candidate = Auth::guard('candidates')->user();
             $id_evaluation = $request->route('id_evaluation');
             $evaluation = Evaluation::find($id_evaluation);
-            $exam = Exam::find($evaluation->id_exam);
 
             $now = Carbon::now()->toDateTimeString();
 
-            $date = explode(' ', $exam->scheduled_date_time)[0];
-            $time = explode(' ', $exam->scheduled_date_time)[1];
+            $date = explode(' ', $evaluation->exam->scheduled_date_time)[0];
+            $time = explode(' ', $evaluation->exam->scheduled_date_time)[1];
             $hours = explode(':', $time)[0];
             $minutes = explode(':', $time)[1];
             foreach ($candidate->modules() as $module) {

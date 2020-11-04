@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-    <span style="font-size: 1.5rem;">{{ $exam->name }}</span>
+    <span style="font-size: 1.5rem;">{{ $evaluation->exam->name }}</span>
 @endsection
 
 @section('main')
@@ -83,7 +83,6 @@
                 My hair is short. Beth's hair <mark>{{ $answers['A1:W4A']['4'] }}</mark> long. </p>
         </main>
     </section>
-    
 
     <section>
         <header>
@@ -100,7 +99,6 @@
             </div>
         </main>
     </section>
-    
 
     <section>
         <header>
@@ -110,5 +108,4 @@
         <p style="padding: 0 4rem; color: #000;">My friend: <mark>{{ $answers['A1:W5']['1'] }}</amrk></p>
         </main>
     </section>
-
 @endsection
