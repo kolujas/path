@@ -1,11 +1,16 @@
-<section id="dropdown-TIPO-NUMERO" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-writing-5" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>CONSIGNA</span>
+        <span>5. Write about your friend.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
-    <main class="dropdown-menu-content NUMBER_NAME-question-container px-xl-4">
-        EJERCICIO
+    <main class="dropdown-menu-content fifth-question-container px-xl-4">
+        <div class="py-4">
+            <div class="col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <span class="my-friend">Write about your friend:</span>
+                <textarea name="A1:W5[1]" class="pl-2 textarea-custom"></textarea>
+            </div>
+        </div>
     </main>
 </section>

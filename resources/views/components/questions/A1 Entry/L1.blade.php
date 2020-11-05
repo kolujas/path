@@ -1,6 +1,6 @@
 <section id="dropdown-listening-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>1. Look at the table below. Listen to Susana talking about her family, and complete the spaces in the table. You can listen twice.<mark>One is done for you.</mark> </span>
+        <span>1. Look at the table below. Listen to Anna talking about her family, and complete the spaces in the table. You can listen twice.<mark>One is done for you.</mark> </span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -11,7 +11,7 @@
                 <source
                     src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
                     type="audio/ogg">
-                Tu navegador no soporta el audio.
+                Your browser does not supports the audio.
             </audio>
             <div class="audio-div">
                 <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
@@ -26,33 +26,33 @@
                     <th scope="col" class="input-letters"><input name="A1:L1[2a]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[2b]" maxlength="1" class="input-small input position-relative last" type="text">ther</th>
                     <th scope="col" class="input-letters"><input name="A1:L1[4a]" maxlength="1" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[4b]" maxlength="1" class="input-small input position-relative last" type="text">ther</th>
                     <th scope="col">sister</th>
-                    <th scope="col" class="input-letters"><input name="A1:L1[6a]" maxlength="1" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[6b]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[6c]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[6d]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[6e]" maxlength="1" class="input-small input position-relative last" type="text">er</th>
+                    <th scope="col" class="input-letters"><input name="A1:L1[6a]" maxlength="1" class="input-small input position-relative input-underline" type="text"><input name="A1:L1[6b]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[6c]" maxlength="1" class="input-small input position-relative" type="text">ther</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">Name</th>
-                    <td class="text-center">Susana</td>
-                    <td class="text-center">Lee</td>
-                    <td class="text-center">Alex</td>
-                    <td class="text-center">Gemma</td>
-                    <td class="text-center">Phil</td>
+                    <td class="text-center">Julie</td>
+                    <td class="text-center">Tina</td>
+                    <td class="text-center">Martin</td>
+                    <td class="text-center">Jane</td>
+                    <td class="text-center">Charlie</td>
                 </tr>
                 <tr>
                     <th scope="row">Age</th>
-                    <td class="input-letters"><input name="A1:L1[1a]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[1b]" maxlength="1" class="input-small input position-relative" type="text"></td>
-                    <td>40</td>
-                    <td>38</td>
-                    <td class="input-letters"><input name="A1:L1[7a]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[7b]" maxlength="1" class="input-small input position-relative" type="text"></td>
-                    <td class="input-letters"><input name="A1:L1[8]" maxlength="1" class="input-small input position-relative" type="text"></td>
+                    <td class="input-letters text-center"><input name="A1:L1[1a]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[1b]" maxlength="1" class="input-small input position-relative" type="text"></td>
+                    <td class="text-center">41</td>
+                    <td class="text-center">43</td>
+                    <td class="input-letters text-center"><input name="A1:L1[7a]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[7b]" maxlength="1" class="input-small input position-relative" type="text"></td>
+                    <td class="input-letters text-center"><input name="A1:L1[8]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[8]" maxlength="1" class="input-small input position-relative" type="text"></td>
                 </tr>
                 <tr>
                     <th scope="row">Job</th>
-                    <td class="text-center">-</td>
-                    <td class="input-letters">te<input name="A1:L1[3a]" maxlength="1" class="input-small input position-relative first" type="text"><input name="A1:L1[3b]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1:L1[3c]" maxlength="1" class="input-small input position-relative last" type="text">er</td>
-                    <td class="input-letters">doc<input name="A1:L1[5a]" maxlength="1" class="input-small input position-relative first" type="text"><input name="A1:L1[5b]" maxlength="1" class="input-small input position-relative last" type="text">r</td>
-                    <td class="text-center">-</td>
-                    <td class="text-center">-</td>
+                    <td class="text-center">X</td>
+                    <td class="input-letters text-center">man<input name="A1:L1[3a]" maxlength="1" class="input-small input position-relative first" type="text">ger</td>
+                    <td class="input-letters text-center">d<input name="A1:L1[5a]" maxlength="1" class="input-small input position-relative first" type="text"><input name="A1:L1[5b]" maxlength="1" class="input-small input position-relative last" type="text">tist</td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
                 </tr>
             </tbody>
         </table>
