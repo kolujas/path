@@ -18,15 +18,13 @@
         /**
          * * Save the Record.
          * @param Request $request
-         * @param mixed $id_exam - Exam to Record.
+         * @param mixed $id_evaluation - Exam to Record.
          * @return [type]
          */
-        public function save(Request $request, $id_exam){
+        public function save(Request $request, $id_evaluation){
             $candidate = $request->user();
             $modules = $candidate->modules();
-            $exam = Exam::find($id_exam);
-            $evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', 1]])->get();
-            $evaluation = $evaluation[0];
+            $evaluation = Evaluation::find($id_evaluation);
 
             $input = $request->all();
             foreach ($input as $key => $value) {
@@ -53,10 +51,11 @@
             $filePath = "storage/records/$evaluation->id_evaluation.pdf";
             $pdf = false;
             $data = (object) [
-                'exam' => $exam,
+                'evaluation' => $evaluation,
                 'candidate' => $candidate,
                 'answers' => $input,
             ];
+            
             foreach($modules as $module) {
                 $data->module = $module;
                 if(!$pdf) {

@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-    <span style="font-size: 1.5rem;">{{ $exam->name }}</span>
+    <span style="font-size: 1.5rem;">{{ $evaluation->exam->name }}</span>
 @endsection
 
 @section('main')

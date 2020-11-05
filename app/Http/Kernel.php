@@ -72,5 +72,6 @@ class Kernel extends HttpKernel
         'auth.guards' => \App\Http\Middleware\AuthenticateGuards::class,
         'confirmed' => \App\Http\Middleware\Confirmed::class,
         'status' => \App\Http\Middleware\Status::class,
+        'auth.id_evaluation' => \App\Http\Middleware\AuthenticateIdEvaluation::class,
     ];
 }

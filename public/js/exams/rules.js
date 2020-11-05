@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function(e){
     });
 
     let countDown = new CountDown({
-        scheduled_date_time: exam.scheduled_date_time,
+        scheduled_date_time: evaluation.exam.scheduled_date_time,
         timer: {
             hours: true,
             minutes: true,

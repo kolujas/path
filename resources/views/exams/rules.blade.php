@@ -10,8 +10,8 @@
             <img class="logo" src={{ asset('img/recursos/logo_white.png') }} alt="Path">
             <h1 class="h1">Path</h1>
         </div>
-        <h2 class="mb-2">{{ $exam->name }}</h2>
-        <span class="text-center timer">Scheduled date time: {{ $exam->scheduled_date_time }}</span>
+        <h2 class="mb-2">{{ $evaluation->exam->name }}</h2>
+        <span class="text-center timer">Scheduled date time: {{ $evaluation->exam->scheduled_date_time }}</span>
         <div class="spans-timer">
             <span class="ml-4 hours">Hours</span>
             <span class="ml-4 mr-5">Minutes</span>
@@ -31,11 +31,11 @@
 @section('main')
     <section class="col-12 rules-container">
         <main class="rules-box">
-            <form id="rules-form" action="/auth/exam/{{$exam->id_exam}}" method="post" enctype="multipart/form-data">
+            <form id="rules-form" action="/auth/exam/{{$evaluation->exam->id_exam}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="rules-text bg-white p-4">
                     <p class="h3 rules-rem text-left mb-4">Remember:</p>
-                    <p class="rules-p">{{ $exam->rules }}</p>
+                    <p class="rules-p">{{ $evaluation->exam->rules }}</p>
                 </div>
                 <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">
                     <input class="form-input form-check-input" type="checkbox" name="confirmed" id="defaultCheck1">
@@ -75,7 +75,7 @@
 
 @section('js')
     <script>
-        const exam = @json($exam);
+        const evaluation = @json($evaluation);
         @if(Session::has('status'))
         const status = @json(Session::get('status'));
         @elseif(isset($status))

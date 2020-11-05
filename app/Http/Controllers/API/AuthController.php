@@ -33,20 +33,13 @@
                     'message' => 'Incorrect candidate number.',
                 ]);
             }
-
             $candidate = $candidate[0];
-            $evaluations = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
 
-            $found = false;
-            foreach($evaluations as $evaluation){
-                $exam = Exam::find($evaluation->id_exam);
-                if(\Hash::check($input->password, $exam->password)){
-                    $found = true;
-                    break;
-                }
-            }
+            $evaluation = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
+            $evaluation = $evaluation[0];
 
-            if(!$found){
+            $exam = Exam::find($evaluation->id_exam);
+            if(!(\Hash::check($input->password, $exam->password))){
                 return redirect()->json([
                     'code' => 404,
                     'message' => 'Exam not found.',

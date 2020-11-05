@@ -32,25 +32,23 @@
         /**
          * * Create a Record.
          * @param Request $request
-         * @param mixed $id_exam - Exam to Record.
+         * @param mixed $id_evaluation - Evaluation to Record.
          * @return [type]
          */
-        public function doCreate(Request $request, $id_exam){
+        public function doCreate(Request $request, $id_evaluation){
             $candidate = Auth::guard('candidates')->user();
             $modules = $candidate->modules();
-            $exam = Exam::find($id_exam);
-            $evaluation = Evaluation::where([['id_exam', '=', $id_exam], ['id_candidate', '=', $candidate->id_candidate]])->get();
-            $evaluation = $evaluation[0];
+            $evaluation = Evaluation::find($id_evaluation);
 
             $input = (object) $request->all();
             $validator = Validator::make($request->all(), Record::$validation['create']['rules'], Record::$validation['create']['messages']['en']);
             if($validator->fails()){
-                return redirect("/exam/$id_exam/rules")->withErrors($validator)->withInput();
+                return redirect("/exam/$evaluation->id_evaluation/rules")->withErrors($validator)->withInput();
             }
 
             $pdf = false;
             $data = (object) [
-                'exam' => $exam,
+                'evaluation' => $evaluation,
                 'candidate' => $candidate,
                 'answers' => $request->all(),
             ];
@@ -100,6 +98,6 @@
             }
             Auth::guard('candidates')->logout();
 
-            return redirect("/exam/$id_exam/finished");
+            return redirect("/exam/$evaluation->id_evaluation/finished");
         }
     }

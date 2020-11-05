@@ -2,12 +2,9 @@
     namespace App\Http\Middleware;
 
     use App\Models\Evaluation;
-    use App\Models\Exam;
-    use Auth;
-    use Carbon\Carbon;
     use Closure;
 
-    class ScheduledDateTime{
+    class AuthenticateIdEvaluation{
         /**
          * Handle an incoming request.
          *
@@ -16,20 +13,16 @@
          * @return mixed
          */
         public function handle($request, Closure $next){
-            $candidate = Auth::guard('candidates')->user();
             $id_evaluation = $request->route('id_evaluation');
-            $evaluation = Evaluation::find($id_evaluation);
 
-            $now = Carbon::now()->toDateTimeString();
-            
-            if($now < $evaluation->exam->scheduled_date_time){
+            if(!$evaluation = Evaluation::find($id_evaluation)){
                 $request->session()->put('error', [
-                    'code' => 403,
-                    'message' => 'Exam did not start.',
+                    'code' => 404,
+                    'message' => 'This Evaluation does not exist.',
                 ]);
-                return redirect("/exam/$evaluation->id_exam/rules");
+                return redirect('/');
             }
-            
+
             return $next($request);
         }
     }

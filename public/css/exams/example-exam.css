@@ -91,12 +91,26 @@ strong{
     /* left: 1.15rem; 
 } */
 
-
 .modal-two{
     max-width: 100%;
 }
 
+.ol-decimal li {
+    list-style-type: decimal;
+}
 
+.ol-decimal li select {
+    width: 5rem;
+    height: 3rem;
+}
+
+.A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
+    max-height: 400vh;
+}
+
+.A1_Access-L #dropdown-listening-2.opened .dropdown-menu-content {
+    max-height: 150vh;
+}
 
 /* ? PRIMERA CONSIGNA */
 
@@ -475,6 +489,10 @@ textarea{
         color: #000;
         height: 13rem;
     }
+    
+    .A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
+        max-height: 100vh;
+    }
 
     .fifth-question-container textarea{
         /* width: 40rem; */
@@ -516,6 +534,10 @@ textarea{
 /* * LG */
 
 @media(min-width: 1024px) {
+    .A1_Access-L #dropdown-listening-2 table {
+        width: 60%;
+    }
+
     .nav-menu {
         padding: 0 calc(((100% - 66.6666666667%) / 2 + 1rem));
     }

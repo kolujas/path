@@ -1,8 +1,8 @@
 <?php
     namespace App\Models;
 
-    use Models\Candidate;
-    use Models\Exam;
+    use App\Models\Candidate;
+    use App\Models\Exam;
     use Illuminate\Database\Eloquent\Model;
 
     class Evaluation extends Model{
