@@ -170,6 +170,61 @@ strong{
     transform: translateY(100%);
 }
 
+.A1_Access-W #dropdown-writing-2 .dropdown-menu-content select {
+    color: var(--color-two);
+    background: transparent;
+}
+
+.A1_Access-W #dropdown-writing-2 .dropdown-menu-content textarea{
+    /* width: 20rem; */
+    text-indent: 5rem;
+    padding-left: 1.5rem !important;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 10rem;
+    line-height: 1.9rem;
+    text-indent: 13rem;
+    border-radius: .2rem;
+}
+
+.A1_Access-W #dropdown-writing-3 .dropdown-menu-content select {
+    color: var(--color-two);
+    background: transparent;
+}
+
+.A1_Access-W #dropdown-writing-4 .dropdown-menu-content textarea{
+    /* width: 20rem; */
+    padding-left: 1.5rem !important;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 10rem;
+    line-height: 1.9rem;
+    border-radius: .2rem;
+}
+
+.A1_Achiever-W #dropdown-writing-4.opened .dropdown-menu-content {
+    max-height: 350vh;
+}
+
+.A1_Achiever-W #dropdown-writing-4 .dropdown-menu-content textarea{
+    /* width: 20rem; */
+    text-indent: 5rem;
+    padding-left: 1.5rem !important;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 10rem;
+    line-height: 1.9rem;
+    text-indent: 14.5rem;
+    border-radius: .2rem;
+}
+
+.A1_Achiever-W #dropdown-writing-4 .dropdown-menu-content .last textarea{
+    text-indent: 17rem;
+}
+
 .table.borderless tr {
     border: none;
 }
@@ -246,19 +301,6 @@ strong{
     line-height: 2rem;
     font-size: 1rem;
     color: var(--color-two);
-}
-
-.four-question-container textarea{
-    /* width: 20rem; */
-    /* text-indent: 5rem; */
-    padding-left: 1.5rem !important;
-    outline: none;
-    resize: none;
-    width: 100%;
-    height: 10rem;
-    line-height: 1.9rem;
-    text-indent: 4.5rem;
-    border-radius: .2rem;
 }
 
 .fifth-question-container textarea{
@@ -493,7 +535,6 @@ textarea{
 
 .archiever-w-2{
     width: 90%;
-    margin: 2rem auto !important;
 }
 
 .archiever-w-2 .input-one{
@@ -560,6 +601,20 @@ textarea{
         width: 10rem;
     }
 
+    .A1_Achiever-W #dropdown-writing-4 .dropdown-menu-content textarea{
+        /* width: 20rem; */
+        background-color: #fafafad6;
+        color: #000;
+        height: 13rem;
+    }
+
+    .A1_Access-W #dropdown-writing-4 .dropdown-menu-content textarea{
+        /* width: 20rem; */
+        background-color: #fafafad6;
+        color: #000;
+        height: 13rem;
+    }
+
     .ol-decimal li select {
         height: 2rem;
     }
@@ -606,6 +661,24 @@ textarea{
 @media(min-width: 1024px) {
     .A1_Access-L #dropdown-listening-2 table {
         width: 60%;
+    }
+
+    .A1_Access-W #dropdown-writing-2.opened .dropdown-menu-content {
+        max-height: 200vh;
+    }
+
+    .A1_Access-W #dropdown-writing-4 .dropdown-menu-content textarea{
+        width: 32rem;
+        height: 13rem;
+    }
+
+    .A1_Achiever-W #dropdown-writing-4.opened .dropdown-menu-content {
+        max-height: 150vh;
+    }
+
+    .A1_Achiever-W #dropdown-writing-4 .dropdown-menu-content textarea{
+        width: 32rem;
+        height: 13rem;
     }
 
     .nav-menu {
@@ -658,7 +731,6 @@ textarea{
     .archiever-w-2{
         background-color: #fff;
         width: 90%;
-        margin: 2rem auto !important;
     }
 }
 

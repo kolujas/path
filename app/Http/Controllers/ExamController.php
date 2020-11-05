@@ -112,7 +112,7 @@
             }
             
             $candidate = Auth::guard('candidates')->user();
-            $evaluation->exam->update(['scheduled_date_time' => Carbon::now()->addSeconds(15)->toDateTimeString()]);
+            $evaluation->exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
             $evaluation->exam->modules = $candidate->modules();
 
             return view('exams.example-exam', [
