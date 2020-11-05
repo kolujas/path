@@ -225,6 +225,14 @@ strong{
     text-indent: 17rem;
 }
 
+.A2_Preliminary-L #dropdown-listening-1.opened .dropdown-menu-content {
+    max-height: 120vh;
+}
+
+.A2_Preliminary-L #dropdown-listening-1 .dropdown-menu-content input{
+    display: none;
+}
+
 .table.borderless tr {
     border: none;
 }
