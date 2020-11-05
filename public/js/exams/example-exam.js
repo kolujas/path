@@ -17,22 +17,21 @@ for (const key in audioBtn) {
     if(typeof btn === "object"){
         btn.addEventListener('click', function (e) {
             e.preventDefault();
-            if(!this.classList.contains('playing') && !this.classList.contains('finished')){
+            if (!this.classList.contains('playing') && !this.classList.contains('finished')) {
                 if (!this.dataset.count) {
                     this.dataset.count = 0;
                 }
                 // this.dataset.count = parseInt(this.dataset.count) + 1;
                 if (parseInt(this.dataset.count) < 2) {
                     ponePlay(key);
-                    document.querySelectorAll('.audio-div i')[key].classList.replace('fa-play', 'fa-pause');
+                    // document.querySelectorAll('.audio-div i')[key].classList.replace('fa-play', 'fa-pause');
                 } else {
                     this.classList.add('finished');
                     audio[key].src = "";
                 }
-            }
-            else{
-                audio[key].pause();
-                document.querySelectorAll('.audio-div i')[key].classList.replace('fa-pause', 'fa-play');
+            } else {
+                // audio[key].pause();
+                // document.querySelectorAll('.audio-div i')[key].classList.replace('fa-pause', 'fa-play');
             }
             
         })
@@ -50,8 +49,11 @@ for (const key in audio) {
             input.addEventListener('ended', function(e){
                 audioBtn[key].classList.remove('playing');
                 this.nextElementSibling.children[1].dataset.count = parseInt(this.nextElementSibling.children[1].dataset.count) + 1; 
+                // document.querySelectorAll('.audio-div i')[key].classList.replace('fa-pause', 'fa-play');
                 if(parseInt(this.nextElementSibling.children[1].dataset.count) >= 2){
+                    document.querySelectorAll('.audio-div i')[key].classList.replace('fa-play', 'fa-stop');
                     this.classList.add('finished');
+                    audioBtn[key].classList.add('finished');
                 }               
             });
             input.addEventListener('pause', function(e){
@@ -218,7 +220,7 @@ for (const submit of submitsExam) {
 
  // Archimak
 
- function updateSaveTimer(data = undefined){
+function updateSaveTimer(data = undefined){
     if(document.querySelector('.save-button.countdown')){
         let timer = document.querySelector('.save-button .timer');
         timer.innerHTML = `(${data.countdown.seconds})`;
@@ -275,12 +277,12 @@ function parseSpaces(text){
 }
 
 function current(data = undefined){
-    document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name} .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+    document.querySelector(`#${parseSpaces(data.module.folder.replace(/ /, '_'))}-${data.module.name} .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
 }
 
 function end(data = undefined){
     document.querySelector('.clock').style.display = 'none';
-    let time = document.querySelector(`#${data.module.folder}-${data.module.name} .time`);
+    let time = document.querySelector(`#${data.module.folder.replace(/ /, '_')}-${data.module.name} .time`);
     time.innerHTML = 'ended';
     time.classList.add('text', 'text-two');
     let index;
@@ -468,7 +470,7 @@ function nextModule(tab){
 
 function getModule(id) {
     for(const module of evaluation.exam.modules){
-        if(`${module.folder}-${module.name}` == id){
+        if(`${module.folder.replace(/ /, '_')}-${module.name}` == id){
             return module;
         }
     }
@@ -596,6 +598,21 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     saveButton.addEventListener('click', sendData);
 
     setTimeIntervalAutoSave();
+
+    for (const input of document.querySelectorAll('.input-icon')) {
+        input.addEventListener('change', function(e) {
+            for (const radio of document.querySelectorAll('.input-icon')) {
+                if (radio.name == input.name) {
+                    if (radio.classList.contains('checked')) {
+                        radio.classList.remove('checked');
+                    }
+                }
+            }
+            if (this.checked) {
+                this.classList.add('checked');
+            }
+        });
+    }
 });
 
  

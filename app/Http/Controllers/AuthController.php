@@ -87,7 +87,7 @@
             $found = false;
             foreach($evaluations as $evaluation){
                 $exam = Exam::find($evaluation->id_exam);
-                if(\Hash::check($input->password, $exam->password)){
+                if($input->password == $exam->password){
                     $found = true;
                     break;
                 }

@@ -249,39 +249,40 @@ class Modal{
     }
 
     createInputs(element, value, disabled, li){
-        if(element.name == 'password' || element.name == 'password_confirmation'){
-            let parent = li;
-            li = document.createElement('div');
-            li.classList.add('position-relative');
-            parent.appendChild(li);
+        // if(element.name == 'password' || element.name == 'password_confirmation'){
+        //     let parent = li;
+        //     li = document.createElement('div');
+        //     li.classList.add('position-relative');
+        //     parent.appendChild(li);
 
-            let label = document.createElement('label');
-            label.htmlFor = element.name;
-            label.classList.add('see-password');
-            li.appendChild(label);
-                let icon = document.createElement('i');
-                icon.classList.add('fas','fa-eye');
-                label.appendChild(icon);
+        //     let label = document.createElement('label');
+        //     label.htmlFor = element.name;
+        //     label.classList.add('see-password');
+        //     li.appendChild(label);
+        //         let icon = document.createElement('i');
+        //         icon.classList.add('fas','fa-eye');
+        //         label.appendChild(icon);
             
-            label.addEventListener('click', function(e){
-                e.preventDefault();
-                let input = this.nextElementSibling;
-                switch(input.type){
-                    case 'password':
-                        input.type = 'text';
-                        this.classList.add( 'active' );
-                        this.children[0].classList.remove('fa-eye');
-                        this.children[0].classList.add('fa-eye-slash');
-                        break;
-                    case 'text':
-                        input.type = 'password';
-                        this.classList.remove( 'active' );
-                        this.children[0].classList.remove('fa-eye-slash');
-                        this.children[0].classList.add('fa-eye');
-                        break;
-                }
-            });
-        }else if(element.name == 'scheduled_date_time'){
+        //     label.addEventListener('click', function(e){
+        //         e.preventDefault();
+        //         let input = this.nextElementSibling;
+        //         switch(input.type){
+        //             case 'password':
+        //                 input.type = 'text';
+        //                 this.classList.add( 'active' );
+        //                 this.children[0].classList.remove('fa-eye');
+        //                 this.children[0].classList.add('fa-eye-slash');
+        //                 break;
+        //             case 'text':
+        //                 input.type = 'password';
+        //                 this.classList.remove( 'active' );
+        //                 this.children[0].classList.remove('fa-eye-slash');
+        //                 this.children[0].classList.add('fa-eye');
+        //                 break;
+        //         }
+        //     });
+        // }else
+        if(element.name == 'scheduled_date_time'){
             let date = value.split(' ')[0];
             if(/\//.exec(date)){
                 let years = parseInt(date.split('/')[0]);
@@ -302,9 +303,6 @@ class Modal{
         input.classList.add('d-block', 'form-input', 'list-datos', 'mb-2');
         if(element.name == 'id_candidate' || element.name == 'id_exam' || element.name == 'id_record'){
             input.classList.add('input-id');
-        }
-        if(element.name == 'password'){
-            input.classList.add('confirmation');
         }
         if(element.hasOwnProperty('disabled') && element.disabled){
             input.classList.add('ever-disabled');
@@ -621,7 +619,7 @@ function createCandidatesCheckboxes(){
 
     let cols = [ { 
         id: 'td-checkbox',
-        data: 'checkbox'
+        data: 'id_candidate'
     }, { 
         id: 'candidate_number',
         data: 'candidate_number'

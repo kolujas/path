@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function(e){
             let modal = createModal([
                 {title: 'Candidate Number', name: 'candidate_number', type: 'number', required: true},
                 {title: 'Full Name', name: 'full_name', type: 'text'},
-                {title: 'Email', name: 'email', type: 'text', required: true},
                 {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
                 {title: 'Member', name: 'member', type: 'text'},
                 {title: 'Member ID', name: 'id_member', type: 'number'},
@@ -90,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function(e){
                 {title: '', name: 'id_candidate', type: 'hidden', disabled: true},
                 {title: 'Candidate Number', name: 'candidate_number', type: 'number', required: true},
                 {title: 'Full Name', name: 'full_name', type: 'text'},
-                {title: 'Email', name: 'email', type: 'text', required: true},
                 {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
                 {title: 'Member', name: 'member', type: 'text'},
                 {title: 'Member ID', name: 'id_member', type: 'number'},
@@ -159,7 +157,6 @@ document.addEventListener('DOMContentLoaded', function(e){
         let modal = createModal([
             {title: 'Candidate Number', name: 'candidate_number', type: 'number', required: true},
             {title: 'Full Name', name: 'full_name', type: 'text'},
-            {title: 'Email', name: 'email', type: 'text', required: true},
             {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
             {title: 'Member', name: 'member', type: 'text'},
             {title: 'Member ID', name: 'id_member', type: 'number'},

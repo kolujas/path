@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         },
     }, {}, [{
         type: 'search',
-        target: 'name,exam:scheduled_date_time',
+        target: 'candidate:full_name,exam:scheduled_date_time',
     }], records);
 
     changeContent({

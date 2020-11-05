@@ -112,6 +112,7 @@
             }
             
             $candidate = Auth::guard('candidates')->user();
+            $evaluation->exam->update(['scheduled_date_time' => Carbon::now()->addSeconds(15)->toDateTimeString()]);
             $evaluation->exam->modules = $candidate->modules();
 
             return view('exams.example-exam', [
@@ -160,8 +161,6 @@
             if($validator->fails()){
                 return redirect("/panel/exams#details")->withErrors($validator)->withInput();
             }
-    
-            $input->password = \Hash::make($input->password);
 
             $input->slug = SlugService::createSlug(Exam::class, 'slug', $input->name);
 
@@ -209,7 +208,7 @@
                             if($c == $index){
                                 $input[$i][$value] = $filedata[$c];
                                 if($value == 'password'){
-                                    $input[$i]['password'] = \Hash::make($filedata[$c]);
+                                    $input[$i]['password'] = $filedata[$c];
                                 }
                                 if($value == 'name'){
                                     $input[$i]['slug'] = SlugService::createSlug(Exam::class, 'slug', $filedata[$c]);
@@ -258,7 +257,7 @@
             }
     
             if($input->password){
-                $input->password = \Hash::make($input->password);
+                $input->password = $input->password;
             }else{
                 $input->password = $exam->password;
             }

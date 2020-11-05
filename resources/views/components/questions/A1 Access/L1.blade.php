@@ -1,6 +1,6 @@
 <section id="dropdown-listening-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>You will hear three sentences, which describe three of the image below. Match each sentence to an image.<mark>Two are not used</mark>.</span>
+        <span>1. You will hear three sentences, which describe three of the image below. Match each sentence to an image.<mark>Two are not used</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>

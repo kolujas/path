@@ -104,12 +104,74 @@ strong{
     height: 3rem;
 }
 
+.ol-decimal li select:focus {
+    outline: none;
+}
+
 .A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
     max-height: 400vh;
 }
 
 .A1_Access-L #dropdown-listening-2.opened .dropdown-menu-content {
     max-height: 150vh;
+}
+
+.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table thead th {
+    border: 0;
+}
+
+.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th {
+    padding: 0;
+}
+
+.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th .text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem;
+    width: fit-content;
+    height: 3rem;
+}
+
+.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th div input {
+    display: none;
+}
+
+.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th .empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+}
+
+.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th div label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    transition: 500ms;
+    cursor: pointer;
+    margin: 0;
+}
+
+.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th div input:not(.checked) + label {
+    color: transparent;
+}
+
+.A1_Access-W #dropdown-writing-1 .dropdown-menu-content table img {
+    width: 8rem;
+}
+
+.A1_Access-W #dropdown-writing-1 .dropdown-menu-content table th div {
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.table.borderless tr {
+    border: none;
 }
 
 /* ? PRIMERA CONSIGNA */
@@ -385,6 +447,14 @@ textarea{
 @media(min-width: 768px) {
     .A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
         max-height: 100vh;
+    }
+    
+    .A1_Access-W #dropdown-writing-1 .dropdown-menu-content table img {
+        width: 10rem;
+    }
+
+    .ol-decimal li select {
+        height: 2rem;
     }
 
     .fifth-question-container textarea{

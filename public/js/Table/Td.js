@@ -125,7 +125,7 @@ export class Td {
             case 'candidates':
                 this.html.innerHTML = this.createCandidates();
                 break;
-            case 'checkbox':
+            case 'id_candidate':
                 this.html.appendChild(this.createCheckbox());
                 break;
             case 'exam':
@@ -221,6 +221,19 @@ export class Td {
     createCheckbox(){
         let input = document.createElement('input');
         input.type = 'checkbox';
+        input.name = `candidate-${this.data}`;
+        input.id = `candidate-${this.data}`;
+        input.addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log(`Estoy en ${this.checked}`);
+            if (this.checked) {
+                this.checked = false;
+                console.log('Me pongo en false');
+            } else {
+                this.checked = true;
+                console.log('Me pongo en true');
+            }
+        })
         return input;
     }
 

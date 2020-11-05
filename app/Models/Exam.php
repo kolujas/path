@@ -27,7 +27,7 @@
          * @var array
          */
         protected $hidden = [
-            'password',
+            //
         ];
 
         /**
@@ -66,7 +66,7 @@
             ], 'create' => [
                 'rules' => [
                     'name' => 'required|min:2|max:60',
-                    'password' => 'required|min:4|max:40|confirmed',
+                    'password' => 'required|min:4|max:40',
                     'scheduled_date_time' => 'required|date',
                     'candidates' => 'required',
                 ], 'messages' => [

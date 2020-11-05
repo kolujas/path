@@ -1,11 +1,48 @@
 <section id="dropdown-writing-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>CONSIGNA</span>
+        <span>1. Look at the table of colours and items clothing. Write the colours and clothing in the speech fields.<mark>Two have been done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
-        EJERCICIO
+        <div class="row justify-content-md-between justify-content-lg-center py-4">
+            <ol class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
+                <li class="title inline mx-lg-2"><b>Colours:</b></li>
+                <li class="answers crossed inline mx-lg-2">Green</li>
+                <li class="answers inline mx-lg-2">Red</li>
+                <li class="answers inline mx-lg-2">Orange</li>
+            </ol>
+            <ol class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
+                <li class="title inline mx-lg-2"><b>Clothes:</b></li>
+                <li class="answers crossed inline mx-lg-2">T-Shirt</li>
+                <li class="answers inline mx-lg-2">Shorts</li>
+                <li class="answers inline mx-lg-2">Cap</li>
+            </ol>
+        </div>
+        <table class="table borderless">
+            <tbody>
+                <tr>
+                    <th scope="col"><div class="d-flex justify-content-end align-content-center"><p class="justify-content-end">I am wearing a <input class="input input-medium text-center" type="text"> <input class="input input-medium text-center" value="t-shirt" disabled type="text">.</p></div></th>
+                    <th scope="col"><img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one"></th>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table borderless">
+            <tbody>
+                <tr>
+                    <th class="text-right" scope="col"><img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one"></th>
+                    <th scope="col"><div class="d-flex align-content-center"><p>I am wearing a yellow <input class="input input-medium text-center" type="text"> and <input class="input input-medium text-center" type="text"> trousers.</p></div></th>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table borderless">
+            <tbody>
+                <tr>
+                    <th class="text-right" scope="col"><img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one"></th>
+                    <th scope="col"><div class="d-flex align-content-center"><p>I am wearing a <input class="input input-medium text-center" value="green" disabled type="text"> <input class="input input-medium text-center" type="text">.</p></div></th>
+                </tr>
+            </tbody>
+        </table>
     </main>
 </section>

@@ -73,7 +73,6 @@ export class Tr{
                         {title: '', name: 'id_candidate', type: 'hidden', disabled: true},
                         {title: 'Candidate Number', name: 'candidate_number', type: 'number', required: true},
                         {title: 'Full Name', name: 'full_name', type: 'text'},
-                        {title: 'Email', name: 'email', type: 'text', required: true},
                         {title: 'Date of Birth', name: 'date_of_birth', type: 'date'},
                         {title: 'Member', name: 'member', type: 'text'},
                         {title: 'Member ID', name: 'id_member', type: 'number'},
@@ -101,8 +100,7 @@ export class Tr{
                     {title: 'Name', name: 'name', type: 'text', required: true},
                     {title: 'Rules', name: 'rules', type: 'textarea'},
                     {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, required: true},
-                    {title: 'Password', name: 'password', type: 'password', hide: true},
-                    {title: 'Confirm Password', name: 'password_confirmation', type: 'password', hide: true},
+                    {title: 'Password', name: 'password', type: 'text', required: true},
                     {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
                 ], properties.data);
                 setActions({
@@ -165,27 +163,46 @@ export class Tr{
         let span = document.querySelector('#candidates').parentNode.children[1];
         let length = parseInt(span.innerHTML.split('(').pop().split(')').shift());
         let input = document.querySelector('#candidates').parentNode.children[2];
+        let values = input.value.split(',');
+        let found;
         for (const tr of document.querySelectorAll('tr')) {
             if(tr.dataset.id_candidate == id){
                 tr.children[0].children[0].checked = !tr.children[0].children[0].checked;
                 if(tr.children[0].children[0].checked){
                     length++;
                     span.innerHTML = `(${length})`;
-                    if(input.value){
-                        input.value += `,${id}`;
-                    }else{
-                        input.value = id;
+                    input.value = '';
+                    found = false;
+                    for (const candidate of values) {
+                        if (candidate == id) {
+                            found = true;
+                        } else {
+                            if (input.value) {
+                                input.value += `,${candidate}`;
+                            } else {
+                                input.value = candidate;
+                            }
+                        }
+                    }
+                    if (!found) {
+                        if (input.value) {
+                            input.value += `,${id}`;
+                        } else {
+                            input.value = id;
+                        }
                     }
                 }else{
                     length--;
                     span.innerHTML = `(${length})`;
-                    let values = input.value.split(',');
                     input.value = '';
+                    found = false;
                     for (const candidate of values) {
-                        if(candidate != id){
-                            if(input.value){
+                        if (candidate == id) {
+                            found = true;
+                        } else {
+                            if (input.value) {
                                 input.value += `,${candidate}`;
-                            }else{
+                            } else {
                                 input.value = candidate;
                             }
                         }

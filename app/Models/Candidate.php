@@ -21,7 +21,7 @@
          * @var array
          */
         protected $fillable = [
-            'candidate_number', 'full_name', 'email', 'date_of_birth', 'id_member', 'member', 'modules', 'file', '->id_candidate', 'slug',
+            'candidate_number', 'full_name', 'date_of_birth', 'id_member', 'member', 'modules', 'file', '->id_candidate', 'slug',
         ];
 
         /** @var array The attributes to hidde. */
@@ -56,7 +56,6 @@
                 'rules' => [
                     'candidate_number' => 'required|numeric|unique:candidates',
                     'full_name' => 'nullable|min:2|max:60',
-                    'email' => 'required|email|unique:candidates',
                     'date_of_birth' => 'nullable|date',
                     'id_member' => 'nullable|numeric',
                     'modules' => 'required',
@@ -67,9 +66,6 @@
                         'candidate_number.unique' => 'Candidate Number it\'s used.',
                         'full_name.min' => 'Full name cannot be less than :min characters.',
                         'full_name.max' => 'Full name cannot be more than :max characters.',
-                        'email.required' => 'Email is required.',
-                        'email.email' => 'Email must be a valid mail (example@mail.com).',
-                        'email.unique' => 'Email it\'s used.',
                         'date_of_birth.date' => 'Date of birth must be a valid date (1999-05-24).',
                         'id_member.required' => 'Memeber ID is required.',
                         'id_member.numeric' => 'Memeber ID must be numeric.',
@@ -80,7 +76,7 @@
                 'rules' => [
                     'candidate_number' => 'required|numeric|unique:candidates,candidate_number,{id_candidate},id_candidate',
                     'full_name' => 'nullable|min:2|max:60',
-                    'email' => 'required|email|unique:candidates,email,{id_candidate},id_candidate',
+                    
                     'date_of_birth' => 'nullable|date',
                     'id_member' => 'nullable|numeric',
                     'modules' => 'required',
@@ -91,9 +87,6 @@
                         'candidate_number.unique' => 'Candidate Number it\'s used.',
                         'full_name.min' => 'Full name cannot be less than :min characters.',
                         'full_name.max' => 'Full name cannot be more than :max characters.',
-                        'email.required' => 'Email is required.',
-                        'email.email' => 'Email must be a valid mail (example@mail.com).',
-                        'email.unique' => 'Email it\'s used.',
                         'date_of_birth.date' => 'Date of birth must be a valid date (1999-05-24).',
                         'id_member.required' => 'Memeber ID is required.',
                         'id_member.numeric' => 'Memeber ID must be numeric.',

@@ -96,6 +96,16 @@
                     'slug' => 'antonio-gutierrez',
                     'file' => 'candidates/1.png',
                 ] );
+                Candidate::create( [
+                    'candidate_number' => 9,
+                    'full_name' => 'Example Candidate',
+                    'email' => 'ejemplo@correo.com',
+                    'date_of_birth' => '1997-08-12',
+                    'id_member' => 1,
+                    'member' => 'Path',
+                    'modules' => 'A1 Entry:L,B2 Competency:W',
+                    'slug' => 'example-candidate',
+                ] );
             }
         }
     }
