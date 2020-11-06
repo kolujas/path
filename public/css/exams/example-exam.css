@@ -541,6 +541,16 @@ textarea{
     border-radius: .2rem;
 }
 
+/* archiever listening */
+
+.disabled{
+    text-decoration: line-through;
+}
+
+.archiever-ul-3{
+    display: inline;
+}
+
 
 /* * MD */
 
