@@ -5,7 +5,7 @@
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
-    <main class="dropdown-menu-content first-question-container px-xl-4">
+    <main class="dropdown-menu-content one-question-container px-xl-4">
         <div>
             <p class="bg-archiever-1">‘Hi, well, first go between the school and the cinema, then under the
                 bridge. Then walk around the tower and across the park. Finally,

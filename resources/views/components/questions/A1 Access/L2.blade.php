@@ -38,7 +38,7 @@
                     <th scope="col"><div class="text">Fish</div></th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[1]" id="A1_Access:L2[1a]">
+                            <input class="input-icon" type="radio" value="loves" name="A1_Access:L2[1]" id="A1_Access:L2[1a]">
                             <label for="A1_Access:L2[1a]">
                                 <i class="fas fa-heart"></i>
                             </label>
@@ -46,7 +46,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[1]" id="A1_Access:L2[1b]">
+                            <input class="input-icon" type="radio" value="likes" name="A1_Access:L2[1]" id="A1_Access:L2[1b]">
                             <label for="A1_Access:L2[1b]">
                                 <i class="fas fa-check"></i>
                             </label>
@@ -54,7 +54,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[1]" id="A1_Access:L2[1c]">
+                            <input class="input-icon" type="radio" value="doesn't like" name="A1_Access:L2[1]" id="A1_Access:L2[1c]">
                             <label for="A1_Access:L2[1c]">
                                 <i class="fas fa-times"></i>
                             </label>
@@ -65,7 +65,7 @@
                     <th scope="col"><div class="text">Potatoes</div></th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[2]" id="A1_Access:L2[2a]">
+                            <input class="input-icon" type="radio" value="loves" name="A1_Access:L2[2]" id="A1_Access:L2[2a]">
                             <label for="A1_Access:L2[2a]">
                                 <i class="fas fa-heart"></i>
                             </label>
@@ -73,7 +73,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[2]" id="A1_Access:L2[2b]">
+                            <input class="input-icon" type="radio" value="likes" name="A1_Access:L2[2]" id="A1_Access:L2[2b]">
                             <label for="A1_Access:L2[2b]">
                                 <i class="fas fa-check"></i>
                             </label>
@@ -81,7 +81,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[2]" id="A1_Access:L2[2c]">
+                            <input class="input-icon" type="radio" value="doesn't like" name="A1_Access:L2[2]" id="A1_Access:L2[2c]">
                             <label for="A1_Access:L2[2c]">
                                 <i class="fas fa-times"></i>
                             </label>
@@ -92,7 +92,7 @@
                     <th scope="col"><div class="text">Pasta</div></th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[3]" id="A1_Access:L2[3a]">
+                            <input class="input-icon" type="radio" value="loves" name="A1_Access:L2[3]" id="A1_Access:L2[3a]">
                             <label for="A1_Access:L2[3a]">
                                 <i class="fas fa-heart"></i>
                             </label>
@@ -100,7 +100,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[3]" id="A1_Access:L2[3b]">
+                            <input class="input-icon" type="radio" value="likes" name="A1_Access:L2[3]" id="A1_Access:L2[3b]">
                             <label for="A1_Access:L2[3b]">
                                 <i class="fas fa-check"></i>
                             </label>
@@ -108,7 +108,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[3]" id="A1_Access:L2[3c]">
+                            <input class="input-icon" type="radio" value="doesn't like" name="A1_Access:L2[3]" id="A1_Access:L2[3c]">
                             <label for="A1_Access:L2[3c]">
                                 <i class="fas fa-times"></i>
                             </label>
@@ -119,7 +119,7 @@
                     <th scope="col"><div class="text">Rice</div></th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[4]" id="A1_Access:L2[4a]">
+                            <input class="input-icon" type="radio" value="loves" name="A1_Access:L2[4]" id="A1_Access:L2[4a]">
                             <label for="A1_Access:L2[4a]">
                                 <i class="fas fa-heart"></i>
                             </label>
@@ -127,7 +127,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[4]" id="A1_Access:L2[4b]">
+                            <input class="input-icon" type="radio" value="likes" name="A1_Access:L2[4]" id="A1_Access:L2[4b]">
                             <label for="A1_Access:L2[4b]">
                                 <i class="fas fa-check"></i>
                             </label>
@@ -135,7 +135,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[4]" id="A1_Access:L2[4c]">
+                            <input class="input-icon" type="radio" value="doesn't like" name="A1_Access:L2[4]" id="A1_Access:L2[4c]">
                             <label for="A1_Access:L2[4c]">
                                 <i class="fas fa-times"></i>
                             </label>
@@ -146,7 +146,7 @@
                     <th scope="col"><div class="text">Lemonade</div></th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[5]" id="A1_Access:L2[5a]">
+                            <input class="input-icon" type="radio" value="loves" name="A1_Access:L2[5]" id="A1_Access:L2[5a]">
                             <label for="A1_Access:L2[5a]">
                                 <i class="fas fa-heart"></i>
                             </label>
@@ -154,7 +154,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[5]" id="A1_Access:L2[5b]">
+                            <input class="input-icon" type="radio" value="likes" name="A1_Access:L2[5]" id="A1_Access:L2[5b]">
                             <label for="A1_Access:L2[5b]">
                                 <i class="fas fa-check"></i>
                             </label>
@@ -162,7 +162,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[5]" id="A1_Access:L2[5c]">
+                            <input class="input-icon" type="radio" value="doesn't like" name="A1_Access:L2[5]" id="A1_Access:L2[5c]">
                             <label for="A1_Access:L2[5c]">
                                 <i class="fas fa-times"></i>
                             </label>
@@ -173,7 +173,7 @@
                     <th scope="col"><div class="text">Coke</div></th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[6]" id="A1_Access:L2[6a]">
+                            <input class="input-icon" type="radio" value="loves" name="A1_Access:L2[6]" id="A1_Access:L2[6a]">
                             <label for="A1_Access:L2[6a]">
                                 <i class="fas fa-heart"></i>
                             </label>
@@ -181,7 +181,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[6]" id="A1_Access:L2[6b]">
+                            <input class="input-icon" type="radio" value="likes" name="A1_Access:L2[6]" id="A1_Access:L2[6b]">
                             <label for="A1_Access:L2[6b]">
                                 <i class="fas fa-check"></i>
                             </label>
@@ -189,7 +189,7 @@
                     </th>
                     <th scope="col">
                         <div class="radio-icon">
-                            <input class="input-icon" type="radio" name="A1_Access:L2[6]" id="A1_Access:L2[6c]">
+                            <input class="input-icon" type="radio" value="doesn't like" name="A1_Access:L2[6]" id="A1_Access:L2[6c]">
                             <label for="A1_Access:L2[6c]">
                                 <i class="fas fa-times"></i>
                             </label>

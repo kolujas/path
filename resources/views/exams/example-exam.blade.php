@@ -37,7 +37,7 @@
             @endcomponent
         </section>
 
-		<form class="tab-content-list mx-auto" action="/exam/{{$evaluation->exam->id_exam}}/record" method="post">
+		<form class="tab-content-list mx-auto" action="/exam/{{$evaluation->id_evaluation}}/record" method="post">
             @csrf
             <input class="strikes" type="hidden" name="strikes" value="0">
             @foreach($evaluation->exam->modules as $module)

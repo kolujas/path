@@ -23,7 +23,7 @@
         <table class="table borderless">
             <tbody>
                 <tr>
-                    <th scope="col"><div class="d-flex justify-content-end align-content-center"><p class="justify-content-end">I am wearing a <input class="input input-medium text-center" type="text"> <input class="input input-medium text-center" value="t-shirt" disabled type="text">.</p></div></th>
+                    <th scope="col"><div class="d-flex justify-content-end align-content-center"><p class="justify-content-end">I am wearing a <input name="A1_Access:W1[1]" class="input input-medium text-center" type="text"> <input class="input input-medium text-center" value="t-shirt" disabled type="text">.</p></div></th>
                     <th scope="col"><img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one"></th>
                 </tr>
             </tbody>
@@ -32,7 +32,7 @@
             <tbody>
                 <tr>
                     <th class="text-right" scope="col"><img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one"></th>
-                    <th scope="col"><div class="d-flex align-content-center"><p>I am wearing a yellow <input class="input input-medium text-center" type="text"> and <input class="input input-medium text-center" type="text"> trousers.</p></div></th>
+                    <th scope="col"><div class="d-flex align-content-center"><p>I am wearing a yellow <input name="A1_Access:W1[2]" class="input input-medium text-center" type="text"> and <input name="A1_Access:W1[3]" class="input input-medium text-center" type="text"> trousers.</p></div></th>
                 </tr>
             </tbody>
         </table>
@@ -40,7 +40,7 @@
             <tbody>
                 <tr>
                     <th class="text-right" scope="col"><img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one"></th>
-                    <th scope="col"><div class="d-flex align-content-center"><p>I am wearing a <input class="input input-medium text-center" value="green" disabled type="text"> <input class="input input-medium text-center" type="text">.</p></div></th>
+                    <th scope="col"><div class="d-flex align-content-center"><p>I am wearing a <input class="input input-medium text-center" value="green" disabled type="text"> <input name="A1_Access:W1[4]" class="input input-medium text-center" type="text">.</p></div></th>
                 </tr>
             </tbody>
         </table>

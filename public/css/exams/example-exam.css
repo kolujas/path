@@ -1,36 +1,8 @@
-.clock{
-    width: 1.5rem;
-    height: 1.5rem;
-    border-width: 2px;
-    margin-left: .5rem;
-    font-size: 1.75rem;
-    display: none;
-}
-.second-hand{
-	width:calc(1.5rem - 4px);
-	height:calc(1.5rem - 4px);
+body {
+    min-height: 100vh;
 }
 
-.btn.active .clock{
-    display: block;
-}
-
-.time{
-    display: none;
-    margin-left: .5rem;
-}
-
-.btn.active .time{
-    display: block;
-}
-
-/* * floating menu */
-.floating-menu.left{
-    left: 0;
-}
-
-/* * nav menu */
-
+/* ? nav menu */
 .nav-menu{
     --navmenu-title-color: #fff;
     --navmenu-button-color: #fff;
@@ -55,59 +27,101 @@
     --sidebar-icon-color-alternative: #ddd;
 }
 
-body {
-    min-height: 100vh;
+/* ? floating menu */
+.floating-menu.left{
+    left: 0;
 }
 
-.nav-menu {
-    --navmenu-color-two: #fff;
-    /* * Buttons */
-    --navmenu-color-one: #fff;
-    /* * titles */
-    --navmenu-color-three: transparent;
-    /* * Background */
-    background-color: var(--color-one);
+/* ? tabmenu */
+.tab-menu .tabs .tab-menu-list .tab {
+    margin: 1rem 1rem 1rem 0;
+}
+.tab-menu .tabs .tab-menu-list .tab .tab-link {
+    padding: 0 1rem;
+    min-height: fit-content;
+    border: 2px solid var(--color-nine);
+    color: var(--color-nine);
+    flex-wrap: nowrap;
+}
+.tab-menu .tabs .tab-menu-list .tab .tab-link.active {
+    color: var(--color-one);
+    border: 2px solid var(--color-one);
+}
+.tab-menu .tabs .tab-menu-list .tab .tab-link:hover:not(.active){
+    color: var(--color-nine);
+}
+.tab-menu .tabs .tab-menu-list .tab .tab-link:not(.active) {
+    /* pointer-events: none; */
+    background: unset;
+}
+.tab-menu .tabs .tab-menu-list .tab:last-child button{
+    white-space: nowrap;
+    margin-right: calc(((100% - 83.3333333333%) / 2 + 1rem));
 }
 
+/* ? dropdowns */
+.dropdown{
+    z-index: 1;
+}
 
-/* resaltado de las consignas */
+.dropdown-menu-content header h2 {
+    line-height: 1.5rem;
+}
 
-strong{
-    font-weight: 100;
+.dropdown-header {
+    white-space: break-spaces;
+    font-size: 1.3rem;
+}/* ? timer */
+.clock{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 2px;
+    margin-left: .5rem;
+    font-size: 1.75rem;
+    display: none;
+}
+
+.second-hand{
+	width:calc(1.5rem - 4px);
+	height:calc(1.5rem - 4px);
+}
+
+.btn.active .clock{
+    display: block;
+}
+
+.time{
+    display: none;
+    margin-left: .5rem;
+}
+
+.btn.active .time{
+    display: block;
+}
+
+/* ? consignas */
+.dropdown .dropdown-header span mark {
+    padding: 0;
+    margin-left: .5rem;
+    background: none;
     color: var(--color-two);
 }
 
-/* ? ambos modules modal confirm */
+/* ? A1 Entry Listening */
 
-.modal-dialog{
-    width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* .modal-content{
-    /* left: 1.15rem; 
-} */
-
-.modal-two{
-    max-width: 100%;
-}
-
-.ol-decimal li {
-    list-style-type: decimal;
-}
-
-.ol-decimal li select {
-    width: 5rem;
-    height: 3rem;
-}
-
-.ol-decimal li select:focus {
+/* ? A1 Entry Writing */
+.A1_Entry-W #dropdown-writing-5 .dropdown-menu-content textarea{
+    padding-left: 1.5rem !important;
     outline: none;
+    resize: none;
+    width: 100%;
+    height: 10rem;
+    line-height: 1.9rem;
+    text-indent: 4.5rem;
+    border-radius: .2rem;
 }
 
+/* ? A1 Access Listening */
 .A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
     max-height: 400vh;
 }
@@ -160,6 +174,7 @@ strong{
     color: transparent;
 }
 
+/* ? A1 Access Writing */
 .A1_Access-W #dropdown-writing-1 .dropdown-menu-content table img {
     width: 8rem;
 }
@@ -176,8 +191,6 @@ strong{
 }
 
 .A1_Access-W #dropdown-writing-2 .dropdown-menu-content textarea{
-    /* width: 20rem; */
-    text-indent: 5rem;
     padding-left: 1.5rem !important;
     outline: none;
     resize: none;
@@ -194,7 +207,6 @@ strong{
 }
 
 .A1_Access-W #dropdown-writing-4 .dropdown-menu-content textarea{
-    /* width: 20rem; */
     padding-left: 1.5rem !important;
     outline: none;
     resize: none;
@@ -204,12 +216,14 @@ strong{
     border-radius: .2rem;
 }
 
+/* ? A1 Achiever Listening */
+
+/* ? A1 Achiever Writing */
 .A1_Achiever-W #dropdown-writing-4.opened .dropdown-menu-content {
     max-height: 350vh;
 }
 
 .A1_Achiever-W #dropdown-writing-4 .dropdown-menu-content textarea{
-    /* width: 20rem; */
     text-indent: 5rem;
     padding-left: 1.5rem !important;
     outline: none;
@@ -225,95 +239,7 @@ strong{
     text-indent: 17rem;
 }
 
-.A2_Preliminary-L #dropdown-listening-1.opened .dropdown-menu-content {
-    max-height: 120vh;
-}
-
-.A2_Preliminary-L #dropdown-listening-1 .dropdown-menu-content input{
-    display: none;
-}
-
-.table.borderless tr {
-    border: none;
-}
-
-/* ? PRIMERA CONSIGNA */
-
-.dropdown{
-    z-index: 1;
-}
-
-.dropdown-menu-content header h2 {
-    line-height: 1.5rem;
-}
-
-.dropdown-header {
-    white-space: break-spaces;
-    font-size: 1.3rem;
-}
-
-
-/* * bg mark del highlight */
-
-.dropdown .dropdown-header span mark {
-    padding: 0;
-    margin-left: .5rem;
-    background: none;
-    color: var(--color-two);
-}
-
-/* * pistas sueltas */
-
-.answer-words li {
-    display: inline;
-    font-size: 1rem;
-}
-
-.answer-words li.crossed {
-    text-decoration: line-through;
-}
-
-
-/* ? SEGUNDA CONSIGNA */
-
-/* * parrafono a completar */
-
-.second-question-container p {
-    font-size: 1.1rem;
-}
-
-/* * parte remarcada del parrafono */
-.second-question-container strong {
-    color: var(--color-two);
-    font-weight: 100;
-}
-
-/* ? TERCERA CONSIGNA */
-
-/* ? CUARTA CONSIGNA */
-
-.input-one-question-four[value]{
-    color: var(--color-two);
-    text-align: center;
-}
-
-/* ? SEXTA CONSIGAN */
-
-/* * sangria del textarea */
-
-.my-friend{
-    /* left: .5rem; */
-    padding-left: 1rem;
-    position: absolute;
-    left: calc(15px + .2rem);
-    line-height: 2rem;
-    font-size: 1rem;
-    color: var(--color-two);
-}
-
-.fifth-question-container textarea{
-    /* width: 20rem; */
-    /* text-indent: 5rem; */
+.A1_Achiever-W #dropdown-writing-5 .dropdown-menu-content textarea{
     padding-left: 1.5rem !important;
     outline: none;
     resize: none;
@@ -324,97 +250,42 @@ strong{
     border-radius: .2rem;
 }
 
+/* ? A1 Preliminary Listening */
+.A2_Preliminary-L #dropdown-listening-1.opened .dropdown-menu-content {
+    max-height: 120vh;
+}
+
+.A2_Preliminary-L #dropdown-listening-1 .dropdown-menu-content input{
+    display: none;
+}
+
+/* ? A1 Preliminary Writing */
+
+/* ? modales */
+.modal-dialog{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .modal-content{
+    /* left: 1.15rem; 
+} */
+
+.modal-two{
+    max-width: 100%;
+}
+
+/* ? ejercicios */
 textarea{
     color: var(--color-two);
 }
 
-
-/* * card */
-
 .card{
     border: none;
 }
-
-/* ? LISTENING MODULE */
-
-/* color de fondo de los inputs en listening */
-
-.question-listening .second-question-container input{
-    background-color: transparent;
-    text-align: center;
-    color: var(--color-two);
-
-}
-
-/* play button */
-
-.audioBtn{
-    outline: none;
-    border: 0;
-    padding: 0 2rem;
-    border-radius: 0.25rem;
-    font-size: 1.1rem;
-    background-color: var(--color-one);
-    color: #fff;
-    padding: .5rem 2rem;
-}
-
-.playing{
-    background-color: var(--color-two);
-}
-
-.finished{
-    background-color: var(--color-four);
-}
-
-.audioBtn:focus{
-    outline: none;
-}
-
-/* play icon */
-
-.play-icon{
-    position: relative;
-    left: 1.5rem;
-    color: #fff;
-}
-
-/* tabla question 3 */
-
-.table-question-3{
-    width: 60%;
-    margin: auto;
-    margin-bottom: 3rem;
-}
-
-/* borde del th */
-
-.question-listening table th{
-    border: 1px solid #ccc;
-    padding: 0 0 2rem 0;
-    text-align: center;
-    padding-top: 1rem;
-}
-
-.table th, .table td{
-    border: 1px solid #dee2e6 !important;
-}
-
-/* borde del td */
-
-.first-question-container table td{
-    border: 1px solid #ccc;
-    padding: 1rem 0 2rem 0;
-    text-align: center;
-}
-
-/* tamaño de los iconos */
-
-.face-icons{
-    font-size: 2rem;
-}
-
-/* * inputs */
 
 .input {
     outline: none;
@@ -463,31 +334,84 @@ textarea{
     border-bottom: 1px solid var(--color-one);
 }
 
-/* * tab */
-.tab-menu .tabs .tab-menu-list .tab {
-    margin: 1rem 1rem 1rem 0;
+/* * audio */
+.audioBtn{
+    outline: none;
+    border: 0;
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    background-color: var(--color-one);
+    color: #fff;
+    padding: .5rem 2rem;
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-link {
-    padding: 0 1rem;
-    min-height: fit-content;
-    border: 2px solid var(--color-nine);
-    color: var(--color-nine);
-    flex-wrap: nowrap;
+
+.playing{
+    background-color: var(--color-two);
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-link.active {
-    color: var(--color-one);
-    border: 2px solid var(--color-one);
+
+.finished{
+    background-color: var(--color-four);
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-link:hover:not(.active){
-    color: var(--color-nine);
+
+.audioBtn:focus{
+    outline: none;
 }
-.tab-menu .tabs .tab-menu-list .tab .tab-link:not(.active) {
-    /* pointer-events: none; */
-    background: unset;
+
+.play-icon{
+    position: relative;
+    left: 1.5rem;
+    color: #fff;
 }
-.tab-menu .tabs .tab-menu-list .tab:last-child button{
-    white-space: nowrap;
-    margin-right: calc(((100% - 83.3333333333%) / 2 + 1rem));
+
+/* * crossed list */
+.answer-words li {
+    display: inline;
+    font-size: 1rem;
+}
+
+.answer-words li.crossed {
+    text-decoration: line-through;
+}
+
+/* * textarea indent */
+.my-friend{
+    /* left: .5rem; */
+    padding-left: 1rem;
+    position: absolute;
+    left: calc(15px + .2rem);
+    line-height: 2rem;
+    font-size: 1rem;
+    color: var(--color-two);
+}
+
+/* * emojis */
+.face-icons{
+    font-size: 2rem;
+}
+
+/* * table */
+.table-question-3{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+/* .question-listening table th{
+    border: 1px solid #ccc;
+    padding: 0 0 2rem 0;
+    text-align: center;
+    padding-top: 1rem;
+} */
+
+.table th, .table td{
+    border: 1px solid #dee2e6 !important;
+}
+
+.one-question-container table td{
+    border: 1px solid #ccc;
+    padding: 1rem 0 2rem 0;
+    text-align: center;
 }
 
 /* mostrar */

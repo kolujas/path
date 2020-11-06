@@ -9,25 +9,14 @@
         <table class="table table-striped mb-4 table-colors mx-auto">
             <tbody>
                 <tr>
-                    <th scope="col"><input name="A1_Access:W2[1a]" value="R" disabled maxlength="1" class="input-small input position-relative" type="text">u<input name="A1_Access:W2[1b]" value="n" disabled maxlength="1" class="input-small input position-relative last" type="text"></th>
-                    <th scope="col" class="input-letters"><select name="A1_Access:W2[4]" disabled>
+                    <th scope="col"><input value="R" disabled maxlength="1" class="input-small input position-relative m-0" type="text">u<input value="n" disabled maxlength="1" class="input-small input position-relative" type="text"></th>
+                    <th scope="col" class="input-letters"><select disabled>
                         <option disabled selected>A</option>
                     </select></th>
                 </tr>
                 <tr>
-                    <th scope="col" class="input-letters"><input name="A1_Access:W2[3]" maxlength="1" class="input-small input position-relative" type="text">rite</th>
-                    <th scope="col" class="input-letters"><select name="A1_Access:W2[4]">
-                        <option disabled selected>A</option>
-                        <option>B</option>
-                        <option>C</option>
-                        <option>D</option>
-                        <option>E</option>
-                        <option>F</option>
-                    </select></th>
-                </tr>
-                <tr>
-                    <th scope="col">Dan<input name="A1_Access:W2[5]" maxlength="1" class="input-small input position-relative" type="text">e</th>
-                    <th scope="col" class="input-letters"><select name="A1_Access:W2[6]">
+                    <th scope="col" class="input-letters"><input name="A1_Access:W2A[1]" maxlength="1" class="input-small input position-relative" type="text">rite</th>
+                    <th scope="col" class="input-letters"><select name="A1_Access:W2A[2]">
                         <option disabled selected>A</option>
                         <option>B</option>
                         <option>C</option>
@@ -37,8 +26,19 @@
                     </select></th>
                 </tr>
                 <tr>
-                    <th scope="col">S<input name="A1_Access:W2[7]" maxlength="1" class="input-small input position-relative" type="text">im</th>
-                    <th scope="col" class="input-letters"><select name="A1_Access:W2[8]">
+                    <th scope="col">Dan<input name="A1_Access:W2A[3]" maxlength="1" class="input-small input position-relative" type="text">e</th>
+                    <th scope="col" class="input-letters"><select name="A1_Access:W2A[4]">
+                        <option disabled selected>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select></th>
+                </tr>
+                <tr>
+                    <th scope="col">S<input name="A1_Access:W2A[5]" maxlength="1" class="input-small input position-relative" type="text">im</th>
+                    <th scope="col" class="input-letters"><select name="A1_Access:W2A[6]">
                         <option value="A" disabled selected></option>
                         <option disabled selected>A</option>
                         <option>B</option>
@@ -49,8 +49,8 @@
                     </select></th>
                 </tr>
                 <tr>
-                    <th scope="col">Wat<input name="A1_Access:W2[9]" maxlength="1" class="input-small input position-relative" type="text">h</th>
-                    <th scope="col" class="input-letters"><select name="A1_Access:W2[10]">
+                    <th scope="col">Wat<input name="A1_Access:W2A[7]" maxlength="1" class="input-small input position-relative" type="text">h</th>
+                    <th scope="col" class="input-letters"><select name="A1_Access:W2A[8]">
                         <option disabled selected>A</option>
                         <option>B</option>
                         <option>C</option>
@@ -60,8 +60,8 @@
                     </select></th>
                 </tr>
                 <tr>
-                    <th scope="col">Re<input name="A1_Access:W2[11]" maxlength="1" class="input-small input position-relative" type="text">d</th>
-                    <th scope="col" class="input-letters"><select name="A1_Access:W2[12]">
+                    <th scope="col">Re<input name="A1_Access:W2A[9]" maxlength="1" class="input-small input position-relative" type="text">d</th>
+                    <th scope="col" class="input-letters"><select name="A1_Access:W2A[10]">
                         <option disabled selected>A</option>
                         <option>B</option>
                         <option>C</option>
@@ -123,16 +123,16 @@
             </div>
         </div>
         <div class="dropdown-header px-0">
-            <span>2.b. Which activities</span>
+            <span>2.b. Which activities...</span>
         </div> 
         <div class="pb-4">
             <div class="col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <span class="my-friend">...are good for your body?</span>
-                <textarea name="A1:W5[1]" class="pl-2"></textarea>
+                <textarea name="A1_Access:W2B[1]" class="pl-2"></textarea>
             </div>
             <div class="col-12 col-lg-10 col-xl-8 mx-auto position-relative last">
                 <span class="my-friend">...are good for your brain?</span>
-                <textarea name="A1:W5[1]" class="pl-2"></textarea>
+                <textarea name="A1_Access:W2B[2]" class="pl-2"></textarea>
             </div>
         </div>
     </main>

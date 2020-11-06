@@ -9,7 +9,7 @@
         <div class="py-4">
             <div class="col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <span class="my-friend">Write about your friend:</span>
-                <textarea name="A1:W5[1]" class="pl-2 textarea-custom"></textarea>
+                <textarea name="A1_Entry:W5[1]" class="pl-2 textarea-custom"></textarea>
             </div>
         </div>
     </main>
