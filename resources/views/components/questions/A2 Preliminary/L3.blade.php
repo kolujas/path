@@ -5,8 +5,8 @@
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
-    <main class="dropdown-menu-content three-question-container px-xl-4">
-        <div class="d-flex justify-content-center my-4">
+    <main class="dropdown-menu-content three-question-container px-xl-4 preliminary-3">
+        <div class="d-flex justify-content-center my-4 whatsapp-div-audio">
             <audio class="audio d-none" controls controlsList="nodownload">
                 <source
                     src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
@@ -14,8 +14,13 @@
                 Your browser does not supports the audio.
             </audio>
             <div class="audio-div">
-                <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
+                <button class="audioBtn" type="button"><i class="fas fa-play play-icon"></i>Play Audio</button>
             </div>
+        </div>
+
+
+        <div class="preliminary-textarea-div d-flex justify-content-center mb-4">
+            <textarea class="textarea-preliminary pl-4 pt-1 border-0"></textarea>
         </div>
 
     </main>

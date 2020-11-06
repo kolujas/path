@@ -600,6 +600,54 @@ textarea{
     display: inline;
 }
 
+.table-bordered td, th{
+    width: 5rem;
+}
+
+/* input[type=checkbox]:checked{
+    display:
+} */
+
+/* preliminary */
+
+.preliminary-3{
+    background: url("/img/recursos/whatsapp-bg.jpg");
+}
+
+.inputs-border{
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+.ul-width-44{
+    width: 44%;
+}
+
+.preliminary-3 .whatsapp-div-audio .audioBtn{
+    background-color: #fff;
+    color: #000;
+}
+
+.preliminary-3 .whatsapp-div-audio .audioBtn.playing .play-icon{
+    color: #7ebedd;
+}
+
+.preliminary-3 .whatsapp-div-audio .play-icon{
+    color: #727272;
+}
+
+.preliminary-3 .whatsapp-div-audio .play-icon{
+    left: -1rem;
+}
+
+.textarea-preliminary{
+    height: 10rem;
+    width: 80%;
+    border-radius: .25rem;
+    background-color: #D3F9C8;
+    color: #000;
+}
+
 
 /* * MD */
 
@@ -750,6 +798,10 @@ textarea{
         background-color: #fff;
         width: 90%;
     }
+
+   .archiever .table th, .table td{
+       width: 10rem !important;
+   }
 }
 
 /* * XL */

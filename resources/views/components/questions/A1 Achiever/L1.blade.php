@@ -1,6 +1,6 @@
 <section id="dropdown-listening-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>1. Listen to Jenny and Alan talking about their weekend activities. Match the times to the activities. One time and one activity shown below is not used. <mark>One has been done for you.</mark></span>
+        <span>1. Listen to Jenny and Alan talking about their weekend activities. Match the times to the activities. One time and one activity shown below is not used.<mark>One has been done for you.</mark></span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
