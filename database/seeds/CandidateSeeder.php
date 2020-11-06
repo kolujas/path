@@ -12,7 +12,11 @@
             $candidates = Candidate::get();
             if ( count( $candidates ) ) {
                 foreach ($candidates as $candidate) {
-                    //
+                    if ($candidate->id_candidate == 5) {
+                        $candidate->update(['modules' => 'A2 Preliminary:L,A2 Preliminary:W',]);
+                    } else if ($candidate->id_candidate == 6) {
+                        $candidate->update(['modules' => 'A2 Elementary:L,A2 Elementary:W',]);
+                    }
                 }
             } else {
                 Candidate::create( [
@@ -62,7 +66,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Hector\'s House',
-                    'modules' => 'A2 Elementary:L,A2 Elementary:W',
+                    'modules' => 'A2 Preliminary:L,A2 Preliminary:W',
                     'slug' => 'hector-image',
                 ] );
                 Candidate::create( [
@@ -72,7 +76,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
-                    'modules' => 'A2 Preliminary:L,A2 Preliminary:W',
+                    'modules' => 'A2 Elementary:L,A2 Elementary:W',
                     'slug' => 'pepe-diaz',
                 ] );
                 Candidate::create( [

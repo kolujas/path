@@ -1,12 +1,12 @@
 <section id="dropdown-writing-4" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>4. Match the images with the words below. One is done for you. </span>
+        <span>4.a. Match the images with the words below.<mark>One is done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
     <main class="dropdown-menu-content four-question-container px-xl-4">
-        <div class="row justify-content-md-between justify-content-lg-center py-4">
+        <div class="row justify-content-md-between justify-content-lg-center pt-4">
             <ol class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
                 <li class="answers crossed inline mx-lg-2">Sunny</li>
                 <li class="answers inline mx-lg-2">Cloudy</li>
@@ -75,11 +75,19 @@
                     </div>
                 </div>
             </div>
-            <div class="py-4">
-                <div class="col-12 col-lg-10 col-xl-8 mx-auto">
-                    <textarea name="A1:W5[1]" class="pl-2"></textarea>
-                </div>
+        </div>
+        <div class="dropdown-header px-0">
+            <span>4.b. What...</span>
+        </div> 
+        <div class="pb-4">
+            <div class="col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <span class="my-friend">...can you do on a windy day?</span>
+                <textarea name="A1:W5[1]" class="pl-2"></textarea>
             </div>
-        </div>        
+            <div class="col-12 col-lg-10 col-xl-8 mx-auto position-relative last">
+                <span class="my-friend">...do you like doing on sunny days?</span>
+                <textarea name="A1:W5[1]" class="pl-2"></textarea>
+            </div>
+        </div>   
     </main>
 </section>
