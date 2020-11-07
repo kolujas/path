@@ -1,6 +1,6 @@
 <section id="dropdown-listening-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>3. Where Charles lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers<mark>Two are done for you.</mark></span>
+        <span>3. Where Charles lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers<mark>Two are done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -37,28 +37,28 @@
                 </tr>
                 <tr>
                     <th scope="col">A policeman lives at number..</th>
-                    <th scope="col"><input name="A1:L3[1]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
+                    <th scope="col"><input name="A1_Entry:L3[1]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                     <th scope="col"></th>
                 </tr>
                 <tr>
                     <th scope="col">My aunt Mary lives at number..</th>
-                    <th scope="col"><input name="A1:L3[2]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
+                    <th scope="col"><input name="A1_Entry:L3[2]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                     <th scope="col"></th>
                 </tr>
                 <tr>
                     <th scope="col">I don't know who lives at number..</th>
-                    <th scope="col"><input name="A1:L3[3]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
+                    <th scope="col"><input name="A1_Entry:L3[3]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                     <th scope="col"></th>
                 </tr>
                 <tr>
                     <th scope="col">I don't know who lives at number..</th>
-                    <th scope="col"><input name="A1:L3[4]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
+                    <th scope="col"><input name="A1_Entry:L3[4]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                     <th scope="col"></th>
 
                 </tr>
                 <tr>
                     <th scope="col">Number..</th>
-                    <th scope="col"><input name="A1:L3[5]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
+                    <th scope="col"><input name="A1_Entry:L3[5]" class="d-block mx-auto input position-relative" data-letters="1" type="text"></th>
                     <th scope="col">is a bakery</th>
                 </tr>
             </tbody>

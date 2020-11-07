@@ -1,7 +1,6 @@
 =================
 *   TODO LIST   *
 =================
-- Cambiarle el nombre a los Módulos
 
 =================
 *   PREGUNTAS   *
@@ -10,23 +9,3 @@
 =================
 *     NOTAS     *
 =================
-    
-A1 Achiever Writing:
-    Ejercicios:
-    3  Consultar exactamente como es la idea para éste ejercicio.
-
-A2 Preliminary Listening:
-    Ejercicios:
-    3  Consultar exactamente como hacer éste ejercicio.
-
-A2 Elementary Listening:
-    Ejercicios:
-    3  Consultar exactamente como hacer éste ejercicio.
-    
-B1 Progress Writing:
-    Ejercicios:
-    4  Consultar exactamente como hacer éste ejercicio.
-    
-B2 Competency Writing:
-    Ejercicios:
-    4  Consultar exactamente como hacer éste ejercicio.

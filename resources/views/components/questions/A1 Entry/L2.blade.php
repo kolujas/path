@@ -1,6 +1,6 @@
 <section id="dropdown-listening-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>2. You will hear Anna talking about happy days and sad days. Which are happy, and which are sad?<mark>One is done for you.</mark></span>
+        <span>2. You will hear Anna talking about happy days and sad days. Which are happy, and which are sad?<mark>One is done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -23,17 +23,17 @@
                 <tr>
                     <th class="text-center" scope="col"><i class="face-icons far fa-smile "></i> </th>
                     <th scope="col"><input class="input position-relative" value="fri" disabled type="text"></span>day</th>
-                    <th scope="col"><input name="A1:L2[1]" class="input position-relative" type="text"></span>day</th>
-                    <th scope="col"><input name="A1:L2[2]" class="input position-relative" type="text"></span>day</th>
+                    <th scope="col"><input name="A1_Entry:L2[1]" class="input position-relative" type="text"></span>day</th>
+                    <th scope="col"><input name="A1_Entry:L2[2]" class="input position-relative" type="text"></span>day</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th class="text-center" scope="row"><i class="face-icons far fa-frown text-center"></i>
                     </th>
-                    <th scope="col"><input name="A1:L2[3]" class="input position-relative" type="text"></span>day</th>
-                    <th scope="col"><input name="A1:L2[4]" class="input position-relative" type="text"></span>day</th>
-                    <th scope="col"><input name="A1:L2[5]" class="input position-relative" type="text"></span>day</th>
+                    <th scope="col"><input name="A1_Entry:L2[3]" class="input position-relative" type="text"></span>day</th>
+                    <th scope="col"><input name="A1_Entry:L2[4]" class="input position-relative" type="text"></span>day</th>
+                    <th scope="col"><input name="A1_Entry:L2[5]" class="input position-relative" type="text"></span>day</th>
                 </tr>
             </tbody>
         </table>

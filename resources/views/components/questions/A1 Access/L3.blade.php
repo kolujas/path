@@ -19,23 +19,14 @@
         </div>
 
         <div class="row m-0">
-            <div class="col-6 col-md-2 py-4 px-2 px-md-3">
-                <p class="mb-0">Lois:</p>
+            <div class="col-12 col-md-10 col-lg-8 mx-auto py-4 px-2 px-md-3">
+                <p class="mb-0"><b class="mr-1">Lois:</b> <input name="A1_Access:L3[1]" class="input input-medium" type="text"> turn first. Rock! I win! Is it <input name="A1_Access:L3[2]" class="input input-medium" type="text">turn now or <input name="A1_Access:L3[3]" class="input input-medium" type="text">turn?</p>
             </div>
-            <div class="col-12 col-md-10 py-4 px-2 px-md-3">
-                <p class="mb-0"><input name="A1_Access:L3[1]" class="input input-medium" type="text"> turn first. Rock! I win! Is it <input name="A1_Access:L3[2]" class="input input-medium" type="text">turn now or <input name="A1_Access:L3[3]" class="input input-medium" type="text">turn?</p>
+            <div class="col-12 col-md-10 col-lg-8 mx-auto py-4 px-2 px-md-3">
+                <p class="mb-0"><b class="mr-1">Emma:</b> It's <input name="A1_Access:L3[4]" class="input input-medium" type="text"> turn because you won.</p>
             </div>
-            <div class="col-6 col-md-2 py-4 px-2 px-md-3">
-                <p class="mb-0">Emma:</p>
-            </div>
-            <div class="col-12 col-md-10 py-4 px-2 px-md-3">
-                <p class="mb-0">It's <input name="A1_Access:L3[4]" class="input input-medium" type="text"> turn because you won.</p>
-            </div>
-            <div class="col-6 col-md-2 py-4 px-2 px-md-3">
-                <p class="mb-0">Lois:</p>
-            </div>
-            <div class="col-12 col-md-10 py-4 px-2 px-md-3">
-                <p class="mb-0">Ok. Paper! Oh i lose. <input name="A1_Access:L3[5]" class="input input-medium" type="text"> turn.</p>
+            <div class="col-12 col-md-10 col-lg-8 mx-auto py-4 px-2 px-md-3">
+                <p class="mb-0"><b class="mr-1">Lois:</b> Ok. Paper! Oh i lose. <input name="A1_Access:L3[5]" class="input input-medium" type="text"> turn.</p>
             </div>
         </div>
     </main>

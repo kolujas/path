@@ -17,8 +17,8 @@
          * @return [type]
          */
         public function doLogIn(Request $request){
-            $input = (object) $request->input();
-            $validator = Validator::make($request->all(), AuthModel::$validation['login']['rules'], AuthModel::$validation['login']['messages']['en']);
+            $input = (object)$request->input();
+            $validator = Validator::make( $request->all(), AuthModel::$validation['login']['rules'], AuthModel::$validation['login']['messages']['en'] );
             if($validator->fails()){
                 return response()->json([
                     'code' => 404,
@@ -33,19 +33,25 @@
                     'message' => 'Incorrect candidate number.',
                 ]);
             }
+
             $candidate = $candidate[0];
+            $evaluations = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
 
-            $evaluation = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
-            $evaluation = $evaluation[0];
+            $found = false;
+            foreach($evaluations as $evaluation){
+                $exam = Exam::find($evaluation->id_exam);
+                if($input->password == $exam->password){
+                    $found = true;
+                    break;
+                }
+            }
 
-            $exam = Exam::find($evaluation->id_exam);
-            if(!(\Hash::check($input->password, $exam->password))){
+            if(!$found){
                 return redirect()->json([
                     'code' => 404,
                     'message' => 'Exam not found.',
                 ]);
             }
-
             Auth::guard('candidates')->login($candidate, true);
             $candidate = Auth::guard('candidates')->user();
             $candidate->token =  $candidate->createToken('Path Access Token', ['candidates_api'])->accessToken;

@@ -1,6 +1,6 @@
 <section id="dropdown-writing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>3. Match the months to the season for your country.<mark>One is done for you</mark></span>
+        <span>3. Match the months to the season for your country.<mark>One is done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -19,10 +19,10 @@
                 <tr>
                     <th scope="row">1</th>
                     <td>The weather is cooler and the leaves fall off the trees</td>
-                    <td><select class="input-long" name="A1_Access:W3[1]" disabled>
+                    <td><select class="input-long" disabled>
                         <option selected>April</option>
                     </select></td>
-                    <td><select class="input-long" name="A1_Access:W3[2]">
+                    <td><select class="input-long" name="A1_Access:W3[1]">
                         <option>Spring</option>
                         <option>Summer</option>
                         <option>Autumn</option>
@@ -32,7 +32,7 @@
                 <tr>
                     <th scope="row">2</th>
                     <td>The weather gets really hot!</td>
-                    <td><select class="input-long" name="A1_Access:W3[1]">
+                    <td><select class="input-long" name="A1_Access:W3[2]">
                         <option>January</option>
                         <option>February</option>
                         <option>March</option>
@@ -46,14 +46,14 @@
                         <option>November</option>
                         <option>December</option>
                     </select></td>
-                    <td><select class="input-long" name="A1_Access:W3[2]" disabled>
+                    <td><select class="input-long" disabled>
                         <option selected>Summer</option>
                     </select></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>It's cold and it rains a lot!</td>
-                    <td><select class="input-long" name="A1_Access:W3[1]">
+                    <td><select class="input-long" name="A1_Access:W3[3]">
                         <option>January</option>
                         <option>February</option>
                         <option>March</option>
@@ -67,17 +67,17 @@
                         <option>November</option>
                         <option>December</option>
                     </select></td>
-                    <td><select class="input-long" name="A1_Access:W3[2]" disabled>
+                    <td><select class="input-long" disabled>
                         <option selected>Winter</option>
                     </select></td>
                 </tr>
                 <tr>
                     <th scope="row">4</th>
                     <td>Flowers start blooming.</td>
-                    <td><select class="input-long" name="A1_Access:W3[1]" disabled>
+                    <td><select class="input-long" disabled>
                         <option selected>September</option>
                     </select></td>
-                    <td><select class="input-long" name="A1_Access:W3[2]">
+                    <td><select class="input-long" name="A1_Access:W3[4]">
                         <option>Spring</option>
                         <option>Summer</option>
                         <option>Autumn</option>

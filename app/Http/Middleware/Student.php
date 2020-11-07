@@ -19,14 +19,7 @@
             $id_evaluation = $request->route('id_evaluation');
             $evaluation = Evaluation::find($id_evaluation);
 
-            $isStudent = false;
-            foreach ($evaluation->exam->evaluations as $evaluationToCheck) {
-                if($evaluationToCheck->id_evaluation == $evaluation->id_evaluation && $evaluation->id_candidate == $candidate->id_candidate){
-                    $isStudent = true;
-                }
-            }
-
-            if($isStudent){
+            if($evaluation->id_candidate == $candidate->id_candidate){
                 return $next($request);
             }else{
                 $request->session()->put('error', [
