@@ -256,6 +256,10 @@ body {
     max-height: 120vh;
 }
 
+.A2_Preliminary-W #dropdown-writing-1.opened .dropdown-menu-content {
+    max-height: 400vh;
+}
+
 .A2_Preliminary-L #dropdown-listening-1 .dropdown-menu-content input{
     display: none;
 }
@@ -576,6 +580,34 @@ textarea{
     border-radius: .25rem;
     background-color: #D3F9C8;
     color: #000;
+}
+
+.textarea-preliminary-writing{
+    height: 10rem;
+    width: 80%;
+    border-radius: .25rem;
+    background-color: #fafafad6;
+    color: #000;
+}
+
+.hector-image{
+    width: 100%;
+    height: 20rem;
+    object-fit: contain;
+}
+
+.table-noborders td, tr{
+    border: none !important;
+}
+
+.pre-inputs .input-one{
+    width: 80%;
+}
+.pre-inputs .input-two{
+    width: 80.5%
+}
+.pre-inputs .input-three{
+    width: 75.6%;
 }
 
 

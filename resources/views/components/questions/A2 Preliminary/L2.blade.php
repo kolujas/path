@@ -6,6 +6,8 @@
         </button>
     </a>
     <main class="dropdown-menu-content two-question-container px-xl-4">
+        <img class="hector-image" src="../../img/recursos/hector.jpg" class="img-fluid" alt="hector re estudioso">
+
         <div class="d-flex justify-content-center my-4">
             <audio class="audio d-none" controls controlsList="nodownload">
                 <source
