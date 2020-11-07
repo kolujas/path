@@ -21,7 +21,7 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">1. Match the words to the images.<mark>One is done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">1. Match the words to the images. <mark>One is done for you</mark>.</h3>
         </header>
         <main>
             @if (isset($answers['A1_Entry:W1']))
@@ -65,7 +65,7 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">4. Read about Ivan and Julie. Then fill the spaces with <b>am, is </b>or <b>are</b>.<mark>One is done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">4. Read about Ivan and Julie. Then fill the spaces with <b>am, is </b>or <b>are</b>. <mark>One is done for you</mark>.</h3>
         </header>
         <main>
             <p style="padding: 0 2rem;">Hello! My friend Beth and I <mark>{{ $answers['A1_Entry:W4'][1] }}</mark> good friends. She <mark>{{ $answers['A1_Entry:W4'][2] }}</mark>10 years old and I <mark>{{ $answers['A1_Entry:W4'][3] }}</mark>.My hair is short. Beth's hair <mark>{{ $answers['A1_Entry:W4'][4] }}</mark> long.</p>

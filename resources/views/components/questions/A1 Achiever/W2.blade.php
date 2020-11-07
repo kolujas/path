@@ -6,17 +6,17 @@
         </button>
     </a>
     <main class="dropdown-menu-content two-question-container px-xl-4 archiever-w-2 text-center">
-            <div class="py-4 px-2 px-md-3">
-                <p class="mb-0 font-weight-bold">a. When <input name="A1:W4A[1]" class="input input-one text-left" type="text">?</p>
-            </div>
-            <div class="py-4 px-2 px-md-3">
-                <p class="mb-0 font-weight-bold">b. Why <input name="A1:W4A[1]" class="input input-two text-left" type="text">?</p>
-            </div>
-            <div class="py-4 px-2 px-md-3">
-                <p class="mb-0 font-weight-bold">c. Are you <input name="A1:W4A[1]" class="input input-three text-left" type="text">?</p>
-            </div>
-            <div class="py-4 px-2 px-md-3">
-                <p class="mb-0 font-weight-bold">d. How many <input name="A1:W4A[1]" class="input input-four text-left" type="text">?</p>
-            </div>
+        <div class="py-4 px-2 px-md-3">
+            <p class="mb-0 font-weight-bold">a. When <input name="A1_Achiever:W2[1]" class="input input-one text-left" type="text">?</p>
+        </div>
+        <div class="py-4 px-2 px-md-3">
+            <p class="mb-0 font-weight-bold">b. Why <input name="A1_Achiever:W2[2]" class="input input-two text-left" type="text">?</p>
+        </div>
+        <div class="py-4 px-2 px-md-3">
+            <p class="mb-0 font-weight-bold">c. Are you <input name="A1_Achiever:W2[3]" class="input input-three text-left" type="text">?</p>
+        </div>
+        <div class="py-4 px-2 px-md-3">
+            <p class="mb-0 font-weight-bold">d. How many <input name="A1_Achiever:W2[4]" class="input input-four text-left" type="text">?</p>
+        </div>
     </main>
 </section>

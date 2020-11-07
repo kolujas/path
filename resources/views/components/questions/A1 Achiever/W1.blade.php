@@ -7,9 +7,7 @@
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
         <div>
-            <p class="bg-archiever-1">‘Hi, well, first go between the school and the cinema, then under the
-                bridge. Then walk around the tower and across the park. Finally,
-                walk along the front of the airport and continue straight.’ </p>
+            <p class="bg-archiever-1">‘Hi, well, first go between the school and the cinema, then under the bridge. Then walk around the tower and across the park. Finally, walk along the front of the airport and continue straight.’</p>
         </div>
 
         <table class="table table-striped mb-4 table-colors mx-auto">
@@ -17,25 +15,25 @@
                 <tr>
                     <td class="text-center bg-danger box-colors">
                         <label class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="red" checked>
+                            <input class="form-check-input" type="radio" name="A1_Achiever:W1[1]" value="Red">
                         </label>
                     </td>
                     <td class="text-center bg-info box-colors">
                         <label class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="red" checked>
+                            <input class="form-check-input" type="radio" name="A1_Achiever:W1[1]" value="Blue">
                         </label>
                     </td>
                     <td class="text-center bg-success box-colors">
                         <label class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="red" checked>
+                            <input class="form-check-input" type="radio" name="A1_Achiever:W1[1]" value="Green">
                         </label>
                     </td>
                     <td class="text-center bg-warning box-colors">
                         <label class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="red" checked>
+                            <input class="form-check-input" type="radio" name="A1_Achiever:W1[1]" value="Yellow">
                         </label>
                     </td>
-                    
+                </tr>
             </tbody>
         </table>
     </main>

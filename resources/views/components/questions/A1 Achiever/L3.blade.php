@@ -1,11 +1,11 @@
-<section id="dropdown-TIPO-NUMERO" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-listening-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>You will hear people talking about the buildings below. Match the buildings to the descriptions.<mark>One has been done for you</mark>.</span>
+        <span>3. You will hear people talking about the buildings below. Match the buildings to the descriptions.<mark>One has been done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
-    <main class="dropdown-menu-content NUMBER_NAME-question-container px-xl-4">
+    <main class="dropdown-menu-content three-question-container px-xl-4">
         <div class="d-flex justify-content-center my-4">
             <audio class="audio d-none" controls controlsList="nodownload">
                 <source
@@ -19,21 +19,35 @@
         </div>
         <div>
             <ul class="bg-archiever-1 d-flex justify-content-center">
-                <li class="mx-2 disabled">a. Shopping-mall</li>
-                <li class="mx-2">b. Coffee</li>
-                <li class="mx-2">c. Bank</li>
-                <li class="mx-2">d. Bus station</li>
+                <li class="mx-2 disabled">Shopping-mall</li>
+                <li class="mx-2">Coffee</li>
+                <li class="mx-2">Bank</li>
+                <li class="mx-2">Bus station</li>
             </ul>
 
-            <div class="py-4 px-2 px-md-3 d-flex justify-content-center">
-            <p class="mb-4 d-flex"> <span class="font-weight-bold ml-4">a. </span><input class="input input-medium text-center"
-                value="10 a.m" disabled type="text">. <span class="font-weight-bold ml-4">b.</span><input class="input input-medium text-center"
-                value="10 a.m" disabled type="text"> <span class="font-weight-bold ml-4">c.</span><input class="input input-medium text-center"
-                value="10 a.m" disabled type="text"> <span class="font-weight-bold ml-4">d.</span><input class="input input-medium text-center"
-                value="10 a.m" disabled type="text"></p>
-            
-           
-        </div>
+            <ol class="list-exercise d-flex justify-content-center">
+                <li class="mx-3"><select disabled name="A1_Achiever:L3[1]">
+                    <option selected>Shopping-mall</option>
+                </select></li>
+                <li class="mx-3"><select name="A1_Achiever:L3[2]">
+                    <option disabled selected>Shopping-mall</option>
+                    <option>Coffee</option>
+                    <option>Bank</option>
+                    <option>Bus Station</option>
+                </select></li>
+                <li class="mx-3"><select name="A1_Achiever:L3[3]">
+                    <option disabled selected>Shopping-mall</option>
+                    <option>Coffee</option>
+                    <option>Bank</option>
+                    <option>Bus Station</option>
+                </select></li>
+                <li class="mx-3"><select name="A1_Achiever:L3[4]">
+                    <option disabled selected>Shopping-mall</option>
+                    <option>Coffee</option>
+                    <option>Bank</option>
+                    <option>Bus Station</option>
+                </select></li>
+            </ol>
         </div>
     </main>
 </section>

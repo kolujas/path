@@ -21,7 +21,7 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">1. Look at the table below. Listen to Anna talking about her family, and complete the spaces in the table. You can listen twice.<mark>One is done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">1. Look at the table below. Listen to Anna talking about her family, and complete the spaces in the table. You can listen twice. <mark>One is done for you</mark>.</h3>
         </header>
         <table style="margin: auto; border: 1px solid #ccc;">
             <thead>
@@ -65,7 +65,7 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">2. You will hear Anna talking about happy days and sad days. Which are happy, and which are sad?<mark>One is done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">2. You will hear Anna talking about happy days and sad days. Which are happy, and which are sad? <mark>One is done for you</mark>.</h3>
         </header>
         <table style="margin: auto; border: 1px solid #ccc;">
             <thead>

@@ -1,6 +1,6 @@
 <section id="dropdown-listening-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>1. Listen to Jenny and Alan talking about their weekend activities. Match the times to the activities. One time and one activity shown below is not used.<mark>One has been done for you.</mark></span>
+        <span>1. Listen to Jenny and Alan talking about their weekend activities. Match the times to the activities. One time and one activity shown below is not used.<mark>One has been done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -27,15 +27,10 @@
             </ul>
         </div>
         <div class="py-4 px-2 px-md-3">
-            <p class="mb-4"> <span class="font-weight-bold">a.</span>  I usually get up at <input class="input input-medium text-center"
-                value="10 a.m" disabled type="text">.</p>
-            <p class="mb-4"> <span class="font-weight-bold">b.</span>  We eat quite late on Saturdays, at around <input class="input input-medium text-center"
-                 disabled type="text">.</p>
-            <p class="mb-4"> <span class="font-weight-bold">c.</span>  We always stop for a coffee at <input class="input input-medium text-center"
-                 disabled type="text"> in the morning..</p>
-            <p class="mb-4"> <span class="font-weight-bold">d.</span> At <input class="input input-medium text-center"
-                 disabled type="text"> in the afternoon we watch a film..</p>
-           
+            <p class="mb-4"><span class="font-weight-bold">a.</span> I usually get up at <input class="input input-medium text-center" value="10 a.m" disabled type="text">.</p>
+            <p class="mb-4"><span class="font-weight-bold">b.</span> We eat quite late on Saturdays, at around <input class="input input-medium text-center" name="A1_Achiever:L1[1]" type="text">.</p>
+            <p class="mb-4"><span class="font-weight-bold">c.</span> We always stop for a coffee at <input class="input input-medium text-center" name="A1_Achiever:L1[2]" type="text"> in the morning.</p>
+            <p class="mb-4"><span class="font-weight-bold">d.</span> At <input name="A1_Achiever:L1[3]" class="input input-medium text-center" type="text"> in the afternoon we watch a film.</p>
         </div>
     </main>
 </section>

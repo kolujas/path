@@ -59,12 +59,12 @@
         </header>
     </htmlpageheader>
 
-    <main style="border: 1rem; background-color: #f8fafc;">
+    <main style="border: 1rem; background-color: #f8fafc; height: 100%;">
         @yield('main')
     </main>
 
     <htmlpagefooter name="page-footer">
-        <footer style="text-align: right; color: rgba(1, 73, 105, 0.9); height: 2rem; margin: 1rem;">
+        <footer style="text-align: right; color: rgba(1, 73, 105, 0.9); height: 2rem; padding: 1rem; background-color: #f8fafc; font-weight: bold;">
             {PAGENO}
         </footer>
     </htmlpagefooter>

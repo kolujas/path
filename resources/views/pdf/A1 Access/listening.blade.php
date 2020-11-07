@@ -34,7 +34,7 @@
     
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">2. You will hear Emma asking her friend Lois what she likes to eat and drink. Complete the tabla showing what she loves, likes and doesn't like.<mark>One has been done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">2. You will hear Emma asking her friend Lois what she likes to eat and drink. Complete the tabla showing what she loves, likes and doesn't like. <mark>One has been done for you</mark>.</h3>
         </header>
         <table style="margin: auto; border: 1px solid #ccc;">
             <tbody>

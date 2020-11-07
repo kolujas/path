@@ -19,5 +19,87 @@
         <p style="text-align: center;">Strikes: {{ $answers['strikes'] }}</p>
     </header>
 
-    {{-- SECTIONS --}}
+    <section>
+        <header>
+            <h3 style="padding-top: 2rem;">1. Read the directions below. Which line on the map shows the correct route? Red, blue, green or yellow? Tick the correct box.</h3>
+        </header>
+        <main>
+            @if (isset($answers['A1_Achiever:W1'][1]))
+                <p style="padding: 0 2rem;">Color selected: <mark>{{ $answers['A1_Achiever:W1'][1] }}</mark></p>
+            @else
+                <p style="padding: 0 2rem;">Color selected: <mark>null</mark></p>
+            @endif
+        </main>
+    </section>
+
+    <section>
+        <header>
+            <h3 style="padding-top: 2rem;">2. Think of questions to ask your favourite singer, beginning with the prompts.</h3>
+        </header>
+        <main>
+            <p style="padding: 0 2rem;"><b class="mr-1">a.</b> When <mark>{{ $answers['A1_Achiever:W2'][1] }}</mark>?</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">b.</b> Why <mark>{{ $answers['A1_Achiever:W2'][1] }}</mark>?</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> Are you <mark>{{ $answers['A1_Achiever:W2'][2] }}</mark>?</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> How Many <mark>{{ $answers['A1_Achiever:W2'][3] }}</mark>?</p>
+        </main>
+    </section>
+
+    <pagebreak />
+
+    <section>
+        <header>
+            <h3 style="padding-top: 2rem;">3. Susana has 4 friends: Alicia, Luis, Paula and Juan. The table shows often the drink tea. Read each sentence a-e, then match the friend to the calendar. <mark>One is done for you</mark>.</h3>
+        </header>
+        <main>
+            <p style="padding: 0 2rem;"><b class="mr-1">a.</b> I <mark>{{ $answers['A1_Achiever:W3'][1] }}</mark> have a cup of tea in the morning.</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">b.</b> I <mark>{{ $answers['A1_Achiever:W3'][1] }}</mark> drink tea. I hate it!</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> I <mark>{{ $answers['A1_Achiever:W3'][2] }}</mark> drink tea with breakfast.</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> I <mark>{{ $answers['A1_Achiever:W3'][3] }}</mark> drink tea. I prefer coffe.</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> I <mark>{{ $answers['A1_Achiever:W3'][5] }}</mark> have tea before going to school.</p>
+        </main>
+    </section>
+
+    <section>
+        <header>
+            <h3 style="padding-top: 2rem;">4.a. Match the images with the words below. <mark>One is done for you</mark>.</h3>
+        </header>
+        <main>
+            @if (isset($answers['A1_Achiever:W4A']))
+                <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
+                    <li class="answers inline mx-lg-2">Sunny</li>
+                    <li class="answers crossed inline mx-lg-2"><mark>{{ $answers['A1_Achiever:W4A'][1] }}</mark></li>
+                    <li class="answers inline mx-lg-2"><mark>{{ $answers['A1_Achiever:W4A'][2] }}</mark></li>
+                    <li class="answers inline mx-lg-2"><mark>{{ $answers['A1_Achiever:W4A'][3] }}</mark></li>
+                </ol>
+            @else
+                <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
+                    <li class="answers inline mx-lg-2">Sunny</li>
+                    <li class="answers crossed inline mx-lg-2"><mark>null</mark></li>
+                    <li class="answers inline mx-lg-2"><mark>null</mark></li>
+                    <li class="answers inline mx-lg-2"><mark>null</mark></li>
+                </ol>
+            @endif
+        </main>
+    </section>
+
+    <section>
+        <header>
+            <h3 style="padding-top: 2rem;">4.b. What...</h3>
+        </header>
+        <main>
+            <p style="padding: 0 4rem; color: #000;">...can you do on a windy day? <mark>{!! $answers['A1_Achiever:W4B'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">...do you like doing on sunny days? <mark>{!! $answers['A1_Achiever:W4B'][2] !!}</mark></p>
+        </main>
+    </section>
+
+    <pagebreak />
+
+    <section>
+        <header>
+            <h3 style="padding-top: 2rem;">5. You receive the following note. Write a reply.</h3>
+        </header>
+        <main>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A1_Achiever:W5'][1] !!}</mark></p>
+        </main>
+    </section>
 @endsection

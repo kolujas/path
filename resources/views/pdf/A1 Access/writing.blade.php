@@ -32,7 +32,7 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">2.a. Fill the gaps in the words, then match the words to the activities shown in the table.<mark>One is done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">2.a. Fill the gaps in the words, then match the words to the activities shown in the table. <mark>One is done for you</mark>.</h3>
         </header>
         <table style="margin: auto; border: 1px solid #ccc;">
             <tbody>
@@ -96,7 +96,7 @@
     
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">3. Match the months to the season for your country.<mark>One is done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">3. Match the months to the season for your country. <mark>One is done for you</mark>.</h3>
         </header>
         <table style="margin: auto; border: 1px solid #ccc;">
             <thead>
