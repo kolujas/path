@@ -24,11 +24,11 @@
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
                     <div class="card-body mx-auto p-0">
                         <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="Ben">Ben</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" checked name="A2_Preliminary:L1[1a]" value="Ben">Ben</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="Sid">Sid</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1a]" value="Sid">Sid</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="Tom">Tom</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1a]" value="Tom">Tom</label></li>
                         </ol>
                     </div>
                 </div>
@@ -38,11 +38,11 @@
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
                     <div class="card-body mx-auto p-0">
                         <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="Ben">Ben</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" checked name="A2_Preliminary:L1[1b]" value="Ben">Ben</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="Sid">Sid</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1b]" value="Sid">Sid</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="Tom">Tom</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1b]" value="Tom">Tom</label></li>
                         </ol>
                     </div>
                 </div>
@@ -52,56 +52,11 @@
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
                     <div class="card-body mx-auto p-0">
                         <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="Ben">Ben</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" checked name="A2_Preliminary:L1[1c]" value="Ben">Ben</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="Sid">Sid</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1c]" value="Sid">Sid</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="Tom">Tom</label></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-md-between justify-content-lg-center py-4">
-            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 card-min-width">
-                <div class="card">
-                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
-                    <div class="card-body mx-auto p-0">
-                        <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="56">56</label></li>
-                            <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="68">68</label></li>
-                            <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="21">21</label></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 card-min-width">
-                <div class="card">
-                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
-                    <div class="card-body mx-auto p-0">
-                        <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="56">56</label></li>
-                            <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="68">68</label></li>
-                            <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="21">21</label></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 card-min-width">
-                <div class="card">
-                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
-                    <div class="card-body mx-auto p-0">
-                        <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="56">56</label></li>
-                            <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="68">68</label></li>
-                            <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="21">21</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1c]" value="Tom">Tom</label></li>
                         </ol>
                     </div>
                 </div>
@@ -114,11 +69,11 @@
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
                     <div class="card-body mx-auto p-0">
                         <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="2A">2A</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" checked name="A2_Preliminary:L1[2a]" value="56">56</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="5C">5C</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[2a]" value="68">68</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="3B">3B</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[2a]" value="21">21</label></li>
                         </ol>
                     </div>
                 </div>
@@ -128,11 +83,11 @@
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
                     <div class="card-body mx-auto p-0">
                         <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="2A">2A</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" checked name="A2_Preliminary:L1[2b]" value="56">56</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="5C">5C</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[2b]" value="68">68</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="3B">3B</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[2b]" value="21">21</label></li>
                         </ol>
                     </div>
                 </div>
@@ -142,11 +97,56 @@
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
                     <div class="card-body mx-auto p-0">
                         <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="2A">2A</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" checked name="A2_Preliminary:L1[2c]" value="56">56</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="5C">5C</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[2c]" value="68">68</label></li>
                             <li class="inline mx-lg-2">/</li>
-                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[1]" value="3B">3B</label></li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[2c]" value="21">21</label></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-between justify-content-lg-center py-4">
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 card-min-width">
+                <div class="card">
+                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <div class="card-body mx-auto p-0">
+                        <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
+                            <li class="answers inline mx-lg-2"><label><input type="radio" checked name="A2_Preliminary:L1[3a]" value="2A">2A</label></li>
+                            <li class="inline mx-lg-2">/</li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[3a]" value="5C">5C</label></li>
+                            <li class="inline mx-lg-2">/</li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[3a]" value="3B">3B</label></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 card-min-width">
+                <div class="card">
+                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <div class="card-body mx-auto p-0">
+                        <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
+                            <li class="answers inline mx-lg-2"><label><input type="radio" checked name="A2_Preliminary:L1[3b]" value="2A">2A</label></li>
+                            <li class="inline mx-lg-2">/</li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[3b]" value="5C">5C</label></li>
+                            <li class="inline mx-lg-2">/</li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[3b]" value="3B">3B</label></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 card-min-width">
+                <div class="card">
+                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <div class="card-body mx-auto p-0">
+                        <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
+                            <li class="answers inline mx-lg-2"><label><input type="radio" checked name="A2_Preliminary:L1[3c]" value="2A">2A</label></li>
+                            <li class="inline mx-lg-2">/</li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[3c]" value="5C">5C</label></li>
+                            <li class="inline mx-lg-2">/</li>
+                            <li class="answers inline mx-lg-2"><label><input type="radio" name="A2_Preliminary:L1[3c]" value="3B">3B</label></li>
                         </ol>
                     </div>
                 </div>

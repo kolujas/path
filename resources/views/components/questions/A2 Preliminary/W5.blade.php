@@ -7,7 +7,7 @@
     </a>
     <main class="dropdown-menu-content five-question-container px-xl-4">
         <div class="preliminary-textarea-div d-flex justify-content-center mb-4">
-            <textarea class="textarea-preliminary-writing pl-4 pt-1 border-0"></textarea>
+            <textarea name="A2_Preliminary:W5[1]" class="textarea-preliminary-writing pl-4 pt-1"></textarea>
         </div>
     </main>
 </section>
