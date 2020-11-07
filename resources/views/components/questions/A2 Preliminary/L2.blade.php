@@ -18,5 +18,32 @@
             </div>
         </div>
 
+        <div class="pb-4">
+            <div class="d-flex">
+                <ul class="mx-auto ul-width-44">
+                    <li>a. Who did she go camping with?</li>
+                    <input class="border-right-0 border-left-0 border-top-0 inputs-border"value="" type="text" value="">
+                </ul>
+            </div>
+            <div class="d-flex">
+                <ul class="mx-auto ul-width-44">
+                    <li>b. How many tents did her father put up?</li>
+                    <input class="border-right-0 border-left-0 border-top-0 inputs-border"value="" type="text" value="">
+                </ul>
+            </div>
+            <div class="d-flex">
+                <ul class="mx-auto ul-width-44">
+                    <li>c. What did her mother cook?</li>
+                    <input class="border-right-0 border-left-0 border-top-0 inputs-border"value="" type="text" value="">
+                </ul>
+            </div>
+            <div class="d-flex">
+                <ul class="mx-auto ul-width-44">
+                    <li>d. How many days did the family spend camping?</li>
+                    <input class="border-right-0 border-left-0 border-top-0 inputs-border"value="" type="text" value="">
+                </ul>
+            </div>
+        </div>   
+
     </main>
 </section>
