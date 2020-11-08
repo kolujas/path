@@ -88,3 +88,7 @@
 <div class="info mx-auto mb-4">
     <p></p>
 </div>
+
+<ol class="col-12 d-flex justify-content-around justify-content-lg-center">
+    <li class="inline mx-lg-2"><label class="options"><input type="radio" class="d-none" value="SOMETHING">SOMETHING</label></li>
+</ol>
