@@ -7,7 +7,7 @@
     </a>
     <main class="dropdown-menu-content four-question-container px-xl-4">
         <div class="py-4">
-            <div class="col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <textarea name="A1_Access:W4[1]" class="pl-2"></textarea>
             </div>
         </div>

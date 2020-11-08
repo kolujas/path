@@ -6,6 +6,21 @@
         </button>
     </a>
     <main class="dropdown-menu-content archiever two-question-container px-xl-4">
+        <div class="d-flex justify-content-center my-4">
+            <audio class="d-none" controls controlsList="nodownload">
+                <source
+                    src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
+                    type="audio/ogg">
+                Tu navegador no soporta el audio.
+            </audio>
+            <div>
+                <button class="audio-button d-flex justify-content-around align-items-center p-2" type="button">
+                    <i class="fas fa-play audio-icon"></i>
+                    <span class="audio-text">Play Audio</span>
+                </button>
+            </div>
+		</div>
+		
 		<select name="A1_Achiever:L2[1]" class="d-block mx-auto mb-4">
 			<option selected>1</option>
 			<option>2</option>
@@ -19,40 +34,48 @@
 						<th class="text-center p-2" scope="col" colspan="4">Bingo!</th>                 
 					</tr>   
 					<tr>
-						<td class="text-center"><label for="field-31">
-							<input id="field-31" type="checkbox">31
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">31</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-35">
-							<input id="field-35" type="checkbox">35
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">35</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-40">
-							<input id="field-40" type="checkbox">40
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">40</span>
 						</label></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td class="text-center"><label for="field-41">
-							<input id="field-41" type="checkbox">41
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">41</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-50">
-							<input id="field-50" type="checkbox">50
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">50</span>
 						</label></td>
 						<td></td>
 					</tr>
 					<tr>
-						<td class="text-center"><label for="field-51">
-							<input id="field-51" type="checkbox">51
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">51</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-52">
-							<input id="field-52" type="checkbox">52
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">52</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-55">
-							<input id="field-55" type="checkbox">55
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">55</span>
 						</label></td>
 					</tr>
 				</tbody>
@@ -65,40 +88,48 @@
 						<th class="text-center p-2" scope="col" colspan="4">Bingo!</th>                 
 					</tr>   
 					<tr>
-						<td class="text-center"><label for="field-31">
-							<input id="field-31" type="checkbox">31
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">31</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-35">
-							<input id="field-35" type="checkbox">35
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">35</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-40">
-							<input id="field-40" type="checkbox">40
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">40</span>
 						</label></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td class="text-center"><label for="field-41">
-							<input id="field-41" type="checkbox">41
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">41</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-50">
-							<input id="field-50" type="checkbox">50
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">50</span>
 						</label></td>
 						<td></td>
 					</tr>
 					<tr>
-						<td class="text-center"><label for="field-51">
-							<input id="field-51" type="checkbox">51
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">51</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-52">
-							<input id="field-52" type="checkbox">52
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">52</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-55">
-							<input id="field-55" type="checkbox">55
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">55</span>
 						</label></td>
 					</tr>
 				</tbody>
@@ -111,40 +142,47 @@
 						<th class="text-center p-2" scope="col" colspan="4">Bingo!</th>                 
 					</tr>   
 					<tr>
-						<td class="text-center"><label for="field-65">
-							<input id="field-65" type="checkbox">65
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">65</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-67">
-							<input id="field-67" type="checkbox">67
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">67</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-68">
-							<input id="field-68" type="checkbox">68
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">68</span>
 						</label></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td class="text-center"><label for="field-75">
-							<input id="field-75" type="checkbox">75
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">75</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-80">
-							<input id="field-80" type="checkbox">80
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">80</span>
 						</label></td>
 						<td></td>
 					</tr>
 					<tr>
-						<td class="text-center"><label for="field-85">
-							<input id="field-85" type="checkbox">85
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">85</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-99">
-							<input id="field-99" type="checkbox">99
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">99</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label for="field-100">
-							<input id="field-100" type="checkbox">100
+						<td class="text-center"><label class="icon-checkbox"">
+							<input" type="checkbox">100
 						</label></td>
 					</tr>
 				</tbody>

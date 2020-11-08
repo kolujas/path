@@ -1,0 +1,25 @@
+<section id="dropdown-TIPO-NUMERO" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+    <a href="#" class="dropdown-header">
+        <span>CONSIGNA</span>
+        <button class="dropdown-button text-right">
+            <i class="dropdown-icon fas fa-chevron-down"></i>
+        </button>
+    </a>
+    <main class="dropdown-menu-content NUMBER_NAME-question-container px-xl-4">
+        <div class="d-flex justify-content-center my-4">
+            <audio class="d-none" controls controlsList="nodownload">
+                <source
+                    src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
+                    type="audio/ogg">
+                Tu navegador no soporta el audio.
+            </audio>
+            <div>
+                <button class="audio-button d-flex justify-content-around align-items-center p-2" type="button">
+                    <i class="fas fa-play audio-icon"></i>
+                    <span class="audio-text">Play Audio</span>
+                </button>
+            </div>
+        </div>
+
+    </main>
+</section>

@@ -6,45 +6,26 @@
         </button>
     </a>
     <main class="dropdown-menu-content two-question-container px-xl-4">
-        <img class="hector-image" src="../../img/recursos/hector.jpg" class="img-fluid" alt="hector re estudioso">
-
         <div class="d-flex justify-content-center my-4">
-            <audio class="audio d-none" controls controlsList="nodownload">
+            <audio class="d-none" controls controlsList="nodownload">
                 <source
                     src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
                     type="audio/ogg">
-                Your browser does not supports the audio.
+                Tu navegador no soporta el audio.
             </audio>
-            <div class="audio-div">
-                <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
+            <div>
+                <button class="audio-button d-flex justify-content-around align-items-center p-2" type="button">
+                    <i class="fas fa-play audio-icon"></i>
+                    <span class="audio-text">Play Audio</span>
+                </button>
             </div>
         </div>
 
-        <div class="pb-4">
-            <div class="d-flex">
-                <ul class="mx-auto ul-width-44">
-                    <li>a. Who did she go camping with?</li>
-                    <input class="border-right-0 border-left-0 border-top-0 inputs-border" type="text" name="A2_Preliminary:L2[1]">
-                </ul>
-            </div>
-            <div class="d-flex">
-                <ul class="mx-auto ul-width-44">
-                    <li>b. How many tents did her father put up?</li>
-                    <input class="border-right-0 border-left-0 border-top-0 inputs-border" type="text" name="A2_Preliminary:L2[2]">
-                </ul>
-            </div>
-            <div class="d-flex">
-                <ul class="mx-auto ul-width-44">
-                    <li>c. What did her mother cook?</li>
-                    <input class="border-right-0 border-left-0 border-top-0 inputs-border" type="text" name="A2_Preliminary:L2[3]">
-                </ul>
-            </div>
-            <div class="d-flex">
-                <ul class="mx-auto ul-width-44">
-                    <li>d. How many days did the family spend camping?</li>
-                    <input class="border-right-0 border-left-0 border-top-0 inputs-border" type="text" name="A2_Preliminary:L2[4]">
-                </ul>
-            </div>
+        <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
+            <p class="complete col-12 mb-4"><b>a.</b> Who did she go camping with? <input type="text" name="A2_Preliminary:L2[1]" class="input input-huge"></p>
+            <p class="complete col-12 mb-4"><b>b.</b> How many tents did her father put up? <input type="text" name="A2_Preliminary:L2[2]" class="input input-huge"></p>
+            <p class="complete col-12 mb-4"><b>c.</b> What did her mother cook? <input type="text" name="A2_Preliminary:L2[3]" class="input input-huge"></p>
+            <p class="complete col-12 mb-4"><b>d.</b> How many days did the family spend camping? <input type="text" name="A2_Preliminary:L2[4]" class="input input-huge"></p>
         </div>
     </main>
 </section>

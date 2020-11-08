@@ -7,21 +7,24 @@
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
         <div class="d-flex justify-content-center my-4">
-            <audio class="audio d-none" controls controlsList="nodownload">
+            <audio class="d-none" controls controlsList="nodownload">
                 <source
                     src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
                     type="audio/ogg">
                 Tu navegador no soporta el audio.
             </audio>
-            <div class="audio-div">
-                <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
+            <div>
+                <button class="audio-button d-flex justify-content-around align-items-center p-2" type="button">
+                    <i class="fas fa-play audio-icon"></i>
+                    <span class="audio-text">Play Audio</span>
+                </button>
             </div>
         </div>
 
-        <div class="row justify-content-md-between justify-content-lg-center py-4">
-            <ol class="col-12 mb-4 d-flex ol-decimal justify-content-around justify-content-lg-center">
+        <div class="row justify-content-md-between justify-content-lg-center pb-4">
+            <ol class="list-exercise col-12 mb-4 d-flex justify-content-center">
                 <li class="mx-lg-3">
-                    <select clas="input-long" name="A1_Access:L1[1]">
+                    <select name="A1_Access:L1[1]">
                         <option>a</option>
                         <option>b</option>
                         <option>c</option>
@@ -30,7 +33,7 @@
                     </select>
                 </li>
                 <li class="mx-lg-3">
-                    <select clas="input-long" name="A1_Access:L1[2]">
+                    <select name="A1_Access:L1[2]">
                         <option>a</option>
                         <option>b</option>
                         <option>c</option>
@@ -39,7 +42,7 @@
                     </select>
                 </li>
                 <li class="mx-lg-3">
-                    <select clas="input-long" name="A1_Access:L1[3]">
+                    <select name="A1_Access:L1[3]">
                         <option>a</option>
                         <option>b</option>
                         <option>c</option>
@@ -50,40 +53,40 @@
             </ol>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one">
-                    <div class="card-body mx-auto text-center">
+                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <div class="card-body mx-auto">
                         a
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-two-question-one">
-                    <div class="card-body mx-auto text-center">
+                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <div class="card-body mx-auto">
                         b
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-three-question-one">
-                    <div class="card-body mx-auto text-center">
+                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <div class="card-body mx-auto">
                         c
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-four-question-one">
-                    <div class="card-body mx-auto text-center">
+                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <div class="card-body mx-auto">
                         d
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-2 card-min-width">
+            <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-five-question-one">
-                    <div class="card-body mx-auto text-center">
+                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <div class="card-body mx-auto">
                         e
                     </div>
                 </div>

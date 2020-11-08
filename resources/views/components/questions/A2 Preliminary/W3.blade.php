@@ -6,14 +6,18 @@
         </button>
     </a>
     <main class="dropdown-menu-content three-question-container px-xl-4">
-        <ul>
-            <li>a. How to make a cup of coffee.</li>
-            <li>b. How to get to school or work from your house.</li>
-            <li>c. Your morning routine</li>
-        </ul>
+        <div class="row justify-content-md-between justify-content-lg-center py-4">
+            <ol class="info list-data col-10 mb-4 d-flex justify-content-start flex-wrap">
+                <li class="mx-lg-2">a. How to make a cup of coffee.</li>
+                <li class="mx-lg-2">b. How to get to school or work from your house.</li>
+                <li class="mx-lg-2">c. Your morning routine</li>
+            </ol>
+        </div>
 
-        <div class="preliminary-textarea-div d-flex justify-content-center mb-4">
-            <textarea name="A2_Preliminary:W3[1]" class="textarea-preliminary-writing pl-4 pt-1 border-0"></textarea>
+        <div class="pb-4">
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <textarea name="A2_Preliminary:W3[1]" class="pl-2"></textarea>
+            </div>
         </div>
     </main>
 </section>

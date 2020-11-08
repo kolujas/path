@@ -6,8 +6,8 @@
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
-        <div>
-            <p class="bg-archiever-1">‘Hi, well, first go between the school and the cinema, then under the bridge. Then walk around the tower and across the park. Finally, walk along the front of the airport and continue straight.’</p>
+        <div class="info mx-auto mb-4">
+            <p>‘Hi, well, first go between the school and the cinema, then under the bridge. Then walk around the tower and across the park. Finally, walk along the front of the airport and continue straight.’</p>
         </div>
 
         <table class="table table-striped mb-4 table-colors mx-auto">

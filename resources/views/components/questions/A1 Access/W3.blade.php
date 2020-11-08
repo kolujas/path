@@ -6,8 +6,7 @@
         </button>
     </a>
     <main class="dropdown-menu-content three-question-container px-xl-4">
-
-        <table class="table table-striped mb-4">
+        <table class="table table-normal table-striped mb-4">
             <thead>
                 <tr>
                     <th scope="col" colspan="2"></th>
@@ -17,7 +16,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
+                    <th class="text-center" scope="row">1</th>
                     <td>The weather is cooler and the leaves fall off the trees</td>
                     <td><select class="input-long" disabled>
                         <option selected>April</option>
@@ -30,7 +29,7 @@
                     </select></td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
+                    <th class="text-center" scope="row">2</th>
                     <td>The weather gets really hot!</td>
                     <td><select class="input-long" name="A1_Access:W3[2]">
                         <option>January</option>
@@ -51,7 +50,7 @@
                     </select></td>
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
+                    <th class="text-center" scope="row">3</th>
                     <td>It's cold and it rains a lot!</td>
                     <td><select class="input-long" name="A1_Access:W3[3]">
                         <option>January</option>
@@ -72,7 +71,7 @@
                     </select></td>
                 </tr>
                 <tr>
-                    <th scope="row">4</th>
+                    <th class="text-center" scope="row">4</th>
                     <td>Flowers start blooming.</td>
                     <td><select class="input-long" disabled>
                         <option selected>September</option>

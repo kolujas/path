@@ -6,8 +6,10 @@
         </button>
     </a>
     <main class="dropdown-menu-content five-question-container px-xl-4">
-        <div class="preliminary-textarea-div d-flex justify-content-center mb-4">
-            <textarea name="A2_Preliminary:W5[1]" class="textarea-preliminary-writing pl-4 pt-1"></textarea>
+        <div class="py-4">
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <textarea name="A2_Preliminary:W5[1]" class="pl-2"></textarea>
+            </div>
         </div>
     </main>
 </section>

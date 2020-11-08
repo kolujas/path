@@ -25,9 +25,15 @@
         </header>
         <main>
             <p style="padding: 0 2rem;"><b class="mr-1">a.</b> I usually get up 10a.m.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">b.</b> We eat quite late on Saturdays, at around <mark>{{ $answers['A1_Achiever:L1'][1] }}</mark>.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> We always stop for a coffee at <mark>{{ $answers['A1_Achiever:L1'][2] }}</mark> in the morning.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> At <mark>{{ $answers['A1_Achiever:L1'][3] }}</mark> in the afternoon we watch a film.</p>
+            @if (isset($answers['A1_Achiever:L1']))
+                <p style="padding: 0 2rem;"><b class="mr-1">b.</b> We eat quite late on Saturdays, at around <mark>{{ $answers['A1_Achiever:L1'][1] }}</mark>.</p>
+                <p style="padding: 0 2rem;"><b class="mr-1">c.</b> We always stop for a coffee at <mark>{{ $answers['A1_Achiever:L1'][2] }}</mark> in the morning.</p>
+                <p style="padding: 0 2rem;"><b class="mr-1">c.</b> At <mark>{{ $answers['A1_Achiever:L1'][3] }}</mark> in the afternoon we watch a film.</p>
+            @else
+                <p style="padding: 0 2rem;"><b class="mr-1">b.</b> We eat quite late on Saturdays, at around <mark>null</mark>.</p>
+                <p style="padding: 0 2rem;"><b class="mr-1">c.</b> We always stop for a coffee at <mark>null</mark> in the morning.</p>
+                <p style="padding: 0 2rem;"><b class="mr-1">c.</b> At <mark>null</mark> in the afternoon we watch a film.</p>
+            @endif
         </main>
     </section>
 

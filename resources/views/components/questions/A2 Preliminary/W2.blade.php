@@ -6,14 +6,10 @@
         </button>
     </a>
     <main class="dropdown-menu-content two-question-container px-xl-4 pre-inputs">
-        <div class="py-4 px-2 px-md-3">
-            <p class="mb-0 font-weight-bold">a. I must <input name="A2_Preliminary:W2[1]" class="input input-one text-left" type="text"></p>
-        </div>
-        <div class="py-4 px-2 px-md-3">
-            <p class="mb-0 font-weight-bold">b. I can’t <input name="A2_Preliminary:W2[2]" class="input input-two text-left" type="text"></p>
-        </div>
-        <div class="py-4 px-2 px-md-3">
-            <p class="mb-0 font-weight-bold">c. I don’t have to <input name="A2_Preliminary:W2[3]" class="input input-three text-left" type="text"></p>
+        <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
+            <p class="complete col-12 mb-4"><b>a.</b> I must <input name="A2_Preliminary:W2[1]" class="input input-large" type="text"></p>
+            <p class="complete col-12 mb-4"><b>b.</b> I can’t <input name="A2_Preliminary:W2[2]" class="input input-large" type="text"></p>
+            <p class="complete col-12 mb-4"><b>c.</b> I don’t have to <input name="A2_Preliminary:W2[3]" class="input input-large" type="text"></p>
         </div>
     </main>
 </section>

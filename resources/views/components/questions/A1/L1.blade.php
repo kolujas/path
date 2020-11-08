@@ -14,7 +14,10 @@
                 Tu navegador no soporta el audio.
             </audio>
             <div class="audio-div">
-                <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
+                <button class="audioBtn" type="button">
+                    <i class="fas fa-play play-icon"></i>
+                    <span>Play Audio</span>
+                </button>
             </div>
         </div>
 

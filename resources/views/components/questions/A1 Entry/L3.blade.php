@@ -7,17 +7,21 @@
     </a>
     <main class="dropdown-menu-content third-question-container px-xl-4">
         <div class="d-flex justify-content-center my-4">
-            <audio class="audio d-none" controls controlsList="nodownload">
+            <audio class="d-none" controls controlsList="nodownload">
                 <source
                     src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
                     type="audio/ogg">
                 Tu navegador no soporta el audio.
             </audio>
-            <div class="audio-div">
-                <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
+            <div>
+                <button class="audio-button d-flex justify-content-around align-items-center p-2" type="button">
+                    <i class="fas fa-play audio-icon"></i>
+                    <span class="audio-text">Play Audio</span>
+                </button>
             </div>
         </div>
-        <table class="table table-striped mb-4 table-question-3">
+        
+        <table class="table table-normal table-striped mx-auto mb-4">
             <thead>
                 <tr>
                     <th scope="col">I live at..</th>

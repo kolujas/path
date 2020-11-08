@@ -6,57 +6,34 @@
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
-        <div class="row row-cols-1 row-cols-md-4">
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="/img/recursos/hector.jpg" class="card-img-top" alt="/img/recursos/hector.jpg">
-                </div>
+        <div class="row justify-content-center py-4">
+            <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
             </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="/img/recursos/hector.jpg" class="card-img-top" alt="/img/recursos/hector.jpg">
-                </div>
+            <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
             </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="/img/recursos/hector.jpg" class="card-img-top" alt="/img/recursos/hector.jpg">
-                </div>
+            <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
             </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="/img/recursos/hector.jpg" class="card-img-top" alt="/img/recursos/hector.jpg">
-                </div>
+            <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
+                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
             </div>
         </div>
 
-        <table class="table table-borderless table-noborders mx-auto w-75">
-            <tbody>
-                <tr>
-                    <td>Safe</td>
-                    <td>When I go on holiday, I usually travel by plane because it's safer than other transports.</td>
-                </tr>
-                <tr>
-                    <td><span class="font-weight-bold">a.</span> Exciting</td>
-                    <td><input name="A2_Preliminary:W1A[1]" class="input w-75" type="text"></td>
-                </tr>                  
-                <tr>
-                    <td><span class="font-weight-bold">b.</span> Hot</td>
-                    <td><input name="A2_Preliminary:W1A[2]" class="input w-75" type="text"></td>
-                </tr>                  
-                <tr>
-                    <td><span class="font-weight-bold">c.</span> Bad</td>
-                    <td><input name="A2_Preliminary:W1A[3]" class="input w-75" type="text"></td>
-                </tr>                  
-            </tbody>
-        </table>
-
-        <img class="hector-image" src="../../img/recursos/hector.jpg" class="img-fluid" alt="hector re estudioso">
-        <div class="pb-4 mt-5 text-center">
-            <span class="h5">1.b. What did you do on your last holiday?</span>
-            <div class="d-flex mt-5">
-                <ul class="mx-auto ul-width-44 w-75">
-                    <input class="border-right-0 border-left-0 border-top-0 inputs-border" type="text" name="A2_Preliminary:W1B[1]">
-                </ul>
+        <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
+            <p class="complete col-12 mb-4"><b>a. Safe</b> When I go on holiday, I usually travel by plane because it's safer than other transports.</p>
+            <p class="complete col-12 mb-4"><b>b. Exciting</b><input name="A2_Preliminary:W1A[1]" class="input input-super-huge" type="text"></p>
+            <p class="complete col-12 mb-4"><b>c. Hot</b><input name="A2_Preliminary:W1A[2]" class="input input-super-huge" type="text"></p>
+            <p class="complete col-12 mb-4"><b>d. Bad</b><input name="A2_Preliminary:W1A[3]" class="input input-super-huge" type="text"></p>
+        </div>
+        
+        <div class="dropdown-header px-0">
+            <span>1.b. What did you do on your last holiday?</span>
+        </div>
+        <div class="py-4">
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <textarea name="A2_Preliminary:W1B[1]" class="pl-2"></textarea>
             </div>
         </div>
     </main>

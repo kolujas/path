@@ -6,29 +6,21 @@
         </button>
     </a>
     <main class="dropdown-menu-content three-question-container px-xl-4 archiever-w-3">
-        <ul class="bg-archiever-1 d-flex justify-content-center">
-            <li class="mx-2">Always</li>
-            <li class="mx-2">Sometimes</li>
-            <li class="mx-2">Never</li>
-            <li class="mx-2">Frequently</li>
-            <li class="mx-2">Hardly Ever</li>
-        </ul>
-        <div class="mx-md-4">
-            <div class="py-4 px-2 px-md-4 mx-md-4">
-                <p class="mb-0 font-weight-bold">a. I <input name="A1_Achiever:W3[1]" class="input input-long input-one text-left" type="text">have a cup of tea in the morning.</p>
-            </div>
-            <div class="py-4 px-2 px-md-4 mx-md-4">
-                <p class="mb-0 font-weight-bold">b. I <input name="A1_Achiever:W3[2]" class="input input-long input-two text-left" type="text">drink tea. I hate it!</p>
-            </div>
-            <div class="py-4 px-2 px-md-4 mx-md-4">
-                <p class="mb-0 font-weight-bold">c. I <input name="A1_Achiever:W3[3]" class="input input-long input-three text-left" type="text">drink tea with breakfast.</p>
-            </div>
-            <div class="py-4 px-2 px-md-4 mx-md-4">
-                <p class="mb-0 font-weight-bold">d. I <input name="A1_Achiever:W3[4]" class="input input-long input-four text-left" type="text">drink tea. I prefer coffee.</p>
-            </div>
-            <div class="py-4 px-2 px-md-4 mx-md-4">
-                <p class="mb-0 font-weight-bold">e. I <input name="A1_Achiever:W3[5]" class="input input-long input-five text-left" type="text">have tea before going to school.</p>
-            </div>
+
+        <div class="row justify-content-md-between justify-content-lg-center py-4">
+            <ol class="info list-data col-10 mb-4 d-flex justify-content-center">
+                <li class="inline mx-lg-2">Always</li>
+                <li class="inline mx-lg-2">Sometimes</li>
+                <li class="inline mx-lg-2">Never</li>
+                <li class="inline mx-lg-2">Frequently</li>
+                <li class="inline mx-lg-2">Hardly Ever</li>
+            </ol>
+            
+            <p class="complete col-12 mb-4"><b>a.</b> I <input name="A1_Achiever:W3[1]" class="input input-long" type="text">have a cup of tea in the morning.</p>
+            <p class="complete col-12 mb-4"><b>b.</b> I <input name="A1_Achiever:W3[2]" class="input input-long" type="text">drink tea. I hate it!</p>
+            <p class="complete col-12 mb-4"><b>c.</b> I <input name="A1_Achiever:W3[3]" class="input input-long" type="text">drink tea with breakfast.</p>
+            <p class="complete col-12 mb-4"><b>d.</b> I <input name="A1_Achiever:W3[4]" class="input input-long" type="text">drink tea. I prefer coffee.</p>
+            <p class="complete col-12 mb-4"><b>e.</b> I <input name="A1_Achiever:W3[5]" class="input input-long" type="text">have tea before going to school.</p>
         </div>
     </main>
 </section>

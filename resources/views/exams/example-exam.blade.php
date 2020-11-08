@@ -62,6 +62,7 @@
         const evaluation = @json($evaluation);
     </script>
     <script type="module" src={{ asset('js/exams/example-exam.js') }}></script>
+    <script type="module" src={{ asset('js/exams/exercises.js') }}></script>
 @endsection
 
 @section('footer')

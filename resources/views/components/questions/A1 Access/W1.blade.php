@@ -7,20 +7,21 @@
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
         <div class="row justify-content-md-between justify-content-lg-center py-4">
-            <ol class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
-                <li class="title inline mx-lg-2"><b>Colours:</b></li>
-                <li class="answers crossed inline mx-lg-2">Green</li>
-                <li class="answers inline mx-lg-2">Red</li>
-                <li class="answers inline mx-lg-2">Orange</li>
+            <ol class="info list-data col-10 mb-0 pb-2 d-flex justify-content-center">
+                <li class="title inline mx-lg-2">Colours:</li>
+                <li class="inline mx-lg-2">Green</li>
+                <li class="inline mx-lg-2">Red</li>
+                <li class="inline mx-lg-2">Orange</li>
             </ol>
-            <ol class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
-                <li class="title inline mx-lg-2"><b>Clothes:</b></li>
-                <li class="answers crossed inline mx-lg-2">T-Shirt</li>
-                <li class="answers inline mx-lg-2">Shorts</li>
-                <li class="answers inline mx-lg-2">Cap</li>
+            <ol class="info list-data col-10 mb-4 pt-2 d-flex justify-content-center">
+                <li class="title inline mx-lg-2">Clothes:</li>
+                <li class="inline mx-lg-2">T-Shirt</li>
+                <li class="inline mx-lg-2">Shorts</li>
+                <li class="inline mx-lg-2">Cap</li>
             </ol>
         </div>
-        <table class="table borderless">
+
+        <table class="table">
             <tbody>
                 <tr>
                     <th scope="col"><div class="d-flex justify-content-end align-content-center"><p class="justify-content-end">I am wearing a <input name="A1_Access:W1[1]" class="input input-medium text-center" type="text"> <input class="input input-medium text-center" value="t-shirt" disabled type="text">.</p></div></th>
@@ -28,7 +29,7 @@
                 </tr>
             </tbody>
         </table>
-        <table class="table borderless">
+        <table class="table">
             <tbody>
                 <tr>
                     <th class="text-right" scope="col"><img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one"></th>
@@ -36,7 +37,7 @@
                 </tr>
             </tbody>
         </table>
-        <table class="table borderless">
+        <table class="table">
             <tbody>
                 <tr>
                     <th class="text-right" scope="col"><img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one"></th>

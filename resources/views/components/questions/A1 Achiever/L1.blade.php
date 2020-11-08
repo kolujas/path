@@ -7,30 +7,53 @@
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
         <div class="d-flex justify-content-center my-4">
-            <audio class="audio d-none" controls controlsList="nodownload">
+            <audio class="d-none" controls controlsList="nodownload">
                 <source
                     src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
                     type="audio/ogg">
-                Your browser does not supports the audio.
+                Tu navegador no soporta el audio.
             </audio>
-            <div class="audio-div">
-                <i class="fas fa-play play-icon"></i><button class="audioBtn" type="button">Play Audio</button>
+            <div>
+                <button class="audio-button d-flex justify-content-around align-items-center p-2" type="button">
+                    <i class="fas fa-play audio-icon"></i>
+                    <span class="audio-text">Play Audio</span>
+                </button>
             </div>
         </div>
-        <div>
-            <ul class="bg-archiever-1 d-flex justify-content-center">
-                <li class="mx-2 disabled">a. 10 a.m.</li>
-                <li class="mx-2">b. 11:30 a.m.</li>
-                <li class="mx-2">c. 2 p.m.</li>
-                <li class="mx-2">d. 5:30 p.m.</li>
-                <li class="mx-2">e. 9 p.m.</li>
-            </ul>
-        </div>
-        <div class="py-4 px-2 px-md-3">
-            <p class="mb-4"><span class="font-weight-bold">a.</span> I usually get up at <input class="input input-medium text-center" value="10 a.m" disabled type="text">.</p>
-            <p class="mb-4"><span class="font-weight-bold">b.</span> We eat quite late on Saturdays, at around <input class="input input-medium text-center" name="A1_Achiever:L1[1]" type="text">.</p>
-            <p class="mb-4"><span class="font-weight-bold">c.</span> We always stop for a coffee at <input class="input input-medium text-center" name="A1_Achiever:L1[2]" type="text"> in the morning.</p>
-            <p class="mb-4"><span class="font-weight-bold">d.</span> At <input name="A1_Achiever:L1[3]" class="input input-medium text-center" type="text"> in the afternoon we watch a film.</p>
+
+        <div class="row justify-content-md-between justify-content-lg-center py-4">
+            <ol class="info list-data col-10 mb-4 d-flex justify-content-center">
+                <li class="crossed inline mx-lg-2">10 a.m.</li>
+                <li class="inline mx-lg-2">11:30 a.m.</li>
+                <li class="inline mx-lg-2">2 p.m.</li>
+                <li class="inline mx-lg-2">5:30 p.m.</li>
+                <li class="inline mx-lg-2">9 p.m.</li>
+            </ol>
+            
+            <p class="complete col-12 mb-4"><b>a.</b> I usually get up at <select disabled name="A1_Achiever:L1[1]">
+                <option selected>10 a.m.</option>
+            </select></p>
+            <p class="complete col-12 mb-4"><b>b.</b> We eat quite late on Saturdays, at around <select name="A1_Achiever:L1[2]">
+                <option disabled selected>10 a.m.</option>
+                <option>11:30 a.m.</option>
+                <option>2 p.m.</option>
+                <option>5:30 p.m.</option>
+                <option>9 p.m.</option>
+            </select></p>
+            <p class="complete col-12 mb-4"><b>c.</b> We always stop for a coffee at <select name="A1_Achiever:L1[3]">
+                <option disabled selected>10 a.m.</option>
+                <option>11:30 a.m.</option>
+                <option>2 p.m.</option>
+                <option>5:30 p.m.</option>
+                <option>9 p.m.</option>
+            </select> in the morning.</p>
+            <p class="complete col-12 mb-4"><b>d.</b> At <select name="A1_Achiever:L1[4]">
+                <option disabled selected>10 a.m.</option>
+                <option>11:30 a.m.</option>
+                <option>2 p.m.</option>
+                <option>5:30 p.m.</option>
+                <option>9 p.m.</option>
+            </select> in the afternoon we watch a film.</p>
         </div>
     </main>
 </section>

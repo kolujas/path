@@ -7,123 +7,12 @@ import { LocalStorageServiceProvider } from "../providers/LocalStorageServicePro
 
 let tab;
 
-// Audios (kolujAs)
-
-const audio = document.querySelectorAll('.audio');
-const audioBtn = document.querySelectorAll('.audioBtn');
-
-for (const key in audioBtn) {
-    const btn = audioBtn[key];
-    if(typeof btn === "object"){
-        btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            if (!this.classList.contains('playing') && !this.classList.contains('finished')) {
-                if (!this.dataset.count) {
-                    this.dataset.count = 0;
-                }
-                // this.dataset.count = parseInt(this.dataset.count) + 1;
-                if (parseInt(this.dataset.count) < 2) {
-                    ponePlay(key);
-                    // document.querySelectorAll('.audio-div i')[key].classList.replace('fa-play', 'fa-pause');
-                } else {
-                    this.classList.add('finished');
-                    audio[key].src = "";
-                }
-            } else {
-                // audio[key].pause();
-                // document.querySelectorAll('.audio-div i')[key].classList.replace('fa-pause', 'fa-play');
-            }
-            
-        })
-    }
-    
-
-}
-
-for (const key in audio) {
-        const input = audio[key]; 
-        if(typeof input  === "object"){
-            input.addEventListener('play', function(e){
-                audioBtn[key].classList.add('playing');
-            });
-            input.addEventListener('ended', function(e){
-                audioBtn[key].classList.remove('playing');
-                this.nextElementSibling.children[1].dataset.count = parseInt(this.nextElementSibling.children[1].dataset.count) + 1; 
-                // document.querySelectorAll('.audio-div i')[key].classList.replace('fa-pause', 'fa-play');
-                if(parseInt(this.nextElementSibling.children[1].dataset.count) >= 2){
-                    document.querySelectorAll('.audio-div i')[key].classList.replace('fa-play', 'fa-stop');
-                    this.classList.add('finished');
-                    audioBtn[key].classList.add('finished');
-                }               
-            });
-            input.addEventListener('pause', function(e){
-                audioBtn[key].classList.remove('playing');
-            });
-        }       
-        
-}
-
-// audio.addEventListener('timeupdate', function(e){
-//     e.preventDefault();
-//     console.log("Current time", this.currentTime);
-// });
-
-function ponePlay(key) {
-    audio[key].play();
-}
-
-// Desactivar F5 (actualizar pagina)
-
-// $(document).on("keydown", disableF5);
-
-function disableF5(e) {
-    if ((e.which || e.keyCode) == 116) e.preventDefault();
-};
-
-// Mensaje si quiere salir de la pagina
-
-const modal = document.querySelector('.modal-strikes');
-
-
-document.addEventListener('visibilitychange', function(){ 
-    if(document.visibilityState == 'hidden'){
-        if(!document.querySelector('.strikes').value){
-            document.querySelector('.strikes').value = 0;        
-        }
-            if(document.querySelector('.strikes').value >= 1){
-                const modalBody = document.querySelector('.modal-body p');
-                modalBody.innerHTML = "Tu mensaje ha sido marcado";
-                // $('.modal-strikes').modal();
-            }else{
-                const modalBody = document.querySelector('.modal-body p');
-                document.querySelector('.strikes').value++;
-                modalBody.innerHTML = "Si volves a salir te marcaremos el examen";
-                // $('.modal-strikes').modal();
-            }
-         
-        
-    }
- });
-
-$(document).mouseleave(function () {
-    if(!document.querySelector('.strikes').value){
-        document.querySelector('.strikes').value = 0;
-    }else{
-    //     document.querySelector('.strikes').value++;
-        if(document.querySelector('.strikes').value == 0){
-            const modalBody = document.querySelector('.modal-body p');
-            modalBody.innerHTML = "Si salis de la pagina te marcaremos el examen";
-            // $('.modal-strikes').modal();
-        }
-    }
-    
-});
-
+// ? Tooltip
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
 
-
+// ? Qué es esto?
 (function () {
     var onload = window.onload;
 
@@ -182,44 +71,29 @@ $(document).ready(function(){
     }
 })();
 
+// ? Desactivar F5
+// $(document).on("keydown", function(e) {
+//     if ((e.which || e.keyCode) == 116) e.preventDefault();
+// });
+
+// ! ESTO ESTABA ANTERIORMENTE, EN CASO DE QUE NO FUNCIONE IMPORTAR ÉSTO
+function disableF5(e) {
+    if ((e.which || e.keyCode) == 116) e.preventDefault();
+};
+
+// ? Desactivar el copy paste
 $('body').on('copy paste', 'input', function (e)
     { e.preventDefault();
- });
+});
 
 $('body').on('copy paste', 'textarea', function (e)
     { e.preventDefault();
- });
+});
 
-
- const okConfirm = document.querySelector('.ok-confirm');
- const cancelConfirm = document.querySelector('.cancel-confirm');
- const submitsExam = document.querySelectorAll('.submit-exam');
- const modalTwo = document.querySelector('.modal-two');
-
-for (const submit of submitsExam) {
-    submit.addEventListener('click', function(e){
-        $('.modal-two').modal();
-     })
-}
-
- okConfirm.addEventListener('click', function(e){
-    e.preventDefault();
-    if(submitsExam[0].dataset.module >= evaluation.exam.modules.length){
-        document.querySelector('form').submit();
-    }else{
-        nextModule(tab);
-    }
-    
- })
- 
- cancelConfirm.addEventListener('click', function(e){
-    e.preventDefault();
- })
- 
-
-
- // Archimak
-
+/**
+ * * Update Save button timer.
+ * @param {Object} data Data to get from CountDown.
+ */
 function updateSaveTimer(data = undefined){
     if(document.querySelector('.save-button.countdown')){
         let timer = document.querySelector('.save-button .timer');
@@ -229,6 +103,9 @@ function updateSaveTimer(data = undefined){
     }
 }
 
+/**
+ * * Change Save button time iterval to auto execute.
+ */
 function setTimeIntervalAutoSave(){
     if(!document.querySelector('.save-button.countdown')){
         let btn = document.querySelector('.save-button');
@@ -256,19 +133,6 @@ function setTimeIntervalAutoSave(){
     }
 }
 
-function crossWord() {
-    let answers = document.querySelectorAll('.answers:not(first-of-type)');
-    let selects = document.querySelectorAll('select');
-    for (const answer of answers) {
-        answer.classList.remove('crossed');
-        for (const select of selects) {
-            if (select.options[select.selectedIndex].innerHTML == answer.innerHTML && !answer.classList.contains('crossed')) {
-                answer.classList.add('crossed');
-            }
-        }
-    }
-}
-
 function parseSpaces(text){
     if (/ /.exec(text)) {
         text = text.replace(/ /, '_');
@@ -276,10 +140,18 @@ function parseSpaces(text){
     return text;
 }
 
+/**
+ * * Replace a Module timer with a new one.
+ * @param {Object} data Data to get from CountDown.
+ */
 function current(data = undefined){
     document.querySelector(`#${parseSpaces(data.module.folder.replace(/ /, '_'))}-${data.module.name} .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
 }
 
+/**
+ * * Remove a Module timer.
+ * @param {Object} data Data to get from CountDown.
+ */
 function end(data = undefined){
     document.querySelector('.clock').style.display = 'none';
     let time = document.querySelector(`#${data.module.folder.replace(/ /, '_')}-${data.module.name} .time`);
@@ -292,12 +164,15 @@ function end(data = undefined){
         }
     }
     if(index >= evaluation.exam.modules.length){
-        document.querySelector('form').submit();
+        form.submit();
     }else{
         nextModule(data.tab);
     }
 }
 
+/**
+ * * Set Save button in loading state.
+ */
 function setLoadingState(){
     let btn = document.querySelector('.save-button');
     btn.innerHTML= '';
@@ -305,6 +180,9 @@ function setLoadingState(){
     btn.removeEventListener('click', sendData);
 }
 
+/**
+ * * Unset Save button in loading state.
+ */
 function setFinishState(){
     let btn = document.querySelector('.save-button');
     btn.innerHTML = 'SAVE';
@@ -316,9 +194,12 @@ function setFinishState(){
         setTimeIntervalAutoSave();
 }
 
+/**
+ * * Send data to the API.
+ */
 async function sendData(){
     let btn = document.querySelector('.save-button').classList.remove('countdown');
-    let formData = new FormData(document.querySelector('form'));
+    let formData = new FormData(form);
     let token = formData.get('_token');
     formData.delete('_token');
     setLoadingState();
@@ -335,6 +216,12 @@ async function sendData(){
     setFinishState();
 }
 
+/**
+ * * Add time to.
+ * @param {String} scheduled_date_time To which must be added time.
+ * @param {Number} index Index of the Module to get its time. 
+ * @returns
+ */
 function addTime(scheduled_date_time, index) {
     let date = scheduled_date_time.split(' ')[0],
         time = scheduled_date_time.split(' ')[1],
@@ -379,13 +266,81 @@ function addTime(scheduled_date_time, index) {
     return scheduled_date_time;
 }
 
-function setTimer(module, tab){
-    let scheduled_date_time = evaluation.exam.scheduled_date_time;
-    for (const key in evaluation.exam.modules) {
-        if(evaluation.exam.modules[key] == module && key > 0){
-            scheduled_date_time = addTime(scheduled_date_time, key);
+/**
+ * * Generate the date correctly.
+ * @param {String} date Date to correct.
+ * @returns {String} A date corrected.
+ */
+function parseTime(date){
+    let daysOfTheMonths = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; 
+    let time = date.split(' ')[1];
+        date = date.split(' ')[0];
+    let years, months, days;
+    if(/-/.exec(date)){
+        years = parseInt(date.split('-')[0]);
+        months = parseInt(date.split('-')[1]);
+        days = parseInt(date.split('-')[2]);
+    }else if(/\//.exec(date)){
+        years = parseInt(date.split('/')[0]);
+        months = parseInt(date.split('/')[1]);
+        days = parseInt(date.split('/')[2]);
+    }
+    let hours = parseInt(time.split(':')[0]),
+        minutes = parseInt(time.split(':')[1]);
+    let length;
+    if(length = parseInt(minutes / 59)){
+        minutes = minutes - (60 * length);
+        for ($i=1; $i <= length; $i++) { 
+            $hours++;
         }
     }
+    if(minutes < 10){
+        minutes = `0${minutes}`;
+    }
+    if(length = parseInt(hours / 23)){
+        hours = hours - (24 * length);
+        for ($i=1; $i <= length; $i++) { 
+            $days++;
+        }
+    }
+    if(hours < 10){
+        hours = `0${hours}`;
+    }
+    if(length = parseInt(months / 12)){
+        months = months - (12 * length);
+        for ($i=1; $i <= length; $i++) { 
+            $years++;
+        }
+    }
+    if(length = parseInt(days / daysOfTheMonths[months])){
+        days = days - (daysOfTheMonths[months] * length);
+        for ($i=1; $i <= length; $i++) { 
+            $months++;
+        }
+    }
+    if(days < 10){
+        days = `0${days}`;
+    }
+    if(length = parseInt(months / 12)){
+        months = months - (12 * length);
+        for ($i=1; $i <= length; $i++) { 
+            $years++;
+        }
+    }
+    if(months < 10){
+        months = `0${months}`;
+    }
+
+    return `${years}-${months}-${days} ${hours}:${minutes}:00`;
+}
+
+/**
+ * * Set a Module timer.
+ * @param {Module} module Module to set the timer.
+ * @param {TabMenu} tab TabMenu to detect who has to be opened.
+ */
+function setTimer(module = undefined, tab = undefined){
+    let scheduled_date_time = evaluation.exam.scheduled_date_time;
     let date = scheduled_date_time.split(' ')[0],
         time = scheduled_date_time.split(' ')[1],
         years, months, days,
@@ -403,24 +358,8 @@ function setTimer(module, tab){
     hours = parseInt(time.split(':')[0]) + parseInt(module.time.split(':')[0]);
     minutes = parseInt(time.split(':')[1]) + parseInt(module.time.split(':')[1]);
 
-    if(months < 10){
-        months = `0${months}`;
-    }
-    if(days < 10){
-        days = `0${days}`;
-    }
-    if(minutes > 59){
-        minutes = minutes - 60;
-        hours++;
-    }
-    if(minutes < 10){
-        minutes = `0${minutes}`;
-    }
-    if(hours < 10){
-        hours = `0${hours}`;
-    }
+    let full_time = parseTime(`${years}-${months}-${days} ${hours}:${minutes}:${seconds}`);
 
-    let full_time = `${years}-${months}-${days} ${hours}:${minutes}:${seconds}`;
     let countDown = new CountDown({
         scheduled_date_time: full_time,
         timer: {
@@ -444,6 +383,10 @@ function setTimer(module, tab){
     });
 }
 
+/**
+ * * Change TabMenu content.
+ * @param {TabMenu} tab TabMenu.
+ */
 function nextModule(tab){
     let submitBtns = document.querySelectorAll('.submit-exam');
     let index;
@@ -468,6 +411,11 @@ function nextModule(tab){
     setTimer(getModule(document.querySelectorAll('.module-button')[document.querySelector('.submit-exam').dataset.module - 1].id), tab);
 }
 
+/**
+ * * Get a Module.
+ * @param {String} id Module ID.
+ * @returns {Module} A Module.
+ */
 function getModule(id) {
     for(const module of evaluation.exam.modules){
         if(`${module.folder.replace(/ /, '_')}-${module.name}` == id){
@@ -475,6 +423,8 @@ function getModule(id) {
         }
     }
 }
+
+let form = document.querySelector('form');
 
 document.addEventListener('DOMContentLoaded', async function (e) {
     let choosen = document.querySelector('.tab-content').id;
@@ -506,61 +456,61 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         current: false,
     });
 
-    let submitBtns = document.querySelectorAll('.submit-exam');
-    // for (const btn of submitBtns) {
-    //     btn.addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         if(confirmar()){
-    //             if(this.dataset.module >= exam.modules.length){
-    //                 document.querySelector('form').submit();
-    //             }else{
-    //                 nextModule(tab);
-    //             }
-    //         }
-           
-    //     });
-    // }
-
-    let selects = document.querySelectorAll('select');
-    for (const select of selects) {
-        select.addEventListener('change', function (e) {
-            crossWord(this.options[this.selectedIndex].innerHTML);
-        });
-    }
-
-    let inputLetters = document.querySelectorAll('[data-letters]');
-    for (const input of inputLetters) {
-        let letters = parseInt(input.dataset.letters);
-        let span = input.parentNode;
-        let div = document.createElement('div');
-        div.classList.add('underlines');
-        span.appendChild(div);
-
-        for (let index = 0; index < letters; index++) {
-            let underline = document.createElement('div');
-            underline.classList.add('underline');
-            div.appendChild(underline);
-            underline.style.width = `calc((100% - .25rem) / ${letters})`;
-        }
-    }
-    
-    for(const td of document.querySelectorAll('.input-letters')){
-        for (const key in td.children) {
-            const input = td.children[key]
-            if((parseInt(key) + 1) <= td.children.length){
-                input.addEventListener('keyup', function(e){
-                    if(this.value){
-                        if(this.nextElementSibling){
-                            this.nextElementSibling.focus();
-                        }
-                    }
-                });
-            }
-        }
-    }
-
     setTimer(evaluation.exam.modules[0], tab);
 
+    // ? Modal de los strikes
+    const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
+    const strikesInput = document.querySelector('.strikes');
+    document.addEventListener('visibilitychange', function(){ 
+        if(document.visibilityState == 'hidden'){
+            if(!strikesInput.value){
+                strikesInput.value = 0;        
+            }
+            if(strikesInput.value >= 1){
+                modalStrikesMessage.innerHTML = "Tu mensaje ha sido marcado";
+                // $('.modal-strikes').modal();
+            }else{
+                strikesInput.value++;
+                modalStrikesMessage.innerHTML = "Si volves a salir te marcaremos el examen";
+                // $('.modal-strikes').modal();
+            }
+        }
+    });
+
+    $(document).mouseleave(function () {
+        if(!strikesInput.value){
+            strikesInput.value = 0;
+        }else{
+            // strikesInput.value++;
+            if(strikesInput.value == 0){
+                modalStrikesMessage.innerHTML = "Si salis de la pagina te marcaremos el examen";
+                // $('.modal-strikes').modal();
+            }
+        }
+    });
+
+    // ? Modal de cambio de Módulo
+    const confirmButton = document.querySelector('.confirm-button');
+    const cancelButton = document.querySelector('.cancel-button');
+    const submitsExamButtons = document.querySelectorAll('.submit-exam');
+    const modalConfirm = document.querySelector('.modal-confirm');
+    
+    for (const button of submitsExamButtons) {
+        button.addEventListener('click', function(e){
+            modalConfirm.modal();
+        })
+    }
+
+    confirmButton.addEventListener('click', function(e){
+        e.preventDefault();
+        if(submitsExamButtons[0].dataset.module >= evaluation.exam.modules.length){
+            form.submit();
+        }else{
+            nextModule(tab);
+        }
+    })
+
+    // ! Los Module Buttons ejecutan funciones en el cambio de sección, Pero para el final no se debe permitir.
     let moduleBtns = document.querySelectorAll('.module-button');
     for (const btn of moduleBtns) {
         btn.addEventListener('click', function(e){
@@ -592,27 +542,11 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         });
     }
 
+    // ? Save button
     let saveButton = document.querySelector('.save-button');
     saveButton.classList.remove('hidden');
 
     saveButton.addEventListener('click', sendData);
 
     setTimeIntervalAutoSave();
-
-    for (const input of document.querySelectorAll('.input-icon')) {
-        input.addEventListener('change', function(e) {
-            for (const radio of document.querySelectorAll('.input-icon')) {
-                if (radio.name == input.name) {
-                    if (radio.classList.contains('checked')) {
-                        radio.classList.remove('checked');
-                    }
-                }
-            }
-            if (this.checked) {
-                this.classList.add('checked');
-            }
-        });
-    }
 });
-
- 

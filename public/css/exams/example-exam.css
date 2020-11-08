@@ -101,171 +101,6 @@ body {
     display: block;
 }
 
-/* ? consignas */
-.dropdown .dropdown-header span mark {
-    padding: 0;
-    margin-left: .5rem;
-    background: none;
-    color: var(--color-two);
-}
-
-/* ? A1 Entry Listening */
-
-/* ? A1 Entry Writing */
-.A1_Entry-W #dropdown-writing-5 .dropdown-menu-content textarea{
-    padding-left: 1.5rem !important;
-    outline: none;
-    resize: none;
-    width: 100%;
-    height: 10rem;
-    line-height: 1.9rem;
-    text-indent: 4.5rem;
-    border-radius: .2rem;
-}
-
-/* ? A1 Access Listening */
-.A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
-    max-height: 400vh;
-}
-
-.A1_Access-L #dropdown-listening-2.opened .dropdown-menu-content {
-    max-height: 150vh;
-}
-
-.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table thead th {
-    border: 0;
-}
-
-.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th {
-    padding: 0;
-}
-
-.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th .text {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 1rem;
-    width: fit-content;
-    height: 3rem;
-}
-
-.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th div input {
-    display: none;
-}
-
-.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th .empty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 3rem;
-}
-
-.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th div label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 3rem;
-    transition: 500ms;
-    cursor: pointer;
-    margin: 0;
-}
-
-.A1_Access-L #dropdown-listening-2 .dropdown-menu-content table th div input:not(.checked) + label {
-    color: transparent;
-}
-
-/* ? A1 Access Writing */
-.A1_Access-W #dropdown-writing-1 .dropdown-menu-content table img {
-    width: 8rem;
-}
-
-.A1_Access-W #dropdown-writing-1 .dropdown-menu-content table th div {
-    width: 100%;
-    height: 100%;
-    transform: translateY(100%);
-}
-
-.A1_Access-W #dropdown-writing-2 .dropdown-menu-content select {
-    color: var(--color-two);
-    background: transparent;
-}
-
-.A1_Access-W #dropdown-writing-2 .dropdown-menu-content textarea{
-    padding-left: 1.5rem !important;
-    outline: none;
-    resize: none;
-    width: 100%;
-    height: 10rem;
-    line-height: 1.9rem;
-    text-indent: 13rem;
-    border-radius: .2rem;
-}
-
-.A1_Access-W #dropdown-writing-3 .dropdown-menu-content select {
-    color: var(--color-two);
-    background: transparent;
-}
-
-.A1_Access-W #dropdown-writing-4 .dropdown-menu-content textarea{
-    padding-left: 1.5rem !important;
-    outline: none;
-    resize: none;
-    width: 100%;
-    height: 10rem;
-    line-height: 1.9rem;
-    border-radius: .2rem;
-}
-
-/* ? A1 Achiever Listening */
-
-/* ? A1 Achiever Writing */
-.A1_Achiever-W #dropdown-writing-4.opened .dropdown-menu-content {
-    max-height: 350vh;
-}
-
-.A1_Achiever-W #dropdown-writing-4 .dropdown-menu-content textarea{
-    text-indent: 5rem;
-    padding-left: 1.5rem !important;
-    outline: none;
-    resize: none;
-    width: 100%;
-    height: 10rem;
-    line-height: 1.9rem;
-    text-indent: 14.5rem;
-    border-radius: .2rem;
-}
-
-.A1_Achiever-W #dropdown-writing-4 .dropdown-menu-content .last textarea{
-    text-indent: 17rem;
-}
-
-.A1_Achiever-W #dropdown-writing-5 .dropdown-menu-content textarea{
-    padding-left: 1.5rem !important;
-    outline: none;
-    resize: none;
-    width: 100%;
-    height: 10rem;
-    line-height: 1.9rem;
-    border-radius: .2rem;
-}
-
-/* ? A1 Preliminary Listening */
-.A2_Preliminary-L #dropdown-listening-1.opened .dropdown-menu-content {
-    max-height: 120vh;
-}
-
-.A2_Preliminary-W #dropdown-writing-1.opened .dropdown-menu-content {
-    max-height: 400vh;
-}
-
-.A2_Preliminary-L #dropdown-listening-1 .dropdown-menu-content input{
-    display: none;
-}
-
-/* ? A1 Preliminary Writing */
-
 /* ? modales */
 .modal-dialog{
     width: 100%;
@@ -279,17 +114,191 @@ body {
     /* left: 1.15rem; 
 } */
 
-.modal-two{
+.modal-confirm{
     max-width: 100%;
 }
 
-/* ? ejercicios */
-textarea{
+/* ? consignas */
+.dropdown .dropdown-header span mark {
+    padding: 0;
+    margin-left: .5rem;
+    background: none;
     color: var(--color-two);
 }
 
+/* ? A1 Entry Listening */
+
+/* ? A1 Entry Writing */
+.A1_Entry-W #dropdown-writing-5 .complete textarea {
+    text-indent: 12.5rem;
+}
+
+/* ? A1 Access Listening */
+.A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
+    max-height: 400vh;
+}
+
+.A1_Access-L #dropdown-listening-2.opened .dropdown-menu-content {
+    max-height: 150vh;
+}
+
+.A1_Access-L #dropdown-listening-2 table thead th {
+    border: 0;
+}
+
+.A1_Access-L #dropdown-listening-2 table th {
+    padding: 0;
+}
+
+.A1_Access-L #dropdown-listening-2 table th .text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem;
+    width: fit-content;
+    height: 3rem;
+}
+
+.A1_Access-L #dropdown-listening-2 table th div input {
+    display: none;
+}
+
+.A1_Access-L #dropdown-listening-2 table th .empty,
+.A1_Access-L #dropdown-listening-2 table td .empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+}
+
+.A1_Access-L #dropdown-listening-2 table td .empty {
+    color: var(--color-two);
+}
+
+/* ? A1 Access Writing */
+.A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
+    max-height: 120vh;
+}
+
+.A1_Access-W #dropdown-writing-1 table img {
+    width: 8rem;
+}
+
+.A1_Access-W #dropdown-writing-1 table th div {
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.A1_Access-W #dropdown-writing-2 select {
+    color: var(--color-two);
+    background: transparent;
+}
+
+.A1_Access-W #dropdown-writing-2 .row-100 {
+    height: 100%;
+}
+
+.A1_Access-W #dropdown-writing-2 textarea{
+    text-indent: 13rem;
+}
+
+.A1_Access-W #dropdown-writing-3 select {
+    color: var(--color-two);
+    background: transparent;
+}
+
+.A1_Access-W #dropdown-writing-3 th[scope="row"]{
+    width: 1rem;
+}
+
+/* ? A1 Achiever Listening */
+.A1_Achiever-L #dropdown-listening-2 table td {
+    padding: 0;
+}
+
+/* ? A1 Achiever Writing */
+.A1_Achiever-W #dropdown-writing-4.opened .dropdown-menu-content {
+    max-height: 350vh;
+}
+
+.A1_Achiever-W #dropdown-writing-4 textarea{
+    text-indent: 14.5rem;
+}
+
+.A1_Achiever-W #dropdown-writing-4 textarea.last{
+    text-indent: 17.5rem;
+}
+
+.A1_Achiever-W #dropdown-writing-4 .last textarea{
+    text-indent: 17rem;
+}
+
+/* ? A2 Preliminary Listening */
+.A2_Preliminary-L #dropdown-listening-1.opened .dropdown-menu-content {
+    max-height: 120vh;
+}
+
+.A2_Preliminary-W #dropdown-writing-1.opened .dropdown-menu-content {
+    max-height: 400vh;
+}
+
+.A2_Preliminary-L #dropdown-listening-1 input{
+    display: none;
+}
+
+.A2_Preliminary-L #dropdown-listening-3 .dropdown-menu-content{
+    background: url("/img/recursos/whatsapp-bg.jpg");
+}
+
+.A2_Preliminary-L #dropdown-listening-3 .complete textarea{
+    border-radius: .25rem;
+    background-color: #D3F9C8;
+    color: #000;
+}
+
+.A2_Preliminary-L #dropdown-listening-3 .audio-button {
+    background-color: #fff;
+    color: #000;
+}
+
+.A2_Preliminary-L #dropdown-listening-3 .audio-button.playing {
+    color: #7ebedd;
+}
+
+.A2_Preliminary-L #dropdown-listening-3 .audio-button .audio-icon {
+    color: #727272;
+}
+
+/* ? A2 Preliminary Writing */
+
+/* ? A2 Elementary Listening */
+.A2_Elementary-L #dropdown-listening-1 table tbody th {
+    width: 45%;
+}
+
+.A2_Elementary-L #dropdown-listening-3.opened .dropdown-menu-content {
+    max-height: 220vh;
+}
+
+/* ? A2 Elementary Writing */
+
+/* ? B1 Progres Listening */
+
+/* ? B1 Progres Writing */
+
+/* ? B2 Competency Listening */
+
+/* ? B2 Competency Writing */
+
+/* ? ejercicios */
 .card{
     border: none;
+}
+
+.card .card-body{
+    max-width: 100%;
 }
 
 .input {
@@ -298,7 +307,7 @@ textarea{
     border-right: none;
     border-top: none;
     background-color: transparent;
-    width: 2rem;
+    width: 4rem;
     color: var(--color-two);
     text-align: center;
     border-bottom: 1px solid #222;
@@ -326,66 +335,109 @@ textarea{
 }
 
 .input-long {
-    outline: none;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    width: 100%;
+    width: 8rem;
 }
 
-.input:not(.input-letters):focus {
+.input-large {
+    width: 14rem;
+}
+
+.input-huge {
+    width: 18rem;
+}
+
+.input-super-huge {
+    width: 24rem;
+}
+
+/* .input:not(.input-letters):focus {
     outline: none;
     border: none;
     border-bottom: 1px solid var(--color-one);
+} */
+
+select {
+    color: var(--color-two);
+}
+
+/* * info */
+.info {
+    background-color: #ededed;
+    padding: 2rem 5rem;
+    width: 80%;
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.info .title {
+    font-style: normal;
+    font-weight: bolder;
+    color: var(--color-one);
 }
 
 /* * lists */
-.list-exercise li {
+.list-exercise.decimal li {
     list-style: decimal;
 }
 
+.list-data li {
+    display: inline;
+}
+
+/* * crossed words */
+.crossed {
+    text-decoration: line-through;
+}
+
 /* * audio */
-.audioBtn{
+.audio-button {
     outline: none;
     border: 0;
-    padding: 0 2rem;
     border-radius: 0.25rem;
     font-size: 1.1rem;
     background-color: var(--color-one);
     color: #fff;
-    padding: .5rem 2rem;
+    min-width: 10rem;
 }
 
-.playing{
-    background-color: var(--color-two);
-}
-
-.finished{
-    background-color: var(--color-four);
-}
-
-.audioBtn:focus{
+.audio-button:focus {
     outline: none;
 }
 
-.play-icon{
-    position: relative;
-    left: 1.5rem;
+.audio-button.playing {
+    background-color: var(--color-two);
+    cursor: not-allowed;
+}
+
+.audio-button.finished {
+    background-color: var(--color-four);
+    min-width: 6rem;
+}
+
+.audio-button .audio-icon {
     color: #fff;
 }
 
-/* * crossed list */
-.answer-words li {
-    display: inline;
-    font-size: 1rem;
+.audio-button.playing .audio-icon {
+    display: none;
 }
 
-.answer-words li.crossed {
-    text-decoration: line-through;
+/* * complete */
+.complete {
+    line-height: 2rem;
 }
 
-/* * textarea indent */
-.my-friend{
+.complete b {
+    font-size: 1.1rem;
+    margin-right: .5rem;
+}
+
+.complete input {
+    line-height: normal;
+}
+
+.complete .indent{
     /* left: .5rem; */
     padding-left: 1rem;
     position: absolute;
@@ -395,42 +447,79 @@ textarea{
     color: var(--color-two);
 }
 
+.complete textarea {
+    padding-left: 1.5rem !important;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 10rem;
+    line-height: 1.9rem;
+    border-radius: .2rem;
+    color: var(--color-two);
+}
+
+.complete .indent + textarea {
+    text-indent: 4.5rem;
+}
+
+/* * options */
+.options {
+    cursor: pointer;
+    color: var(--color-two);
+}
+
 /* * emojis */
 .face-icons{
     font-size: 2rem;
 }
 
 /* * table */
-.table-question-3{
-    width: 60%;
-    margin: auto;
-    margin-bottom: 3rem;
-}
-
-/* .question-listening table th{
-    border: 1px solid #ccc;
-    padding: 0 0 2rem 0;
-    text-align: center;
-    padding-top: 1rem;
-} */
-
-.table th, .table td{
+.table-normal th, .table-normal td{
     border: 1px solid #dee2e6 !important;
 }
 
-.one-question-container table td{
-    border: 1px solid #ccc;
-    padding: 1rem 0 2rem 0;
-    text-align: center;
+.table-normal.borderless th, .table-normal.borderless td{
+    border: none !important;
 }
 
-/* mostrar */
-
-.show{
-    display: block;
+.A1_Entry-L #dropdown-listening-3 .table-normal,
+.A1_Access-L #dropdown-listening-2 .table-normal,
+.A2_Elementary-L #dropdown-listening-1 .table-normal {
+    width: 60%;
 }
 
-/* svg */
+.A1_Access-W #dropdown-writing-2 .table {
+    width: 20%;
+}
+
+.A1_Access-L #dropdown-listening-2 .table-normal td {
+    padding: 0;
+}
+
+/* * icon-checkbox */
+.icon-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+    height: 3rem;
+    cursor: pointer;
+    margin: 0;
+}
+
+.icon-checkbox .icon,
+.icon-checkbox span {
+    height: fit-content;
+    transition: 500ms;
+    color: var(--color-two);
+}
+
+.icon-checkbox input:not(.checked) + .icon{
+    color: transparent;
+}
+
+/* * svg */
 
 .svg-width{
     width: 100%;
@@ -444,18 +533,13 @@ textarea{
     transform: translateX(-350%);
 }
 
+/* mostrar */
+
+.show{
+    display: block;
+}
 
 /* archiever */
-
-.bg-archiever-1{
-    background-color: #ededed;
-    padding: 2rem 5rem;
-    width: 80%;
-    margin: 2rem auto;
-    font-weight: bold;
-    font-size: 1rem;
-    font-style: italic;
-}
 
 .table-colors{
     width: 50%;
@@ -473,55 +557,6 @@ textarea{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.archiever-w-2{
-    width: 90%;
-}
-
-.archiever-w-2 .input-one{
-    width: 16rem;
-    color: #000;
-}
-.archiever-w-2 .input-two{
-    width: 16.7rem;
-    color: #000;
-}
-.archiever-w-2 .input-three{
-    width: 15.5rem;
-    color: #000;
-}
-.archiever-w-2 .input-four{
-    width: 14rem;
-    color: #000;
-}
-
-
-.archiever-w-3 .input{
-    width: 7rem;
-    color: #000;
-    padding-left: 1rem;
-}
-
-.archiever-w-3{
-    margin-left: 2rem;
-}
-
-.archiever-w-5 textarea{
-    text-indent: 0;
-}
-
-.four-question-container textarea{
-    background-color: #fafafad6;
-    color: #000;
-    padding-left: 1.5rem !important;
-    outline: none;
-    resize: none;
-    width: 100%;
-    height: 10rem;
-    line-height: 1.9rem;
-    text-indent: 4.5rem;
-    border-radius: .2rem;
 }
 
 /* archiever listening */
@@ -544,10 +579,6 @@ textarea{
 
 /* preliminary */
 
-.preliminary-3{
-    background: url("/img/recursos/whatsapp-bg.jpg");
-}
-
 .inputs-border{
     border-bottom: 1px solid #ccc;
     width: 100%;
@@ -557,46 +588,13 @@ textarea{
     width: 44%;
 }
 
-.preliminary-3 .whatsapp-div-audio .audioBtn{
-    background-color: #fff;
-    color: #000;
-}
-
-.preliminary-3 .whatsapp-div-audio .audioBtn.playing .play-icon{
-    color: #7ebedd;
-}
-
-.preliminary-3 .whatsapp-div-audio .play-icon{
-    color: #727272;
-}
-
-.preliminary-3 .whatsapp-div-audio .play-icon{
-    left: -1rem;
-}
-
-.textarea-preliminary{
-    height: 10rem;
-    width: 80%;
-    border-radius: .25rem;
-    background-color: #D3F9C8;
-    color: #000;
-}
-
-.textarea-preliminary-writing{
-    height: 10rem;
-    width: 80%;
-    border-radius: .25rem;
-    background-color: #fafafad6;
-    color: #000;
-}
-
 .hector-image{
     width: 100%;
     height: 20rem;
     object-fit: contain;
 }
 
-.table-noborders td, tr{
+.table-noborders td{
     border: none !important;
 }
 
@@ -613,45 +611,17 @@ textarea{
 
 /* * MD */
 
-@media(min-width: 768px) {
-    .four-question-container textarea{
-        /* width: 40rem; */
-        background-color: #fafafad6;
-        color: #000;
-        height: 13rem;
-    }
-    
+@media(min-width: 768px) {    
     .A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
         max-height: 100vh;
     }
     
-    .A1_Access-W #dropdown-writing-1 .dropdown-menu-content table img {
+    .A1_Access-W #dropdown-writing-1 table img {
         width: 10rem;
     }
 
-    .A1_Achiever-W #dropdown-writing-4 .dropdown-menu-content textarea{
-        /* width: 20rem; */
-        background-color: #fafafad6;
-        color: #000;
-        height: 13rem;
-    }
-
-    .A1_Access-W #dropdown-writing-4 .dropdown-menu-content textarea{
-        /* width: 20rem; */
-        background-color: #fafafad6;
-        color: #000;
-        height: 13rem;
-    }
-
-    .ol-decimal li select {
+    .list-exercise li select {
         height: 2rem;
-    }
-
-    .fifth-question-container textarea{
-        /* width: 40rem; */
-        background-color: #fafafad6;
-        color: #000;
-        height: 13rem;
     }
 
     .questions > .row {
@@ -687,35 +657,42 @@ textarea{
 /* * LG */
 
 @media(min-width: 1024px) {
-    .A1_Access-L #dropdown-listening-2 table {
-        width: 60%;
-    }
-
-    .A1_Access-W #dropdown-writing-2.opened .dropdown-menu-content {
-        max-height: 200vh;
-    }
-
-    .A1_Access-W #dropdown-writing-4 .dropdown-menu-content textarea{
-        width: 32rem;
-        height: 13rem;
-    }
-
-    .A1_Achiever-W #dropdown-writing-4.opened .dropdown-menu-content {
-        max-height: 150vh;
-    }
-
-    .A1_Achiever-W #dropdown-writing-4 .dropdown-menu-content textarea{
-        width: 32rem;
-        height: 13rem;
-    }
-
+    /* ? navmeun */
     .nav-menu {
         padding: 0 calc(((100% - 66.6666666667%) / 2 + 1rem));
     }
 
-    /* * ancho por defecto en lg */
-    .card-min-width{
+    /* ? A1 Access Listening */
+
+    /* ? A1 Access Writing */
+    .A1_Access-W #dropdown-writing-2.opened .dropdown-menu-content {
+        max-height: 200vh;
+    }
+
+    .A1_Access-W #dropdown-writing-4 textarea{
+        width: 32rem;
+        height: 13rem;
+    }
+
+    /* ? A1 Achieve Writing */
+    .A1_Achiever-W #dropdown-writing-4.opened .dropdown-menu-content {
+        max-height: 150vh;
+    }
+
+    .A1_Achiever-W #dropdown-writing-4 textarea{
+        width: 32rem;
+        height: 13rem;
+    }
+
+    /* ? ejercicios */
+    .card{
         min-width: 19%;
+    }
+
+    /* * complete */
+    .h5,
+    .complete {
+        flex-basis: 55%;
     }
 
     .svg-width{
@@ -724,11 +701,6 @@ textarea{
 
     .four-question-container textarea{
         width: 50rem;
-        height: 13rem;
-    }
-
-    .fifth-question-container textarea{
-        /* width: 50rem; */
         height: 13rem;
     }
 
