@@ -1,6 +1,6 @@
 <section id="dropdown-listening-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>2. You will hear Emma asking her friend Lois what she Likes to eat and drink. Complete the tabla showing what she Loves ( <i class="fas fa-heart"></i> ), Likes ( <i class="fas fa-check"></i> ) and Doesn't like ( <i class="fas fa-times"></i> ).<mark>One has been done for you</mark>.</span>
+        <span>2. You will hear Emma asking her friend Lois what she Likes to eat and drink. Complete the tabla showing what she Loves ( <i class="icon fas fa-heart"></i> ), Likes ( <i class="icon fas fa-check"></i> ) and Doesn't like ( <i class="icon fas fa-times"></i> ).<mark>One has been done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -25,9 +25,9 @@
             <thead>
                 <tr>
                     <th scope="col"></th>
-                    <th scope="col"><div class="empty"><i class="fas fa-heart"></i></div></th>
-                    <th scope="col"><div class="empty"><i class="fas fa-check"></i></div></th>
-                    <th scope="col"><div class="empty"><i class="fas fa-times"></i></div></th>
+                    <th scope="col"><div class="empty"><i class="icon fas fa-heart"></i></div></th>
+                    <th scope="col"><div class="empty"><i class="icon fas fa-check"></i></div></th>
+                    <th scope="col"><div class="empty"><i class="icon fas fa-times"></i></div></th>
                 </tr>
             </thead>
             <tbody>
@@ -35,26 +35,26 @@
                     <th scope="col"><div class="text">Meat</div></th>
                     <td scope="col"><div class="empty"></div></td>
                     <td scope="col"><div class="empty"></div></td>
-                    <td scope="col"><div class="empty"><i class="fas fa-times"></i></div></td>
+                    <td scope="col"><div class="empty"><i class="icon fas fa-times"></i></div></td>
                 </tr>
                 <tr>
                     <th scope="col"><div class="text">Fish</div></th>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Loves" name="A1_Access:L2[1]">
-                            <i class="fas fa-heart"></i>
+                            <i class="icon fas fa-heart"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Likes" name="A1_Access:L2[1]">
-                            <i class="fas fa-check"></i>
+                            <i class="icon fas fa-check"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Doesn't like" name="A1_Access:L2[1]">
-                            <i class="fas fa-times"></i>
+                            <i class="icon fas fa-times"></i>
                         </label>
                     </td>
                 </tr>
@@ -63,19 +63,19 @@
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Loves" name="A1_Access:L2[2]">
-                            <i class="fas fa-heart"></i>
+                            <i class="icon fas fa-heart"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Likes" name="A1_Access:L2[2]">
-                            <i class="fas fa-check"></i>
+                            <i class="icon fas fa-check"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Doesn't like" name="A1_Access:L2[2]">
-                            <i class="fas fa-times"></i>
+                            <i class="icon fas fa-times"></i>
                         </label>
                     </td>
                 </tr>
@@ -84,19 +84,19 @@
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Loves" name="A1_Access:L2[3]">
-                            <i class="fas fa-heart"></i>
+                            <i class="icon fas fa-heart"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Likes" name="A1_Access:L2[3]">
-                            <i class="fas fa-check"></i>
+                            <i class="icon fas fa-check"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Doesn't like" name="A1_Access:L2[3]">
-                            <i class="fas fa-times"></i>
+                            <i class="icon fas fa-times"></i>
                         </label>
                     </td>
                 </tr>
@@ -105,19 +105,19 @@
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Loves" name="A1_Access:L2[4]">
-                            <i class="fas fa-heart"></i>
+                            <i class="icon fas fa-heart"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Likes" name="A1_Access:L2[4]">
-                            <i class="fas fa-check"></i>
+                            <i class="icon fas fa-check"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Doesn't like" name="A1_Access:L2[4]">
-                            <i class="fas fa-times"></i>
+                            <i class="icon fas fa-times"></i>
                         </label>
                     </td>
                 </tr>
@@ -126,19 +126,19 @@
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Loves" name="A1_Access:L2[5]">
-                            <i class="fas fa-heart"></i>
+                            <i class="icon fas fa-heart"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Likes" name="A1_Access:L2[5]">
-                            <i class="fas fa-check"></i>
+                            <i class="icon fas fa-check"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Doesn't like" name="A1_Access:L2[5]">
-                            <i class="fas fa-times"></i>
+                            <i class="icon fas fa-times"></i>
                         </label>
                     </td>
                 </tr>
@@ -147,19 +147,19 @@
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Loves" name="A1_Access:L2[6]">
-                            <i class="fas fa-heart"></i>
+                            <i class="icon fas fa-heart"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Likes" name="A1_Access:L2[6]">
-                            <i class="fas fa-check"></i>
+                            <i class="icon fas fa-check"></i>
                         </label>
                     </td>
                     <td scope="col">
                         <label class="icon-checkbox">
                             <input class="d-none input-icon" type="radio" value="Doesn't like" name="A1_Access:L2[6]">
-                            <i class="fas fa-times"></i>
+                            <i class="icon fas fa-times"></i>
                         </label>
                     </td>
                 </tr>

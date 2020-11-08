@@ -26,15 +26,30 @@
         <main>
             @if (isset($answers['A1_Entry:W1']))
                 <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
-                    <li class="answers crossed inline mx-lg-2"><mark>{{ $answers['A1_Entry:W1'][1] }}</mark></li>
-                    <li class="answers inline mx-lg-2"><mark>{{ $answers['A1_Entry:W1'][2] }}</mark></li>
+                    @if (isset($answers['A1_Entry:W1'][1]))
+                        <li><mark>{{ $answers['A1_Entry:W1'][1] }}</mark></li>
+                    @else
+                        <li><mark>null</mark></li>
+                    @endif
+                    @if (isset($answers['A1_Entry:W1'][2]))
+                        <li><mark>{{ $answers['A1_Entry:W1'][2] }}</mark></li>
+                    @else
+                        <li><mark>null</mark></li>
+                    @endif
                     <li class="answers inline mx-lg-2">Pencil</li>
-                    <li class="answers inline mx-lg-2"><mark>{{ $answers['A1_Entry:W1'][3] }}</mark></li>
-                    <li class="answers inline mx-lg-2"><mark>{{ $answers['A1_Entry:W1'][4] }}</mark></li>
+                    @if (isset($answers['A1_Entry:W1'][3]))
+                        <li><mark>{{ $answers['A1_Entry:W1'][3] }}</mark></li>
+                    @else
+                        <li><mark>null</mark></li>
+                    @endif
+                    @if (isset($answers['A1_Entry:W1'][4]))
+                        <li><mark>{{ $answers['A1_Entry:W1'][4] }}</mark></li>
+                    @else
+                        <li><mark>null</mark></li>
+                    @endif
                 </ol>
             @else
                 <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
-                    <li class="answers crossed inline mx-lg-2"><mark>null</mark></li>
                     <li class="answers inline mx-lg-2"><mark>null</mark></li>
                     <li class="answers inline mx-lg-2">Pencil</li>
                     <li class="answers inline mx-lg-2"><mark>null</mark></li>

@@ -5,7 +5,9 @@ import { FetchServiceProvider } from "../providers/FetchServiceProvider.js";
 import { CountDown } from "../CountDown.js";
 import { LocalStorageServiceProvider } from "../providers/LocalStorageServiceProvider.js";
 
-let tab;
+let evaluation, tab,
+    form = document.querySelector('form'),
+    localStorageService = LocalStorageServiceProvider.getData('Path_Candidate_Token');
 
 // ? Tooltip
 $(document).ready(function(){
@@ -203,7 +205,6 @@ async function sendData(){
     let token = formData.get('_token');
     formData.delete('_token');
     setLoadingState();
-    let localStorageService = LocalStorageServiceProvider.getData('Path_Candidate_Token');
     let response = await FetchServiceProvider.setData({
         method: 'POST',
         url: `/api/exam/${evaluation.id_evaluation}/record`,
@@ -214,56 +215,6 @@ async function sendData(){
         'Authorization': "Bearer " + localStorageService.data,
     }, formData);
     setFinishState();
-}
-
-/**
- * * Add time to.
- * @param {String} scheduled_date_time To which must be added time.
- * @param {Number} index Index of the Module to get its time. 
- * @returns
- */
-function addTime(scheduled_date_time, index) {
-    let date = scheduled_date_time.split(' ')[0],
-        time = scheduled_date_time.split(' ')[1],
-        years, months, days,
-        hours, minutes, seconds = '00';
-    if(/-/.exec(date)){
-        years = parseInt(date.split('-')[0]);
-        months = parseInt(date.split('-')[1]);
-        days = parseInt(date.split('-')[2]);
-    }else if(/\//.exec(date)){
-        years = parseInt(date.split('/')[0]);
-        months = parseInt(date.split('/')[1]);
-        days = parseInt(date.split('/')[2]);
-    }
-
-    hours = parseInt(time.split(':')[0]);
-    minutes = parseInt(time.split(':')[1]);
-    for (const key in evaluation.exam.modules) {
-        if(key < index){
-            const module = evaluation.exam.modules[key];
-            if(months < 10){
-                months = `0${months}`;
-            }
-            if(days < 10){
-                days = `0${days}`;
-            }
-            hours = hours + parseInt(module.time.split(':')[0]);
-            minutes = minutes + parseInt(module.time.split(':')[1]);
-            if(minutes > 59){
-                minutes = minutes - 60;
-                hours++;
-            }
-            if(minutes < 10){
-                minutes = `0${minutes}`;
-            }
-            if(hours < 10){
-                hours = `0${hours}`;
-            }
-            scheduled_date_time = `${years}-${months}-${days} ${hours}:${minutes}:${seconds}`;
-        }
-    }
-    return scheduled_date_time;
 }
 
 /**
@@ -290,8 +241,8 @@ function parseTime(date){
     let length;
     if(length = parseInt(minutes / 59)){
         minutes = minutes - (60 * length);
-        for ($i=1; $i <= length; $i++) { 
-            $hours++;
+        for (let i=1; i <= length; i++) { 
+            hours++;
         }
     }
     if(minutes < 10){
@@ -299,8 +250,8 @@ function parseTime(date){
     }
     if(length = parseInt(hours / 23)){
         hours = hours - (24 * length);
-        for ($i=1; $i <= length; $i++) { 
-            $days++;
+        for (let i=1; i <= length; i++) { 
+            days++;
         }
     }
     if(hours < 10){
@@ -308,14 +259,14 @@ function parseTime(date){
     }
     if(length = parseInt(months / 12)){
         months = months - (12 * length);
-        for ($i=1; $i <= length; $i++) { 
-            $years++;
+        for (let i=1; i <= length; i++) { 
+            years++;
         }
     }
     if(length = parseInt(days / daysOfTheMonths[months])){
         days = days - (daysOfTheMonths[months] * length);
-        for ($i=1; $i <= length; $i++) { 
-            $months++;
+        for (let i=1; i <= length; i++) { 
+            months++;
         }
     }
     if(days < 10){
@@ -323,8 +274,8 @@ function parseTime(date){
     }
     if(length = parseInt(months / 12)){
         months = months - (12 * length);
-        for ($i=1; $i <= length; $i++) { 
-            $years++;
+        for (let i=1; i <= length; i++) { 
+            years++;
         }
     }
     if(months < 10){
@@ -424,9 +375,18 @@ function getModule(id) {
     }
 }
 
-let form = document.querySelector('form');
-
 document.addEventListener('DOMContentLoaded', async function (e) {
+    let formData = new FormData(form),
+        token = formData.get('_token');
+    formData.delete('_token');
+    let headers = {
+        'Accept': 'application/json',
+        'Content-type': 'application/json; charset=UTF-8',
+        'X-CSRF-TOKEN': token,
+        'Authorization': "Bearer " + localStorageService.data,
+    };
+    let fetchprovider = await FetchServiceProvider.getData(`/api/evaluation/${id_evaluation}`, headers);
+    evaluation = fetchprovider.getResponse('data').evaluation;
     let choosen = document.querySelector('.tab-content').id;
     for (const content of document.querySelectorAll('.tab-content')) {
         if (content.id == URLServiceProvider.findHashParameter()) {

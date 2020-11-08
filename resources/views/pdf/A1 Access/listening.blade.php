@@ -25,9 +25,21 @@
         </header>
         <main>
             <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
-                <li class="answers crossed inline mx-lg-2"><mark>{{ $answers['A1_Access:L1'][1] }}</mark></li>
-                <li class="answers inline mx-lg-2"><mark>{{ $answers['A1_Access:L1'][2] }}</mark></li>
-                <li class="answers inline mx-lg-2"><mark>{{ $answers['A1_Access:L1'][3] }}</mark></li>
+                @if (isset($answers['A1_Access:L1'][1]))
+                    <li><mark>{{ $answers['A1_Access:L1'][1] }}</mark></li>
+                @else
+                    <li><mark>null</mark></li>
+                @endif
+                @if (isset($answers['A1_Access:L1'][2]))
+                    <li><mark>{{ $answers['A1_Access:L1'][2] }}</mark></li>
+                @else
+                    <li><mark>null</mark></li>
+                @endif
+                @if (isset($answers['A1_Access:L1'][3]))
+                    <li><mark>{{ $answers['A1_Access:L1'][3] }}</mark></li>
+                @else
+                    <li><mark>null</mark></li>
+                @endif
             </ol>
         </main>
     </section>

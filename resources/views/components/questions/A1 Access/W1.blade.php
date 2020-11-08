@@ -37,7 +37,7 @@
                 </tr>
             </tbody>
         </table>
-        <table class="table">
+        <table class="table mb-4">
             <tbody>
                 <tr>
                     <th class="text-right" scope="col"><img src="{{ asset('img/recursos/hector.jpg') }}" class="img-fluid" alt="image-one-question-one"></th>

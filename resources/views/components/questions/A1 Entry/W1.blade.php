@@ -8,11 +8,11 @@
     <main class="dropdown-menu-content one-question-container px-xl-4">
         <div class="row justify-content-center py-4">
             <ol class="info list-data col-10 mx-auto mb-4 d-flex justify-content-center">
-                <li class="crossed inline mx-lg-2">Pencil</li>
-                <li class="inline mx-lg-2">Mouse</li>
-                <li class="inline mx-lg-2">Paper</li>
-                <li class="inline mx-lg-2">Scissors</li>
-                <li class="inline mx-lg-2">Ruler</li>
+                <li class="crossed inline mx-lg-2" id="Pencil">Pencil</li>
+                <li class="inline mx-lg-2" id="Mouse">Mouse</li>
+                <li class="inline mx-lg-2" id="Paper">Paper</li>
+                <li class="inline mx-lg-2" id="Scissors">Scissors</li>
+                <li class="inline mx-lg-2" id="Ruler">Ruler</li>
             </ol>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">

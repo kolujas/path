@@ -40,7 +40,6 @@
                     <tr>
                         <th scope="col">S<input name="A1_Access:W2A[5]" maxlength="1" class="input-small input position-relative" type="text">im</th>
                         <th scope="col" class="input-letters"><select name="A1_Access:W2A[6]">
-                            <option value="A" disabled selected></option>
                             <option disabled selected>A</option>
                             <option>B</option>
                             <option>C</option>
@@ -80,19 +79,19 @@
                         <div class="row justify-content-center">
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
-                                <div class="card-body mx-auto">
+                                <div class="card-body mx-auto crossed" id="A">
                                     a
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
-                                <div class="card-body mx-auto">
+                                <div class="card-body mx-auto" id="B">
                                     b
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
-                                <div class="card-body mx-auto">
+                                <div class="card-body mx-auto" id="C">
                                     c
                                 </div>
                             </div>
@@ -102,19 +101,19 @@
                         <div class="row justify-content-center">
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
-                                <div class="card-body mx-auto pb-0">
+                                <div class="card-body mx-auto pb-0" id="D">
                                     d
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
-                                <div class="card-body mx-auto pb-0">
+                                <div class="card-body mx-auto pb-0" id="E">
                                     e
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
-                                <div class="card-body mx-auto pb-0">
+                                <div class="card-body mx-auto pb-0" id="F">
                                     f
                                 </div>
                             </div>

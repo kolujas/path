@@ -22,25 +22,25 @@
                         <option selected>April</option>
                     </select></td>
                     <td><select class="input-long" name="A1_Access:W3[1]">
-                        <option>Spring</option>
-                        <option>Summer</option>
+                        <option selected>Spring</option>
+                        <option disabled>Summer</option>
                         <option>Autumn</option>
-                        <option>Winter</option>
+                        <option disabled>Winter</option>
                     </select></td>
                 </tr>
                 <tr>
                     <th class="text-center" scope="row">2</th>
                     <td>The weather gets really hot!</td>
                     <td><select class="input-long" name="A1_Access:W3[2]">
-                        <option>January</option>
+                        <option selected>January</option>
                         <option>February</option>
                         <option>March</option>
-                        <option>April</option>
+                        <option disabled>April</option>
                         <option>May</option>
                         <option>June</option>
                         <option>July</option>
                         <option>August</option>
-                        <option>September</option>
+                        <option disabled>September</option>
                         <option>October</option>
                         <option>November</option>
                         <option>December</option>
@@ -53,15 +53,15 @@
                     <th class="text-center" scope="row">3</th>
                     <td>It's cold and it rains a lot!</td>
                     <td><select class="input-long" name="A1_Access:W3[3]">
-                        <option>January</option>
+                        <option selected>January</option>
                         <option>February</option>
                         <option>March</option>
-                        <option>April</option>
+                        <option disabled>April</option>
                         <option>May</option>
                         <option>June</option>
                         <option>July</option>
                         <option>August</option>
-                        <option>September</option>
+                        <option disabled>September</option>
                         <option>October</option>
                         <option>November</option>
                         <option>December</option>
@@ -77,10 +77,10 @@
                         <option selected>September</option>
                     </select></td>
                     <td><select class="input-long" name="A1_Access:W3[4]">
-                        <option>Spring</option>
-                        <option>Summer</option>
+                        <option selected>Spring</option>
+                        <option disabled>Summer</option>
                         <option>Autumn</option>
-                        <option>Winter</option>
+                        <option disabled>Winter</option>
                     </select></td>
                 </tr>
             </tbody>

@@ -8,10 +8,10 @@
     <main class="dropdown-menu-content four-question-container px-xl-4">
         <div class="row justify-content-md-between justify-content-lg-center py-4">
             <ol class="info list-data col-10 mb-4 d-flex justify-content-center">
-                <li class="crossed inline mx-lg-2">Sunny</li>
-                <li class="inline mx-lg-2">Cloudy</li>
-                <li class="inline mx-lg-2">Windy</li>
-                <li class="inline mx-lg-2">Misty</li>
+                <li class="crossed inline mx-lg-2" id="Sunny">Sunny</li>
+                <li class="inline mx-lg-2" id="Cloudy">Cloudy</li>
+                <li class="inline mx-lg-2" id="Windy">Windy</li>
+                <li class="inline mx-lg-2" id="Misty">Misty</li>
             </ol>
 
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">

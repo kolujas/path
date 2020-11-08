@@ -387,7 +387,34 @@ select {
 
 /* * crossed words */
 .crossed {
-    text-decoration: line-through;
+    position: relative;
+}
+.crossed::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-two);
+    transform: translateY(-50%);
+}
+
+/* * circled */
+.circled {
+    position: relative;
+}
+.circled::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-two);
+    border-radius: .25rem;
+    padding: .75rem 1.25rem;
+    transform: translate(-50%, -50%);
 }
 
 /* * audio */
@@ -515,7 +542,7 @@ select {
     color: var(--color-two);
 }
 
-.icon-checkbox input:not(.checked) + .icon{
+.icon-checkbox:not(.checked) .icon{
     color: transparent;
 }
 

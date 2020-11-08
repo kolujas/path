@@ -181,8 +181,9 @@
 							<span class="text">99</span>
 						</label></td>
 						<td></td>
-						<td class="text-center"><label class="icon-checkbox"">
-							<input" type="checkbox">100
+						<td class="text-center"><label class="icon-checkbox">
+							<input type="checkbox" class="d-none">
+							<span class="text">100</span>
 						</label></td>
 					</tr>
 				</tbody>

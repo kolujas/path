@@ -23,10 +23,10 @@
 
         <div class="row justify-content-md-between justify-content-lg-center py-4">
             <ol class="info list-data col-10 mb-4 d-flex justify-content-center">
-                <li class="crossed inline mx-lg-2">Shopping-mall</li>
-                <li class="inline mx-lg-2">Coffee</li>
-                <li class="inline mx-lg-2">Bank</li>
-                <li class="inline mx-lg-2">Bus station</li>
+                <li class="crossed inline mx-lg-2" id="Shopping-mall">Shopping-mall</li>
+                <li class="inline mx-lg-2" id="Coffee">Coffee</li>
+                <li class="inline mx-lg-2" id="Bank">Bank</li>
+                <li class="inline mx-lg-2" id="Bus_station">Bus station</li>
             </ol>
             
             <ol class="list-exercise d-flex justify-content-center">

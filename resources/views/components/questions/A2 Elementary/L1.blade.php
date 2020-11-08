@@ -35,19 +35,19 @@
                     <th scope="row">...has a pet?</th>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Man" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Man" name="A2_Elementary:L1[1]">
                             <span class="icon">Man</span>
                         </label>
                     </td>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Woman" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Woman" name="A2_Elementary:L1[1]">
                             <span class="icon">Woman</span>
                         </label>
                     </td>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Both" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Both" name="A2_Elementary:L1[1]">
                             <span class="icon">Both</span>
                         </label>
                     </td>
@@ -56,19 +56,19 @@
                     <th scope="row">...enjoys being close to the river?</th>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Man" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Man" name="A2_Elementary:L1[2]">
                             <span class="icon">Man</span>
                         </label>
                     </td>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Woman" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Woman" name="A2_Elementary:L1[2]">
                             <span class="icon">Woman</span>
                         </label>
                     </td>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Both" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Both" name="A2_Elementary:L1[2]">
                             <span class="icon">Both</span>
                         </label>
                     </td>
@@ -77,19 +77,19 @@
                     <th scope="row">...describes an accident?</th>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Man" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Man" name="A2_Elementary:L1[3]">
                             <span class="icon">Man</span>
                         </label>
                     </td>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Woman" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Woman" name="A2_Elementary:L1[3]">
                             <span class="icon">Woman</span>
                         </label>
                     </td>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Both" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Both" name="A2_Elementary:L1[3]">
                             <span class="icon">Both</span>
                         </label>
                     </td>
@@ -98,19 +98,19 @@
                     <th scope="row">...makes a suggestion?</th>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Man" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Man" name="A2_Elementary:L1[4]">
                             <span class="icon">Man</span>
                         </label>
                     </td>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Woman" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Woman" name="A2_Elementary:L1[4]">
                             <span class="icon">Woman</span>
                         </label>
                     </td>
                     <td class="text-center">
                         <label class="icon-checkbox">
-                            <input class="d-none input-icon" type="radio" value="Both" name="A1_Access:L2[5]">
+                            <input class="d-none input-icon" type="radio" value="Both" name="A2_Elementary:L1[4]">
                             <span class="icon">Both</span>
                         </label>
                     </td>

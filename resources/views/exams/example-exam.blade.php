@@ -59,7 +59,7 @@
 
 @section('js')
     <script>
-        const evaluation = @json($evaluation);
+        const id_evaluation = {{ $evaluation->id_evaluation }};
     </script>
     <script type="module" src={{ asset('js/exams/example-exam.js') }}></script>
     <script type="module" src={{ asset('js/exams/exercises.js') }}></script>

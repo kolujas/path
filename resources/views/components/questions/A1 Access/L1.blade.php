@@ -25,7 +25,7 @@
             <ol class="list-exercise col-12 mb-4 d-flex justify-content-center">
                 <li class="mx-lg-3">
                     <select name="A1_Access:L1[1]">
-                        <option>a</option>
+                        <option selected>a</option>
                         <option>b</option>
                         <option>c</option>
                         <option>d</option>
@@ -34,7 +34,7 @@
                 </li>
                 <li class="mx-lg-3">
                     <select name="A1_Access:L1[2]">
-                        <option>a</option>
+                        <option selected>a</option>
                         <option>b</option>
                         <option>c</option>
                         <option>d</option>
@@ -43,7 +43,7 @@
                 </li>
                 <li class="mx-lg-3">
                     <select name="A1_Access:L1[3]">
-                        <option>a</option>
+                        <option selected>a</option>
                         <option>b</option>
                         <option>c</option>
                         <option>d</option>
@@ -54,7 +54,7 @@
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
-                    <div class="card-body mx-auto">
+                    <div class="card-body mx-auto crossed" id="a">
                         a
                     </div>
                 </div>
@@ -62,7 +62,7 @@
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
-                    <div class="card-body mx-auto">
+                    <div class="card-body mx-auto" id="b">
                         b
                     </div>
                 </div>
@@ -70,7 +70,7 @@
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
-                    <div class="card-body mx-auto">
+                    <div class="card-body mx-auto" id="c">
                         c
                     </div>
                 </div>
@@ -78,7 +78,7 @@
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
-                    <div class="card-body mx-auto">
+                    <div class="card-body mx-auto" id="d">
                         d
                     </div>
                 </div>
@@ -86,7 +86,7 @@
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
                     <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
-                    <div class="card-body mx-auto">
+                    <div class="card-body mx-auto" id="e">
                         e
                     </div>
                 </div>

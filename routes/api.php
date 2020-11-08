@@ -8,9 +8,13 @@
      */
         Route::post('/login', 'API\AuthController@doLogIn')->name('auth_api.doLogIn');
     /** 
-     * ! RecordController
+     * ! EvaluationController
      */
         Route::middleware(['auth:candidates_api','scope:candidates_api'])->group(function(){
+            Route::get('/evaluation/{id_evaluation}', 'API\EvaluationController@get')->name('evaluation.get');
+    /** 
+     * ! RecordController
+     */
             Route::post('/exam/{id_evaluation}/record', 'API\RecordController@save')->name('record.save');
         });
     });
