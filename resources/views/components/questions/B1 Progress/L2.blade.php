@@ -1,11 +1,11 @@
-<section id="dropdown-TIPO-NUMERO" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-listening-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>CONSIGNA</span>
+        <span>2. Listen to a conversation between Martha, a woman who looks after student happiness at a university, and Katya, an unhappy student. Then answer the questions in your own words.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
-    <main class="dropdown-menu-content NUMBER_NAME-question-container px-xl-4">
+    <main class="dropdown-menu-content two-question-container px-xl-4">
         <div class="d-flex justify-content-center my-4">
             <audio class="d-none" controls controlsList="nodownload">
                 <source
@@ -20,6 +20,21 @@
                 </button>
             </div>
         </div>
+        
+        <div class="py-4">
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <label for="indentadote-1" class="indent">a. What are Katya’s problems?</label>
+                <textarea id="identadote-1" name="A1_Achiever:W4B[1]" class="pl-2"></textarea>
+            </div>
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <label for="indentadote-2" class="indent">b. What are Martha’s solutions?</label>
+                <textarea id="identadote-2" name="A1_Achiever:W4B[2]" class="pl-2 last"></textarea>
+            </div>
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <label for="indentadote-3" class="indent">c. Who wins the discussion? Explain your answer</label>
+                <textarea id="identadote-3" name="A1_Achiever:W4B[2]" class="pl-2 last"></textarea>
+            </div>
+        </div> 
 
     </main>
 </section>
