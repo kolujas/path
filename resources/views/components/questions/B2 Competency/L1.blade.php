@@ -1,11 +1,11 @@
-<section id="dropdown-TIPO-NUMERO" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-listening-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>CONSIGNA</span>
+        <span>1. You will hear a conversation between two friends who haven’t seen each other for a while. Listen, then answer the questions</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
-    <main class="dropdown-menu-content NUMBER_NAME-question-container px-xl-4">
+    <main class="dropdown-menu-content one-question-container px-xl-4">
         <div class="d-flex justify-content-center my-4">
             <audio class="d-none" controls controlsList="nodownload">
                 <source
@@ -21,5 +21,38 @@
             </div>
         </div>
 
+        <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
+            <p class="complete col-12 mb-4"><b>a.</b> Alex…</p>
+
+            <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[1]">...believes he should be respectful with his ex-teacher at all times.</label></li>
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[1]">...finds it easy to be on casual terms with his ex-teacher.</label></li>
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[1]">...feels uneasy about referring to his ex-teacher by her first name.</label></li>
+            </ol>
+            
+            <p class="complete col-12 mb-4"><b>b.</b> Alex…</p>
+
+            <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[2]">...has two daughters from a previous marriage.</label></li>
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[2]">...has two daughters from his current marriage.</label></li>
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[2]">...has one daughter from a previous marriage, and one from his current marriage.</label></li>
+            </ol>
+
+            <p class="complete col-12 mb-4"><b>c.</b> Zoe…</p>
+
+            <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[3]">...s fully up to date with information technology</label></li>
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[3]">...prefers traditional technologies.</label></li>
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[3]">...uses a tablet with an electronic pen.</label></li>
+            </ol>
+            
+            <p class="complete col-12 mb-4"><b>d.</b> Zoe…</p>
+
+            <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[4]">...thought the food in Mexico was awful.</label></li>
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[4]">...thought the food in Mexico could kill you.</label></li>
+                <li class="col-8 mx-lg-2"><label class="options"><input type="radio" class="d-none" name="B2_Competency:L1[4]">...thought the food in Mexico was delicious.</label></li>
+            </ol>
+        </div>
     </main>
 </section>

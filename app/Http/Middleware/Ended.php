@@ -46,7 +46,7 @@
                 $minutes += intval($module_time[1]);
             }
             
-            if($length = intval($minutes / 59)){
+            if($length = $minutes / 60){
                 $minutes = $minutes - (60 * $length);
                 for ($i=1; $i <= $length; $i++) { 
                     $hours++;
@@ -55,7 +55,7 @@
             if($minutes < 10){
                 $minutes = "0$minutes";
             }
-            if($length = intval($hours / 23)){
+            if($length = intval($hours / 24)){
                 $hours = $hours - (24 * $length);
                 for ($i=1; $i <= $length; $i++) { 
                     $days++;

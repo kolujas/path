@@ -6,10 +6,7 @@
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
-        <span class="h5"> <span class="font-weight-bold">The Gold Coins –</span>  
-            <span class="font-italic">adapted from a short story by Shreya Sharma. All rights reserved.</span>
-        </span>
-        <img src="" alt="">
+        <h3 class="title col-12 mb-4 h5"><b>The Gold Coins:</b> <i>Adapted from a short story by Shreya Sharma. All rights reserved.</i></h3>
         <div class="info mx-auto my-4">
             <p>Once there was a man called Jeffrey, who became rich by cheating others. He kept his
                 money in bags of gold coins. He had lots of big houses, and always took the gold with
@@ -38,8 +35,8 @@
             <textarea id="identeado" class="pl-2"></textarea>
         </div>
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="identeado-two"  class="indent">1b. What do you think of the judge’s decision?</label>
-            <textarea id="identeado-two" class="pl-2 indent-two"></textarea>
+            <label for="identeado-two" class="indent">1b. What do you think of the judge’s decision?</label>
+            <textarea id="identeado-two" name="A2_Elementary:W1[1]" class="pl-2 indent-two"></textarea>
         </div>
     </main>
 </section>

@@ -7,9 +7,9 @@
     </a>
     <main class="dropdown-menu-content 2-question-container px-xl-4">
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
-            <p class="complete col-12 mb-4"><span class="font-weight-bold">a. </span>If I take this bag to my father,  <input class="input input-medium text-left w-50" type="text">.</p>
-            <p class="complete col-12 mb-4"><span class="font-weight-bold">b. </span>If <input class="input input-medium text-left w-50" type="text">, someone else will find the bag.</p>
-            <p class="complete col-12 mb-4"><span class="font-weight-bold">c. </span>If <input class="input input-medium text-left w-50" type="text">.</p>
+            <p class="complete col-12 mb-4"><b>a. </b>If I take this bag to my father,  <input class="input input-medium text-left w-50" type="text">.</p>
+            <p class="complete col-12 mb-4"><b>b. </b>If <input name="A2_Elementary:W2[1]" class="input input-medium text-left w-50" type="text">, someone else will find the bag.</p>
+            <p class="complete col-12 mb-4"><b>c. </b>If <input name="A2_Elementary:W2[2]" class="input input-medium text-left w-50" type="text">.</p>
         </div>
     </main>
 </section>

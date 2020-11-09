@@ -319,7 +319,6 @@ body {
 
 
 /* ? B1 Progress Writing */
-
 .B1_Progress-W #dropdown-writing-1.opened .dropdown-menu-content{
     max-height: 500vh;
 }
@@ -348,8 +347,14 @@ body {
     height: 20rem;
 }
 
+.B1_Progress-W #dropdown-writing-5 .complete textarea{
+    text-indent: 5.5rem;
+}
 
 /* ? B2 Competency Listening */
+.B2_Competency-L #dropdown-listening-1.opened .dropdown-menu-content{
+    max-height: 150vh;
+}
 
 /* ? B2 Competency Writing */
 
@@ -710,6 +715,10 @@ select {
         width: 10rem;
     }
 
+    .B2_Competency-L #dropdown-listening-1.opened .dropdown-menu-content{
+        max-height: 125vh;
+    }
+
     /* elementary */
 
     .A2_Elementary-W #dropdown-writing-1.opened .dropdown-menu-content .complete textarea.indent-two{
@@ -740,7 +749,7 @@ select {
         padding-top: 2rem;
     }
 
-    ..B1_Progress-W #dropdown-writing-1 #identeado-police{
+    .B1_Progress-W #dropdown-writing-1 #identeado-police{
         text-indent: 4.5rem;
         padding-top: 3.9rem;
     }
@@ -833,11 +842,6 @@ select {
 
     .svg-width{
         width: 75%;
-    }
-
-    .four-question-container textarea{
-        width: 50rem;
-        height: 13rem;
     }
 
     .fifth-question-container .textarea-custom{

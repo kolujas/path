@@ -24,15 +24,15 @@
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <label for="indentadote-1" class="indent">a. What are Katya’s problems?</label>
-                <textarea id="identadote-1" name="A1_Achiever:W4B[1]" class="pl-2"></textarea>
+                <textarea id="identadote-1" name="B1_Progress:L2[1]" class="pl-2"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <label for="indentadote-2" class="indent">b. What are Martha’s solutions?</label>
-                <textarea id="identadote-2" name="A1_Achiever:W4B[2]" class="pl-2 last"></textarea>
+                <textarea id="identadote-2" name="B1_Progress:L2[2]" class="pl-2 last"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <label for="indentadote-3" class="indent">c. Who wins the discussion? Explain your answer</label>
-                <textarea id="identadote-3" name="A1_Achiever:W4B[2]" class="pl-2 last"></textarea>
+                <textarea id="identadote-3" name="B1_Progress:L2[2]" class="pl-2 last"></textarea>
             </div>
         </div> 
 

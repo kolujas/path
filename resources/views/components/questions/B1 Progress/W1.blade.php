@@ -6,9 +6,7 @@
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
-        <span class="h5"><span class="font-weight-bold ml-4">The Great Outdoors –</span>  
-            <span class="font-italic">by Bill Morrisey</span>
-        </span>
+        <h3 class="title col-12 mb-4 h5"><b>The Great Outdoors:</b> <i>by Bill Morrisey</i></h3>
         <img src="" alt="">
         <div class="info mx-auto my-4">
             <p>Recent lockdowns imposed due to the threat of coronavirus infections have led to many of us
@@ -38,13 +36,13 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="identeado"  class="indent">1a. Of the deterrents to going outside mentioned in the article, which affect you the most?
+            <label for="identeado" class="indent">1a. Of the deterrents to going outside mentioned in the article, which affect you the most?
             </label>
-            <textarea id="identeado" class="pl-2"></textarea>
+            <textarea id="identeado" name="B1_Progress:W1[1]" class="pl-2"></textarea>
         </div>
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="identeado-two"  class="indent">1b.  What does the writer say about the opportunities and benefits of exercising indoors?</label>
-            <textarea id="identeado-two" class="pl-2 indent-two"></textarea>
+            <label for="identeado-two" class="indent">1b.  What does the writer say about the opportunities and benefits of exercising indoors?</label>
+            <textarea id="identeado-two" name="B1_Progress:W1[2]" class="pl-2 indent-two"></textarea>
         </div>
     </main>
 </section>

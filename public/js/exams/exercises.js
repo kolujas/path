@@ -190,4 +190,36 @@ document.addEventListener('DOMContentLoaded', function(e){
             }
         });
     }
+
+    // ? B1 Progress Listening
+    for (const label of document.querySelectorAll('.B1_Progress-L #dropdown-listening-1 .options')) {
+        const input = label.children[0];
+        input.addEventListener('change', function(e) {
+            for (const option of document.querySelectorAll('.B1_Progress-L #dropdown-listening-1 .options')) {
+                if (option.children[0].name == this.name) {
+                    option.classList.remove('circled');
+                }
+            }
+            label.classList.remove('circled');
+            if (this.checked) {
+                circleWord(label);
+            }
+        });
+    }
+
+    // ? B2 Competency Listening
+    for (const label of document.querySelectorAll('.B2_Competency-L #dropdown-listening-1 .options')) {
+        const input = label.children[0];
+        input.addEventListener('change', function(e) {
+            for (const option of document.querySelectorAll('.B2_Competency-L #dropdown-listening-1 .options')) {
+                if (option.children[0].name == this.name) {
+                    option.classList.remove('circled');
+                }
+            }
+            label.classList.remove('circled');
+            if (this.checked) {
+                circleWord(label);
+            }
+        });
+    }
 });

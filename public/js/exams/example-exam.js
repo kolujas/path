@@ -239,7 +239,7 @@ function parseTime(date){
     let hours = parseInt(time.split(':')[0]),
         minutes = parseInt(time.split(':')[1]);
     let length;
-    if(length = parseInt(minutes / 59)){
+    if(length = parseInt(minutes / 60)){
         minutes = minutes - (60 * length);
         for (let i=1; i <= length; i++) { 
             hours++;
@@ -248,7 +248,7 @@ function parseTime(date){
     if(minutes < 10){
         minutes = `0${minutes}`;
     }
-    if(length = parseInt(hours / 23)){
+    if(length = parseInt(hours / 24)){
         hours = hours - (24 * length);
         for (let i=1; i <= length; i++) { 
             days++;
