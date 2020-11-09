@@ -12,7 +12,8 @@
 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <textarea name="B1_Progress:W4[1]" class="pl-2"></textarea>
+                <img class="img-fluid" src="/img/recursos/correo-header.png" alt="correo layout">
+                <textarea name="B1_Progress:W4[1]" class="pl-2 B1-ex4"></textarea>
             </div>
         </div>
     </main>

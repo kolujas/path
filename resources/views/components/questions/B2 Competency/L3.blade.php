@@ -1,11 +1,11 @@
-<section id="dropdown-TIPO-NUMERO" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-listening-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>CONSIGNA</span>
+        <span>3. You have been asked to attend a speech by a politician, then write a report on what he said. As you listen, make notes. You will hear the speech twice.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
-    <main class="dropdown-menu-content NUMBER_NAME-question-container px-xl-4">
+    <main class="dropdown-menu-content three-question-container px-xl-4">
         <div class="d-flex justify-content-center my-4">
             <audio class="d-none" controls controlsList="nodownload">
                 <source
@@ -20,6 +20,25 @@
                 </button>
             </div>
         </div>
+
+
+        <div class="py-4">
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <label for="B2-ex3-indent-1" class="indent">Write notes here</label>
+                <textarea id="B2-ex3-indent-1" name="A1_Achiever:W4B[1]" class="pl-2"></textarea>
+            </div>
+        </div> 
+
+        <div class="py-4">
+            <div class="pl-2 pb-4">
+                <span class="h5 text-center">Now write your report. (you will have 20 minutes to complete this task once the recording has finished).</span>
+            </div>
+            
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <label for="B2-ex3-indent-2" class="indent"></label>
+                <textarea id="B2-ex3-indent-2" name="A1_Achiever:W4B[1]" class="pl-2"></textarea>
+            </div>
+        </div> 
 
     </main>
 </section>
