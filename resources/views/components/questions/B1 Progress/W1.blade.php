@@ -36,12 +36,11 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="identeado" class="indent">1a. Of the deterrents to going outside mentioned in the article, which affect you the most?
-            </label>
+            <label for="identeado" class="indent">a. Of the deterrents to going outside mentioned in the article, which affect you the most?</label>
             <textarea id="identeado" name="B1_Progress:W1[1]" class="pl-2"></textarea>
         </div>
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="identeado-two" class="indent">1b.  What does the writer say about the opportunities and benefits of exercising indoors?</label>
+            <label for="identeado-two" class="indent">b. What does the writer say about the opportunities and benefits of exercising indoors?</label>
             <textarea id="identeado-two" name="B1_Progress:W1[2]" class="pl-2 indent-two"></textarea>
         </div>
     </main>

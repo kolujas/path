@@ -71,16 +71,16 @@
             <thead>
                 <tr>
                     <th scope="col">OK</th>
-                    <td scope="col">friday</td>
-                    <td scope="col"><mark>{{ $answers['A1_Entry:L2'][1] }}</mark>day</td>
-                    <td scope="col"><mark>{{ $answers['A1_Entry:L2'][2] }}</mark>day</td>
+                    <td scope="col" style="background-color: #ccc; border: 0;" scope="col">friday</td>
+                    <td scope="col" style="background-color: #ccc; border: 0;" scope="col"><mark>{{ $answers['A1_Entry:L2'][1] }}</mark>day</td>
+                    <td scope="col" style="background-color: #ccc; border: 0;" scope="col"><mark>{{ $answers['A1_Entry:L2'][2] }}</mark>day</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">BAD</i>
                     </th>
-                    <td style="background-color: #ccc; border-left: 1px solid #ccc;" scope="col"><mark>{{ $answers['A1_Entry:L2'][3] }}</mark>day</td>
+                    <td style="background-color: #ccc; border: 0;" scope="col"><mark>{{ $answers['A1_Entry:L2'][3] }}</mark>day</td>
                     <td style="background-color: #ccc; border: 0;" scope="col"><mark>{{ $answers['A1_Entry:L2'][4] }}</mark>day</td>
                     <td style="background-color: #ccc; border: 0;" scope="col"><mark>{{ $answers['A1_Entry:L2'][5] }}</mark>day</td>
                 </tr>

@@ -31,12 +31,12 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="identeado"  class="indent">1a. What can we learn from this story?</label>
-            <textarea id="identeado" class="pl-2"></textarea>
+            <label for="identeado"  class="indent">a. What can we learn from this story?</label>
+            <textarea id="identeado" name="A2_Elementary:W1[1]" class="pl-2"></textarea>
         </div>
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="identeado-two" class="indent">1b. What do you think of the judge’s decision?</label>
-            <textarea id="identeado-two" name="A2_Elementary:W1[1]" class="pl-2 indent-two"></textarea>
+            <label for="identeado-two" class="indent">b. What do you think of the judge’s decision?</label>
+            <textarea id="identeado-two" name="A2_Elementary:W1[2]" class="pl-2 indent-two"></textarea>
         </div>
     </main>
 </section>

@@ -185,10 +185,16 @@ class Modal{
 
     createModules(element, value, disabled, li){
         let div = document.createElement('div');
-        div.classList.add('d-flex', 'flex-wrap', 'align-items-center');
+        div.classList.add('d-flex', 'flex-wrap', 'align-items-start', 'flex-wrap');
         li.appendChild(div);
         value = value.split(',');
+        let int = 1;
         for (const module in modules) {
+            int++;
+            let label = document.createElement('label');
+            label.classList.add('col-5', 'p-0', 'mr-3', 'mb-2', 'hidden');
+            div.appendChild(label);
+
             let input = document.createElement('input');
             input.classList.add('d-inline-block', 'form-input', 'list-datos', 'mb-2', 'mr-2');
             if(element.hasOwnProperty('disabled') && element.disabled){
@@ -198,20 +204,21 @@ class Modal{
             input.type = element.type;
             input.name = `${element.name}[]`;
             input.value = module;
-            input.dataset.original = true;
+            input.dataset.original = false;
             input.disabled = disabled;
             for (const moduleSelected of value) {
                 if(moduleSelected == module){
                     input.checked = true;
+                    input.dataset.original = true;
+                    input.classList.remove('hidden');
+                    label.classList.remove('hidden');
                 }
             }
-            div.appendChild(input);
+            label.appendChild(input);
 
-            let label = document.createElement('label');
-            label.classList.add('mr-3', 'mb-2');
-            label.htmlFor = module;
-            label.innerHTML = module;
-            div.appendChild(label);
+            let span = document.createElement('span');
+            span.innerHTML = module;
+            label.appendChild(span);
         }
         if(!(/id_candidate/.exec(element.name) && /id_exam/.exec(element.name) && /id_record/.exec(element.name))){
             let support = document.createElement('span');
@@ -389,7 +396,11 @@ class Modal{
 function refreshData(){
     for(const input of document.querySelectorAll(`.modal ul [data-original]`)){
         if(input.type == 'checkbox'){
-            input.checked = input.dataset.original;
+            if (input.dataset.original == 'true') {
+                input.checked = true;
+            } else {
+                input.checked = false;                
+            }
         }else if(input.nodeName == 'TEXTAREA'){
             input.innerHTML = input.dataset.original;
             input.value = input.dataset.original;
@@ -472,6 +483,9 @@ function disableInputs(){
             if(parent.dataset.required){
                 parent.children[0].children[0].classList.add('hide')
             }
+            if (input.dataset.original == 'false') {
+                input.parentNode.classList.add('hidden');
+            }
         }
     }
 }
@@ -497,6 +511,9 @@ function enableInputs(){
             }
             if(parent.dataset.required){
                 parent.children[0].children[0].classList.remove('hide')
+            }
+            if (input.dataset.original == 'false') {
+                input.parentNode.classList.remove('hidden');
             }
         }
     }

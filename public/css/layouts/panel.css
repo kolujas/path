@@ -120,6 +120,7 @@
     border-radius: .25rem;
     padding: 0 .5rem;
     outline: none;
+    /* width: fit-content; */
 }
 .details .list-datos:not([type=checkbox]){
     width: 100%;
@@ -135,6 +136,8 @@
 
 .details label{
     color: var(--color-two);
+    /* flex-basis: 35%;
+    white-space: nowrap; */
 }
 
 tr{
@@ -299,6 +302,15 @@ textarea{
     width: 100%;
     text-align: left;
     padding: 0 1rem;
+}
+
+.td-checkbox input {
+    pointer-events: none;
+}
+
+.details .list-datos.hidden,
+.details label.hidden {
+    display: none !important;
 }
 
 /* * MD */

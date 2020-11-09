@@ -1,6 +1,6 @@
 <section id="dropdown-writing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>3. You overhear the following conversation in a café. Believing the man is in danger, you go to the police and they ask you to report the conversation. Complete the report form below. </span>
+        <span>3. You overhear the following conversation in a café. Believing the man is in danger, you go to the police and they ask you to report the conversation. Complete the report form below.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
