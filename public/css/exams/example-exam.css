@@ -351,12 +351,102 @@ body {
     text-indent: 5.5rem;
 }
 
+.B1_Progress-W #dropdown-writing-4 .B1-ex4{
+    width: 23.4rem;
+}
+
 /* ? B2 Competency Listening */
 .B2_Competency-L #dropdown-listening-1.opened .dropdown-menu-content{
     max-height: 150vh;
 }
 
+.B2_Competency-L #dropdown-listening-2.opened .dropdown-menu-content{
+    max-height: 350vh;
+}
+
+
+.B2_Competency-L #dropdown-listening-2 #B2-indent-1 {
+    text-indent: 6.5rem;
+    padding-top: 2rem;
+    height: 15rem;
+}
+
+.B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+    text-indent: 16rem;
+    padding-top: 2rem;
+    height: 15rem;
+}
+
+.B2_Competency-L #dropdown-listening-2 #B2-indent-3 {
+    text-indent: 6.5rem;
+    padding-top: 2rem;
+    height: 15rem;
+}
+
+.B2_Competency-L #dropdown-listening-2 #B2-indent-4 {
+    text-indent: 9rem;
+    padding-top: 2rem;
+    height: 15rem;
+}
+
+.B2_Competency-L #dropdown-listening-2 #B2-indent-5 {
+    text-indent: 5.5rem;
+    padding-top: 4rem;
+    height: 15rem;
+}
+
+
+
+
 /* ? B2 Competency Writing */
+
+.B2_Competency-L #dropdown-listening-3 #B2-ex3-indent-1{
+    text-indent: 8.5rem;
+    height: 15rem;
+}
+
+.B2_Competency-L #dropdown-listening-3 #B2-ex3-indent-2{
+    text-indent: 0;
+    height: 15rem;
+}
+
+.B2_Competency-W #dropdown-writing-1.opened .dropdown-menu-content{
+    max-height: 800vh;
+}
+
+
+.B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+    text-indent: 19rem;
+    padding-top: 1.9rem;
+    height: 15rem;
+}
+
+.B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+    text-indent: 18.5rem;
+    padding-top: 3.9rem;
+    height: 15rem;
+}
+
+.B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+    text-indent: 12.5rem;
+    padding-top: 3.9rem;
+    height: 15rem;
+}
+
+.B2_Competency-W #dropdown-writing-3.opened .dropdown-menu-content{
+    max-height: 200vh;
+}
+
+.B2_Competency-W #dropdown-writing-3 #B2-ex3{
+    height: 20rem;
+    text-indent: 9.5rem;
+    padding-top: 5.9rem;
+}
+
+.B2_Competency-W #dropdown-writing-5 .complete #B2-ex5-1{
+    text-indent: 0 !important;
+} 
+
 
 /* ? ejercicios */
 .card{
@@ -729,13 +819,13 @@ select {
 
     /* progress */
 
-    /* listening */
+    /* progress listening */
 
     .B1_Progress-L #dropdown-listening-2 #identadote-3{
         text-indent: 24.5rem;
     }
 
-    /* writing */
+    /* progress writing */
 
     .B1_Progress-W #dropdown-writing-1 .complete textarea{
         height: 15rem;
@@ -756,6 +846,73 @@ select {
 
     .B1_Progress-W #dropdown-writing-3 #identeado-police {
         padding-top: 3.93rem;
+    }
+
+    .B1_Progress-W #dropdown-writing-4 .B1-ex4{
+        width: 40.1rem;
+    }
+
+
+    /* ? B2 Competency Listening */
+    .B2_Competency-L #dropdown-listening-1.opened .dropdown-menu-content{
+        max-height: 150vh;
+    }
+
+    .B2_Competency-L #dropdown-listening-2.opened .dropdown-menu-content{
+        max-height: 350vh;
+    }
+
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-1 {
+        text-indent: 25rem;
+        padding-top: 0;
+    }
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+        text-indent: 36.5rem;
+        padding-top: 0;
+    }
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-3 {
+        text-indent: 24.5rem;
+        padding-top: 0;
+    }
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-4 {
+        text-indent: 31.5rem;
+        padding-top: 0;
+    }
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-5 {
+        text-indent: 5.5rem;
+        padding-top: 2rem;
+        height: 15rem;
+    }
+
+    /* competency writing */
+
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+        text-indent: -0.2rem;
+    }
+    
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+        text-indent: 17rem;
+        padding-top: 1.95rem;
+        height: 15rem;
+    }
+    
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+        padding-top: 2rem;
+        height: 15rem;
+    }
+
+    .B2_Competency-W #dropdown-writing-3 #B2-ex3{
+        text-indent: 31rem;
+        padding-top: 1.95rem;
+    }
+
+    .B2_Competency-W #dropdown-writing-4 .B2-email-textarea{
+        width: 40rem;
     }
 
     .list-exercise li select {
@@ -829,6 +986,15 @@ select {
         text-indent: 9rem;
     }
 
+    .B2_Competency-W #dropdown-writing-3 #B2-ex3{
+        text-indent: -0.2rem;
+        padding-top: 4rem;
+    }
+
+    .B2_Competency-W #dropdown-writing-4 .B2-email-textarea{
+        width: 40rem;
+    }
+
     /* ? ejercicios */
     .card{
         min-width: 19%;
@@ -886,6 +1052,37 @@ select {
    .A2_Elementary-W #dropdown-writing-1.opened .dropdown-menu-content .complete textarea.indent-two{
         text-indent: 23rem;
     }
+
+    /* competency listening */
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-5 {
+        text-indent: 8.4rem;
+        padding-top: 2rem;
+        height: 15rem;
+    }
+
+    /* competency writing */
+
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+        text-indent: 4.8rem;
+    }
+    
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+        text-indent: 21.5rem;
+        padding-top: 1.95rem;
+        height: 15rem;
+    }
+    
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+        text-indent: 15rem;
+        padding-top: 2rem;
+        height: 15rem;
+    }
+
+    .B2_Competency-W #dropdown-writing-4 .b3-ex4-p{
+        margin-left: 3rem;
+        font-weight: bold;
+    }
 }
 
 /* * XL */
@@ -898,6 +1095,48 @@ select {
     .B1_Progress-W #dropdown-writing-3 #identeado-police {
         padding-top: 3.9rem;
         text-indent: 19.2rem;
+    }
+
+    .B1_Progress-W #dropdown-writing-4 .B1-ex4{
+        width: 34.6rem;
+    }
+
+    /* competency listening */
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+        text-indent: 7.5rem;
+        padding-top: 2rem;
+    }
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-5{
+        text-indent: 14rem;
+    }
+
+    /* competency writing */
+
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+        text-indent: 9.5rem;
+    }
+    
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+        text-indent: 27.3rem;
+        padding-top: 1.95rem;
+        height: 15rem;
+    }
+    
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+        text-indent: 24.5rem;
+        padding-top: 2rem;
+        height: 15rem;
+    }
+
+    .B2_Competency-W #dropdown-writing-3 #B2-ex3{
+        text-indent: 6.6rem;
+        padding-top: 4rem;
+    }
+
+    .B2_Competency-W #dropdown-writing-4 .B2-email-textarea{
+        width: 34.7rem;
     }
 }
 
@@ -913,6 +1152,65 @@ select {
     .B1_Progress-W #dropdown-writing-3 #identeado-police {
         padding-top: 1.93rem;
         text-indent: 40.2rem;
+    }
+
+
+    .B1_Progress-W #dropdown-writing-4 .B1-ex4{
+        width: 40.1rem;
+    }
+
+     /* competency listening */
+
+     .B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+        text-indent: 36.5rem;
+        padding-top: 0;
+    }
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-5{
+        text-indent: -0.2rem;
+    }
+
+    /* competency listening */
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+        text-indent: 7.5rem;
+        padding-top: 2rem;
+    }
+
+    .B2_Competency-L #dropdown-listening-2 #B2-indent-5{
+        text-indent: 14rem;
+    }
+
+    /* competency writing */
+
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+        text-indent: 0;
+    }
+    
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+        text-indent: 15rem;
+        padding-top: 1.95rem;
+        height: 15rem;
+    }
+    
+    .B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+        text-indent: 12.5rem;
+        padding-top: 2rem;
+        height: 15rem;
+    }
+
+    .B2_Competency-W #dropdown-writing-3 #B2-ex3{
+        text-indent: 28.6rem;
+        padding-top: 2rem;
+    }
+
+    .B2_Competency-W #dropdown-writing-4 .b3-ex4-p{
+        margin-left: 4rem;
+        font-weight: bold;
+    }
+
+    .B2_Competency-W #dropdown-writing-4 .B2-email-textarea{
+        width: 86.5%;
     }
 
 }
