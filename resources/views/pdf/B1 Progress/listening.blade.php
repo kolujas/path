@@ -27,9 +27,9 @@
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> Abigail, Charlie and Julian are the new...</p>
             <p style="color: #0091B7; padding: 0 4rem;">
                 @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...Sales Team')
-                    <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...two years.</span>
+                    <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...Sales Team.</span>
                 @else
-                    <span style="margin: .5rem 2rem;">...two years.</span>
+                    <span style="margin: .5rem 2rem;">...Sales Team.</span>
                 @endif
                 @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...Zoom Team')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...Zoom Team.</span>
@@ -45,17 +45,17 @@
 
             <p style="padding: 0 4rem; color: #000;"><b>b.</b> Charlie has been with the company for...</p>
             <p style="color: #0091B7; padding: 0 4rem;">
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...two years')
+                @if (isset($answers['B1_Progress:L1'][2]) && $answers['B1_Progress:L1'][2] == '...two years')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...two years.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...two years.</span>
                 @endif
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...one week')
+                @if (isset($answers['B1_Progress:L1'][2]) && $answers['B1_Progress:L1'][2] == '...one week')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...one week.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...one week.</span>
                 @endif
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...two weeks')
+                @if (isset($answers['B1_Progress:L1'][2]) && $answers['B1_Progress:L1'][2] == '...two weeks')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...two weeks.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...two weeks.</span>
@@ -64,18 +64,18 @@
 
             <p style="padding: 0 4rem; color: #000;"><b>c.</b> In her spare time, Charlie...</p>
             <p style="color: #0091B7; padding: 0 4rem;">
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...only watches TV')
+                @if (isset($answers['B1_Progress:L1'][3]) && $answers['B1_Progress:L1'][3] == '...only watches TV')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...only watches TV.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...only watches TV.</span>
                 @endif
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...is only interested in keeping fit')
+                @if (isset($answers['B1_Progress:L1'][3]) && $answers['B1_Progress:L1'][3] == '...is only interested in keeping fit')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...is only interested in keeping fit.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...is only interested in keeping fit.</span>
                 @endif
                 <br />
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...enjoys a mixture of keeping fit and relaxing')
+                @if (isset($answers['B1_Progress:L1'][3]) && $answers['B1_Progress:L1'][3] == '...enjoys a mixture of keeping fit and relaxing')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...enjoys a mixture of keeping fit and relaxing.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...enjoys a mixture of keeping fit and relaxing.</span>
@@ -84,17 +84,17 @@
 
             <p style="padding: 0 4rem; color: #000;"><b>d.</b> Julian has been with the company...</p>
             <p style="color: #0091B7; padding: 0 4rem;">
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...longer than Charlie')
+                @if (isset($answers['B1_Progress:L1'][4]) && $answers['B1_Progress:L1'][4] == '...longer than Charlie')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...longer than Charlie.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...longer than Charlie.</span>
                 @endif
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...less time than Charlie')
+                @if (isset($answers['B1_Progress:L1'][4]) && $answers['B1_Progress:L1'][4] == '...less time than Charlie')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...less time than Charlie.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...less time than Charlie.</span>
                 @endif
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...for the same amount of time as Charlie')
+                @if (isset($answers['B1_Progress:L1'][4]) && $answers['B1_Progress:L1'][4] == '...for the same amount of time as Charlie')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...for the same amount of time as Charlie.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...for the same amount of time as Charlie.</span>
@@ -103,17 +103,17 @@
 
             <p style="padding: 0 4rem; color: #000;"><b>e.</b> Abigail is the...</p>
             <p style="color: #0091B7; padding: 0 4rem;">
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...Head of Netflix')
+                @if (isset($answers['B1_Progress:L1'][5]) && $answers['B1_Progress:L1'][5] == '...Head of Netflix')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...Head of Netflix.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...Head of Netflix.</span>
                 @endif
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...Head of Marketing')
+                @if (isset($answers['B1_Progress:L1'][5]) && $answers['B1_Progress:L1'][5] == '...Head of Marketing')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...Head of Marketing.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...Head of Marketing.</span>
                 @endif
-                @if (isset($answers['B1_Progress:L1'][1]) && $answers['B1_Progress:L1'][1] == '...Marketing Team Leader')
+                @if (isset($answers['B1_Progress:L1'][5]) && $answers['B1_Progress:L1'][5] == '...Marketing Team Leader')
                     <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">...Marketing Team Leader.</span>
                 @else
                     <span style="margin: .5rem 2rem;">...Marketing Team Leader.</span>

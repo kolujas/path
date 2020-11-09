@@ -46,17 +46,16 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="B2_ex1-1" class="indent">What does the article say about non-verbal communication in different cultures? 
-            </label>
-            <textarea id="B2_ex1-1" name="B1_Progress:W1[1]" class="pl-2"></textarea>
+            <label for="B2_ex1-1" class="indent">What does the article say about non-verbal communication in different cultures?</label>
+            <textarea id="B2_ex1-1" name="B2_Competency:W1[1]" class="pl-2"></textarea>
         </div>
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="B2_ex1-2" class="indent">1b. According to the article, in which situations would a person need to be aware of their non-verbal communication? </label>
-            <textarea id="B2_ex1-2" name="B1_Progress:W1[2]" class="pl-2 indent-two"></textarea>
+            <label for="B2_ex1-2" class="indent">According to the article, in which situations would a person need to be aware of their non-verbal communication?</label>
+            <textarea id="B2_ex1-2" name="B2_Competency:W1[2]" class="pl-2 indent-two"></textarea>
         </div>
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="B2_ex1-3" class="indent">1c. How is the coronavirus pandemic affecting non-verbal communication in your country? Give examples.</label>
-            <textarea id="B2_ex1-3" name="B1_Progress:W1[2]" class="pl-2 indent-two"></textarea>
+            <label for="B2_ex1-3" class="indent">How is the coronavirus pandemic affecting non-verbal communication in your country? Give examples.</label>
+            <textarea id="B2_ex1-3" name="B2_Competency:W1[3]" class="pl-2 indent-two"></textarea>
         </div>
     </main>
 </section>

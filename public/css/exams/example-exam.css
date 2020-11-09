@@ -1083,6 +1083,14 @@ select {
         margin-left: 3rem;
         font-weight: bold;
     }
+
+    .B2_Competency-L #dropdown-listening-3.opened .dropdown-menu-content{
+        max-height: 115vh;
+    }
+
+    .B2_Competency-W #dropdown-writing-4.opened .dropdown-menu-content{
+        max-height: 110vh;
+    }
 }
 
 /* * XL */

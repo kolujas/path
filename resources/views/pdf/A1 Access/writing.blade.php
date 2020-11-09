@@ -20,14 +20,7 @@
     </header>
 
     <section>
-        <header>
-            <h3 style="padding-top: 2rem;">1. Look at the table of colours and items clothing. Write the colours and clothing in the speech fields.<mark>Two have been done for you</mark>.</h3>
-        </header>
-        <main>
-            <p style="padding: 0 2rem;">I am wearing a <mark>{{ $answers['A1_Access:W1'][1] }}</mark> t-shirt.</p>
-            <p style="padding: 0 2rem;">I am wearing a yellow <mark>{{ $answers['A1_Access:W1'][2] }}</mark> and <mark>{{ $answers['A1_Access:W1'][3] }}</mark> trousers.</p>
-            <p style="padding: 0 2rem;">I am wearing a green <mark>{{ $answers['A1_Access:W1'][4] }}</mark> t-shirt</p>
-        </main>
+        {{--  --}}
     </section>
 
     <section>
@@ -84,13 +77,17 @@
         </table>
     </section>
 
+    <pagebreak />
+
     <section>
         <header>
             <h3 style="padding-top: 2rem;">2.b. Which activities...</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;">...are good for your body? <mark>{!! $answers['A1_Access:W2B'][1] !!}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">...are good for your brain? <mark>{!! $answers['A1_Access:W2B'][2] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">...are good for your body?</p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A1_Access:W2B'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">...are good for your brain?</p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A1_Access:W2B'][2] !!}</mark></p>
         </main>
     </section>
     

@@ -26,23 +26,23 @@
         <main>
             <p style="color: #0091B7; padding: 0 4rem;">
                 @if (isset($answers['A1_Entry:W1'][1]))
-                    <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">{{$answers['A1_Entry:W1'][1]}}</span>
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Entry:W1'][1]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
                 @endif
                 @if (isset($answers['A1_Entry:W1'][2]))
-                    <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">{{$answers['A1_Entry:W1'][2]}}</span>
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Entry:W1'][2]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
                 @endif
-                <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Pencil</span>
+                <span style="margin: .5rem 2rem;">Pencil</span>
                 @if (isset($answers['A1_Entry:W1'][3]))
-                    <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">{{$answers['A1_Entry:W1'][3]}}</span>
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Entry:W1'][3]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
                 @endif
                 @if (isset($answers['A1_Entry:W1'][4]))
-                    <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">{{$answers['A1_Entry:W1'][4]}}</span>
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Entry:W1'][4]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
                 @endif
@@ -54,11 +54,10 @@
         <header>
             <h3 style="padding-top: 2rem;">2. You are at school. What can <mark>you see in these places?</mark>.</h3>
         </header>
-        <main class="writing-question-two">
+        <main>
             <p style="padding: 0 4rem; color: #000;">In the classroom, I can see a desk and <mark>{!! $answers['A1_Entry:W2'][1] !!}</mark></p>
             <p style="padding: 0 4rem; color: #000;">In the library, I can see <mark>{!! $answers['A1_Entry:W2'][2] !!}</mark> and <mark>{!! $answers['A1_Entry:W2'][3] !!}</mark></p>
             <p style="padding: 0 4rem; color: #000;">In the playground, I can see <mark>{!! $answers['A1_Entry:W2'][4] !!}</mark> and <mark>{!! $answers['A1_Entry:W2'][5] !!}</mark></p>
-            </div>
         </main>
     </section>
     
