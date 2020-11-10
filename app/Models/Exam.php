@@ -77,7 +77,6 @@
                         'password.required' => 'Password is required.',
                         'password.min' => 'Password cannot be less than :min characters.',
                         'password.max' => 'Password cannot be more than :max characters.',
-                        'password.confirmed' => 'Passwords do not match.',
                         'scheduled_date_time.required' => 'Scheduled Date Time is required.',
                         'scheduled_date_time.date' => 'Scheduled Date Time must be a valid date.',
                         'candidates.required' => 'A Candidate is required.',
@@ -86,7 +85,7 @@
             ],'edit' => [
                 'rules' => [
                     'name' => 'required|min:2|max:60',
-                    'password' => 'nullable|min:4|max:40|confirmed',
+                    'password' => 'nullable|min:4|max:40',
                     'scheduled_date_time' => 'required|date',
                     'candidates' => 'required',
                 ], 'messages' => [
@@ -96,7 +95,6 @@
                         'name.max' => 'Name cannot be more than :max characters.',
                         'password.min' => 'Password cannot be less than :min characters.',
                         'password.max' => 'Password cannot be more than :max characters.',
-                        'password.confirmed' => 'Passwords do not match.',
                         'scheduled_date_time.required' => 'Scheduled Date Time is required.',
                         'scheduled_date_time.date' => 'Scheduled Date Time must be a valid date.',
                         'candidates.required' => 'A Candidate is required.',
