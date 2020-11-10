@@ -41,7 +41,6 @@ async function sendData(){
         try {
             let response = fetchService.getResponse();
             let localStorageService = LocalStorageServiceProvider.setData('Path_Candidate_Token', response.data, true);
-            console.log(response);
             form.submit();
         } catch (error) {
             console.error(error);

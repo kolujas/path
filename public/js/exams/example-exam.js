@@ -457,7 +457,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     
     for (const button of submitsExamButtons) {
         button.addEventListener('click', function(e){
-            modalConfirm.modal();
+            $('.modal-confirm').modal();
         })
     }
 
