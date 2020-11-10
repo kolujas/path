@@ -74,13 +74,14 @@
                 ] );
             }
 
-            if(!$candidate = Candidate::where('candidate_number', '=', $input->data)->get()){
+            if(!count(Candidate::where('candidate_number', '=', $input->data)->get())){
                 return redirect()->route('auth.showLogin')->with('status', [
                     'code' => 404,
                     'message' => 'Incorrect candidate number.',
                 ] );
             }
-
+            
+            $candidate = Candidate::where('candidate_number', '=', $input->data)->get();
             $candidate = $candidate[0];
             $evaluations = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
 
