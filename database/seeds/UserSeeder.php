@@ -14,18 +14,6 @@
                 foreach ($users as $user) {
                     # code...
                 }
-                // User::create( [
-                //     'name' => 'Destroyer man',
-                //     'email' => 'juanchaher99@gmail.com',
-                //     'password' => \Hash::make( '12345678' ),
-                //     'slug' => 'destroyer-man',
-                // ] );
-                // User::create( [
-                //     'name' => 'Path tester',
-                //     'email' => 'test@path.com',
-                //     'password' => \Hash::make( 'PathTester20' ),
-                //     'slug' => 'path-tester',
-                // ] );
             } else {
                 User::create( [
                     'name' => 'Archimak',
@@ -38,6 +26,24 @@
                     'email' => 'fernandodeibe@gmail.com',
                     'password' => \Hash::make( '12345678' ),
                     'slug' => 'kolujas',
+                ] );
+                User::create( [
+                    'name' => 'Juan',
+                    'email' => 'juanchaher99@gmail.com',
+                    'password' => \Hash::make( '12345678' ),
+                    'slug' => 'juan',
+                ] );
+                User::create( [
+                    'name' => 'Fran',
+                    'email' => 'ffranbarbier@gmail.com',
+                    'password' => \Hash::make( '12345678' ),
+                    'slug' => 'fran',
+                ] );
+                User::create( [
+                    'name' => 'Path Admin',
+                    'email' => 'test@path.com',
+                    'password' => \Hash::make( 'PathTester20' ),
+                    'slug' => 'path-admin',
                 ] );
             }
         }

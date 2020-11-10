@@ -48,6 +48,15 @@
                     'id_exam' => 1,
                     'id_candidate' => 8,
                 ] );
+                Evaluation::create( [
+                    'id_exam' => 2,
+                    'id_candidate' => 9,
+                ] );
+                Evaluation::create( [
+                    'id_exam' => 1,
+                    'id_candidate' => 10,
+                    'id_status' => 1,
+                ] );
             }
         }
     }
