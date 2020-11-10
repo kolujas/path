@@ -15,7 +15,7 @@
             </ol>
 
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A1-ACHIEVER-W-4.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
                     <select clas="input-long" disabled>
                         <option selected>Sunny</option>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A1-ACHIEVER-W-4.2.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
                     <select clas="input-long">
                         <option disabled selected>Sunny</option>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A1-ACHIEVER-W-4.1.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
                     <select clas="input-long">
                         <option disabled selected>Sunny</option>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A1-ACHIEVER-W-4.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
                     <select clas="input-long">
                         <option disabled selected>Sunny</option>

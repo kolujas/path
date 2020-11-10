@@ -53,7 +53,7 @@
             </ol>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <img src="../../img/recursos/A1-ACCESS-L-1a.png" class="img-fluid utiles" alt="image-one-question-one">
                     <div class="card-body mx-auto crossed" id="a">
                         a
                     </div>
@@ -61,7 +61,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <img src="../../img/recursos/A1-ACCESS-L-1b.png" class="img-fluid utiles" alt="image-one-question-one">
                     <div class="card-body mx-auto" id="b">
                         b
                     </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <img src="../../img/recursos/A1-ACCESS-L-1c.png" class="img-fluid utiles" alt="image-one-question-one">
                     <div class="card-body mx-auto" id="c">
                         c
                     </div>
@@ -77,7 +77,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <img src="../../img/recursos/A1-ACCESS-L-1d.png" class="img-fluid utiles" alt="image-one-question-one">
                     <div class="card-body mx-auto" id="d">
                         d
                     </div>
@@ -85,7 +85,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 card-min-width">
                 <div class="card">
-                    <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                    <img src="../../img/recursos/A1-ACCESS-L-1e.png" class="img-fluid utiles" alt="image-one-question-one">
                     <div class="card-body mx-auto" id="e">
                         e
                     </div>

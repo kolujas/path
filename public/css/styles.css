@@ -99,6 +99,10 @@ input:focus{
     outline: none;
 }
 
+select{
+    outline: none;
+}
+
 
 /* * MD */
 

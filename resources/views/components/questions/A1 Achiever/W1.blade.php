@@ -36,5 +36,9 @@
                 </tr>
             </tbody>
         </table>
+
+        <div class="d-flex justify-content-center">
+            <img class="img-fluid road-colors" src="/img/recursos/A1-ACHIEVER-W-1.png" alt="colores">
+        </div>
     </main>
 </section>
