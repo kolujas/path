@@ -18,12 +18,13 @@
                 <li>Teddy: That’s very likely, although I have to say that offers are pouring in.</li>
             </ul>
         </div>
-        
+
+        <div class="dropdown-header px-0">
+            <span>Now imagine you are the host of a radio show. You want to report this interview to your listeners, in as much as possible. Write your script below.</span>
+        </div> 
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="B2-ex3"  class="indent">Now imagine you are the host of a radio show. You want to report this interview to your
-                listeners, in as much as possible. Write your script below.</label>
-            <textarea id="B2-ex3" name="B1_Progress:W3[1]"class="pl-2"></textarea>
+            <textarea id="B2-ex3" name="B2_Competency:W3[1]"class="pl-2"></textarea>
         </div>        
     </main>
 </section>

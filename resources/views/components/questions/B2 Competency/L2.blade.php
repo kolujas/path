@@ -23,24 +23,24 @@
 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-1" class="indent">What childhood memory does Katie describe? (a)</label>
-                <textarea id="B2-indent-1" name="A1_Achiever:W4B[1]" class="pl-2"></textarea>
+                <label for="B2-indent-1" class="indent">What childhood memory does Katie describe?</label>
+                <textarea id="B2-indent-1" name="B2_Competency:L2[1]" class="pl-2"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-2" class="indent">Which part of her story does the lecturer suggest may be inaccurate? (b)</label>
-                <textarea id="B2-indent-2" name="A1_Achiever:W4B[2]" class="pl-2 last"></textarea>
+                <label for="B2-indent-2" class="indent">Which part of her story does the lecturer suggest may be inaccurate?</label>
+                <textarea id="B2-indent-2" name="B2_Competency:L2[2]" class="pl-2 last"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-3" class="indent">What childhood memory does Ben describe? (c)</label>
-                <textarea id="B2-indent-3" name="A1_Achiever:W4B[2]" class="pl-2 last"></textarea>
+                <label for="B2-indent-3" class="indent">What childhood memory does Ben describe?</label>
+                <textarea id="B2-indent-3" name="B2_Competency:L2[3]" class="pl-2 last"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-4" class="indent">Which part of his story does Ben discover to be inaccurate? (d)</label>
-                <textarea id="B2-indent-4" name="A1_Achiever:W4B[2]" class="pl-2 last"></textarea>
+                <label for="B2-indent-4" class="indent">Which part of his story does Ben discover to be inaccurate?</label>
+                <textarea id="B2-indent-4" name="B2_Competency:L2[4]" class="pl-2 last"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-5" class="indent">How does the lecturer suggest that memory reconstruction is nothing to worry about? (e)</label>
-                <textarea id="B2-indent-5" name="A1_Achiever:W4B[2]" class="pl-2 last"></textarea>
+                <label for="B2-indent-5" class="indent">How does the lecturer suggest that memory reconstruction is nothing to worry about?</label>
+                <textarea id="B2-indent-5" name="B2_Competency:L2[5]" class="pl-2 last"></textarea>
             </div>
         </div> 
 

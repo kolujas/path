@@ -11,6 +11,46 @@
 =================
 
 =================
+*     PDFS      *
+=================
+<p style="color: #0091B7; padding: 0 4rem;">
+    @if (isset($answers['NAME'][ANSWER]) && $answers['NAME'][ANSWER] == 'VALUE')
+        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">VALUE</span>
+    @else
+        <span style="margin: .5rem 2rem;">VALUE</span>
+    @endif
+</p>
+
+<p style="padding: 0 4rem; color: #000;">QUESTION</p>
+<p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['NAME'][EXERICSE] !!}</mark></p>
+
+<table style="margin: auto; border: 1px solid #ccc;">
+    <thead>
+        <tr style="background-color: #fff;">
+            <th style="padding: 1rem 2rem;" scope="col">SOMETHING</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" style="background-color: #ccc; padding: 1rem 2rem;">QUESTION_1</th>
+            @if (isset($answers['NAME'][ANSWER]) && $answers['NAME'][ANSWER] == 'VALUE')
+                <td style="background-color: #ccc; border: 0; padding: 1rem 2rem; text-align: center;">VALUE</td>
+            @else
+                <td style="background-color: #ccc; border: 0; padding: 1rem 2rem; text-align: center;"></td>
+            @endif
+        </tr>
+        <tr>
+            <th scope="row">QUESTION_2</th>
+            @if (isset($answers['NAME'][ANSWER]) && $answers['NAME'][ANSWER] == 'VALUE')
+                <td style="text-align: center;">VALUE</td>
+            @else
+                <td style="text-align: center;"></td>
+            @endif
+        </tr>
+    </tbody>
+</table>
+
+=================
 *     HTMLS     *
 =================
 <div class="d-flex justify-content-center my-4">

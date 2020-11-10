@@ -1,6 +1,6 @@
 <section id="dropdown-TIPO-NUMERO" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>5. Write an essay on <mark>one</mark> of the following topics, giving examples</span>
+        <span>5. Write an essay on<mark>one</mark> of the following topics, giving examples.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -16,7 +16,7 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <textarea id="B2-ex5-1" class="pl-2"></textarea>
+            <textarea id="B2-ex5-1" name="B2_Competency:W5[1]" class="pl-2"></textarea>
         </div>        
     </main>
 </section>

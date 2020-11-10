@@ -24,23 +24,23 @@
             <h3 style="padding-top: 2rem;">1. You will hear three sentences, which describe three of the image below. Match each sentence to an image.<mark>Two are not used</mark>.</h3>
         </header>
         <main>
-            <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
+            <p style="color: #0091B7; padding: 0 4rem;">
                 @if (isset($answers['A1_Access:L1'][1]))
-                    <li><mark>{{ $answers['A1_Access:L1'][1] }}</mark></li>
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Access:L1'][1]}}</span>
                 @else
-                    <li><mark>null</mark></li>
+                    <span style="margin: .5rem 2rem;">null</span>
                 @endif
                 @if (isset($answers['A1_Access:L1'][2]))
-                    <li><mark>{{ $answers['A1_Access:L1'][2] }}</mark></li>
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Access:L1'][2]}}</span>
                 @else
-                    <li><mark>null</mark></li>
+                    <span style="margin: .5rem 2rem;">null</span>
                 @endif
                 @if (isset($answers['A1_Access:L1'][3]))
-                    <li><mark>{{ $answers['A1_Access:L1'][3] }}</mark></li>
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Access:L1'][3]}}</span>
                 @else
-                    <li><mark>null</mark></li>
+                    <span style="margin: .5rem 2rem;">null</span>
                 @endif
-            </ol>
+            </p>
         </main>
     </section>
     
@@ -106,14 +106,16 @@
         </table>
     </section>
 
+    <pagebreak />
+
     <section>
         <header>
             <h3 style="padding-top: 2rem;">3. After dinner, Emma and Lois play the game 'Rock, Paper, Scissors'. Listen to them play, then full the gaps with <b>my</b> or <b>your</b>.</h3>
         </header>
         <main>
-            <p style="padding: 0 2rem;"><b class="mr-1">Lois:</b> <mark>{{ $answers['A1_Access:L3'][1] }}</mark> turn first. Rock! I win! Is it <mark>{{ $answers['A1_Access:L3'][2] }}</mark>turn now or <mark>{{ $answers['A1_Access:L3'][3] }}</mark>turn?</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">Emma:</b> It's <mark>{{ $answers['A1_Access:L3'][4] }}</mark> turn because you won.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">Lois:</b> Ok. Paper! Oh i lose. <mark>{{ $answers['A1_Access:L3'][5] }}</mark> turn.</p>
+            <p style="padding: 0 4rem; color: #000;"><b class="mr-1">Lois:</b> <mark>{!! $answers['A1_Access:L3'][1] !!}</mark> turn first. Rock! I win! Is it <mark>{!! $answers['A1_Access:L3'][2] !!}</mark> turn now or <mark>{{ $answers['A1_Access:L3'][3] }}</mark> turn?</p>
+            <p style="padding: 0 4rem; color: #000;"><b class="mr-1">Emma:</b> It's <mark>{!! $answers['A1_Access:L3'][4] !!}</mark> turn because you won.</p>
+            <p style="padding: 0 4rem; color: #000;"><b class="mr-1">Lois:</b> Ok. Paper! Oh i lose. <mark>{!! $answers['A1_Access:L3'][5] !!}</mark> turn.</p>
         </main>
     </section>
 @endsection

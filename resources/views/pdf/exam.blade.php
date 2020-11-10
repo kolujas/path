@@ -9,6 +9,12 @@
         padding: 0 2rem;
     }
 
+    h4{
+        text-align: left;
+        margin-bottom: 1rem;
+        padding: 0 2rem;
+    }
+
     mark{
         background: none;
         color: #0091B7;

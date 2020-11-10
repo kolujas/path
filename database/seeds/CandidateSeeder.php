@@ -22,7 +22,6 @@
                 Candidate::create( [
                     'candidate_number' => 1,
                     'full_name' => 'Pepe Diaz',
-                    'email' => 'nosoybatman@gmail.com',
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
@@ -32,7 +31,6 @@
                 Candidate::create( [
                     'candidate_number' => 2,
                     'full_name' => 'Manolo Gomez',
-                    'email' => 'solomanolo@gmail.com',
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Belen\'s barquito',
@@ -42,7 +40,6 @@
                 Candidate::create( [
                     'candidate_number' => 3,
                     'full_name' => 'Antonio Gutierrez',
-                    'email' => 'elmamejo@gmail.com',
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Only Pros',
@@ -52,7 +49,6 @@
                 Candidate::create( [
                     'candidate_number' => 4,
                     'full_name' => 'Lola Lopez',
-                    'email' => 'lolalinda@gmail.com',
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Beauty Asociados',
@@ -62,7 +58,6 @@
                 Candidate::create( [
                     'candidate_number' => 5,
                     'full_name' => 'Héctor Image',
-                    'email' => 'altaimagenfachera@gmail.com',
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Hector\'s House',
@@ -72,7 +67,6 @@
                 Candidate::create( [
                     'candidate_number' => 6,
                     'full_name' => 'Pepe Diaz',
-                    'email' => 'correo-1@gmail.com',
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Wayne Enterprises',
@@ -82,7 +76,6 @@
                 Candidate::create( [
                     'candidate_number' => 7,
                     'full_name' => 'Manolo Gomez',
-                    'email' => 'correo-2@gmail.com',
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Belen\'s barquito',
@@ -92,7 +85,6 @@
                 Candidate::create( [
                     'candidate_number' => 8,
                     'full_name' => 'Antonio Gutierrez',
-                    'email' => 'correo-3@gmail.com',
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Only Pros',
@@ -103,7 +95,6 @@
                 Candidate::create( [
                     'candidate_number' => 9,
                     'full_name' => 'Example Candidate',
-                    'email' => 'ejemplo@correo.com',
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Path',
