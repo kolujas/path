@@ -192,7 +192,10 @@ class Modal{
         for (const module in modules) {
             int++;
             let label = document.createElement('label');
-            label.classList.add('col-5', 'p-0', 'mr-3', 'mb-2', 'hidden');
+            label.classList.add('col-5', 'p-0', 'mr-3', 'mb-2');
+            if (document.querySelector('.input-id')) {
+                label.classList.add('hidden');
+            }
             div.appendChild(label);
 
             let input = document.createElement('input');
