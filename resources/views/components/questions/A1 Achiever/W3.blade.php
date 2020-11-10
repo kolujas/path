@@ -1,6 +1,7 @@
 <section id="dropdown-writing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>3. Susana has 4 friends: Alicia, Luis, Paula and Juan. The table shows often the drink tea. Read each sentence a-e, then match the friend to the calendar. <mark>One is done for you</mark>.</span>
+        <span>3. Susana has four friends: Alicia, Luis, Paula and Juan. The table shows how often they drink tea. Fill the spaces in their entences with one of the words below.
+            </span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -15,12 +16,16 @@
                 <li class="inline mx-lg-2">Frequently</li>
                 <li class="inline mx-lg-2">Hardly Ever</li>
             </ol>
+
+            <div class="my-5">
+                <img class="img-fluid coffee" src="/img/recursos/cup.png" alt="Coffee">
+            </div>
             
-            <p class="complete col-12 mb-4"><b>a.</b> I <input name="A1_Achiever:W3[1]" class="input input-long" type="text">have a cup of tea in the morning.</p>
-            <p class="complete col-12 mb-4"><b>b.</b> I <input name="A1_Achiever:W3[2]" class="input input-long" type="text">drink tea. I hate it!</p>
-            <p class="complete col-12 mb-4"><b>c.</b> I <input name="A1_Achiever:W3[3]" class="input input-long" type="text">drink tea with breakfast.</p>
-            <p class="complete col-12 mb-4"><b>d.</b> I <input name="A1_Achiever:W3[4]" class="input input-long" type="text">drink tea. I prefer coffee.</p>
-            <p class="complete col-12 mb-4"><b>e.</b> I <input name="A1_Achiever:W3[5]" class="input input-long" type="text">have tea before going to school.</p>
+            <p class="complete col-12 mb-4"><b>a.</b> Susana: <input name="A1_Achiever:W3[1]" class="input input-long" type="text">have a cup of tea in the morning.</p>
+            <p class="complete col-12 mb-4"><b>b.</b> Alicia: <input name="A1_Achiever:W3[2]" class="input input-long" type="text">drink tea. I hate it!</p>
+            <p class="complete col-12 mb-4"><b>c.</b> Luis: <input name="A1_Achiever:W3[3]" class="input input-long" type="text">drink tea with breakfast.</p>
+            <p class="complete col-12 mb-4"><b>d.</b> Paula: <input name="A1_Achiever:W3[4]" class="input input-long" type="text">drink tea. I prefer coffee.</p>
+            <p class="complete col-12 mb-4"><b>e.</b> Juan: <input name="A1_Achiever:W3[5]" class="input input-long" type="text">have tea before going to school.</p>
         </div>
     </main>
 </section>

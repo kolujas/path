@@ -15,7 +15,7 @@
                 <li class="inline mx-lg-2" id="Ruler">Ruler</li>
             </ol>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-1.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A1-ENTRY-W-1.1.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
                     <select clas="input-long" name="A1_Entry:W1[1]">
                         <option disabled selected>Pencil</option>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-2.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A1-ENTRY-W-1.2.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
                     <select clas="input-long" name="A1_Entry:W1[2]">
                         <option disabled selected>Pencil</option>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A1-ENTRY-W-1.3.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
                     <select clas="input-long" disabled>
                         <option selected>Pencil</option>
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-4.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A1-ENTRY-W-1.4.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
                     <select clas="input-long" name="A1_Entry:W1[3]">
                         <option disabled selected>Pencil</option>
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-5.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A1-ENTRY-W-1.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
                     <select clas="input-long" name="A1_Entry:W1[4]">
                         <option disabled selected>Pencil</option>

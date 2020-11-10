@@ -78,19 +78,19 @@
                     <div class="col-12">
                         <div class="row justify-content-center">
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/A1-ACCESS-W-2.png" class="img-fluid utiles" alt="image-one-question-one">
                                 <div class="card-body mx-auto crossed" id="A">
                                     a
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/A1-ACCESS-W-2.1.png" class="img-fluid utiles" alt="image-one-question-one">
                                 <div class="card-body mx-auto" id="B">
                                     b
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/A1-ACCESS-W-2.2.png" class="img-fluid utiles" alt="image-one-question-one">
                                 <div class="card-body mx-auto" id="C">
                                     c
                                 </div>
@@ -100,19 +100,19 @@
                     <div class="col-12">
                         <div class="row justify-content-center">
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/A1-ACCESS-W-2.3.png" class="img-fluid utiles" alt="image-one-question-one">
                                 <div class="card-body mx-auto pb-0" id="D">
                                     d
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/A1-ACCESS-W-2.4.png" class="img-fluid utiles" alt="image-one-question-one">
                                 <div class="card-body mx-auto pb-0" id="E">
                                     e
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                                <img src="../../img/recursos/A1-ACCESS-W-5.png" class="img-fluid utiles" alt="image-one-question-one">
                                 <div class="card-body mx-auto pb-0" id="F">
                                     f
                                 </div>

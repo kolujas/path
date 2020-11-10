@@ -129,8 +129,28 @@ body {
 /* ? A1 Entry Listening */
 
 /* ? A1 Entry Writing */
+
+.A1_Entry-W #dropdown-writing-1.opened .dropdown-menu-content{
+    max-height: 300vh;
+}
+
+.utiles{
+    height: auto;
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    margin: auto;
+}
+
 .A1_Entry-W #dropdown-writing-5 .complete textarea {
     text-indent: 12.5rem;
+}
+
+.kids{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    margin-bottom: 5rem;
 }
 
 /* ? A1 Access Listening */
@@ -174,6 +194,10 @@ body {
 
 .A1_Access-L #dropdown-listening-2 table td .empty {
     color: var(--color-two);
+}
+
+.access-3-kids{
+    height: 230px;
 }
 
 /* ? A1 Access Writing */
@@ -539,6 +563,7 @@ select {
 
 .list-data li {
     display: inline;
+    margin: 0 4px;
 }
 
 /* * crossed words */
@@ -957,6 +982,12 @@ select {
         padding: 0 calc(((100% - 66.6666666667%) / 2 + 1rem));
     }
 
+    /* Entry writing */
+
+    .A1_Entry-W #dropdown-writing-2 .complete{
+        flex-basis: 100%;
+    }
+
     /* ? A1 Access Listening */
 
     /* ? A1 Access Writing */
@@ -1003,7 +1034,7 @@ select {
     /* * complete */
     .h5,
     .complete {
-        flex-basis: 55%;
+        flex-basis: 56%;
     }
 
     .svg-width{
@@ -1034,6 +1065,12 @@ select {
 
     /* archiever */
 
+    .road-colors{
+        height: 400px;
+        width: 400px;
+        object-fit: contain;
+    }
+
     .archiever-w-2{
         background-color: #fff;
         width: 90%;
@@ -1041,6 +1078,10 @@ select {
 
    .archiever .table th, .table td{
        width: 10rem !important;
+   }
+
+   .coffee{
+       border: 1px solid #ccc;
    }
 
    /* elementary */
