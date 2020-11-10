@@ -80,15 +80,7 @@
 
             $filePath = "records/$evaluation->id_evaluation.pdf";
 
-            try {
-                $pdf->save("storage/../private/$filePath");
-            } catch (\Throwable $th) {
-                return response()->json([
-                    'code' => 500,
-                    'data' => $th,
-                    'message' => 'PDF upload error.',
-                ]);
-            }
+            Storage::put($filePath, $pdf->output());
             
             if(!count(Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
                 $input['id_evaluation'] = $evaluation->id_evaluation;

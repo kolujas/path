@@ -102,4 +102,15 @@
 
             return redirect("/exam/$evaluation->id_evaluation/finished");
         }
+
+        static function deleteByEvaluation($id_evaluation){
+            $record = Record::where('id_evaluation', '=', $id_evaluation)->get()[0];
+            
+            $record->delete();
+            
+            return [
+                'code' => 200,
+                'message' => 'Record deleted correctly.',
+            ];
+        }
     }

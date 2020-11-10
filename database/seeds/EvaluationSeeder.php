@@ -14,7 +14,6 @@
                 foreach ($evaluations as $evaluation) {
                     //
                 }
-
             } else {
                 Evaluation::create( [
                     'id_exam' => 1,

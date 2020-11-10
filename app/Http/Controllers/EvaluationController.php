@@ -41,6 +41,9 @@
             return [
                 'code' => 200,
                 'message' => 'Evaluation deleted correctly.',
+                'data' => [
+                    'records' => $records,
+                ],
             ];
         }
 

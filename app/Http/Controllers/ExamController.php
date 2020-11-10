@@ -272,17 +272,38 @@
             $input->scheduled_date_time = preg_replace('/-/', '/', $input->scheduled_date_time);
             
             $exam->update((array) $input);
+            $evaluations = collect([]);
 
             try {
-                $response = EvaluationController::DeleteByExam($id_exam);
-            
                 foreach(explode(',', $input->candidates) as $id_candidate){
                     if($candidate = Candidate::find($id_candidate)){
-                        $auxInput = (object) [
-                            'id_exam' => $exam->id_exam,
-                            'id_candidate' => $id_candidate,
-                        ];
-                        $evaluation = EvaluationController::doCreate($auxInput);
+                        $found = false;
+                        foreach($exam->evaluations as $evaluation){
+                            if ($candidate->id_candidate == $evaluation->id_candidate) {
+                                $found = true;
+                            }
+                        }
+                        if (!$found) {
+                            $auxInput = (object) [
+                                'id_exam' => $exam->id_exam,
+                                'id_candidate' => $id_candidate,
+                            ];
+                            $evaluations->push(EvaluationController::doCreate($auxInput));
+                        }
+                    }
+                }
+                foreach($exam->evaluations as $evaluation){
+                    $found = false;
+                    foreach(explode(',', $input->candidates) as $id_candidate){
+                        if($candidate = Candidate::find($id_candidate)){
+                            if ($evaluation->id_candidate == $candidate->id_candidate) {
+                                $found = true;
+                            }
+                        }
+                    }
+                    if (!$found) {
+                        RecordController::deleteByEvaluation($evaluation->id_evaluation);
+                        $evaluation->delete();
                     }
                 }
                 
