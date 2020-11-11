@@ -8,6 +8,7 @@
     <main class="dropdown-menu-content one-question-container px-xl-4">
         <h3 class="title col-12 mb-4 h5"><b>The Gold Coins:</b> <i>Adapted from a short story by Shreya Sharma. All rights reserved.</i></h3>
         <div class="info mx-auto my-4">
+            <img class="img-fluid gold" src="/img/recursos/A2-ELEMENTARY-W-1.png" alt="">
             <p>Once there was a man called Jeffrey, who became rich by cheating others. He kept his
                 money in bags of gold coins. He had lots of big houses, and always took the gold with
                 him when he moved from one house to another.</p>
