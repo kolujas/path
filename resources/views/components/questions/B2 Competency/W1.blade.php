@@ -6,7 +6,7 @@
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
-        <h3 class="title col-12 mb-4 h5"><b>How Your Body Modifies Your Message</b><i>by Max Kelly</i></h3>
+        <h3 class="title col-12 mb-4 h5"><b>How Your Body Modifies Your Message</b><i> by Max Kelly</i></h3>
         <img src="" alt="">
         <div class="info mx-auto my-4">
             <p>Non-verbal communication, often referred to as body language, is a means by which we use our

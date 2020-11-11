@@ -8,16 +8,16 @@
     <main class="dropdown-menu-content one-question-container px-xl-4">
         <div class="row justify-content-center py-4">
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A2-PRELIMINARY-W-1.png" class="img-fluid utiles" alt="image-one-question-one">
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A2-PRELIMINARY-W-1.1.png" class="img-fluid utiles" alt="image-one-question-one">
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A2-PRELIMINARY-W-1.2.png" class="img-fluid utiles" alt="image-one-question-one">
             </div>
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
-                <img src="../../img/recursos/writing-1-3.jpg" class="img-fluid" alt="image-one-question-one">
+                <img src="../../img/recursos/A2-PRELIMINARY-W-1.3.png" class="img-fluid utiles" alt="image-one-question-one">
             </div>
         </div>
 

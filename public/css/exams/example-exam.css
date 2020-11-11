@@ -295,7 +295,17 @@ body {
     color: #727272;
 }
 
+.A2_Preliminary-L #dropdown-listening-1 .utiles{
+    height: 150px;
+    width: 150px;
+}
+
 /* ? A2 Preliminary Writing */
+
+.A2_Preliminary-W #dropdown-writing-1 .utiles{
+    height: 150px;
+    width: 150px;
+}
 
 /* ? A2 Elementary Listening */
 .A2_Elementary-L #dropdown-listening-1 table tbody th {
@@ -1094,6 +1104,12 @@ select {
         text-indent: 23rem;
     }
 
+    .gold{
+        height: 125px;
+        width: 125px;
+        object-fit: contain;
+    }
+
     /* competency listening */
 
     .B2_Competency-L #dropdown-listening-2 #B2-indent-5 {
@@ -1180,12 +1196,12 @@ select {
     }
 
     .B2_Competency-W #dropdown-writing-3 #B2-ex3{
-        text-indent: 6.6rem;
-        padding-top: 4rem;
+        text-indent: 0;
+        padding-top: 0;
     }
 
     .B2_Competency-W #dropdown-writing-4 .B2-email-textarea{
-        width: 34.7rem;
+        width: 32.8rem;
     }
 }
 
@@ -1237,20 +1253,20 @@ select {
     }
     
     .B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
-        text-indent: 15rem;
+        text-indent: 12.5rem;
         padding-top: 1.95rem;
         height: 15rem;
     }
     
     .B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
-        text-indent: 12.5rem;
+        text-indent: 8rem;
         padding-top: 2rem;
         height: 15rem;
     }
 
     .B2_Competency-W #dropdown-writing-3 #B2-ex3{
-        text-indent: 28.6rem;
-        padding-top: 2rem;
+        text-indent: 0;
+        padding-top: ;
     }
 
     .B2_Competency-W #dropdown-writing-4 .b3-ex4-p{
