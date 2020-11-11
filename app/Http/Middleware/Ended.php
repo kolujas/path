@@ -88,7 +88,7 @@
             if($months < 10){
                 $months = "0$months";
             }
-            $end_time = Carbon::parse("$date $hours:$minutes:00")->toDateTimeString();
+            $end_time = Carbon::parse("$years/$months/$days $hours:$minutes:00")->toDateTimeString();
 
             if($now > $end_time){
                 $request->session()->put('error', [

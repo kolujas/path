@@ -1,4 +1,4 @@
-<section id="dropdown-writing-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-preliminary-writing-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>1.a. Look at the pictures below and compare them thinking about your holiday. Complete these sentences giving your opinion.</span>
         <button class="dropdown-button text-right">

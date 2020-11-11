@@ -1,4 +1,4 @@
-<section id="dropdown-writing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-competency-writing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>3. You will read an extract from an interview with a racing driver, which took place one year ago. First, read the extract.</span>
         <button class="dropdown-button text-right">

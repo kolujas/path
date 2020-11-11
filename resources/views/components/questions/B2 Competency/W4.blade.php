@@ -1,4 +1,4 @@
-<section id="dropdown-writing-4" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-competency-writing-4" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>4. You receive the following email from a company which has organised an online webinar. Write a reply, indicating that you’re not sure about attending, and requesting the following information to help you decide:</span>
         <button class="dropdown-button text-right">

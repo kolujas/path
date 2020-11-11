@@ -1,4 +1,4 @@
-<section id="dropdown-writing-4" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-progress-writing-4" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>4. You have been sent a special offer from a hotel you once stayed in. The offer is for a free third night if you book two nights in June.</span>
         <button class="dropdown-button text-right">

@@ -1,4 +1,4 @@
-<section id="dropdown-writing-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-entry-writing-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>2. You are at school. What can <mark>you see in these places?</mark>.</span>
         <button class="dropdown-button text-right">

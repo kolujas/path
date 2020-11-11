@@ -100,7 +100,7 @@
                     'message' => 'Exam not found.',
                 ]);
             }
-            $exam->update(['scheduled_date_time' => Carbon::now()->addSeconds(15)->toDateTimeString()]);
+            $exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
             Auth::guard('candidates')->login($candidate, true);
             return redirect("exam/$evaluation->id_evaluation/rules");
         }

@@ -130,7 +130,7 @@ body {
 
 /* ? A1 Entry Writing */
 
-.A1_Entry-W #dropdown-writing-1.opened .dropdown-menu-content{
+.A1_Entry-W #dropdown-entry-writing-1.opened .dropdown-menu-content{
     max-height: 300vh;
 }
 
@@ -142,7 +142,7 @@ body {
     margin: auto;
 }
 
-.A1_Entry-W #dropdown-writing-5 .complete textarea {
+.A1_Entry-W #dropdown-entry-writing-5 .complete textarea {
     text-indent: 12.5rem;
 }
 
@@ -154,23 +154,23 @@ body {
 }
 
 /* ? A1 Access Listening */
-.A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
+.A1_Access-L #dropdown-access-listening-1.opened .dropdown-menu-content {
     max-height: 400vh;
 }
 
-.A1_Access-L #dropdown-listening-2.opened .dropdown-menu-content {
+.A1_Access-L #dropdown-access-listening-2.opened .dropdown-menu-content {
     max-height: 150vh;
 }
 
-.A1_Access-L #dropdown-listening-2 table thead th {
+.A1_Access-L #dropdown-access-listening-2 table thead th {
     border: 0;
 }
 
-.A1_Access-L #dropdown-listening-2 table th {
+.A1_Access-L #dropdown-access-listening-2 table th {
     padding: 0;
 }
 
-.A1_Access-L #dropdown-listening-2 table th .text {
+.A1_Access-L #dropdown-access-listening-2 table th .text {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -179,12 +179,12 @@ body {
     height: 3rem;
 }
 
-.A1_Access-L #dropdown-listening-2 table th div input {
+.A1_Access-L #dropdown-access-listening-2 table th div input {
     display: none;
 }
 
-.A1_Access-L #dropdown-listening-2 table th .empty,
-.A1_Access-L #dropdown-listening-2 table td .empty {
+.A1_Access-L #dropdown-access-listening-2 table th .empty,
+.A1_Access-L #dropdown-access-listening-2 table td .empty {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,7 +192,7 @@ body {
     height: 3rem;
 }
 
-.A1_Access-L #dropdown-listening-2 table td .empty {
+.A1_Access-L #dropdown-access-listening-2 table td .empty {
     color: var(--color-two);
 }
 
@@ -201,273 +201,270 @@ body {
 }
 
 /* ? A1 Access Writing */
-.A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
+.A1_Access-L #dropdown-access-listening-1.opened .dropdown-menu-content {
     max-height: 120vh;
 }
 
-.A1_Access-W #dropdown-writing-1 table img {
+.A1_Access-W #dropdown-access-writing-1 table img {
     width: 8rem;
 }
 
-.A1_Access-W #dropdown-writing-1 table th div {
+.A1_Access-W #dropdown-access-writing-1 table th div {
     width: 100%;
     height: 100%;
     transform: translateY(100%);
 }
 
-.A1_Access-W #dropdown-writing-2 select {
+.A1_Access-W #dropdown-access-writing-2 select {
     color: var(--color-two);
     background: transparent;
 }
 
-.A1_Access-W #dropdown-writing-2 .row-100 {
+.A1_Access-W #dropdown-access-writing-2 .row-100 {
     height: 100%;
 }
 
-.A1_Access-W #dropdown-writing-2 textarea{
+.A1_Access-W #dropdown-access-writing-2 textarea{
     text-indent: 13rem;
 }
 
-.A1_Access-W #dropdown-writing-3 select {
+.A1_Access-W #dropdown-access-writing-3 select {
     color: var(--color-two);
     background: transparent;
 }
 
-.A1_Access-W #dropdown-writing-3 th[scope="row"]{
+.A1_Access-W #dropdown-access-writing-3 th[scope="row"]{
     width: 1rem;
 }
 
 /* ? A1 Achiever Listening */
-.A1_Achiever-L #dropdown-listening-2 table td {
+.A1_Achiever-L #dropdown-achiever-listening-2 table td {
     padding: 0;
 }
 
 /* ? A1 Achiever Writing */
-.A1_Achiever-W #dropdown-writing-4.opened .dropdown-menu-content {
+.A1_Achiever-W #dropdown-achiever-writing-4.opened .dropdown-menu-content {
     max-height: 350vh;
 }
 
-.A1_Achiever-W #dropdown-writing-4 textarea{
+.A1_Achiever-W #dropdown-achiever-writing-4 textarea{
     text-indent: 14.5rem;
 }
 
-.A1_Achiever-W #dropdown-writing-4 textarea.last{
+.A1_Achiever-W #dropdown-achiever-writing-4 textarea.last{
     text-indent: 17.5rem;
 }
 
-.A1_Achiever-W #dropdown-writing-4 .last textarea{
+.A1_Achiever-W #dropdown-achiever-writing-4 .last textarea{
     text-indent: 17rem;
 }
 
 /* ? A2 Preliminary Listening */
-.A2_Preliminary-L #dropdown-listening-1.opened .dropdown-menu-content {
+.A2_Preliminary-L #dropdown-preliminary-listening-1.opened .dropdown-menu-content {
     max-height: 120vh;
 }
 
-.A2_Preliminary-W #dropdown-writing-1.opened .dropdown-menu-content {
+.A2_Preliminary-W #dropdown-preliminary-writing-1.opened .dropdown-menu-content {
     max-height: 400vh;
 }
 
-.A2_Preliminary-L #dropdown-listening-1 input{
+.A2_Preliminary-L #dropdown-preliminary-listening-1 input{
     display: none;
 }
 
-.A2_Preliminary-L #dropdown-listening-3 .dropdown-menu-content{
+.A2_Preliminary-L #dropdown-preliminary-listening-3 .dropdown-menu-content{
     background: url("/img/recursos/whatsapp-bg.jpg");
 }
 
-.A2_Preliminary-L #dropdown-listening-3 .complete textarea{
+.A2_Preliminary-L #dropdown-preliminary-listening-3 .complete textarea{
     border-radius: .25rem;
     background-color: #D3F9C8;
     color: #000;
 }
 
-.A2_Preliminary-L #dropdown-listening-3 .audio-button {
+.A2_Preliminary-L #dropdown-preliminary-listening-3 .audio-button {
     background-color: #fff;
     color: #000;
 }
 
-.A2_Preliminary-L #dropdown-listening-3 .audio-button.playing {
+.A2_Preliminary-L #dropdown-preliminary-listening-3 .audio-button.playing {
     color: #7ebedd;
 }
 
-.A2_Preliminary-L #dropdown-listening-3 .audio-button .audio-icon {
+.A2_Preliminary-L #dropdown-preliminary-listening-3 .audio-button .audio-icon {
     color: #727272;
 }
 
 /* ? A2 Preliminary Writing */
 
 /* ? A2 Elementary Listening */
-.A2_Elementary-L #dropdown-listening-1 table tbody th {
+.A2_Elementary-L #dropdown-elementary-listening-1 table tbody th {
     width: 45%;
 }
 
-.A2_Elementary-L #dropdown-listening-3.opened .dropdown-menu-content {
+.A2_Elementary-L #dropdown-elementary-listening-3.opened .dropdown-menu-content {
     max-height: 220vh;
 }
 
 /* ? A2 Elementary Writing */
 
-.A2_Elementary-W #dropdown-writing-1.opened .dropdown-menu-content{
+.A2_Elementary-W #dropdown-elementary-writing-1.opened .dropdown-menu-content{
     max-height: 450vh;
     padding-bottom: 2rem;
 }
 
-.A2_Elementary-W #dropdown-writing-1 .complete textarea {
+.A2_Elementary-W #dropdown-elementary-writing-1 .complete textarea {
     text-indent: 19.5rem;
 }
 
-.A2_Elementary-W #dropdown-writing-1 .complete textarea.indent-two{
+.A2_Elementary-W #dropdown-elementary-writing-1 .complete textarea.indent-two{
     text-indent: 5rem;
     padding-top: 2rem;
 }
 
 /* ? B1 Progres Listening */
 
-.B1_Progress-L #dropdown-listening-1.opened .dropdown-menu-content{
+.B1_Progress-L #dropdown-progress-listening-1.opened .dropdown-menu-content{
     max-height: 500vh;
 }
 
-.B1_Progress-L #dropdown-listening-2 .complete textarea{
+.B1_Progress-L #dropdown-progress-listening-2 .complete textarea{
     text-indent: 15.5rem;
 }
 
-.B1_Progress-L #dropdown-listening-2 #identadote-2{
+.B1_Progress-L #dropdown-progress-listening-2 #identadote-2{
     text-indent: 16rem;
 }
 
-.B1_Progress-L #dropdown-listening-2 #identadote-3{
+.B1_Progress-L #dropdown-progress-listening-2 #identadote-3{
     text-indent: 4rem;
     padding-top: 2rem;
 }
 
 
 /* ? B1 Progress Writing */
-.B1_Progress-W #dropdown-writing-1.opened .dropdown-menu-content{
+.B1_Progress-W #dropdown-progress-writing-1.opened .dropdown-menu-content{
     max-height: 500vh;
 }
 
-.B1_Progress-W #dropdown-writing-1 .complete textarea{
+.B1_Progress-W #dropdown-progress-writing-1 .complete textarea{
     height: 15rem;
     text-indent: 5rem;
     padding-top: 4rem;
 }
 
-.B1_Progress-W #dropdown-writing-2.opened .dropdown-menu-content{
+.B1_Progress-W #dropdown-progress-writing-2.opened .dropdown-menu-content{
     max-height: 400vh;
 }
 
-.B1_Progress-W #dropdown-writing-2 #identeado-3 {
+.B1_Progress-W #dropdown-progress-writing-2 #identeado-3 {
     text-indent: 8rem;
 }
 
-.B1_Progress-W #dropdown-writing-2 #identeado-3 {
+.B1_Progress-W #dropdown-progress-writing-2 #identeado-3 {
     text-indent: 8rem;
 }
 
-.B1_Progress-W #dropdown-writing-3 #identeado-police {
+.B1_Progress-W #dropdown-progress-writing-3 #identeado-police {
     text-indent: 4.5rem;
     padding-top: 7.93rem;
     height: 20rem;
 }
 
-.B1_Progress-W #dropdown-writing-5 .complete textarea{
+.B1_Progress-W #dropdown-progress-writing-5 .complete textarea{
     text-indent: 5.5rem;
 }
 
-.B1_Progress-W #dropdown-writing-4 .B1-ex4{
+.B1_Progress-W #dropdown-progress-writing-4 .B1-ex4{
     width: 23.4rem;
 }
 
 /* ? B2 Competency Listening */
-.B2_Competency-L #dropdown-listening-1.opened .dropdown-menu-content{
+.B2_Competency-L #dropdown-competency-listening-1.opened .dropdown-menu-content{
     max-height: 150vh;
 }
 
-.B2_Competency-L #dropdown-listening-2.opened .dropdown-menu-content{
+.B2_Competency-L #dropdown-competency-listening-2.opened .dropdown-menu-content{
     max-height: 350vh;
 }
 
 
-.B2_Competency-L #dropdown-listening-2 #B2-indent-1 {
+.B2_Competency-L #dropdown-competency-listening-2 #B2-indent-1 {
     text-indent: 6.5rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
-.B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+.B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
     text-indent: 16rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
-.B2_Competency-L #dropdown-listening-2 #B2-indent-3 {
+.B2_Competency-L #dropdown-competency-listening-2 #B2-indent-3 {
     text-indent: 6.5rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
-.B2_Competency-L #dropdown-listening-2 #B2-indent-4 {
+.B2_Competency-L #dropdown-competency-listening-2 #B2-indent-4 {
     text-indent: 9rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
-.B2_Competency-L #dropdown-listening-2 #B2-indent-5 {
+.B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5 {
     text-indent: 5.5rem;
     padding-top: 4rem;
     height: 15rem;
 }
 
-
-
-
 /* ? B2 Competency Writing */
 
-.B2_Competency-L #dropdown-listening-3 #B2-ex3-indent-1{
+.B2_Competency-L #dropdown-competency-listening-3 #B2-ex3-indent-1{
     text-indent: 8.5rem;
     height: 15rem;
 }
 
-.B2_Competency-L #dropdown-listening-3 #B2-ex3-indent-2{
+.B2_Competency-L #dropdown-competency-listening-3 #B2-ex3-indent-2{
     text-indent: 0;
     height: 15rem;
 }
 
-.B2_Competency-W #dropdown-writing-1.opened .dropdown-menu-content{
+.B2_Competency-W #dropdown-competency-writing-1.opened .dropdown-menu-content{
     max-height: 800vh;
 }
 
 
-.B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+.B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-1{
     text-indent: 19rem;
     padding-top: 1.9rem;
     height: 15rem;
 }
 
-.B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+.B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-2{
     text-indent: 18.5rem;
     padding-top: 3.9rem;
     height: 15rem;
 }
 
-.B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+.B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-3{
     text-indent: 12.5rem;
     padding-top: 3.9rem;
     height: 15rem;
 }
 
-.B2_Competency-W #dropdown-writing-3.opened .dropdown-menu-content{
+.B2_Competency-W #dropdown-competency-writing-3.opened .dropdown-menu-content{
     max-height: 200vh;
 }
 
-.B2_Competency-W #dropdown-writing-3 #B2-ex3{
+.B2_Competency-W #dropdown-competency-writing-3 #B2-ex3{
     height: 20rem;
     text-indent: 9.5rem;
     padding-top: 5.9rem;
 }
 
-.B2_Competency-W #dropdown-writing-5 .complete #B2-ex5-1{
+.B2_Competency-W #dropdown-competency-writing-5 .complete #B2-ex5-1{
     text-indent: 0 !important;
 } 
 
@@ -692,17 +689,17 @@ select {
     border: none !important;
 }
 
-.A1_Entry-L #dropdown-listening-3 .table-normal,
-.A1_Access-L #dropdown-listening-2 .table-normal,
-.A2_Elementary-L #dropdown-listening-1 .table-normal {
+.A1_Entry-L #dropdown-entry-listening-3 .table-normal,
+.A1_Access-L #dropdown-access-listening-2 .table-normal,
+.A2_Elementary-L #dropdown-elementary-listening-1 .table-normal {
     width: 60%;
 }
 
-.A1_Access-W #dropdown-writing-2 .table {
+.A1_Access-W #dropdown-access-writing-2 .table {
     width: 20%;
 }
 
-.A1_Access-L #dropdown-listening-2 .table-normal td {
+.A1_Access-L #dropdown-access-listening-2 .table-normal td {
     padding: 0;
 }
 
@@ -818,25 +815,28 @@ select {
     width: 75.6%;
 }
 
+.tab-menu.horizontal .tabs::-webkit-scrollbar {
+    display: none;
+}
 
 /* * MD */
 
 @media(min-width: 768px) {    
-    .A1_Access-L #dropdown-listening-1.opened .dropdown-menu-content {
+    .A1_Access-L #dropdown-access-listening-1.opened .dropdown-menu-content {
         max-height: 100vh;
     }
     
-    .A1_Access-W #dropdown-writing-1 table img {
+    .A1_Access-W #dropdown-access-writing-1 table img {
         width: 10rem;
     }
 
-    .B2_Competency-L #dropdown-listening-1.opened .dropdown-menu-content{
+    .B2_Competency-L #dropdown-competency-listening-1.opened .dropdown-menu-content{
         max-height: 125vh;
     }
 
     /* elementary */
 
-    .A2_Elementary-W #dropdown-writing-1.opened .dropdown-menu-content .complete textarea.indent-two{
+    .A2_Elementary-W #dropdown-elementary-writing-1.opened .dropdown-menu-content .complete textarea.indent-two{
         text-indent: 23rem;
         padding-top: 0;
     }
@@ -846,69 +846,69 @@ select {
 
     /* progress listening */
 
-    .B1_Progress-L #dropdown-listening-2 #identadote-3{
+    .B1_Progress-L #dropdown-progress-listening-2 #identadote-3{
         text-indent: 24.5rem;
     }
 
     /* progress writing */
 
-    .B1_Progress-W #dropdown-writing-1 .complete textarea{
+    .B1_Progress-W #dropdown-progress-writing-1 .complete textarea{
         height: 15rem;
         text-indent: 3.5rem;
         padding-top: 2rem;
     }
 
-    .B1_Progress-W #dropdown-writing-1 #identeado-2{
+    .B1_Progress-W #dropdown-progress-writing-1 #identeado-2{
         height: 15rem;
         text-indent: 4.5rem;
         padding-top: 2rem;
     }
 
-    .B1_Progress-W #dropdown-writing-1 #identeado-police{
+    .B1_Progress-W #dropdown-progress-writing-1 #identeado-police{
         text-indent: 4.5rem;
         padding-top: 3.9rem;
     }
 
-    .B1_Progress-W #dropdown-writing-3 #identeado-police {
+    .B1_Progress-W #dropdown-progress-writing-3 #identeado-police {
         padding-top: 3.93rem;
     }
 
-    .B1_Progress-W #dropdown-writing-4 .B1-ex4{
+    .B1_Progress-W #dropdown-progress-writing-4 .B1-ex4{
         width: 40.1rem;
     }
 
 
     /* ? B2 Competency Listening */
-    .B2_Competency-L #dropdown-listening-1.opened .dropdown-menu-content{
+    .B2_Competency-L #dropdown-competency-listening-1.opened .dropdown-menu-content{
         max-height: 150vh;
     }
 
-    .B2_Competency-L #dropdown-listening-2.opened .dropdown-menu-content{
+    .B2_Competency-L #dropdown-competency-listening-2.opened .dropdown-menu-content{
         max-height: 350vh;
     }
 
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-1 {
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-1 {
         text-indent: 25rem;
         padding-top: 0;
     }
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
         text-indent: 36.5rem;
         padding-top: 0;
     }
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-3 {
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-3 {
         text-indent: 24.5rem;
         padding-top: 0;
     }
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-4 {
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-4 {
         text-indent: 31.5rem;
         padding-top: 0;
     }
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-5 {
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5 {
         text-indent: 5.5rem;
         padding-top: 2rem;
         height: 15rem;
@@ -916,27 +916,27 @@ select {
 
     /* competency writing */
 
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-1{
         text-indent: -0.2rem;
     }
     
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-2{
         text-indent: 17rem;
         padding-top: 1.95rem;
         height: 15rem;
     }
     
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-3{
         padding-top: 2rem;
         height: 15rem;
     }
 
-    .B2_Competency-W #dropdown-writing-3 #B2-ex3{
+    .B2_Competency-W #dropdown-competency-writing-3 #B2-ex3{
         text-indent: 31rem;
         padding-top: 1.95rem;
     }
 
-    .B2_Competency-W #dropdown-writing-4 .B2-email-textarea{
+    .B2_Competency-W #dropdown-competency-writing-4 .B2-email-textarea{
         width: 40rem;
     }
 
@@ -949,16 +949,31 @@ select {
         margin: 0;
     }
     
+    /* .tab-menu .tabs .tab-menu-list .tab:last-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+    } */
+
+    .tab-menu.horizontal .tabs {
+        max-width: 100%;
+    }
+
     .tab-menu .tabs .tab-menu-list .tab:last-child {
         position: absolute;
         top: 0;
         right: 0;
+        padding: 0 calc(((100% - 66.6666666667%) / 2 + 1rem)) 0 8rem;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 5rem);
+    }
+
+    .floating-menu.left {
+        background: linear-gradient(90deg, rgba(255,255,255,1) calc(100% - 5rem), rgba(255,255,255,0) 100%);
     }
 
     .tab-menu .tabs .tab-menu-list .tab:last-child button{
         margin-right: 0;
     }
-
 
     .archiever-w-2 .input-one{
         width: 33rem;
@@ -977,52 +992,60 @@ select {
 /* * LG */
 
 @media(min-width: 1024px) {
-    /* ? navmeun */
+    /* ? navmenu */
     .nav-menu {
         padding: 0 calc(((100% - 66.6666666667%) / 2 + 1rem));
     }
 
-    /* Entry writing */
+    /* ? tabmenu */
+    .tab-menu .tabs {
+        position: initial;
+    }
+    
+    .tab-menu .tabs .tab-menu-list .tab:nth-last-child(2) {
+        margin-right: calc((100% - 66.6666666667%) / 2 + 10rem);
+    }
 
-    .A1_Entry-W #dropdown-writing-2 .complete{
+    /* ? Entry writing */
+    .A1_Entry-W #dropdown-entry-writing-2 .complete{
         flex-basis: 100%;
     }
 
     /* ? A1 Access Listening */
 
     /* ? A1 Access Writing */
-    .A1_Access-W #dropdown-writing-2.opened .dropdown-menu-content {
+    .A1_Access-W #dropdown-access-writing-2.opened .dropdown-menu-content {
         max-height: 200vh;
     }
 
-    .A1_Access-W #dropdown-writing-4 textarea{
+    .A1_Access-W #dropdown-access-writing-4 textarea{
         width: 32rem;
         height: 13rem;
     }
 
     /* ? A1 Achieve Writing */
-    .A1_Achiever-W #dropdown-writing-4.opened .dropdown-menu-content {
+    .A1_Achiever-W #dropdown-achiever-writing-4.opened .dropdown-menu-content {
         max-height: 150vh;
     }
 
-    .A1_Achiever-W #dropdown-writing-4 textarea{
+    .A1_Achiever-W #dropdown-achiever-writing-4 textarea{
         width: 32rem;
         height: 13rem;
     }
 
     /* progress writing */
 
-    .B1_Progress-W #dropdown-writing-3 #identeado-police {
+    .B1_Progress-W #dropdown-progress-writing-3 #identeado-police {
         padding-top: 3.93rem;
         text-indent: 9rem;
     }
 
-    .B2_Competency-W #dropdown-writing-3 #B2-ex3{
+    .B2_Competency-W #dropdown-competency-writing-3 #B2-ex3{
         text-indent: -0.2rem;
         padding-top: 4rem;
     }
 
-    .B2_Competency-W #dropdown-writing-4 .B2-email-textarea{
+    .B2_Competency-W #dropdown-competency-writing-4 .B2-email-textarea{
         width: 40rem;
     }
 
@@ -1086,17 +1109,17 @@ select {
 
    /* elementary */
 
-   .A2_Elementary-W #dropdown-writing-1.opened .dropdown-menu-content{
+   .A2_Elementary-W #dropdown-elementary-writing-1.opened .dropdown-menu-content{
     max-height: 250vh;
     padding-bottom: 2rem;
     }
-   .A2_Elementary-W #dropdown-writing-1.opened .dropdown-menu-content .complete textarea.indent-two{
+   .A2_Elementary-W #dropdown-elementary-writing-1.opened .dropdown-menu-content .complete textarea.indent-two{
         text-indent: 23rem;
     }
 
     /* competency listening */
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-5 {
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5 {
         text-indent: 8.4rem;
         padding-top: 2rem;
         height: 15rem;
@@ -1104,32 +1127,32 @@ select {
 
     /* competency writing */
 
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-1{
         text-indent: 4.8rem;
     }
     
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-2{
         text-indent: 21.5rem;
         padding-top: 1.95rem;
         height: 15rem;
     }
     
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-3{
         text-indent: 15rem;
         padding-top: 2rem;
         height: 15rem;
     }
 
-    .B2_Competency-W #dropdown-writing-4 .b3-ex4-p{
+    .B2_Competency-W #dropdown-competency-writing-4 .b3-ex4-p{
         margin-left: 3rem;
         font-weight: bold;
     }
 
-    .B2_Competency-L #dropdown-listening-3.opened .dropdown-menu-content{
+    .B2_Competency-L #dropdown-competency-listening-3.opened .dropdown-menu-content{
         max-height: 115vh;
     }
 
-    .B2_Competency-W #dropdown-writing-4.opened .dropdown-menu-content{
+    .B2_Competency-W #dropdown-competency-writing-4.opened .dropdown-menu-content{
         max-height: 110vh;
     }
 }
@@ -1141,50 +1164,50 @@ select {
 
     /* progress writing */
 
-    .B1_Progress-W #dropdown-writing-3 #identeado-police {
+    .B1_Progress-W #dropdown-progress-writing-3 #identeado-police {
         padding-top: 3.9rem;
         text-indent: 19.2rem;
     }
 
-    .B1_Progress-W #dropdown-writing-4 .B1-ex4{
+    .B1_Progress-W #dropdown-progress-writing-4 .B1-ex4{
         width: 34.6rem;
     }
 
     /* competency listening */
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
         text-indent: 7.5rem;
         padding-top: 2rem;
     }
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-5{
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5{
         text-indent: 14rem;
     }
 
     /* competency writing */
 
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-1{
         text-indent: 9.5rem;
     }
     
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-2{
         text-indent: 27.3rem;
         padding-top: 1.95rem;
         height: 15rem;
     }
     
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-3{
         text-indent: 24.5rem;
         padding-top: 2rem;
         height: 15rem;
     }
 
-    .B2_Competency-W #dropdown-writing-3 #B2-ex3{
+    .B2_Competency-W #dropdown-competency-writing-3 #B2-ex3{
         text-indent: 6.6rem;
         padding-top: 4rem;
     }
 
-    .B2_Competency-W #dropdown-writing-4 .B2-email-textarea{
+    .B2_Competency-W #dropdown-competency-writing-4 .B2-email-textarea{
         width: 34.7rem;
     }
 }
@@ -1198,67 +1221,67 @@ select {
 
     /* progress writing */
 
-    .B1_Progress-W #dropdown-writing-3 #identeado-police {
+    .B1_Progress-W #dropdown-progress-writing-3 #identeado-police {
         padding-top: 1.93rem;
         text-indent: 40.2rem;
     }
 
 
-    .B1_Progress-W #dropdown-writing-4 .B1-ex4{
+    .B1_Progress-W #dropdown-progress-writing-4 .B1-ex4{
         width: 40.1rem;
     }
 
      /* competency listening */
 
-     .B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
         text-indent: 36.5rem;
         padding-top: 0;
     }
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-5{
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5{
         text-indent: -0.2rem;
     }
 
     /* competency listening */
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-2 {
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
         text-indent: 7.5rem;
         padding-top: 2rem;
     }
 
-    .B2_Competency-L #dropdown-listening-2 #B2-indent-5{
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5{
         text-indent: 14rem;
     }
 
     /* competency writing */
 
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-1{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-1{
         text-indent: 0;
     }
     
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-2{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-2{
         text-indent: 15rem;
         padding-top: 1.95rem;
         height: 15rem;
     }
     
-    .B2_Competency-W #dropdown-writing-1 #B2_ex1-3{
+    .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-3{
         text-indent: 12.5rem;
         padding-top: 2rem;
         height: 15rem;
     }
 
-    .B2_Competency-W #dropdown-writing-3 #B2-ex3{
+    .B2_Competency-W #dropdown-competency-writing-3 #B2-ex3{
         text-indent: 28.6rem;
         padding-top: 2rem;
     }
 
-    .B2_Competency-W #dropdown-writing-4 .b3-ex4-p{
+    .B2_Competency-W #dropdown-competency-writing-4 .b3-ex4-p{
         margin-left: 4rem;
         font-weight: bold;
     }
 
-    .B2_Competency-W #dropdown-writing-4 .B2-email-textarea{
+    .B2_Competency-W #dropdown-competency-writing-4 .B2-email-textarea{
         width: 86.5%;
     }
 

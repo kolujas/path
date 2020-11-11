@@ -1,4 +1,4 @@
-<section id="dropdown-listening-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-entry-listening-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>3. Where Charles lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers<mark>Two are done for you</mark>.</span>
         <button class="dropdown-button text-right">

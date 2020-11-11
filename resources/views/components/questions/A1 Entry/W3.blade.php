@@ -1,4 +1,4 @@
-<section id="dropdown-writing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-entry-writing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>3. Complete the names of the animals.<span> One is done for you</span>.</span>
         <button class="dropdown-button text-right">

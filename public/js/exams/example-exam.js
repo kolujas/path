@@ -147,7 +147,7 @@ function parseSpaces(text){
  * @param {Object} data Data to get from CountDown.
  */
 function current(data = undefined){
-    document.querySelector(`#${parseSpaces(data.module.folder.replace(/ /, '_'))}-${data.module.name} .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+    document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name}-tab .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
 }
 
 /**
@@ -156,7 +156,7 @@ function current(data = undefined){
  */
 function end(data = undefined){
     document.querySelector('.clock').style.display = 'none';
-    let time = document.querySelector(`#${data.module.folder.replace(/ /, '_')}-${data.module.name} .time`);
+    let time = document.querySelector(`#${data.module.folder.replace(/ /, '_')}-${data.module.name}-tab .time`);
     time.innerHTML = 'ended';
     time.classList.add('text', 'text-two');
     let index;
@@ -237,8 +237,18 @@ function parseTime(date){
         days = parseInt(date.split('/')[2]);
     }
     let hours = parseInt(time.split(':')[0]),
-        minutes = parseInt(time.split(':')[1]);
+        minutes = parseInt(time.split(':')[1]),
+        seconds = parseInt(time.split(':')[2]);
     let length;
+    if(length = parseInt(seconds / 60)){
+        seconds = seconds - (60 * length);
+        for (let i=1; i <= length; i++) { 
+            minutes++;
+        }
+    }
+    if(seconds < 10){
+        seconds = `0${seconds}`;
+    }
     if(length = parseInt(minutes / 60)){
         minutes = minutes - (60 * length);
         for (let i=1; i <= length; i++) { 
@@ -282,7 +292,68 @@ function parseTime(date){
         months = `0${months}`;
     }
 
-    return `${years}-${months}-${days} ${hours}:${minutes}:00`;
+    return `${years}-${months}-${days} ${hours}:${minutes}:${seconds}`;
+}
+
+function tinier(scheduledTime){
+    let seconds = Math.floor((scheduledTime % (1000 * 60)) / 1000);
+    let minutes = Math.floor((scheduledTime % (1000 * 60 * 60)) / (1000 * 60));
+    let hours = Math.floor(scheduledTime / (1000 * 60 * 60));
+    if(length = parseInt(seconds / 60)){
+        seconds = seconds - (60 * length);
+        for (let i=1; i <= length; i++) { 
+            minutes++;
+        }
+    }
+    if(seconds < 10){
+        seconds = `0${seconds}`;
+    }
+    if(length = parseInt(minutes / 60)){
+        minutes = minutes - (60 * length);
+        for (let i=1; i <= length; i++) { 
+            hours++;
+        }
+    }
+    if(minutes < 10){
+        minutes = `0${minutes}`;
+    }
+    if(hours < 10){
+        hours = `0${hours}`;
+    }
+    return `${hours}:${minutes}:${seconds}`;
+}
+
+function addTime(scheduled_date_time, timeToAdd){
+    let hours = parseInt(scheduled_date_time.split(' ')[1].split(':')[0]);
+    let minutes = parseInt(scheduled_date_time.split(' ')[1].split(':')[1]);
+    let seconds = parseInt(scheduled_date_time.split(' ')[1].split(':')[2]);
+    let hoursToAdd = parseInt(timeToAdd.split(':')[0]);
+    let minutesToAdd = parseInt(timeToAdd.split(':')[1]);
+    let secondsToAdd = parseInt(timeToAdd.split(':')[2]);
+    seconds = seconds + secondsToAdd;
+    if (seconds > 59) {
+        minutes++;
+        seconds = seconds - 60;
+    }
+    if (seconds < 10) {
+        seconds = `0${seconds}`
+    }
+    minutes = minutes + minutesToAdd;
+    if (minutes > 59) {
+        hours++;
+        minutes = minutes - 60;
+    }
+    if (minutes < 10) {
+        minutes = `0${minutes}`
+    }
+    hours = hours + hoursToAdd;
+    if (hours > 23) {
+        hours = hours - 24;
+    }
+    if (hours < 10) {
+        hours = `0${hours}`
+    }
+    return `${scheduled_date_time.split(' ')[0]} ${hours}:${minutes}:${seconds}`;
 }
 
 /**
@@ -292,10 +363,25 @@ function parseTime(date){
  */
 function setTimer(module = undefined, tab = undefined){
     let scheduled_date_time = evaluation.exam.scheduled_date_time;
+    let position = evaluation.exam.modules.indexOf(module);
+    if (position > 0) {
+        for (const key in evaluation.exam.modules) {
+            if (evaluation.exam.modules.hasOwnProperty(key)) {
+                if (parseInt(key) < position) {
+                    const currentModule = evaluation.exam.modules[key];
+                    let timeToComparate = tinier(new Date() - new Date(evaluation.exam.scheduled_date_time));
+                    if (currentModule.time > timeToComparate) {
+                        scheduled_date_time = addTime(scheduled_date_time, timeToComparate);
+                        break;
+                    }
+                }
+            }
+        }
+    }
     let date = scheduled_date_time.split(' ')[0],
         time = scheduled_date_time.split(' ')[1],
         years, months, days,
-        hours, minutes, seconds = '00';
+        hours, minutes, seconds;
     if(/-/.exec(date)){
         years = parseInt(date.split('-')[0]);
         months = parseInt(date.split('-')[1]);
@@ -308,6 +394,7 @@ function setTimer(module = undefined, tab = undefined){
 
     hours = parseInt(time.split(':')[0]) + parseInt(module.time.split(':')[0]);
     minutes = parseInt(time.split(':')[1]) + parseInt(module.time.split(':')[1]);
+    seconds = parseInt(time.split(':')[2]) + parseInt(module.time.split(':')[2]);
 
     let full_time = parseTime(`${years}-${months}-${days} ${hours}:${minutes}:${seconds}`);
 
@@ -334,6 +421,21 @@ function setTimer(module = undefined, tab = undefined){
     });
 }
 
+function centerItVariableWidth(target, outer){
+    var out = $(outer);
+    var tar = $(target);
+    var x = out.width();
+    var y = tar.outerWidth(true);
+    var z = tar.index();
+    var q = 0;
+    var m = out.find('li');
+    //Just need to add up the width of all the elements before our target. 
+    for(var i = 0; i < z; i++){
+      q+= $(m[i]).outerWidth(true);
+    }
+    out.scrollLeft(Math.max(0, q - (x - y)/2));
+  }
+
 /**
  * * Change TabMenu content.
  * @param {TabMenu} tab TabMenu.
@@ -358,7 +460,7 @@ function nextModule(tab){
             }
         }
     }
-    tab.open([evaluation.exam.modules[index].file], evaluation.exam.modules[index].file);
+    tab.open([`${evaluation.exam.modules[index].folder.replace(' ', '_')}-${evaluation.exam.modules[index].name}`], `${evaluation.exam.modules[index].folder.replace(' ', '_')}-${evaluation.exam.modules[index].name}`);
     setTimer(getModule(document.querySelectorAll('.module-button')[document.querySelector('.submit-exam').dataset.module - 1].id), tab);
 }
 
@@ -369,7 +471,7 @@ function nextModule(tab){
  */
 function getModule(id) {
     for(const module of evaluation.exam.modules){
-        if(`${module.folder.replace(/ /, '_')}-${module.name}` == id){
+        if(`${module.folder.replace(/ /, '_')}-${module.name}` == id.replace('-tab', '')){
             return module;
         }
     }

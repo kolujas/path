@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     // ? Input letters from A1 Entry Listening ejercicio 1
-    let A1_Entry_letters = document.querySelectorAll('.A1_Entry-L #dropdown-listening-1 .input-letters');
+    let A1_Entry_letters = document.querySelectorAll('.A1_Entry-L #dropdown-entry-listening-1 .input-letters');
     for(const element of A1_Entry_letters){
         for (const key in element.children) {
             const input = element.children[key]
@@ -100,15 +100,15 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     // ? A1 Entry Writing
-    addCrossOptionsEvent(document.querySelectorAll('.A1_Entry-W #dropdown-writing-1 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Entry-W #dropdown-entry-writing-1 select'));
 
     // ? A1 Access Lisitening
-    addCrossOptionsEvent(document.querySelectorAll('.A1_Access-L #dropdown-listening-1 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Access-L #dropdown-access-listening-1 select'));
 
-    for (const label of document.querySelectorAll('.A1_Access-L #dropdown-listening-2 .icon-checkbox')) {
+    for (const label of document.querySelectorAll('.A1_Access-L #dropdown-access-listening-2 .icon-checkbox')) {
         const input = label.children[0];
         input.addEventListener('change', function(e) {
-            for (const radio of document.querySelectorAll('.A1_Access-L #dropdown-listening-2 .icon-checkbox')) {
+            for (const radio of document.querySelectorAll('.A1_Access-L #dropdown-access-listening-2 .icon-checkbox')) {
                 if (radio.children[0].name == input.name) {
                     if (radio.classList.contains('checked')) {
                         radio.classList.remove('checked');
@@ -122,12 +122,12 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     // ? A1 Access Writing
-    addCrossOptionsEvent(document.querySelectorAll('.A1_Access-W #dropdown-writing-2 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Access-W #dropdown-access-writing-2 select'));
 
     // ? A1 Achiever Listening
-    addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-L #dropdown-listening-1 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-L #dropdown-achiever-listening-1 select'));
 
-    for (const label of document.querySelectorAll('.A1_Achiever-L #dropdown-listening-2 .icon-checkbox')) {
+    for (const label of document.querySelectorAll('.A1_Achiever-L #dropdown-achiever-listening-2 .icon-checkbox')) {
         const input = label.children[0];
         const icon = label.children[1];
         input.addEventListener('change', function(e) {
@@ -138,16 +138,16 @@ document.addEventListener('DOMContentLoaded', function(e){
         });
     }
 
-    addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-L #dropdown-listening-3 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-L #dropdown-achiever-listening-3 select'));
     
     // ? A1 Achiever Writing
-    addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-W #dropdown-writing-4 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-W #dropdown-achiever-writing-4 select'));
     
     // ? A2 Preliminary Listening
-    for (const label of document.querySelectorAll('.A2_Preliminary-L #dropdown-listening-1 .options')) {
+    for (const label of document.querySelectorAll('.A2_Preliminary-L #dropdown-preliminary-listening-1 .options')) {
         const input = label.children[0];
         input.addEventListener('change', function(e) {
-            for (const option of document.querySelectorAll('.A2_Preliminary-L #dropdown-listening-1 .options')) {
+            for (const option of document.querySelectorAll('.A2_Preliminary-L #dropdown-preliminary-listening-1 .options')) {
                 if (option.children[0].name == this.name) {
                     option.classList.remove('circled');
                 }
@@ -160,10 +160,10 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     // ? A2 Elementary Listening
-    for (const label of document.querySelectorAll('.A2_Elementary-L #dropdown-listening-1 .icon-checkbox')) {
+    for (const label of document.querySelectorAll('.A2_Elementary-L #dropdown-elementary-listening-1 .icon-checkbox')) {
         const input = label.children[0];
         input.addEventListener('change', function(e) {
-            for (const radio of document.querySelectorAll('.A2_Elementary-L #dropdown-listening-1 .icon-checkbox')) {
+            for (const radio of document.querySelectorAll('.A2_Elementary-L #dropdown-elementary-listening-1 .icon-checkbox')) {
                 if (radio.children[0].name == input.name) {
                     if (radio.classList.contains('checked')) {
                         radio.classList.remove('checked');
@@ -176,10 +176,10 @@ document.addEventListener('DOMContentLoaded', function(e){
         });
     }
 
-    for (const label of document.querySelectorAll('.A2_Elementary-L #dropdown-listening-3 .options')) {
+    for (const label of document.querySelectorAll('.A2_Elementary-L #dropdown-elementary-listening-3 .options')) {
         const input = label.children[0];
         input.addEventListener('change', function(e) {
-            for (const option of document.querySelectorAll('.A2_Elementary-L #dropdown-listening-3 .options')) {
+            for (const option of document.querySelectorAll('.A2_Elementary-L #dropdown-elementary-listening-3 .options')) {
                 if (option.children[0].name == this.name) {
                     option.classList.remove('circled');
                 }
@@ -192,10 +192,10 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     // ? B1 Progress Listening
-    for (const label of document.querySelectorAll('.B1_Progress-L #dropdown-listening-1 .options')) {
+    for (const label of document.querySelectorAll('.B1_Progress-L #dropdown-progress-listening-1 .options')) {
         const input = label.children[0];
         input.addEventListener('change', function(e) {
-            for (const option of document.querySelectorAll('.B1_Progress-L #dropdown-listening-1 .options')) {
+            for (const option of document.querySelectorAll('.B1_Progress-L #dropdown-progress-listening-1 .options')) {
                 if (option.children[0].name == this.name) {
                     option.classList.remove('circled');
                 }
@@ -208,10 +208,10 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     // ? B2 Competency Listening
-    for (const label of document.querySelectorAll('.B2_Competency-L #dropdown-listening-1 .options')) {
+    for (const label of document.querySelectorAll('.B2_Competency-L #dropdown-competency-listening-1 .options')) {
         const input = label.children[0];
         input.addEventListener('change', function(e) {
-            for (const option of document.querySelectorAll('.B2_Competency-L #dropdown-listening-1 .options')) {
+            for (const option of document.querySelectorAll('.B2_Competency-L #dropdown-competency-listening-1 .options')) {
                 if (option.children[0].name == this.name) {
                     option.classList.remove('circled');
                 }

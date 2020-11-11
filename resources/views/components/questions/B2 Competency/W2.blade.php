@@ -1,4 +1,4 @@
-<section id="dropdown-writing-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-competency-writing-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>2. Below you will see three situations for which you need to use diplomatic language. Read each situation, then answer the questions. Try to be as polite as possible.</span>
         <button class="dropdown-button text-right">
