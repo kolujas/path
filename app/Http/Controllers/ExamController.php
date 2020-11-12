@@ -221,11 +221,11 @@
                     $exam = Exam::create((array) $input[$i]);
                     $exams->push($exam);
 
-                    foreach(explode(',', $input[$i]['candidates']) as $id_candidate){
-                        if($candidate = Candidate::find($id_candidate)){
+                    foreach(explode(',', $input[$i]['candidates']) as $candidate_number){
+                        if($candidate = Candidate::where('candidate_number', '=', $candidate_number)->get()[0]){
                             $auxInput = (object) [
                                 'id_exam' => $exam['id_exam'],
-                                'id_candidate' => $id_candidate,
+                                'id_candidate' => $candidate->id_candidate,
                             ];
                             $response = EvaluationController::doCreate($auxInput);
                         }
