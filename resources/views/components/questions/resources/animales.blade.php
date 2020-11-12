@@ -175,17 +175,17 @@
 <div id="fish-cont" class="animal-cont">
 	<div>
 		<p>fis</p>
-		<input maxlength="1" value="h" disabled type="text">
+		<input name="A1_Entry:W3[1]" maxlength="1" value="h" disabled type="text">
 	</div>
 </div>
 
 <div id="monkey-cont" class="animal-cont">
 	<div>
         <p>m</p>
-		<input maxlength="1" type="text">
+		<input name="A1_Entry:W3[2]" maxlength="1" type="text">
 		<p>n</p>
 		<p>k</p>
-		<input maxlength="1" type="text">
+		<input name="A1_Entry:W3[3]" maxlength="1" type="text">
 		<p>y</p>
 	</div>
 </div>
@@ -193,9 +193,9 @@
 <div id="tiger-cont" class="animal-cont">
 	<div>
         <p>t</p>
-		<input maxlength="1" type="text">
+		<input name="A1_Entry:W3[4]" maxlength="1" type="text">
 		<p>g</p>
-		<input maxlength="1" type="text">
+		<input name="A1_Entry:W3[5]" maxlength="1" type="text">
 		<p>r</p>
 	</div>
 </div>
@@ -203,8 +203,8 @@
 <div id="bird-cont" class="animal-cont">
 	<div>
         <p>b</p>
-		<input maxlength="1" type="text">
-		<input maxlength="1" type="text">
+		<input name="A1_Entry:W3[6]" maxlength="1" type="text">
+		<input name="A1_Entry:W3[7]" maxlength="1" type="text">
         <p>d</p>
 	</div>
 </div>
@@ -212,7 +212,7 @@
 <div id="pet-cont" class="animal-cont">
 	<div>
 		<p>p</p>
-		<input maxlength="1" type="text">
+		<input name="A1_Entry:W3[8]" maxlength="1" type="text">
 		<p>t</p>
 	</div>
 </div>

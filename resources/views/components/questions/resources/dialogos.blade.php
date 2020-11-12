@@ -83,23 +83,17 @@ select[disabled]{
 <div id="primer">
     <div>
         <span>I am wearing a </span>
-        <select name="" id="">
+        <select name="A1_Access:W1[1]">
             <option disabled selected value=""></option>
-            <option disabled value="">Green</option>
-            <option value="">Red</option>
-            <option value="">Orange</option>
-            <option disabled value="">T-shirt</option>
-            <option value="">Shorts</option>
-            <option value="">Cap</option>
+            <option disabled>Green</option>
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option disabled>T-shirt</option>
+            <option value="Shorts">Shorts</option>
+            <option value="Cap">Cap</option>
         </select>
-        <select disabled name="" id="">
-            <option disabled value=""></option>
-            <option disabled value="">Green</option>
-            <option value="">Red</option>
-            <option value="">Orange</option>
-            <option disabled selected value="">T-shirt</option>
-            <option value="">Shorts</option>
-            <option value="">Cap</option>
+        <select disabled>
+            <option disabled selected>T-shirt</option>
         </select>
         <span>.</span>
     </div>
@@ -107,24 +101,24 @@ select[disabled]{
 <div id="segundo">
     <div>
         <span>I am wearing a yellow</span>
-        <select name="" id="">
+        <select name="A1_Access:W1[2]">
             <option disabled selected value=""></option>
-            <option disabled value="">Green</option>
-            <option value="">Red</option>
-            <option value="">Orange</option>
-            <option disabled value="">T-shirt</option>
-            <option value="">Shorts</option>
-            <option value="">Cap</option>
+            <option disabled>Green</option>
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option disabled>T-shirt</option>
+            <option value="Shorts">Shorts</option>
+            <option value="Cap">Cap</option>
         </select>
         <span>and</span>
-        <select name="" id="">
+        <select name="A1_Access:W1[3]">
             <option disabled selected value=""></option>
-            <option disabled value="">Green</option>
-            <option value="">Red</option>
-            <option value="">Orange</option>
-            <option disabled value="">T-shirt</option>
-            <option value="">Shorts</option>
-            <option value="">Cap</option>
+            <option disabled>Green</option>
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option disabled>T-shirt</option>
+            <option value="Shorts">Shorts</option>
+            <option value="Cap">Cap</option>
         </select>
         <span>trousers.</span>
     </div>
@@ -132,23 +126,17 @@ select[disabled]{
 <div id="tercero">
     <div>
         <span>I am wearing</span>
-        <select disabled name="" id="">
-            <option disabled value=""></option>
-            <option disabled selected value="">Green</option>
-            <option value="">Red</option>
-            <option value="">Orange</option>
-            <option disabled value="">T-shirt</option>
-            <option value="">Shorts</option>
-            <option value="">Cap</option>
+        <select disabled>
+            <option disabled selected>Green</option>
         </select>
-        <select name="" id="">
+        <select name="A1_Access:W1[7]">
             <option disabled selected value=""></option>
-            <option disabled value="">Green</option>
-            <option value="">Red</option>
-            <option value="">Orange</option>
-            <option disabled value="">T-shirt</option>
-            <option value="">Shorts</option>
-            <option value="">Cap</option>
+            <option disabled>Green</option>
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option disabled>T-shirt</option>
+            <option value="Shorts">Shorts</option>
+            <option value="Cap">Cap</option>
         </select>
 
     </div>

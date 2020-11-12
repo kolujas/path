@@ -20,7 +20,14 @@
     </header>
 
     <section>
-        {{--  --}}
+        <header>
+            <h3 style="padding-top: 2rem;">1. Look at the table of colours and items clothing. Write the colours and clothing in the speech fields.<mark>Two have been done for you</mark>.</h3>
+        </header>
+        <main>
+            <p style="padding: 0 4rem; color: #000;">I am wearing a <mark>{!! $answers['A1_Access:W1'][1] !!}</mark> T-Shirt.</p>
+            <p style="padding: 0 4rem; color: #000;">I am wearing a yellow <mark>{!! $answers['A1_Access:W1'][2] !!}</mark> and <mark>{!! $answers['A1_Access:W1'][3] !!}</mark> trousers</p>
+            <p style="padding: 0 4rem; color: #000;">I am wearing a Green <mark>{!! $answers['A1_Access:W1'][4] !!}</mark></p>
+        </main>
     </section>
 
     <section>
