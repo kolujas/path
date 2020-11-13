@@ -501,6 +501,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             id: 'tab-exam',
         }, {
             open: [choosen],
+            noClick: true,
         });
     }
 
@@ -530,11 +531,11 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             }
             if(strikesInput.value >= 1){
                 modalStrikesMessage.innerHTML = "Tu mensaje ha sido marcado";
-                // $('.modal-strikes').modal();
+                $('.modal-strikes').modal();
             }else{
                 strikesInput.value++;
                 modalStrikesMessage.innerHTML = "Si volves a salir te marcaremos el examen";
-                // $('.modal-strikes').modal();
+                $('.modal-strikes').modal();
             }
         }
     });
@@ -546,7 +547,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             // strikesInput.value++;
             if(strikesInput.value == 0){
                 modalStrikesMessage.innerHTML = "Si salis de la pagina te marcaremos el examen";
-                // $('.modal-strikes').modal();
+                $('.modal-strikes').modal();
             }
         }
     });
@@ -577,30 +578,30 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     for (const btn of moduleBtns) {
         btn.addEventListener('click', function(e){
             e.preventDefault();
-            let index;
-            for (const key in evaluation.exam.modules) {
-                if(evaluation.exam.modules[key] == getModule(this.id)){
-                    index = parseInt(key) + 1;
-                }
-            }
-            let submitBtns = document.querySelectorAll('.submit-exam');
-            for (const btn of submitBtns) {
-                btn.dataset.module = index;
-                if(btn.dataset.module >= evaluation.exam.modules.length){
-                    if(btn.children.length){
-                        btn.children[0].innerHTML = 'Submit Exam';
-                    }else{
-                        btn.innerHTML = 'Submit Exam';
-                    }
-                }else{
-                    if(btn.children.length){
-                        btn.children[0].innerHTML = 'Continue';
-                    }else{
-                        btn.innerHTML = 'Continue';
-                    }
-                }
-            }
-            setTimer(getModule(this.id), tab);
+    //         let index;
+    //         for (const key in evaluation.exam.modules) {
+    //             if(evaluation.exam.modules[key] == getModule(this.id)){
+    //                 index = parseInt(key) + 1;
+    //             }
+    //         }
+    //         let submitBtns = document.querySelectorAll('.submit-exam');
+    //         for (const btn of submitBtns) {
+    //             btn.dataset.module = index;
+    //             if(btn.dataset.module >= evaluation.exam.modules.length){
+    //                 if(btn.children.length){
+    //                     btn.children[0].innerHTML = 'Submit Exam';
+    //                 }else{
+    //                     btn.innerHTML = 'Submit Exam';
+    //                 }
+    //             }else{
+    //                 if(btn.children.length){
+    //                     btn.children[0].innerHTML = 'Continue';
+    //                 }else{
+    //                     btn.innerHTML = 'Continue';
+    //                 }
+    //             }
+    //         }
+    //         setTimer(getModule(this.id), tab);
         });
     }
 

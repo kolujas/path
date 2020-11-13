@@ -16,6 +16,7 @@
         public function handle($request, Closure $next){
             $candidate = Auth::guard('candidates')->user();
             $id_evaluation = $request->route('id_evaluation');
+            $evaluation = Evaluation::find($id_evaluation);
 
             if($evaluation->confirmed <= 0){
                 $request->session()->put('error', [
