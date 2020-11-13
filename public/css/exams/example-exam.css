@@ -148,7 +148,7 @@ body {
 }
 
 .A1_Entry-W #dropdown-entry-writing-5 .complete textarea {
-    text-indent: 12.5rem;
+    text-indent: 5.5rem;
 }
 
 .kids{
@@ -207,7 +207,7 @@ body {
 
 /* ? A1 Access Writing */
 .A1_Access-L #dropdown-access-listening-1.opened .dropdown-menu-content {
-    max-height: 120vh;
+    max-height: 300vh;
 }
 
 .A1_Access-W #dropdown-access-writing-1 table img {
@@ -248,6 +248,7 @@ body {
 }
 
 /* ? A1 Achiever Writing */
+
 .A1_Achiever-W #dropdown-achiever-writing-4.opened .dropdown-menu-content {
     max-height: 350vh;
 }
@@ -359,7 +360,7 @@ body {
 
 /* ? B1 Progress Writing */
 .B1_Progress-W #dropdown-progress-writing-1.opened .dropdown-menu-content{
-    max-height: 500vh;
+    max-height: 600vh;
 }
 
 .B1_Progress-W #dropdown-progress-writing-1 .complete textarea{
@@ -370,6 +371,10 @@ body {
 
 .B1_Progress-W #dropdown-progress-writing-2.opened .dropdown-menu-content{
     max-height: 400vh;
+}
+
+.B1_Progress-W #dropdown-progress-writing-1 #identeado{
+    text-indent: 5.5rem;
 }
 
 .B1_Progress-W #dropdown-progress-writing-2 #identeado-3 {
@@ -405,31 +410,31 @@ body {
 
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-1 {
-    text-indent: 6.5rem;
+    text-indent: 5rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
-    text-indent: 16rem;
+    text-indent: 14.5rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-3 {
-    text-indent: 6.5rem;
+    text-indent: 5rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-4 {
-    text-indent: 9rem;
+    text-indent: 7.5rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5 {
-    text-indent: 5.5rem;
+    text-indent: 4rem;
     padding-top: 4rem;
     height: 15rem;
 }
@@ -458,13 +463,13 @@ body {
 }
 
 .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-2{
-    text-indent: 18.5rem;
+    text-indent: 14.5rem;
     padding-top: 3.9rem;
     height: 15rem;
 }
 
 .B2_Competency-W #dropdown-competency-writing-1 #B2_ex1-3{
-    text-indent: 12.5rem;
+    text-indent: 8rem;
     padding-top: 3.9rem;
     height: 15rem;
 }
@@ -680,10 +685,6 @@ select {
     color: #000;
 }
 
-.complete .indent + textarea {
-    text-indent: 4.5rem;
-}
-
 /* * options */
 .options {
     cursor: pointer;
@@ -868,13 +869,14 @@ select {
 
     /* progress writing */
 
-    .B1_Progress-W #dropdown-progress-writing-1 .complete textarea{
+
+    .B1_Progress-W #dropdown-progress-writing-1 #identeado{
         height: 15rem;
         text-indent: 3.5rem;
         padding-top: 2rem;
     }
 
-    .B1_Progress-W #dropdown-progress-writing-1 #identeado-2{
+    .B1_Progress-W #dropdown-progress-writing-1 #identeado-two{
         height: 15rem;
         text-indent: 4.5rem;
         padding-top: 2rem;
@@ -885,12 +887,31 @@ select {
         padding-top: 3.9rem;
     }
 
+    .B1_Progress-W #dropdown-progress-writing-2 #identeado-1{
+        text-indent: 3.5rem;
+        padding-top: 0;
+    }
+    
+    .B1_Progress-W #dropdown-progress-writing-2 #identeado-2{
+        text-indent: 3.5rem;
+        padding-top: 0;
+    }
+
+    .B1_Progress-W #dropdown-progress-writing-2 #identeado-3{
+        text-indent: 7rem;
+        padding-top: 0;
+    }
+
     .B1_Progress-W #dropdown-progress-writing-3 #identeado-police {
         padding-top: 3.93rem;
     }
 
     .B1_Progress-W #dropdown-progress-writing-4 .B1-ex4{
         width: 40.1rem;
+    }
+
+    .b1-ex-5{
+        text-indent: 6rem;
     }
 
 
@@ -905,27 +926,27 @@ select {
 
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-1 {
-        text-indent: 25rem;
+        text-indent: 23.5rem;
         padding-top: 0;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
-        text-indent: 36.5rem;
+        text-indent: 35.5rem;
         padding-top: 0;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-3 {
-        text-indent: 24.5rem;
+        text-indent: 23rem;
         padding-top: 0;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-4 {
-        text-indent: 31.5rem;
-        padding-top: 0;
+        text-indent: -0.2rem;
+        padding-top: 2rem;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5 {
-        text-indent: 5.5rem;
+        text-indent: 4.5rem;
         padding-top: 2rem;
         height: 15rem;
     }
@@ -1050,6 +1071,10 @@ select {
     }
 
     /* progress writing */
+
+    .B1_Progress-W #dropdown-progress-writing-1 #identeado{
+        text-indent: 7.5rem;
+    }
 
     .B1_Progress-W #dropdown-progress-writing-3 #identeado-police {
         padding-top: 3.93rem;
@@ -1188,22 +1213,26 @@ select {
 
     .B1_Progress-W #dropdown-progress-writing-3 #identeado-police {
         padding-top: 3.9rem;
-        text-indent: 19.2rem;
+        text-indent: 22.5rem;
     }
 
     .B1_Progress-W #dropdown-progress-writing-4 .B1-ex4{
-        width: 34.6rem;
+        width: 32.6rem;
+    }
+
+    .B1_Progress-W #dropdown-progress-writing-5 #b1-ex-5 {
+        text-indent: 6rem !important;
     }
 
     /* competency listening */
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
-        text-indent: 7.5rem;
+        text-indent: 6rem;
         padding-top: 2rem;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5{
-        text-indent: 14rem;
+        text-indent: 12.5rem;
     }
 
     /* competency writing */
@@ -1243,9 +1272,21 @@ select {
 
     /* progress writing */
 
+    .B1_Progress-W #dropdown-progress-writing-1 #identeado{
+        height: 15rem;
+        text-indent: -0.4rem;
+        padding-top: 2rem;
+    }
+
+    .B1_Progress-W #dropdown-progress-writing-1 #identeado-two{
+        height: 15rem;
+        text-indent: -0.4rem;
+        padding-top: 2rem;
+    }
+
     .B1_Progress-W #dropdown-progress-writing-3 #identeado-police {
         padding-top: 1.93rem;
-        text-indent: 40.2rem;
+        text-indent: 40.5rem;
     }
 
 
