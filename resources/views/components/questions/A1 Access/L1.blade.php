@@ -9,8 +9,7 @@
         <div class="d-flex justify-content-center my-4">
             <audio class="d-none" controls controlsList="nodownload">
                 <source
-                    src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
-                    type="audio/ogg">
+                    src="{{asset('audios/Access-1.mp3')}}" type="audio/mpeg">
                 Tu navegador no soporta el audio.
             </audio>
             <div>

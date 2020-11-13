@@ -9,9 +9,8 @@
         <div class="d-flex justify-content-center my-4">
             <audio class="d-none" controls controlsList="nodownload">
                 <source
-                    src="https://upload.wikimedia.org/wikipedia/en/9/9f/Sample_of_%22Another_Day_in_Paradise%22.ogg"
-                    type="audio/ogg">
-                Tu navegador no soporta el audio.
+                    src="{{asset('audios/Progress-2.mp3')}}" type="audio/mpeg">
+                    Tu navegador no soporta el audio.
             </audio>
             <div>
                 <button class="audio-button d-flex justify-content-around align-items-center p-2" type="button">
