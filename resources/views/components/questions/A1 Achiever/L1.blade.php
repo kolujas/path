@@ -30,24 +30,24 @@
                 <li class="inline mx-lg-2" id="option-9_p_m_">9 p.m.</li>
             </ol>
             
-            <p class="complete col-12 mb-4"><b>a.</b> I usually get up at <select disabled name="A1_Achiever:L1[1]">
+            <p class="complete col-12 mb-4"><b>a.</b> I usually get up at <select disabled>
                 <option selected>10 a.m.</option>
             </select></p>
-            <p class="complete col-12 mb-4"><b>b.</b> We eat quite late on Saturdays, at around <select name="A1_Achiever:L1[2]">
+            <p class="complete col-12 mb-4"><b>b.</b> We eat quite late on Saturdays, at around <select name="A1_Achiever:L1[1]">
                 <option disabled selected>10 a.m.</option>
                 <option>11:30 a.m.</option>
                 <option>2 p.m.</option>
                 <option>5:30 p.m.</option>
                 <option>9 p.m.</option>
             </select></p>
-            <p class="complete col-12 mb-4"><b>c.</b> We always stop for a coffee at <select name="A1_Achiever:L1[3]">
+            <p class="complete col-12 mb-4"><b>c.</b> We always stop for a coffee at <select name="A1_Achiever:L1[2]">
                 <option disabled selected>10 a.m.</option>
                 <option>11:30 a.m.</option>
                 <option>2 p.m.</option>
                 <option>5:30 p.m.</option>
                 <option>9 p.m.</option>
             </select> in the morning.</p>
-            <p class="complete col-12 mb-4"><b>d.</b> At <select name="A1_Achiever:L1[4]">
+            <p class="complete col-12 mb-4"><b>d.</b> At <select name="A1_Achiever:L1[3]">
                 <option disabled selected>10 a.m.</option>
                 <option>11:30 a.m.</option>
                 <option>2 p.m.</option>
