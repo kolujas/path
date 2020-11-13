@@ -20,8 +20,8 @@
             </div>
         </div>
 
-        <div class="row justify-content-md-between justify-content-lg-center py-4">
-            <ol class="info list-data col-10 mb-4 d-flex justify-content-center">
+        <div class="row justify-content-md-between justify-content-lg-center py-4 ml-4">
+            <ol class="info list-data col-10 mb-4 d-flex justify-content-center mx-auto">
                 <li class="crossed inline mx-lg-2" id="option-10_a_m_">10 a.m.</li>
                 <li class="inline mx-lg-2" id="option-11_30_a_m_">11:30 a.m.</li>
                 <li class="inline mx-lg-2" id="option-2_p_m_">2 p.m.</li>

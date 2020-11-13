@@ -22,10 +22,10 @@
         </div>
 
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
-            <p class="complete col-12 mb-4"><b>a.</b> In your own words, explain what the woman thinks about walking.<input class="input input-super-huge" type="text" name="A2_Elementary:L2[1]"></p>
-            <p class="complete col-12 mb-4"><b>b.</b> In your own words, explain what the man thinks about cycling.<input class="input input-super-huge" type="text" name="A2_Elementary:L2[2]"></p>
+            <p class="complete col-12 mb-4"><b>a.</b> In your own words, explain what the woman thinks about walking.<input class="input input-super-huge text-left" type="text" name="A2_Elementary:L2[1]"></p>
+            <p class="complete col-12 mb-4"><b>b.</b> In your own words, explain what the man thinks about cycling.<input class="input input-super-huge text-left" type="text" name="A2_Elementary:L2[2]"></p>
             <p class="complete col-12 mb-4"><b>c.</b> Who do you agree with the most? Give reasons for your answer.
-            <input class="input input-super-huge" type="text" name="A2_Elementary:L2[3]"></p>
+            <input class="input input-super-huge text-left" type="text" name="A2_Elementary:L2[3]"></p>
         </div>
     </main>
 </section>

@@ -8,7 +8,7 @@
     <main class="dropdown-menu-content fifth-question-container px-xl-4">
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <span class="indent">Write about your friend:</span>
+                <span class="indent">My friend:</span>
                 <textarea name="A1_Entry:W5[1]" class="pl-2"></textarea>
             </div>
         </div>
