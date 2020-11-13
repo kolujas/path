@@ -25,7 +25,7 @@
                 <li class="crossed inline mx-lg-2" id="Shopping-mall">Shopping-mall</li>
                 <li class="inline mx-lg-2" id="Coffee">Coffee</li>
                 <li class="inline mx-lg-2" id="Bank">Bank</li>
-                <li class="inline mx-lg-2" id="Bus_station">Bus station</li>
+                <li class="inline mx-lg-2" id="Bus_station">Bus Station</li>
             </ol>
             
             <ol class="list-exercise d-flex justify-content-center">
