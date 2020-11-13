@@ -87,8 +87,8 @@
             <h3 style="padding-top: 2rem;">4.b. What...</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;">...can you do on a windy day? <mark>{!! $answers['A1_Achiever:W4B'][1] !!}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">...do you like doing on sunny days? <mark>{!! $answers['A1_Achiever:W4B'][2] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">...can you do on a windy day? <mark>{{ $answers['A1_Achiever:W4B'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">...do you like doing on sunny days? <mark>{{ $answers['A1_Achiever:W4B'][2] }}</mark></p>
         </main>
     </section>
 
@@ -99,7 +99,7 @@
             <h3 style="padding-top: 2rem;">5. You receive the following note. Write a reply.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A1_Achiever:W5'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A1_Achiever:W5'][1] }}</mark></p>
         </main>
     </section>
 @endsection

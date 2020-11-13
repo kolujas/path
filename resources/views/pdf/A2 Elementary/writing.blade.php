@@ -25,10 +25,10 @@
         </header>
         <main>
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> What can we learn from this story?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Elementary:W1'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:W1'][1] }}</mark></p>
 
             <p style="padding: 0 4rem; color: #000;"><b>b.</b> What do you think of the judge’s decision?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Elementary:W1'][2] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:W1'][2] }}</mark></p>
         </main>
     </section>
 

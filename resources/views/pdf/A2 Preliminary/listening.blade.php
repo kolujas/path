@@ -41,10 +41,10 @@
             <h3 style="padding-top: 2rem;">2. You will hear a radio interview with a woman talking about something that happened to her when she was a child. Listen, then answer the questions.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;">a. Who did she go camping with? <mark>{!! $answers['A2_Preliminary:L2'][1] !!}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">b. How many tents did her father put up? <mark>{!! $answers['A2_Preliminary:L2'][2] !!}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">c. What did her mother cook? <mark>{!! $answers['A2_Preliminary:L2'][3] !!}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">d. How many days did the family spend camping? <mark>{!! $answers['A2_Preliminary:L2'][4] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">a. Who did she go camping with? <mark>{{ $answers['A2_Preliminary:L2'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">b. How many tents did her father put up? <mark>{{ $answers['A2_Preliminary:L2'][2] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">c. What did her mother cook? <mark>{{ $answers['A2_Preliminary:L2'][3] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">d. How many days did the family spend camping? <mark>{{ $answers['A2_Preliminary:L2'][4] }}</mark></p>
         </main>
     </section>
 
@@ -53,7 +53,7 @@
             <h3 style="padding-top: 2rem;">3. You receive a voice message from a friend telling you about a problem he has. Write to him to give some advice.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Preliminary:L3'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Preliminary:L3'][1] }}</mark></p>
         </main>
     </section>
 @endsection
