@@ -24,9 +24,25 @@
             <h3 style="padding-top: 2rem;">1. Look at the table of colours and items clothing. Write the colours and clothing in the speech fields.<mark>Two have been done for you</mark>.</h3>
         </header>
         <main>
+            @if (isset($answers['A1_Access:W1'] && isset($answers['A1_Access:W1'][1])))
             <p style="padding: 0 4rem; color: #000;">I am wearing a <mark>{{ $answers['A1_Access:W1'][1] }}</mark> T-Shirt.</p>
+            @else
+            <p style="padding: 0 4rem; color: #000;">I am wearing a <mark>null</mark> T-Shirt.</p>
+            @endif
+            @if (isset($answers['A1_Access:W1'] && isset($answers['A1_Access:W1'][2]) && isset($answers['A1_Access:W1'][3])))
             <p style="padding: 0 4rem; color: #000;">I am wearing a yellow <mark>{{ $answers['A1_Access:W1'][2] }}</mark> and <mark>{{ $answers['A1_Access:W1'][3] }}</mark> trousers</p>
+            @elseif (isset($answers['A1_Access:W1'] && isset($answers['A1_Access:W1'][2])))
+            <p style="padding: 0 4rem; color: #000;">I am wearing a yellow <mark>{{ $answers['A1_Access:W1'][2] }}</mark> and <mark>null</mark> trousers</p>
+            @elseif (isset($answers['A1_Access:W1'] && isset($answers['A1_Access:W1'][3])))
+            <p style="padding: 0 4rem; color: #000;">I am wearing a yellow <mark>null</mark> and <mark>{{ $answers['A1_Access:W1'][3] }}</mark> trousers</p>
+            @else
+            <p style="padding: 0 4rem; color: #000;">I am wearing a yellow <mark>null</mark> and <mark>null</mark> trousers</p>
+            @endif
+            @if (isset($answers['A1_Access:W1'] && isset($answers['A1_Access:W1'][1])))
             <p style="padding: 0 4rem; color: #000;">I am wearing a Green <mark>{{ $answers['A1_Access:W1'][4] }}</mark></p>
+            @else
+            <p style="padding: 0 4rem; color: #000;">I am wearing a Green <mark>null</mark></p>
+            @endif
         </main>
     </section>
 
