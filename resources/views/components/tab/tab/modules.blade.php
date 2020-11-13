@@ -5,7 +5,7 @@
     @foreach($modules as $module)
         <li class="tab">
             <a id="{{ preg_replace("/ /", '_', $module->folder) }}-{{ $module->name }}-tab" href="#{{ preg_replace("/ /", '_', $module->folder) }}-{{ $module->name }}" class="module-button tab-link btn">
-                <span class="link-text">{{ $module->file }}</span>
+                <span class="link-text">{{ $module->folder }}: {{ $module->file }}</span>
                 <div class="clock">
                     <div class='second-hand'>I</div>
                 </div>

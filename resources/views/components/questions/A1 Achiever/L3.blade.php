@@ -29,8 +29,14 @@
             </ol>
             
             <ol class="list-exercise d-flex justify-content-center">
-                <li class="mx-3"><select disabled name="A1_Achiever:L3[1]">
+                <li class="mx-3"><select disabled>
                     <option selected>Shopping-mall</option>
+                </select></li>
+                <li class="mx-3"><select name="A1_Achiever:L3[1]">
+                    <option disabled selected>Shopping-mall</option>
+                    <option>Coffee</option>
+                    <option>Bank</option>
+                    <option>Bus Station</option>
                 </select></li>
                 <li class="mx-3"><select name="A1_Achiever:L3[2]">
                     <option disabled selected>Shopping-mall</option>
@@ -39,12 +45,6 @@
                     <option>Bus Station</option>
                 </select></li>
                 <li class="mx-3"><select name="A1_Achiever:L3[3]">
-                    <option disabled selected>Shopping-mall</option>
-                    <option>Coffee</option>
-                    <option>Bank</option>
-                    <option>Bus Station</option>
-                </select></li>
-                <li class="mx-3"><select name="A1_Achiever:L3[4]">
                     <option disabled selected>Shopping-mall</option>
                     <option>Coffee</option>
                     <option>Bank</option>
