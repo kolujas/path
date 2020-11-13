@@ -129,7 +129,7 @@ select[disabled]{
         <select disabled>
             <option disabled selected>Green</option>
         </select>
-        <select name="A1_Access:W1[7]">
+        <select name="A1_Access:W1[4]">
             <option disabled selected value=""></option>
             <option disabled>Green</option>
             <option value="Red">Red</option>

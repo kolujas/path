@@ -130,13 +130,13 @@
         </header>
         <main>
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> What are Katya’s problems?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['B1_Progress:L2'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Progress:L2'][1] }}</mark></p>
 
             <p style="padding: 0 4rem; color: #000;"><b>b.</b> What are Martha’s solutions?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['B1_Progress:L2'][2] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Progress:L2'][2] }}</mark></p>
 
             <p style="padding: 0 4rem; color: #000;"><b>c.</b> Who wins the discussion? Explain your answer</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['B1_Progress:L2'][2] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Progress:L2'][2] }}</mark></p>
         </main>
     </section>
 
@@ -145,7 +145,7 @@
             <h3 style="padding-top: 2rem;">3. Listen to what happened to Lee. How do you think the story ends?</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['B1_Progress:L3'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Progress:L3'][1] }}</mark></p>
         </main>
     </section>
 @endsection

@@ -117,11 +117,11 @@
         </header>
         <main>
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> In your own words, explain what the woman thinks about walking.</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Elementary:L2'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L2'][1] }}</mark></p>
             <p style="padding: 0 4rem; color: #000;"><b>b.</b> In your own words, explain what the man thinks about cycling.</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Elementary:L2'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L2'][1] }}</mark></p>
             <p style="padding: 0 4rem; color: #000;"><b>c.</b> Who do you agree with the most? Give reasons for your answer.</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Elementary:L2'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L2'][1] }}</mark></p>
         </main>
     </section>
 
@@ -152,9 +152,9 @@
                 @endif
             </p>
             <p style="padding: 0 4rem; color: #000;"><b>b.</b> How can you get more information about what food is available?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Elementary:L3']['1b'] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L3']['1b'] }}</mark></p>
             <p style="padding: 0 4rem; color: #000;"><b>c.</b> You have USD100 in cash. You have a debit card in your hand luggage, which is in the locker above your head. Do you need to do anything?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Elementary:L3']['1c'] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L3']['1c'] }}</mark></p>
             
             <h4 style="color: #014969;">2. You are on a train when you hear an announcement:</h4>
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> How late is the train going to be?</p>
@@ -194,7 +194,7 @@
                 @endif
             </p>
             <p style="padding: 0 4rem; color: #000;"><b>c.</b> You have very heavy bags. Will these be a problem at Manchester station? Give the reason.</p>
-            <p style="padding: 0 4rem; color: #000; margin-bottom: 2rem;"><mark>{!! $answers['A2_Elementary:L3']['2c'] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000; margin-bottom: 2rem;"><mark>{{ $answers['A2_Elementary:L3']['2c'] }}</mark></p>
 
             <h4 style="color: #014969;">3. You are in a taxi. The driver makes an announcement:</h4>
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> Why is the city centre closed?</p>
@@ -216,7 +216,7 @@
                 @endif
             </p>
             <p style="padding: 0 4rem; color: #000;"><b>b.</b> You have a job interview at 1pm. Do you need to do anything?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Elementary:L3']['3b'] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L3']['3b'] }}</mark></p>
             <p style="padding: 0 4rem; color: #000;"><b>c.</b> You have £20 GBP. Is this enough money to pay the taxi?</p>
             <p style="color: #0091B7; padding: 0 4rem;">
                 @if (isset($answers['A2_Elementary:L3']['3c']) && $answers['A2_Elementary:L3']['3c'] == 'Yes')

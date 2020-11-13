@@ -25,9 +25,9 @@
         </header>
         <main>
             <p style="padding: 0 4rem; color: #000;">a. Safe When I go on holiday, I usually travel by plane because it's safer than other transports.</p>
-            <p style="padding: 0 4rem; color: #000;">b. Exciting <mark>{!! $answers['A2_Preliminary:W1A'][1] !!}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">c. Hot <mark>{!! $answers['A2_Preliminary:W1A'][2] !!}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">d. Bad <mark>{!! $answers['A2_Preliminary:W1A'][3] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">b. Exciting <mark>{{ $answers['A2_Preliminary:W1A'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">c. Hot <mark>{{ $answers['A2_Preliminary:W1A'][2] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">d. Bad <mark>{{ $answers['A2_Preliminary:W1A'][3] }}</mark></p>
         </main>
     </section>
 
@@ -36,7 +36,7 @@
             <h3 style="padding-top: 2rem;">1.b. What did you do on your last holiday?</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Preliminary:W1B'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Preliminary:W1B'][1] }}</mark></p>
         </main>
     </section>
 
@@ -47,9 +47,9 @@
             <h3 style="padding-top: 2rem;">2. Write about things you must, can’t and don’t have to do when you are in an exam.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;">a. I must <mark>{!! $answers['A2_Preliminary:W2'][1] !!}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">b. I can’t <mark>{!! $answers['A2_Preliminary:W2'][2] !!}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">c. I don’t have to <mark>{!! $answers['A2_Preliminary:W2'][3] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">a. I must <mark>{{ $answers['A2_Preliminary:W2'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">b. I can’t <mark>{{ $answers['A2_Preliminary:W2'][2] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;">c. I don’t have to <mark>{{ $answers['A2_Preliminary:W2'][3] }}</mark></p>
         </main>
     </section>
 
@@ -58,7 +58,7 @@
             <h3 style="padding-top: 2rem;">3. Explain <mark>one</mark> of the following:</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Preliminary:W3'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Preliminary:W3'][1] }}</mark></p>
         </main>
     </section>
 
@@ -83,7 +83,7 @@
             <h3 style="padding-top: 2rem;">5. Write about a time when you saw, or did, something amazing.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['A2_Preliminary:W5'][1] !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Preliminary:W5'][1] }}</mark></p>
         </main>
     </section>
 @endsection

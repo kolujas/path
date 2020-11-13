@@ -101,19 +101,19 @@
                         <div class="row justify-content-center">
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/A1-ACCESS-W-2.3.png" class="img-fluid utiles" alt="image-one-question-one">
-                                <div class="card-body mx-auto pb-0" id="D">
+                                <div class="card-body mx-auto" id="D">
                                     d
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/A1-ACCESS-W-2.4.png" class="img-fluid utiles" alt="image-one-question-one">
-                                <div class="card-body mx-auto pb-0" id="E">
+                                <div class="card-body mx-auto" id="E">
                                     e
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/A1-ACCESS-W-5.png" class="img-fluid utiles" alt="image-one-question-one">
-                                <div class="card-body mx-auto pb-0" id="F">
+                                <div class="card-body mx-auto" id="F">
                                     f
                                 </div>
                             </div>

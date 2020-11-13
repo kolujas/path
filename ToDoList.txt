@@ -22,7 +22,7 @@
 </p>
 
 <p style="padding: 0 4rem; color: #000;">QUESTION</p>
-<p style="padding: 0 4rem; color: #000;"><mark>{!! $answers['NAME'][EXERICSE] !!}</mark></p>
+<p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['NAME'][EXERICSE] }}</mark></p>
 
 <table style="margin: auto; border: 1px solid #ccc;">
     <thead>
