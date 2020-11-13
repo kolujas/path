@@ -858,6 +858,7 @@ select {
 
     .B1_Progress-L #dropdown-progress-listening-2 #identadote-3{
         text-indent: 24.5rem;
+        padding: 0;
     }
 
     /* progress writing */
