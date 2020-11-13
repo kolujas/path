@@ -68,11 +68,11 @@
             <h3 style="padding-top: 2rem;">3. Where Charles lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers<mark>Two are done for you</mark>.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;">fis<mark>{{ $answers['A1_Entry:W3'][1] }}</mark></p>
-            <p style="padding: 0 4rem; color: #000;">m<mark>{{ $answers['A1_Entry:W3'][2] }}</mark>nk<mark>{ $answers['A1_Entry:W3'][3] }</mark>y</p>
-            <p style="padding: 0 4rem; color: #000;">t<mark>{{ $answers['A1_Entry:W3'][4] }}</mark>g<mark>{ $answers['A1_Entry:W3'][5] }</mark>r</p>
-            <p style="padding: 0 4rem; color: #000;">b<mark>{{ $answers['A1_Entry:W3'][6] }}</mark><mark>{ $answers['A1_Entry:W3'][7] }</mark>d</p>
-            <p style="padding: 0 4rem; color: #000;">p<mark>{{ $answers['A1_Entry:W3'][8] }}</mark>t</p>
+            <p style="padding: 0 4rem; color: #000;">fish</p>
+            <p style="padding: 0 4rem; color: #000;">m<mark>{{ $answers['A1_Entry:W3'][1] }}</mark>nk<mark>{ $answers['A1_Entry:W3'][2] }</mark>y</p>
+            <p style="padding: 0 4rem; color: #000;">t<mark>{{ $answers['A1_Entry:W3'][3] }}</mark>g<mark>{ $answers['A1_Entry:W3'][4] }</mark>r</p>
+            <p style="padding: 0 4rem; color: #000;">b<mark>{{ $answers['A1_Entry:W3'][5] }}</mark><mark>{ $answers['A1_Entry:W3'][6] }</mark>d</p>
+            <p style="padding: 0 4rem; color: #000;">p<mark>{{ $answers['A1_Entry:W3'][7] }}</mark>t</p>
         </main>
     </section>
 
