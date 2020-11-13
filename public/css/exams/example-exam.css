@@ -126,6 +126,11 @@ body {
     color: var(--color-two);
 }
 
+/* ? modules */
+.module-button {
+    white-space: nowrap;
+}
+
 /* ? A1 Entry Listening */
 
 /* ? A1 Entry Writing */
