@@ -31,7 +31,7 @@
 @section('main')
     <section class="col-12 rules-container">
         <main class="rules-box">
-            <form id="rules-form" action="/auth/exam/{{$evaluation->exam->id_exam}}" method="post" enctype="multipart/form-data">
+            <form id="rules-form" action="/auth/exam/{{$evaluation->id_evaluation}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="rules-text bg-white p-4">
                     <p class="h3 rules-rem text-left mb-4">Remember:</p>
