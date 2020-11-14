@@ -103,7 +103,11 @@
             if($now > $end_time){
                 print_r('Now: ' . $now);
                 print_r('<br>');
-                print_r('End time: ' . $end_time);
+                print_r('End time: ' . "$years-$months-$days $hours:$minutes:$seconds");
+                print_r('Scheduled date time: ' . $evaluation->exam->scheduled_date_time);
+                foreach ($candidate->modules() as $module) {
+                    print_r('Module time: ' . $module->time);
+                }
                 die();
                 $request->session()->put('error', [
                     'code' => 403,
