@@ -25,7 +25,7 @@
             if($now < $evaluation->exam->scheduled_date_time){
                 print_r('Now: ' . $now);
                 print_r('<br>');
-                print_r('Scheduled date time: ' . $evaluation->exam->scheduled_date_time);
+                print_r('Scheduled date time: ' . Carbon::parse($evaluation->exam->scheduled_date_time)->toDateTimeString());
                 die();
                 $request->session()->put('error', [
                     'code' => 403,
