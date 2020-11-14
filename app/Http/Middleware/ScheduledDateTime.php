@@ -22,7 +22,7 @@
 
             $now = Carbon::now()->toDateTimeString();
             
-            if($now < $evaluation->exam->scheduled_date_time){
+            if($now < Carbon::parse($evaluation->exam->scheduled_date_time)->toDateTimeString()){
                 print_r('Now: ' . $now);
                 print_r('<br>');
                 print_r('Scheduled date time: ' . Carbon::parse($evaluation->exam->scheduled_date_time)->toDateTimeString());
