@@ -39,13 +39,24 @@
             }
             $hours = intval(explode(':', $time)[0]);
             $minutes = intval(explode(':', $time)[1]);
+            $seconds = intval(explode(':', $time)[1]);
 
             foreach ($candidate->modules() as $module) {
                 $module_time = explode(':', $module->time);
                 $hours += intval($module_time[0]);
                 $minutes += intval($module_time[1]);
+                $seconds += intval($module_time[2]);
             }
             
+            if($length = intval($seconds / 60)){
+                $seconds = $seconds - (60 * $length);
+                for ($i=1; $i <= $length; $i++) { 
+                    $minutes++;
+                }
+            }
+            if($seconds < 10){
+                $seconds = "0$seconds";
+            }
             if($length = intval($minutes / 60)){
                 $minutes = $minutes - (60 * $length);
                 for ($i=1; $i <= $length; $i++) { 
@@ -88,13 +99,13 @@
             if($months < 10){
                 $months = "0$months";
             }
-            $end_time = Carbon::parse("$years/$months/$days $hours:$minutes:00")->toDateTimeString();
+            $end_time = Carbon::parse("$years/$months/$days $hours:$minutes:$seconds")->toDateTimeString();
             
             // if(){
 
             // }
             print_r($now);
-            print_r($request->route()->getPath());
+            print_r($request->route());
             // print_r('<br>');
             // print_r($end_time);
             die();
