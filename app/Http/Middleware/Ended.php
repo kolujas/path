@@ -23,7 +23,6 @@
 
             $now = Carbon::now()->toDateTimeString();
 
-
             $date = explode(' ', $evaluation->exam->scheduled_date_time)[0];
             $time = explode(' ', $evaluation->exam->scheduled_date_time)[1];
             
@@ -101,15 +100,11 @@
             }
             $end_time = Carbon::parse("$years/$months/$days $hours:$minutes:$seconds")->toDateTimeString();
             
-            // if(){
-
-            // }
-            print_r($now);
-            print_r($request->route()->getName());
-            // print_r('<br>');
-            // print_r($end_time);
-            die();
             if($now > $end_time){
+                print_r('Now: ' . $now);
+                print_r('<br>');
+                print_r('End time: ' . $end_time);
+                die();
                 $request->session()->put('error', [
                     'code' => 403,
                     'message' => 'Exam ended',
