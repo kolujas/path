@@ -65,7 +65,7 @@
         public function auth(Request $request, $id_evaluation){
             $input = (object)$request->input();
             $validator = Validator::make($request->all(), Exam::$validation['auth']['rules'], Exam::$validation['auth']['messages']['en']);
-            dd($id_evaluation);
+            
             if($validator->fails()){
                 return redirect("/exam/$id_evaluation/rules")->withErrors($validator)->withInput();
             }
