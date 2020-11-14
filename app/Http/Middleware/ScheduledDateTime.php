@@ -23,11 +23,15 @@
             $now = Carbon::now()->toDateTimeString();
             
             if($now < $evaluation->exam->scheduled_date_time){
+                print_r('Now: ' . $now);
+                print_r('<br>');
+                print_r('Scheduled date time: ' . $evaluation->exam->scheduled_date_time);
+                die();
                 $request->session()->put('error', [
                     'code' => 403,
                     'message' => 'Exam did not start.',
                 ]);
-                return redirect("/exam/$evaluation->id_exam/rules");
+                return redirect("/exam/$evaluation->id_evaluation/rules");
             }
             
             return $next($request);
