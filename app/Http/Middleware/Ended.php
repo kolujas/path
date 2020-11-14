@@ -101,6 +101,19 @@
             $end_time = Carbon::parse("$years/$months/$days $hours:$minutes:$seconds")->toDateTimeString();
             
             if($now > $end_time){
+                print_r('Exam is: ' . $evaluation->exam->name);
+                print_r('<br>');
+                print_r('Now: ' . $now);
+                print_r('<br>');
+                print_r('End time: ' . "$years-$months-$days $hours:$minutes:$seconds");
+                print_r('<br>');
+                print_r('Scheduled date time: ' . $evaluation->exam->scheduled_date_time);
+                print_r('<br>');
+                foreach ($candidate->modules() as $module) {
+                    print_r('Module time: ' . $module->time);
+                    print_r('<br>');
+                }
+                die();
                 $request->session()->put('error', [
                     'code' => 403,
                     'message' => 'Exam ended',
