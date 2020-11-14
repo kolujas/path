@@ -90,10 +90,14 @@
             }
             $end_time = Carbon::parse("$years/$months/$days $hours:$minutes:00")->toDateTimeString();
             
-            // print_r($now);
+            // if(){
+
+            // }
+            print_r($now);
+            print_r($request->route()->getPath());
             // print_r('<br>');
             // print_r($end_time);
-            // die();
+            die();
             if($now > $end_time){
                 $request->session()->put('error', [
                     'code' => 403,
