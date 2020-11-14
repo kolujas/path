@@ -67,6 +67,7 @@
             $validator = Validator::make($request->all(), Exam::$validation['auth']['rules'], Exam::$validation['auth']['messages']['en']);
             
             if($validator->fails()){
+                dd($validator->errors());
                 return redirect("/exam/$id_evaluation/rules")->withErrors($validator)->withInput();
             }
 
