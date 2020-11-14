@@ -105,7 +105,7 @@
 
             // }
             print_r($now);
-            print_r($request->route());
+            print_r($request->route()->getName());
             // print_r('<br>');
             // print_r($end_time);
             die();
