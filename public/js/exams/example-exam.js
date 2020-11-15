@@ -326,7 +326,10 @@ function tinier(scheduledTime){
 function addTime(scheduled_date_time, timeToAdd){
     let hours = parseInt(scheduled_date_time.split(' ')[1].split(':')[0]);
     let minutes = parseInt(scheduled_date_time.split(' ')[1].split(':')[1]);
-    let seconds = parseInt(scheduled_date_time.split(' ')[1].split(':')[2]);
+    let seconds = 0;
+    if (parseInt(scheduled_date_time.split(' ')[1].split(':')[2])) {
+        seconds = parseInt(scheduled_date_time.split(' ')[1].split(':')[2]);
+    }
     let hoursToAdd = parseInt(timeToAdd.split(':')[0]);
     let minutesToAdd = parseInt(timeToAdd.split(':')[1]);
     let secondsToAdd = parseInt(timeToAdd.split(':')[2]);
@@ -394,7 +397,7 @@ function setTimer(module = undefined, tab = undefined){
 
     hours = parseInt(time.split(':')[0]) + parseInt(module.time.split(':')[0]);
     minutes = parseInt(time.split(':')[1]) + parseInt(module.time.split(':')[1]);
-    if (time.split(':')[2]) {
+    if (parseInt(time.split(':')[2])) {
         seconds = parseInt(time.split(':')[2]) + parseInt(module.time.split(':')[2]);
     } else {
         seconds = parseInt(module.time.split(':')[2]);
