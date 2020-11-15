@@ -1,3 +1,5 @@
+import { FetchServiceProvider } from "./providers/FetchServiceProvider.js";
+
 /**
  * * CountDown makes an excellent count down.
  * @export
@@ -31,6 +33,7 @@ export class CountDown{
     }){
         this.setProperties(properties);
         this.setEvents(events);
+        this.getCurrentTime();
         this.makeInterval();
     }
 
@@ -129,8 +132,7 @@ export class CountDown{
     makeInterval(){
         let instance = this;
         this.interval = setInterval(function(){
-            let now = new Date().getTime();
-            let distance = instance.properties.scheduled_date_time - now;
+            let distance = instance.properties.scheduled_date_time - (new Date().getTime() + instance.difference);
             instance.days = 0;
             instance.hours = 0;
             instance.minutes = 0;
@@ -177,5 +179,12 @@ export class CountDown{
      */
     stop(){
         clearInterval(this.interval);
+    }
+
+    async getCurrentTime(){
+        let fetchprovider = await FetchServiceProvider.getData(`/api/server/time`);
+        let serverTime = new Date(fetchprovider.getResponse('data').now).getTime();
+        let clientTime = new Date().getTime();
+        this.difference = serverTime - clientTime;
     }
 }

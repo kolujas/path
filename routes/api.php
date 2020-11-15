@@ -3,6 +3,7 @@
     use Illuminate\Support\Facades\Route;
 
     Route::middleware('api')->group(function(){
+        Route::get('/server/time', 'API\ServerController@currentTime')->name('server.currentTime');
     /** 
      * ! AuthController
      */
