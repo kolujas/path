@@ -394,10 +394,13 @@ function setTimer(module = undefined, tab = undefined){
 
     hours = parseInt(time.split(':')[0]) + parseInt(module.time.split(':')[0]);
     minutes = parseInt(time.split(':')[1]) + parseInt(module.time.split(':')[1]);
-    seconds = parseInt(time.split(':')[2]) + parseInt(module.time.split(':')[2]);
+    if (time.split(':')[2]) {
+        seconds = parseInt(time.split(':')[2]) + parseInt(module.time.split(':')[2]);
+    } else {
+        seconds = parseInt(module.time.split(':')[2]);
+    }
 
     let full_time = parseTime(`${years}-${months}-${days} ${hours}:${minutes}:${seconds}`);
-
     console.log(full_time);
 
     let countDown = new CountDown({
