@@ -398,6 +398,8 @@ function setTimer(module = undefined, tab = undefined){
 
     let full_time = parseTime(`${years}-${months}-${days} ${hours}:${minutes}:${seconds}`);
 
+    console.log(full_time);
+
     let countDown = new CountDown({
         scheduled_date_time: full_time,
         timer: {
@@ -530,7 +532,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
                 strikesInput.value = 0;        
             }
             if(strikesInput.value >= 1){
-                modalStrikesMessage.innerHTML = "Tu mensaje ha sido marcado";
+                modalStrikesMessage.innerHTML = "Tu examen ha sido marcado";
                 $('.modal-strikes').modal();
             }else{
                 strikesInput.value++;
