@@ -23,10 +23,6 @@
             $now = Carbon::now()->toDateTimeString();
             
             if($now < Carbon::parse($evaluation->exam->scheduled_date_time)->toDateTimeString()){
-                print_r('Now: ' . $now);
-                print_r('<br>');
-                print_r('Scheduled date time: ' . Carbon::parse($evaluation->exam->scheduled_date_time)->toDateTimeString());
-                die();
                 $request->session()->put('error', [
                     'code' => 403,
                     'message' => 'Exam did not start.',
