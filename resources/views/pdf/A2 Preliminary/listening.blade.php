@@ -21,7 +21,7 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">1. Listen to comparasions between 3 groups of pictures: A, B and C, then choose the right name or number. <mark>One has been done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">1. Listen to comparisons between 3 groups of pictures: A, B and C, then choose the right name or number. <mark>One has been done for you</mark>.</h3>
         </header>
         <main>
             <p style="color: #0091B7; padding: 0 4rem;">

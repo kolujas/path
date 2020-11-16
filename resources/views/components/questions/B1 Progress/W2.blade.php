@@ -20,15 +20,15 @@
         <div class="mb-5">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
                 <label for="identeado-1"  class="indent">I wish</label>
-                <textarea id="identeado-1" name="B1_Progress:W2[1]" class="pl-2"></textarea>
+                <textarea id="identeado-1" name="B1_Progress:W2[1]" class="px-2"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
                 <label for="identeado-2"  class="indent">I hope</label>
-                <textarea id="identeado-2" name="B1_Progress:W2[2]" class="pl-2 indent-two"></textarea>
+                <textarea id="identeado-2" name="B1_Progress:W2[2]" class="px-2 indent-two"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
                 <label for="identeado-3"  class="indent">I don’t expect</label>
-                <textarea id="identeado-3" name="B1_Progress:W2[3]" class="pl-2 indent-two"></textarea>
+                <textarea id="identeado-3" name="B1_Progress:W2[3]" class="px-2 indent-two"></textarea>
             </div>
         </div>
     </main>

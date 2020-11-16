@@ -19,7 +19,7 @@
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
             <label for="identeado-police"  class="indent">I was sitting in a café and overheard a conversation between a man and a woman. First the woman asked the man why he hadn’t brought the money. Then he replied… </label>
-            <textarea id="identeado-police" name="B1_Progress:W3[1]"class="pl-2"></textarea>
+            <textarea id="identeado-police" name="B1_Progress:W3[1]"class="px-2"></textarea>
         </div>        
     </main>
 </section>
