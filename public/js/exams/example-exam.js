@@ -584,6 +584,9 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     confirmButton.addEventListener('click', function(e){
         e.preventDefault();
         if(submitsExamButtons[0].dataset.module >= evaluation.exam.modules.length){
+            if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
+                LocalStorageServiceProvider.removeData('Path_Exam_Module');
+            }
             form.submit();
         }else{
             nextModule(tab);
@@ -631,6 +634,17 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     setTimeIntervalAutoSave();
 
     if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
-        nextModule(tab, LocalStorageServiceProvider.getData('Path_Exam_Module').data);
+        let module = LocalStorageServiceProvider.getData('Path_Exam_Module').data;
+        let found = false
+        for (const currentModule of evaluation.exam.modules) {
+            if (module == `${currentModule.folder.replace(/ /, '_')}-${currentModule.name}`) {
+                found = true;
+            }
+        }
+        if (found) {
+            nextModule(tab, module);
+        } else {
+            LocalStorageServiceProvider.removeData('Path_Exam_Module');
+        }
     }
 });

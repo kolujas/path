@@ -23,13 +23,13 @@
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
             <p class="complete col-12 mb-4"><b>a.</b> Abigail, Charlie and Julian are the new...</p>
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center">
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[1]" value="...Sales Team">...Sales Team.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[1]" value="...Zoom Team">...Zoom Team.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[1]" value="...Marketing Team">...Marketing Team.</label>
                 </li>
             </ol>
@@ -38,13 +38,13 @@
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
             <p class="complete col-12 mb-4"><b>b.</b> Charlie has been with the company for...</p>
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center">
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[2]" value="...two years">...two years.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[2]" value="...one week">...one week.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[2]" value="...two weeks">...two weeks.</label>
                 </li>
             </ol>
@@ -53,13 +53,13 @@
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
             <p class="complete col-12 mb-4"><b>c.</b> In her spare time, Charlie...</p>
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center">
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[3]" value="...only watches TV">...only watches TV.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[3]" value="...is only interested in keeping fit">...is only interested in keeping fit.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[3]" value="...enjoys a mixture of keeping fit and relaxing">...enjoys a mixture of keeping fit and relaxing.</label>
                 </li>
             </ol>
@@ -68,13 +68,13 @@
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
             <p class="complete col-12 mb-4"><b>d.</b> Julian has been with the company...</p>
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center">
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[4]" value="...longer than Charlie">...longer than Charlie.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[4]" value="...less time than Charlie">...less time than Charlie.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[4]" value="...for the same amount of time as Charlie">...for the same amount of time as Charlie.</label>
                 </li>
             </ol>
@@ -83,13 +83,13 @@
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
             <p class="complete col-12 mb-4"><b>e.</b> Abigail is the...</p>
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center">
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[5]" value="...Head of Netflix">...Head of Netflix.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[5]" value="...Head of Marketing">...Head of Marketing.</label>
                 </li>
-                <li class="inline mx-lg-2"><label class="options">
+                <li class="inline mx-lg-2"><label class="options p-2">
                     <input type="radio" class="d-none" name="B1_Progress:L1[5]" value="...Marketing Team Leader">...Marketing Team Leader.</label>
                 </li>
             </ol>

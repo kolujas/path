@@ -143,4 +143,23 @@ export class LocalStorageServiceProvider{
             console.error('The "name" attribute is required');
         }
     }
+
+    /**
+     * * Remove a data from LocalStorage.
+     * @static
+     * @param {string} name - Name of the data to check.
+     * @returns
+     * @memberof LocalStorageServiceProvider
+     */
+    static removeData(name = undefined){
+        if(name != undefined){
+            if(localStorage.removeItem(name) !== null){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            console.error('The "name" attribute is required');
+        }
+    }
 }

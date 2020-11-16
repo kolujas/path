@@ -2,6 +2,7 @@ import { Validation as ValidationJS } from "../../submodules/ValidationJS/js/Val
 import { InputFileMaker as InputFileMakerJS } from "../../submodules/InputFileMakerJS/js/InputFileMaker.js";
 import { CountDown } from "../CountDown.js";
 import { Notification as NotificationJS } from "../../submodules/NotificationJS/js/Notification.js";
+import { LocalStorageServiceProvider } from "../providers/LocalStorageServiceProvider.js";
 
 function addDots(){
     let timer = document.querySelector('.timer');
@@ -120,4 +121,8 @@ document.addEventListener('DOMContentLoaded', function(e){
     let validation = new ValidationJS({
         id: 'rules-form',
     }, rules, messages);
+
+    if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
+        LocalStorageServiceProvider.removeData('Path_Exam_Module');
+    }
 });
