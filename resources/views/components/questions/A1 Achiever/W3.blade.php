@@ -21,11 +21,11 @@
                 <img class="img-fluid coffee" src="/img/recursos/cup.png" alt="Coffee">
             </div>
             
-            <p class="complete col-12 mb-4"><b>a.</b> Susana: <input name="A1_Achiever:W3[1]" class="input input-long" type="text">have a cup of tea in the morning.</p>
-            <p class="complete col-12 mb-4"><b>b.</b> Alicia: <input name="A1_Achiever:W3[2]" class="input input-long" type="text">drink tea. I hate it!</p>
-            <p class="complete col-12 mb-4"><b>c.</b> Luis: <input name="A1_Achiever:W3[3]" class="input input-long" type="text">drink tea with breakfast.</p>
-            <p class="complete col-12 mb-4"><b>d.</b> Paula: <input name="A1_Achiever:W3[4]" class="input input-long" type="text">drink tea. I prefer coffee.</p>
-            <p class="complete col-12 mb-4"><b>e.</b> Juan: <input name="A1_Achiever:W3[5]" class="input input-long" type="text">have tea before going to school.</p>
+            <p class="complete col-12 mb-4"><b>a.</b> Susana: I<input name="A1_Achiever:W3[1]" class="input input-long" type="text">have a cup of tea in the morning.</p>
+            <p class="complete col-12 mb-4"><b>b.</b> Alicia: I<input name="A1_Achiever:W3[2]" class="input input-long" type="text">drink tea. I hate it!</p>
+            <p class="complete col-12 mb-4"><b>c.</b> Luis: I<input name="A1_Achiever:W3[3]" class="input input-long" type="text">drink tea with breakfast.</p>
+            <p class="complete col-12 mb-4"><b>d.</b> Paula: I<input name="A1_Achiever:W3[4]" class="input input-long" type="text">drink tea. I prefer coffee.</p>
+            <p class="complete col-12 mb-4"><b>e.</b> Juan: I<input name="A1_Achiever:W3[5]" class="input input-long" type="text">have tea before going to school.</p>
         </div>
     </main>
 </section>

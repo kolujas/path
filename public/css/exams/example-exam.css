@@ -261,6 +261,12 @@ body {
     text-indent: 17rem;
 }
 
+.cielos{
+    height: 125px;
+    width: 180px;
+    object-fit: cover;
+}
+
 /* ? A2 Preliminary Listening */
 .A2_Preliminary-L #dropdown-preliminary-listening-1.opened .dropdown-menu-content {
     max-height: 120vh;

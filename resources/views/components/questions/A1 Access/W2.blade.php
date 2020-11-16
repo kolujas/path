@@ -128,11 +128,11 @@
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <span class="indent">...are good for your body?</span>
-                <textarea name="A1_Access:W2B[1]" class="pl-2"></textarea>
+                <textarea name="A1_Access:W2B[1]" class="px-2"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <span class="indent">...are good for your brain?</span>
-                <textarea name="A1_Access:W2B[2]" class="pl-2"></textarea>
+                <textarea name="A1_Access:W2B[2]" class="px-2"></textarea>
             </div>
         </div>
     </main>

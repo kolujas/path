@@ -22,7 +22,7 @@
 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <textarea name="B1_Progress:L3[1]" class="pl-2"></textarea>
+                <textarea name="B1_Progress:L3[1]" class="px-2"></textarea>
             </div>
         </div>
     </main>

@@ -56,7 +56,7 @@
                                 type="file"
                                 name="ID"
                                 data-text="ID"
-                                data-notfound="Image not choose." title="Required">
+                                data-notfound="Please attach an image of your ID." title="Required">
                             @if($errors->has("ID"))
                                 <span class="support support-box support-ID hidden">{{ $errors->first("ID") }}</span>
                             @else
