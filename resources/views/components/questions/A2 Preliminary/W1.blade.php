@@ -21,11 +21,11 @@
             </div>
         </div>
 
-        <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
+        <div class="row d-flex justify-content-between py-4 px-2 px-md-3">
             <p class="complete col-12 mb-4"><b>a. Safe</b> When I go on holiday, I usually travel by plane because it's safer than other transports.</p>
-            <p class="complete col-12 mb-4"><b>b. Exciting</b><input name="A2_Preliminary:W1A[1]" class="input input-super-huge" type="text"></p>
-            <p class="complete col-12 mb-4"><b>c. Hot</b><input name="A2_Preliminary:W1A[2]" class="input input-super-huge" type="text"></p>
-            <p class="complete col-12 mb-4"><b>d. Bad</b><input name="A2_Preliminary:W1A[3]" class="input input-super-huge" type="text"></p>
+            <p class="complete col-12 mb-4 d-flex justify-content-between"><b>b. Exciting</b><input name="A2_Preliminary:W1A[1]" class="input input-super-huge text-left" type="text"></p>
+            <p class="complete col-12 mb-4 d-flex justify-content-between"><b>c. Hot</b><input name="A2_Preliminary:W1A[2]" class="input input-super-huge text-left" type="text"></p>
+            <p class="complete col-12 mb-4 d-flex justify-content-between"><b>d. Bad</b><input name="A2_Preliminary:W1A[3]" class="input input-super-huge text-left" type="text"></p>
         </div>
         
         <div class="dropdown-header px-0">

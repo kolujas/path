@@ -7,7 +7,7 @@
     </a>
     <main class="dropdown-menu-content three-question-container px-xl-4">
         <div class="row justify-content-md-between justify-content-lg-center py-4">
-            <ol class="info list-data col-10 mb-4 d-flex justify-content-start flex-wrap">
+            <ol class="info list-data col-10 mb-4 d-flex justify-content-start flex-wrap flex-direction-column">
                 <li class="mx-lg-2">a. How to make a cup of coffee.</li>
                 <li class="mx-lg-2">b. How to get to school or work from your house.</li>
                 <li class="mx-lg-2">c. Your morning routine</li>
