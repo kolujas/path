@@ -101,6 +101,10 @@
             $end_time = Carbon::parse("$years/$months/$days $hours:$minutes:$seconds")->toDateTimeString();
             
             if($now > $end_time){
+                // print_r($now);
+                // print_r(' - ');
+                // print_r($end_time);
+                // die();
                 $request->session()->put('error', [
                     'code' => 403,
                     'message' => 'Exam ended',

@@ -21,7 +21,7 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">1. Look at the table of colours and items clothing. Write the colours and clothing in the speech fields.<mark>Two have been done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">1. Look at the table of colours and items clothing. Write the colours and clothing in the speech bubbles.<mark>Two have been done for you</mark>.</h3>
         </header>
         <main>
             @if (isset($answers['A1_Access:W1']) && isset($answers['A1_Access:W1'][1]))
@@ -179,6 +179,20 @@
         </header>
         <main>
             <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A1_Access:W4'][1] }}</mark></p>
+        </main>
+    </section>
+
+    <section>
+        <header>
+            <h3 style="padding-top: 2rem;">5. Answer the questions below. you can use short answers, for example: <mark>No, I don't</mark>.</h3>
+        </header>
+        <main>
+            <p style="padding: 0 4rem; color: #000;"><b>a.</b> What is your favorite colour? <mark>{{ $answers['A1_Access:W5'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><b>b.</b> Can your see a tree at the moment? <mark>{{ $answers['A1_Access:W5'][2] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><b>c.</b> Where is the school? <mark>{{ $answers['A1_Access:W5'][3] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><b>d.</b> Do you like horror movies? <mark>{{ $answers['A1_Access:W5'][4] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><b>e.</b> Who is your best friend? <mark>{{ $answers['A1_Access:W5'][5] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><b>f.</b> How much is an empanada? <mark>{{ $answers['A1_Access:W5'][6] }}</mark></p>
         </main>
     </section>
 @endsection

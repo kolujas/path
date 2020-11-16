@@ -21,7 +21,7 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">1. You will hear three sentences, which describe three of the image below. Match each sentence to an image.<mark>Two are not used</mark>.</h3>
+            <h3 style="padding-top: 2rem;">1. You will hear three sentences, which describe three of the images below. Match each sentence to an image.<mark>Two are not used</mark>.</h3>
         </header>
         <main>
             <p style="color: #0091B7; padding: 0 4rem;">
@@ -115,7 +115,7 @@
         <main>
             <p style="padding: 0 4rem; color: #000;"><b class="mr-1">Lois:</b> <mark>{{ $answers['A1_Access:L3'][1] }}</mark> turn first. Rock! I win! Is it <mark>{{ $answers['A1_Access:L3'][2] }}</mark> turn now or <mark>{{ $answers['A1_Access:L3'][3] }}</mark> turn?</p>
             <p style="padding: 0 4rem; color: #000;"><b class="mr-1">Emma:</b> It's <mark>{{ $answers['A1_Access:L3'][4] }}</mark> turn because you won.</p>
-            <p style="padding: 0 4rem; color: #000;"><b class="mr-1">Lois:</b> Ok. Paper! Oh i lose. <mark>{{ $answers['A1_Access:L3'][5] }}</mark> turn.</p>
+            <p style="padding: 0 4rem; color: #000;"><b class="mr-1">Lois:</b> Ok. Paper! Oh I lose. <mark>{{ $answers['A1_Access:L3'][5] }}</mark> turn.</p>
         </main>
     </section>
 @endsection

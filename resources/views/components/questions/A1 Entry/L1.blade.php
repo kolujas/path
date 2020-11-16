@@ -1,6 +1,6 @@
 <section id="dropdown-entry-listening-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>1. Look at the table below. Listen to Anna talking about her family, and complete the spaces in the table. You can listen twice.<mark>One is done for you</mark>.</span>
+        <span>1. Look at the table below. Listen to Anna talking about her family, and complete the boxes in the table. You can listen twice.<mark>One answer is done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -25,9 +25,9 @@
                 <tr>
                     <th scope="col"></th>
                     <th scope="col">Me</th>
-                    <th scope="col" class="input-letters"><input name="A1_Entry:L1[3a]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1_Entry:L1[3b]" maxlength="1" class="input-small input position-relative last" type="text">ther</th>
-                    <th scope="col" class="input-letters"><input name="A1_Entry:L1[5a]" maxlength="1" class="input-small input position-relative input-underline" type="text"><input name="A1_Entry:L1[5b]" maxlength="1" class="input-small input position-relative last" type="text">ther</th>
-                    <th scope="col">sister</th>
+                    <th scope="col" class="input-letters"><input value="M" disabled maxlength="1" class="input-small input position-relative" type="text"><input value="o" disabled maxlength="1" class="input-small input position-relative last" type="text">ther</th>
+                    <th scope="col" class="input-letters"><input name="A1_Entry:L1[3a]" maxlength="1" class="input-small input position-relative input-underline" type="text"><input name="A1_Entry:L1[3b]" maxlength="1" class="input-small input position-relative last" type="text">ther</th>
+                    <th scope="col" class="input-letters"><input name="A1_Entry:L1[5a]" maxlength="1" class="input-small input position-relative input-underline" type="text"><input name="A1_Entry:L1[5b]" maxlength="1" class="input-small input position-relative last" type="text">ster</th>
                     <th scope="col" class="input-letters"><input name="A1_Entry:L1[7a]" maxlength="1" class="input-small input position-relative input-underline" type="text"><input name="A1_Entry:L1[7b]" maxlength="1" class="input-small input position-relative" type="text"><input name="A1_Entry:L1[7c]" maxlength="1" class="input-small input position-relative" type="text">ther</th>
                 </tr>
             </thead>

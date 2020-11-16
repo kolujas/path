@@ -17,7 +17,7 @@
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/A1-ACHIEVER-W-4.png" class="img-fluid cielos mx-auto" alt="image-one-question-one">
                 <div class="card-body mx-auto">
-                    <select clas="input-long" disabled>
+                    <select disabled>
                         <option selected>Sunny</option>
                     </select>
                 </div>
@@ -25,7 +25,7 @@
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/A1-ACHIEVER-W-4.2.png" class="img-fluid cielos mx-auto" alt="image-one-question-one">
                 <div class="card-body mx-auto">
-                    <select clas="input-long">
+                    <select name="A1_Achiever:W4A[1]">
                         <option disabled selected>Sunny</option>
                         <option>Cloudy</option>
                         <option>Windy</option>
@@ -36,7 +36,7 @@
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/A1-ACHIEVER-W-4.1.png" class="img-fluid cielos mx-auto" alt="image-one-question-one">
                 <div class="card-body mx-auto">
-                    <select clas="input-long">
+                    <select name="A1_Achiever:W4A[2]">
                         <option disabled selected>Sunny</option>
                         <option>Cloudy</option>
                         <option>Windy</option>
@@ -47,7 +47,7 @@
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/A1-ACHIEVER-W-4.3.jpg" class="img-fluid cielos mx-auto" alt="image-one-question-one">
                 <div class="card-body mx-auto">
-                    <select clas="input-long">
+                    <select name="A1_Achiever:W4A[3]">
                         <option disabled selected>Sunny</option>
                         <option>Cloudy</option>
                         <option>Windy</option>

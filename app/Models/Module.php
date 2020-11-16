@@ -9,21 +9,6 @@
          * @var array
          */
         static $array = [
-            // 1
-            'A1:L' => [
-                'name' => 'L',
-                'folder' => 'A1',
-                'file' => 'listening',
-                'time' => '00:15:00',
-                'questions' => 3,
-            ], 'A1:W' => [
-                'name' => 'W',
-                'folder' => 'A1',
-                'file' => 'writing',
-                'time' => '00:15:00',
-                'questions' => 6,
-            ],
-            // 2
             'A1 Entry:L' => [
                 'name' => 'L',
                 'folder' => 'A1 Entry',
@@ -37,7 +22,6 @@
                 'time' => '01:15:00',
                 'questions' => 5,
             ],
-            // 3
             'A1 Access:L' => [
                 'name' => 'L',
                 'folder' => 'A1 Access',
@@ -49,9 +33,8 @@
                 'folder' => 'A1 Access',
                 'file' => 'writing',
                 'time' => '01:15:00',
-                'questions' => 4,
+                'questions' => 5,
             ],
-            // 4
             'A1 Achiever:L' => [
                 'name' => 'L',
                 'folder' => 'A1 Achiever',
@@ -65,7 +48,6 @@
                 'time' => '01:15:00',
                 'questions' => 5,
             ],
-            // 5
             'A2 Preliminary:L' => [
                 'name' => 'L',
                 'folder' => 'A2 Preliminary',
@@ -79,7 +61,6 @@
                 'time' => '01:15:00',
                 'questions' => 5,
             ],
-            // 6
             'A2 Elementary:L' => [
                 'name' => 'L',
                 'folder' => 'A2 Elementary',
@@ -93,7 +74,6 @@
                 'time' => '01:45:00',
                 'questions' => 5,
             ],
-            // 7
             'B1 Progress:L' => [
                 'name' => 'L',
                 'folder' => 'B1 Progress',
@@ -107,7 +87,6 @@
                 'time' => '01:45:00',
                 'questions' => 5,
             ],
-            // 8
             'B2 Competency:L' => [
                 'name' => 'L',
                 'folder' => 'B2 Competency',

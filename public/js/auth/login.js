@@ -83,5 +83,9 @@ document.addEventListener('DOMContentLoaded', function(e){
         }));
     }
 
+    document.querySelector('form').action = "/login";
+    document.querySelector('button.form-submit').type = 'submit';
+    setFinishState();
+
     document.querySelector('button.form-submit').addEventListener('click', sendData);
 });

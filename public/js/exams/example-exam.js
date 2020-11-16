@@ -74,9 +74,9 @@ $(document).ready(function(){
 })();
 
 // ? Desactivar F5
-// $(document).on("keydown", function(e) {
-//     if ((e.which || e.keyCode) == 116) e.preventDefault();
-// });
+$(document).on("keydown", function(e) {
+    if ((e.which || e.keyCode) == 116) e.preventDefault();
+});
 
 // ! ESTO ESTABA ANTERIORMENTE, EN CASO DE QUE NO FUNCIONE IMPORTAR ÉSTO
 function disableF5(e) {
