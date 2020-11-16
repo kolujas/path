@@ -60,9 +60,17 @@ function createSeconds(seconds = undefined){
 }
 
 function current(data = undefined){
-    createHours(data.countdown.hours)
-    createMinutes(data.countdown.minutes)
-    createSeconds(data.countdown.seconds)
+    if (!isNaN(data.countdown.hours)) {
+        if (document.querySelector('.timer').classList.contains('text') && document.querySelector('.timer').classList.contains('text-two')) {
+            document.querySelector('.timer').classList.remove('text', 'text-two');
+        }
+        createHours(data.countdown.hours)
+        createMinutes(data.countdown.minutes)
+        createSeconds(data.countdown.seconds)
+    } else {
+        document.querySelector('.timer').innerHTML = 'Calculating...';
+        document.querySelector('.timer').classList.add('text', 'text-two');
+    }
 }
 
 function end(data = undefined){

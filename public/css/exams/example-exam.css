@@ -1050,7 +1050,7 @@ select {
     }
     
     .tab-menu .tabs .tab-menu-list .tab:nth-last-child(2) {
-        padding-right: calc((100% - 66.6666666667%) / 2 + 10rem);
+        padding-right: calc((100% - 66.6666666667%) / 2 + 20rem);
     }
 
     /* ? Entry writing */

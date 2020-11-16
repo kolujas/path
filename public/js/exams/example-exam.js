@@ -97,11 +97,16 @@ $('body').on('copy paste', 'textarea', function (e)
  * @param {Object} data Data to get from CountDown.
  */
 function updateSaveTimer(data = undefined){
-    if(document.querySelector('.save-button.countdown')){
+    if (!isNaN(data.countdown.seconds)) {
+        if(document.querySelector('.save-button.countdown')){
+            let timer = document.querySelector('.save-button .timer');
+            timer.innerHTML = `(${data.countdown.seconds})`;
+        }else{
+            data.countdown.stop();
+        }
+    } else {
         let timer = document.querySelector('.save-button .timer');
-        timer.innerHTML = `(${data.countdown.seconds})`;
-    }else{
-        data.countdown.stop();
+        timer.innerHTML = `in...`;
     }
 }
 
@@ -147,7 +152,11 @@ function parseSpaces(text){
  * @param {Object} data Data to get from CountDown.
  */
 function current(data = undefined){
-    document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name}-tab .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+    if (!isNaN(data.countdown.hours)) {
+        document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name}-tab .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+    } else {
+        document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name}-tab .time`).innerHTML = `Calculating...`;
+    }
 }
 
 /**
@@ -432,12 +441,23 @@ function setTimer(module = undefined, tab = undefined){
  * * Change TabMenu content.
  * @param {TabMenu} tab TabMenu.
  */
-function nextModule(tab){
+function nextModule(tab, module){
     let submitBtns = document.querySelectorAll('.submit-exam');
     let index;
     for (const btn of submitBtns) {
-        index = btn.dataset.module;
-        btn.dataset.module++;
+        if (module) {
+            let int = 0;
+            for (const currentModule of evaluation.exam.modules) {
+                if (`${currentModule.folder.replace(' ', '_')}-${currentModule.name}` == module) {
+                    break;
+                }
+                index = btn.dataset.module;
+                btn.dataset.module++;
+            }
+        } else {
+            index = btn.dataset.module;
+            btn.dataset.module++;
+        }
         if(btn.dataset.module >= evaluation.exam.modules.length){
             if(btn.children.length){
                 btn.children[0].innerHTML = 'Submit Exam';
@@ -452,7 +472,11 @@ function nextModule(tab){
             }
         }
     }
-    tab.open([`${evaluation.exam.modules[index].folder.replace(' ', '_')}-${evaluation.exam.modules[index].name}`], `${evaluation.exam.modules[index].folder.replace(' ', '_')}-${evaluation.exam.modules[index].name}`);
+    if (!module) {
+        module = `${evaluation.exam.modules[index].folder.replace(' ', '_')}-${evaluation.exam.modules[index].name}`;
+    }
+    LocalStorageServiceProvider.setData('Path_Exam_Module', module, true);
+    tab.open([module], module);
     setTimer(getModule(document.querySelectorAll('.module-button')[document.querySelector('.submit-exam').dataset.module - 1].id), tab);
 }
 
@@ -605,4 +629,8 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     saveButton.addEventListener('click', sendData);
 
     setTimeIntervalAutoSave();
+
+    if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
+        nextModule(tab, LocalStorageServiceProvider.getData('Path_Exam_Module').data);
+    }
 });
