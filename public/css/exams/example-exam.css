@@ -274,6 +274,14 @@ body {
     display: none;
 }
 
+.camping{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
 .A2_Preliminary-L #dropdown-preliminary-listening-3 .dropdown-menu-content{
     background: url("/img/recursos/whatsapp-bg.jpg");
 }
@@ -406,31 +414,31 @@ body {
 
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-1 {
-    text-indent: 5rem;
+    text-indent: 6.5rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
-    text-indent: 14.5rem;
+    text-indent: 16rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-3 {
-    text-indent: 5rem;
+    text-indent: 6.5rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-4 {
-    text-indent: 7.5rem;
+    text-indent: 9rem;
     padding-top: 2rem;
     height: 15rem;
 }
 
 .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5 {
-    text-indent: 4rem;
+    text-indent: 5rem;
     padding-top: 4rem;
     height: 15rem;
 }
@@ -922,27 +930,27 @@ select {
 
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-1 {
-        text-indent: 23.5rem;
+        text-indent: 25rem;
         padding-top: 0;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
-        text-indent: 35.5rem;
+        text-indent: 36.5rem;
         padding-top: 0;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-3 {
-        text-indent: 23rem;
+        text-indent: 24.5rem;
         padding-top: 0;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-4 {
-        text-indent: -0.2rem;
-        padding-top: 2rem;
+        text-indent: 31.5rem;
+        padding-top: 0;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5 {
-        text-indent: 4.5rem;
+        text-indent: 5rem;
         padding-top: 2rem;
         height: 15rem;
     }
@@ -1094,7 +1102,7 @@ select {
     /* * complete */
     .h5,
     .complete {
-        flex-basis: 56%;
+        flex-basis: 61%;
     }
 
     .svg-width{
@@ -1304,12 +1312,12 @@ select {
     /* competency listening */
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
-        text-indent: 7.5rem;
-        padding-top: 2rem;
+        text-indent: 36.5rem;
+        padding-top: 0;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5{
-        text-indent: 14rem;
+        text-indent: 1.5rem;
     }
 
     /* competency writing */
