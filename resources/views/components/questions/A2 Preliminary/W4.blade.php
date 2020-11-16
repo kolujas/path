@@ -11,12 +11,12 @@
         </div>
 
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
-            <p class="complete col-12 mb-4"><b>Question 1:</b> <input type="text" name="A2_Preliminary:W4[1]" class="input input-huge"></p>
-            <p class="complete col-12 mb-4"><b>Answer 1:</b> <input type="text" name="A2_Preliminary:W4[2]" class="input input-huge"></p>
-            <p class="complete col-12 mb-4"><b>Question 1:</b> <input type="text" name="A2_Preliminary:W4[3]" class="input input-huge"></p>
-            <p class="complete col-12 mb-4"><b>Answer 1:</b> <input type="text" name="A2_Preliminary:W4[4]" class="input input-huge"></p>
-            <p class="complete col-12 mb-4"><b>Question 1:</b> <input type="text" name="A2_Preliminary:W4[5]" class="input input-huge"></p>
-            <p class="complete col-12 mb-4"><b>Answer 1:</b> <input type="text" name="A2_Preliminary:W4[6]" class="input input-huge"></p>
+            <p class="complete col-12 mb-4"><b>Question 1:</b> <input type="text" name="A2_Preliminary:W4[1]" class="input input-huge text-left"></p>
+            <p class="complete col-12 mb-4"><b>Answer 1:</b> <input type="text" name="A2_Preliminary:W4[2]" class="input input-huge text-left"></p>
+            <p class="complete col-12 mb-4"><b>Question 1:</b> <input type="text" name="A2_Preliminary:W4[3]" class="input input-huge text-left"></p>
+            <p class="complete col-12 mb-4"><b>Answer 1:</b> <input type="text" name="A2_Preliminary:W4[4]" class="input input-huge text-left"></p>
+            <p class="complete col-12 mb-4"><b>Question 1:</b> <input type="text" name="A2_Preliminary:W4[5]" class="input input-huge text-left"></p>
+            <p class="complete col-12 mb-4"><b>Answer 1:</b> <input type="text" name="A2_Preliminary:W4[6]" class="input input-huge text-left"></p>
         </div>
     </main>
 </section>

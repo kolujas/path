@@ -40,7 +40,7 @@
             </ol>
             <p class="complete col-12 mb-4"><b>b.</b> You want to catch the 11:54 train to London. Will you miss the train?</p>
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center">
-                <li class="inline mx-lg-2"><label class="options"><input type="radio" class="d-none" name="A2_Elementary:L3[3a]" value="Yes">Yes</label></li>
+                <li class="inline mx-lg-2"><label class="options"><input type="radio" class="d-none" name="A2_Elementary:L3[2b]" value="Yes">Yes</label></li>
                 <li class="inline mx-lg-2"><label class="options"><input type="radio" class="d-none" name="A2_Elementary:L3[2b]" value="No">No</label></li>
                 <li class="inline mx-lg-2"><label class="options"><input type="radio" class="d-none" name="A2_Elementary:L3[2b]" value="You don't know">You don't know</label></li>
             </ol>
@@ -58,7 +58,7 @@
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center">
                 <li class="inline mx-lg-2"><label class="options"><input type="radio" class="d-none" name="A2_Elementary:L3[3c]" value="Yes">Yes</label></li>
                 <li class="inline mx-lg-2"><label class="options"><input type="radio" class="d-none" name="A2_Elementary:L3[3c]" value="No">No</label></li>
-                <li class="inline mx-lg-2"><label class="options"><input type="radio" class="d-none" name="A2_Elementary:L3[3c]" value="You don’t know">You don’t know</label></li>
+                <li class="inline mx-lg-2"><label class="options"><input type="radio" class="d-none" name="A2_Elementary:L3[3c]" value="You don't know">You don't know</label></li>
             </ol>
         </div>
     </main>

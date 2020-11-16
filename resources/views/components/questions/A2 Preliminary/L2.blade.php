@@ -22,7 +22,7 @@
 
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
             <p class="complete col-12 mb-4"><b>a.</b> Who did she go camping with? <input type="text" name="A2_Preliminary:L2[1]" class="input input-huge text-left"></p>
-            <p class="complete col-12 mb-4"><b>b.</b> How many tents did her father put up? <input type="text" name="A2_Preliminary:L2[2]" class="input input-huge"></p>
+            <p class="complete col-12 mb-4"><b>b.</b> How many tents did her father put up? <input type="text" name="A2_Preliminary:L2[2]" class="input input-huge text-left"></p>
             <p class="complete col-12 mb-4"><b>c.</b> What did her mother cook? <input type="text" name="A2_Preliminary:L2[3]" class="input input-huge text-left"></p>
             <p class="complete col-12 mb-4"><b>d.</b> How many days did the family spend camping? <input type="text" name="A2_Preliminary:L2[4]" class="input input-huge text-left"></p>
         </div>

@@ -40,7 +40,7 @@
         </main>
     </section>
 
-    <pagebrak />
+    <pagebreak />
 
     <section>
         <header>
@@ -62,7 +62,7 @@
         </main>
     </section>
 
-    <pagebrak />
+    <pagebreak />
 
     <section>
         <header>

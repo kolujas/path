@@ -136,7 +136,7 @@
             <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Progress:L2'][2] }}</mark></p>
 
             <p style="padding: 0 4rem; color: #000;"><b>c.</b> Who wins the discussion? Explain your answer</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Progress:L2'][2] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Progress:L2'][3] }}</mark></p>
         </main>
     </section>
 

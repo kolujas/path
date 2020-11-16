@@ -39,13 +39,13 @@
             <p class="complete col-12 mb-4"><b>b.</b> Charlie has been with the company for...</p>
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center">
                 <li class="inline mx-lg-2"><label class="options">
-                    <input type="radio" class="d-none" name="B1_Progress:L1[2]" value="...two years.">...two years.</label>
+                    <input type="radio" class="d-none" name="B1_Progress:L1[2]" value="...two years">...two years.</label>
                 </li>
                 <li class="inline mx-lg-2"><label class="options">
-                    <input type="radio" class="d-none" name="B1_Progress:L1[2]" value="...one week.">...one week.</label>
+                    <input type="radio" class="d-none" name="B1_Progress:L1[2]" value="...one week">...one week.</label>
                 </li>
                 <li class="inline mx-lg-2"><label class="options">
-                    <input type="radio" class="d-none" name="B1_Progress:L1[2]" value="...two weeks.">...two weeks.</label>
+                    <input type="radio" class="d-none" name="B1_Progress:L1[2]" value="...two weeks">...two weeks.</label>
                 </li>
             </ol>
         </div>

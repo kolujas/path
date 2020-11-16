@@ -38,9 +38,9 @@
         </header>
         <main>
             <p style="padding: 0 2rem;"><b class="mr-1">a.</b> When <mark>{{ $answers['A1_Achiever:W2'][1] }}</mark>?</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">b.</b> Why <mark>{{ $answers['A1_Achiever:W2'][1] }}</mark>?</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> Are you <mark>{{ $answers['A1_Achiever:W2'][2] }}</mark>?</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> How Many <mark>{{ $answers['A1_Achiever:W2'][3] }}</mark>?</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">b.</b> Why <mark>{{ $answers['A1_Achiever:W2'][2] }}</mark>?</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> Are you <mark>{{ $answers['A1_Achiever:W2'][3] }}</mark>?</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">d.</b> How Many <mark>{{ $answers['A1_Achiever:W2'][4] }}</mark>?</p>
         </main>
     </section>
 
@@ -51,11 +51,11 @@
             <h3 style="padding-top: 2rem;">3. Susana has 4 friends: Alicia, Luis, Paula and Juan. The table shows often the drink tea. Read each sentence a-e, then match the friend to the calendar. <mark>One is done for you</mark>.</h3>
         </header>
         <main>
-            <p style="padding: 0 2rem;"><b class="mr-1">a.</b> I <mark>{{ $answers['A1_Achiever:W3'][1] }}</mark> have a cup of tea in the morning.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">b.</b> I <mark>{{ $answers['A1_Achiever:W3'][1] }}</mark> drink tea. I hate it!</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> I <mark>{{ $answers['A1_Achiever:W3'][2] }}</mark> drink tea with breakfast.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> I <mark>{{ $answers['A1_Achiever:W3'][3] }}</mark> drink tea. I prefer coffe.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> I <mark>{{ $answers['A1_Achiever:W3'][5] }}</mark> have tea before going to school.</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">a.</b> Susana: <mark>{{ $answers['A1_Achiever:W3'][1] }}</mark> have a cup of tea in the morning.</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">b.</b> Alicia: <mark>{{ $answers['A1_Achiever:W3'][2] }}</mark> drink tea. I hate it!</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> Luis: <mark>{{ $answers['A1_Achiever:W3'][3] }}</mark> drink tea with breakfast.</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">d.</b> Paula: <mark>{{ $answers['A1_Achiever:W3'][4] }}</mark> drink tea. I prefer coffe.</p>
+            <p style="padding: 0 2rem;"><b class="mr-1">e</b> Juan: <mark>{{ $answers['A1_Achiever:W3'][5] }}</mark> have tea before going to school.</p>
         </main>
     </section>
 
@@ -64,21 +64,24 @@
             <h3 style="padding-top: 2rem;">4.a. Match the images with the words below. <mark>One is done for you</mark>.</h3>
         </header>
         <main>
-            @if (isset($answers['A1_Achiever:W4A']))
-                <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
-                    <li class="answers inline mx-lg-2">Sunny</li>
-                    <li class="answers crossed inline mx-lg-2"><mark>{{ $answers['A1_Achiever:W4A'][1] }}</mark></li>
-                    <li class="answers inline mx-lg-2"><mark>{{ $answers['A1_Achiever:W4A'][2] }}</mark></li>
-                    <li class="answers inline mx-lg-2"><mark>{{ $answers['A1_Achiever:W4A'][3] }}</mark></li>
-                </ol>
-            @else
-                <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
-                    <li class="answers inline mx-lg-2">Sunny</li>
-                    <li class="answers crossed inline mx-lg-2"><mark>null</mark></li>
-                    <li class="answers inline mx-lg-2"><mark>null</mark></li>
-                    <li class="answers inline mx-lg-2"><mark>null</mark></li>
-                </ol>
-            @endif
+            <p style="color: #0091B7; padding: 0 4rem;">
+                <span style="margin: .5rem 2rem;">Sunny</span>
+                @if (isset($answers['A1_Achiever:W4A'][1]))
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Achiever:W4A'][1]}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif
+                @if (isset($answers['A1_Achiever:W4A'][2]))
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Achiever:W4A'][2]}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif
+                @if (isset($answers['A1_Achiever:W4A'][3]))
+                    <span style="margin: .5rem 2rem;">{{$answers['A1_Achiever:W4A'][3]}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif
+            </p>
         </main>
     </section>
 

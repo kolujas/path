@@ -28,7 +28,7 @@
         <div class="row d-flex justify-content-center pb-4 px-2 px-md-3">
             <p class="complete col-12 mb-4"><b>Lois:</b> <input name="A1_Access:L3[1]" class="input input-medium" type="text"> turn first. Rock! I win! Is it <input name="A1_Access:L3[2]" class="input input-medium" type="text">turn now or <input name="A1_Access:L3[3]" class="input input-medium" type="text">turn?</p>
             <p class="complete col-12 mb-4"><b>Emma:</b> It's <input name="A1_Access:L3[4]" class="input input-medium" type="text"> turn because you won.</p>
-            <p class="complete col-12 mb-4"><b>Lois:</b> Ok. Paper! Oh i lose. <input name="A1_Access:L3[5]" class="input input-medium" type="text"> turn.</p>
+            <p class="complete col-12 mb-4"><b>Lois:</b> Ok. Paper! Oh I lose. <input name="A1_Access:L3[5]" class="input input-medium" type="text"> turn.</p>
         </div>
     </main>
 </section>

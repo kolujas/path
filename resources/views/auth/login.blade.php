@@ -14,7 +14,7 @@
             <div class="col-12 col-lg-6 col-xl-4 form-image-container d-none d-lg-block p-0">
                 <img class="img-fluid" src={{ asset('img/recursos/background/auth.jpg') }} alt="Visual image">
             </div>
-            <form id="login-form" class="col-10 col-lg-6 col-xl-4 p-lg-4 px-xl-5" method="post" action="login">
+            <form id="login-form" class="col-10 col-lg-6 col-xl-4 p-lg-4 px-xl-5" method="post" action="">
                 @csrf
                 <div class="text-center">
                     <picture>
@@ -45,7 +45,7 @@
                     @endif
                 </div>
                 <div class="col-12 col-md-6 mx-md-auto col-lg-10 col-xl-12 p-0 d-flex justify-content-center d-lg-block">
-                    <button class="form-submit login-form btn btn-two">Log In</button>
+                    <button type="button" class="form-submit login-form btn btn-two loading-dots"></button>
                 </div>
             </form>
         </div>

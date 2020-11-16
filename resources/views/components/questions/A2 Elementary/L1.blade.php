@@ -1,6 +1,6 @@
 <section id="dropdown-elementary-listening-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>1. Listen to a conversation between a man and a woman, then tick the correct boxes.</span>
+        <span>1. Listen to a conversation between a <b>man</b> and a <b>woman</b>, then tick the correct boxes.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>

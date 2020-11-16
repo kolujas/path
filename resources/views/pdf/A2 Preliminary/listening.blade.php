@@ -24,63 +24,57 @@
             <h3 style="padding-top: 2rem;">1. Listen to comparasions between 3 groups of pictures: A, B and C, then choose the right name or number. <mark>One has been done for you</mark>.</h3>
         </header>
         <main>
-            <ol style="margin-left: 2rem;">
-                <li>
-                    @if (isset($answers['A2_Preliminary:L1']['1a']) && $answers['A2_Preliminary:L1']['1a'] == 'Ben')
-                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Ben</span>
-                    @else
-                        <span style="margin: .5rem 2rem;">Ben</span>
-                    @endif / 
-                    @if (isset($answers['A2_Preliminary:L1']['1b']) && $answers['A2_Preliminary:L1']['1b'] == 'Sid')
-                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Sid</span>
-                    @else
-                        <span style="margin: .5rem 2rem;">Sid</span>
-                    @endif / 
-                    @if (isset($answers['A2_Preliminary:L1']['1c']) && $answers['A2_Preliminary:L1']['1c'] == 'Tom')
-                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Tom</span>
-                    @else
-                        <span style="margin: .5rem 2rem;">Tom</span>
-                    @endif
-                </li>
-            </ol>
-            <ol style="margin-left: 2rem;">
-                <li>
-                    @if (isset($answers['A2_Preliminary:L1']['2a']) && $answers['A2_Preliminary:L1']['2a'] == '56')
-                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">56</span>
-                    @else
-                        <span style="margin: .5rem 2rem;">56</span>
-                    @endif / 
-                    @if (isset($answers['A2_Preliminary:L1']['2b']) && $answers['A2_Preliminary:L1']['2b'] == '65')
-                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">65</span>
-                    @else
-                        <span style="margin: .5rem 2rem;">65</span>
-                    @endif / 
-                    @if (isset($answers['A2_Preliminary:L1']['2c']) && $answers['A2_Preliminary:L1']['2c'] == '21')
-                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">21</span>
-                    @else
-                        <span style="margin: .5rem 2rem;">21</span>
-                    @endif
-                </li>
-            </ol>
-            <ol style="margin-left: 2rem;">
-                <li>
-                    @if (isset($answers['A2_Preliminary:L1']['3a']) && $answers['A2_Preliminary:L1']['3a'] == '2A')
-                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">2A</span>
-                    @else
-                        <span style="margin: .5rem 2rem;">2A</span>
-                    @endif / 
-                    @if (isset($answers['A2_Preliminary:L1']['3b']) && $answers['A2_Preliminary:L1']['3b'] == '5C')
-                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">5C</span>
-                    @else
-                        <span style="margin: .5rem 2rem;">5C</span>
-                    @endif / 
-                    @if (isset($answers['A2_Preliminary:L1']['3c']) && $answers['A2_Preliminary:L1']['3c'] == '3B')
-                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">3B</span>
-                    @else
-                        <span style="margin: .5rem 2rem;">3B</span>
-                    @endif
-                </li>
-            </ol>
+            <p style="color: #0091B7; padding: 0 4rem;">
+                @if (isset($answers['A2_Preliminary:L1']['1a']))
+                    <span style="margin: .5rem 2rem;">{{$answers['A2_Preliminary:L1']['1a']}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif / 
+                @if (isset($answers['A2_Preliminary:L1']['1b']))
+                    <span style="margin: .5rem 2rem;">{{$answers['A2_Preliminary:L1']['1b']}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif / 
+                @if (isset($answers['A2_Preliminary:L1']['1c']))
+                    <span style="margin: .5rem 2rem;">{{$answers['A2_Preliminary:L1']['1c']}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif
+            </p>
+            <p style="color: #0091B7; padding: 0 4rem;">
+                @if (isset($answers['A2_Preliminary:L1']['2a']))
+                    <span style="margin: .5rem 2rem;">{{$answers['A2_Preliminary:L1']['2a']}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif / 
+                @if (isset($answers['A2_Preliminary:L1']['2b']))
+                    <span style="margin: .5rem 2rem;">{{$answers['A2_Preliminary:L1']['2b']}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif / 
+                @if (isset($answers['A2_Preliminary:L1']['2c']))
+                    <span style="margin: .5rem 2rem;">{{$answers['A2_Preliminary:L1']['2c']}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif
+            </p>
+            <p style="color: #0091B7; padding: 0 4rem;">
+                @if (isset($answers['A2_Preliminary:L1']['3a']))
+                    <span style="margin: .5rem 2rem;">{{$answers['A2_Preliminary:L1']['3a']}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif / 
+                @if (isset($answers['A2_Preliminary:L1']['3b']))
+                    <span style="margin: .5rem 2rem;">{{$answers['A2_Preliminary:L1']['3b']}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif / 
+                @if (isset($answers['A2_Preliminary:L1']['3c']))
+                    <span style="margin: .5rem 2rem;">{{$answers['A2_Preliminary:L1']['3c']}}</span>
+                @else
+                    <span style="margin: .5rem 2rem;">null</span>
+                @endif
+            </p>
         </main>
     </section>
 
@@ -95,6 +89,8 @@
             <p style="padding: 0 4rem; color: #000;">d. How many days did the family spend camping? <mark>{{ $answers['A2_Preliminary:L2'][4] }}</mark></p>
         </main>
     </section>
+
+    <pagebreak />
 
     <section>
         <header>

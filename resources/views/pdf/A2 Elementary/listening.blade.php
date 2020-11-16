@@ -119,9 +119,9 @@
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> In your own words, explain what the woman thinks about walking.</p>
             <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L2'][1] }}</mark></p>
             <p style="padding: 0 4rem; color: #000;"><b>b.</b> In your own words, explain what the man thinks about cycling.</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L2'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L2'][2] }}</mark></p>
             <p style="padding: 0 4rem; color: #000;"><b>c.</b> Who do you agree with the most? Give reasons for your answer.</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L2'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:L2'][3] }}</mark></p>
         </main>
     </section>
 

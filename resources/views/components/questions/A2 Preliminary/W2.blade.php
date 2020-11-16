@@ -1,6 +1,6 @@
 <section id="dropdown-preliminary-writing-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>2. Write about things you must, can’t and don’t have to do when you are in an exam.</span>
+        <span>2. Write about things you <b>must</b>, <b>can’t</b> and <b>don’t have to</b> do when you are in an exam.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>

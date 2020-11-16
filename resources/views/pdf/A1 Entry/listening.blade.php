@@ -21,16 +21,16 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">1. Look at the table below. Listen to Anna talking about her family, and complete the spaces in the table. You can listen twice. <mark>One is done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">1. Look at the table below. Listen to Anna talking about her family, and complete the boxes in the table. You can listen twice. <mark>One answers is done for you</mark>.</h3>
         </header>
         <table style="margin: auto; border: 1px solid #ccc;">
             <thead>
                 <tr style="background-color: #fff;">
                     <th style="padding: 1rem 2rem;" scope="col"></th>
                     <th style="padding: 1rem 2rem;" scope="col">Me</th>
-                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['A1_Entry:L1']['3a'] }}{{ $answers['A1_Entry:L1']['3a'] }}</mark>ther</th>
-                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['A1_Entry:L1']['5a'] }}</mark><mark>{{ $answers['A1_Entry:L1']['5b'] }}</mark>ther</th>
-                    <th style="padding: 1rem 2rem;" scope="col">sister</th>
+                    <th style="padding: 1rem 2rem;" scope="col">Mother</th>
+                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['A1_Entry:L1']['3a'] }}</mark><mark>{{ $answers['A1_Entry:L1']['3b'] }}</mark>ther</th>
+                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['A1_Entry:L1']['5a'] }}</mark><mark>{{ $answers['A1_Entry:L1']['5b'] }}</mark>ster</th>
                     <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['A1_Entry:L1']['7a'] }}</mark><mark>{{ $answers['A1_Entry:L1']['7b'] }}</mark><mark>{{ $answers['A1_Entry:L1']['7c'] }}</mark>ther</th>
                 </tr>
             </thead>
@@ -92,7 +92,7 @@
     
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">3. Where Charles lives there are ten houses. Listening to him tell you about each house, then complete the table with the numbers<mark>Two are done for you</mark>.</h3>
+            <h3 style="padding-top: 2rem;">3. Where Charles lives there are ten houses. Listen to him tell you about each house, then complete the table with the numbers. <mark>Two are done for you</mark>.</h3>
         </header>
         <table style="margin: auto; border: 1px solid #ccc;">
             <thead>

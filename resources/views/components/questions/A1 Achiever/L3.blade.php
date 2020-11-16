@@ -22,30 +22,30 @@
 
         <div class="row justify-content-md-between justify-content-lg-center py-4 ml-4">
             <ol class="info list-data col-10 mb-4 d-flex justify-content-center mx-auto">
-                <li class="crossed inline mx-lg-2" id="Shopping-mall">Shopping-mall</li>
+                <li class="crossed inline mx-lg-2" id="Shopping_mall">Shopping mall</li>
                 <li class="inline mx-lg-2" id="Coffee">Coffee</li>
                 <li class="inline mx-lg-2" id="Bank">Bank</li>
-                <li class="inline mx-lg-2" id="Bus_station">Bus Station</li>
+                <li class="inline mx-lg-2" id="Bus_Station">Bus Station</li>
             </ol>
             
             <ol class="list-exercise d-flex justify-content-center">
                 <li class="mx-3"><select disabled>
-                    <option selected>Shopping-mall</option>
+                    <option selected>Shopping mall</option>
                 </select></li>
                 <li class="mx-3"><select name="A1_Achiever:L3[1]">
-                    <option disabled selected>Shopping-mall</option>
+                    <option disabled selected>Shopping mall</option>
                     <option>Coffee</option>
                     <option>Bank</option>
                     <option>Bus Station</option>
                 </select></li>
                 <li class="mx-3"><select name="A1_Achiever:L3[2]">
-                    <option disabled selected>Shopping-mall</option>
+                    <option disabled selected>Shopping mall</option>
                     <option>Coffee</option>
                     <option>Bank</option>
                     <option>Bus Station</option>
                 </select></li>
                 <li class="mx-3"><select name="A1_Achiever:L3[3]">
-                    <option disabled selected>Shopping-mall</option>
+                    <option disabled selected>Shopping mall</option>
                     <option>Coffee</option>
                     <option>Bank</option>
                     <option>Bus Station</option>
