@@ -428,21 +428,6 @@ function setTimer(module = undefined, tab = undefined){
     });
 }
 
-function centerItVariableWidth(target, outer){
-    var out = $(outer);
-    var tar = $(target);
-    var x = out.width();
-    var y = tar.outerWidth(true);
-    var z = tar.index();
-    var q = 0;
-    var m = out.find('li');
-    //Just need to add up the width of all the elements before our target. 
-    for(var i = 0; i < z; i++){
-      q+= $(m[i]).outerWidth(true);
-    }
-    out.scrollLeft(Math.max(0, q - (x - y)/2));
-  }
-
 /**
  * * Change TabMenu content.
  * @param {TabMenu} tab TabMenu.
@@ -537,6 +522,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
                 strikesInput.value = 0;        
             }
             if(strikesInput.value >= 1){
+                strikesInput.value++;
                 modalStrikesMessage.innerHTML = "Tu examen ha sido marcado";
                 $('.modal-strikes').modal();
             }else{
