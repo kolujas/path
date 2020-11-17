@@ -537,11 +537,11 @@ document.addEventListener('DOMContentLoaded', async function (e) {
                 strikesInput.value = 0;        
             }
             if(strikesInput.value >= 1){
-                modalStrikesMessage.innerHTML = "Your exam has been marked";
+                modalStrikesMessage.innerHTML = "Your exam has been marked.";
                 $('.modal-strikes').modal();
             }else{
                 strikesInput.value++;
-                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked";
+                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
                 $('.modal-strikes').modal();
             }
         }
@@ -553,7 +553,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         }else{
             // strikesInput.value++;
             if(strikesInput.value == 0){
-                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked";
+                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
                 $('.modal-strikes').modal();
             }
         }
