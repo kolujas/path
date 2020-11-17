@@ -97,7 +97,7 @@
             <h3 style="padding-top: 2rem;">3. You receive a voice message from a friend telling you about a problem he has. Write to him to give some advice.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Preliminary:L3'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Preliminary:L3'][1]) !!}</mark></p>
         </main>
     </section>
 @endsection

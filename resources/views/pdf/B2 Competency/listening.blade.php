@@ -118,19 +118,19 @@
         </header>
         <main>
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> What childhood memory does Katie describe?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B2_Competency:L2'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:L2'][1]) !!}</mark></p>
 
             <p style="padding: 0 4rem; color: #000;"><b>b.</b> Which part of her story does the lecturer suggest may be inaccurate?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B2_Competency:L2'][2] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:L2'][2]) !!}</mark></p>
 
             <p style="padding: 0 4rem; color: #000;"><b>c.</b> What childhood memory does Ben describe?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B2_Competency:L2'][3] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:L2'][3]) !!}</mark></p>
 
             <p style="padding: 0 4rem; color: #000;"><b>d.</b> Which part of his story does Ben discover to be inaccurate?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B2_Competency:L2'][4] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:L2'][4]) !!}</mark></p>
 
             <p style="padding: 0 4rem; color: #000;"><b>e.</b> How does the lecturer suggest that memory reconstruction is nothing to worry about?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B2_Competency:L2'][5] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:L2'][5]) !!}</mark></p>
         </main>
     </section>
 
@@ -139,11 +139,12 @@
             <h3 style="padding-top: 2rem;">3. You have been asked to attend a speech by a politician, then write a report on what he said. As you listen, make notes. You will hear the speech twice.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B2_Competency:L3'][1] }}</mark></p>
-
+            <p style="padding: 0 4rem; color: #000;">Write notes here</p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:L3'][1]) !!}</mark></p>
+            
             <h4 style="color: #014969;">Now write your report. (you will have 20 minutes to complete this task once the recording has finished).</h4>
 
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B2_Competency:L3'][2] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:L3'][2]) !!}</mark></p>
         </main>
     </section>
 @endsection

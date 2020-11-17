@@ -97,11 +97,16 @@ $('body').on('copy paste', 'textarea', function (e)
  * @param {Object} data Data to get from CountDown.
  */
 function updateSaveTimer(data = undefined){
-    if(document.querySelector('.save-button.countdown')){
+    if (!isNaN(data.countdown.seconds)) {
+        if(document.querySelector('.save-button.countdown')){
+            let timer = document.querySelector('.save-button .timer');
+            timer.innerHTML = `(${data.countdown.seconds})`;
+        }else{
+            data.countdown.stop();
+        }
+    } else {
         let timer = document.querySelector('.save-button .timer');
-        timer.innerHTML = `(${data.countdown.seconds})`;
-    }else{
-        data.countdown.stop();
+        timer.innerHTML = `in...`;
     }
 }
 
@@ -147,7 +152,11 @@ function parseSpaces(text){
  * @param {Object} data Data to get from CountDown.
  */
 function current(data = undefined){
-    document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name}-tab .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+    if (!isNaN(data.countdown.hours)) {
+        document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name}-tab .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+    } else {
+        document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name}-tab .time`).innerHTML = `Calculating...`;
+    }
 }
 
 /**
@@ -202,6 +211,11 @@ function setFinishState(){
 async function sendData(){
     let btn = document.querySelector('.save-button').classList.remove('countdown');
     let formData = new FormData(form);
+    if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
+        formData.append('module', LocalStorageServiceProvider.getData('Path_Exam_Module').data);
+    } else {
+        formData.append('module', `${evaluation.exam.modules[0].folder.replace(/ /, '_')}-${evaluation.exam.modules[0].name}`);
+    }
     let token = formData.get('_token');
     formData.delete('_token');
     setLoadingState();
@@ -428,31 +442,27 @@ function setTimer(module = undefined, tab = undefined){
     });
 }
 
-function centerItVariableWidth(target, outer){
-    var out = $(outer);
-    var tar = $(target);
-    var x = out.width();
-    var y = tar.outerWidth(true);
-    var z = tar.index();
-    var q = 0;
-    var m = out.find('li');
-    //Just need to add up the width of all the elements before our target. 
-    for(var i = 0; i < z; i++){
-      q+= $(m[i]).outerWidth(true);
-    }
-    out.scrollLeft(Math.max(0, q - (x - y)/2));
-  }
-
 /**
  * * Change TabMenu content.
  * @param {TabMenu} tab TabMenu.
  */
-function nextModule(tab){
+function nextModule(tab, module){
     let submitBtns = document.querySelectorAll('.submit-exam');
     let index;
     for (const btn of submitBtns) {
-        index = btn.dataset.module;
-        btn.dataset.module++;
+        if (module) {
+            let int = 0;
+            for (const currentModule of evaluation.exam.modules) {
+                if (`${currentModule.folder.replace(' ', '_')}-${currentModule.name}` == module) {
+                    break;
+                }
+                index = btn.dataset.module;
+                btn.dataset.module++;
+            }
+        } else {
+            index = btn.dataset.module;
+            btn.dataset.module++;
+        }
         if(btn.dataset.module >= evaluation.exam.modules.length){
             if(btn.children.length){
                 btn.children[0].innerHTML = 'Submit Exam';
@@ -467,7 +477,11 @@ function nextModule(tab){
             }
         }
     }
-    tab.open([`${evaluation.exam.modules[index].folder.replace(' ', '_')}-${evaluation.exam.modules[index].name}`], `${evaluation.exam.modules[index].folder.replace(' ', '_')}-${evaluation.exam.modules[index].name}`);
+    if (!module) {
+        module = `${evaluation.exam.modules[index].folder.replace(' ', '_')}-${evaluation.exam.modules[index].name}`;
+    }
+    LocalStorageServiceProvider.setData('Path_Exam_Module', module, true);
+    tab.open([module], module);
     setTimer(getModule(document.querySelectorAll('.module-button')[document.querySelector('.submit-exam').dataset.module - 1].id), tab);
 }
 
@@ -483,6 +497,42 @@ function getModule(id) {
         }
     }
 }
+
+// ? Modal de los strikes
+const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
+const strikesInput = document.querySelector('.strikes');
+document.addEventListener('visibilitychange', function(){ 
+    if(document.visibilityState == 'hidden'){
+        if(!strikesInput.value){
+            strikesInput.value = 0;        
+        }
+        if(strikesInput.value >= 1){
+            strikesInput.value++;
+            modalStrikesMessage.innerHTML = "Your exam has been marked";
+            $('.modal-strikes').modal();
+        }else{
+            strikesInput.value++;
+            modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked";
+            $('.modal-strikes').modal();
+        }
+    }
+});
+
+$(document).mouseleave(function () {
+    if(!strikesInput.value){
+        strikesInput.value = 0;
+    }else{
+        // strikesInput.value++;
+        if(strikesInput.value == 0){
+            modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked";
+            $('.modal-strikes').modal();
+        }
+    }
+});
+
+window.onbeforeunload = function(e){
+    return "WARNING! All progress done will be lost once you abandon this page.";
+};
 
 document.addEventListener('DOMContentLoaded', async function (e) {
     let formData = new FormData(form),
@@ -528,40 +578,9 @@ document.addEventListener('DOMContentLoaded', async function (e) {
 
     setTimer(evaluation.exam.modules[0], tab);
 
-    // ? Modal de los strikes
-    const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
-    const strikesInput = document.querySelector('.strikes');
-    document.addEventListener('visibilitychange', function(){ 
-        if(document.visibilityState == 'hidden'){
-            if(!strikesInput.value){
-                strikesInput.value = 0;        
-            }
-            if(strikesInput.value >= 1){
-                modalStrikesMessage.innerHTML = "Your exam has been marked.";
-                $('.modal-strikes').modal();
-            }else{
-                strikesInput.value++;
-                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
-                $('.modal-strikes').modal();
-            }
-        }
-    });
-
-    $(document).mouseleave(function () {
-        if(!strikesInput.value){
-            strikesInput.value = 0;
-        }else{
-            // strikesInput.value++;
-            if(strikesInput.value == 0){
-                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
-                $('.modal-strikes').modal();
-            }
-        }
-    });
-
     // ? Modal de cambio de Módulo
-    const confirmButton = document.querySelector('.confirm-button');
-    const cancelButton = document.querySelector('.cancel-button');
+    const confirmButton = document.querySelector('.modal-confirm .confirm-button');
+    const cancelButton = document.querySelector('.modal-confirm .cancel-button');
     const submitsExamButtons = document.querySelectorAll('.submit-exam');
     const modalConfirm = document.querySelector('.modal-confirm');
     
@@ -574,11 +593,14 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     confirmButton.addEventListener('click', function(e){
         e.preventDefault();
         if(submitsExamButtons[0].dataset.module >= evaluation.exam.modules.length){
+            if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
+                LocalStorageServiceProvider.removeData('Path_Exam_Module');
+            }
             form.submit();
         }else{
             nextModule(tab);
         }
-    })
+    });
 
     // ! Los Module Buttons ejecutan funciones en el cambio de sección, Pero para el final no se debe permitir.
     let moduleBtns = document.querySelectorAll('.module-button');
@@ -619,4 +641,19 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     saveButton.addEventListener('click', sendData);
 
     setTimeIntervalAutoSave();
+
+    if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
+        let module = LocalStorageServiceProvider.getData('Path_Exam_Module').data;
+        let found = false
+        for (const currentModule of evaluation.exam.modules) {
+            if (module == `${currentModule.folder.replace(/ /, '_')}-${currentModule.name}`) {
+                found = true;
+            }
+        }
+        if (found) {
+            nextModule(tab, module);
+        } else {
+            LocalStorageServiceProvider.removeData('Path_Exam_Module');
+        }
+    }
 });

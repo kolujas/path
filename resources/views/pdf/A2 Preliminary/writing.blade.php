@@ -36,7 +36,7 @@
             <h3 style="padding-top: 2rem;">1.b. What did you do on your last holiday?</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Preliminary:W1B'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Preliminary:W1B'][1]) !!}</mark></p>
         </main>
     </section>
 
@@ -58,7 +58,7 @@
             <h3 style="padding-top: 2rem;">3. Explain <mark>one</mark> of the following:</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Preliminary:W3'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Preliminary:W3'][1]) !!}</mark></p>
         </main>
     </section>
 
@@ -83,7 +83,7 @@
             <h3 style="padding-top: 2rem;">5. Write about a time when you saw, or did, something amazing.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Preliminary:W5'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Preliminary:W5'][1]) !!}</mark></p>
         </main>
     </section>
 @endsection
