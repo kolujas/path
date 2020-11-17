@@ -25,10 +25,10 @@
         </header>
         <main>
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> What can we learn from this story?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:W1'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Elementary:W1'][1]) !!}</mark></p>
 
             <p style="padding: 0 4rem; color: #000;"><b>b.</b> What do you think of the judge’s decision?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:W1'][2] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Elementary:W1'][2]) !!}</mark></p>
         </main>
     </section>
 
@@ -61,7 +61,7 @@
             <h3 style="padding-top: 2rem;">4. Write about an important event that happened this year in your country. Include information about what you were doing at that time.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:W4'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Elementary:W4'][1]) !!}</mark></p>
         </main>
     </section>
 
@@ -70,7 +70,7 @@
             <h3 style="padding-top: 2rem;">5. Write about the most exciting place you have visited. Include information about it, why you liked it, and the activities you did.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Elementary:W5'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Elementary:W5'][1]) !!}</mark></p>
         </main>
     </section>
 @endsection

@@ -108,9 +108,9 @@
         </header>
         <main>
             <p style="padding: 0 4rem; color: #000;">...are good for your body?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A1_Access:W2B'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A1_Access:W2B'][1]) !!}</mark></p>
             <p style="padding: 0 4rem; color: #000;">...are good for your brain?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A1_Access:W2B'][2] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A1_Access:W2B'][2]) !!}</mark></p>
         </main>
     </section>
     
@@ -178,7 +178,7 @@
             <h3 style="padding-top: 2rem;">4. Write about things you like doing in the summer</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A1_Access:W4'][1] }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A1_Access:W4'][1]) !!}</mark></p>
         </main>
     </section>
 

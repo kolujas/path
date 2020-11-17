@@ -8,7 +8,7 @@
     </a>
     <main class="dropdown-menu-content three-question-container px-xl-4 archiever-w-3">
 
-        <div class="row justify-content-md-between justify-content-lg-center py-4">
+        <div class="row justify-content-center py-4">
             <ol class="info list-data col-10 mb-4 d-flex justify-content-center">
                 <li class="inline mx-lg-2">Always</li>
                 <li class="inline mx-lg-2">Sometimes</li>

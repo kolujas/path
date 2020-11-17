@@ -412,7 +412,7 @@ body {
 
 /* ? B2 Competency Listening */
 .B2_Competency-L #dropdown-competency-listening-1.opened .dropdown-menu-content{
-    max-height: 150vh;
+    max-height: 240vh;
 }
 
 .B2_Competency-L #dropdown-competency-listening-2.opened .dropdown-menu-content{
@@ -928,7 +928,7 @@ select {
 
     /* ? B2 Competency Listening */
     .B2_Competency-L #dropdown-competency-listening-1.opened .dropdown-menu-content{
-        max-height: 150vh;
+        max-height: 175vh;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2.opened .dropdown-menu-content{
@@ -1072,6 +1072,10 @@ select {
     }
 
     /* ? A1 Achieve Writing */
+    .A1_Achiever-W #dropdown-achiever-writing-3.opened .dropdown-menu-content {
+        max-height: 110vh;
+    }
+
     .A1_Achiever-W #dropdown-achiever-writing-4.opened .dropdown-menu-content {
         max-height: 150vh;
     }
