@@ -211,6 +211,11 @@ function setFinishState(){
 async function sendData(){
     let btn = document.querySelector('.save-button').classList.remove('countdown');
     let formData = new FormData(form);
+    if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
+        formData.append('module', LocalStorageServiceProvider.getData('Path_Exam_Module').data);
+    } else {
+        formData.append('module', `${evaluation.exam.modules[0].folder.replace(/ /, '_')}-${evaluation.exam.modules[0].name}`);
+    }
     let token = formData.get('_token');
     formData.delete('_token');
     setLoadingState();
@@ -493,6 +498,42 @@ function getModule(id) {
     }
 }
 
+// ? Modal de los strikes
+const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
+const strikesInput = document.querySelector('.strikes');
+document.addEventListener('visibilitychange', function(){ 
+    if(document.visibilityState == 'hidden'){
+        if(!strikesInput.value){
+            strikesInput.value = 0;        
+        }
+        if(strikesInput.value >= 1){
+            strikesInput.value++;
+            modalStrikesMessage.innerHTML = "Your exam has been marked";
+            $('.modal-strikes').modal();
+        }else{
+            strikesInput.value++;
+            modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked";
+            $('.modal-strikes').modal();
+        }
+    }
+});
+
+$(document).mouseleave(function () {
+    if(!strikesInput.value){
+        strikesInput.value = 0;
+    }else{
+        // strikesInput.value++;
+        if(strikesInput.value == 0){
+            modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked";
+            $('.modal-strikes').modal();
+        }
+    }
+});
+
+window.onbeforeunload = function(e){
+    return "WARNING! All progress done will be lost once you abandon this page.";
+};
+
 document.addEventListener('DOMContentLoaded', async function (e) {
     let formData = new FormData(form),
         token = formData.get('_token');
@@ -537,41 +578,9 @@ document.addEventListener('DOMContentLoaded', async function (e) {
 
     setTimer(evaluation.exam.modules[0], tab);
 
-    // ? Modal de los strikes
-    const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
-    const strikesInput = document.querySelector('.strikes');
-    document.addEventListener('visibilitychange', function(){ 
-        if(document.visibilityState == 'hidden'){
-            if(!strikesInput.value){
-                strikesInput.value = 0;        
-            }
-            if(strikesInput.value >= 1){
-                strikesInput.value++;
-                modalStrikesMessage.innerHTML = "Your exam has been marked";
-                $('.modal-strikes').modal();
-            }else{
-                strikesInput.value++;
-                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked";
-                $('.modal-strikes').modal();
-            }
-        }
-    });
-
-    $(document).mouseleave(function () {
-        if(!strikesInput.value){
-            strikesInput.value = 0;
-        }else{
-            // strikesInput.value++;
-            if(strikesInput.value == 0){
-                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked";
-                $('.modal-strikes').modal();
-            }
-        }
-    });
-
     // ? Modal de cambio de Módulo
-    const confirmButton = document.querySelector('.confirm-button');
-    const cancelButton = document.querySelector('.cancel-button');
+    const confirmButton = document.querySelector('.modal-confirm .confirm-button');
+    const cancelButton = document.querySelector('.modal-confirm .cancel-button');
     const submitsExamButtons = document.querySelectorAll('.submit-exam');
     const modalConfirm = document.querySelector('.modal-confirm');
     
@@ -591,7 +600,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         }else{
             nextModule(tab);
         }
-    })
+    });
 
     // ! Los Module Buttons ejecutan funciones en el cambio de sección, Pero para el final no se debe permitir.
     let moduleBtns = document.querySelectorAll('.module-button');

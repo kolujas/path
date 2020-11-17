@@ -50,7 +50,6 @@
     </div>
     
     @component('components.modal.strikes') 
-
     @endcomponent
 
     @component('components.modal.confirm')        
