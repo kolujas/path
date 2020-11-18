@@ -35,7 +35,8 @@
             try {
                 return Candidate::find($this->evaluation->id_candidate);
             } catch (\Throwable $th) {
-                dd($this);
+                print_r('There was an error... We are trying to fix it');
+                die();
             }
         }
 
