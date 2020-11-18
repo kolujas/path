@@ -15,7 +15,7 @@
                     type="file"
                     name="csv"
                     data-text="csv"
-                    data-notfound="CSV not choose." title="Required">
+                    data-notfound="Please attach a CSV file." title="Required">
                     @if($errors->has("csv"))
                         <span class="support support-box support-csv hidden">{{ $errors->first("csv") }}</span>
                     @else
