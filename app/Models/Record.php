@@ -32,8 +32,11 @@
          * @return [type]
          */
         public function candidate(){
-            dd($this->evaluation);
-            return Candidate::find($this->evaluation->id_candidate);
+            try {
+                return Candidate::find($this->evaluation->id_candidate);
+            } catch (\Throwable $th) {
+                dd($this);
+            }
         }
 
         /**
