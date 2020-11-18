@@ -78,12 +78,38 @@ $(document).on("keydown", function(e) {
     if ((e.which || e.keyCode) == 116) e.preventDefault();
 });
 
+// ? Desactivar print   
+function copyToClipboard() {
+    var dummy = document.createElement("textarea");
+    // to avoid breaking orgain page when copying more words
+    // cant copy when adding below this code
+    // dummy.style.display = 'none'
+    document.body.appendChild(dummy);
+    //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+    dummy.value = 'Print screen is disabled.';
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+}
+
+$(window).keyup(function(e){
+console.log(e.keyCode)
+  if(e.keyCode == 44){
+     copyToClipboard()
+  }
+});
+  
+
+
+
+
+
 // ! ESTO ESTABA ANTERIORMENTE, EN CASO DE QUE NO FUNCIONE IMPORTAR ÉSTO
 function disableF5(e) {
     if ((e.which || e.keyCode) == 116) e.preventDefault();
 };
 
-// ? Desactivar el copy paste
+//? Desactivar el copy paste
 $('body').on('copy paste', 'input', function (e)
     { e.preventDefault();
 });
