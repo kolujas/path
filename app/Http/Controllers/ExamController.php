@@ -31,7 +31,7 @@
             }
 
             if($evaluation->confirmed > 0 && $evaluation->exam->scheduled_date_time < Carbon::now()->toDateTimeString()){
-                return redirect("/exam/$evaluation->id_exam");
+                return redirect("/exam/$evaluation->id_evaluation");
             }
 
             if($request->session()->has('error')){
@@ -264,7 +264,7 @@
             }
 
             if($exam->name != $input->name){
-                $input->slug = SlugService::createSlug(User::class, 'slug', $input->name);
+                $input->slug = SlugService::createSlug(Exam::class, 'slug', $input->name);
             }else{
                 $input->slug = $exam->slug;
             }
