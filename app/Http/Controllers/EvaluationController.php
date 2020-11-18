@@ -3,6 +3,7 @@
 
     use App\Models\Candidate;
     use App\Models\Evaluation;
+    use App\Models\Record;
     use Illuminate\Http\Request;
 
     class EvaluationController extends Controller{
@@ -15,14 +16,26 @@
         static public function DeleteByCandidate($id_candidate){
             $evaluations = Evaluation::where('id_candidate', '=', $id_candidate)->get();
             
+            $error = false;
             foreach ($evaluations as $evaluation) {
-                $evaluation->delete();
+                if (!Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get()) {
+                    $evaluation->delete();
+                } else {
+                    $error = true;
+                }
             }
             
-            return [
-                'code' => 200,
-                'message' => 'Evaluation deleted correctly.',
-            ];
+            if (!$error) {
+                return (object)[
+                    'code' => 200,
+                    'message' => 'Evaluation deleted correctly.',
+                ];
+            } else {
+                return (object)[
+                    'code' => 500,
+                    'message' => 'An Evaluation can not be deleted.',
+                ];
+            }
         }
 
         /**
@@ -34,17 +47,29 @@
         static public function DeleteByExam($id_exam){
             $evaluations = Evaluation::where('id_exam', '=', $id_exam)->get();
             
+            $error = false;
             foreach ($evaluations as $evaluation) {
-                $evaluation->delete();
+                if (!Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get()) {
+                    $evaluation->delete();
+                } else {
+                    $error = true;
+                }
             }
             
-            return [
-                'code' => 200,
-                'message' => 'Evaluation deleted correctly.',
-                'data' => [
-                    'records' => $records,
-                ],
-            ];
+            if (!$error) {
+                return (object)[
+                    'code' => 200,
+                    'message' => 'Evaluation deleted correctly.',
+                    'data' => [
+                        'records' => $records,
+                    ],
+                ];
+            } else {
+                return (object)[
+                    'code' => 500,
+                    'message' => 'An Evaluation can not be deleted.',
+                ];
+            }
         }
 
         /**

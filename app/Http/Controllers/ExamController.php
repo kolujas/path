@@ -5,6 +5,7 @@
     use App\Models\Evaluation;
     use App\Models\Exam;
     use App\Models\Module;
+    use App\Models\Record;
     use Auth;
     use Carbon\Carbon;
     use Cviebrock\EloquentSluggable\Services\SlugService;
@@ -274,47 +275,48 @@
             
             $exam->update((array) $input);
             $evaluations = collect([]);
+            $message = '.';
 
-            try {
-                foreach(explode(',', $input->candidates) as $id_candidate){
-                    if($candidate = Candidate::find($id_candidate)){
-                        $found = false;
-                        foreach($exam->evaluations as $evaluation){
-                            if ($candidate->id_candidate == $evaluation->id_candidate) {
-                                $found = true;
-                            }
-                        }
-                        if (!$found) {
-                            $auxInput = (object) [
-                                'id_exam' => $exam->id_exam,
-                                'id_candidate' => $id_candidate,
-                            ];
-                            $evaluations->push(EvaluationController::doCreate($auxInput));
-                        }
-                    }
-                }
-                foreach($exam->evaluations as $evaluation){
+            foreach(explode(',', $input->candidates) as $id_candidate){
+                if($candidate = Candidate::find($id_candidate)){
                     $found = false;
-                    foreach(explode(',', $input->candidates) as $id_candidate){
-                        if($candidate = Candidate::find($id_candidate)){
-                            if ($evaluation->id_candidate == $candidate->id_candidate) {
-                                $found = true;
-                            }
+                    foreach($exam->evaluations as $evaluation){
+                        if ($candidate->id_candidate == $evaluation->id_candidate) {
+                            $found = true;
                         }
                     }
                     if (!$found) {
-                        RecordController::deleteByEvaluation($evaluation->id_evaluation);
-                        $evaluation->delete();
+                        $auxInput = (object) [
+                            'id_exam' => $exam->id_exam,
+                            'id_candidate' => $id_candidate,
+                        ];
+                        $evaluations->push(EvaluationController::doCreate($auxInput));
                     }
                 }
-                
-                return redirect("/panel/exams#details&id=$id_exam")->with('status', [
-                    'code' => 200,
-                    'message' => "Exam: \"$exam->name\" edited correctly.",
-                ]);
-            } catch (\Throwable $th) {
-                dd($th);
             }
+            foreach($exam->evaluations as $evaluation){
+                $found = false;
+                foreach(explode(',', $input->candidates) as $id_candidate){
+                    if($candidate = Candidate::find($id_candidate)){
+                        if ($evaluation->id_candidate == $candidate->id_candidate) {
+                            $found = true;
+                        }
+                    }
+                }
+                if (!$found) {
+                    if (!Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get()) {
+                        $evaluation->delete();
+                    } else {
+                        $candidate = Candidate::find($evaluation->id_candidate);
+                        $message = ", $candidate->full_name can not be removed because there is a Record from his Evaluation.";
+                    }
+                }
+            }
+            
+            return redirect("/panel/exams#details&id=$id_exam")->with('status', [
+                'code' => 200,
+                'message' => "Exam: \"$exam->name\" edited correctly$message",
+            ]);
         }
 
         /**
@@ -325,17 +327,20 @@
         public function doDelete($id_exam){
             $exam = Exam::find($id_exam);
             
-            $exam->delete();
+            $response = EvaluationController::DeleteByExam($id_exam);
 
-            try {
-                $response = EvaluationController::DeleteByExam($id_exam);
-
+            if ($response->code == 200) {
+                $exam->delete();
+    
                 return redirect("/panel/exams")->with('status', [
                     'code' => 200,
                     'message' => 'Exam deleted correctly.',
                 ]);
-            } catch (\Throwable $th) {
-                dd($th);
+            } else {
+                return redirect("/panel/exams")->with('status', [
+                    'code' => 500,
+                    'message' => "$exam->name can not be deleted because there is a Record from a Candidate Evaluation.",
+                ]);
             }
         }
         

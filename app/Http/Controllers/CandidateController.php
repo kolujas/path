@@ -159,17 +159,20 @@
         public function doDelete($id_candidate){
             $candidate = Candidate::find($id_candidate);
             
-            $candidate->delete();
+            $response = EvaluationController::DeleteByCandidate($id_candidate);
 
-            try {
-                $response = EvaluationController::DeleteByCandidate($id_candidate);
-
+            if ($response->code == 200) {
+                $candidate->delete();
+    
                 return redirect("/panel/candidates")->with('status', [
                     'code' => 200,
-                    'message' => 'Candidate deleted correctly.',
+                    'message' => "Candidate deleted correctly.",
                 ]);
-            } catch (\Throwable $th) {
-                dd($th);
+            } else {
+                return redirect("/panel/candidates")->with('status', [
+                    'code' => 500,
+                    'message' => "$candidate->full_name can not be deleted because there is a Record from his Evaluation.",
+                ]);
             }
         }
     }
