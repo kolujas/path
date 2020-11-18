@@ -32,7 +32,7 @@
          * @return [type]
          */
         public function candidate(){
-            dd($this);
+            dd($this->evaluation);
             return Candidate::find($this->evaluation->id_candidate);
         }
 
