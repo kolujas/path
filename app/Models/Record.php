@@ -32,7 +32,12 @@
          * @return [type]
          */
         public function candidate(){
-            return Candidate::find($this->evaluation->id_candidate);
+            try {
+                return Candidate::find($this->evaluation->id_candidate);
+            } catch (\Throwable $th) {
+                print_r('There was an error... We are trying to fix it');
+                die();
+            }
         }
 
         /**
