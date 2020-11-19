@@ -37,6 +37,7 @@
                     <p class="h3 rules-rem text-left mb-4">Remember:</p>
                     <p class="rules-p">{{ $evaluation->exam->rules }}</p>
                 </div>
+                @if (!$evaluation->confirmed)
                 <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">
                     <input class="form-input form-check-input" type="checkbox" name="confirmed" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
@@ -68,6 +69,15 @@
                         </div>
                     </div>
                 </div>
+                @else
+                <div class="input-group col-12 mt-5 pb-5">
+                    <div class="row d-flex justify-content-center w-100 pl-4">
+                        <div class="col-12 col-md-3 d-flex justify-content-center pb-4 p-0">
+                            <a href="/exam/{{ $evaluation->id_evaluation }}" class="form-submit rules-form btn btn-one">Start</a>
+                        </div>
+                    </div>
+                </div>
+                @endif
             </form>
         </main>
     </section>

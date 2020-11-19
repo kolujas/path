@@ -15,6 +15,18 @@ body {
     --navmenu-icon-color-alternative: #888;
 }
 
+.nav-menu .nav-menu-list li .nav-text {
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-menu .nav-menu-list li .nav-text span {
+    width: 100%;
+    color: var(--color-two);
+    font-size: .8rem;
+}
+
 .sidebar{
     --sidebar-title-color: #222;
     --sidebar-button-color: #222;

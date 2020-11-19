@@ -8,6 +8,9 @@ let cols = [ {
     id: 'table-icon',
     data: 'exam'
 }, { 
+    id: 'candidate_number',
+    data: 'candidate:candidate_number'
+}, { 
     id: 'full_name',
     data: 'candidate:full_name'
 }, { 
@@ -103,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         },
     }, {}, [{
         type: 'search',
-        target: 'candidate:full_name,exam:scheduled_date_time',
+        target: 'candidate:candidate_number,candidate:full_name,exam:scheduled_date_time',
     }], records);
 
     changeContent({

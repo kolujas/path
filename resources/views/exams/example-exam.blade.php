@@ -7,6 +7,7 @@
 @section('nav')
     @component('components.nav.exam', [
         'exam' => $evaluation->exam,
+        'candidate' => $evaluation->candidate,
     ])
     @endcomponent
 @endsection

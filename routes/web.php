@@ -7,39 +7,39 @@
     Route::get('/', 'AuthController@showLogin')->name('web.index');
     Route::get('/login', 'AuthController@showLogin')->name('auth.showLogin');
     Route::post('/login', 'AuthController@doLogIn')->name('auth.doLogIn');
-    // Route::middleware('auth.guards')->group(function(){
+    Route::middleware('auth.guards')->group(function(){
         Route::get('/logout', 'AuthController@doLogOut')->name('auth.doLogOut');
-    // });
+    });
 
     /** 
      * ! ExamController
      */
     Route::get('/exam/{id_evaluation}/finished', 'ExamController@finished')->name('exam.finished');
-    // Route::middleware('auth.guards')->group(function(){
-        // Route::middleware(['auth.id_evaluation', 'ended', 'student', 'status'])->group(function(){
+    Route::middleware('auth.guards')->group(function(){
+        Route::middleware(['auth.id_evaluation', 'ended', 'student', 'status'])->group(function(){
             Route::get('/exam/{id_evaluation}/rules', 'ExamController@rules')->name('exam.rules');
             Route::post('/auth/exam/{id_evaluation}', 'ExamController@auth')->name('exam.auth');
-            // Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
+            Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
                 Route::get('/exam/{id_evaluation}', 'ExamController@show')->name('exam.show');
-            // });
-        // });
-        // Route::middleware('admin')->group(function(){
+            });
+        });
+        Route::middleware('admin')->group(function(){
             Route::post('/exams/create/csv', 'ExamController@doCreateByCSV')->name('exam.doCreateByCSV');
             Route::post('/exams/create', 'ExamController@doCreate')->name('exam.doCreate');
             Route::put('/exams/{id_exam}/edit', 'ExamController@doEdit')->name('exam.doEdit');
             Route::delete('/exams/{id_exam}/delete', 'ExamController@doDelete')->name('exam.doDelete');
             Route::get('/panel/exams', 'ExamController@panel')->name('exam.panel');
-        // });
+        });
         
     /** 
      * ! RecordController
      */
-        // Route::middleware(['ended', 'student', 'status'])->group(function(){
-            // Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
+        Route::middleware(['auth.id_evaluation', 'ended', 'student', 'status'])->group(function(){
+            Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
                 Route::post('/exam/{id_evaluation}/record', 'RecordController@doCreate')->name('record.doCreate');
-            // });
-        // });
-        // Route::middleware('admin')->group(function(){
+            });
+        });
+        Route::middleware('admin')->group(function(){
             Route::get('/panel/records', 'RecordController@panel')->name('record.panel');
 
     /** 
@@ -61,5 +61,5 @@
      * ! CommandController
      */
             Route::get('/exec/{command_name}', 'CommandController@exec')->name('command.exec');
-        // });
-    // });
+        });
+    });

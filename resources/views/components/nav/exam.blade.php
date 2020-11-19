@@ -13,7 +13,7 @@
     <div class="nav-row">
         <ul class="nav-menu-list">
             <li>
-                <span class="nav-text">{{ $exam->name }}</span>
+                <span class="nav-text">{{ $exam->name }}@if ($candidate && $candidate->full_name)<span>{{ $candidate->full_name }}</span>@endif</span>
             </li>
         </ul>
     </div>
