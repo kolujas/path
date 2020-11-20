@@ -7,7 +7,7 @@
     </a>
     <main class="dropdown-menu-content four-question-container px-xl-4">
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
-            <p class="complete col-12 mb-4">Hello! I <input class="input text-center" disabled value="am" type="text"> Ivan. My friend's name <input name="A1_Entry:W4[1]" class="input input-medium" type="text"> Julie. I <input name="A1_Entry:W4[2]" class="input input-medium" type="text">a boy. She <input name="A1_Entry:W4[3]" class="input input-medium" type="text">a girl. We <input name="A1_Entry:W4[4]" class="input text-center" type="text">childrens.</p>
+            <p class="complete col-12 mb-4">Hello! I <input class="input text-center" disabled value="am" type="text"> Ivan. My friend's name <input name="A1_Entry:W4[1]" class="input input-medium" type="text"> Julie. I <input name="A1_Entry:W4[2]" class="input input-medium" type="text">a boy. She <input name="A1_Entry:W4[3]" class="input input-medium" type="text">a girl. We <input name="A1_Entry:W4[4]" class="input text-center" type="text">children.</p>
         </div>
     </main>
 </section>

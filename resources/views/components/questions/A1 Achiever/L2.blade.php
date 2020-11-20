@@ -1,6 +1,6 @@
 <section id="dropdown-achiever-listening-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>2. Below are three bingo cards. You will hear a man calling numbers. Cross the numbers. Which card is completed first? Choose the number of the card in the box.</span>
+        <span>2. Below are three bingo cards. You will hear a man calling numbers. Cross the numbers. You hear them as in this example <del>37</del> Which card is completed first? Choose the number of the card in the box.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -35,46 +35,46 @@
 					<tr>
 						<td class="text-center"><label class="icon-checkbox">
 							<input type="checkbox" class="d-none">
-							<span class="text">31</span>
+							<span class="text">1</span>
 						</label></td>
 						<td></td>
 						<td class="text-center"><label class="icon-checkbox">
 							<input type="checkbox" class="d-none">
-							<span class="text">35</span>
+							<span class="text">5</span>
 						</label></td>
 						<td></td>
 						<td class="text-center"><label class="icon-checkbox">
 							<input type="checkbox" class="d-none">
-							<span class="text">40</span>
+							<span class="text">7</span>
 						</label></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td class="text-center"><label class="icon-checkbox">
 							<input type="checkbox" class="d-none">
-							<span class="text">41</span>
+							<span class="text">12</span>
 						</label></td>
 						<td></td>
 						<td class="text-center"><label class="icon-checkbox">
 							<input type="checkbox" class="d-none">
-							<span class="text">50</span>
+							<span class="text">15</span>
 						</label></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td class="text-center"><label class="icon-checkbox">
 							<input type="checkbox" class="d-none">
-							<span class="text">51</span>
+							<span class="text">21</span>
 						</label></td>
 						<td></td>
 						<td class="text-center"><label class="icon-checkbox">
 							<input type="checkbox" class="d-none">
-							<span class="text">52</span>
+							<span class="text">25</span>
 						</label></td>
 						<td></td>
 						<td class="text-center"><label class="icon-checkbox">
 							<input type="checkbox" class="d-none">
-							<span class="text">55</span>
+							<span class="text">30</span>
 						</label></td>
 					</tr>
 				</tbody>

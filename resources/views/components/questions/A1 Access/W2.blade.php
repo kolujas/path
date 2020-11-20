@@ -18,56 +18,56 @@
                     <tr>
                         <th scope="col" class="input-letters"><input name="A1_Access:W2A[1]" maxlength="1" class="input-small input position-relative" type="text">rite</th>
                         <th scope="col" class="input-letters"><select name="A1_Access:W2A[2]">
-                            <option disabled selected>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <option>D</option>
-                            <option>E</option>
-                            <option>F</option>
+                            <option disabled selected>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                            <option>d</option>
+                            <option>e</option>
+                            <option>f</option>
                         </select></th>
                     </tr>
                     <tr>
                         <th scope="col">Dan<input name="A1_Access:W2A[3]" maxlength="1" class="input-small input position-relative" type="text">e</th>
                         <th scope="col" class="input-letters"><select name="A1_Access:W2A[4]">
-                            <option disabled selected>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <option>D</option>
-                            <option>E</option>
-                            <option>F</option>
+                            <option disabled selected>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                            <option>d</option>
+                            <option>e</option>
+                            <option>f</option>
                         </select></th>
                     </tr>
                     <tr>
                         <th scope="col">S<input name="A1_Access:W2A[5]" maxlength="1" class="input-small input position-relative" type="text">im</th>
                         <th scope="col" class="input-letters"><select name="A1_Access:W2A[6]">
-                            <option disabled selected>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <option>D</option>
-                            <option>E</option>
-                            <option>F</option>
+                            <option disabled selected>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                            <option>d</option>
+                            <option>e</option>
+                            <option>f</option>
                         </select></th>
                     </tr>
                     <tr>
                         <th scope="col">Wat<input name="A1_Access:W2A[7]" maxlength="1" class="input-small input position-relative" type="text">h</th>
                         <th scope="col" class="input-letters"><select name="A1_Access:W2A[8]">
-                            <option disabled selected>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <option>D</option>
-                            <option>E</option>
-                            <option>F</option>
+                            <option disabled selected>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                            <option>d</option>
+                            <option>e</option>
+                            <option>f</option>
                         </select></th>
                     </tr>
                     <tr>
                         <th scope="col">Re<input name="A1_Access:W2A[9]" maxlength="1" class="input-small input position-relative" type="text">d</th>
                         <th scope="col" class="input-letters"><select name="A1_Access:W2A[10]">
-                            <option disabled selected>A</option>
-                            <option>B</option>
-                            <option>C</option>
-                            <option>D</option>
-                            <option>E</option>
-                            <option>F</option>
+                            <option disabled selected>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                            <option>d</option>
+                            <option>e</option>
+                            <option>f</option>
                         </select></th>
                     </tr>
                 </tbody>
@@ -132,7 +132,7 @@
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <span class="indent">...are good for your brain?</span>
-                <textarea name="A1_Access:W2B[2]" class="px-2"></textarea>
+                <textarea name="A1_Access:W2B[2]" class="px-2 text"></textarea>
             </div>
         </div>
     </main>

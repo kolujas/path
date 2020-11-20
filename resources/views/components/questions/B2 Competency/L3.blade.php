@@ -23,7 +23,7 @@
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <label for="B2-ex3-indent-1" class="indent">Write notes here</label>
-                <textarea id="B2-ex3-indent-1" name="B2_Competency:L3[1]" class="px-2"></textarea>
+                <textarea id="B2-ex3-indent-1" name="B2_Competency:L3[1]" class="px-2 text"></textarea>
             </div>
         </div> 
 
@@ -34,7 +34,7 @@
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <label for="B2-ex3-indent-2" class="indent"></label>
-                <textarea id="B2-ex3-indent-2" name="B2_Competency:L3[2]" class="px-2"></textarea>
+                <textarea id="B2-ex3-indent-2" name="B2_Competency:L3[2]" class="px-2 text"></textarea>
             </div>
         </div>
     </main>

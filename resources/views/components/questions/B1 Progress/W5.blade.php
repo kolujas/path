@@ -14,7 +14,7 @@
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <span class="indent">Statement:</span>
-                <textarea name="B1_Progress:W5[1]" class="px-2 b1-ex-5"></textarea>
+                <textarea name="B1_Progress:W5[1]" class="px-2 b1-ex-5 text"></textarea>
             </div>
         </div>
     </main>
