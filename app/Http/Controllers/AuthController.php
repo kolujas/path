@@ -100,8 +100,17 @@
                     'message' => 'Exam not found.',
                 ]);
             }
+
+            if ($evaluation->logged_in >= 1) {
+                return redirect()->route('auth.showLogin')->with('status', [
+                    'code' => 403,
+                    'message' => 'You have already logged in once.',
+                ]);
+            }
+
             // $exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
-            Auth::guard('candidates')->login($candidate, true);
+            $evaluation->update(['logged_in' => $evaluation->logged_in + 1]);
+            Auth::guard('candidates')->login($candidate, false);
             return redirect("exam/$evaluation->id_evaluation/rules");
         }
 

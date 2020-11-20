@@ -52,7 +52,7 @@
                     'message' => 'Exam not found.',
                 ]);
             }
-            Auth::guard('candidates')->login($candidate, true);
+            Auth::guard('candidates')->login($candidate, false);
             $candidate = Auth::guard('candidates')->user();
             $candidate->token =  $candidate->createToken('Path Access Token', ['candidates_api'])->accessToken;
 

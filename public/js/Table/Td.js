@@ -119,6 +119,9 @@ export class Td {
             case 'candidate_number':
                 this.html.innerHTML = this.createString();
                 break;
+            case 'candidate:candidate_number':
+                this.html.innerHTML = this.createCandidateNumber();
+                break;
             case 'candidate:full_name':
                 this.html.innerHTML = this.createCandidateFullName();
                 break;
@@ -173,6 +176,19 @@ export class Td {
     createCandidateFullName() {
         if (this.data.candidate.full_name !== null) {
             return this.data.candidate.full_name;
+        } else {
+            return 'null';
+        }
+    }
+
+    /**
+     * * Create a string from the data.
+     * @returns
+     * @memberof Td
+     */
+    createCandidateNumber() {
+        if (this.data.candidate.candidate_number !== null) {
+            return this.data.candidate.candidate_number;
         } else {
             return 'null';
         }

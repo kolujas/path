@@ -31,10 +31,6 @@
                 ]);
             }
 
-            if($evaluation->confirmed > 0 && $evaluation->exam->scheduled_date_time < Carbon::now()->toDateTimeString()){
-                return redirect("/exam/$evaluation->id_evaluation");
-            }
-
             if($request->session()->has('error')){
                 $error = (object) $request->session()->pull('error');
                 return view('exams.rules', [

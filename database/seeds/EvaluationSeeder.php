@@ -12,7 +12,9 @@
             $evaluations = Evaluation::get();
             if ( count( $evaluations ) ) {
                 foreach ($evaluations as $evaluation) {
-                    //
+                    if ($evaluation->id_evaluation == 10) {
+                        $evaluation->update(['logged_in' => 1]);
+                    }
                 }
             } else {
                 Evaluation::create( [
@@ -55,6 +57,7 @@
                     'id_exam' => 1,
                     'id_candidate' => 10,
                     'id_status' => 1,
+                    'logged_in' => 1,
                 ] );
             }
         }
