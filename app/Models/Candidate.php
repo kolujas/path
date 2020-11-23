@@ -63,7 +63,7 @@
                     'en' => [
                         'candidate_number.required' => 'Candidate Number is required.',
                         'candidate_number.numeric' => 'Candidate Number must be numeric.',
-                        'candidate_number.unique' => 'Candidate Number it\'s used.',
+                        'candidate_number.unique' => 'Candidate Number has already been assigned.',
                         'full_name.min' => 'Full name cannot be less than :min characters.',
                         'full_name.max' => 'Full name cannot be more than :max characters.',
                         'date_of_birth.date' => 'Date of birth must be a valid date (1999-05-24).',
@@ -84,7 +84,7 @@
                     'en' => [
                         'candidate_number.required' => 'Candidate Number is required.',
                         'candidate_number.numeric' => 'Candidate Number must be numeric.',
-                        'candidate_number.unique' => 'Candidate Number it\'s used.',
+                        'candidate_number.unique' => 'Candidate Number has already been assigned.',
                         'full_name.min' => 'Full name cannot be less than :min characters.',
                         'full_name.max' => 'Full name cannot be more than :max characters.',
                         'date_of_birth.date' => 'Date of birth must be a valid date (1999-05-24).',

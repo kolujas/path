@@ -13,7 +13,7 @@
 @endsection
 
 @section('title')
-    {{ $evaluation->exam->name }}
+    {{ $evaluation->exam->name }}@if($evaluation->candidate && $evaluation->candidate->member): {{$evaluation->candidate->member}}@endif @if($evaluation->candidate && $evaluation->candidate->full_name) {{$evaluation->candidate->full_name}}@endif
 @endsection
 
 @section('main')

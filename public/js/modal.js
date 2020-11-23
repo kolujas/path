@@ -203,7 +203,7 @@ class Modal{
             if(element.hasOwnProperty('disabled') && element.disabled){
                 input.classList.add('ever-disabled');
             }
-            input.id = module;
+            // input.id = module;
             input.type = element.type;
             input.name = `${element.name}[]`;
             input.value = module;

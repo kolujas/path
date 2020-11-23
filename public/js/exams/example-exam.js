@@ -166,9 +166,15 @@ function setTimeIntervalAutoSave(){
     }
 }
 
-function parseSpaces(text){
+function parseFolder(text){
     if (/ /.exec(text)) {
         text = text.replace(/ /, '_');
+    }
+    if (/-/.exec(text)) {
+        text = text.replace(/-/, '');
+    }
+    if (/\+/.exec(text)) {
+        text = text.replace(/\+/, '');
     }
     return text;
 }
@@ -179,9 +185,9 @@ function parseSpaces(text){
  */
 function current(data = undefined){
     if (!isNaN(data.countdown.hours)) {
-        document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name}-tab .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
+        document.querySelector(`#${parseFolder(data.module.folder)}-${data.module.initials}-tab .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
     } else {
-        document.querySelector(`#${parseSpaces(data.module.folder)}-${data.module.name}-tab .time`).innerHTML = `Calculating...`;
+        document.querySelector(`#${parseFolder(data.module.folder)}-${data.module.initials}-tab .time`).innerHTML = `Calculating...`;
     }
 }
 
@@ -191,7 +197,7 @@ function current(data = undefined){
  */
 function end(data = undefined){
     document.querySelector('.clock').style.display = 'none';
-    let time = document.querySelector(`#${data.module.folder.replace(/ /, '_')}-${data.module.name}-tab .time`);
+    let time = document.querySelector(`#${parseFolder(data.module.folder)}-${data.module.initials}-tab .time`);
     time.innerHTML = 'ended';
     time.classList.add('text', 'text-two');
     let index;
@@ -240,7 +246,7 @@ async function sendData(){
     if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
         formData.append('module', LocalStorageServiceProvider.getData('Path_Exam_Module').data);
     } else {
-        formData.append('module', `${evaluation.exam.modules[0].folder.replace(/ /, '_')}-${evaluation.exam.modules[0].name}`);
+        formData.append('module', `${parseFolder(evaluation.exam.modules[0].folder)}-${evaluation.exam.modules[0].initials}`);
     }
     let token = formData.get('_token');
     formData.delete('_token');
@@ -479,7 +485,7 @@ function nextModule(tab, module){
         if (module) {
             let int = 0;
             for (const currentModule of evaluation.exam.modules) {
-                if (`${currentModule.folder.replace(' ', '_')}-${currentModule.name}` == module) {
+                if (`${parseFolder(currentModule.folder)}-${currentModule.initials}` == module) {
                     break;
                 }
                 index = btn.dataset.module;
@@ -504,7 +510,7 @@ function nextModule(tab, module){
         }
     }
     if (!module) {
-        module = `${evaluation.exam.modules[index].folder.replace(' ', '_')}-${evaluation.exam.modules[index].name}`;
+        module = `${parseFolder(evaluation.exam.modules[index].folder)}-${evaluation.exam.modules[index].initials}`;
     }
     LocalStorageServiceProvider.setData('Path_Exam_Module', module, true);
     tab.open([module], module);
@@ -518,7 +524,7 @@ function nextModule(tab, module){
  */
 function getModule(id) {
     for(const module of evaluation.exam.modules){
-        if(`${module.folder.replace(/ /, '_')}-${module.name}` == id.replace('-tab', '')){
+        if(`${parseFolder(module.folder)}-${module.initials}` == id.replace('-tab', '')){
             return module;
         }
     }
@@ -672,7 +678,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         let module = LocalStorageServiceProvider.getData('Path_Exam_Module').data;
         let found = false
         for (const currentModule of evaluation.exam.modules) {
-            if (module == `${currentModule.folder.replace(/ /, '_')}-${currentModule.name}`) {
+            if (module == `${parseFolder(currentModule.folder)}-${currentModule.initials}`) {
                 found = true;
             }
         }

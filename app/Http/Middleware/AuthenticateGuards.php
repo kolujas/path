@@ -16,7 +16,7 @@
             if(!Auth::guard('candidates')->user() && !Auth::user()){
                 $request->session()->put('error', [
                     'code' => 403,
-                    'message' => 'Log in first to get access at the Exam.',
+                    'message' => 'Log in first to access your Exam.',
                 ]);
                 return redirect('/');
             }

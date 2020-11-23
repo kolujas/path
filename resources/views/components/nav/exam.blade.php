@@ -13,7 +13,15 @@
     <div class="nav-row">
         <ul class="nav-menu-list">
             <li>
-                <span class="nav-text">{{ $exam->name }}@if ($candidate && $candidate->full_name)<span>{{ $candidate->full_name }}</span>@endif</span>
+                <span class="nav-text">
+                    <span class="exam_name">{{ $exam->name }}</span>
+                    @if ($candidate && $candidate->member)
+                        <span class="candidate_member">{{ $candidate->member }}</span>
+                    @endif
+                    @if ($candidate && $candidate->full_name)
+                        <span class="candidate_name">{{ $candidate->full_name }}</span>
+                    @endif
+                </span>
             </li>
         </ul>
     </div>

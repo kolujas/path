@@ -1,4 +1,4 @@
-<section id="dropdown-question-5" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-demo-question-5" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>4b. Who is Alice? Who is Beth? Write their names under the pictures.</span>
         <button class="dropdown-button text-right">
@@ -11,7 +11,7 @@
                 <div class="card">
                     <img src="../../img/recursos/writing-4-1.png" class="img-fluid" alt="image-one-question-one">
                     <div class="card-body mx-auto">
-                        <input name="A1:W4B[1]" class="input input-long" type="text" name="answer_five_one">
+                        <input name="DEMO:W4B[1]" class="input input-long" type="text" name="answer_five_one">
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                 <div class="card">
                     <img src="../../img/recursos/writing-4-2.png" class="img-fluid" alt="image-one-question-one">
                     <div class="card-body mx-auto">
-                        <input name="A1:W4B[2]" class="input input-long" type="text" name="answer_five_two">
+                        <input name="DEMO:W4B[2]" class="input input-long" type="text" name="answer_five_two">
                     </div>
                 </div>
             </div>

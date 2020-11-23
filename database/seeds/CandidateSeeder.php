@@ -21,7 +21,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 1,
                     'member' => 'Path',
-                    'modules' => 'A1 Entry:L,A1 Entry:W',
+                    'modules' => 'A1- Entry:L,A1- Entry:RW',
                     'slug' => 'entry-candidate',
                 ] );
                 Candidate::create( [
@@ -30,7 +30,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 2,
                     'member' => 'Path',
-                    'modules' => 'A1 Access:L,A1 Access:W',
+                    'modules' => 'A1 Access:L,A1 Access:RW',
                     'slug' => 'access-candidate',
                 ] );
                 Candidate::create( [
@@ -39,7 +39,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 3,
                     'member' => 'Path',
-                    'modules' => 'A1 Achiever:L,A1 Achiever:W',
+                    'modules' => 'A1+ Achiever:L,A1+ Achiever:RW',
                     'slug' => 'achiever-candidate',
                 ] );
                 Candidate::create( [
@@ -48,7 +48,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 4,
                     'member' => 'Path',
-                    'modules' => 'A2 Preliminary:L,A2 Preliminary:W',
+                    'modules' => 'A2 Preliminary:L,A2 Preliminary:RW',
                     'slug' => 'preliminary-candidate',
                 ] );
                 Candidate::create( [
@@ -57,7 +57,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 5,
                     'member' => 'Path',
-                    'modules' => 'A2 Elementary:L,A2 Elementary:W',
+                    'modules' => 'A2+ Elementary:L,A2+ Elementary:RW',
                     'slug' => 'elementary-candidate',
                 ] );
                 Candidate::create( [
@@ -66,7 +66,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 6,
                     'member' => 'Path',
-                    'modules' => 'B1 Progress:L,B1 Progress:W',
+                    'modules' => 'B1 Progress:L,B1 Progress:RW',
                     'slug' => 'progress-candidate',
                 ] );
                 Candidate::create( [
@@ -75,7 +75,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 7,
                     'member' => 'Path',
-                    'modules' => 'B2 Competency:L,B2 Competency:W',
+                    'modules' => 'B2 Competency:L,B2 Competency:RW',
                     'slug' => 'competency-candidate',
                 ] );
                 Candidate::create( [
@@ -84,7 +84,7 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 8,
                     'member' => 'Path',
-                    'modules' => 'A1 Entry:L,B2 Competency:W',
+                    'modules' => 'A1- Entry:L,B2 Competency:RW',
                     'slug' => 'mixed-candidate',
                 ] );
                 Candidate::create( [
@@ -93,18 +93,18 @@
                     'date_of_birth' => '1997-08-12',
                     'id_member' => 9,
                     'member' => 'Path',
-                    'modules' => 'B1 Progress:L,A1 Achiever:W',
+                    'modules' => 'B1 Progress:L,A1+ Achiever:RW',
                     'slug' => 'candidate-who-has-finished-his-exam',
                     'file' => 'candidates/1.png',
                 ] );
                 Candidate::create( [
                     'candidate_number' => 10,
-                    'full_name' => 'Example exam Candidate',
+                    'full_name' => 'DEMO exam Candidate',
                     'date_of_birth' => '1997-08-12',
-                    'id_member' => 1,
-                    'member' => 'Plannet',
-                    'modules' => 'A1:L,A1:W',
-                    'slug' => 'example-exam-candidate',
+                    'id_member' => 10,
+                    'member' => 'Path',
+                    'modules' => 'DEMO:L,DEMO:RW',
+                    'slug' => 'demo-exam-candidate',
                 ] );
             }
         }

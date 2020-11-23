@@ -78,12 +78,6 @@
             $filePath = "records/$evaluation->id_evaluation.pdf";
             
             Storage::put($filePath, $pdf->output());
-
-            // try {
-            //     $pdf->save("storage/../private/$filePath");
-            // } catch (\Throwable $th) {
-            //     dd($th);
-            // }
             
             if(!count($records = Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
                 $input->id_evaluation = $evaluation->id_evaluation;
