@@ -22,6 +22,12 @@ body {
 }
 
 .nav-menu .nav-menu-list li .nav-text span {
+    width: fit-content;
+    color: var(--color-nine);
+    font-size: 1rem;
+}
+
+.nav-menu .nav-menu-list li .nav-text span:last-child {
     width: 100%;
     color: var(--color-two);
     font-size: .8rem;

@@ -83,7 +83,7 @@ select[disabled]{
 <div id="primer">
     <div>
         <span>I am wearing a </span>
-        <select name="A1_Access:W1[1]">
+        <select name="A1_Access:RW1[1]">
             <option disabled selected value=""></option>
             <option disabled>Green</option>
             <option value="Red">Red</option>
@@ -101,7 +101,7 @@ select[disabled]{
 <div id="segundo">
     <div>
         <span>I am wearing a yellow</span>
-        <select name="A1_Access:W1[2]">
+        <select name="A1_Access:RW1[2]">
             <option disabled selected value=""></option>
             <option disabled>Green</option>
             <option value="Red">Red</option>
@@ -111,7 +111,7 @@ select[disabled]{
             <option value="Cap">Cap</option>
         </select>
         <span>and</span>
-        <select name="A1_Access:W1[3]">
+        <select name="A1_Access:RW1[3]">
             <option disabled selected value=""></option>
             <option disabled>Green</option>
             <option value="Red">Red</option>
@@ -129,7 +129,7 @@ select[disabled]{
         <select disabled>
             <option disabled selected>Green</option>
         </select>
-        <select name="A1_Access:W1[4]">
+        <select name="A1_Access:RW1[4]">
             <option disabled selected value=""></option>
             <option disabled>Green</option>
             <option value="Red">Red</option>

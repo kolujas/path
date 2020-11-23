@@ -14,7 +14,7 @@
         <ul class="nav-menu-list">
             <li>
                 <span class="nav-text">
-                    <span class="exam_name">{{ $exam->name }}</span>
+                    <span class="exam_name mr-3">{{ $exam->name }}:</span>
                     @if ($candidate && $candidate->member)
                         <span class="candidate_member">{{ $candidate->member }}</span>
                     @endif

@@ -24,10 +24,10 @@
                 <tr style="background-color: #fff;">
                     <th style="padding: 1rem 2rem;" scope="col"></th>
                     <th style="padding: 1rem 2rem;" scope="col">Me</th>
-                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['A1:L1']['2a'] }}{{ $answers['A1:L1']['2b'] }}</mark>ther</th>
-                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['A1:L1']['4a'] }}{{ $answers['A1:L1']['4b'] }}</mark>ther</th>
+                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['DEMO:L1']['2a'] }}{{ $answers['DEMO:L1']['2b'] }}</mark>ther</th>
+                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['DEMO:L1']['4a'] }}{{ $answers['DEMO:L1']['4b'] }}</mark>ther</th>
                     <th style="padding: 1rem 2rem;" scope="col">sister</th>
-                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['A1:L1']['6a'] }}{{ $answers['A1:L1']['6b'] }}{{ $answers['A1:L1']['6c'] }}{{ $answers['A1:L1']['6d'] }}{{ $answers['A1:L1']['6e'] }}</mark>er</th>
+                    <th style="padding: 1rem 2rem;" scope="col"><mark>{{ $answers['DEMO:L1']['6a'] }}{{ $answers['DEMO:L1']['6b'] }}{{ $answers['DEMO:L1']['6c'] }}{{ $answers['DEMO:L1']['6d'] }}{{ $answers['DEMO:L1']['6e'] }}</mark>er</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,17 +41,17 @@
                 </tr>
                 <tr>
                     <th style="padding: 1rem 2rem;" scope="row">Age</th>
-                    <td style="text-align: center"><mark>{{ $answers['A1:L1']['1a'] }}{{ $answers['A1:L1']['1b'] }}</mark></td>
+                    <td style="text-align: center"><mark>{{ $answers['DEMO:L1']['1a'] }}{{ $answers['DEMO:L1']['1b'] }}</mark></td>
                     <td style="text-align: center">40</td>
                     <td style="text-align: center">38</td>
-                    <td style="text-align: center"><mark>{{ $answers['A1:L1']['7a'] }}{{ $answers['A1:L1']['7b'] }}</mark></td>
-                    <td style="text-align: center"><mark>{{ $answers['A1:L1']['8'] }}</mark></td>
+                    <td style="text-align: center"><mark>{{ $answers['DEMO:L1']['7a'] }}{{ $answers['DEMO:L1']['7b'] }}</mark></td>
+                    <td style="text-align: center"><mark>{{ $answers['DEMO:L1']['8'] }}</mark></td>
                 </tr>
                 <tr>
                     <th style="background-color: #ccc; border: 0; padding: 1rem 2rem;" scope="row">Job</th>
                     <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">-</td>
-                    <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">te<mark>{{ $answers['A1:L1']['3a'] }}{{ $answers['A1:L1']['3b'] }}{{ $answers['A1:L1']['3c'] }}</mark>er</td>
-                    <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">doc<mark>{{ $answers['A1:L1']['5a'] }}{{ $answers['A1:L1']['5b'] }}</mark>r</td>
+                    <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">te<mark>{{ $answers['DEMO:L1']['3a'] }}{{ $answers['DEMO:L1']['3b'] }}{{ $answers['DEMO:L1']['3c'] }}</mark>er</td>
+                    <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">doc<mark>{{ $answers['DEMO:L1']['5a'] }}{{ $answers['DEMO:L1']['5b'] }}</mark>r</td>
                     <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">-</td>
                     <td style="text-align: center; background-color: #ccc; border: 0; padding: 1rem 2rem;">-</td>
                 </tr>
@@ -68,17 +68,17 @@
                 <tr>
                     <th class="text-center" scope="col"><i class="face-icons far fa-smile "></i>OK</th>
                     <th scope="col">friday</th>
-                    <th scope="col"><mark>{{ $answers['A1:L2']['1'] }}</mark>day</th>
-                    <th scope="col"><mark>{{ $answers['A1:L2']['2'] }}</mark>day</th>
+                    <th scope="col"><mark>{{ $answers['DEMO:L2']['1'] }}</mark>day</th>
+                    <th scope="col"><mark>{{ $answers['DEMO:L2']['2'] }}</mark>day</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th class="text-center" scope="row"><i class="face-icons far fa-frown text-center"></i>BAD
                     </th>
-                    <th style="background-color: #ccc; border-left: 1px solid #ccc;" scope="col"><mark>{{ $answers['A1:L2']['3'] }}</mark>day</th>
-                    <th style="background-color: #ccc; border: 0;" scope="col"><mark>{{ $answers['A1:L2']['4'] }}</mark>day</th>
-                    <th style="background-color: #ccc; border: 0;" scope="col"><mark>{{ $answers['A1:L2']['5'] }}</mark>day</th>
+                    <th style="background-color: #ccc; border-left: 1px solid #ccc;" scope="col"><mark>{{ $answers['DEMO:L2']['3'] }}</mark>day</th>
+                    <th style="background-color: #ccc; border: 0;" scope="col"><mark>{{ $answers['DEMO:L2']['4'] }}</mark>day</th>
+                    <th style="background-color: #ccc; border: 0;" scope="col"><mark>{{ $answers['DEMO:L2']['5'] }}</mark>day</th>
                 </tr>
             </tbody>
         </table>
@@ -106,28 +106,28 @@
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">A nurse lives at numbers..</th>
-                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['A1:L3']['1'] }}</mark></th>
+                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['DEMO:L3']['1'] }}</mark></th>
                     <th style="border-bottom: 1px solid #ccc" scope="col"></th>
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">My aunt Wendy lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['A1:L3']['2'] }}</mark></th>
+                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['DEMO:L3']['2'] }}</mark></th>
                     <th style="border-bottom: 1px solid #ccc" scope="col"></th>
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['A1:L3']['3'] }}</mark></th>
+                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['DEMO:L3']['3'] }}</mark></th>
                     <th style="border-bottom: 1px solid #ccc" scope="col"></th>
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">I don't know who lives at number..</th>
-                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['A1:L3']['4'] }}</mark></th>
+                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['DEMO:L3']['4'] }}</mark></th>
                     <th style="border-bottom: 1px solid #ccc" scope="col"></th>
 
                 </tr>
                 <tr>
                     <th style="border-bottom: 1px solid #ccc" scope="col">Number..</th>
-                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['A1:L3']['5'] }}</mark></th>
+                    <th style="background-color: #ccc;" scope="col"><mark>{{ $answers['DEMO:L3']['5'] }}</mark></th>
                     <th style="border-bottom: 1px solid #ccc" scope="col">is a cafe</th>
                 </tr>
             </tbody>
