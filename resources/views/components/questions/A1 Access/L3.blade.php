@@ -1,6 +1,6 @@
 <section id="dropdown-access-listening-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>3. After dinner, Emma and Lois play the game 'Rock, Paper, Scissors'. Listen to them play, then full the gaps with <b>my</b> or <b>your</b>.</span>
+        <span>3. After dinner, Emma and Lois play the game 'Rock, Paper, Scissors'. Listen to them play, then fill the gaps with <b>my</b> or <b>your</b>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>

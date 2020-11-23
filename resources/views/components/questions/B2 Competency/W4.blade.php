@@ -21,7 +21,7 @@
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <img class="img-fluid" src="/img/recursos/correo-response.png" alt="correo layout">
-                <textarea class="B2-email-textarea" name="B2_Competency:W4[1]" class="px-2"></textarea>
+                <textarea class="B2-email-textarea" name="B2_Competency:W4[1]" class="px-2 text"></textarea>
             </div>
         </div>
     </main>

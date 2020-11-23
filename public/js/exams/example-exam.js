@@ -14,6 +14,11 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
 
+// ? Desactivar F5
+$(document).on("keydown", function(e) {
+    if ((e.which || e.keyCode) == 116) e.preventDefault();
+});
+
 // ? Qué es esto?
 (function () {
     var onload = window.onload;
@@ -73,11 +78,6 @@ $(document).ready(function(){
     }
 })();
 
-// ? Desactivar F5
-$(document).on("keydown", function(e) {
-    if ((e.which || e.keyCode) == 116) e.preventDefault();
-});
-
 // ? Desactivar print   
 function copyToClipboard() {
     var dummy = document.createElement("textarea");
@@ -98,10 +98,6 @@ console.log(e.keyCode)
      copyToClipboard()
   }
 });
-  
-
-
-
 
 
 // ! ESTO ESTABA ANTERIORMENTE, EN CASO DE QUE NO FUNCIONE IMPORTAR ÉSTO
@@ -114,7 +110,7 @@ $('body').on('copy paste', 'input', function (e)
     { e.preventDefault();
 });
 
-$('body').on('copy paste', 'textarea', function (e)
+$('body').on('copy paste', '.text', function (e)
     { e.preventDefault();
 });
 

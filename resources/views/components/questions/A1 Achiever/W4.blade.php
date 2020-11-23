@@ -62,11 +62,11 @@
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <span class="indent">...can you do on a windy day?</span>
-                <textarea name="A1_Achiever:W4B[1]" class="px-2"></textarea>
+                <textarea name="A1_Achiever:W4B[1]" class="px-2 text"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <span class="indent">...do you like doing on sunny days?</span>
-                <textarea name="A1_Achiever:W4B[2]" class="px-2 last"></textarea>
+                <textarea name="A1_Achiever:W4B[2]" class="px-2 last text"></textarea>
             </div>
         </div> 
     </main>
