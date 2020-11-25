@@ -110,12 +110,8 @@
             }
 
             if($evaluation->logged_in >= 1){
-                foreach (Auth::guard('candidates')->user()->tokens as $token) {
-                    $token->delete();
-                }
-                Auth::guard('candidates')->logout();
-                return redirect()->route('auth.showLogin')->with('status', [
-                    'code' => 404,
+                return redirect("/exam/$evaluation->id_evaluation/rules")->with('status', [
+                    'code' => 403,
                     'message' => 'You have already logged in at the Exam once.',
                 ]);
             }
