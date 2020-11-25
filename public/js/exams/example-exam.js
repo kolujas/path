@@ -5,6 +5,8 @@ import { FetchServiceProvider } from "../providers/FetchServiceProvider.js";
 import { CountDown } from "../CountDown.js";
 import { LocalStorageServiceProvider } from "../providers/LocalStorageServiceProvider.js";
 
+let enviroment = 'production';
+
 let evaluation, tab,
     form = document.querySelector('form'),
     localStorageService = LocalStorageServiceProvider.getData('Path_Candidate_Token');
@@ -16,8 +18,15 @@ $(document).ready(function(){
 
 // ? Desactivar F5
 $(document).on("keydown", function(e) {
-    if ((e.which || e.keyCode) == 116) e.preventDefault();
+    if (enviroment == 'production') {
+        if ((e.which || e.keyCode) == 116) e.preventDefault();
+    }
 });
+
+async function getEnviroment(){
+    let response = await FetchServiceProvider.getData(`/api/server/enviroment`);
+    enviroment = response.getResponse('data');
+} 
 
 // ? Qué es esto?
 (function () {
@@ -530,8 +539,10 @@ function NotSeeingPage(params){
 }
 
 function TenSecondsEnded(params){
-    if (document.querySelector('.modal-strikes').style.display != 'none') {
-        window.location.href = `/exam/${ evaluation.id_evaluation }/10-seconds`;
+    if (enviroment == 'production') {
+        if (document.querySelector('.modal-strikes').style.display != 'none') {
+            window.location.href = `/exam/${ evaluation.id_evaluation }/10-seconds`;
+        }
     }
 }
 
@@ -539,53 +550,57 @@ function TenSecondsEnded(params){
 const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
 const strikesInput = document.querySelector('.strikes');
 document.addEventListener('visibilitychange', function(){ 
-    if(document.visibilityState == 'hidden'){
-        if(!strikesInput.value){
-            strikesInput.value = 0;        
-        }
-        if(strikesInput.value >= 1){
-            let date = new Date();
-            date.setSeconds( date.getSeconds() + 10 );
-            let countDown = new CountDown({
-                scheduled_date_time: date,
-                timer: {
-                    seconds: true,
-                }
-            }, {
-                current: {
-                    functionName: NotSeeingPage,
-                    params: {
-                        //
-                    },
-                }, end: {
-                    functionName: TenSecondsEnded,
-                    params: {
-                        //
-                    },
-                }
-            });
-            if (strikesInput.value >= 3) {
-                window.location.href = `/exam/${ evaluation.id_evaluation }/strikes`;
+    if (enviroment == 'production') {
+        if(document.visibilityState == 'hidden'){
+            if(!strikesInput.value){
+                strikesInput.value = 0;        
             }
-            strikesInput.value++;
-            modalStrikesMessage.innerHTML = "Your exam has been marked.";
-            $('.modal-strikes').modal();
-        }else{
-            strikesInput.value++;
-            modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
-            $('.modal-strikes').modal();
+            if(strikesInput.value >= 1){
+                let date = new Date();
+                date.setSeconds( date.getSeconds() + 10 );
+                let countDown = new CountDown({
+                    scheduled_date_time: date,
+                    timer: {
+                        seconds: true,
+                    }
+                }, {
+                    current: {
+                        functionName: NotSeeingPage,
+                        params: {
+                            //
+                        },
+                    }, end: {
+                        functionName: TenSecondsEnded,
+                        params: {
+                            //
+                        },
+                    }
+                });
+                if (strikesInput.value >= 3) {
+                    window.location.href = `/exam/${ evaluation.id_evaluation }/strikes`;
+                }
+                strikesInput.value++;
+                modalStrikesMessage.innerHTML = "Your exam has been marked.";
+                $('.modal-strikes').modal();
+            }else{
+                strikesInput.value++;
+                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
+                $('.modal-strikes').modal();
+            }
         }
     }
 });
 
 $(document).mouseleave(function () {
-    if(!strikesInput.value){
-        strikesInput.value = 0;
-    }else{
-        // strikesInput.value++;
-        if(strikesInput.value == 0){
-            modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
-            $('.modal-strikes').modal();
+    if (enviroment == 'production') {
+        if(!strikesInput.value){
+            strikesInput.value = 0;
+        }else{
+            // strikesInput.value++;
+            if(strikesInput.value == 0){
+                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
+                $('.modal-strikes').modal();
+            }
         }
     }
 });
@@ -664,33 +679,35 @@ document.addEventListener('DOMContentLoaded', async function (e) {
 
     // ! Los Module Buttons ejecutan funciones en el cambio de sección, Pero para el final no se debe permitir.
     let moduleBtns = document.querySelectorAll('.module-button');
-    for (const btn of moduleBtns) {
-        btn.addEventListener('click', function(e){
-            e.preventDefault();
-    //         let index;
-    //         for (const key in evaluation.exam.modules) {
-    //             if(evaluation.exam.modules[key] == getModule(this.id)){
-    //                 index = parseInt(key) + 1;
-    //             }
-    //         }
-    //         let submitBtns = document.querySelectorAll('.submit-exam');
-    //         for (const btn of submitBtns) {
-    //             btn.dataset.module = index;
-    //             if(btn.dataset.module >= evaluation.exam.modules.length){
-    //                 if(btn.children.length){
-    //                     btn.children[0].innerHTML = 'Submit Exam';
-    //                 }else{
-    //                     btn.innerHTML = 'Submit Exam';
-    //                 }
-    //             }else{
-    //                 if(btn.children.length){
-    //                     btn.children[0].innerHTML = 'Continue';
-    //                 }else{
-    //                     btn.innerHTML = 'Continue';
-    //                 }
-    //             }
-    //         }
-    //         setTimer(getModule(this.id), tab);
+        for (const btn of moduleBtns) {
+            btn.addEventListener('click', function(e){
+                e.preventDefault();
+                if (enviroment == 'local') {
+                let index;
+                for (const key in evaluation.exam.modules) {
+                    if(evaluation.exam.modules[key] == getModule(this.id)){
+                        index = parseInt(key) + 1;
+                    }
+                }
+                let submitBtns = document.querySelectorAll('.submit-exam');
+                for (const btn of submitBtns) {
+                    btn.dataset.module = index;
+                    if(btn.dataset.module >= evaluation.exam.modules.length){
+                        if(btn.children.length){
+                            btn.children[0].innerHTML = 'Submit Exam';
+                        }else{
+                            btn.innerHTML = 'Submit Exam';
+                        }
+                    }else{
+                        if(btn.children.length){
+                            btn.children[0].innerHTML = 'Continue';
+                        }else{
+                            btn.innerHTML = 'Continue';
+                        }
+                    }
+                }
+                setTimer(getModule(this.id), tab);
+            }
         });
     }
 
@@ -716,4 +733,6 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             LocalStorageServiceProvider.removeData('Path_Exam_Module');
         }
     }
+    
+    getEnviroment();
 });

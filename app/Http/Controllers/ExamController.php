@@ -1,6 +1,7 @@
 <?php
     namespace App\Http\Controllers;
 
+    use App;
     use App\Models\Candidate;
     use App\Models\Evaluation;
     use App\Models\Exam;
@@ -109,15 +110,19 @@
                 ]);
             }
 
-            if($evaluation->logged_in >= 1){
-                return redirect("/exam/$evaluation->id_evaluation/rules")->with('status', [
-                    'code' => 403,
-                    'message' => 'You have already logged in at the Exam once.',
-                ]);
+            if (App::environment('production')) {
+                if($evaluation->logged_in >= 1){
+                    return redirect("/exam/$evaluation->id_evaluation/rules")->with('status', [
+                        'code' => 403,
+                        'message' => 'You have already logged in at the Exam once.',
+                    ]);
+                }
             }
             
             $candidate = Auth::guard('candidates')->user();
-            // $evaluation->exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
+            if (App::environment('local')) {
+                $evaluation->exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
+            }
             $evaluation->update(['logged_in' => $evaluation->logged_in + 1]);
             $evaluation->exam->modules = $candidate->modules();
 

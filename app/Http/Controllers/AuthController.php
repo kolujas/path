@@ -1,6 +1,7 @@
 <?php
     namespace App\Http\Controllers;
 
+    use App;
     use App\Models\Auth as AuthModel;
     use App\Models\Candidate;
     use App\Models\Evaluation;
@@ -101,7 +102,9 @@
                 ]);
             }
 
-            // $exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
+            if (App::environment('local')) {
+                $exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
+            }
             Auth::guard('candidates')->login($candidate, false);
             return redirect("exam/$evaluation->id_evaluation/rules");
         }

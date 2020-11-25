@@ -4,6 +4,7 @@
 
     Route::middleware('api')->group(function(){
         Route::get('/server/time', 'API\ServerController@currentTime')->name('server.currentTime');
+        Route::get('/server/enviroment', 'API\ServerController@enviroment')->name('server.enviroment');
     /** 
      * ! AuthController
      */
