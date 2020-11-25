@@ -108,7 +108,7 @@
                 ]);
             }
 
-            $exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
+            // $exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
             Auth::guard('candidates')->login($candidate, false);
             return redirect("exam/$evaluation->id_evaluation/rules");
         }
