@@ -1,6 +1,6 @@
 <section id="dropdown-competency-writing-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>1. Read the text, then answer the questions on the next page.</span>
+        <span>1. Read the text, then answer the questions.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -46,15 +46,15 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="B2_ex1-1" class="indent">What does the article say about non-verbal communication in different cultures?</label>
+            <label for="B2_ex1-1" class="indent">a. What does the article say about non-verbal communication in different cultures?</label>
             <textarea id="B2_ex1-1" name="B2_Competency:RW1[1]" class="px-2 text"></textarea>
         </div>
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="B2_ex1-2" class="indent">According to the article, in which situations would a person need to be aware of their non-verbal communication?</label>
+            <label for="B2_ex1-2" class="indent">b. According to the article, in which situations would a person need to be aware of their non-verbal communication?</label>
             <textarea id="B2_ex1-2" name="B2_Competency:RW1[2]" class="px-2 indent-two text"></textarea>
         </div>
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <label for="B2_ex1-3" class="indent">How is the coronavirus pandemic affecting non-verbal communication in your country? Give examples.</label>
+            <label for="B2_ex1-3" class="indent">c. How is the coronavirus pandemic affecting non-verbal communication in your country? Give examples.</label>
             <textarea id="B2_ex1-3" name="B2_Competency:RW1[3]" class="px-2 indent-two text"></textarea>
         </div>
     </main>

@@ -1,6 +1,6 @@
 <section id="dropdown-progress-writing-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>1. Read an article about the benefits of being outdoors, then answer the questions on the next page.</span>
+        <span>1. Read an article about the benefits of being outdoors, then answer the questions.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>

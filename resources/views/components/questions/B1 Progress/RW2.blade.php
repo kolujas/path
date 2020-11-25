@@ -15,7 +15,7 @@
                 me to do that. </p>
         </div>
         <div class="dropdown-header px-0">
-            <span>2.b. Now complete the sentence as if you are the person telling the anecdote.</span>
+            <span>2.b. Now complete the sentences as if you were the person telling the anecdote.</span>
         </div> 
         <div class="mb-5">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
