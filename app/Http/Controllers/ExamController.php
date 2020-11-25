@@ -108,9 +108,21 @@
                     'message' => 'Evaluation not found.',
                 ]);
             }
+
+            if($evaluation->logged_in >= 1){
+                foreach (Auth::guard('candidates')->user()->tokens as $token) {
+                    $token->delete();
+                }
+                Auth::guard('candidates')->logout();
+                return redirect()->route('auth.showLogin')->with('status', [
+                    'code' => 404,
+                    'message' => 'You have already logged in at the Exam once.',
+                ]);
+            }
             
             $candidate = Auth::guard('candidates')->user();
             $evaluation->exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
+            $evaluation->update(['logged_in' => $evaluation->logged_in + 1]);
             $evaluation->exam->modules = $candidate->modules();
 
             return view('exams.example-exam', [
@@ -345,9 +357,35 @@
          * @param null|string $id_evaluation - Evaluation primary key.
          * @return [type]
          */
-        public function finished($id_evaluation){
-            return view('exams.finished', [
-                //
-            ]);
+        public function ended($id_evaluation, $reason){
+            switch ($reason) {
+                case 'finished':
+                    $data = [
+                        'title' => 'Thanks!',
+                        'message' => 'THANKS!',
+                    ];
+                    break;
+                case 'strikes':
+                    $data = [
+                        'title' => 'Exam voided',
+                        'message' => 'This Exam has been voided',
+                    ];
+                    break;
+                case '10-seconds':
+                    $data = [
+                        'title' => 'Exam voided',
+                        'message' => 'This Exam has been voided',
+                    ];
+                    break;
+                default:
+                    return redirect('/login');
+            }
+            if (Auth::guard('candidates')->check()) {
+                foreach (Auth::guard('candidates')->user()->tokens as $token) {
+                    $token->delete();
+                }
+                Auth::guard('candidates')->logout();
+            }
+            return view('exams.ended', $data);
         }
     }

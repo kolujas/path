@@ -12,9 +12,22 @@
     });
 
     /** 
+     * ! RecordController
+     */
+    Route::middleware('auth.guards')->group(function(){
+        Route::middleware(['auth.id_evaluation', 'ended', 'student', 'status'])->group(function(){
+            Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
+                Route::post('/exam/{id_evaluation}/record', 'RecordController@doCreate')->name('record.doCreate');
+            });
+        });
+        Route::middleware('admin')->group(function(){
+            Route::get('/panel/records', 'RecordController@panel')->name('record.panel');
+        });
+    });
+
+    /** 
      * ! ExamController
      */
-    Route::get('/exam/{id_evaluation}/finished', 'ExamController@finished')->name('exam.finished');
     Route::middleware('auth.guards')->group(function(){
         Route::middleware(['auth.id_evaluation', 'ended', 'student', 'status'])->group(function(){
             Route::get('/exam/{id_evaluation}/rules', 'ExamController@rules')->name('exam.rules');
@@ -30,21 +43,14 @@
             Route::delete('/exams/{id_exam}/delete', 'ExamController@doDelete')->name('exam.doDelete');
             Route::get('/panel/exams', 'ExamController@panel')->name('exam.panel');
         });
-        
-    /** 
-     * ! RecordController
-     */
-        Route::middleware(['auth.id_evaluation', 'ended', 'student', 'status'])->group(function(){
-            Route::middleware(['scheduled_date_time', 'confirmed'])->group(function(){
-                Route::post('/exam/{id_evaluation}/record', 'RecordController@doCreate')->name('record.doCreate');
-            });
-        });
-        Route::middleware('admin')->group(function(){
-            Route::get('/panel/records', 'RecordController@panel')->name('record.panel');
+    });
+    Route::get('/exam/{id_evaluation}/{reason}', 'ExamController@ended')->name('exam.ended');
 
     /** 
      * ! StorageController
      */
+    Route::middleware('auth.guards')->group(function(){
+        Route::middleware('admin')->group(function(){
             Route::get('/storage/records/{id_record}/file', 'StorageController@showRecordFile')->name('storage.showRecordFile');
             Route::get('/storage/candidates/{id_candidate}/file', 'StorageController@showCandidateFile')->name('storage.showCandidateFile');
 

@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     // ? A1 Entry Writing
-    addCrossOptionsEvent(document.querySelectorAll('.A1_Entry-W #dropdown-entry-writing-1 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Entry-RW #dropdown-entry-writing-1 select'));
 
     // ? A1 Access Lisitening
     addCrossOptionsEvent(document.querySelectorAll('.A1_Access-L #dropdown-access-listening-1 select'));
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     // ? A1 Access Writing
-    addCrossOptionsEvent(document.querySelectorAll('.A1_Access-W #dropdown-access-writing-2 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Access-RW #dropdown-access-writing-2 select'));
 
     // ? A1 Achiever Listening
     addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-L #dropdown-achiever-listening-1 select'));
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function(e){
     addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-L #dropdown-achiever-listening-3 select'));
     
     // ? A1 Achiever Writing
-    addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-W #dropdown-achiever-writing-4 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-RW #dropdown-achiever-writing-4 select'));
     
     // ? A2 Preliminary Listening
     for (const label of document.querySelectorAll('.A2_Preliminary-L #dropdown-preliminary-listening-1 .options')) {

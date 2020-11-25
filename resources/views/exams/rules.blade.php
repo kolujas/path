@@ -73,7 +73,7 @@
                 <div class="input-group col-12 mt-5 pb-5">
                     <div class="row d-flex justify-content-center w-100 pl-4">
                         <div class="col-12 col-md-3 d-flex justify-content-center pb-4 p-0">
-                            <a href="/exam/{{ $evaluation->id_evaluation }}" class="form-submit rules-form btn btn-one">Start</a>
+                            <a href="/exam/{{ $evaluation->id_evaluation }}" class="btn btn-one">Start</a>
                         </div>
                     </div>
                 </div>

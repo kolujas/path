@@ -81,9 +81,11 @@ function end(data = undefined){
 }
 
 document.addEventListener('DOMContentLoaded', function(e){
-    let input = new InputFileMakerJS({
-        id: 'ID',
-    });
+    if (document.querySelector('#ID')) {
+        let input = new InputFileMakerJS({
+            id: 'ID',
+        });
+    }
 
     let countDown = new CountDown({
         scheduled_date_time: evaluation.exam.scheduled_date_time,
@@ -118,9 +120,11 @@ document.addEventListener('DOMContentLoaded', function(e){
         }));
     }
 
-    let validation = new ValidationJS({
-        id: 'rules-form',
-    }, rules, messages);
+    if (document.querySelector('button.rules-form:not(.sidebar-button)')) {
+        let validation = new ValidationJS({
+            id: 'rules-form',
+        }, rules, messages);
+    }
 
     if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
         LocalStorageServiceProvider.removeData('Path_Exam_Module');

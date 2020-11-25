@@ -525,6 +525,16 @@ function getModule(id) {
     }
 }
 
+function NotSeeingPage(params){
+    // console.log('A seconds passed');
+}
+
+function TenSecondsEnded(params){
+    if (document.querySelector('.modal-strikes').style.display != 'none') {
+        window.location.href = `/exam/${ evaluation.id_evaluation }/10-seconds`;
+    }
+}
+
 // ? Modal de los strikes
 const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
 const strikesInput = document.querySelector('.strikes');
@@ -534,6 +544,29 @@ document.addEventListener('visibilitychange', function(){
             strikesInput.value = 0;        
         }
         if(strikesInput.value >= 1){
+            let date = new Date();
+            date.setSeconds( date.getSeconds() + 10 );
+            let countDown = new CountDown({
+                scheduled_date_time: date,
+                timer: {
+                    seconds: true,
+                }
+            }, {
+                current: {
+                    functionName: NotSeeingPage,
+                    params: {
+                        //
+                    },
+                }, end: {
+                    functionName: TenSecondsEnded,
+                    params: {
+                        //
+                    },
+                }
+            });
+            if (strikesInput.value >= 3) {
+                window.location.href = `/exam/${ evaluation.id_evaluation }/strikes`;
+            }
             strikesInput.value++;
             modalStrikesMessage.innerHTML = "Your exam has been marked.";
             $('.modal-strikes').modal();
@@ -557,9 +590,9 @@ $(document).mouseleave(function () {
     }
 });
 
-window.onbeforeunload = function(e){
-    return "WARNING! All progress done will be lost once you abandon this page.";
-};
+// window.onbeforeunload = function(e){
+//     return "WARNING! All progress done will be lost once you abandon this page.";
+// };
 
 document.addEventListener('DOMContentLoaded', async function (e) {
     let formData = new FormData(form),

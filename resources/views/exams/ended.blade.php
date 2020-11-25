@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-    Thanks!
+    {{ $title }}
 @endsection
 
 @section('main')
@@ -15,7 +15,7 @@
                 <img src={{ asset('img/recursos/logo.png') }} alt="Path logo">
             </div>
             <div class="col-12 text-center mt-4">
-                <span class="text">THANKS!</span>
+                <span class="text">{{ $message }}</span>
             </div>
         </div>
     </section>
