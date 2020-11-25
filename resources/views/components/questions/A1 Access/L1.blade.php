@@ -22,7 +22,7 @@
 
         <div class="row justify-content-md-between justify-content-lg-center pb-4">
             <ol class="list-exercise col-12 mb-4 d-flex justify-content-center">
-                <li class="mx-lg-3">
+                <li class="mx-lg-3 mr-3">1
                     <select name="A1_Access:L1[1]">
                         <option selected>a</option>
                         <option>b</option>
@@ -31,7 +31,7 @@
                         <option>e</option>
                     </select>
                 </li>
-                <li class="mx-lg-3">
+                <li class="mx-lg-3 mr-3">2
                     <select name="A1_Access:L1[2]">
                         <option selected>a</option>
                         <option>b</option>
@@ -40,7 +40,7 @@
                         <option>e</option>
                     </select>
                 </li>
-                <li class="mx-lg-3">
+                <li class="mx-lg-3 mr-3">3
                     <select name="A1_Access:L1[3]">
                         <option selected>a</option>
                         <option>b</option>
