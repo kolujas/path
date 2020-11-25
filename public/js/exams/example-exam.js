@@ -483,6 +483,7 @@ function setTimer(module = undefined, tab = undefined){
  * @param {TabMenu} tab TabMenu.
  */
 function nextModule(tab, module){
+    sendData();
     let submitBtns = document.querySelectorAll('.submit-exam');
     let index;
     for (const btn of submitBtns) {
@@ -499,22 +500,21 @@ function nextModule(tab, module){
             index = btn.dataset.module;
             btn.dataset.module++;
         }
-        if(btn.dataset.module >= evaluation.exam.modules.length){
-            if(btn.children.length){
-                btn.children[0].innerHTML = 'Submit Exam';
-            }else{
-                btn.innerHTML = 'Submit Exam';
-            }
-        }else{
-            if(btn.children.length){
-                btn.children[0].innerHTML = 'Continue';
-            }else{
-                btn.innerHTML = 'Continue';
-            }
-        }
     }
     if (!module) {
         module = `${parseFolder(evaluation.exam.modules[index].folder)}-${evaluation.exam.modules[index].initials}`;
+    }
+    for (const audio of document.querySelectorAll(`audio`)) {
+        audio.pause();
+        for (const audio of document.querySelectorAll('audio')) {
+            const button = audio.nextElementSibling.children[0];
+            if (button.classList.contains('playing')) {
+                button.classList.remove('playing');
+            }
+            if (button.classList.contains('disabled')) {
+                button.classList.remove('disabled');
+            }
+        }
     }
     LocalStorageServiceProvider.setData('Path_Exam_Module', module, true);
     tab.open([module], module);
@@ -584,7 +584,7 @@ document.addEventListener('visibilitychange', function(){
                 $('.modal-strikes').modal();
             }else{
                 strikesInput.value++;
-                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
+                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked. If you close or refresh this page, your exam will be avoided.";
                 $('.modal-strikes').modal();
             }
         }
@@ -692,19 +692,6 @@ document.addEventListener('DOMContentLoaded', async function (e) {
                 let submitBtns = document.querySelectorAll('.submit-exam');
                 for (const btn of submitBtns) {
                     btn.dataset.module = index;
-                    if(btn.dataset.module >= evaluation.exam.modules.length){
-                        if(btn.children.length){
-                            btn.children[0].innerHTML = 'Submit Exam';
-                        }else{
-                            btn.innerHTML = 'Submit Exam';
-                        }
-                    }else{
-                        if(btn.children.length){
-                            btn.children[0].innerHTML = 'Continue';
-                        }else{
-                            btn.innerHTML = 'Continue';
-                        }
-                    }
                 }
                 setTimer(getModule(this.id), tab);
             }

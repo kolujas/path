@@ -18,7 +18,7 @@
             
             $error = false;
             foreach ($evaluations as $evaluation) {
-                if (!Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get()) {
+                if (!count(Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())) {
                     $evaluation->delete();
                 } else {
                     $error = true;
@@ -49,7 +49,7 @@
             
             $error = false;
             foreach ($evaluations as $evaluation) {
-                if (!Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get()) {
+                if (!count(Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())) {
                     $evaluation->delete();
                 } else {
                     $error = true;
@@ -60,9 +60,6 @@
                 return (object)[
                     'code' => 200,
                     'message' => 'Evaluation deleted correctly.',
-                    'data' => [
-                        'records' => $records,
-                    ],
                 ];
             } else {
                 return (object)[

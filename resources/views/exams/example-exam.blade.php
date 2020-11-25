@@ -24,9 +24,8 @@
     </div>
 
     <div class="example-exam floating-menu bottom right">
-        <button class="save-button btn btn-one mr-4 hidden">
-            SAVE
-            <b class="timer ml-1"></b>
+        <button class="submit-exam btn btn-one mr-4 hidden" data-module="1">
+            <span class="link-text">Submit</span>
         </button>
     </div>
     
