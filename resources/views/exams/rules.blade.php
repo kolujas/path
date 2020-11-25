@@ -10,6 +10,9 @@
             <img class="logo" src={{ asset('img/recursos/logo_white.png') }} alt="Path">
             <h1 class="h1">Path</h1>
         </div>
+        @if ($evaluation->candidate->full_name)
+            <span class="text-center pt-3">Hi, <b>{{ $evaluation->candidate->full_name }}</b>!</span>
+        @endif
         <h2 class="mb-2">{{ $evaluation->exam->name }}@if($evaluation->candidate && $evaluation->candidate->member): {{$evaluation->candidate->member}}@endif</h2>
         <span class="text-center timer">Scheduled date time: {{ $evaluation->exam->scheduled_date_time }}</span>
         <div class="spans-timer">

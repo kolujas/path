@@ -39,6 +39,22 @@ function addCrossOptionsEvent(selects){
     }
 }
 
+function enableAudios(){
+    for (const audio of document.querySelectorAll('audio')) {
+        const button = audio.nextElementSibling.children[0];
+        button.classList.remove('disabled');
+    }
+}
+
+function disableAudios(buttonSelected){
+    for (const audio of document.querySelectorAll('audio')) {
+        const button = audio.nextElementSibling.children[0];
+        if (button != buttonSelected) {
+            button.classList.add('disabled');
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function(e){
     // ? Audio
     const audios = document.querySelectorAll('audio');
@@ -47,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(e){
 
         button.addEventListener('click', function (e) {
             e.preventDefault();
-            if (!this.classList.contains('playing') && !this.classList.contains('finished')) {
+            if (!this.classList.contains('playing') && !this.classList.contains('finished') && !this.classList.contains('disabled')) {
                 if (!this.dataset.count) {
                     this.dataset.count = 0;
                 }
@@ -62,10 +78,12 @@ document.addEventListener('DOMContentLoaded', function(e){
 
         if(typeof audio  === "object"){
             audio.addEventListener('play', function(e){
+                disableAudios(this.nextElementSibling.children[0]);
                 button.classList.add('playing');
                 button.children[1].innerHTML = "Playing...";
             });
             audio.addEventListener('ended', function(e){
+                enableAudios();
                 button.classList.remove('playing');
                 button.children[1].innerHTML = "Play Audio";
                 button.dataset.count = parseInt(button.dataset.count) + 1;
@@ -77,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function(e){
                 }               
             });
             audio.addEventListener('pause', function(e){
+                enableAudios(this);
                 button.classList.remove('playing');
             });
         }

@@ -14,8 +14,9 @@
         </li>
     @endforeach
     <li class="tab mr-0">
-        <button class="right-tab submit-exam btn btn-one" data-module="1">
-            <span class="link-text">Continue</span>
+        <button class="right-tab save-button btn btn-one">
+            SAVE
+            <b class="timer ml-1"></b>
         </button>
     </li>
 </ul>

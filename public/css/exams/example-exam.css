@@ -119,6 +119,10 @@ body {
     display: block;
 }
 
+.tab-menu .tabs .tab-menu-list .tab:last-child button {
+    height: 2.9rem;
+}
+
 /* ? modales */
 .modal-dialog{
     width: 100%;
@@ -683,6 +687,12 @@ select {
 
 .audio-button.playing {
     background-color: var(--color-two);
+    cursor: not-allowed;
+}
+
+.audio-button.disabled {
+    text-decoration: none;
+    background-color: var(--color-four);
     cursor: not-allowed;
 }
 
