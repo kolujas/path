@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function(e){
                 {title: 'Rules', name: 'rules', type: 'textarea'},
                 {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, required: true},
                 {title: 'Password', name: 'password', type: 'text', required: true},
-                {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
+                {title: 'Scheduled Date and Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
             ]);
             setActions({
                 type: 'create'
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function(e){
                 {title: 'Rules', name: 'rules', type: 'textarea'},
                 {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, hide: true},
                 {title: 'Password', name: 'password', type: 'text', required: true},
-                {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
+                {title: 'Scheduled Date and Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
             ], getExam());
             setActions({
                 type: 'info',
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             {title: 'Rules', name: 'rules', type: 'textarea'},
             {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, required: true},
             {title: 'Password', name: 'password', type: 'text', required: true},
-            {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
+            {title: 'Scheduled Date and Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
         ]);
         setActions({
             type: 'create'

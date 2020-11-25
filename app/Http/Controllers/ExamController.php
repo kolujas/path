@@ -362,7 +362,7 @@
                 case 'finished':
                     $data = [
                         'title' => 'Thanks!',
-                        'message' => 'THANKS!',
+                        'message' => 'Thank you for submitting your international exam',
                     ];
                     break;
                 case 'strikes':

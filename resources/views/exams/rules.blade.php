@@ -41,7 +41,7 @@
                 <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">
                     <input class="form-input form-check-input" type="checkbox" name="confirmed" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
-                        I have read and understand the exam rules
+                        I have read and understood the exam rules
                     </label>
                 </div>
                 @if($errors->has("confirmed"))

@@ -8,7 +8,7 @@
         <span class="link-text">Candidates</span>
     </a></li>
     <li class="tab"><a href="/panel/exams" class="tab-link btn btn-nine-transparent">
-        <span class="link-text">Exams</span>
+        <span class="link-text">Exams Sessions</span>
     </a></li>
     <li class="tab"><a href="/panel/records" class="tab-link btn btn-nine-transparent">
         <span class="link-text">Records</span>

@@ -101,7 +101,7 @@ export class Tr{
                     {title: 'Rules', name: 'rules', type: 'textarea'},
                     {title: 'Candidates', name: 'candidates', type: 'hidden', disabled: true, required: true},
                     {title: 'Password', name: 'password', type: 'text', required: true},
-                    {title: 'Scheduled Date of Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
+                    {title: 'Scheduled Date and Time', name: 'scheduled_date_time', type: 'datetime-local', required: true},
                 ], properties.data);
                 setActions({
                     type: 'info',
