@@ -1,4 +1,4 @@
-<section id="dropdown-demo-question-6" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-demo-writing-6" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>5. Write about your friend.</span>
         <button class="dropdown-button text-right">

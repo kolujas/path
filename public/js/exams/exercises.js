@@ -101,6 +101,26 @@ document.addEventListener('DOMContentLoaded', function(e){
         }
     }
 
+    // ? Input letters from DEMO Listening ejercicio 1
+    let DEMO_letters = document.querySelectorAll('.DEMO-L #dropdown-demo-listening-1 .input-letters');
+    for(const element of DEMO_letters){
+        for (const key in element.children) {
+            const input = element.children[key]
+            if((parseInt(key) + 1) <= element.children.length){
+                input.addEventListener('keyup', function(e){
+                    if(this.value){
+                        if(this.nextElementSibling){
+                            this.nextElementSibling.focus();
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+    // ? DEMO Writing
+    addCrossOptionsEvent(document.querySelectorAll('.DEMO-RW #dropdown-demo-writing-1 select'));
+
     // ? Input letters from A1 Entry Listening ejercicio 1
     let A1_Entry_letters = document.querySelectorAll('.A1_Entry-L #dropdown-entry-listening-1 .input-letters');
     for(const element of A1_Entry_letters){

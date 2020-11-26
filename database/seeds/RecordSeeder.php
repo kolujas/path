@@ -15,10 +15,7 @@
                     //
                 }
             } else {
-                Record::create( [
-                    'id_evaluation' => 10,
-                    'file' => 'records/1.pdf',
-                ] );
+                //
             }
         }
     }

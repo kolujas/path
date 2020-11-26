@@ -17,18 +17,11 @@
                 }
             } else {
                 Exam::create( [
-                    'name' => 'Example exam',
-                    'rules' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit facilis illo sunt dolor sit nisi maiores porro asperiores doloribus totam explicabo impedit voluptatum delectus, tenetur velit! Cum ipsum nam reiciendis labore quibusdam quis?',
-                    'password' => '12345678',
-                    'scheduled_date_time' => '2022-01-01 12:00:00',
-                    'slug' => 'example-exam-1',
-                ] );
-                Exam::create( [
-                    'name' => 'Exam finished',
-                    'rules' => 'Lorem ipsum dolor sit.',
-                    'password' => '12345678',
-                    'scheduled_date_time' => '2019-05-13 14:30:00',
-                    'slug' => 'exam-finished',
+                    'name' => 'Exam',
+                    'rules' => 'This exam is an example, just for testing. Right here there will be the exam rules...',
+                    'password' => 'JustForTesting',
+                    'scheduled_date_time' => '2020-11-25 21:09:00',
+                    'slug' => 'exam',
                 ] );
             }
         }

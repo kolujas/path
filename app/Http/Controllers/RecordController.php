@@ -46,48 +46,50 @@
                 return redirect("/exam/$evaluation->id_evaluation/rules")->withErrors($validator)->withInput();
             }
 
-            $pdf = false;
-            $data = (object) [
-                'evaluation' => $evaluation,
-                'candidate' => $candidate,
-                'answers' => $request->all(),
-            ];
-
-            foreach($modules as $module) {
-                $data->module = $module;
-                if(!$pdf) {
-                    $pdf = PDF::loadView("pdf.$module->folder.$module->file", (array) $data, [ ], [
-                        'format'               => 'A4',
-                        'default_font_size'    => '12',
-                        'default_font'         => 'sans-serif',
-                        'margin_left'          => 0,
-                        'margin_right'         => 0,
-                        'margin_top'           => 30,
-                        'margin_bottom'        => 10,
-                        'margin_header'        => 0,
-                        'margin_footer'        => 0,
-                        'title'                => 'PDF creado desde la página de Path',
-                        'author'               => 'Path',
-                    ]);
-                }else{
-                    $pdf->getMpdf()->AddPage();
-                    $pdf->getMpdf()->WriteHTML(View::make("pdf.$module->folder.$module->file", (array) $data));
-                }
-            }
-
-            $filePath = "records/$evaluation->id_evaluation.pdf";
-            
-            Storage::put($filePath, $pdf->output());
-            
-            if(!count($records = Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
-                $input->id_evaluation = $evaluation->id_evaluation;
-                $input->file = $filePath;
+            if ($candidate->id_candidate > 1) {
+                $pdf = false;
+                $data = (object) [
+                    'evaluation' => $evaluation,
+                    'candidate' => $candidate,
+                    'answers' => $request->all(),
+                ];
     
-                $record = Record::create((array) $input);
+                foreach($modules as $module) {
+                    $data->module = $module;
+                    if(!$pdf) {
+                        $pdf = PDF::loadView("pdf.$module->folder.$module->file", (array) $data, [ ], [
+                            'format'               => 'A4',
+                            'default_font_size'    => '12',
+                            'default_font'         => 'sans-serif',
+                            'margin_left'          => 0,
+                            'margin_right'         => 0,
+                            'margin_top'           => 30,
+                            'margin_bottom'        => 10,
+                            'margin_header'        => 0,
+                            'margin_footer'        => 0,
+                            'title'                => 'PDF creado desde la página de Path',
+                            'author'               => 'Path',
+                        ]);
+                    }else{
+                        $pdf->getMpdf()->AddPage();
+                        $pdf->getMpdf()->WriteHTML(View::make("pdf.$module->folder.$module->file", (array) $data));
+                    }
+                }
+    
+                $filePath = "records/$evaluation->id_evaluation.pdf";
+                
+                Storage::put($filePath, $pdf->output());
+                
+                if(!count($records = Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
+                    $input->id_evaluation = $evaluation->id_evaluation;
+                    $input->file = $filePath;
+        
+                    $record = Record::create((array) $input);
+                }
+    
+                $evaluation->id_status = 1;
+                $evaluation->save();
             }
-
-            $evaluation->id_status = 1;
-            $evaluation->save();
             
             foreach (Auth::guard('candidates')->user()->tokens as $token) {
                 $token->delete();

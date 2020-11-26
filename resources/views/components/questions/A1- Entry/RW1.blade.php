@@ -17,7 +17,7 @@
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/A1-ENTRY-W-1.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
-                    <select clas="input-long" name="A1_Entry:RW1[1]">
+                    <select name="A1_Entry:RW1[1]">
                         <option disabled selected>Pencil</option>
                         <option>Mouse</option>
                         <option>Paper</option>
@@ -29,7 +29,7 @@
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/A1-ENTRY-W-1.1.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
-                    <select clas="input-long" name="A1_Entry:RW1[2]">
+                    <select name="A1_Entry:RW1[2]">
                         <option disabled selected>Pencil</option>
                         <option>Mouse</option>
                         <option>Paper</option>
@@ -41,7 +41,7 @@
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/A1-ENTRY-W-1.2.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
-                    <select clas="input-long" disabled>
+                    <select disabled>
                         <option selected>Pencil</option>
                     </select>
                 </div>
@@ -49,7 +49,7 @@
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/A1-ENTRY-W-1.3.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
-                    <select clas="input-long" name="A1_Entry:RW1[3]">
+                    <select name="A1_Entry:RW1[3]">
                         <option disabled selected>Pencil</option>
                         <option>Mouse</option>
                         <option>Paper</option>
@@ -61,7 +61,7 @@
             <div class="card col-12 col-md-6 col-lg-2 mb-4 mb-lg-0">
                 <img src="../../img/recursos/A1-ENTRY-W-1.4.png" class="img-fluid utiles" alt="image-one-question-one">
                 <div class="card-body mx-auto">
-                    <select clas="input-long" name="A1_Entry:RW1[4]">
+                    <select name="A1_Entry:RW1[4]">
                         <option disabled selected>Pencil</option>
                         <option>Mouse</option>
                         <option>Paper</option>

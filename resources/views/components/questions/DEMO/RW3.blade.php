@@ -5,7 +5,7 @@
             <i class="dropdown-icon fas fa-angle-down"></i>
         </button>
     </a>
-    <main class="dropdown-menu-content second-question-container d-flex justify-content-center">
+    <main class="dropdown-menu-content third-question-container px-xl-4">
         <div class="py-4 svg-width">
             @component('components.questions.resources.prueba-animales')
             @endcomponent

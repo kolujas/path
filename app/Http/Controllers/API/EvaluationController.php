@@ -16,6 +16,7 @@
             }
 
             $evaluation->exam;
+            $evaluation->candidate;
 
             if ($evaluation->id_candidate != $request->user()->id_candidate) {
                 return response()->json([

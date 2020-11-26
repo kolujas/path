@@ -102,7 +102,7 @@
                 ]);
             }
 
-            if (App::environment('local')) {
+            if (App::environment('local') || $candidate->id_candidate == 1) {
                 $exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
             }
             Auth::guard('candidates')->login($candidate, false);

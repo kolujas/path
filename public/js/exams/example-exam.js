@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 // ? Desactivar F5
 $(document).on("keydown", function(e) {
-    if (enviroment == 'production') {
+    if (enviroment == 'production' && evaluation.candidate > 1) {
         if ((e.which || e.keyCode) == 116) e.preventDefault();
     }
 });
@@ -539,7 +539,7 @@ function NotSeeingPage(params){
 }
 
 function TenSecondsEnded(params){
-    if (enviroment == 'production') {
+    if (enviroment == 'production' && id_evaluation > 1) {
         if (document.querySelector('.modal-strikes').style.display != 'none') {
             window.location.href = `/exam/${ evaluation.id_evaluation }/10-seconds`;
         }
@@ -550,7 +550,7 @@ function TenSecondsEnded(params){
 const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
 const strikesInput = document.querySelector('.strikes');
 document.addEventListener('visibilitychange', function(){ 
-    if (enviroment == 'production') {
+    if (enviroment == 'production' && id_evaluation > 1) {
         if(document.visibilityState == 'hidden'){
             if(!strikesInput.value){
                 strikesInput.value = 0;        
@@ -592,7 +592,7 @@ document.addEventListener('visibilitychange', function(){
 });
 
 $(document).mouseleave(function () {
-    if (enviroment == 'production') {
+    if (enviroment == 'production' && id_evaluation > 1) {
         if(!strikesInput.value){
             strikesInput.value = 0;
         }else{
@@ -677,24 +677,15 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         }
     });
 
-    // ! Los Module Buttons ejecutan funciones en el cambio de sección, Pero para el final no se debe permitir.
+    // ? Los Module Buttons ejecutan funciones en el cambio de sección.
     let moduleBtns = document.querySelectorAll('.module-button');
         for (const btn of moduleBtns) {
             btn.addEventListener('click', function(e){
                 e.preventDefault();
-                if (enviroment == 'local') {
-                let index;
-                for (const key in evaluation.exam.modules) {
-                    if(evaluation.exam.modules[key] == getModule(this.id)){
-                        index = parseInt(key) + 1;
-                    }
+                console.log(enviroment == 'local' || id_evaluation == 1);
+                if (enviroment == 'local' || id_evaluation == 1) {
+                    console.log('changing the module');
                 }
-                let submitBtns = document.querySelectorAll('.submit-exam');
-                for (const btn of submitBtns) {
-                    btn.dataset.module = index;
-                }
-                setTimer(getModule(this.id), tab);
-            }
         });
     }
 
@@ -705,13 +696,17 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     saveButton.addEventListener('click', sendData);
 
     setTimeIntervalAutoSave();
+    
+    getEnviroment();
 
     if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
-        let module = LocalStorageServiceProvider.getData('Path_Exam_Module').data;
-        let found = false
-        for (const currentModule of evaluation.exam.modules) {
-            if (module == `${parseFolder(currentModule.folder)}-${currentModule.initials}`) {
-                found = true;
+        let found = false;
+        if (enviroment == 'production' && id_evaluation > 1) {
+            let module = LocalStorageServiceProvider.getData('Path_Exam_Module').data;
+            for (const currentModule of evaluation.exam.modules) {
+                if (module == `${parseFolder(currentModule.folder)}-${currentModule.initials}`) {
+                    found = true;
+                }
             }
         }
         if (found) {
@@ -720,6 +715,4 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             LocalStorageServiceProvider.removeData('Path_Exam_Module');
         }
     }
-    
-    getEnviroment();
 });
