@@ -54,7 +54,8 @@
             <h3 style="padding-top: 2rem;">3. Explain <mark>one</mark> of the following:</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Preliminary:RW3'][1]) !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ nl2br($answers['A2_Preliminary:RW3'][1]) }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Preliminary:RW3'][2]) !!}</mark></p>
         </main>
     </section>
 

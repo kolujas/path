@@ -14,7 +14,7 @@ function addCrossOptionsEvent(selects){
     for (const question of selects) {
         let options = [];
         for (const option of question.options) {
-            let id = `${option.innerHTML.replace(/ /g, '_').replace(/\:/g, '_').replace(/\./g, '_')}`;
+            let id = `${option.innerHTML.replace(/\./g, '').replace(/ /g, '_').replace(/\:/g, '_').replace(/\./g, '_')}`;
             if (parseInt(id[0])) {
                 id = '#option-' + id;
             } else {
@@ -26,7 +26,7 @@ function addCrossOptionsEvent(selects){
             for (const option of options) {
                 option.classList.remove('crossed');
                 for (const select of selects) {
-                    let id = `${select.options[select.selectedIndex].innerHTML.replace(/ /g, '_').replace(/\:/g, '_').replace(/\./g, '_')}`;
+                    let id = `${select.options[select.selectedIndex].innerHTML.replace(/\./g, '').replace(/ /g, '_').replace(/\:/g, '_').replace(/\./g, '_')}`;
                     if (parseInt(id[0])) {
                         id = 'option-' + id;
                     }
@@ -180,6 +180,8 @@ document.addEventListener('DOMContentLoaded', function(e){
     addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-L #dropdown-achiever-listening-3 select'));
     
     // ? A1 Achiever Writing
+    addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-RW #dropdown-achiever-writing-3 select'));
+
     addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-RW #dropdown-achiever-writing-4 select'));
     
     // ? A2 Preliminary Listening
@@ -197,6 +199,9 @@ document.addEventListener('DOMContentLoaded', function(e){
             }
         });
     }
+
+    // ? A2 Preliminary Writing
+    addCrossOptionsEvent(document.querySelectorAll('.A2_Preliminary-RW #dropdown-preliminary-writing-3 select'));
 
     // ? A2 Elementary Listening
     for (const label of document.querySelectorAll('.A2_Elementary-L #dropdown-elementary-listening-1 .icon-checkbox')) {
@@ -218,9 +223,11 @@ document.addEventListener('DOMContentLoaded', function(e){
     for (const label of document.querySelectorAll('.A2_Elementary-L #dropdown-elementary-listening-3 .options')) {
         const input = label.children[0];
         input.addEventListener('change', function(e) {
-            for (const option of document.querySelectorAll('.A2_Elementary-L #dropdown-elementary-listening-3 .options')) {
-                if (option.children[0].name == this.name) {
-                    option.classList.remove('circled');
+            if (input.type != 'checkbox') {
+                for (const option of document.querySelectorAll('.A2_Elementary-L #dropdown-elementary-listening-3 .options')) {
+                    if (option.children[0].name == this.name) {
+                        option.classList.remove('circled');
+                    }
                 }
             }
             label.classList.remove('circled');
@@ -246,6 +253,9 @@ document.addEventListener('DOMContentLoaded', function(e){
         });
     }
 
+    // ? B1 Progress Writing
+    addCrossOptionsEvent(document.querySelectorAll('.B1_Progress-RW #dropdown-progress-writing-5 select'));
+
     // ? B2 Competency Listening
     for (const label of document.querySelectorAll('.B2_Competency-L #dropdown-competency-listening-1 .options')) {
         const input = label.children[0];
@@ -261,4 +271,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             }
         });
     }
+
+    // ? B2 Competency Writing
+    addCrossOptionsEvent(document.querySelectorAll('.B2_Competency-RW #dropdown-competency-writing-5 select'));
 });

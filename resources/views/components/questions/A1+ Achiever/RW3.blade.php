@@ -10,22 +10,52 @@
 
         <div class="row justify-content-center py-4">
             <ol class="info list-data col-10 mb-4 d-flex justify-content-center">
-                <li class="inline mx-lg-2">Always</li>
-                <li class="inline mx-lg-2">Sometimes</li>
-                <li class="inline mx-lg-2">Never</li>
-                <li class="inline mx-lg-2">Frequently</li>
-                <li class="inline mx-lg-2">Hardly Ever</li>
+                <li class="inline mx-lg-2 crossed" id="Always">Always</li>
+                <li class="inline mx-lg-2" id="Sometimes">Sometimes</li>
+                <li class="inline mx-lg-2" id="Never">Never</li>
+                <li class="inline mx-lg-2" id="Frequently">Frequently</li>
+                <li class="inline mx-lg-2" id="Hardly_Ever">Hardly Ever</li>
             </ol>
 
             <div class="my-5">
                 <img class="img-fluid coffee" src="/img/recursos/cup.png" alt="Coffee">
             </div>
             
-            <p class="complete col-12 mb-4"><b>a.</b> Susana: I<input name="A1_Achiever:RW3[1]" class="input input-long" type="text">have a cup of tea in the morning.</p>
-            <p class="complete col-12 mb-4"><b>b.</b> Alicia: I<input name="A1_Achiever:RW3[2]" class="input input-long" type="text">drink tea. I love it!</p>
-            <p class="complete col-12 mb-4"><b>c.</b> Luis: I<input name="A1_Achiever:RW3[3]" class="input input-long" type="text">drink tea with breakfast.</p>
-            <p class="complete col-12 mb-4"><b>d.</b> Paula: I<input name="A1_Achiever:RW3[4]" class="input input-long" type="text">drink tea. I prefer coffee.</p>
-            <p class="complete col-12 mb-4"><b>e.</b> Juan: I<input name="A1_Achiever:RW3[5]" class="input input-long" type="text">have tea before going to school.</p>
+            <p class="complete col-12 mb-4"><b>a.</b> Susana: I <select class="mx-2" name="A1_Achiever:RW3[1]">
+                    <option selected>Always</option>
+                    <option>Sometimes</option>
+                    <option>Never</option>
+                    <option>Frequently</option>
+                    <option>Hardly Ever</option>
+                </select>have a cup of tea in the morning.</p>
+            <p class="complete col-12 mb-4"><b>b.</b> Alicia: I<select class="mx-2" name="A1_Achiever:RW3[2]">
+                <option selected>Always</option>
+                <option>Sometimes</option>
+                <option>Never</option>
+                <option>Frequently</option>
+                <option>Hardly Ever</option>
+            </select>drink tea. I love it!</p>
+            <p class="complete col-12 mb-4"><b>c.</b> Luis: I<select class="mx-2" name="A1_Achiever:RW3[3]">
+                <option selected>Always</option>
+                <option>Sometimes</option>
+                <option>Never</option>
+                <option>Frequently</option>
+                <option>Hardly Ever</option>
+            </select>drink tea with breakfast.</p>
+            <p class="complete col-12 mb-4"><b>d.</b> Paula: I<select class="mx-2" name="A1_Achiever:RW3[4]">
+                <option selected>Always</option>
+                <option>Sometimes</option>
+                <option>Never</option>
+                <option>Frequently</option>
+                <option>Hardly Ever</option>
+            </select>drink tea. I prefer coffee.</p>
+            <p class="complete col-12 mb-4"><b>e.</b> Juan: I<select class="mx-2" name="A1_Achiever:RW3[5]">
+                <option selected>Always</option>
+                <option>Sometimes</option>
+                <option>Never</option>
+                <option>Frequently</option>
+                <option>Hardly Ever</option>
+            </select>have tea before going to school.</p>
         </div>
     </main>
 </section>

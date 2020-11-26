@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 // ? Desactivar F5
 $(document).on("keydown", function(e) {
-    if (enviroment == 'production' && evaluation.candidate > 1) {
+    if (enviroment == 'production' && id_evaluation > 1) {
         if ((e.which || e.keyCode) == 116) e.preventDefault();
     }
 });
@@ -26,6 +26,25 @@ $(document).on("keydown", function(e) {
 async function getEnviroment(){
     let response = await FetchServiceProvider.getData(`/api/server/enviroment`);
     enviroment = response.getResponse('data');
+
+    if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
+        let found = false;
+        if (enviroment == 'production' && id_evaluation > 1) {
+            let module = LocalStorageServiceProvider.getData('Path_Exam_Module').data;
+            for (const currentModule of evaluation.exam.modules) {
+                if (module == `${parseFolder(currentModule.folder)}-${currentModule.initials}`) {
+                    found = true;
+                }
+            }
+            if (found) {
+                nextModule(tab, module);
+            } else {
+                LocalStorageServiceProvider.removeData('Path_Exam_Module');
+            }
+        } else {
+            LocalStorageServiceProvider.removeData('Path_Exam_Module');
+        }
+    }
 } 
 
 // ? Qué es esto?
@@ -135,8 +154,10 @@ function updateSaveTimer(data = undefined){
             data.countdown.stop();
         }
     } else {
-        let timer = document.querySelector('.save-button .timer');
-        timer.innerHTML = `in...`;
+        if (document.querySelector('.save-button .timer')) {
+            let timer = document.querySelector('.save-button .timer');
+            timer.innerHTML = `in...`;
+        }
     }
 }
 
@@ -698,21 +719,4 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     setTimeIntervalAutoSave();
     
     getEnviroment();
-
-    if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
-        let found = false;
-        if (enviroment == 'production' && id_evaluation > 1) {
-            let module = LocalStorageServiceProvider.getData('Path_Exam_Module').data;
-            for (const currentModule of evaluation.exam.modules) {
-                if (module == `${parseFolder(currentModule.folder)}-${currentModule.initials}`) {
-                    found = true;
-                }
-            }
-        }
-        if (found) {
-            nextModule(tab, module);
-        } else {
-            LocalStorageServiceProvider.removeData('Path_Exam_Module');
-        }
-    }
 });

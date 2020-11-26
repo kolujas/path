@@ -622,6 +622,11 @@ select {
     font-style: italic;
 }
 
+.B1_Progress-RW #dropdown-progress-writing-5 .info,
+.B2_Competency-RW #dropdown-competency-writing-5 .info {
+    padding: 2rem;
+}
+
 .info .title {
     font-style: normal;
     font-weight: bolder;

@@ -78,7 +78,8 @@
             <h3 style="padding-top: 2rem;">5. Write an essay on <mark>one</mark> of the following topics, giving examples.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:RW5'][1]) !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ nl2br($answers['B2_Competency:RW5'][1]) }}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:RW5'][2]) !!}</mark></p>
         </main>
     </section>
 @endsection
