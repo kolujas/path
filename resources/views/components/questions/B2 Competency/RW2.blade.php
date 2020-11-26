@@ -6,10 +6,10 @@
         </button>
     </a>
     <main class="dropdown-menu-content two-question-container px-xl-4">
-        <div class="row d-flex justify-content-center ml-1 py-4 px-2 px-md-3">
-            <p class="complete col-12 mb-4"><b>a.</b> You would like to enter a restaurant but two elderly ladies are standing in the entrance having a conversation. What do you say to them? <input name="B2_Competency:RW2[1]" class="input input-medium text-left w-75" type="text"></p>
-            <p class="complete col-12 mb-4"><b>b.</b> You are in a taxi when the driver makes an unexpected turn. You think he is now driving in the wrong direction. What do you say? <input name="B2_Competency:RW2[2]" class="input input-medium text-left w-75" type="text"></p>
-            <p class="complete col-12 mb-4"><b>c.</b> A passing policeman takes you by the arm and says “I’m arresting you..” but you haven’t done anything! What do you say? <input name="B2_Competency:RW2[3]" class="input input-medium text-left w-75" type="text"></p>
-        </div>
+        <div class="row d-flex justify-content-center ml-1 py-4 px-2 px-md-3 complete">
+            <p class="complete col-12 mb-4"><b>a.</b> You would like to enter a restaurant but two elderly ladies are standing in the entrance having a conversation. What do you say to them?</p><textarea name="B2_Competency:RW2[1]" class="input input-medium text-left w-75 pl-2"></textarea>
+            <p class="complete col-12 mb-4"><b>b.</b> You are in a taxi when the driver makes an unexpected turn. You think he is now driving in the wrong direction. What do you say?</p><textarea name="B2_Competency:RW2[2]" class="input input-medium text-left w-75"></textarea>
+            <p class="complete col-12 mb-4"><b>c.</b> A passing policeman takes you by the arm and says “I’m arresting you..” but you haven’t done anything! What do you say?</p><textarea name="B2_Competency:RW2[3]" class="input input-medium text-left w-75"></textarea>
+        </div>        
     </main>
 </section>

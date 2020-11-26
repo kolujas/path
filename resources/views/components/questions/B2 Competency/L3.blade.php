@@ -28,7 +28,7 @@
         </div> 
 
         <div class="dropdown-header px-0">
-            <span>Now write your report. (you will have 20 minutes to complete this task once the recording has finished).</span>
+            <span>Now write your report.</span>
         </div> 
 
         <div class="py-4">
