@@ -584,7 +584,7 @@ document.addEventListener('visibilitychange', function(){
                 $('.modal-strikes').modal();
             }else{
                 strikesInput.value++;
-                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked. If you close or refresh this page, your exam will be avoided.";
+                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked. If you close or refresh this page, your exam will be voided.";
                 $('.modal-strikes').modal();
             }
         }
