@@ -917,6 +917,21 @@ select {
     max-height: 450vh;
 }
 
+.subject{
+    top: 0;
+    left: 1px;
+    background-color: #f8f7f7;
+    padding: .25rem .6rem;
+    z-index: 5;
+    font-weight: bold;
+}
+
+#subject{
+    padding: .2rem;
+    bottom: 2rem;
+    padding-left: 5.1rem;
+}
+
 /* * MD */
 
 @media(min-width: 768px) {    
