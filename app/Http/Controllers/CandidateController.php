@@ -171,7 +171,7 @@
             } else {
                 return redirect("/panel/candidates")->with('status', [
                     'code' => 500,
-                    'message' => "$candidate->full_name can not be deleted because there is a Record from his Evaluation.",
+                    'message' => "$candidate->full_name can not be deleted because there is a record from his evaluation.",
                 ]);
             }
         }

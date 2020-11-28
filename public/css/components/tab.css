@@ -51,7 +51,7 @@
     }
 
     .tab-menu.horizontal .tabs {
-        padding: 0 calc(((100% - 66.6666666667%) / 2 + 1rem));
+        padding: 0 calc(((100% - 66.6666666667%) / 2 + 1rem)) 0 calc(((100% - 66.6666666667%) / 2 + 1rem) - 5rem);
     }
 
     .tab-menu.vertical .tabs{

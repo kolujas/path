@@ -24,7 +24,7 @@
             }else{
                 $request->session()->put('error', [
                     'code' => 403,
-                    'message' => 'You are not a Candidate in this Exam.',
+                    'message' => 'You are not a candidate in this exam.',
                 ]);
                 return redirect('/');
             }

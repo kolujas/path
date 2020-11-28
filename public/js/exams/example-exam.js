@@ -1,5 +1,6 @@
 import { TabMenu as TabMenuJS } from "../../submodules/TabMenuJS/js/TabMenu.js";
 import { NavMenu } from "../../submodules/NavMenuJS/js/NavMenu.js";
+import { ScrollDetection } from "../../submodules/ScrollDetectionJS/js/ScrollDetection.js";
 import { URLServiceProvider } from "../providers/URLServiceProvider.js";
 import { FetchServiceProvider } from "../providers/FetchServiceProvider.js";
 import { CountDown } from "../CountDown.js";
@@ -118,6 +119,14 @@ function copyToClipboard() {
     dummy.select();
     document.execCommand("copy");
     document.body.removeChild(dummy);
+    let strikeInput = document.querySelector('.strikes');
+    if(!strikesInput.value){
+        strikesInput.value = 0;        
+    }
+    strikesInput.value++;
+    if (strikesInput.value >= 3) {
+        window.location.href = `/exam/${ id_evaluation }/strikes`;
+    }
 }
 
 $(window).keyup(function(e){
@@ -278,7 +287,7 @@ async function sendData(){
     setLoadingState();
     let response = await FetchServiceProvider.setData({
         method: 'POST',
-        url: `/api/exam/${evaluation.id_evaluation}/record`,
+        url: `/api/exam/${id_evaluation}/record`,
     }, {
         'Accept': 'application/json',
         'Content-type': 'application/json; charset=UTF-8',
@@ -562,7 +571,7 @@ function NotSeeingPage(params){
 function TenSecondsEnded(params){
     if (enviroment == 'production' && id_evaluation > 1) {
         if (document.querySelector('.modal-strikes').style.display != 'none') {
-            window.location.href = `/exam/${ evaluation.id_evaluation }/10-seconds`;
+            window.location.href = `/exam/${ id_evaluation }/10-seconds`;
         }
     }
 }
@@ -598,7 +607,7 @@ document.addEventListener('visibilitychange', function(){
                     }
                 });
                 if (strikesInput.value >= 3) {
-                    window.location.href = `/exam/${ evaluation.id_evaluation }/strikes`;
+                    window.location.href = `/exam/${ id_evaluation }/strikes`;
                 }
                 strikesInput.value++;
                 modalStrikesMessage.innerHTML = "Your exam has been marked.";
@@ -630,6 +639,24 @@ $(document).mouseleave(function () {
 //     return "WARNING! All progress done will be lost once you abandon this page.";
 // };
 
+function fix(params) {
+    let tabs = document.querySelector('.tabs');
+    if(!tabs.classList.contains('fixed')){
+        tabs.classList.add('fixed');
+        let substitute = document.createElement('aside');
+        substitute.classList.add('substitute');
+        tabs.parentNode.insertBefore(substitute, tabs);
+    }
+}
+
+function breakFix(params) {
+    let tabs = document.querySelector('.tabs');
+    if(tabs.classList.contains('fixed')){
+        tabs.classList.remove('fixed');
+        tabs.parentNode.removeChild(document.querySelector('.substitute'));
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async function (e) {
     let formData = new FormData(form),
         token = formData.get('_token');
@@ -656,6 +683,18 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             open: [choosen],
             noClick: true,
         });
+        new ScrollDetection({
+            location: {
+                min: 0, max: document.querySelector('.tabs').offsetHeight + document.querySelector('body > header').offsetHeight
+            }, direction: 'Y',
+        }, {
+            success: {
+                functionName: breakFix,
+                params: {}
+            }, error: {
+                functionName: fix,
+                params: {}
+        }});
     }
 
     let navmenu = new NavMenu({

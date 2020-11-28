@@ -61,15 +61,15 @@
                     'modules' => 'required',
                 ], 'messages' => [
                     'en' => [
-                        'candidate_number.required' => 'Candidate Number is required.',
-                        'candidate_number.numeric' => 'Candidate Number must be numeric.',
-                        'candidate_number.unique' => 'Candidate Number has already been assigned.',
+                        'candidate_number.required' => 'Candidate number is required.',
+                        'candidate_number.numeric' => 'Candidate number must be numeric.',
+                        'candidate_number.unique' => 'Candidate number has already been assigned.',
                         'full_name.min' => 'Full name cannot be less than :min characters.',
                         'full_name.max' => 'Full name cannot be more than :max characters.',
                         'date_of_birth.date' => 'Date of birth must be a valid date (1999-05-24).',
-                        'id_member.required' => 'Memeber ID is required.',
-                        'id_member.numeric' => 'Memeber ID must be numeric.',
-                        'modules.required' => 'A Module must be selected.',
+                        'id_member.required' => 'Member ID is required.',
+                        'id_member.numeric' => 'Member ID must be numeric.',
+                        'modules.required' => 'A module must be selected.',
                     ],
                 ],
             ],'edit' => [
@@ -82,15 +82,15 @@
                     'modules' => 'required',
                 ], 'messages' => [
                     'en' => [
-                        'candidate_number.required' => 'Candidate Number is required.',
-                        'candidate_number.numeric' => 'Candidate Number must be numeric.',
-                        'candidate_number.unique' => 'Candidate Number has already been assigned.',
+                        'candidate_number.required' => 'Candidate number is required.',
+                        'candidate_number.numeric' => 'Candidate number must be numeric.',
+                        'candidate_number.unique' => 'Candidate number has already been assigned.',
                         'full_name.min' => 'Full name cannot be less than :min characters.',
                         'full_name.max' => 'Full name cannot be more than :max characters.',
                         'date_of_birth.date' => 'Date of birth must be a valid date (1999-05-24).',
-                        'id_member.required' => 'Memeber ID is required.',
-                        'id_member.numeric' => 'Memeber ID must be numeric.',
-                        'modules.required' => 'A Module must be selected.',
+                        'id_member.required' => 'Member ID is required.',
+                        'id_member.numeric' => 'Member ID must be numeric.',
+                        'modules.required' => 'A module must be selected.',
                     ],
                 ],
             ],'csv' => [

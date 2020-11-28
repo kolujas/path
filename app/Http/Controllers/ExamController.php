@@ -119,7 +119,7 @@
                 if($evaluation->logged_in >= 1){
                     return redirect("/exam/$evaluation->id_evaluation/rules")->with('status', [
                         'code' => 403,
-                        'message' => 'You have already logged in at the Exam once.',
+                        'message' => 'You have already logged in.',
                     ]);
                 }
             }
@@ -353,7 +353,7 @@
             } else {
                 return redirect("/panel/exams")->with('status', [
                     'code' => 500,
-                    'message' => "$exam->name can not be deleted because there is a Record from a Candidate Evaluation.",
+                    'message' => "$exam->name can not be deleted because there is a record from a candidate evaluation.",
                 ]);
             }
         }
@@ -374,13 +374,13 @@
                 case 'strikes':
                     $data = [
                         'title' => 'Exam voided',
-                        'message' => 'This Exam has been voided',
+                        'message' => 'This exam has been voided',
                     ];
                     break;
                 case '10-seconds':
                     $data = [
                         'title' => 'Exam voided',
-                        'message' => 'This Exam has been voided',
+                        'message' => 'This exam has been voided',
                     ];
                     break;
                 default:

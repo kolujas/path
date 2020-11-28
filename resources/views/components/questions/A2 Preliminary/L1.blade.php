@@ -21,9 +21,10 @@
         </div>
 
         <div class="row justify-content-center pt-4">
-            <div class="card col-12 col-md-6 col-lg-3 mx-lg-3 mb-4 mb-lg-0">
+            <div class="card col-3 col-lg-3 mx-3 mb-4 position-relative">
+                <span class="question-number">1</span>
                 <img src="../../img/recursos/A2-PRELIMINARY-L-1.png" class="img-fluid utiles" alt="image-one-question-one">
-                <div class="card-body mx-auto">
+                <div class="card-body mx-auto p-0">
                     <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
                         <li class="answers inline mx-lg-2"><label class="options p-2"><input type="radio" name="A2_Preliminary:L1[1a]" value="Ben">Ben</label></li>
                         <li class="d-inline-flex align-items-center inline mx-lg-2">/</li>
@@ -33,9 +34,9 @@
                     </ol>
                 </div>
             </div>
-            <div class="card col-12 col-md-6 col-lg-3 mx-lg-3 mb-4 mb-lg-0">
+            <div class="card col-3 col-lg-3 mx-3 mb-4">
                 <img src="../../img/recursos/A2-PRELIMINARY-L-1.1.png" class="img-fluid utiles" alt="image-one-question-one">
-                <div class="card-body mx-auto">
+                <div class="card-body mx-auto p-0">
                     <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
                         <li class="answers inline mx-lg-2"><label class="options p-2"><input type="radio" name="A2_Preliminary:L1[1b]" value="Ben">Ben</label></li>
                         <li class="d-inline-flex align-items-center inline mx-lg-2">/</li>
@@ -45,9 +46,9 @@
                     </ol>
                 </div>
             </div>
-            <div class="card col-12 col-md-6 col-lg-3 mx-lg-3 mb-4 mb-lg-0">
+            <div class="card col-3 col-lg-3 mx-3 mb-4">
                 <img src="../../img/recursos/A2-PRELIMINARY-L-1.2.png" class="img-fluid utiles" alt="image-one-question-one">
-                <div class="card-body mx-auto">
+                <div class="card-body mx-auto p-0">
                     <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
                         <li class="answers inline mx-lg-2"><label class="options p-2"><input type="radio" name="A2_Preliminary:L1[1c]" value="Ben">Ben</label></li>
                         <li class="d-inline-flex align-items-center inline mx-lg-2">/</li>
@@ -59,9 +60,10 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="card col-12 col-md-6 col-lg-3 mx-lg-3 mb-4 mb-lg-0">
+            <div class="card col-3 col-lg-3 mx-3 mb-4 position-relative">
+                <span class="question-number">2</span>
                 <img src="../../img/recursos/A2-PRELIMINARY-L-1.3.png" class="img-fluid utiles" alt="image-one-question-one">
-                <div class="card-body mx-auto">
+                <div class="card-body mx-auto p-0">
                     <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
                         <li class="answers inline mx-lg-2"><label class="options p-2"><input type="radio" name="A2_Preliminary:L1[2a]" value="56">56</label></li>
                         <li class="d-inline-flex align-items-center inline mx-lg-2">/</li>
@@ -71,9 +73,9 @@
                     </ol>
                 </div>
             </div>
-            <div class="card col-12 col-md-6 col-lg-3 mx-lg-3 mb-4 mb-lg-0">
+            <div class="card col-3 col-lg-3 mx-3 mb-4">
                 <img src="../../img/recursos/A2-PRELIMINARY-L-1.4.png" class="img-fluid utiles" alt="image-one-question-one">
-                <div class="card-body mx-auto">
+                <div class="card-body mx-auto p-0">
                     <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
                         <li class="answers inline mx-lg-2"><label class="options p-2"><input type="radio" name="A2_Preliminary:L1[2b]" value="56">56</label></li>
                         <li class="d-inline-flex align-items-center inline mx-lg-2">/</li>
@@ -83,9 +85,9 @@
                     </ol>
                 </div>
             </div>
-            <div class="card col-12 col-md-6 col-lg-3 mx-lg-3 mb-4 mb-lg-0">
+            <div class="card col-3 col-lg-3 mx-3 mb-4">
                 <img src="../../img/recursos/A2-PRELIMINARY-L-1.5.png" class="img-fluid utiles" alt="image-one-question-one">
-                <div class="card-body mx-auto">
+                <div class="card-body mx-auto p-0">
                     <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
                         <li class="answers inline mx-lg-2"><label class="options p-2"><input type="radio" name="A2_Preliminary:L1[2c]" value="56">56</label></li>
                         <li class="d-inline-flex align-items-center inline mx-lg-2">/</li>
@@ -97,9 +99,10 @@
             </div>
         </div>
         <div class="row justify-content-center pb-4">
-            <div class="card col-12 col-md-6 col-lg-3 mx-lg-3 mb-4 mb-lg-0">
+            <div class="card col-3 col-lg-3 mx-3 mb-4 position-relative">
+                <span class="question-number">3</span>
                 <img src="../../img/recursos/A2-PRELIMINARY-L-1.6.png" class="img-fluid utiles" alt="image-one-question-one">
-                <div class="card-body mx-auto">
+                <div class="card-body mx-auto p-0">
                     <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
                         <li class="answers inline mx-lg-2"><label class="options p-2"><input type="radio" name="A2_Preliminary:L1[3a]" value="2A">2A</label></li>
                         <li class="d-inline-flex align-items-center inline mx-lg-2">/</li>
@@ -109,9 +112,9 @@
                     </ol>
                 </div>
             </div>
-            <div class="card col-12 col-md-6 col-lg-3 mx-lg-3 mb-4 mb-lg-0">
+            <div class="card col-3 col-lg-3 mx-3 mb-4">
                 <img src="../../img/recursos/A2-PRELIMINARY-L-1.7.png" class="img-fluid utiles" alt="image-one-question-one">
-                <div class="card-body mx-auto">
+                <div class="card-body mx-auto p-0">
                     <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
                         <li class="answers inline mx-lg-2"><label class="options p-2"><input type="radio" name="A2_Preliminary:L1[3b]" value="2A">2A</label></li>
                         <li class="d-inline-flex align-items-center inline mx-lg-2">/</li>
@@ -121,9 +124,9 @@
                     </ol>
                 </div>
             </div>
-            <div class="card col-12 col-md-6 col-lg-3 mx-lg-3 mb-4 mb-lg-0">
+            <div class="card col-3 col-lg-3 mx-3 mb-4">
                 <img src="../../img/recursos/A2-PRELIMINARY-L-1.8.png" class="img-fluid utiles" alt="image-one-question-one">
-                <div class="card-body mx-auto">
+                <div class="card-body mx-auto p-0">
                     <ol class="answer-words d-flex justify-content-around justify-content-lg-center">
                         <li class="answers inline mx-lg-2"><label class="options p-2"><input type="radio" name="A2_Preliminary:L1[3c]" value="2A">2A</label></li>
                         <li class="d-inline-flex align-items-center inline mx-lg-2">/</li>

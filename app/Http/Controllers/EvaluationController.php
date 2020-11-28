@@ -33,7 +33,7 @@
             } else {
                 return (object)[
                     'code' => 500,
-                    'message' => 'An Evaluation can not be deleted.',
+                    'message' => 'An evaluation can not be deleted.',
                 ];
             }
         }
@@ -64,7 +64,7 @@
             } else {
                 return (object)[
                     'code' => 500,
-                    'message' => 'An Evaluation can not be deleted.',
+                    'message' => 'An evaluation can not be deleted.',
                 ];
             }
         }

@@ -52,7 +52,7 @@
                     'strikes' => 'required',
                 ], 'messages' => [
                     'en' => [
-                        'strikes.required' => 'The Strikes are required.',
+                        'strikes.required' => 'The strikes are required.',
                     ],
                 ],
             ],

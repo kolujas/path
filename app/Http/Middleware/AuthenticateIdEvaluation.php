@@ -18,7 +18,7 @@
             if(!$evaluation = Evaluation::find($id_evaluation)){
                 $request->session()->put('error', [
                     'code' => 404,
-                    'message' => 'This Evaluation does not exist.',
+                    'message' => 'This evaluation does not exist.',
                 ]);
                 return redirect('/');
             }
