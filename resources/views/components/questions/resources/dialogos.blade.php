@@ -51,9 +51,9 @@ select[disabled]{
 	 viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;stroke:#014969;stroke-width:2;stroke-miterlimit:10;}
-	.st1{fill:#FFFFFF;stroke:#FBFF1F;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:;stroke-width:2;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:#014969;stroke-width:2;stroke-miterlimit:10;}
-	.st3{fill:none;stroke:#FBFF1F;stroke-width:2;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:;stroke-width:2;stroke-miterlimit:10;}
 </style>
 <image style="overflow:visible;" width="1366" height="665" xlink:href="{{asset('img/personajes.jpg')}}"  transform="matrix(1 0 0 1 -2.16 64.44)">
 </image>
