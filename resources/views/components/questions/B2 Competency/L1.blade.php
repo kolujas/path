@@ -24,33 +24,33 @@
             <p class="complete col-12 mb-4"><b>a.</b> Alex...</p>
 
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
-                <li class="col-8 mx-lg-2">a. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[1]" value="...believes he should be respectful with his ex-teacher at all times">believes he should be respectful with his ex-teacher at all times.</label></li>
-                <li class="col-8 mx-lg-2">b. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[1]" value="...finds it easy to be on casual terms with his ex-teacher">finds it easy to be on casual terms with his ex-teacher.</label></li>
-                <li class="col-8 mx-lg-2">c. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[1]" value="...feels uneasy about referring to his ex-teacher by her first name">feels uneasy about referring to his ex-teacher by her first name.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">a. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[1]" value="...believes he should be respectful with his ex-teacher at all times">believes he should be respectful with his ex-teacher at all times.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">b. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[1]" value="...finds it easy to be on casual terms with his ex-teacher">finds it easy to be on casual terms with his ex-teacher.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">c. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[1]" value="...feels uneasy about referring to his ex-teacher by her first name">feels uneasy about referring to his ex-teacher by her first name.</label></li>
             </ol>
             
             <p class="complete col-12 mb-4"><b>b.</b> Alex...</p>
 
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
-                <li class="col-8 mx-lg-2">a. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[2]" value="...has two daughters from a previous marriage">has two daughters from a previous marriage.</label></li>
-                <li class="col-8 mx-lg-2">b. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[2]" value="...has two daughters from his current marriage">has two daughters from his current marriage.</label></li>
-                <li class="col-8 mx-lg-2">c. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[2]" value="...has one daughter from a previous marriage, and one from his current marriage">has one daughter from a previous marriage, and one from his current marriage.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">a. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[2]" value="...has two daughters from a previous marriage">has two daughters from a previous marriage.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">b. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[2]" value="...has two daughters from his current marriage">has two daughters from his current marriage.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">c. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[2]" value="...has one daughter from a previous marriage, and one from his current marriage">has one daughter from a previous marriage, and one from his current marriage.</label></li>
             </ol>
 
             <p class="complete col-12 mb-4"><b>c.</b> Zoe...</p>
 
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
-                <li class="col-8 mx-lg-2">a. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[3]" value="...is fully up to date with information technology">is fully up to date with information technology.</label></li>
-                <li class="col-8 mx-lg-2">b. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[3]" value="...prefers traditional technologies">prefers traditional technologies.</label></li>
-                <li class="col-8 mx-lg-2">c. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[3]" value="...uses a tablet with an electronic pen">uses a tablet with an electronic pen.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">a. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[3]" value="...is fully up to date with information technology">is fully up to date with information technology.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">b. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[3]" value="...prefers traditional technologies">prefers traditional technologies.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">c. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[3]" value="...uses a tablet with an electronic pen">uses a tablet with an electronic pen.</label></li>
             </ol>
             
             <p class="complete col-12 mb-4"><b>d.</b> Zoe...</p>
 
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
-                <li class="col-8 mx-lg-2">a. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[4]" value="...thought the food in Mexico was awful">thought the food in Mexico was awful.</label></li>
-                <li class="col-8 mx-lg-2">b. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[4]" value="...thought the food in Mexico could kill you">thought the food in Mexico could kill you.</label></li>
-                <li class="col-8 mx-lg-2">c. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[4]" value="...thought the food in Mexico was delicious">thought the food in Mexico was delicious.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">a. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[4]" value="...thought the food in Mexico was awful">thought the food in Mexico was awful.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">b. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[4]" value="...thought the food in Mexico could kill you">thought the food in Mexico could kill you.</label></li>
+                <li class="col-8 mx-lg-2 competency-L1-lis">c. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[4]" value="...thought the food in Mexico was delicious">thought the food in Mexico was delicious.</label></li>
             </ol>
         </div>
     </main>

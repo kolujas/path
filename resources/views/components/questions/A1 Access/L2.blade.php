@@ -1,6 +1,6 @@
 <section id="dropdown-access-listening-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>2. You will hear Emma asking her friend Lois what she likes to eat and drink. Complete the table showing what she Loves ( <i class="icon fas fa-heart"></i> ), Likes ( <i class="icon fas fa-check"></i> ) and Doesn't like ( <i class="icon fas fa-times"></i> ).<mark>One has been done for you</mark>.</span>
+        <span>2. You will hear Emma asking her friend Lois what she likes to eat and drink. Complete the table showing what she Loves (<i class="icon fas fa-heart"></i>), Likes (<i class="icon fas fa-check"></i>) and Doesn't like (<span class="font-weight-bold">X</span>).<mark>One has been done for you</mark>.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>

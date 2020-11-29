@@ -19,7 +19,10 @@
                 </button>
             </div>
 		</div>
-		
+
+		<div class="text-center font-weight-bold mb-1">
+			<span>Wining Card</span>
+		</div>
 		<select name="A1_Achiever:L2[1]" class="d-block mx-auto mb-4">
 			<option selected>1</option>
 			<option>2</option>
