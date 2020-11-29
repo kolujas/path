@@ -11,4 +11,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 
-/database/seeds
+/database/seeds/UserSeeder.php
+/database/seeds/ExamSeeder.php
+/database/seeds/CandidateSeeder.php
+/database/seeds/EvaluationSeeder.php
