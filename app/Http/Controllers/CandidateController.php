@@ -3,6 +3,7 @@
 
     use App\Models\Candidate;
     use App\Models\Module;
+    use Auth;
     use Cviebrock\EloquentSluggable\Services\SlugService;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Validator;
@@ -55,6 +56,7 @@
             }
 
             $input->slug = SlugService::createSlug(Candidate::class, 'slug', $input->full_name);
+            $input->id_user = Auth::user()->id_user;
             
             $candidate = Candidate::create((array) $input);
             
@@ -93,6 +95,7 @@
                     }
                 }
                 if($i > 0){
+                    $input[$i]->id_user = Auth::user()->id_user;
                     $candidates->push(Candidate::create((array) $input[$i]));
                 }
                 $i++;
@@ -137,6 +140,7 @@
                 }
             }
             
+            $input->id_user = Auth::user()->id_user;
             $candidate->update((array) $input);
 
             if($candidate->full_name){

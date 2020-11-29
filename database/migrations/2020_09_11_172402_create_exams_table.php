@@ -17,6 +17,7 @@
                 $table->string('password');
                 $table->date('scheduled_date_time');
                 $table->string('slug');
+                $table->unsignedInteger('id_user');
                 $table->timestamps();
             });
         }

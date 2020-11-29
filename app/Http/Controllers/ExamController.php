@@ -182,6 +182,7 @@
 
             $input->scheduled_date_time = preg_replace('/T/', ' ', $input->scheduled_date_time);
             $input->scheduled_date_time = preg_replace('/-/', '/', $input->scheduled_date_time);
+            $input->id_user = Auth::user()->id_user;
             
             $exam = Exam::create((array) $input);
             
@@ -234,6 +235,7 @@
                     }
                 }
                 if($i > 0){
+                    $input[$i]->id_user = Auth::user()->id_user;
                     $exam = Exam::create((array) $input[$i]);
                     $exams->push($exam);
 
@@ -286,6 +288,7 @@
 
             $input->scheduled_date_time = preg_replace('/T/', ' ', $input->scheduled_date_time);
             $input->scheduled_date_time = preg_replace('/-/', '/', $input->scheduled_date_time);
+            $input->id_user = Auth::user()->id_user;
             
             $exam->update((array) $input);
             $evaluations = collect([]);

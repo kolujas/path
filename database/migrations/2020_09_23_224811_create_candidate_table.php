@@ -21,6 +21,7 @@
                 $table->string('modules');
                 $table->string('file')->nullable();
                 $table->string('slug');
+                $table->unsignedInteger('id_user');
                 $table->rememberToken();
                 $table->timestamps();
             });
