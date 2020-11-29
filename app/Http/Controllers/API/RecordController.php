@@ -47,8 +47,14 @@
                     'message' => 'Validation error.',
                 ]);
             }
+            $permissions = false;
+            foreach($candidate->modules() as $module) {
+                if ($module->folder == 'DEMO') {
+                    $permissions = true;
+                }
+            }
 
-            if ($candidate->id_candidate > 1) {
+            if (!$permissions) {
                 $filePath = "storage/records/$evaluation->id_evaluation.pdf";
                 $pdf = false;
                 $data = (object) [

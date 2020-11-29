@@ -82,8 +82,7 @@
                 ] );
             }
             
-            $candidate = Candidate::where('candidate_number', '=', $input->data)->get();
-            $candidate = $candidate[0];
+            $candidate = Candidate::where('candidate_number', '=', $input->data)->get()[0];
             $evaluations = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
 
             $found = false;
@@ -101,8 +100,14 @@
                     'message' => 'Exam not found.',
                 ]);
             }
+            $permissions = false;
+            foreach($candidate->modules() as $module) {
+                if ($module->folder == 'DEMO') {
+                    $permissions = true;
+                }
+            }
 
-            if (App::environment('local') || $candidate->id_candidate == 1) {
+            if (App::environment('local') || $permissions) {
                 $exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
             }
             Auth::guard('candidates')->login($candidate, false);

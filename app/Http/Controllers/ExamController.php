@@ -123,8 +123,14 @@
                     ]);
                 }
             }
-            
-            if (App::environment('local') || $candidate->id_candidate == 1) {
+            $permissions = false;
+            foreach($candidate->modules() as $module) {
+                if ($module->folder == 'DEMO') {
+                    $permissions = true;
+                }
+            }
+
+            if (App::environment('local') || $permissions) {
                 $evaluation->exam->update(['scheduled_date_time' => Carbon::now()->toDateTimeString()]);
             } else {
                 $evaluation->update(['logged_in' => $evaluation->logged_in + 1]);
@@ -133,6 +139,7 @@
 
             return view('exams.example-exam', [
                 'evaluation' => $evaluation,
+                'permissions' => $permissions,
             ]);
         }
         

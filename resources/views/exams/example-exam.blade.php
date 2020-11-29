@@ -59,6 +59,7 @@
 @section('js')
     <script>
         const id_evaluation = {{ $evaluation->id_evaluation }};
+        const permissions = {{ $permissions }};
     </script>
     <script type="module" src={{ asset('js/exams/example-exam.js') }}></script>
     <script type="module" src={{ asset('js/exams/exercises.js') }}></script>

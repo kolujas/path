@@ -45,8 +45,14 @@
             if($validator->fails()){
                 return redirect("/exam/$evaluation->id_evaluation/rules")->withErrors($validator)->withInput();
             }
+            $permissions = false;
+            foreach($modules as $module) {
+                if ($module->folder == 'DEMO') {
+                    $permissions = true;
+                }
+            }
 
-            if ($candidate->id_candidate > 1) {
+            if (!$permissions) {
                 $pdf = false;
                 $data = (object) [
                     'evaluation' => $evaluation,

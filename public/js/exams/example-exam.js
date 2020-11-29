@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 // ? Desactivar F5
 $(document).on("keydown", function(e) {
-    if (enviroment == 'production' && id_evaluation > 1) {
+    if (enviroment == 'production' && !permissions) {
         if ((e.which || e.keyCode) == 116) e.preventDefault();
     }
 });
@@ -30,7 +30,7 @@ async function getEnviroment(){
 
     if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
         let found = false;
-        if (enviroment == 'production' && id_evaluation > 1) {
+        if (enviroment == 'production' && !permissions) {
             let module = LocalStorageServiceProvider.getData('Path_Exam_Module').data;
             for (const currentModule of evaluation.exam.modules) {
                 if (module == `${parseFolder(currentModule.folder)}-${currentModule.initials}`) {
@@ -569,7 +569,7 @@ function NotSeeingPage(params){
 }
 
 function TenSecondsEnded(params){
-    if (enviroment == 'production' && id_evaluation > 1) {
+    if (enviroment == 'production' && !permissions) {
         if (document.querySelector('.modal-strikes').style.display != 'none') {
             window.location.href = `/exam/${ id_evaluation }/10-seconds`;
         }
@@ -580,7 +580,7 @@ function TenSecondsEnded(params){
 const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
 const strikesInput = document.querySelector('.strikes');
 document.addEventListener('visibilitychange', function(){ 
-    if (enviroment == 'production' && id_evaluation > 1) {
+    if (enviroment == 'production' && !permissions) {
         if(document.visibilityState == 'hidden'){
             if(!strikesInput.value){
                 strikesInput.value = 0;        
@@ -622,7 +622,7 @@ document.addEventListener('visibilitychange', function(){
 });
 
 $(document).mouseleave(function () {
-    if (enviroment == 'production' && id_evaluation > 1) {
+    if (enviroment == 'production' && !permissions) {
         if(!strikesInput.value){
             strikesInput.value = 0;
         }else{
@@ -742,9 +742,8 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         for (const btn of moduleBtns) {
             btn.addEventListener('click', function(e){
                 e.preventDefault();
-                console.log(enviroment == 'local' || id_evaluation == 1);
-                if (enviroment == 'local' || id_evaluation == 1) {
-                    console.log('changing the module');
+                if (enviroment == 'local' || permissions) {
+                    // console.log(this);
                 }
         });
     }
