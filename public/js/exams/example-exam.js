@@ -19,8 +19,6 @@ $(document).ready(function(){
 
 // ? Desactivar F5
 $(document).on("keydown", function(e) {
-    console.log(enviroment);
-    console.log(permissions);
     if (enviroment == 'production' && !permissions) {
         if ((e.which || e.keyCode) == 116) e.preventDefault();
     }
@@ -534,6 +532,8 @@ function nextModule(tab, module){
         }
     }
     if (!module) {
+        console.log(evaluation.exam.modules);
+        console.log(index);
         module = `${parseFolder(evaluation.exam.modules[index].folder)}-${evaluation.exam.modules[index].initials}`;
     }
     for (const audio of document.querySelectorAll(`audio`)) {
