@@ -534,8 +534,6 @@ function nextModule(tab, module){
     if (!module) {
         if (index < evaluation.exam.modules.length) {
             module = `${parseFolder(evaluation.exam.modules[index].folder)}-${evaluation.exam.modules[index].initials}`;
-        } else {
-            console.log('exam done');
         }
     }
     for (const audio of document.querySelectorAll(`audio`)) {
