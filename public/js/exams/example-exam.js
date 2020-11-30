@@ -532,7 +532,11 @@ function nextModule(tab, module){
         }
     }
     if (!module) {
-        module = `${parseFolder(evaluation.exam.modules[index - 1].folder)}-${evaluation.exam.modules[index - 1].initials}`;
+        if (index < evaluation.exam.modules.length) {
+            module = `${parseFolder(evaluation.exam.modules[index].folder)}-${evaluation.exam.modules[index].initials}`;
+        } else {
+            console.log('exam done');
+        }
     }
     for (const audio of document.querySelectorAll(`audio`)) {
         audio.pause();
