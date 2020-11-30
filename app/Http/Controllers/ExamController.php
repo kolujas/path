@@ -115,18 +115,19 @@
                 ]);
             }
 
-            if (App::environment('production') && $candidate->id_candidate > 1) {
+            $permissions = false;
+            foreach($candidate->modules() as $module) {
+                if ($module->folder == 'DEMO') {
+                    $permissions = true;
+                }
+            }
+
+            if (App::environment('production') && !$permissions) {
                 if($evaluation->logged_in >= 1){
                     return redirect("/exam/$evaluation->id_evaluation/rules")->with('status', [
                         'code' => 403,
                         'message' => 'You have already logged in.',
                     ]);
-                }
-            }
-            $permissions = false;
-            foreach($candidate->modules() as $module) {
-                if ($module->folder == 'DEMO') {
-                    $permissions = true;
                 }
             }
 

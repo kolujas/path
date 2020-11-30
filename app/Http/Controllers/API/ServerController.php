@@ -11,7 +11,7 @@
             return response()->json([
                 'code' => 200,
                 'data' => [
-                    'enviroment' => env("APP_ENV", 'local'),
+                    'enviroment' => App::environment(),
                 ],
             ]);
         }

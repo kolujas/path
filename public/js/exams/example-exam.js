@@ -26,7 +26,7 @@ $(document).on("keydown", function(e) {
 
 async function getEnviroment(){
     let response = await FetchServiceProvider.getData(`/api/server/enviroment`);
-    enviroment = response.getResponse('data');
+    enviroment = response.getResponse('data').enviroment;
 
     if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
         let found = false;
