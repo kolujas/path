@@ -19,6 +19,8 @@ $(document).ready(function(){
 
 // ? Desactivar F5
 $(document).on("keydown", function(e) {
+    console.log(enviroment);
+    console.log(permissions);
     if (enviroment == 'production' && !permissions) {
         if ((e.which || e.keyCode) == 116) e.preventDefault();
     }
