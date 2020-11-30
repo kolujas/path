@@ -532,9 +532,7 @@ function nextModule(tab, module){
         }
     }
     if (!module) {
-        console.log(evaluation.exam.modules);
-        console.log(index);
-        module = `${parseFolder(evaluation.exam.modules[index].folder)}-${evaluation.exam.modules[index].initials}`;
+        module = `${parseFolder(evaluation.exam.modules[index - 1].folder)}-${evaluation.exam.modules[index - 1].initials}`;
     }
     for (const audio of document.querySelectorAll(`audio`)) {
         audio.pause();
