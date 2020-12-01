@@ -276,6 +276,7 @@ function setFinishState(){
  * * Send data to the API.
  */
 async function sendData(){
+    console.log('sending data');
     let btn = document.querySelector('.save-button').classList.remove('countdown');
     let formData = new FormData(form);
     if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
@@ -295,6 +296,7 @@ async function sendData(){
         'X-CSRF-TOKEN': token,
         'Authorization': "Bearer " + localStorageService.data,
     }, formData);
+    console.log(response);
     setFinishState();
 }
 
