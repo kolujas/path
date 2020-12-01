@@ -647,7 +647,7 @@ $(document).mouseleave(function () {
         }else{
             // strikesInput.value++;
             if(strikesInput.value == 0){
-                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked.";
+                modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked. If you close or refresh this page, your exam will be voided.";
                 $('.modal-strikes').modal();
             }
         }
