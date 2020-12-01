@@ -22,11 +22,11 @@
 
         <div class="row justify-content-md-between justify-content-lg-center py-4 ml-4">
             <ol class="info list-data col-10 mb-4 d-flex justify-content-center mx-auto">
-                <li class="crossed inline mx-lg-2" id="option-10_a_m_">10 a.m.</li>
-                <li class="inline mx-lg-2" id="option-11_30_a_m_">11:30 a.m.</li>
-                <li class="inline mx-lg-2" id="option-2_p_m_">2 p.m.</li>
-                <li class="inline mx-lg-2" id="option-5_30_p_m_">5:30 p.m.</li>
-                <li class="inline mx-lg-2" id="option-9_p_m_">9 p.m.</li>
+                <li class="crossed inline mx-lg-2" id="option-10_am">10 a.m.</li>
+                <li class="inline mx-lg-2" id="option-11_30_am">11:30 a.m.</li>
+                <li class="inline mx-lg-2" id="option-2_pm">2 p.m.</li>
+                <li class="inline mx-lg-2" id="option-5_30_pm">5:30 p.m.</li>
+                <li class="inline mx-lg-2" id="option-9_pm">9 p.m.</li>
             </ol>
             
             <p class="complete col-12 mb-4"><b>a.</b> I usually get up at <select disabled>
