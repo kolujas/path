@@ -624,11 +624,11 @@ document.addEventListener('visibilitychange', function(){
                         },
                     }
                 });
-                strikesInput.value++;
                 if (strikesInput.value >= 3) {
                     sendData();
                     window.location.href = `/exam/${ id_evaluation }/strikes`;
                 }
+                strikesInput.value++;
                 modalStrikesMessage.innerHTML = "Your exam has been marked.";
                 $('.modal-strikes').modal();
             }else{
