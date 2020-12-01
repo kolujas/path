@@ -60,6 +60,9 @@
                     'answers' => $request->all(),
                 ];
     
+                $evaluation->strikes = $input['strikes'];
+                $evaluation->save();
+    
                 foreach($modules as $module) {
                     $data->module = $module;
                     if(!$pdf) {

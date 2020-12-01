@@ -62,6 +62,9 @@
                     'candidate' => $candidate,
                     'answers' => $input,
                 ];
+    
+                $evaluation->strikes = $input['strikes'];
+                $evaluation->save();
                 
                 foreach($modules as $module) {
                     $data->module = $module;
