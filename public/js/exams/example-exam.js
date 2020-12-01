@@ -283,7 +283,6 @@ async function sendData(){
     } else {
         formData.append('module', `${parseFolder(evaluation.exam.modules[0].folder)}-${evaluation.exam.modules[0].initials}`);
     }
-    console.log($(form).serializeArray());
     let token = formData.get('_token');
     formData.delete('_token');
     setLoadingState();
@@ -495,7 +494,6 @@ function setTimer(module = undefined, tab = undefined){
     }
 
     let full_time = parseTime(`${years}-${months}-${days} ${hours}:${minutes}:${seconds}`);
-    console.log(full_time);
 
     let countDown = new CountDown({
         scheduled_date_time: full_time,
