@@ -83,8 +83,8 @@
             if ($months < 1) {
                 $months = 1;
             }
-            if($length = intval($days / ($daysOfTheMonths[$months] + 1))){
-                $days = $days - (($daysOfTheMonths[$months] + 1) * $length);
+            if($length = intval($days / $daysOfTheMonths[$months] + 1)){
+                $days = $days - ($daysOfTheMonths[$months] + 1 * $length);
                 for ($i=1; $i <= $length; $i++) { 
                     $months++;
                 }

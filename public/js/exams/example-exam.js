@@ -356,8 +356,8 @@ function parseTime(date){
     if (months < 1) {
         months = 1;
     }
-    if(length = parseInt(days / (daysOfTheMonths[months] + 1))){
-        days = days - ((daysOfTheMonths[months] + 1) * length);
+    if(length = parseInt(days / daysOfTheMonths[months] + 1)){
+        days = days - (daysOfTheMonths[months] + 1 * length);
         for (let i=1; i <= length; i++) { 
             months++;
         }
