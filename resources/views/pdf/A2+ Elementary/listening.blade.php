@@ -131,19 +131,25 @@
             <h4 style="color: #014969;">1. You are on a plane when the flight attendant makes an announcement:</h4>
             <p style="padding: 0 4rem; color: #000;"><b>a.</b> You’re hungry and need hot food. Which of the items below are available?</p>
             <p style="color: #0091B7; padding: 0 4rem;">
-                @if (isset($answers['A2_Elementary:L3']['1a']) && $answers['A2_Elementary:L3']['1a'] == 'Soup')
-                    <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Soup</span>
+                @if ($answers['A2_Elementary:L3']&& isset($answers['A2_Elementary:L3']['1a']))
+                    @if (isset($answers['A2_Elementary:L3']['1a']['1']))
+                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Soup</span>
+                    @else
+                        <span style="margin: .5rem 2rem;">Soup</span>
+                    @endif
+                    @if (isset($answers['A2_Elementary:L3']['1a']['2']))
+                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Sandwiches</span>
+                    @else
+                        <span style="margin: .5rem 2rem;">Sandwiches</span>
+                    @endif
+                    @if (isset($answers['A2_Elementary:L3']['1a']['3']))
+                        <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Baguettes</span>
+                    @else
+                        <span style="margin: .5rem 2rem;">Baguettes</span>
+                    @endif
                 @else
                     <span style="margin: .5rem 2rem;">Soup</span>
-                @endif
-                @if (isset($answers['A2_Elementary:L3']['1a']) && $answers['A2_Elementary:L3']['1a'] == 'Sandwiches')
-                    <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Sandwiches</span>
-                @else
                     <span style="margin: .5rem 2rem;">Sandwiches</span>
-                @endif
-                @if (isset($answers['A2_Elementary:L3']['1a']) && $answers['A2_Elementary:L3']['1a'] == 'Baguettes')
-                    <span style="margin: .5rem 2rem; padding: .75rem 1.25rem; border: 2px solid #0091B7;">Baguettes</span>
-                @else
                     <span style="margin: .5rem 2rem;">Baguettes</span>
                 @endif
             </p>

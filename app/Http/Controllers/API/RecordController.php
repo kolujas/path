@@ -28,7 +28,24 @@
 
             $input = $request->all();
             foreach ($input as $key => $value) {
-                if(preg_match("/\[/", $key)){
+                if(preg_match("/\[(.)+\]\[/", $key)){
+                    $subkeys = preg_split("/\[/", $key);
+                    $key = preg_split("/\]/", $subkeys[0])[0];
+                    $subkey = preg_split("/\]/", $subkeys[1])[0];
+                    $_subkey = preg_split("/\]/", $subkeys[2])[0];
+                    if(!isset($input[$key])){
+                        $input[$key] = [];
+                        if(!isset($input[$key][$subkey])){
+                            $input[$key][$subkey] = [];
+                        }
+                        $input[$key][$subkey][$_subkey] = $value;
+                    }else{
+                        if(!isset($input[$key][$subkey])){
+                            $input[$key][$subkey] = [];
+                        }
+                        $input[$key][$subkey][$_subkey] = $value;
+                    }
+                }else if(preg_match("/\[/", $key)){
                     $subkey = preg_split("/\[/", $key);
                     $subkey = preg_split("/\]/", $subkey[1])[0];
                     $key = preg_replace("/\[.*\]/", '', $key);

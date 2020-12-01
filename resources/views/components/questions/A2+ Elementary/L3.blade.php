@@ -24,9 +24,9 @@
             <h3 class="title col-12 mb-4 h5">1. You are on a plane when the flight attendant makes an announcement:</h3>
             <p class="complete col-12 mb-4"><b>a.</b> You’re hungry and need hot food. Which of the items below are available?</p>
             <ol class="col-12 d-flex justify-content-around justify-content-lg-center">
-                <li class="inline mx-lg-2"><label class="options p-2"><input type="checkbox" class="d-none" name="A2_Elementary:L3[1a[]]" value="Soup">Soup</label></li>
-                <li class="inline mx-lg-2"><label class="options p-2"><input type="checkbox" class="d-none" name="A2_Elementary:L3[1a[]]" value="Sandwiches">Sandwiches</label></li>
-                <li class="inline mx-lg-2"><label class="options p-2"><input type="checkbox" class="d-none" name="A2_Elementary:L3[1a[]]" value="Baguettes">Baguettes</label></li>
+                <li class="inline mx-lg-2"><label class="options p-2"><input type="checkbox" class="d-none" name="A2_Elementary:L3[1a][1]" value="Soup">Soup</label></li>
+                <li class="inline mx-lg-2"><label class="options p-2"><input type="checkbox" class="d-none" name="A2_Elementary:L3[1a][2]" value="Sandwiches">Sandwiches</label></li>
+                <li class="inline mx-lg-2"><label class="options p-2"><input type="checkbox" class="d-none" name="A2_Elementary:L3[1a][3]" value="Baguettes">Baguettes</label></li>
             </ol>
             <p class="complete col-12 mb-4"><b>b.</b> How can you get more information about what food is available? <input type="text" name="A2_Elementary:L3[1b]" class="input input-super-huge text-left"></p>
             <p class="complete col-12 mb-4"><b>c.</b> You have USD100 in cash. You have a debit card in your hand luggage, which is in the locker above your head. Do you need to do anything? <input type="text" name="A2_Elementary:L3[1c]" class="input input-super-huge text-left"></p>
