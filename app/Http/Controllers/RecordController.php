@@ -60,7 +60,7 @@
                     'answers' => $request->all(),
                 ];
     
-                $evaluation->strikes = $input['strikes'];
+                $evaluation->strikes = $input->strikes;
                 $evaluation->save();
     
                 foreach($modules as $module) {
