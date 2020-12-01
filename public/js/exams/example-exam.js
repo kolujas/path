@@ -218,6 +218,7 @@ function parseFolder(text){
  * @param {Object} data Data to get from CountDown.
  */
 function current(data = undefined){
+    console.log(data);
     if (!isNaN(data.countdown.hours)) {
         document.querySelector(`#${parseFolder(data.module.folder)}-${data.module.initials}-tab .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
     } else {
