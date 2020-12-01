@@ -52,9 +52,21 @@
             @if (isset($answers['A1_Achiever:L3']))
                 <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
                     <li class="answers inline mx-lg-2">1. Shopping mall</li>
-                    <li class="answers crossed inline mx-lg-2">2. <mark>{{ $answers['A1_Achiever:L3'][0] }}</mark></li>
-                    <li class="answers inline mx-lg-2">3. <mark>{{ $answers['A1_Achiever:L3'][1] }}</mark></li>
-                    <li class="answers inline mx-lg-2">4. <mark>{{ $answers['A1_Achiever:L3'][2] }}</mark></li>
+                    @if (isset($answers['A1_Achiever:L3'][1]))
+                        <li class="answers crossed inline mx-lg-2">2. <mark>{{ $answers['A1_Achiever:L3'][1] }}</mark></li>
+                    @else
+                        <li class="answers crossed inline mx-lg-2">2. <mark>null</mark></li>
+                    @endif
+                    @if (isset($answers['A1_Achiever:L3'][2]))
+                        <li class="answers inline mx-lg-2">3. <mark>{{ $answers['A1_Achiever:L3'][2] }}</mark></li>
+                    @else
+                        <li class="answers inline mx-lg-2">3. <mark>null</mark></li>
+                    @endif
+                    @if (isset($answers['A1_Achiever:L3'][3]))
+                        <li class="answers inline mx-lg-2">4. <mark>{{ $answers['A1_Achiever:L3'][3] }}</mark></li>
+                    @else
+                        <li class="answers inline mx-lg-2">4. <mark>null</mark></li>
+                    @endif
                 </ol>
             @else
                 <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
