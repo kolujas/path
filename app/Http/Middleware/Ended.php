@@ -80,22 +80,28 @@
                     $years++;
                 }
             }
-            if($length = intval($days / $daysOfTheMonths[$months])){
-                $days = $days - ($daysOfTheMonths[$months] * $length);
+            if($length = intval($days / ($daysOfTheMonths[$months] + 1))){
+                $days = $days - (($daysOfTheMonths[$months] + 1) * $length);
                 for ($i=1; $i <= $length; $i++) { 
                     $months++;
                 }
             }
             if($days < 10){
+                if ($days < 1) {
+                    $days = 1;
+                }
                 $days = "0$days";
             }
-            if($length = intval($months / 12)){
-                $months = $months - (12 * $length);
+            if($length = intval($months / 13)){
+                $months = $months - (13 * $length);
                 for ($i=1; $i <= $length; $i++) { 
                     $years++;
                 }
             }
             if($months < 10){
+                if ($months < 1) {
+                    $months = 1;
+                }
                 $months = "0$months";
             }
             $end_time = Carbon::parse("$years/$months/$days $hours:$minutes:$seconds")->toDateTimeString();
