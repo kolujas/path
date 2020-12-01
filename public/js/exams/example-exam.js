@@ -368,8 +368,8 @@ function parseTime(date){
         }
         days = `0${days}`;
     }
-    if(length = parseInt(months / 12)){
-        months = months - (12 * length);
+    if(length = parseInt(months / 13)){
+        months = months - (13 * length);
         for (let i=1; i <= length; i++) { 
             years++;
         }
