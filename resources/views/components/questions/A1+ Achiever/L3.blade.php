@@ -32,19 +32,19 @@
                 <li class="mx-3">1. <select disabled>
                     <option selected>Shopping mall</option>
                 </select></li>
-                <li class="mx-3">2. <select name="A1_Achiever:L3[1]">
+                <li class="mx-3">2. <select name="A1_Achiever:L3[0]">
                     <option disabled selected>Shopping mall</option>
                     <option>Coffee</option>
                     <option>Bank</option>
                     <option>Bus Station</option>
                 </select></li>
-                <li class="mx-3">3. <select name="A1_Achiever:L3[2]">
+                <li class="mx-3">3. <select name="A1_Achiever:L3[1]">
                     <option disabled selected>Shopping mall</option>
                     <option>Coffee</option>
                     <option>Bank</option>
                     <option>Bus Station</option>
                 </select></li>
-                <li class="mx-3">4. <select name="A1_Achiever:L3[3]">
+                <li class="mx-3">4. <select name="A1_Achiever:L3[2]">
                     <option disabled selected>Shopping mall</option>
                     <option>Coffee</option>
                     <option>Bank</option>
