@@ -23,7 +23,7 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <textarea id="B2-ex5-1" name="B2_Competency:RW5[1]" class="px-2 text"></textarea>
+            <textarea id="B2-ex5-1" name="B2_Competency:RW5[2]" class="px-2 text"></textarea>
         </div>        
     </main>
 </section>

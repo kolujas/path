@@ -164,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function(e){
     addCrossOptionsEvent(document.querySelectorAll('.A1_Access-RW #dropdown-access-writing-2 select'));
 
     // ? A1 Achiever Listening
-        console.log(document.querySelectorAll('.A1_Achiever-L #dropdown-achiever-listening-1 select'));
     addCrossOptionsEvent(document.querySelectorAll('.A1_Achiever-L #dropdown-achiever-listening-1 select'));
 
     for (const label of document.querySelectorAll('.A1_Achiever-L #dropdown-achiever-listening-2 .icon-checkbox')) {
