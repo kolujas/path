@@ -24,23 +24,29 @@
             <h3 style="padding-top: 2rem;">1. Match the words to the images.<mark> One is done for you.</mark></h3>
         </header>
         <main>
-            @if (isset($answers['DEMO:RW1']))
-                <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
-                    <li class="answers crossed inline mx-lg-2"><mark>{{ $answers['DEMO:RW1']['1'] }}</mark></li>
-                    <li class="answers inline mx-lg-2"><mark>{{ $answers['DEMO:RW1']['2'] }}</mark></li>
-                    <li class="answers inline mx-lg-2">Bedroom</li>
-                    <li class="answers inline mx-lg-2"><mark>{{ $answers['DEMO:RW1']['3'] }}</mark></li>
-                    <li class="answers inline mx-lg-2"><mark>{{ $answers['DEMO:RW1']['4'] }}</mark></li>
-                </ol>
-            @else
-                <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
-                    <li class="answers crossed inline mx-lg-2"><mark>null</mark></li>
+            <ol style="margin-left: 2rem;" class="col-12 mb-4 answer-words d-flex justify-content-around justify-content-lg-center">
+                @if (isset($answers['DEMO:RW1']) && isset($answers['DEMO:RW1'][1]))
+                    <li class="answers inline mx-lg-2"><mark>{{ $answers['DEMO:RW1'][1] }}</mark></li>
+                @else
                     <li class="answers inline mx-lg-2"><mark>null</mark></li>
-                    <li class="answers inline mx-lg-2">Bedroom</li>
+                @endif
+                @if (isset($answers['DEMO:RW1']) && isset($answers['DEMO:RW1'][2]))
+                    <li class="answers inline mx-lg-2"><mark>{{ $answers['DEMO:RW1'][2] }}</mark></li>
+                @else
                     <li class="answers inline mx-lg-2"><mark>null</mark></li>
+                @endif
+                <li class="answers inline mx-lg-2">Bedroom</li>
+                @if (isset($answers['DEMO:RW1']) && isset($answers['DEMO:RW1'][3]))
+                    <li class="answers inline mx-lg-2"><mark>{{ $answers['DEMO:RW1'][3] }}</mark></li>
+                @else
                     <li class="answers inline mx-lg-2"><mark>null</mark></li>
-                </ol>
-            @endif
+                @endif
+                @if (isset($answers['DEMO:RW1']) && isset($answers['DEMO:RW1'][4]))
+                    <li class="answers inline mx-lg-2"><mark>{{ $answers['DEMO:RW1'][4] }}</mark></li>
+                @else
+                    <li class="answers inline mx-lg-2"><mark>null</mark></li>
+                @endif
+            </ol>
         </main>
     </section>
 

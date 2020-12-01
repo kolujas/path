@@ -23,6 +23,7 @@ function addCrossOptionsEvent(selects){
             options.push(document.querySelector(id));
         }
         question.addEventListener('change', function (e) {
+            console.log(options);
             for (const option of options) {
                 option.classList.remove('crossed');
                 for (const select of selects) {

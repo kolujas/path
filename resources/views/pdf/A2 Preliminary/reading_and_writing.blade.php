@@ -54,7 +54,11 @@
             <h3 style="padding-top: 2rem;">3. Explain <mark>one</mark> of the following:</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ nl2br($answers['A2_Preliminary:RW3'][1]) }}</mark></p>
+            @if (isset($answers['A2_Preliminary:RW3']) && isset($answers['A2_Preliminary:RW3'][1]))
+                <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['A2_Preliminary:RW3'][1] }}</mark></p>
+            @else
+                <p style="padding: 0 4rem; color: #000;"><mark>null</mark></p>
+            @endif
             <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['A2_Preliminary:RW3'][2]) !!}</mark></p>
         </main>
     </section>

@@ -64,7 +64,11 @@
             <h3 style="padding-top: 2rem;">5. Give your opinion <mark>to one</mark> of the following statements, including reasons and examples.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ nl2br($answers['B1_Progress:RW5'][1]) }}</mark></p>
+            @if (isset($answers['B1_Progress:RW5']) && isset($answers['B1_Progress:RW5'][1]))
+                <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Progress:RW5'][1] }}</mark></p>
+            @else
+                <p style="padding: 0 4rem; color: #000;"><mark>null</mark></p>
+            @endif
             <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B1_Progress:RW5'][2]) !!}</mark></p>
         </main>
     </section>

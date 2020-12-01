@@ -47,11 +47,31 @@
             <h3 style="padding-top: 2rem;">3. Susana has 4 friends: Alicia, Luis, Paula and Juan. The table shows often the drink tea. Read each sentence a-e, then match the friend to the calendar. <mark>One is done for you</mark>.</h3>
         </header>
         <main>
-            <p style="padding: 0 2rem;"><b class="mr-1">a.</b> Susana: <mark>{{ $answers['A1_Achiever:RW3'][1] }}</mark> have a cup of tea in the morning.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">b.</b> Alicia: <mark>{{ $answers['A1_Achiever:RW3'][2] }}</mark> drink tea. I hate it!</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">c.</b> Luis: <mark>{{ $answers['A1_Achiever:RW3'][3] }}</mark> drink tea with breakfast.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">d.</b> Paula: <mark>{{ $answers['A1_Achiever:RW3'][4] }}</mark> drink tea. I prefer coffe.</p>
-            <p style="padding: 0 2rem;"><b class="mr-1">e</b> Juan: <mark>{{ $answers['A1_Achiever:RW3'][5] }}</mark> have tea before going to school.</p>
+            @if (isset($answers['A1_Achiever:RW3']) && isset($answers['A1_Achiever:RW3'][1]))
+                <p style="padding: 0 2rem;"><b class="mr-1">a.</b> Susana: <mark>{{ $answers['A1_Achiever:RW3'][1] }}</mark> have a cup of tea in the morning.</p>
+            @else
+                <p style="padding: 0 2rem;"><b class="mr-1">a.</b> Susana: <mark>null</mark> have a cup of tea in the morning.</p>
+            @endif
+            @if (isset($answers['A1_Achiever:RW3']) && isset($answers['A1_Achiever:RW3'][2]))
+                <p style="padding: 0 2rem;"><b class="mr-1">b.</b> Alicia: <mark>{{ $answers['A1_Achiever:RW3'][2] }}</mark> drink tea. I hate it!</p>
+            @else
+                <p style="padding: 0 2rem;"><b class="mr-1">b.</b> Alicia: <mark>null</mark> drink tea. I hate it!</p>
+            @endif
+            @if (isset($answers['A1_Achiever:RW3']) && isset($answers['A1_Achiever:RW3'][3]))
+                <p style="padding: 0 2rem;"><b class="mr-1">c.</b> Luis: <mark>{{ $answers['A1_Achiever:RW3'][3] }}</mark> drink tea with breakfast.</p>
+            @else
+                <p style="padding: 0 2rem;"><b class="mr-1">c.</b> Luis: <mark>null</mark> drink tea with breakfast.</p>
+            @endif
+            @if (isset($answers['A1_Achiever:RW3']) && isset($answers['A1_Achiever:RW3'][4]))
+                <p style="padding: 0 2rem;"><b class="mr-1">d.</b> Paula: <mark>{{ $answers['A1_Achiever:RW3'][4] }}</mark> drink tea. I prefer coffe.</p>
+            @else
+                <p style="padding: 0 2rem;"><b class="mr-1">d.</b> Paula: <mark>null</mark> drink tea. I prefer coffe.</p>
+            @endif
+            @if (isset($answers['A1_Achiever:RW3']) && isset($answers['A1_Achiever:RW3'][5]))
+                <p style="padding: 0 2rem;"><b class="mr-1">e</b> Juan: <mark>{{ $answers['A1_Achiever:RW3'][5] }}</mark> have tea before going to school.</p>
+            @else
+                <p style="padding: 0 2rem;"><b class="mr-1">e</b> Juan: <mark>null</mark> have tea before going to school.</p>
+            @endif
         </main>
     </section>
 
@@ -62,17 +82,17 @@
         <main>
             <p style="color: #0091B7; padding: 0 4rem;">
                 <span style="margin: .5rem 2rem;">Sunny</span>
-                @if (isset($answers['A1_Achiever:RW4A'][1]))
+                @if (isset($answers['A1_Achiever:RW4A']) && isset($answers['A1_Achiever:RW4A'][1]))
                     <span style="margin: .5rem 2rem;">{{$answers['A1_Achiever:RW4A'][1]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
                 @endif
-                @if (isset($answers['A1_Achiever:RW4A'][2]))
+                @if (isset($answers['A1_Achiever:RW4A']) && isset($answers['A1_Achiever:RW4A'][2]))
                     <span style="margin: .5rem 2rem;">{{$answers['A1_Achiever:RW4A'][2]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
                 @endif
-                @if (isset($answers['A1_Achiever:RW4A'][3]))
+                @if (isset($answers['A1_Achiever:RW4A']) && isset($answers['A1_Achiever:RW4A'][3]))
                     <span style="margin: .5rem 2rem;">{{$answers['A1_Achiever:RW4A'][3]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>

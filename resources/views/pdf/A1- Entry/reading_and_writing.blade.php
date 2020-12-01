@@ -21,23 +21,23 @@
         </header>
         <main>
             <p style="color: #0091B7; padding: 0 4rem;">
-                @if (isset($answers['A1_Entry:RW1'][1]))
+                @if (isset($answers['A1_Entry:RW1']) && isset($answers['A1_Entry:RW1'][1]))
                     <span style="margin: .5rem 2rem;">{{$answers['A1_Entry:RW1'][1]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
                 @endif
-                @if (isset($answers['A1_Entry:RW1'][2]))
+                @if (isset($answers['A1_Entry:RW1']) && isset($answers['A1_Entry:RW1'][2]))
                     <span style="margin: .5rem 2rem;">{{$answers['A1_Entry:RW1'][2]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
                 @endif
                 <span style="margin: .5rem 2rem;">Pencil</span>
-                @if (isset($answers['A1_Entry:RW1'][3]))
+                @if (isset($answers['A1_Entry:RW1']) && isset($answers['A1_Entry:RW1'][3]))
                     <span style="margin: .5rem 2rem;">{{$answers['A1_Entry:RW1'][3]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
                 @endif
-                @if (isset($answers['A1_Entry:RW1'][4]))
+                @if (isset($answers['A1_Entry:RW1']) && isset($answers['A1_Entry:RW1'][4]))
                     <span style="margin: .5rem 2rem;">{{$answers['A1_Entry:RW1'][4]}}</span>
                 @else
                     <span style="margin: .5rem 2rem;">null</span>
