@@ -347,11 +347,14 @@ function parseTime(date){
     if(hours < 10){
         hours = `0${hours}`;
     }
-    if(length = parseInt(months / 12)){
-        months = months - (12 * length);
+    if(length = parseInt(months / 13)){
+        months = months - (13 * length);
         for (let i=1; i <= length; i++) { 
             years++;
         }
+    }
+    if (months < 1) {
+        months = 1;
     }
     if(length = parseInt(days / (daysOfTheMonths[months] + 1))){
         days = days - ((daysOfTheMonths[months] + 1) * length);
