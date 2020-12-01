@@ -65,7 +65,7 @@
         const permissions = false;
         @endif
     </script>
-    <script type="module" src={{ asset('js/exams/example-exam.js?reloaded=1') }}></script>
+    <script type="module" src={{ asset('js/exams/example-exam.js?reloaded=2') }}></script>
     <script type="module" src={{ asset('js/exams/exercises.js') }}></script>
 @endsection
 
