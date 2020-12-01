@@ -276,7 +276,6 @@ function setFinishState(){
  * * Send data to the API.
  */
 async function sendData(){
-    console.log('sending data');
     let btn = document.querySelector('.save-button').classList.remove('countdown');
     let formData = new FormData(form);
     if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
@@ -284,6 +283,7 @@ async function sendData(){
     } else {
         formData.append('module', `${parseFolder(evaluation.exam.modules[0].folder)}-${evaluation.exam.modules[0].initials}`);
     }
+    console.log(formData.entries());
     let token = formData.get('_token');
     formData.delete('_token');
     setLoadingState();
@@ -296,7 +296,6 @@ async function sendData(){
         'X-CSRF-TOKEN': token,
         'Authorization': "Bearer " + localStorageService.data,
     }, formData);
-    console.log(response);
     setFinishState();
 }
 
