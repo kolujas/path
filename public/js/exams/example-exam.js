@@ -283,7 +283,7 @@ async function sendData(){
     } else {
         formData.append('module', `${parseFolder(evaluation.exam.modules[0].folder)}-${evaluation.exam.modules[0].initials}`);
     }
-    console.log(formData.entries());
+    console.log($(form).serializeArray());
     let token = formData.get('_token');
     formData.delete('_token');
     setLoadingState();
@@ -561,8 +561,10 @@ function nextModule(tab, module){
         }
     }
     LocalStorageServiceProvider.setData('Path_Exam_Module', module, true);
-    tab.open([module], module);
-    setTimer(getModule(document.querySelectorAll('.module-button')[document.querySelector('.submit-exam').dataset.module - 1].id), tab);
+    if (document.querySelectorAll('.module-button')[document.querySelector('.submit-exam').dataset.module - 1]) {
+        tab.open([module], module);
+        setTimer(getModule(document.querySelectorAll('.module-button')[document.querySelector('.submit-exam').dataset.module - 1].id), tab);
+    }
 }
 
 /**
