@@ -218,7 +218,6 @@ function parseFolder(text){
  * @param {Object} data Data to get from CountDown.
  */
 function current(data = undefined){
-    console.log(data);
     if (!isNaN(data.countdown.hours)) {
         document.querySelector(`#${parseFolder(data.module.folder)}-${data.module.initials}-tab .time`).innerHTML = `${data.countdown.hours}:${data.countdown.minutes}:${data.countdown.seconds}`;
     } else {
@@ -485,6 +484,7 @@ function setTimer(module = undefined, tab = undefined){
     }
 
     let full_time = parseTime(`${years}-${months}-${days} ${hours}:${minutes}:${seconds}`);
+    console.log(full_time);
 
     let countDown = new CountDown({
         scheduled_date_time: full_time,
