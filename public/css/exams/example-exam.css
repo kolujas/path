@@ -1093,7 +1093,7 @@ select {
 
     #B2-indent-1 {
         text-indent: 25rem;
-        padding-top: 3px;
+        padding-top: 5px;
     }
 
     #B2-indent-2 {
@@ -1107,8 +1107,8 @@ select {
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-4 {
-        text-indent: 31.5rem;
-        padding-top: 5px;
+        text-indent: -0.2rem;
+        padding-top: 1.4rem;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5 {
@@ -1471,12 +1471,13 @@ select {
     /* competency listening */
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
-        text-indent: 6rem;
-        padding-top: 2rem;
+        text-indent: 7.5rem;
+        padding-top: 1.4rem;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5{
-        text-indent: 12.5rem;
+        text-indent: 14rem;
+        padding-top: 1.4rem;
     }
 
     /* competency writing */
@@ -1549,6 +1550,11 @@ select {
      .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-2 {
         text-indent: 36.5rem;
         padding-top: 0;
+    }
+
+    .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-4 {
+        text-indent: 31.8rem;
+        padding-top: 5px;
     }
 
     .B2_Competency-L #dropdown-competency-listening-2 #B2-indent-5{
