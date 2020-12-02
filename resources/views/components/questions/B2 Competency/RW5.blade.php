@@ -14,7 +14,7 @@
             </ol>
 
             <div class="col-12 col-lg-10 col-xl-7 mx-auto">
-                <select class="selection p-2 d-block mx-auto" name="B1_Progress:RW5[1]">
+                <select class="selection p-2 d-block mx-auto" name="B2_Competency:RW5[1]">
                     <option selected>Topic 1</option>
                     <option>Topic 2</option>
                     <option>Topic 3</option>
