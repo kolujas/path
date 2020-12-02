@@ -53,6 +53,8 @@
             }
 
             if (!$permissions) {
+                $evaluation->update(['answers' => json_encode((array) $input)]);
+
                 $pdf = false;
                 $data = (object) [
                     'evaluation' => $evaluation,

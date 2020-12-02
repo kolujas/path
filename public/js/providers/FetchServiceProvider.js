@@ -123,8 +123,14 @@ export class FetchServiceProvider{
                 body: JSON.stringify(parsedFormData),
             }).then(response => response.json())
                 .then(data => {
-                    instance.setResponse(data);
-                }).catch(error => console.error(error));
+                    if (data.hasOwnProperty('exception')) {
+                        throw data;
+                    } else {
+                        instance.setResponse(data);
+                    }
+                }).catch(error => {
+                    throw error;
+                });
         }else{
             console.error('No pasaste los datos man...');
         }

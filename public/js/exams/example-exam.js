@@ -283,19 +283,24 @@ async function sendData(){
     } else {
         formData.append('module', `${parseFolder(evaluation.exam.modules[0].folder)}-${evaluation.exam.modules[0].initials}`);
     }
-    let token = formData.get('_token');
-    formData.delete('_token');
-    setLoadingState();
-    let response = await FetchServiceProvider.setData({
-        method: 'POST',
-        url: `/api/exam/${id_evaluation}/record`,
-    }, {
-        'Accept': 'application/json',
-        'Content-type': 'application/json; charset=UTF-8',
-        'X-CSRF-TOKEN': token,
-        'Authorization': "Bearer " + localStorageService.data,
-    }, formData);
-    setFinishState();
+    try {
+        let token = formData.get('_token');
+        formData.delete('_token');
+        setLoadingState();
+        let response = await FetchServiceProvider.setData({
+            method: 'POST',
+            url: `/api/exam/${id_evaluation}/record`,
+        }, {
+            'Accept': 'application/json',
+            'Content-type': 'application/json; charset=UTF-8',
+            'X-CSRF-TOKEN': token,
+            'Authorization': "Bearer " + localStorageService.data,
+        }, formData);
+        setFinishState();
+    } catch (error) {
+        document.querySelector('.modal-error .modal-body textarea').innerHTML = JSON.stringify(error);
+        $('.modal-error').modal({backdrop: 'static', keyboard: false});
+    }
 }
 
 /**
@@ -774,4 +779,13 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     setTimeIntervalAutoSave();
     
     getEnviroment();
+
+    document.querySelector('.modal-error button').addEventListener('click', function(e){
+        e.preventDefault();
+        let copyText = document.querySelector('.modal-error textarea');
+        copyText.focus();
+        copyText.select();
+        document.execCommand('copy');
+        document.querySelector('.modal-error button').children[1].innerHTML = 'Copied!';
+    });
 });

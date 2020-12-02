@@ -54,6 +54,9 @@
 
     @component('components.modal.confirm')        
     @endcomponent
+
+    @component('components.modal.error')        
+    @endcomponent
 @endsection
 
 @section('js')

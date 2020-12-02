@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>No te copies porque te vas funado</p>
+                <p></p>
             </div>
         </div>
     </div>

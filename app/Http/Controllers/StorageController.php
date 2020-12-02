@@ -17,4 +17,12 @@
             
             return response()->file(storage_path('app/private/' . $candidate->file));
         }
+
+        static function makePDF($data){
+            try {
+                //code...
+            } catch (\Throwable $th) {
+                return false;
+            }
+        }
     }

@@ -72,6 +72,8 @@
             }
 
             if (!$permissions) {
+                $evaluation->update(['answers' => json_encode($input)]);
+
                 $filePath = "storage/records/$evaluation->id_evaluation.pdf";
                 $pdf = false;
                 $data = (object) [

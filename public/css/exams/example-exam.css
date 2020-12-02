@@ -134,12 +134,29 @@ body {
 }
 
 /* ? modales */
-.modal-dialog{
+.modal:not(.modal-error) .modal-dialog{
     width: 100%;
     height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modal-error textarea {
+    width: 100%;
+    height: 10rem;
+    padding: .5rem;
+    background-color: var(--color-nine);
+    border-radius: .25rem;
+}
+
+.modal-error .copy-div {
+    height: 41px;
+}
+
+.modal-error .copy-div button {
+    top: 0;
+    right: 0;
 }
 
 /* .modal-content{
