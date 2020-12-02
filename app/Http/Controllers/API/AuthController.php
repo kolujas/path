@@ -27,14 +27,14 @@
                 ]);
             }
 
-            if(!$candidate = Candidate::where('candidate_number', '=', $input->data)->get()){
-                return redirect()->json([
+            if(!count(Candidate::where('candidate_number', '=', $input->data)->get())){
+                return response()->json([
                     'code' => 404,
                     'message' => 'Incorrect candidate number.',
                 ]);
             }
 
-            $candidate = $candidate[0];
+            $candidate = Candidate::where('candidate_number', '=', $input->data)->get()[0];
             $evaluations = Evaluation::where('id_candidate', '=', $candidate->id_candidate)->get();
 
             $found = false;
@@ -47,7 +47,7 @@
             }
 
             if(!$found){
-                return redirect()->json([
+                return response()->json([
                     'code' => 404,
                     'message' => 'Exam not found.',
                 ]);
