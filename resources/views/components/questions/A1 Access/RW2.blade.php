@@ -79,19 +79,19 @@
                         <div class="row justify-content-center">
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/A1-ACCESS-W-2.png" class="img-fluid utiles" alt="image-one-question-one">
-                                <div class="card-body mx-auto crossed" id="A">
+                                <div class="card-body mx-auto crossed" id="a">
                                     a
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/A1-ACCESS-W-2.1.png" class="img-fluid utiles" alt="image-one-question-one">
-                                <div class="card-body mx-auto" id="B">
+                                <div class="card-body mx-auto" id="b">
                                     b
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/A1-ACCESS-W-2.2.png" class="img-fluid utiles" alt="image-one-question-one">
-                                <div class="card-body mx-auto" id="C">
+                                <div class="card-body mx-auto" id="c">
                                     c
                                 </div>
                             </div>
@@ -101,19 +101,19 @@
                         <div class="row justify-content-center">
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/A1-ACCESS-W-2.3.png" class="img-fluid utiles" alt="image-one-question-one">
-                                <div class="card-body mx-auto" id="D">
+                                <div class="card-body mx-auto" id="d">
                                     d
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/A1-ACCESS-W-2.4.png" class="img-fluid utiles" alt="image-one-question-one">
-                                <div class="card-body mx-auto" id="E">
+                                <div class="card-body mx-auto" id="e">
                                     e
                                 </div>
                             </div>
                             <div class="card col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
                                 <img src="../../img/recursos/A1-ACCESS-W-5.png" class="img-fluid utiles" alt="image-one-question-one">
-                                <div class="card-body mx-auto" id="F">
+                                <div class="card-body mx-auto" id="f">
                                     f
                                 </div>
                             </div>
