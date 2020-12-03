@@ -86,4 +86,29 @@
                 ],
             ];
         }
+
+        /**
+         * * Refresh the logged in field by a Candidate.
+         * @static
+         * @param mixed $id_candidate - Candidate primary key.
+         * @return [type]
+         */
+        static public function RefreshLoggedInByCandidate($id_candidate){
+            $evaluations = Evaluation::where('id_candidate', '=', $id_candidate)->get();
+            
+            foreach ($evaluations as $evaluation) {
+                $evaluation->update(['logged_in' => 0]);
+            }
+
+            return (object)[
+                'code' => 200,
+                'message' => 'Evaluation refreshed correctly.',
+            ];
+        }
+
+        public function showEvaluationJSON($id_evaluation){
+            $evaluation = Evaluation::find($id_evaluation);
+            
+            return response()->json($evaluation->answers);
+        }
     }

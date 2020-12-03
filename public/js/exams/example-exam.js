@@ -591,7 +591,7 @@ function TenSecondsEnded(params){
     if (enviroment == 'production' && !permissions) {
         document.querySelector('.strikes').value = 3;
         sendData();
-        if (document.querySelector('.modal-strikes').style.display != 'none') {
+        if (document.querySelector('.modal-strikes').style.display != 'none' && document.querySelector('.modal-error').style.display == 'none') {
             window.location.href = `/exam/${ id_evaluation }/10-seconds`;
         }
     }

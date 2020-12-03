@@ -6,8 +6,11 @@
             </div>
             <div class="modal-body">
                 <p>Your exam has had a problem, contact support and provide this code:</p>
-                <textarea disabled></textarea>
+                <textarea></textarea>
                 <div class="copy-div position-relative">
+                    <a href="/logout" class="btn btn-one position-absolute">
+                        <span>Log Out</span>
+                    </a>
                     <button type="button" class="btn btn-one position-absolute">
                         <i class="fas fa-copy"></i>
                         <span>Copy</span>

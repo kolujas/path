@@ -248,6 +248,15 @@ class Modal{
                 iconFile.classList.add('far', 'fa-file');
                 btnFile.appendChild(iconFile);
 
+            let btnJSON = document.createElement('a');
+            btnJSON.href = `/storage/records/${this.data.id_evaluation}/answers`;
+            btnJSON.target = '_blank';
+            btnJSON.classList.add('d-block', 'mb-2', 'mr-2', 'btn', 'btn-two-transparent', 'btn-icon');
+            div.appendChild(btnJSON);
+                let iconJSON = document.createElement('i');
+                iconJSON.classList.add('fas', 'fa-font');
+                btnJSON.appendChild(iconJSON);
+
             let btnID = document.createElement('a');
             btnID.href = `/storage/candidates/${this.data.candidate.id_candidate}/file`;
             btnID.target = '_blank';
@@ -602,6 +611,17 @@ function createAcceptBtn(params) {
                 id: 'action-form',
             }, validation.edit.rules, validation.edit.messages);
             break;
+        case 'refresh':
+            input.value = 'PUT';
+            id = document.querySelector('.input-id').value;
+            form.action = `/${url}/${id}/refresh`;
+            btn.addEventListener('click', function(e){
+                e.preventDefault();
+                if(document.querySelector('.confirm-input').value == 'REFRESH') {
+                    form.submit();
+                }
+            });
+            break;
     }
 }
 
@@ -710,7 +730,7 @@ function createDeleteBtn() {
         });
 }
 
-function createConfirmMessage() {
+function createConfirmMessage(params) {
     let div = document.querySelector('.modal-actions');
         let confirmBox = document.createElement('div');
         confirmBox.classList.add('confirm-box', 'd-flex', 'justify-content-center', 'flex-wrap', 'mb-3');
@@ -722,7 +742,11 @@ function createConfirmMessage() {
 
             let span = document.createElement('span');
             span.classList.add('confirm-span', 'd-block');
-            span.innerHTML = 'Write "DELETE" to confirm';
+            if (params.from == 'delete') {
+                span.innerHTML = 'Write "DELETE" to confirm';
+            } else {
+                span.innerHTML = 'Write "REFRESH" to confirm';
+            }
             confirmBox.appendChild(span);
 
             let input = document.createElement('input');
@@ -732,12 +756,26 @@ function createConfirmMessage() {
 }
 
 function createConfirmForm(params){
-    createConfirmMessage();
+    createConfirmMessage(params);
     params.return = true;
     createCancelBtn(setActions, params);
     createAcceptBtn({
-        type: 'delete',
+        type: params.from,
     });
+}
+
+function createRefreshBtn() {
+    let div = document.querySelector('.modal-actions');
+        let btn = document.createElement('button');
+        btn.classList.add('refresh-data', 'btn', 'btn-one-transparent', 'mr-2');
+        btn.innerHTML = 'Refresh';
+        div.appendChild(btn);
+        btn.addEventListener('click', function(e){
+            e.preventDefault();
+            setActions({
+                type: 'refresh'
+            });
+        });
 }
 
 export function createModal(list, data = false) {
@@ -764,6 +802,7 @@ export function setActions(params = {
             break;
         case 'delete':
             params.type = 'info';
+            params.from = 'delete';
             createConfirmForm(params);
             break;
         case 'edit':
@@ -779,11 +818,19 @@ export function setActions(params = {
             if(!params.url || params.url != 'records'){
                 createEditBtn();
                 createDeleteBtn();
+                if (URLServiceProvider.findOriginalRoute().split('/').pop() == 'candidates') {
+                    createRefreshBtn();
+                }
             }
             if(params.return){
                 refreshData();
             }
             disableInputs();
+            break;
+        case 'refresh':
+            params.type = 'info';
+            params.from = 'refresh';
+            createConfirmForm(params);
             break;
     }
 }

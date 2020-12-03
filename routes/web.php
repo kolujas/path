@@ -55,10 +55,16 @@
             Route::get('/storage/candidates/{id_candidate}/file', 'StorageController@showCandidateFile')->name('storage.showCandidateFile');
 
     /** 
+     * ! EvaluationController
+     */
+            Route::get('/storage/records/{id_evaluation}/answers', 'EvaluationController@showEvaluationJSON')->name('storage.showEvaluationJSON');
+
+    /** 
      * ! CandidateController
      */
             Route::post('/candidates/create/csv', 'CandidateController@doCreateByCSV')->name('candidate.doCreateByCSV');
             Route::post('/candidates/create', 'CandidateController@doCreate')->name('candidate.doCreate');
+            Route::put('/candidates/{id_candidate}/refresh', 'CandidateController@doRefresh')->name('candidate.doRefresh');
             Route::put('/candidates/{id_candidate}/edit', 'CandidateController@doEdit')->name('candidate.doEdit');
             Route::delete('/candidates/{id_candidate}/delete', 'CandidateController@doDelete')->name('candidate.doDelete');
             Route::get('/panel/candidates', 'CandidateController@panel')->name('candidate.panel');

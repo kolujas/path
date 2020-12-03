@@ -62,7 +62,7 @@
             
             return redirect("/panel/candidates#details?id=$candidate->id_candidate")->with('status', [
                 'code' => 200,
-                'message' => 'Candidate created correcttly.',
+                'message' => 'Candidate created correctly.',
             ]);
         }
 
@@ -178,5 +178,21 @@
                     'message' => "$candidate->full_name can not be deleted because there is a record from his evaluation.",
                 ]);
             }
+        }
+
+        /**
+         * * Refresh the Candidate.
+         * @param mixed $id_candidate - Candidate primary key.
+         * @return [type]
+         */
+        public function doRefresh($id_candidate){
+            $candidate = Candidate::find($id_candidate);
+            
+            $response = EvaluationController::RefreshLoggedInByCandidate($id_candidate);
+
+            return redirect("/panel/candidates")->with('status', [
+                'code' => 200,
+                'message' => "$candidate->full_name can join at the exam again.",
+            ]);
         }
     }
