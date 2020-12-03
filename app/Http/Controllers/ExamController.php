@@ -206,7 +206,7 @@
             
             return redirect("/panel/exams#details&id=$exam->id_exam")->with('status', [
                 'code' => 200,
-                'message' => 'Exam created correcttly.',
+                'message' => 'Exam created correctly.',
             ]);
         }
 

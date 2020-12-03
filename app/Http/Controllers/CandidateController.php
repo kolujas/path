@@ -62,7 +62,7 @@
             
             return redirect("/panel/candidates#details?id=$candidate->id_candidate")->with('status', [
                 'code' => 200,
-                'message' => 'Candidate created correcttly.',
+                'message' => 'Candidate created correctly.',
             ]);
         }
 
