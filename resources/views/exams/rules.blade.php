@@ -82,6 +82,13 @@
                 </div>
                 @endif
             </form>
+
+            <div class="example-exam floating-menu top right">
+                <a href="/logout" class="btn btn-one mr-4 hidden logout-lobby">
+                    <span class="link-text">LOGOUT</span>
+                </a>
+            </div>
+
         </main>
     </section>
 @endsection
