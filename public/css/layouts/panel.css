@@ -203,9 +203,9 @@ tr:hover{
 
     margin: 0 .5rem;
 }
-.filter-pagination a:not([href]),
+.filter-pagination .active a:not([href]),
 .filter-pagination a:hover,
-.filter-pagination-candidates a:not([href]),
+.filter-pagination-candidates .active a:not([href]),
 .filter-pagination-candidates a:hover{
     background-position-x: 0;
     background-color: transparent;

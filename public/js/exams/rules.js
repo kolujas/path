@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         }, rules, messages);
     }
 
-    if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
-        LocalStorageServiceProvider.removeData('Path_Exam_Module');
-    }
+    // if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
+    //     LocalStorageServiceProvider.removeData('Path_Exam_Module');
+    // }
 });
