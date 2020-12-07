@@ -45,6 +45,34 @@ body {
     --sidebar-icon-color-alternative: #ddd;
 }
 
+/* contenido main */
+
+.dropdown.opened .dropdown-menu-list, .dropdown.opened .dropdown-menu-content{
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+/* scroll color */
+
+.dropdown.opened .dropdown-menu-content::-webkit-scrollbar {
+    width: .5rem;
+}
+
+.dropdown.opened .dropdown-menu-content::-webkit-scrollbar-track {
+    background: var(--color-nine);
+    border-radius: .25rem;
+}
+
+.dropdown.opened .dropdown-menu-content::-webkit-scrollbar-thumb {
+    background: var(--color-one);
+    border-radius: .25rem;
+    transition: 500ms;
+}
+
+.dropdown.opened .dropdown-menu-content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-two);
+}
+
 /* ? floating menu */
 .floating-menu.left{
     left: 0;
