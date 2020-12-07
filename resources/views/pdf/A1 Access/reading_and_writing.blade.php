@@ -34,7 +34,7 @@
             @else
                 <p style="padding: 0 4rem; color: #000;">I am wearing a yellow <mark>null</mark> and <mark>null</mark> trousers</p>
             @endif
-            @if (isset($answers['A1_Access:RW1']) && isset($answers['A1_Access:RW1'][1]))
+            @if (isset($answers['A1_Access:RW1']) && isset($answers['A1_Access:RW1'][4]))
                 <p style="padding: 0 4rem; color: #000;">I am wearing a Green <mark>{{ $answers['A1_Access:RW1'][4] }}</mark></p>
             @else
                 <p style="padding: 0 4rem; color: #000;">I am wearing a Green <mark>null</mark></p>

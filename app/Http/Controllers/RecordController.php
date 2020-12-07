@@ -68,7 +68,7 @@
                     $name = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module->folder))) . '-' . $module->initials;
                     $filePath = "records/$evaluation->id_evaluation";
                     
-                    if ($index >= count($modules)) {
+                    if ($index + 1 >= count($modules)) {
                         StorageController::makePDF($module, $data, "$filePath/$name.pdf");
                     }
                 }
