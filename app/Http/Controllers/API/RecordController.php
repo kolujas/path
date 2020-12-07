@@ -85,9 +85,12 @@
                 $module_to_search = $input['module'];
                 $module_to_save;
                 $pdf = false;
+
+                $names = collect([]);
                 
                 foreach($modules as $index => $module) {
-                    $name = preg_replace("/\+/", "_", preg_replace("/-/", "_", preg_replace("/ /", "", $module->folder))) . '-' . $module->initials;
+                    $name = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module->folder))) . '-' . $module->initials;
+                    $names->push($name);
                     
                     if ($name == $module_to_search) {
                         $pdf = $index;
@@ -96,9 +99,9 @@
                     }
                 }
 
-                $name = preg_replace("/\+/", "_", preg_replace("/-/", "_", preg_replace("/ /", "", $module_to_save->folder))) . '-' . $module_to_save->initials;
-                $filePath = "records/$evaluation->id_evaluation/$name.pdf";
-                StorageController::makePDF($module_to_save, $data, $filePath);
+                $name = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module_to_save->folder))) . '-' . $module_to_save->initials;
+                $filePath = "records/$evaluation->id_evaluation";
+                StorageController::makePDF($module_to_save, $data, "$filePath/$name.pdf");
                 
                 if(!count(Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
                     $input['id_evaluation'] = $evaluation->id_evaluation;

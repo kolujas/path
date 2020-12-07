@@ -65,10 +65,12 @@
     
                 foreach($modules as $index => $module) {
                     $data->module = $module;
-                    $name = preg_replace("/\+/", "_", preg_replace("/-/", "_", preg_replace("/ /", "", $module->folder))) . '-' . $module->initials;
-                    $filePath = "records/$evaluation->id_evaluation/$name.pdf";
+                    $name = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module->folder))) . '-' . $module->initials;
+                    $filePath = "records/$evaluation->id_evaluation";
                     
-                    StorageController::makePDF($module, $data, $filePath);
+                    if ($index >= count($modules)) {
+                        StorageController::makePDF($module, $data, "$filePath/$name.pdf");
+                    }
                 }
                 
                 if(!count($records = Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
