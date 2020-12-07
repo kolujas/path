@@ -1,4 +1,4 @@
-<div class="modal modal-strikes fade" id="StrikesModal" tabindex="-1" aria-labelledby="StrikesModalLabel" aria-hidden="true">
+<div class="modal modal-strikes" id="StrikesModal" tabindex="-1" aria-labelledby="StrikesModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
