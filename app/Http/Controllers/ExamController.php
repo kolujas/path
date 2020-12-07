@@ -243,7 +243,7 @@
                     }
                 }
                 if($i > 0){
-                    $input[$i]->id_user = Auth::user()->id_user;
+                    $input[$i]['id_user'] = Auth::user()->id_user;
                     $exam = Exam::create((array) $input[$i]);
                     $exams->push($exam);
 

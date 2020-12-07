@@ -95,7 +95,7 @@
                     }
                 }
                 if($i > 0){
-                    $input[$i]->id_user = Auth::user()->id_user;
+                    $input[$i]['id_user'] = Auth::user()->id_user;
                     $candidates->push(Candidate::create((array) $input[$i]));
                 }
                 $i++;
