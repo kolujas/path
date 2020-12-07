@@ -240,7 +240,7 @@ class Modal{
         div.classList.add('d-flex');
         li.appendChild(div);
             let btnFile = document.createElement('a');
-            btnFile.href = `/storage/records/${this.data.id_record}/file`;
+            btnFile.href = `/storage/records/${this.data.id_record}`;
             btnFile.target = '_blank';
             btnFile.classList.add('d-block', 'mb-2', 'mr-2', 'btn', 'btn-two-transparent', 'btn-icon');
             div.appendChild(btnFile);
@@ -256,15 +256,6 @@ class Modal{
                 let iconJSON = document.createElement('i');
                 iconJSON.classList.add('fas', 'fa-font');
                 btnJSON.appendChild(iconJSON);
-
-            let btnID = document.createElement('a');
-            btnID.href = `/storage/candidates/${this.data.candidate.id_candidate}/file`;
-            btnID.target = '_blank';
-            btnID.classList.add('d-block', 'mb-2', 'btn', 'btn-two-transparent', 'btn-icon');
-            div.appendChild(btnID);
-                let iconID = document.createElement('i');
-                iconID.classList.add('far', 'fa-id-card');
-                btnID.appendChild(iconID);
     }
 
     createInputs(element, value, disabled, li){

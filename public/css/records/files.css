@@ -1,0 +1,77 @@
+body {
+    min-height: 100vh;
+}
+
+/* ? nav menu */
+.nav-menu{
+    --navmenu-title-color: #fff;
+    --navmenu-button-color: #fff;
+    --navmenu-button-color-alternative: #ddd;
+    --navmenu-background-color: var(--color-one);
+    --navmenu-background-color-alternative: var(--color-one);
+    --navmenu-border-color: #ddd;
+    --navmenu-border-color-alternative: #ddd;
+    --navmenu-icon-color: #ddd;
+    --navmenu-icon-color-alternative: #888;
+}
+
+.nav-menu .nav-menu-list li .nav-text {
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-menu .nav-menu-list li .nav-text span {
+    width: fit-content;
+    color: var(--color-nine);
+    font-size: 1rem;
+}
+
+.nav-menu .nav-menu-list li .nav-text span:last-child {
+    width: 100%;
+    color: var(--color-two);
+    font-size: .8rem;
+}
+
+.sidebar{
+    --sidebar-title-color: #222;
+    --sidebar-button-color: #222;
+    --sidebar-button-color-alternative: #000;
+    --sidebar-background-color: #fff;
+    --sidebar-background-color-alternative: var(--color-one);
+    --sidebar-border-color: #ddd;
+    --sidebar-border-color-alternative: #ddd;
+    --sidebar-icon-color: #ddd;
+    --sidebar-icon-color-alternative: #ddd;
+}
+
+.card span {
+    display: block;
+}
+
+.card span:first-of-type {
+    font-weight: bold;
+}
+
+/* * MD */
+@media(min-width: 768px) {    
+    /**/
+}
+
+/* * LG */
+@media(min-width: 1024px) {
+    /* ? navmenu */
+    .nav-menu {
+        padding: 0 calc((100% - 66.6666666667%) / 2 + 1rem);
+    }
+}
+
+/* * XL */
+@media(min-width: 1200px) {
+    /**/
+}
+
+/* * XXL */
+@media(min-width: 1400px) {
+    /**/
+}

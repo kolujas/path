@@ -78,25 +78,8 @@
             $candidate = Auth::guard('candidates')->user();
 
             $input->confirmed = 1;
-            
-            $filepath = $request->file('ID')->hashName('candidates');
-            
-            $file = Image::make($request->file('ID'))
-                    ->resize(400, 400, function($constrait){
-                        $constrait->aspectRatio();
-                        $constrait->upsize();
-                    });
-                    
-            Storage::put($filepath, (string) $file->encode());
-            
-            if(isset($candidate->file) && !empty($candidate->file)){
-                Storage::delete($candidate->file);
-            }
-            
-            $input->file = $filepath;
 
             $evaluation->update((array) $input);
-            $candidate->update((array) $input);
             
             return redirect("/exam/$evaluation->id_evaluation");
         }

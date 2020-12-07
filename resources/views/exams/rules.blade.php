@@ -41,45 +41,32 @@
                     <p class="rules-p">{{ $evaluation->exam->rules }}</p>
                 </div>
                 @if (!$evaluation->confirmed)
-                <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">
-                    <input class="form-input form-check-input" type="checkbox" name="confirmed" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        I have read and understood the exam rules
-                    </label>
-                </div>
-                @if($errors->has("confirmed"))
-                    <span class="support support-box support-confirmed col-12 pl-4 hidden">{{ $errors->first("confirmed") }}</span>
-                @else
-                    <span class="support support-box support-confirmed col-12 pl-4 hidden"></span>
-                @endif
-                <div class="input-group col-12 mt-5 pb-5">
-                    <div class="row d-flex justify-content-center w-100 pl-4">
-                        <div class="col-12 col-md-3 p-0 mb-4">
-                            <input id="ID"
-                                class="form-input input-maked"
-                                type="file"
-                                name="ID"
-                                data-text="ID"
-                                data-notfound="Please attach an image of your ID." title="Required">
-                            @if($errors->has("ID"))
-                                <span class="support support-box support-ID hidden">{{ $errors->first("ID") }}</span>
-                            @else
-                                <span class="support support-box support-ID hidden"></span>
-                            @endif
-                        </div>
-                        <div class="col-12 col-md-3 d-flex justify-content-center pb-4 p-0">
-                            <button type="submit" class="form-submit rules-form btn btn-one">Start</button>
+                    <div class="form-check checkbox-container col-lg-6 mt-2 pb-2 ml-4" title="Required">
+                        <input class="form-input form-check-input" type="checkbox" name="confirmed" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            I have read and understood the exam rules
+                        </label>
+                    </div>
+                    @if($errors->has("confirmed"))
+                        <span class="support support-box support-confirmed col-12 pl-4 hidden">{{ $errors->first("confirmed") }}</span>
+                    @else
+                        <span class="support support-box support-confirmed col-12 pl-4 hidden"></span>
+                    @endif
+                    <div class="input-group col-12 mt-5 pb-5">
+                        <div class="row d-flex justify-content-center w-100 pl-4">
+                            <div class="col-12 col-md-3 d-flex justify-content-center pb-4 p-0">
+                                <button type="submit" class="form-submit rules-form btn btn-one">Start</button>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @else
-                <div class="input-group col-12 mt-5 pb-5">
-                    <div class="row d-flex justify-content-center w-100 pl-4">
-                        <div class="col-12 col-md-3 d-flex justify-content-center pb-4 p-0">
-                            <a href="/exam/{{ $evaluation->id_evaluation }}" class="btn btn-one">Start</a>
+                    <div class="input-group col-12 mt-5 pb-5">
+                        <div class="row d-flex justify-content-center w-100 pl-4">
+                            <div class="col-12 col-md-3 d-flex justify-content-center pb-4 p-0">
+                                <a href="/exam/{{ $evaluation->id_evaluation }}" class="btn btn-one">Start</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endif
             </form>
 

@@ -1,5 +1,4 @@
 import { Validation as ValidationJS } from "../../submodules/ValidationJS/js/Validation.js";
-import { InputFileMaker as InputFileMakerJS } from "../../submodules/InputFileMakerJS/js/InputFileMaker.js";
 import { CountDown } from "../CountDown.js";
 import { Notification as NotificationJS } from "../../submodules/NotificationJS/js/Notification.js";
 import { LocalStorageServiceProvider } from "../providers/LocalStorageServiceProvider.js";
@@ -81,12 +80,6 @@ function end(data = undefined){
 }
 
 document.addEventListener('DOMContentLoaded', function(e){
-    if (document.querySelector('#ID')) {
-        let input = new InputFileMakerJS({
-            id: 'ID',
-        });
-    }
-
     let countDown = new CountDown({
         scheduled_date_time: evaluation.exam.scheduled_date_time,
         timer: {

@@ -7,11 +7,11 @@
     use App\Models\Module;
     use App\Models\Record;
     use App\Http\Controllers\Controller;
+    use App\Http\Controllers\StorageController;
     use Auth;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Validator;
     use Illuminate\Support\Facades\View;
-    use PDF;
     use Storage;
 
     class RecordController extends Controller{
@@ -73,9 +73,6 @@
 
             if (!$permissions) {
                 $evaluation->update(['answers' => json_encode($input)]);
-
-                $filePath = "storage/records/$evaluation->id_evaluation.pdf";
-                $pdf = false;
                 $data = (object) [
                     'evaluation' => $evaluation,
                     'candidate' => $candidate,
@@ -84,36 +81,28 @@
     
                 $evaluation->strikes = $input['strikes'];
                 $evaluation->save();
+
+                $module_to_search = $input['module'];
+                $module_to_save;
+                $pdf = false;
                 
-                foreach($modules as $module) {
-                    $data->module = $module;
-                    if(!$pdf) {
-                        $pdf = PDF::loadView("pdf.$module->folder.$module->file", (array) $data, [ ], [
-                            'format'               => 'A4',
-                            'default_font_size'    => '12',
-                            'default_font'         => 'sans-serif',
-                            'margin_left'          => 0,
-                            'margin_right'         => 0,
-                            'margin_top'           => 30,
-                            'margin_bottom'        => 10,
-                            'margin_header'        => 0,
-                            'margin_footer'        => 0,
-                            'title'                => 'PDF creado desde la página de Path',
-                            'author'               => 'Path',
-                        ]);
-                    }else{
-                        $pdf->getMpdf()->AddPage();
-                        $pdf->getMpdf()->WriteHTML(View::make("pdf.$module->folder.$module->file", (array) $data));
+                foreach($modules as $index => $module) {
+                    $name = preg_replace("/\+/", "_", preg_replace("/-/", "_", preg_replace("/ /", "", $module->folder))) . '-' . $module->initials;
+                    
+                    if ($name == $module_to_search) {
+                        $pdf = $index;
+                        $data->module = $module;
+                        $module_to_save = $module;
                     }
                 }
-    
-                $filePath = "records/$evaluation->id_evaluation.pdf";
-    
-                Storage::put($filePath, $pdf->output());
+
+                $name = preg_replace("/\+/", "_", preg_replace("/-/", "_", preg_replace("/ /", "", $module_to_save->folder))) . '-' . $module_to_save->initials;
+                $filePath = "records/$evaluation->id_evaluation/$name.pdf";
+                StorageController::makePDF($module_to_save, $data, $filePath);
                 
                 if(!count(Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
                     $input['id_evaluation'] = $evaluation->id_evaluation;
-                    $input['file'] = $filePath;
+                    $input['folder'] = $filePath;
         
                     $record = Record::create((array) $input);
                 }

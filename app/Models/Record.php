@@ -5,6 +5,7 @@
     use App\Models\Evaluation;
     use App\Models\Exam;
     use Illuminate\Database\Eloquent\Model;
+    use Storage;
 
     class Record extends Model{
         /** @var string Record primary key. */
@@ -16,7 +17,7 @@
          * @var array
          */
         protected $fillable = [
-            'id_evaluation', 'file',
+            'id_evaluation', 'folder',
         ];
         
         /**
@@ -43,6 +44,27 @@
             $exam = Exam::find($this->evaluation->id_exam);
             $exam->candidates = $exam->candidates();
             return $exam;
+        }
+        
+        /**
+         * * Get the files from the folder.
+         * @return [type]
+         */
+        public function files(){
+            $this->files = collect([]);
+            foreach (Storage::disk('local')->allfiles($this->folder) as $file) {
+                foreach ($this->candidate()->modules() as $module) {
+                    $name = explode('/', $file);
+                    $name = explode('.', end($name))[0];
+                    $fileName = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module->folder)));
+                    if ("$fileName-$module->initials" == $name) {
+                        $module->url = $name;
+                        $module->file = $file;
+                        $this->files->push($module);
+                    }
+                }
+            }
+            return $this->files;
         }
         
         /** @var array The validation rules & messages. */

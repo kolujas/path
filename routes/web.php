@@ -47,17 +47,17 @@
     Route::get('/exam/{id_evaluation}/{reason}', 'ExamController@ended')->name('exam.ended');
 
     /** 
-     * ! StorageController
+     * ! EvaluationController
      */
     Route::middleware('auth.guards')->group(function(){
         Route::middleware('admin')->group(function(){
-            Route::get('/storage/records/{id_record}/file', 'StorageController@showRecordFile')->name('storage.showRecordFile');
-            Route::get('/storage/candidates/{id_candidate}/file', 'StorageController@showCandidateFile')->name('storage.showCandidateFile');
-
-    /** 
-     * ! EvaluationController
-     */
             Route::get('/storage/records/{id_evaluation}/answers', 'EvaluationController@showEvaluationJSON')->name('storage.showEvaluationJSON');
+            
+    /** 
+     * ! StorageController
+     */
+            Route::get('/storage/records/{id_record}', 'StorageController@showRecordFiles')->name('storage.showRecordFiles');
+            Route::get('/storage/records/{id_record}/{name}', 'StorageController@showRecordFile')->name('storage.showRecordFile');
 
     /** 
      * ! CandidateController

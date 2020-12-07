@@ -55,12 +55,9 @@
             'auth' => [
                 'rules' => [
                     'confirmed' => 'required',
-                    'ID' => 'required|mimetypes:image/jpeg,image/png',
                 ], 'messages' => [
                     'en' => [
                         'confirmed.required' => 'Accept the rules first.',
-                        'ID.required' => 'The ID is required.',
-                        'ID.mimetypes' => 'The ID must be an image JPG/JPEG, or PNG.',
                     ],
                 ]
             ], 'create' => [

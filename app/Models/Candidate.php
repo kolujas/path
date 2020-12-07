@@ -21,7 +21,7 @@
          * @var array
          */
         protected $fillable = [
-            'candidate_number', 'full_name', 'date_of_birth', 'id_member', 'member', 'modules', 'file', '->id_candidate', 'slug', 'id_user'
+            'candidate_number', 'full_name', 'date_of_birth', 'id_member', 'member', 'modules', '->id_candidate', 'slug', 'id_user'
         ];
 
         /** @var array The attributes to hidde. */
@@ -76,7 +76,6 @@
                 'rules' => [
                     'candidate_number' => 'required|numeric|unique:candidates,candidate_number,{id_candidate},id_candidate',
                     'full_name' => 'nullable|min:2|max:60',
-                    
                     'date_of_birth' => 'nullable|date',
                     'id_member' => 'nullable|numeric',
                     'modules' => 'required',
