@@ -18,13 +18,13 @@
          * @return [type]
          */
         public function panel(){
-            $records = Record::all();
-            foreach ($records as $record) {
-                $record->candidate = $record->candidate();
-                $record->exam = $record->exam();
-            }
+            // $records = Record::all();
+            // foreach ($records as $record) {
+            //     $record->candidate = $record->candidate();
+            //     $record->exam = $record->exam();
+            // }
             return view('records.panel', [
-                'records' => $records,
+                // 'records' => $records,
                 'modules' => Module::$array,
             ]);
         }
