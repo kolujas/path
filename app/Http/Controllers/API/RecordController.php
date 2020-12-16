@@ -116,4 +116,23 @@
                 'message' => 'Exam saved.',
             ]);
         }
+
+        /**
+         * * Get all the Records.
+         * @param Request $request
+         * @return [type]
+         */
+        public function getAll(Request $request){
+            $records = Record::all();
+            foreach ($records as $record) {
+                $record->candidate = $record->candidate();
+                $record->exam = $record->exam();
+            }
+            return response()->json([
+                'code' => 200,
+                'data' => [
+                    'records' => $records,
+                ],
+            ]);
+        }
     }

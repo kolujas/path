@@ -1,8 +1,11 @@
 import { Filter as FilterJS } from "../../submodules/FilterJS/js/Filter.js";
 import { TabMenu as TabMenuJS } from "../../submodules/TabMenuJS/js/TabMenu.js";
 import { ScrollDetection as ScrollDetectionJS } from "../../submodules/ScrollDetectionJS/js/ScrollDetection.js";
+import { FetchServiceProvider } from "../providers/FetchServiceProvider.js";
 
 import { Table } from "../Table/Table.js";
+
+let records = [];
 
 let cols = [ { 
     id: 'table-icon',
@@ -63,7 +66,15 @@ function changeContent(params = {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function(e){
+document.addEventListener('DOMContentLoaded', async function(e){
+    let token = document.querySelector('[name=csrf-token]').content;
+    let fetchserviceprovider = await FetchServiceProvider.getData('/api/records', {
+        'Accept': 'application/json',
+        'Content-type': 'application/json; charset=UTF-8',
+        'X-CSRF-TOKEN': token,
+    });
+    records = fetchserviceprovider.getResponse('data').records;
+    records = [];
     if(document.querySelector('.tab-content')){
         let tab = new TabMenuJS({
             id: 'tab-records',
@@ -91,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function(e){
         cols: cols,
         data: [],
     }, document.querySelector('#records table'));
-    
     let filter = new FilterJS({
         id: 'records',
         order: {

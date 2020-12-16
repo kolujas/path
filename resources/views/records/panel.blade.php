@@ -1,6 +1,7 @@
 @extends('layouts.panel')
 
 @section('css')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href={{ asset('css/records/panel.css') }} rel="stylesheet">
 @endsection
 
