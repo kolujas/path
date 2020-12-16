@@ -131,7 +131,7 @@
                     $record->exam = $record->exam();
                 }
             } else {
-                $records = Record::skip($length)->take(100)->get();
+                $records = Record::skip(($length * 100))->take(100)->get();
                 foreach ($records as $record) {
                     $record->candidate = $record->candidate();
                     $record->exam = $record->exam();
@@ -141,7 +141,7 @@
                 'code' => 200,
                 'data' => [
                     'records' => $records,
-                    'more' => (count(Record::skip($length + 1)->take(100)->get())) ? true : false,
+                    'more' => (count(Record::skip(($length * 100) + 1)->take(100)->get())) ? true : false,
                 ],
             ]);
         }
