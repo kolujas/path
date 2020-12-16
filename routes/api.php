@@ -19,5 +19,5 @@
      */
             Route::post('/exam/{id_evaluation}/record', 'API\RecordController@save')->name('record.save');
         });
-        Route::get('/records', 'API\RecordController@getAll')->name('record.getAll');
+        Route::get('/records/{length}', 'API\RecordController@getAll')->name('record.getAll');
     });

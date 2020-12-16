@@ -66,15 +66,28 @@ function changeContent(params = {
     }
 }
 
+function push(array){
+    for (const record of array) {
+        records.push(record);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async function(e){
     let token = document.querySelector('[name=csrf-token]').content;
-    let fetchserviceprovider = await FetchServiceProvider.getData('/api/records', {
-        'Accept': 'application/json',
-        'Content-type': 'application/json; charset=UTF-8',
-        'X-CSRF-TOKEN': token,
-    });
-    records = fetchserviceprovider.getResponse('data').records;
-    records = [];
+    let more = true, current = 0;
+    do {
+        let fetchserviceprovider = await FetchServiceProvider.getData(`/api/records/${ current }`, {
+            'Accept': 'application/json',
+            'Content-type': 'application/json; charset=UTF-8',
+            'X-CSRF-TOKEN': token,
+        });
+        push(fetchserviceprovider.getResponse('data').records);
+        if (fetchserviceprovider.getResponse('data').hasOwnProperty('more') && fetchserviceprovider.getResponse('data').more) {
+            current++;
+        } else {
+            more = false;
+        }
+    } while (more);
     if(document.querySelector('.tab-content')){
         let tab = new TabMenuJS({
             id: 'tab-records',

@@ -120,18 +120,28 @@
         /**
          * * Get all the Records.
          * @param Request $request
+         * @param string $length
          * @return [type]
          */
-        public function getAll(Request $request){
-            $records = Record::all();
-            foreach ($records as $record) {
-                $record->candidate = $record->candidate();
-                $record->exam = $record->exam();
+        public function getAll(Request $request, $length = null){
+            if ($length === null) {
+                $records = Record::all();
+                foreach ($records as $record) {
+                    $record->candidate = $record->candidate();
+                    $record->exam = $record->exam();
+                }
+            } else {
+                $records = Record::skip($length)->take(100)->get();
+                foreach ($records as $record) {
+                    $record->candidate = $record->candidate();
+                    $record->exam = $record->exam();
+                }
             }
             return response()->json([
                 'code' => 200,
                 'data' => [
                     'records' => $records,
+                    'more' => (count(Record::skip($length + 1)->take(100)->get())) ? true : false,
                 ],
             ]);
         }
