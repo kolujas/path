@@ -40,9 +40,11 @@
          * * Create and returns the Record Exam.
          * @return [type]
          */
-        public function exam(){
+        public function exam($withOutCandidates = false){
             $exam = Exam::find($this->evaluation->id_exam);
-            $exam->candidates = $exam->candidates();
+            if (!$withOutCandidates) {
+                $exam->candidates = $exam->candidates();
+            }
             return $exam;
         }
         

@@ -134,7 +134,7 @@
                 $records = Record::skip(($length * 100))->take(100)->get();
                 foreach ($records as $record) {
                     $record->candidate = $record->candidate();
-                    $record->exam = $record->exam();
+                    $record->exam = $record->exam(true);
                 }
             }
             return response()->json([
