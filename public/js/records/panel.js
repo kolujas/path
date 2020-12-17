@@ -98,7 +98,7 @@ function setLoadingStatus(){
 function changeLoadingStatus(quantity, current){
     let progress = document.querySelector('.loader .progress');
     document.querySelector('.loader .progress').style.width = `${ (current * 100) / quantity }%`;
-    document.querySelector('.loader .progress .text').innerHTML = `${ parseInt((current * 100) / quantity) }% from 100%`;
+    document.querySelector('.loader .progress .text').innerHTML = `${ parseInt((current * 100) / quantity) } / 100`;
 }
 
 function finishLoadingStatus(){
@@ -116,12 +116,12 @@ document.addEventListener('DOMContentLoaded', async function(e){
             'X-CSRF-TOKEN': token,
         });
         push(fetchserviceprovider.getResponse('data').records);
-        changeLoadingStatus(count, current);
         if (fetchserviceprovider.getResponse('data').hasOwnProperty('more') && fetchserviceprovider.getResponse('data').more) {
             current++;
         } else {
             more = false;
         }
+        changeLoadingStatus(count, current);
     } while (more);
     setTimeout(function(){
         finishLoadingStatus();
