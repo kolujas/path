@@ -36,7 +36,7 @@
         const count = {{ $count }};
         const modules = @json($modules);
     </script>
-    <script type="module" src={{ asset('js/records/panel.js?version=1.1.0') }}></script>
+    <script type="module" src={{ asset('js/records/panel.js?version=1.1.1') }}></script>
 @endsection
 
 @section('footer')

@@ -80,7 +80,7 @@ function setLoadingStatus(){
         let section = document.createElement('section');
         loader.appendChild(section);
             let header = document.createElement('header');
-            header.innerHTML = 'Loading...';
+            header.innerHTML = 'Loading records...';
             section.appendChild(header);
 
             let bar = document.createElement('div');
@@ -106,6 +106,15 @@ function finishLoadingStatus(){
 }
 
 document.addEventListener('DOMContentLoaded', async function(e){
+    if(document.querySelector('.tab-content')){
+        let tab = new TabMenuJS({
+            id: 'tab-records',
+        }, {
+            open: ['records'],
+            active: '/panel/records',
+        });
+    }
+
     setLoadingStatus();
     let token = document.querySelector('[name=csrf-token]').content;
     let more = true, current = 0;
@@ -126,14 +135,6 @@ document.addEventListener('DOMContentLoaded', async function(e){
     setTimeout(function(){
         finishLoadingStatus();
     }, 2000);
-    if(document.querySelector('.tab-content')){
-        let tab = new TabMenuJS({
-            id: 'tab-records',
-        }, {
-            open: ['records'],
-            active: '/panel/records',
-        });
-    }
 
     let scrolldetection = new ScrollDetectionJS({
         location: {
