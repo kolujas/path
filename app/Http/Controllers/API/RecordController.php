@@ -142,7 +142,6 @@
                 'data' => [
                     'records' => $records,
                     'more' => (count(Record::skip(($length * 100) + 1)->take(100)->get())) ? true : false,
-                    'count' => ((is_float(Record::all()->count() / 100)) ? intval(Record::all()->count() / 100) + 1 : intval(Record::all()->count() / 100)),
                 ],
             ]);
         }

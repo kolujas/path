@@ -33,6 +33,7 @@
         @if(Session::has('status'))
         const status = @json(Session::get('status'));
         @endif
+        const count = {{ $count }};
         const modules = @json($modules);
     </script>
     <script type="module" src={{ asset('js/records/panel.js') }}></script>

@@ -24,7 +24,7 @@
             //     $record->exam = $record->exam();
             // }
             return view('records.panel', [
-                // 'records' => $records,
+                'count' => ((is_float(Record::all()->count() / 100)) ? intval(Record::all()->count() / 100) + 1 : intval(Record::all()->count() / 100)),
                 'modules' => Module::$array,
             ]);
         }

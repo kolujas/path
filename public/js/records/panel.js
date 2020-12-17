@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', async function(e){
             'X-CSRF-TOKEN': token,
         });
         push(fetchserviceprovider.getResponse('data').records);
-        changeLoadingStatus(fetchserviceprovider.getResponse('data').count, current);
+        changeLoadingStatus(count, current);
         if (fetchserviceprovider.getResponse('data').hasOwnProperty('more') && fetchserviceprovider.getResponse('data').more) {
             current++;
         } else {
