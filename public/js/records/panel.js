@@ -72,7 +72,37 @@ function push(array){
     }
 }
 
+function setLoadingStatus(){
+    let content = document.querySelector('.tab-content-list');
+    let loader = document.createElement('aside');
+    loader.classList.add('loader');
+    content.appendChild(loader);
+        let section = document.createElement('section');
+        loader.appendChild(section);
+            let header = document.createElement('header');
+            header.innerHTML = 'Loading...';
+            section.appendChild(header);
+
+            let bar = document.createElement('div');
+            bar.classList.add('bar');
+            section.appendChild(bar);
+                let progress = document.createElement('div');
+                progress.classList.add('progress');
+                bar.appendChild(progress);
+}
+
+function changeLoadingStatus(quantity, current){
+    let progress = document.querySelector('.loader .progress');
+    progress.style.width = `${ (current * 100) / quantity }%`;
+    progress.innerHTML = `${ (current * 100) / quantity } / 100`;
+}
+
+function finishLoadingStatus(){
+    document.querySelector('.tab-content-list').removeChild(document.querySelector('.tab-content-list .loader'));
+}
+
 document.addEventListener('DOMContentLoaded', async function(e){
+    setLoadingStatus();
     let token = document.querySelector('[name=csrf-token]').content;
     let more = true, current = 0;
     do {
@@ -82,12 +112,16 @@ document.addEventListener('DOMContentLoaded', async function(e){
             'X-CSRF-TOKEN': token,
         });
         push(fetchserviceprovider.getResponse('data').records);
+        changeLoadingStatus(fetchserviceprovider.getResponse('data').count, current);
         if (fetchserviceprovider.getResponse('data').hasOwnProperty('more') && fetchserviceprovider.getResponse('data').more) {
             current++;
         } else {
             more = false;
         }
     } while (more);
+    setTimeout(function(){
+        finishLoadingStatus();
+    }, 2000);
     if(document.querySelector('.tab-content')){
         let tab = new TabMenuJS({
             id: 'tab-records',

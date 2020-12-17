@@ -1,11 +1,15 @@
 .loader{
+    --loader-color-one: var(--color-one);
+    --loader-color-two: var(--color-two);
+    --loader-color-three: white;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 20%;
     bottom: 0;
     right: 0;
-    background-color: var(--color-cuatro);
     z-index: 20;
+    width: 80%;
+    background-color: white;
 }
 
 .loader.opened{
@@ -18,14 +22,14 @@
 
 .loader > section{
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 25%;
+    top: 25%;
     width: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
 }
 
 .loader > section > header{
-    color: var(--color-uno);
+    color: var(--color-one);
     font-size: 1rem;
     text-align: center;
 }
@@ -33,7 +37,7 @@
 .loader .bar{
     width: 100%;
     height: 2rem;
-    border: 2px solid var(--color-uno);
+    border: 2px solid var(--loader-color-one);
     border-radius: .25rem;
     overflow: hidden;
 }
@@ -41,8 +45,13 @@
 .loader .progress{
     width: 0%;
     height: 100%;
-    background-color: var(--color-tres);
+    background-color: var(--loader-color-two);
     transition: 500ms;
+    color: var(--loader-color-three);
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-left: 1rem;
+    border-radius: 0;
 }
 
 /* * MD */
