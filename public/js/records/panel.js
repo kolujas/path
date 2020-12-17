@@ -89,12 +89,16 @@ function setLoadingStatus(){
                 let progress = document.createElement('div');
                 progress.classList.add('progress');
                 bar.appendChild(progress);
+                    let text = document.createElement('div');
+                    text.classList.add('text');
+                    text.innerHTML = `0 / 100`;
+                    progress.appendChild(text);
 }
 
 function changeLoadingStatus(quantity, current){
     let progress = document.querySelector('.loader .progress');
-    progress.style.width = `${ (current * 100) / quantity }%`;
-    progress.innerHTML = `${ (current * 100) / quantity } / 100`;
+    document.querySelector('.loader .progress').style.width = `${ (current * 100) / quantity }%`;
+    document.querySelector('.loader .progress .text').innerHTML = `${ parseInt((current * 100) / quantity) }% from 100%`;
 }
 
 function finishLoadingStatus(){
