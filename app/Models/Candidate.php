@@ -72,7 +72,7 @@
                         'modules.required' => 'A module must be selected.',
                     ],
                 ],
-            ],'edit' => [
+            ], 'edit' => [
                 'rules' => [
                     'candidate_number' => 'required|numeric|unique:candidates,candidate_number,{id_candidate},id_candidate',
                     'full_name' => 'nullable|min:2|max:60',
@@ -92,7 +92,7 @@
                         'modules.required' => 'A module must be selected.',
                     ],
                 ],
-            ],'csv' => [
+            ], 'csv' => [
                 'rules' => [
                     'csv' => 'required|mimetypes:application/csvm+json,text/csv,text/csv-schema,application/vnd.ms-excel',
                 ], 'messages' => [

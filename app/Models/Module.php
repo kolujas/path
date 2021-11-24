@@ -23,8 +23,7 @@
                 'file' => 'reading_and_writing',
                 'time' => '01:15:00',
                 'questions' => 5,
-            ],
-            'A1 Access:L' => [
+            ], 'A1 Access:L' => [
                 'initials' => 'L',
                 'name' => 'Listening',
                 'folder' => 'A1 Access',
@@ -38,8 +37,7 @@
                 'file' => 'reading_and_writing',
                 'time' => '01:15:00',
                 'questions' => 5,
-            ],
-            'A1+ Achiever:L' => [
+            ], 'A1+ Achiever:L' => [
                 'initials' => 'L',
                 'name' => 'Listening',
                 'folder' => 'A1+ Achiever',
@@ -53,8 +51,7 @@
                 'file' => 'reading_and_writing',
                 'time' => '01:15:00',
                 'questions' => 5,
-            ],
-            'A2 Preliminary:L' => [
+            ], 'A2 Preliminary:L' => [
                 'initials' => 'L',
                 'name' => 'Listening',
                 'folder' => 'A2 Preliminary',
@@ -68,8 +65,7 @@
                 'file' => 'reading_and_writing',
                 'time' => '01:15:00',
                 'questions' => 5,
-            ],
-            'A2+ Elementary:L' => [
+            ], 'A2+ Elementary:L' => [
                 'initials' => 'L',
                 'name' => 'Listening',
                 'folder' => 'A2+ Elementary',
@@ -83,8 +79,7 @@
                 'file' => 'reading_and_writing',
                 'time' => '01:45:00',
                 'questions' => 5,
-            ],
-            'B1 Progress:L' => [
+            ], 'B1 Progress:L' => [
                 'initials' => 'L',
                 'name' => 'Listening',
                 'folder' => 'B1 Progress',
@@ -98,8 +93,7 @@
                 'file' => 'reading_and_writing',
                 'time' => '01:45:00',
                 'questions' => 5,
-            ],
-            'B2 Competency:L' => [
+            ], 'B2 Competency:L' => [
                 'initials' => 'L',
                 'name' => 'Listening',
                 'folder' => 'B2 Competency',
@@ -113,8 +107,21 @@
                 'file' => 'reading_and_writing',
                 'time' => '01:45:00',
                 'questions' => 5,
-            ],
-            'DEMO:L' => [
+            ], 'Forward:L' => [
+                'initials' => 'L',
+                'name' => 'Listening',
+                'folder' => 'Forward',
+                'file' => 'listening',
+                'time' => '00:50:00',
+                'questions' => 3,
+            ], 'Forward:RW' => [
+                'initials' => 'RW',
+                'name' => 'Reading and Writing',
+                'folder' => 'Forward',
+                'file' => 'reading_and_writing',
+                'time' => '01:45:00',
+                'questions' => 5,
+            ], 'DEMO:L' => [
                 'initials' => 'L',
                 'name' => 'Listening',
                 'folder' => 'DEMO',

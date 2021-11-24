@@ -79,7 +79,7 @@
                         'candidates.required' => 'A candidate is required.',
                     ],
                 ],
-            ],'edit' => [
+            ], 'edit' => [
                 'rules' => [
                     'name' => 'required|min:2|max:60',
                     'password' => 'nullable|min:4|max:40',
@@ -97,7 +97,7 @@
                         'candidates.required' => 'A candidate is required.',
                     ],
                 ],
-            ],'csv' => [
+            ], 'csv' => [
                 'rules' => [
                     'csv' => 'required|mimetypes:application/csvm+json,text/csv,text/csv-schema,application/vnd.ms-excel',
                 ], 'messages' => [
