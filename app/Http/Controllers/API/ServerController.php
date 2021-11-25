@@ -7,7 +7,12 @@
     use Illuminate\Http\Request;
 
     class ServerController extends Controller{
-        public function enviroment(Request $request){
+        /**
+         * * Returns the App enviroment.
+         * @param Request $request
+         * @return JSON
+         */
+        public function enviroment (Request $request) {
             return response()->json([
                 'code' => 200,
                 'data' => [
@@ -16,11 +21,21 @@
             ]);
         }
 
-        public function currentTime(Request $request){
+        /**
+         * * Returns the App current time.
+         * @param Request $request
+         * @return JSON
+         */
+        public function currentTime (Request $request){
+            $now = Carbon::now();
+            if (App::environment() == 'local') {
+                $now->subHour(3);
+            }
+
             return response()->json([
                 'code' => 200,
                 'data' => [
-                    'now' => Carbon::now()->toDateTimeString(),
+                    'now' => $now->toDateTimeString(),
                 ],
             ]);
         }

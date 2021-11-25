@@ -119,7 +119,7 @@
                 'name' => 'Reading and Writing',
                 'folder' => 'Forward',
                 'file' => 'reading_and_writing',
-                'time' => '01:45:00',
+                'time' => '01:40:00',
                 'questions' => 5,
             ], 'DEMO:L' => [
                 'initials' => 'L',
