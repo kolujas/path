@@ -52,6 +52,14 @@
                 <li class="col-8 mx-lg-2 competency-L1-lis">b. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[4]" value="...thought the food in Mexico could kill you">thought the food in Mexico could kill you.</label></li>
                 <li class="col-8 mx-lg-2 competency-L1-lis">c. <label class="options p-2"><input type="radio" class="d-none" name="B2_Competency:L1[4]" value="...thought the food in Mexico was delicious">thought the food in Mexico was delicious.</label></li>
             </ol>
+
+            <div class="py-4">
+                <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                    <label class="indent">2b. What do you think would have been the most reasonable solution to this situation? Give
+                        reasons for your answer</label>
+                    <textarea name="Forward:L2[1]" class="px-2 text"></textarea>
+                </div>
+            </div>
         </div>
     </main>
 </section>

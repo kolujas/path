@@ -1,6 +1,6 @@
 <section id="dropdown-forward-listening-2" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>2. You will hear a university lecturer discussing a theory with two students. Listen twice, then fill the spaces in the notes, <mark>using your own words</mark>.</span>
+        <span>2. You will hear a politician talking to workers about the closure of their factory. Listen, then answer the questions.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -22,23 +22,23 @@
 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-1" class="indent">What childhood memory does Katie describe? (a)</label>
+                <label for="B2-indent-1" class="indent">What assistance is the government offering to those who will lose their jobs? (a)</label>
                 <textarea id="B2-indent-1" name="Forward:L2[1]" class="px-2 text"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-2" class="indent">Which part of her story does the lecturer suggest may be inaccurate? (b)</label>
+                <label for="B2-indent-2" class="indent">What are the main objections to the assistance offered? (b)</label>
                 <textarea id="B2-indent-2" name="Forward:L2[2]" class="px-2 last text"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-3" class="indent">What childhood memory does Ben describe? (c)</label>
+                <label for="B2-indent-3" class="indent">In what ways is sarcasm used? (c)</label>
                 <textarea id="B2-indent-3" name="Forward:L2[3]" class="px-2 last text"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-4" class="indent">Which part of his story does Ben discover to be inaccurate? (d)</label>
+                <label for="B2-indent-4" class="indent">According to the politician, what are the main reasons for the closure of the factory? (d)</label>
                 <textarea id="B2-indent-4" name="Forward:L2[4]" class="px-2 last text"></textarea>
             </div>
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-indent-5" class="indent">How does the lecturer suggest that memory reconstruction is nothing to worry about? (e)</label>
+                <label for="B2-indent-5" class="indent">What points does the politician make about the ‘globalised economy’? (e)</label>
                 <textarea id="B2-indent-5" name="Forward:L2[5]" class="pl-2 last text"></textarea>
             </div>
         </div> 

@@ -1,6 +1,6 @@
 <section id="dropdown-forward-listening-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>3. You have been asked to attend a speech by a politician, then write a report on what he said. As you listen, make notes. You will hear the speech twice.</span>
+        <span>3. You will hear an extract from an interview with an Olympic runner. After listening, write a review of the interview, analysing her feelings and opinions. You will hear the interview twice.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -26,16 +26,13 @@
                 <textarea id="B2-ex3-indent-1" name="Forward:L3[1]" class="px-2 text"></textarea>
             </div>
         </div> 
-
-        <div class="dropdown-header px-0">
-            <span>Now write your report.</span>
-        </div> 
-
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-ex3-indent-2" class="indent"></label>
-                <textarea id="B2-ex3-indent-2" name="Forward:L3[2]" class="px-2 text"></textarea>
+                <label for="B2-ex3-indent-2" class="indent">Now write your review. (you will have 20 minutes to complete his task once the recording has finished). </label>
+                <textarea id="B2-ex3-indent-2" name="Forward:L3[1]" class="px-2 text"></textarea>
             </div>
-        </div>
+        </div> 
+
+       
     </main>
 </section>
