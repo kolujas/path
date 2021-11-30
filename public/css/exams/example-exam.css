@@ -1226,6 +1226,9 @@ select {
         margin: 0;
     }
 
+    .Forward-RW #dropdown-forward-writing-2 select {
+        width: 100%;
+    }
     
     #dropdown-forward-listening-3 #B2-ex3-1{
         text-indent: 8.5rem;

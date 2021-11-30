@@ -14,7 +14,7 @@ function addCrossOptionsEvent(selects){
     for (const question of selects) {
         let options = [];
         for (const option of question.options) {
-            let id = `${option.innerHTML.replace(/\./g, '').replace(/ /g, '_').replace(/\:/g, '_').replace(/\./g, '_')}`;
+            let id = `${option.innerHTML.replace(/\’/g, '').replace(/\,/g, '').replace(/\./g, '').replace(/ /g, '_').replace(/\:/g, '_').replace(/\./g, '_')}`;
             if (parseInt(id[0])) {
                 id = '#option-' + id;
             } else {
@@ -26,7 +26,7 @@ function addCrossOptionsEvent(selects){
             for (const option of options) {
                 option.classList.remove('crossed');
                 for (const select of selects) {
-                    let id = `${select.options[select.selectedIndex].innerHTML.replace(/\./g, '').replace(/ /g, '_').replace(/\:/g, '_').replace(/\./g, '_')}`;
+                    let id = `${select.options[select.selectedIndex].innerHTML.replace(/\’/g, '').replace(/\,/g, '').replace(/\./g, '').replace(/ /g, '_').replace(/\:/g, '_').replace(/\./g, '_')}`;
                     if (parseInt(id[0])) {
                         id = 'option-' + id;
                     }
@@ -275,23 +275,25 @@ document.addEventListener('DOMContentLoaded', function(e){
     // ? B2 Competency Writing
     addCrossOptionsEvent(document.querySelectorAll('.B2_Competency-RW #dropdown-competency-writing-5 select'));
 
-
     // ? B2 Forward Writing
-    console.log(document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options'));
-    for (const label of document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options')) {
-        const input = label.children[0];
-        input.addEventListener('change', function(e) {
-            for (const option of document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options')) {
-                if (option.children[0].name == this.name) {
-                    option.classList.remove('circled');
-                }
-            }
-            label.classList.remove('circled');
-            if (this.checked) {
-                circleWord(label);
-            }
-        });
-    }
+    addCrossOptionsEvent(document.querySelectorAll('.Forward-RW #dropdown-forward-writing-2 select'));
+
+    // for (const label of document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options')) {
+    //     const input = label.children[0];
+    //     input.addEventListener('change', function(e) {
+    //         for (const option of document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options')) {
+    //             if (option.children[0].name == this.name) {
+    //                 option.classList.remove('circled');
+    //             }
+    //         }
+    //         label.classList.remove('circled');
+    //         if (this.checked) {
+    //             circleWord(label);
+    //         }
+    //     });
+    // }
+
+    addCrossOptionsEvent(document.querySelectorAll('.Forward-RW #dropdown-forward-writing-3 select'));
+
+    addCrossOptionsEvent(document.querySelectorAll('.Forward-RW #dropdown-forward-writing-5 select'));
 });
-
-

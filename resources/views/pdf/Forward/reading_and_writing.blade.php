@@ -17,17 +17,17 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">1. Read the text, then answer the questions on the next page.</h3>
+            <h3 style="padding-top: 2rem;">1. Read the text then answer the questions on the following page.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><b>a.</b> What does the article say about non-verbal communication in different cultures?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['Forward:RW1'][1]) !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><b>1a.</b> Of the components described, which are sometimes added by water authorities? Do you agree with these additions? Explain your answer.</p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW1'][1] }}</mark></p>
 
-            <p style="padding: 0 4rem; color: #000;"><b>b.</b> According to the article, in which situations would a person need to be aware of their non-verbal communication?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['Forward:RW1'][2]) !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><b>1b.</b> Of the components described, which are unintended? What solutions would you suggest?</p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW1'][2] }}</mark></p>
 
-            <p style="padding: 0 4rem; color: #000;"><b>c.</b> How is the coronavirus pandemic affecting non-verbal communication in your country? Give examples.</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['Forward:RW1'][3]) !!}</mark></p>
+            <p style="padding: 0 4rem; color: #000;"><b>1c.</b> How does the article make you feel about drinking a. tap water and b. bottled water?</p>
+            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW1'][3] }}</mark></p>
         </main>
     </section>
 
@@ -35,28 +35,15 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">2. Below you will see three situations for which you need to use diplomatic language. Read each situation, then answer the questions. Try to be as polite as possible.</h3>
+            <h3 style="padding-top: 2rem;">2. Below are three opinions related to money. Choose one and write your personal evaluation of the opinion, offering support or counterarguments as appropriate.</h3>
         </header>
         <main>
-            <p style="padding: 0 4rem; color: #000;"><b>a.</b> You would like to enter a restaurant but two elderly ladies are standing in the entrance having a conversation. What do you say to them?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW2'][1] }}</mark></p>
-
-            <p style="padding: 0 4rem; color: #000;"><b>b.</b> You are in a taxi when the driver makes an unexpected turn. You think he is now driving in the wrong direction. What do you say?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW2'][2] }}</mark></p>
-
-            <p style="padding: 0 4rem; color: #000;"><b>c.</b> A passing policeman takes you by the arm and says “I’m arresting you..” but you haven’t done anything! What do you say?</p>
-            <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW2'][3] }}</mark></p>
-        </main>
-    </section>
-
-    <section>
-        <header>
-            <h3 style="padding-top: 2rem;">3. You will read an extract from an interview with a racing driver, which took place one year ago. First, read the extract.</h3>
-        </header>
-        <main>
-            <h4 style="color: #014969;">Now imagine you are the host of a radio show. You want to report this interview to your listeners, in as much as possible. Write your script below.</h4>
-
-            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['Forward:RW3'][1]) !!}</mark></p>
+            @if (isset($answers['Forward:RW2']) && isset($answers['Forward:RW2'][1]))
+                <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW2'][1] }}</mark></p>
+            @else
+                <p style="padding: 0 4rem; color: #000;"><mark>null</mark></p>
+            @endif
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['Forward:RW2'][2]) !!}</mark></p>
         </main>
     </section>
 
@@ -64,18 +51,48 @@
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">4. You receive the following email from a company which has organised an online webinar. Write a reply, indicating that you’re not sure about attending, and requesting the following information to help you decide:</h3>
+            <h3 style="padding-top: 2rem;">3. Native speakers of English sometimes say one thing but mean another. Below are six comments that could have a coded or hidden message. Choose three, and interpret their meaning.</h3>
         </header>
         <main>
-            <h4 style="color: #014969;">Thank the sender, and use an appropriate salutation and ending.</h4>
+            @if (isset($answers['Forward:RW3']) && isset($answers['Forward:RW3']['1a']) && isset($answers['Forward:RW3']['1b']))
+                <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW3']['1a'] }}</mark></p>
+            @else
+                <p style="padding: 0 4rem; color: #000;"><mark>null</mark></p>
+            @endif
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['Forward:RW3']['1b']) !!}</mark></p>
+        </main>
+        <main>
+            @if (isset($answers['Forward:RW3']) && isset($answers['Forward:RW3']['2a']) && isset($answers['Forward:RW3']['2b']))
+                <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW3']['2a'] }}</mark></p>
+            @else
+                <p style="padding: 0 4rem; color: #000;"><mark>null</mark></p>
+            @endif
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['Forward:RW3']['2b']) !!}</mark></p>
+        </main>
+        <main>
+            @if (isset($answers['Forward:RW3']) && isset($answers['Forward:RW3']['3a']) && isset($answers['Forward:RW3']['3b']))
+                <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['Forward:RW3']['3a'] }}</mark></p>
+            @else
+                <p style="padding: 0 4rem; color: #000;"><mark>null</mark></p>
+            @endif
+            <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['Forward:RW3']['3b']) !!}</mark></p>
+        </main>
+    </section>
 
+    <pagebreak />
+
+    <section>
+        <header>
+            <h3 style="padding-top: 2rem;">4. Below is a draft email written by one of your company interns. On reading it you find that the draft is confusing, too informal (this email will also go to company directors), contains irrelevancies and is poorly punctuated. Revise the email to make it more formal and coherent.</h3>
+        </header>
+        <main>
             <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['Forward:RW4'][1]) !!}</mark></p>
         </main>
     </section>
 
     <section>
         <header>
-            <h3 style="padding-top: 2rem;">5. Write an essay on <mark>one</mark> of the following topics, giving examples.</h3>
+            <h3 style="padding-top: 2rem;">5. Choose one of the following tasks:</h3>
         </header>
         <main>
             @if (isset($answers['Forward:RW5']) && isset($answers['Forward:RW5'][1]))
