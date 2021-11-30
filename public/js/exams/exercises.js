@@ -274,4 +274,24 @@ document.addEventListener('DOMContentLoaded', function(e){
 
     // ? B2 Competency Writing
     addCrossOptionsEvent(document.querySelectorAll('.B2_Competency-RW #dropdown-competency-writing-5 select'));
+
+
+    // ? B2 Forward Writing
+    console.log(document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options'));
+    for (const label of document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options')) {
+        const input = label.children[0];
+        input.addEventListener('change', function(e) {
+            for (const option of document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options')) {
+                if (option.children[0].name == this.name) {
+                    option.classList.remove('circled');
+                }
+            }
+            label.classList.remove('circled');
+            if (this.checked) {
+                circleWord(label);
+            }
+        });
+    }
 });
+
+

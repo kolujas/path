@@ -632,6 +632,35 @@ body {
     text-indent: 0 !important;
 } 
 
+.Forward-RW #dropdown-forward-writing-3 .options.circled::before{
+    border-radius: 100vh;
+}
+
+.Forward-RW #dropdown-forward-writing-3 .options input{
+    display: none;
+}
+
+.Forward-RW #dropdown-forward-writing-3 .answer-words{
+    padding-left: 4%;
+}
+
+/* * circled */
+.circled {
+    position: relative;
+}
+.circled::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-two);
+    border-radius: .25rem;
+    padding: .75rem 1.25rem;
+    transform: translate(-50%, -50%);
+}
+
 
 /* ? ejercicios */
 .card{
