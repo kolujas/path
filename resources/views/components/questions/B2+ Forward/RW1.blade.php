@@ -21,9 +21,9 @@
         </div>
 
         <div class="row d-flex justify-content-center ml-1 py-4 px-2 px-md-3 complete">
-            <p class="complete col-12 pt-4 mb-4"><b>1a.</b> Of the components described, which are sometimes added by water authorities? Do you agree with these additions? Explain your answer. </p><textarea name="Forward:RW1[1]" class="input input-medium text-left w-75 pl-2"></textarea>
-            <p class="complete col-12 pt-4 mb-4"><b>1b.</b> Of the components described, which are unintended? What solutions would you suggest?</p><textarea name="Forward:RW1[2]" class="input input-medium text-left w-75"></textarea>
-            <p class="complete col-12 pt-4 mb-4"><b>1c.</b> How does the article make you feel about drinking a. tap water and b. bottled water? </p><textarea name="Forward:RW1[3]" class="input input-medium text-left w-75"></textarea>
+            <p class="complete col-12 pt-4 mb-4"><b>1a.</b> Of the components described, which are sometimes added by water authorities? Do you agree with these additions? Explain your answer. </p><textarea name="B2_Forward:RW1[1]" class="input input-medium text-left w-75 pl-2"></textarea>
+            <p class="complete col-12 pt-4 mb-4"><b>1b.</b> Of the components described, which are unintended? What solutions would you suggest?</p><textarea name="B2_Forward:RW1[2]" class="input input-medium text-left w-75"></textarea>
+            <p class="complete col-12 pt-4 mb-4"><b>1c.</b> How does the article make you feel about drinking a. tap water and b. bottled water? </p><textarea name="B2_Forward:RW1[3]" class="input input-medium text-left w-75"></textarea>
         </div> 
     </main>
 </section>

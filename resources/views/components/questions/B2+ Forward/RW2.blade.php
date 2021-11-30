@@ -14,7 +14,7 @@
             </ol>
 
             <div class="col-12 col-lg-10 col-xl-7 mx-auto">
-                <select class="selection p-2 d-block mx-auto" name="Forward:RW2[1]">
+                <select class="selection p-2 d-block mx-auto" name="B2_Forward:RW2[1]">
                     <option selected>a. Rich people are happier than poor people because they can have anything they want</option>
                     <option>b. We don’t need cash anymore, we can pay for everything by card or phone.</option>
                     <option>c. It is better not to have something than to borrow money to pay for it.</option>
@@ -24,7 +24,7 @@
 
         <div class="pb-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <textarea name="Forward:RW2[2]" class="px-2 text"></textarea>
+                <textarea name="B2_Forward:RW2[2]" class="px-2 text"></textarea>
             </div>
         </div>     
     </main>

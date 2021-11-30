@@ -275,25 +275,10 @@ document.addEventListener('DOMContentLoaded', function(e){
     // ? B2 Competency Writing
     addCrossOptionsEvent(document.querySelectorAll('.B2_Competency-RW #dropdown-competency-writing-5 select'));
 
-    // ? B2 Forward Writing
-    addCrossOptionsEvent(document.querySelectorAll('.Forward-RW #dropdown-forward-writing-2 select'));
+    // ? B2+ Forward Writing
+    addCrossOptionsEvent(document.querySelectorAll('.B2_Forward-RW #dropdown-forward-writing-2 select'));
 
-    // for (const label of document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options')) {
-    //     const input = label.children[0];
-    //     input.addEventListener('change', function(e) {
-    //         for (const option of document.querySelectorAll('#Forward-RW #dropdown-forward-writing-3 .options')) {
-    //             if (option.children[0].name == this.name) {
-    //                 option.classList.remove('circled');
-    //             }
-    //         }
-    //         label.classList.remove('circled');
-    //         if (this.checked) {
-    //             circleWord(label);
-    //         }
-    //     });
-    // }
+    addCrossOptionsEvent(document.querySelectorAll('.B2_Forward-RW #dropdown-forward-writing-3 select'));
 
-    addCrossOptionsEvent(document.querySelectorAll('.Forward-RW #dropdown-forward-writing-3 select'));
-
-    addCrossOptionsEvent(document.querySelectorAll('.Forward-RW #dropdown-forward-writing-5 select'));
+    addCrossOptionsEvent(document.querySelectorAll('.B2_Forward-RW #dropdown-forward-writing-5 select'));
 });

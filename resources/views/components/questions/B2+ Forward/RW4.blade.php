@@ -21,7 +21,7 @@
 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <textarea class="B2-email-textarea" name="Forward:RW4[1]" class="px-2 text"></textarea>
+                <textarea class="B2-email-textarea" name="B2_Forward:RW4[1]" class="px-2 text"></textarea>
             </div>
         </div>
     </main>

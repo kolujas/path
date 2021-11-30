@@ -27,11 +27,6 @@
                 <p class="complete col-12 mb-4"><b>c.</b> The man is not going to London. <input name="B2_Forward:L1A[3]" class="input input-medium text-left w-75" type="text"></p>
                 <p class="complete col-12 mb-4"><b>d.</b> The woman doesn’t have a ticket. <input name="B2_Forward:L1A[4]" class="input input-medium text-left w-75" type="text"></p>
             </div>
-            
-            {{-- <div class="py-4 forward-listening-div-textarea">
-                <span class="font-weight-bold">1b. What do you think would have been the most reasonable solution to this situation? Give reasons for your answer</span>
-                <textarea class="forward-listening-textarea d-flex indent pl-4" name="B2_Forward:L1B[4]" class="px-2 text"></textarea>
-            </div> --}}
         </div>
 
         <div class="dropdown-header px-0">

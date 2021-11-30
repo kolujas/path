@@ -19,7 +19,7 @@
 
         <div class="row justify-content-md-between justify-content-lg-center py-4">
             <div class="col-12 col-lg-10 col-xl-7 mx-auto">
-                <select class="selection p-2 d-block mx-auto" name="Forward:RW3[1a]">
+                <select class="selection p-2 d-block mx-auto" name="B2_Forward:RW3[1a]">
                     <option selected>Option a</option>
                     <option>Option b</option>
                     <option>Option c</option>
@@ -31,12 +31,12 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <textarea id="B2-ex3" name="Forward:RW3[1b]"class="px-2 text"></textarea>
+            <textarea id="B2-ex3" name="B2_Forward:RW3[1b]"class="px-2 text"></textarea>
         </div>  
 
         <div class="row justify-content-md-between justify-content-lg-center py-4">
             <div class="col-12 col-lg-10 col-xl-7 mx-auto">
-                <select class="selection p-2 d-block mx-auto" name="Forward:RW3[2a]">
+                <select class="selection p-2 d-block mx-auto" name="B2_Forward:RW3[2a]">
                     <option selected>Option a</option>
                     <option>Option b</option>
                     <option>Option c</option>
@@ -48,12 +48,12 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <textarea id="B2-ex3" name="Forward:RW3[2b]"class="px-2 text"></textarea>
+            <textarea id="B2-ex3" name="B2_Forward:RW3[2b]"class="px-2 text"></textarea>
         </div>  
 
         <div class="row justify-content-md-between justify-content-lg-center py-4">
             <div class="col-12 col-lg-10 col-xl-7 mx-auto">
-                <select class="selection p-2 d-block mx-auto" name="Forward:RW3[3a]">
+                <select class="selection p-2 d-block mx-auto" name="B2_Forward:RW3[3a]">
                     <option selected>Option a</option>
                     <option>Option b</option>
                     <option>Option c</option>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
-            <textarea id="B2-ex3" name="Forward:RW3[3b]"class="px-2 text"></textarea>
+            <textarea id="B2-ex3" name="B2_Forward:RW3[3b]"class="px-2 text"></textarea>
         </div>  
     </main>
 </section>

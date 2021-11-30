@@ -14,7 +14,7 @@
             </ol>
 
             <div class="col-12 col-lg-10 col-xl-7 mx-auto">
-                <select class="selection p-2 d-block mx-auto" name="Forward:RW5[1]">
+                <select class="selection p-2 d-block mx-auto" name="B2_Forward:RW5[1]">
                     <option selected>Task a</option>
                     <option>Task b</option>
                     <option>Task c</option>
@@ -24,7 +24,7 @@
 
         <div class="pb-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <textarea name="Forward:RW5[2]" class="px-2 text"></textarea>
+                <textarea name="B2_Forward:RW5[2]" class="px-2 text"></textarea>
             </div>
         </div>        
     </main>
