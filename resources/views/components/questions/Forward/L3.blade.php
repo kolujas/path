@@ -23,16 +23,14 @@
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <label for="B2-ex3-indent-1" class="indent">Write notes here</label>
-                <textarea id="B2-ex3-indent-1" name="Forward:L3[1]" class="px-2 text"></textarea>
+                <textarea id="B2-ex3-indent-1" name="B2_Forward:L3[1]" class="px-2 text"></textarea>
             </div>
         </div> 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <label for="B2-ex3-indent-2" class="indent">Now write your review. (you will have 20 minutes to complete his task once the recording has finished). </label>
-                <textarea id="B2-ex3-indent-2" name="Forward:L3[1]" class="px-2 text"></textarea>
+                <label for="B2-ex3-indent-2" class="indent">Now write your review.</label>
+                <textarea id="B2-ex3-indent-2" name="B2_Forward:L3[2]" class="px-2 text"></textarea>
             </div>
-        </div> 
-
-       
+        </div>
     </main>
 </section>

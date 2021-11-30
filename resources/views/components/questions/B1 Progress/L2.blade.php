@@ -33,7 +33,6 @@
                 <label for="indentadote-3" class="indent">c. Who wins the discussion? Explain your answer</label>
                 <textarea id="identadote-3" name="B1_Progress:L2[3]" class="px-2 last text"></textarea>
             </div>
-        </div> 
-
+        </div>
     </main>
 </section>

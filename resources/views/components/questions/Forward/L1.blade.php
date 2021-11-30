@@ -1,6 +1,6 @@
 <section id="dropdown-forward-listening-1" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
-        <span>1a. You will hear a heated conversation between two people. Listen, then look at the comments below, all of which are false. Write a correct form of the comment in the space allowed.</span>
+        <span>1.a. You will hear a heated conversation between two people. Listen, then look at the comments below, all of which are false. Write a correct form of the comment in the space allowed.</span>
         <button class="dropdown-button text-right">
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
@@ -21,33 +21,25 @@
         </div>
 
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
-            <p class="complete col-12 mb-4"><b>a.</b> Train is full..</p>        
-
-            <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
-                <input class="col-8 border-right-0 border-left-0 border-top-0 ml-4" type="text">
-            </ol>
+            <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
+                <p class="complete col-12 mb-4"><b>a.</b> Train is full... <input name="B2_Forward:L1A[1]" class="input input-medium text-left w-75" type="text"></p>
+                <p class="complete col-12 mb-4"><b>b.</b> The only place the woman’s bag can go is on the seat. <input name="B2_Forward:L1A[2]" class="input input-medium text-left w-75" type="text"></p>
+                <p class="complete col-12 mb-4"><b>c.</b> The man is not going to London. <input name="B2_Forward:L1A[3]" class="input input-medium text-left w-75" type="text"></p>
+                <p class="complete col-12 mb-4"><b>d.</b> The woman doesn’t have a ticket. <input name="B2_Forward:L1A[4]" class="input input-medium text-left w-75" type="text"></p>
+            </div>
             
-            <p class="complete col-12 mb-4"><b>b.</b>The only place the woman’s bag can go is on the seat.</p>
+            {{-- <div class="py-4 forward-listening-div-textarea">
+                <span class="font-weight-bold">1b. What do you think would have been the most reasonable solution to this situation? Give reasons for your answer</span>
+                <textarea class="forward-listening-textarea d-flex indent pl-4" name="B2_Forward:L1B[4]" class="px-2 text"></textarea>
+            </div> --}}
+        </div>
 
-            <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
-                <input class="col-8 border-right-0 border-left-0 border-top-0 ml-4" type="text">
-            </ol>
-
-            <p class="complete col-12 mb-4"><b>c.</b> The man is not going to London.</p>
-
-            <ol class="col-12 d-flex justify-content-around justify-content-lg-center flex-wrap">
-                <input class="col-8 border-right-0 border-left-0 border-top-0 ml-4" type="text">
-            </ol>
-            
-            <p class="complete col-12 mb-4"><b>d.</b> The woman doesn’t have a ticket.</p>
-
-            
-            <div class="py-4 forward-listening-div-textarea">
-                <span class="font-weight-bold">1b. What do you think would have been the most reasonable solution to this situation? Give
-                    reasons for your answer</span>
-                              
-                <textarea class="forward-listening-textarea d-flex indent pl-4" name="" class="px-2 text"></textarea>   
-                
+        <div class="dropdown-header px-0">
+            <span>1.b. What do you think would have been the most reasonable solution to this situation? Give reasons for your answer</span>
+        </div>
+        <div class="py-4 forward-listening-div">
+            <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
+                <textarea name="B2_Forward:L1B[1]" class="px-2 text"></textarea>
             </div>
         </div>
     </main>

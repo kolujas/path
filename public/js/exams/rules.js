@@ -80,6 +80,7 @@ function end(data = undefined){
 }
 
 document.addEventListener('DOMContentLoaded', function(e){
+    console.log(evaluation);
     let countDown = new CountDown({
         scheduled_date_time: evaluation.exam.scheduled_date_time,
         timer: {

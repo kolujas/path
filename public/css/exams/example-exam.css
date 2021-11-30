@@ -1248,11 +1248,9 @@ select {
         width: 31rem;
     }
 
-    .forward-listening-textarea{
-        width: 80%;
-        height: 10rem;
-        margin: auto;
-    }
+    /* #dropdown-forward-listening-1 .forward-listening-div{
+        width: 100%;
+    } */
 
     #dropdown-forward-listening-2 #B2-indent-1{
         text-indent: -0.2rem; 

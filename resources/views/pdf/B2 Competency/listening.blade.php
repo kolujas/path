@@ -140,7 +140,7 @@
             <p style="padding: 0 4rem; color: #000;">Write notes here</p>
             <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:L3'][1]) !!}</mark></p>
             
-            <h4 style="color: #014969;">Now write your report. (you will have 20 minutes to complete this task once the recording has finished).</h4>
+            <h4 style="color: #014969;">Now write your report.</h4>
 
             <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B2_Competency:L3'][2]) !!}</mark></p>
         </main>

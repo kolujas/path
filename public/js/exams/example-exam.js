@@ -309,7 +309,7 @@ async function sendData(){
  * @returns {String} A date corrected.
  */
 function parseTime(date){
-    let daysOfTheMonths = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; 
+    let daysOfTheMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; 
     let time = date.split(' ')[1];
         date = date.split(' ')[0];
     let years, months, days;
@@ -362,7 +362,7 @@ function parseTime(date){
     if (months < 1) {
         months = 1;
     }
-    if(length = parseInt(days / (daysOfTheMonths[months - 1]))){
+    if(length = parseInt(days / (daysOfTheMonths[months - 1] + 1))){
         days = days - ((daysOfTheMonths[months - 1]) * length);
         for (let i=1; i <= length; i++) { 
             months++;
@@ -499,7 +499,6 @@ function setTimer(module = undefined, tab = undefined){
     }
 
     let full_time = parseTime(`${years}-${months}-${days} ${hours}:${minutes}:${seconds}`);
-
     let countDown = new CountDown({
         scheduled_date_time: full_time,
         timer: {

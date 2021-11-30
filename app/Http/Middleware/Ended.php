@@ -1,6 +1,7 @@
 <?php
     namespace App\Http\Middleware;
 
+    use App;
     use App\Exceptions\Handler;
     use App\Models\Evaluation;
     use App\Models\Exam;
@@ -21,7 +22,10 @@
             $id_evaluation = $request->route('id_evaluation');
             $evaluation = Evaluation::find($id_evaluation);
 
-            $now = Carbon::now()->toDateTimeString();
+            $now = Carbon::now();
+            if (App::environment('local')) {
+                $now->subHour(3);
+            }
 
             $date = explode(' ', $evaluation->exam->scheduled_date_time)[0];
             $time = explode(' ', $evaluation->exam->scheduled_date_time)[1];
@@ -109,11 +113,7 @@
             }
             $end_time = Carbon::parse("$years/$months/$days $hours:$minutes:$seconds")->toDateTimeString();
             
-            if($now > $end_time){
-                // print_r($now);
-                // print_r(' - ');
-                // print_r($end_time);
-                // die();
+            if($now->toDateTimeString() > $end_time){
                 $request->session()->put('error', [
                     'code' => 403,
                     'message' => 'Exam ended',
