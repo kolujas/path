@@ -33,6 +33,6 @@
          * @return void
          */
         public function down(){
-            Schema::dropIfExists('candidate');
+            Schema::dropIfExists('candidates');
         }
     }
