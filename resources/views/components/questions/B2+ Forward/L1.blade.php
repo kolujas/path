@@ -22,10 +22,10 @@
 
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
             <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
-                <p class="complete col-12 mb-4"><b>a.</b> Train is full... <input name="B2_Forward:L1A[1]" class="input input-medium text-left w-75" type="text"></p>
-                <p class="complete col-12 mb-4"><b>b.</b> The only place the woman’s bag can go is on the seat. <input name="B2_Forward:L1A[2]" class="input input-medium text-left w-75" type="text"></p>
-                <p class="complete col-12 mb-4"><b>c.</b> The man is not going to London. <input name="B2_Forward:L1A[3]" class="input input-medium text-left w-75" type="text"></p>
-                <p class="complete col-12 mb-4"><b>d.</b> The woman doesn’t have a ticket. <input name="B2_Forward:L1A[4]" class="input input-medium text-left w-75" type="text"></p>
+                <p class="complete col-12 mb-4"><b>a.</b> Train is full... <input name="B2_Forward:L1A[1]" class="input input-medium text-left w-75 d-block" type="text"></p>
+                <p class="complete col-12 mb-4"><b>b.</b> The only place the woman’s bag can go is on the seat. <input name="B2_Forward:L1A[2]" class="input input-medium text-left w-75 d-block" type="text"></p>
+                <p class="complete col-12 mb-4"><b>c.</b> The man is not going to London. <input name="B2_Forward:L1A[3]" class="input input-medium text-left w-75 d-block" type="text"></p>
+                <p class="complete col-12 mb-4"><b>d.</b> The woman doesn’t have a ticket. <input name="B2_Forward:L1A[4]" class="input input-medium text-left w-75 d-block" type="text"></p>
             </div>
         </div>
 

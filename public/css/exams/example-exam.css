@@ -1562,10 +1562,30 @@ select {
     }
 
     #dropdown-forward-listening-2 #B2-indent-1{
-        text-indent: 4rem;
+        text-indent: 11rem;
         padding-top: 1.5rem;
     }
+
+    #dropdown-forward-listening-2 #B2-indent-4 {
+        text-indent: 15rem;
+        padding-top: 1.5rem;
+    }
+
+    #dropdown-forward-listening-2 #B2-indent-5 {
+        text-indent: 7rem;
+        padding-top: 1.5rem;
+    }
+
+    #dropdown-forward-listening-3 #B2-ex3-indent-1 {
+        text-indent: 8.5rem;
+        padding-top: 0.29rem;
+    }
+    #dropdown-forward-listening-3 #B2-ex3-indent-2 {
+        text-indent: 11.5rem;
+            padding-top: 0.29rem;
+    }
 }
+
 
 /* * XL */
 
