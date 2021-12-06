@@ -98,7 +98,7 @@
                 if($i > 0){
                     $input[$i]['id_user'] = Auth::user()->id_user;
                     $candidate = Candidate::number($input[$i]['candidate_number']);
-                    if ($candidate) {
+                    if ($candidate->exists()) {
                         $candidate->update((array) $input[$i]);
                     } else {
                         $quantity++;
