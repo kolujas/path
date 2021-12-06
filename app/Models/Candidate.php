@@ -49,6 +49,17 @@
             }
             return $modules;
         }
+
+        /**
+         * * Returns the Candidate by the candidate_number.
+         * @static
+         * @param  \Illuminate\Database\Eloquent\Builder  $query
+         * @param  int $id_location
+         * @return \Illuminate\Database\Eloquent\Builder
+         */
+        public static function scopeNumber ($query, $candidate_number) {
+            return $query->where('candidate_number', $candidate_number)->first();
+        }
         
         /** @var array The validation rules & messages. */
         public static $validation = [

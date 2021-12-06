@@ -78,6 +78,7 @@
             $input = [];
             $indexes = [];
             $i = 0;
+            $quantity = 0;
             while(($filedata = fgetcsv($file, 1000, ",")) !== false){
                 $num = count($filedata);
                 for($c = 0; $c < $num; $c++){
@@ -96,7 +97,13 @@
                 }
                 if($i > 0){
                     $input[$i]['id_user'] = Auth::user()->id_user;
-                    $candidates->push(Candidate::create((array) $input[$i]));
+                    $candidate = Candidate::number($input[$i]['candidate_number']);
+                    if ($candidate) {
+                        $candidate->update((array) $input[$i]);
+                    } else {
+                        $quantity++;
+                        $candidates->push(Candidate::create((array) $input[$i]));
+                    }
                 }
                 $i++;
             }
@@ -104,7 +111,7 @@
             
             return redirect("/panel/candidates")->with('status', [
                 'code' => 200,
-                'message' => 'Candidates created correctly.',
+                'message' => "Candidates created correctly. (A total of $quantity were injected)",
             ]);
         }
         
