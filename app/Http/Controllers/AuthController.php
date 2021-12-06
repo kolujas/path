@@ -108,8 +108,11 @@
             }
 
             if (App::environment('local') || $permissions) {
-                // ddd(Carbon::now()->subHour(3)->addMinutes(1));
-                $exam->update(['scheduled_date_time' => Carbon::now()->subHour(3)->addMinutes(1)->toDateTimeString()]);
+                $scheduled_date_time = Carbon::now();
+                if (App::environment('local')) {
+                    $scheduled_date_time->subHour(3);
+                }
+                $exam->update(['scheduled_date_time' => $scheduled_date_time->addMinutes(1)->toDateTimeString()]);
             }
             Auth::guard('candidates')->login($candidate, false);
             return redirect("exam/$evaluation->id_evaluation/rules");

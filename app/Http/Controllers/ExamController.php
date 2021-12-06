@@ -115,7 +115,11 @@
             }
 
             if (App::environment('local') || $permissions) {
-                $evaluation->exam->update(['scheduled_date_time' => Carbon::now()->subHour(3)->toDateTimeString()]);
+                $scheduled_date_time = Carbon::now();
+                if (App::environment('local')) {
+                    $scheduled_date_time->subHour(3);
+                }
+                $evaluation->exam->update(['scheduled_date_time' => $scheduled_date_time->toDateTimeString()]);
             } else {
                 $evaluation->update(['logged_in' => $evaluation->logged_in + 1]);
             }
