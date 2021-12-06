@@ -9,6 +9,7 @@
             </div>
             <form id="csv-form" class="modal-body" action="{{ preg_replace("/panel/", '', Request::path()) }}/create/csv" method="post" enctype="multipart/form-data">
                 @csrf
+                @method('POST')
                 <input id="csv"
                     class="form-input input-maked"
                     accept=".csv"
