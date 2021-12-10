@@ -22,6 +22,5 @@
 @endsection
 
 @section('footer')
-    @component('components.footer.global', [])
-    @endcomponent
+    @component('components.footer.global', [])@endcomponent
 @endsection
