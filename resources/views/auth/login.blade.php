@@ -62,5 +62,5 @@
         const rules = @json($validation->rules);
         const messages = @json($validation->messages);
     </script>
-    <script type="module" src={{ asset('js/auth/login?v=1.0.0') }}></script>
+    <script type="module" src={{ asset('js/auth/login.js?v=1.0.0') }}></script>
 @endsection
