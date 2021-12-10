@@ -29,7 +29,7 @@
 @endsection
 
 @section('js')
-    <script type="module" src={{ asset('js/records/files.js') }}></script>
+    <script type="module" src={{ asset('js/records/files.js?v=1.0.0') }}></script>
 @endsection
 
 @section('footer')

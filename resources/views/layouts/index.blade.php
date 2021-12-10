@@ -33,7 +33,7 @@
 
         <!-- Layout JS -->
         <script src={{ asset('js/Jquery/jquery-3.0.0.min.js') }}></script>
-        <script type="module" src={{asset('js/app.js')}}></script>
+        <script type="module" src={{asset('js/app.js?v=1.0.0')}}></script>
 
         <!-- Added extras section -->
         @yield('extras')

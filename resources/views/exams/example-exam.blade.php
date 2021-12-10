@@ -68,8 +68,8 @@
         const permissions = false;
         @endif
     </script>
-    <script type="module" src={{ asset('js/exams/example-exam.js?version=1.0.6') }}></script>
-    <script type="module" src={{ asset('js/exams/exercises.js?version=1.1.1') }}></script>
+    <script type="module" src={{ asset('js/exams/example-exam.js?version=1.0.7') }}></script>
+    <script type="module" src={{ asset('js/exams/exercises.js?version=1.1.2') }}></script>
 @endsection
 
 @section('footer')

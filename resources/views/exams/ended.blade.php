@@ -22,5 +22,5 @@
 @endsection
 
 @section('js')
-    <script type="module" src={{ asset('js/exams/finished.js') }}></script>
+    <script type="module" src={{ asset('js/exams/finished.js?v=1.0.0') }}></script>
 @endsection

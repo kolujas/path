@@ -18,7 +18,7 @@
 @endsection
 
 @section('js')
-    <script type="module" src={{ asset('js/web/panel.js') }}></script>
+    <script type="module" src={{ asset('js/web/panel.js?v=1.0.0') }}></script>
 @endsection
 
 @section('footer')

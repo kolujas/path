@@ -45,7 +45,7 @@
         const exams = @json($exams);
         const candidates = @json($candidates);
     </script>
-    <script type="module" src={{ asset('js/exams/panel.js') }}></script>
+    <script type="module" src={{ asset('js/exams/panel?v=1.0.0') }}></script>
 @endsection
 
 @section('footer')

@@ -20,7 +20,7 @@
 
 @section('extras')
     <!-- Layout CSS -->
-    <script src={{ asset('js/layouts/auth.js') }}></script>
+    <script src={{ asset('js/layouts/auth.js?v=1.0.0') }}></script>
 
     <!-- Section JS -->
     @yield('js')

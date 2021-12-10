@@ -25,7 +25,7 @@
 @section('extras')
     <!-- Layout CSS -->
     <script type="module" src={{ asset('js/pagination.min.js') }}></script>
-    <script type="module" src={{ asset('js/layouts/panel.js') }}></script>
+    <script type="module" src={{ asset('js/layouts/panel.js?v=1.0.0') }}></script>
 
     <!-- Section JS -->
     @yield('js')
