@@ -12,6 +12,7 @@
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Validator;
     use Illuminate\Support\Facades\View;
+    use PDF;
     use Storage;
 
     class RecordController extends Controller{
@@ -73,35 +74,30 @@
 
             if (!$permissions) {
                 $evaluation->update(['answers' => json_encode($input)]);
-                $data = (object) [
-                    'evaluation' => $evaluation,
-                    'candidate' => $candidate,
-                    'answers' => $input,
-                ];
     
                 $evaluation->strikes = $input['strikes'];
                 $evaluation->save();
 
-                $module_to_search = $input['module'];
-                $module_to_save;
-                $pdf = false;
-
-                $names = collect([]);
-                
-                foreach($modules as $index => $module) {
-                    $name = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module->folder))) . '-' . $module->initials;
-                    $names->push($name);
-                    
-                    if ($name == $module_to_search) {
-                        $pdf = $index;
-                        $data->module = $module;
-                        $module_to_save = $module;
-                    }
-                }
-
-                $name = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module_to_save->folder))) . '-' . $module_to_save->initials;
-                $filePath = "records/$evaluation->id_evaluation";
-                StorageController::makePDF($module_to_save, $data, "$filePath/$name.pdf");
+                $mpdf = PDF::loadView("pdf.exam", [
+                    'answers' => $input,
+                    'candidate' => $candidate,
+                    'evaluation' => $evaluation,
+                    'modules' => $modules,
+                ], [ ], [
+                    'format'               => 'A4',
+                    'default_font_size'    => '12',
+                    'default_font'         => 'sans-serif',
+                    'margin_left'          => 0,
+                    'margin_right'         => 0,
+                    'margin_top'           => 30,
+                    'margin_bottom'        => 10,
+                    'margin_header'        => 0,
+                    'margin_footer'        => 0,
+                    'title'                => 'PDF creado desde la página de Path',
+                    'author'               => 'Path',
+                ]);
+        
+                Storage::put("records/$evaluation->id_evaluation/" . preg_replace("/\//", "_", $evaluation->exam->name) . ".pdf", $mpdf->output());
                 
                 if(!count(Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
                     $input['id_evaluation'] = $evaluation->id_evaluation;

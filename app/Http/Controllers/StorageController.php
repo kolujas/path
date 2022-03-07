@@ -27,16 +27,13 @@
         /**
          * * Returns the PDF file.
          * @param mixed $id_record
-         * @param mixed $name
          * @return [type]
          */
-        public function showRecordFile($id_record, $name){
+        public function showRecordFile($id_record){
             $record = Record::find($id_record);
 
             foreach ($record->files() as $file) {
-                if ($file->url == $name) {
-                    return response()->file(storage_path('app/private/' . $file->file));
-                }
+                return response()->file(storage_path('app/private/' . $file));
             }
         }
 

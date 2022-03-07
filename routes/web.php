@@ -56,8 +56,8 @@
     /** 
      * ! StorageController
      */
-            Route::get('/storage/records/{id_record}', 'StorageController@showRecordFiles')->name('storage.showRecordFiles');
-            Route::get('/storage/records/{id_record}/{name}', 'StorageController@showRecordFile')->name('storage.showRecordFile');
+            Route::get('/storage/records/{id_record}', 'StorageController@showRecordFile')->name('storage.showRecordFile');
+            // Route::get('/storage/records/{id_record}/{name}', 'StorageController@showRecordFile')->name('storage.showRecordFile');
 
     /** 
      * ! CandidateController

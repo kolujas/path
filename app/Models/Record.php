@@ -55,16 +55,17 @@
         public function files(){
             $this->files = collect([]);
             foreach (Storage::disk('local')->allfiles($this->folder) as $file) {
-                foreach ($this->candidate()->modules() as $module) {
-                    $name = explode('/', $file);
-                    $name = explode('.', end($name))[0];
-                    $fileName = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module->folder)));
-                    if ("$fileName-$module->initials" == $name) {
-                        $module->url = $name;
-                        $module->file = $file;
-                        $this->files->push($module);
-                    }
-                }
+                $this->files->push($file);
+                // foreach ($this->candidate()->modules() as $module) {
+                //     $name = explode('/', $file);
+                //     $name = explode('.', end($name))[0];
+                //     $fileName = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module->folder)));
+                //     if ("$fileName-$module->initials" == $name) {
+                //         $module->url = $name;
+                //         $module->file = $file;
+                //         $this->files->push($module);
+                //     }
+                // }
             }
             return $this->files;
         }

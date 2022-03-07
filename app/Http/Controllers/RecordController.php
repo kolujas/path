@@ -54,24 +54,30 @@
 
             if (!$permissions) {
                 $evaluation->update(['answers' => json_encode((array) $input)]);
-                $data = (object) [
-                    'evaluation' => $evaluation,
-                    'candidate' => $candidate,
-                    'answers' => $request->all(),
-                ];
     
                 $evaluation->strikes = $input->strikes;
                 $evaluation->save();
-    
-                foreach($modules as $index => $module) {
-                    $data->module = $module;
-                    $name = preg_replace("/\+/", "", preg_replace("/-/", "", preg_replace("/ /", "_", $module->folder))) . '-' . $module->initials;
-                    $filePath = "records/$evaluation->id_evaluation";
-                    
-                    if ($index + 1 >= count($modules)) {
-                        StorageController::makePDF($module, $data, "$filePath/$name.pdf");
-                    }
-                }
+
+                $mpdf = PDF::loadView("pdf.exam", [
+                    'answers' => $request->all(),
+                    'candidate' => $candidate,
+                    'evaluation' => $evaluation,
+                    'modules' => $modules,
+                ], [ ], [
+                    'format'               => 'A4',
+                    'default_font_size'    => '12',
+                    'default_font'         => 'sans-serif',
+                    'margin_left'          => 0,
+                    'margin_right'         => 0,
+                    'margin_top'           => 30,
+                    'margin_bottom'        => 10,
+                    'margin_header'        => 0,
+                    'margin_footer'        => 0,
+                    'title'                => 'PDF creado desde la página de Path',
+                    'author'               => 'Path',
+                ]);
+        
+                Storage::put("records/$evaluation->id_evaluation/" . preg_replace("/\//", "_", $evaluation->exam->name) . ".pdf", $mpdf->output());
                 
                 if(!count($records = Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
                     $input->id_evaluation = $evaluation->id_evaluation;
