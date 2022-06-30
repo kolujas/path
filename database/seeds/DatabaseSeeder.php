@@ -8,9 +8,9 @@
          * @return void
          */
         public function run() {
-            // $this->call(CandidateSeeder::class);
-            // $this->call(EvaluationSeeder::class);
-            // $this->call(ExamSeeder::class);
-            $this->call(UserSeeder::class);
+            $this->call(CandidateSeeder::class);
+            $this->call(EvaluationSeeder::class);
+            $this->call(ExamSeeder::class);
+            // $this->call(UserSeeder::class);
         }
     }
