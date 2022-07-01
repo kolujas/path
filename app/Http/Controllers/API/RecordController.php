@@ -96,8 +96,9 @@
                     'title'                => 'PDF creado desde la página de Path',
                     'author'               => 'Path',
                 ]);
-        
-                Storage::put("records/$evaluation->id_evaluation/" . preg_replace("/\//", "_", $evaluation->exam->name) . ".pdf", $mpdf->output());
+
+                $filePath = "records/$evaluation->id_evaluation/" . preg_replace("/\//", "_", $evaluation->exam->name) . ".pdf";
+                Storage::put($filePath, $mpdf->output());
                 
                 if(!count(Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
                     $input['id_evaluation'] = $evaluation->id_evaluation;
