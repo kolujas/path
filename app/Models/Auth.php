@@ -3,8 +3,11 @@
 
     use Illuminate\Database\Eloquent\Model;
 
-    class Auth extends Model{
-        /** @var array The validation rules & messages. */
+    class Auth extends Model {
+        /**
+         * * The validation rules & messages.
+         * @var array
+         */
         public static $validation = [
             'login' => [
                 'rules' => [
@@ -17,7 +20,7 @@
                         'password.min' => 'Password cannot be less than :min characters.',
                         'password.max' => 'Password cannot be more than :max characters.',
                     ],
-                ]
+                ],
             ],
         ];
     }

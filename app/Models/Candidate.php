@@ -10,10 +10,13 @@
     use Illuminate\Notifications\Notifiable;
     use Laravel\Passport\HasApiTokens;
 
-    class Candidate extends Authenticatable{
+    class Candidate extends Authenticatable {
         use HasApiTokens, Notifiable, Sluggable, SluggableScopeHelpers;
 
-        /** @var string User primary key. */
+        /**
+         * * User primary key.
+         * @var string
+         */
         protected $primaryKey = 'id_candidate';
 
         /**
@@ -21,47 +24,76 @@
          * @var array
          */
         protected $fillable = [
-            'candidate_number', 'full_name', 'date_of_birth', 'id_member', 'member', 'modules', '->id_candidate', 'slug', 'id_user'
+            'candidate_number',
+            'date_of_birth',
+            'full_name',
+            'id_candidate',
+            'id_member',
+            'id_user',
+            'member',
+            'modules',
+            'slug',
         ];
 
-        /** @var array The attributes to hidde. */
+        /**
+         * * The attributes to hidde.
+         * @var array
+         */
         protected $hidden = [
             'remember_token',
         ];
 
         /**
-         * * Get all the Evaluations who match with the primary key.
-         * @return [type]
+         * * Get all of the Evaluations for the Candidate.
+         * @return \Illuminate\Database\Eloquent\Relations\HasMany
          */
-        public function evaluations(){
+        public function evaluations () {
             return $this->hasMany(Evaluation::class, 'id_candidate', 'id_candidate');
         }
 
         /**
-         * * Create and returns the Candidate modules.
-         * @return [type]
+         * * Get all of the Modules for the Candidate.
+         * @return \Illuminate\Support\Collection
          */
-        public function modules(){
+        public function modules () {
             $auxData = explode(',', $this->modules);
-            $modules = collect([]);
+            $modules = collect();
+
             foreach ($auxData as $module) {
-                $modules->push((object)Module::$array[$module]);
+                $modules->push((object) Module::$array[$module]);
             }
+
             return $modules;
+        }
+
+        /**
+         * * The Sluggable configuration for the Model.
+         * @return array
+         */
+        public function sluggable () {
+            return [
+                'slug' => [
+                    'source'	=> 'full_name',
+                    'onUpdate'	=> true,
+                ],
+            ];
         }
 
         /**
          * * Returns the Candidate by the candidate_number.
          * @static
-         * @param  \Illuminate\Database\Eloquent\Builder  $query
-         * @param  int $id_location
+         * @param \Illuminate\Database\Eloquent\Builder  $query
+         * @param int $id_location
          * @return \Illuminate\Database\Eloquent\Builder
          */
         public static function scopeNumber ($query, $candidate_number) {
             return $query->where('candidate_number', $candidate_number)->first();
         }
-        
-        /** @var array The validation rules & messages. */
+
+        /**
+         * * The validation rules & messages.
+         * @var array
+         */
         public static $validation = [
             'create' => [
                 'rules' => [
@@ -114,17 +146,4 @@
                 ],
             ],
         ];
-        
-        /**
-         * * The Sluggable configuration for the Model.
-         * @return array
-         */
-        public function sluggable(){
-            return [
-                'slug' => [
-                    'source'	=> 'full_name',
-                    'onUpdate'	=> true,
-                ]
-            ];
-        }
     }

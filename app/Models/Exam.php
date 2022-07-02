@@ -1,6 +1,6 @@
 <?php
     namespace App\Models;
-    
+
     use App\Models\Candidate;
     use App\Models\Evaluation;
     use App\Models\Module;
@@ -8,10 +8,13 @@
     use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
     use Illuminate\Database\Eloquent\Model;
 
-    class Exam extends Model{
+    class Exam extends Model {
         use Sluggable, SluggableScopeHelpers;
 
-        /** @var string Exam primary key. */
+        /**
+         * * Exam primary key.
+         * @var string
+         */
         protected $primaryKey = 'id_exam';
 
         /**
@@ -19,7 +22,12 @@
          * @var array
          */
         protected $fillable = [
-            'name', 'rules', 'password', 'scheduled_date_time', 'slug', 'id_user'
+            'id_user',
+            'name',
+            'password',
+            'rules',
+            'scheduled_date_time',
+            'slug',
         ];
 
         /**
@@ -31,26 +39,44 @@
         ];
 
         /**
-         * * Get all the Evaluations who match with the primary key.
-         * @return [type]
+         * * Get all of the Candidates for the Exam.
+         * @return \Illuminate\Support\Collection
          */
-        public function evaluations(){
+        public function candidates () {
+            $candidates = collect();
+
+            foreach ($this->evaluations as $evaluation) {
+                $candidates->push(Candidate::find($evaluation->id_candidate));
+            }
+
+            return $candidates;
+        }
+
+        /**
+         * * Get all of the Evaluations for the Exam.
+         * @return \Illuminate\Database\Eloquent\Relations\HasMany
+         */
+        public function evaluations () {
             return $this->hasMany(Evaluation::class, 'id_exam', 'id_exam');
         }
 
         /**
-         * * Create and returns the Exam Candidates.
-         * @return [type]
+         * * The Sluggable configuration for the Model.
+         * @return array
          */
-        public function candidates(){
-            $candidates = collect([]);
-            foreach ($this->evaluations as $evaluation) {
-                $candidates->push(Candidate::find($evaluation->id_candidate));
-            }
-            return $candidates;
+        public function sluggable () {
+            return [
+                'slug' => [
+                    'source'	=> 'name',
+                    'onUpdate'	=> true,
+                ],
+            ];
         }
-        
-        /** @var array The validation rules & messages. */
+
+        /**
+         * * The validation rules & messages.
+         * @var array
+         */
         public static $validation = [
             'auth' => [
                 'rules' => [
@@ -59,7 +85,7 @@
                     'en' => [
                         'confirmed.required' => 'Accept the rules first.',
                     ],
-                ]
+                ],
             ], 'create' => [
                 'rules' => [
                     'name' => 'required|min:2|max:60',
@@ -108,17 +134,4 @@
                 ],
             ],
         ];
-        
-        /**
-         * * The Sluggable configuration for the Model.
-         * @return array
-         */
-        public function sluggable(){
-            return [
-                'slug' => [
-                    'source'	=> 'name',
-                    'onUpdate'	=> true,
-                ]
-            ];
-        }
     }

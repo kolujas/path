@@ -11,6 +11,6 @@
             $this->call(CandidateSeeder::class);
             $this->call(EvaluationSeeder::class);
             $this->call(ExamSeeder::class);
-            // $this->call(UserSeeder::class);
+            $this->call(UserSeeder::class);
         }
     }

@@ -97,13 +97,13 @@
                     'author'               => 'Path',
                 ]);
 
-                $filePath = "records/$evaluation->id_evaluation/" . preg_replace("/\//", "_", $evaluation->exam->name) . ".pdf";
-                Storage::put($filePath, $mpdf->output());
-                
+                $filePath = "records/$evaluation->id_evaluation";
+                Storage::put($filePath. "/" . preg_replace("/\//", "_", $evaluation->exam->name) . ".pdf", $mpdf->output());
+
                 if(!count(Record::where('id_evaluation', '=', $evaluation->id_evaluation)->get())){
                     $input['id_evaluation'] = $evaluation->id_evaluation;
                     $input['folder'] = $filePath;
-        
+
                     $record = Record::create((array) $input);
                 }
             }

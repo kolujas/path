@@ -6,10 +6,13 @@
     use Illuminate\Notifications\Notifiable;
     use Laravel\Passport\HasApiTokens;
 
-    class User extends Authenticatable{
+    class User extends Authenticatable {
         use HasApiTokens, Notifiable;
 
-        /** @var string User primary key. */
+        /**
+         * * User primary key.
+         * @var string
+         */
         protected $primaryKey = 'id_user';
 
         /**
@@ -17,7 +20,10 @@
          * @var array
          */
         protected $fillable = [
-            'name', 'email', 'password', 'slug',
+            'email',
+            'name',
+            'password',
+            'slug',
         ];
 
         /**
@@ -25,19 +31,20 @@
          * @var array
          */
         protected $hidden = [
-            'password', 'remember_token',
+            'password',
+            'remember_token',
         ];
-        
+
         /**
          * * The Sluggable configuration for the Model.
          * @return array
          */
-        public function sluggable(){
+        public function sluggable () {
             return [
                 'slug' => [
                     'source'	=> 'name',
                     'onUpdate'	=> true,
-                ]
+                ],
             ];
         }
     }

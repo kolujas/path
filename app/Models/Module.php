@@ -3,7 +3,7 @@
 
     use Illuminate\Database\Eloquent\Model;
 
-    class Module extends Model{
+    class Module extends Model {
         /**
          * * The Module array.
          * @var array
