@@ -256,6 +256,27 @@ document.addEventListener('DOMContentLoaded', function(e){
     // ? B1 Progress Writing
     addCrossOptionsEvent(document.querySelectorAll('.B1_Progress-RW #dropdown-progress-writing-5 select'));
 
+    // ? B1 Onwards Listening
+    for (const label of document.querySelectorAll('.B1_Onwards-L #dropdown-onwards-listening-1 .options')) {
+        const input = label.children[0];
+        input.addEventListener('change', function(e) {
+            for (const option of document.querySelectorAll('.B1_Onwards-L #dropdown-onwards-listening-1 .options')) {
+                if (option.children[0].name == this.name) {
+                    option.classList.remove('circled');
+                }
+            }
+            label.classList.remove('circled');
+            if (this.checked) {
+                circleWord(label);
+            }
+        });
+    }
+
+    // ? B1 Onwards Writing
+    addCrossOptionsEvent(document.querySelectorAll('.B1_Onwards-RW #dropdown-onwards-writing-3 select'));
+
+    addCrossOptionsEvent(document.querySelectorAll('.B1_Onwards-RW #dropdown-onwards-writing-5 select'));
+
     // ? B2 Competency Listening
     for (const label of document.querySelectorAll('.B2_Competency-L #dropdown-competency-listening-1 .options')) {
         const input = label.children[0];
