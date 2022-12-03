@@ -121,6 +121,7 @@
          * @return [type]
          */
         public function getAll(Request $request, $length = null){
+            set_time_limit(0);
             if ($length === null) {
                 $records = Record::all();
                 foreach ($records as $record) {
