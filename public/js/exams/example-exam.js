@@ -126,7 +126,7 @@ function copyToClipboard() {
     strikesInput.value++;
     if (strikesInput.value >= 3) {
         sendData();
-        window.location.href = `/exam/${ id_evaluation }/strikes`;
+    //     window.location.href = `/exam/${ id_evaluation }/strikes`;
     }
 }
 
@@ -588,11 +588,13 @@ function NotSeeingPage(params){
 
 function TenSecondsEnded(params){
     if (enviroment == 'production' && !permissions) {
-        document.querySelector('.strikes').value = 3;
+        if (strikesInput.value < 3) document.querySelector('.strikes').value = 3;
+
+        else strikesInput.value++;
         sendData();
-        if (document.querySelector('.modal-strikes').style.display != 'none' && document.querySelector('.modal-error').style.display == 'none') {
-            window.location.href = `/exam/${ id_evaluation }/10-seconds`;
-        }
+        // if (document.querySelector('.modal-strikes').style.display != 'none' && document.querySelector('.modal-error').style.display == 'none') {
+        //     window.location.href = `/exam/${ id_evaluation }/10-seconds`;
+        // }
     }
 }
 
@@ -628,11 +630,13 @@ document.addEventListener('visibilitychange', function(){
                 });
                 if (strikesInput.value >= 3) {
                     sendData();
-                    window.location.href = `/exam/${ id_evaluation }/strikes`;
+                //     window.location.href = `/exam/${ id_evaluation }/strikes`;
                 }
                 strikesInput.value++;
-                modalStrikesMessage.innerHTML = "Your exam has been marked.";
-                $('.modal-strikes').modal();
+                if (modalStrikesMessage.innerHTML != "Your exam has been marked.") {
+                    modalStrikesMessage.innerHTML = "Your exam has been marked.";
+                    $('.modal-strikes').modal();
+                }
             }else{
                 strikesInput.value++;
                 modalStrikesMessage.innerHTML = "You are not allowed to leave the current tab. If you abandon this tab, your exam will be marked. If you close or refresh this page, your exam will be voided.";
@@ -696,7 +700,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             choosen = content.id;
         }
     }
-    
+    strikesInput.value = evaluation.strikes;
     if (document.querySelector('.tab-content')) {
         tab = new TabMenuJS({
             id: 'tab-exam',
