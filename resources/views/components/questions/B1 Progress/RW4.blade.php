@@ -14,8 +14,8 @@
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
                 <img class="img-fluid" src="/img/recursos/correo-header.jpg" alt="correo layout">
                 <span class="position-relative subject">Subject:</span>
-                <input id="subject" class="text-left w-100 position-relative" type="text">
-                <textarea name="B1_Progress:RW4[1]" class="px-2 B1-ex4 text"></textarea>
+                <input id="subject" class="text-left w-100 position-relative" name="B1_Progress:RW4[1]" type="text">
+                <textarea name="B1_Progress:RW4[2]" class="px-2 B1-ex4 text"></textarea>
             </div>
         </div>
     </main>

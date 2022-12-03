@@ -44,7 +44,8 @@
         <h3 style="padding-top: 2rem;">4. You have been sent a special offer from a hotel you once stayed in. The offer is for a free third night if you book two nights in June.</h3>
     </header>
     <main>
-        <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B1_Progress:RW4'][1]) !!}</mark></p>
+        <p style="padding: 0 4rem; color: #000;">Subject: <mark>{!! nl2br($answers['B1_Progress:RW4'][1]) !!}</mark></p>
+        <p style="padding: 0 4rem; color: #000;"><mark>{!! nl2br($answers['B1_Progress:RW4'][2]) !!}</mark></p>
     </main>
 </section>
 
