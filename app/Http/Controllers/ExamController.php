@@ -105,7 +105,7 @@
                 }
             }
 
-            if (App::environment('production') && !$permissions) {
+            if (!App::environment('local') && !$permissions) {
                 if($evaluation->logged_in >= 1){
                     return redirect("/exam/$evaluation->id_evaluation/rules")->with('status', [
                         'code' => 403,

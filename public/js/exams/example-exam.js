@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 // ? Desactivar F5
 $(document).on("keydown", function(e) {
-    if (enviroment == 'production' && !permissions) {
+    if (enviroment != 'local' && !permissions) {
         if ((e.which || e.keyCode) == 116) e.preventDefault();
     }
 });
@@ -30,7 +30,7 @@ async function getEnviroment(){
 
     if (LocalStorageServiceProvider.hasData('Path_Exam_Module')) {
         let found = false;
-        if (enviroment == 'production' && !permissions) {
+        if (enviroment != 'local' && !permissions) {
             let module = LocalStorageServiceProvider.getData('Path_Exam_Module').data;
             for (const currentModule of evaluation.exam.modules) {
                 if (module == `${parseFolder(currentModule.folder)}-${currentModule.initials}`) {
@@ -255,7 +255,7 @@ function setLoadingState(){
     let btn = document.querySelector('.save-button');
     btn.innerHTML= '';
     btn.classList.add('loading-dots');
-    btn.removeEventListener('click', sendData);
+    // btn.removeEventListener('click', sendData);
 }
 
 /**
@@ -263,9 +263,9 @@ function setLoadingState(){
  */
 function setFinishState(){
     let btn = document.querySelector('.save-button');
-    btn.innerHTML = 'SAVE';
+    btn.innerHTML = 'SAVING';
     btn.classList.remove('loading-dots');
-    btn.addEventListener('click', sendData);
+    // btn.addEventListener('click', sendData);
         let timer = document.createElement('b');
         timer.classList.add('timer', 'ml-1');
         btn.appendChild(timer);
@@ -587,7 +587,7 @@ function NotSeeingPage(params){
 }
 
 function TenSecondsEnded(params){
-    if (enviroment == 'production' && !permissions) {
+    if (enviroment != 'local' && !permissions) {
         if (strikesInput.value < 3) document.querySelector('.strikes').value = 3;
 
         else strikesInput.value++;
@@ -602,7 +602,7 @@ function TenSecondsEnded(params){
 const modalStrikesMessage = document.querySelector('.modal-strikes .modal-body p');
 const strikesInput = document.querySelector('.strikes');
 document.addEventListener('visibilitychange', function(){ 
-    if (enviroment == 'production' && !permissions) {
+    if (enviroment != 'local' && !permissions) {
         if(document.visibilityState == 'hidden'){
             if(!strikesInput.value){
                 strikesInput.value = 0;        
@@ -647,7 +647,7 @@ document.addEventListener('visibilitychange', function(){
 });
 
 $(document).mouseleave(function () {
-    if (enviroment == 'production' && !permissions) {
+    if (enviroment != 'local' && !permissions) {
         if(!strikesInput.value){
             strikesInput.value = 0;
         }else{
@@ -777,7 +777,7 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     let saveButton = document.querySelector('.save-button');
     saveButton.classList.remove('hidden');
 
-    saveButton.addEventListener('click', sendData);
+    // saveButton.addEventListener('click', sendData);
 
     setTimeIntervalAutoSave();
     
