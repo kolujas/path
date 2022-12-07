@@ -523,7 +523,18 @@ body {
     font-size: 1.2rem;
     color: var(--color-one);
 }
-    
+
+/* ? B1+ Onwards Writing */
+.B1_Onwards-RW #dropdown-onwards-writing-1 .a textarea {
+    padding-top: 1.4rem;
+    padding-left: 1rem !important;
+}
+
+.B1_Onwards-RW #dropdown-onwards-writing-1 .b textarea {
+    text-indent: unset !important;
+    padding-top: 2.7rem;
+    padding-left: 1rem !important;
+}
 
 /* ? B2 Competency Listening */
 .B2_Competency-L #dropdown-competency-listening-1.opened .dropdown-menu-content{

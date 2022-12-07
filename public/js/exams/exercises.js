@@ -273,8 +273,6 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     // ? B1 Onwards Writing
-    addCrossOptionsEvent(document.querySelectorAll('.B1_Onwards-RW #dropdown-onwards-writing-3 select'));
-
     addCrossOptionsEvent(document.querySelectorAll('.B1_Onwards-RW #dropdown-onwards-writing-5 select'));
 
     // ? B2 Competency Listening

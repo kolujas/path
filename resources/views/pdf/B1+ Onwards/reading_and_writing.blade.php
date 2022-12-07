@@ -22,14 +22,7 @@
         <h3 style="padding-top: 2rem;">2. In the passage below, some punctuation has been removed. Add appropriate punctuation and upper-case lettering to make it clear for the reader.</h3>
     </header>
     <main>
-        <p style="padding: 0 4rem; color: #000;"><b>a.</b> i came back from school to see my brothers watching tv grandma was sitting in the corner reading her book. can we eat grandma? i asked and my brothers looked up surprised of course</p>
         <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Onwards:RW2'][1] }}</mark></p>
-
-        <p style="padding: 0 4rem; color: #000;"><b>b.</b> you cant eat grandma they said shes not even cooked well</p>
-        <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Onwards:RW2'][2] }}</mark></p>
-
-        <p style="padding: 0 4rem; color: #000;"><b>c.</b> we all laughed and grandma said of course and went to the stove to make dinner.</p>
-        <p style="padding: 0 4rem; color: #000;"><mark>{{ $answers['B1_Onwards:RW2'][3] }}</mark></p>
     </main>
 </section>
 

@@ -5,11 +5,15 @@
             <i class="dropdown-icon fas fa-chevron-down"></i>
         </button>
     </a>
-    <main class="dropdown-menu-content two-question-container px-xl-4">
-        <div class="row d-flex justify-content-center ml-1 py-4 px-2 px-md-3 complete">
-            <p class="complete col-12 mb-4"><b>a.</b> i came back from school to see my brothers watching tv grandma was sitting in the corner reading her book. can we eat grandma? i asked and my brothers looked up surprised of course</p><textarea name="B1_Onwards:RW2[1]" class="input input-medium text-left w-75 pl-2"></textarea>
-            <p class="complete col-12 mb-4"><b>b.</b> you cant eat grandma they said shes not even cooked well</p><textarea name="B1_Onwards:RW2[2]" class="input input-medium text-left w-75"></textarea>
-            <p class="complete col-12 mb-4"><b>c.</b> we all laughed and grandma said of course and went to the stove to make dinner.</p><textarea name="B1_Onwards:RW2[3]" class="input input-medium text-left w-75"></textarea>
-        </div>        
+    <main class="dropdown-menu-content one-question-container px-xl-4">
+        <div class="info mx-auto my-4">
+            <p>i came back from school to see my brothers watching tv grandma was sitting in the corner reading her book. can we eat grandma? i asked and my brothers looked up surprised of course</p>
+            <p>you cant eat grandma they said shes not even cooked well</p>
+            <p>we all laughed and grandma said of course and went to the stove to make dinner.</p>
+        </div>
+
+        <div class="a complete col-12 col-lg-10 col-xl-8 mx-auto my-4 position-relative">
+            <textarea name="B1_Onwards:RW2[1]" class="px-2 text"></textarea>
+        </div>
     </main>
 </section>

@@ -15,7 +15,7 @@
     @endforeach
     <li class="tab mr-0">
         <button class="right-tab save-button btn btn-one">
-            SAVE
+            SAVING
             <b class="timer ml-1"></b>
         </button>
     </li>

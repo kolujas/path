@@ -9,7 +9,7 @@
         <div class="d-flex justify-content-center my-4">
             <audio class="d-none" controls controlsList="nodownload">
                 <source
-                    src="{{asset('audios/Progress-2.mov')}}" type="audio/mpeg">
+                    src="{{asset('audios/Onwards-2.mpeg')}}" type="audio/mpeg">
                     Tu navegador no soporta el audio.
             </audio>
             <div>
