@@ -135,6 +135,13 @@
                 'file' => 'reading_and_writing',
                 'time' => '01:40:00',
                 'questions' => 5,
+            ], 'Hotel managemente and hospitality:RW' => [
+                'initials' => 'RW',
+                'name' => 'Reading and Writing',
+                'folder' => 'Hotel managemente and hospitality',
+                'file' => 'reading_and_writing',
+                'time' => '01:40:00',
+                'questions' => 5,
             ], 'DEMO:L' => [
                 'initials' => 'L',
                 'name' => 'Listening',
