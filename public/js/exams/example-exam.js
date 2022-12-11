@@ -203,13 +203,13 @@ function setTimeIntervalAutoSave(){
 
 function parseFolder(text){
     if (/ /.exec(text)) {
-        text = text.replace(/ /, '_');
+        text = text.replace(/ /g, '_');
     }
     if (/-/.exec(text)) {
-        text = text.replace(/-/, '');
+        text = text.replace(/-/g, '');
     }
     if (/\+/.exec(text)) {
-        text = text.replace(/\+/, '');
+        text = text.replace(/\+/g, '');
     }
     return text;
 }
