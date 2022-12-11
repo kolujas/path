@@ -6,8 +6,12 @@
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
-        <div class="py-4 svg-width mx-auto">
-            {{--  --}}
+        <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
+            <img src="{{ asset('img/52194D69.jpg') }}" alt="Hotel management and hospitality, reading and writing, question 4, image">
+
+            <p class="text-center complete col-12 mb-4">
+                <input name="Hotel_managemente_and_hospitality:RW4[1]" class="input input-medium text-left w-75" type="text" />
+            </p>
         </div>
     </main>
 </section>
