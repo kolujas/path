@@ -105,7 +105,7 @@
 <section>
     <header>
         <h3 style="padding-top: 2rem;">
-            3. Base on the image, engage in a conversation with the guest. Follow the instructions and cues provided. Write your interventions.
+            3. Based on the image, engage in a conversation with the guest. Follow the instructions and cues provided. Write your interventions.
         </h3>
     </header>
 
@@ -159,7 +159,7 @@
 <section>
     <header>
         <h3 style="padding-top: 2rem;">
-            5. Read the passage and fill in the gaps with an appropiate word.
+            5. Read the passage and fill in the gaps with an appropriate word.
         </h3>
     </header>
 

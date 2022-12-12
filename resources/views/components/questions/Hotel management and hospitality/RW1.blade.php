@@ -12,21 +12,31 @@
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="{{asset('img/recursos/hector.jpg')}}" style="width:100%">
-        <div class="text">Caption Text</div>
+        <img src="{{asset('img/recursos/Hotel managemente and hospitality/1.jpg')}}" style="width:100%">
         </div>
     
         <div class="mySlides">
-        <div class="numbertext">2 / 3</div>
-        <img src="{{asset('img/personajes.jpg')}}" style="width:100%">
-        <div class="text">Caption Two</div>
+        <img src="{{asset('img/recursos/Hotel managemente and hospitality/2.jpg')}}" style="width:100%">
         </div>
     
         <div class="mySlides">
-        <div class="numbertext">3 / 3</div>
-        <img src="{{asset('img/recursos/cup.png')}}" style="width:100%">
-        <div class="text">Caption Three</div>
+        <img src="{{asset('img/recursos/Hotel managemente and hospitality/3.jpg')}}" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+        <img src="{{asset('img/recursos/Hotel managemente and hospitality/4.jpg')}}" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+        <img src="{{asset('img/recursos/Hotel managemente and hospitality/5.jpg')}}" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+        <img src="{{asset('img/recursos/Hotel managemente and hospitality/6.jpg')}}" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+        <img src="{{asset('img/recursos/Hotel managemente and hospitality/7.jpg')}}" style="width:100%">
         </div>
     
         <!-- Next and previous buttons -->
@@ -37,6 +47,10 @@
     
     <!-- The dots/circles -->
     <div class="dots" style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>

@@ -7,7 +7,7 @@
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
-            <img src="{{ asset('img/52194D69.jpg') }}" alt="Hotel management and hospitality, reading and writing, question 2, image">
+            <img src="{{ asset('img/recursos/Hotel managemente and hospitality/8.jpg') }}" alt="Hotel management and hospitality, reading and writing, question 2, image">
 
             <p class="text-center complete col-12 mb-4">
                 <input name="Hotel_managemente_and_hospitality:RW2[1]" class="input input-medium text-left w-75" type="text" />

@@ -302,16 +302,16 @@ document.addEventListener('DOMContentLoaded', function(e){
     addCrossOptionsEvent(document.querySelectorAll('.B2_Forward-RW #dropdown-forward-writing-5 select'));
 
     // ? Hotel Managment
-    document.querySelector('.slideshow-container .prev').addEventListener('click', function(){
+    if (document.querySelector('.slideshow-container .prev')) document.querySelector('.slideshow-container .prev').addEventListener('click', function(){
         plusSlides(-1);
     });
 
-    document.querySelector('.slideshow-container .next').addEventListener('click', function(){
+    if (document.querySelector('.slideshow-container .prev')) document.querySelector('.slideshow-container .next').addEventListener('click', function(){
         plusSlides(1);
     });
 
 
-    for (const key in document.querySelectorAll('.dots .dot')) {
+    if (document.querySelectorAll('.dots .dot').length) for (const key in document.querySelectorAll('.dots .dot')) {
         if (Object.hasOwnProperty.call(document.querySelectorAll('.dots .dot'), key)) {
             const btn = document.querySelectorAll('.dots .dot')[key];
             btn.addEventListener('click', function(){
