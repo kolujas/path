@@ -300,4 +300,55 @@ document.addEventListener('DOMContentLoaded', function(e){
     addCrossOptionsEvent(document.querySelectorAll('.B2_Forward-RW #dropdown-forward-writing-3 select'));
 
     addCrossOptionsEvent(document.querySelectorAll('.B2_Forward-RW #dropdown-forward-writing-5 select'));
+
+    // ? Hotel Managment
+    document.querySelector('.slideshow-container .prev').addEventListener('click', function(){
+        plusSlides(-1);
+    });
+
+    document.querySelector('.slideshow-container .next').addEventListener('click', function(){
+        plusSlides(1);
+    });
+
+
+    for (const key in document.querySelectorAll('.dots .dot')) {
+        if (Object.hasOwnProperty.call(document.querySelectorAll('.dots .dot'), key)) {
+            const btn = document.querySelectorAll('.dots .dot')[key];
+            btn.addEventListener('click', function(){
+                currentSlide(parseInt(key) + 1);
+            });
+        }
+    }
 });
+
+
+// carrousel
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
