@@ -1,4 +1,4 @@
-<section id="dropdown-hotel-managemente-and-hospitality-writing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
+<section id="dropdown-hotel-management-and-hospitality-writing-3" class="question dropdown dropdown-click closed col-12 col-lg-10 col-xl-8 mb-4">
     <a href="#" class="dropdown-header">
         <span>3. Based on the image, engage in a conversation with the guest. Follow the instructions and cues provided. Write your interventions.</span>
         <button class="dropdown-button text-right">
@@ -14,7 +14,7 @@
 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <textarea name="Hotel_managemente_and_hospitality:RW3[1]" class="px-2 text"></textarea>
+                <textarea name="Hotel_management_and_hospitality:RW3[1]" class="px-2 text"></textarea>
             </div>
         </div>
 
@@ -32,7 +32,7 @@
 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <textarea name="Hotel_managemente_and_hospitality:RW3[2]" class="px-2 text"></textarea>
+                <textarea name="Hotel_management_and_hospitality:RW3[2]" class="px-2 text"></textarea>
             </div>
         </div>
 
@@ -50,7 +50,7 @@
 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <textarea name="Hotel_managemente_and_hospitality:RW3[3]" class="px-2 text"></textarea>
+                <textarea name="Hotel_management_and_hospitality:RW3[3]" class="px-2 text"></textarea>
             </div>
         </div>
 
@@ -68,7 +68,7 @@
 
         <div class="py-4">
             <div class="complete col-12 col-lg-10 col-xl-8 mx-auto position-relative">
-                <textarea name="Hotel_managemente_and_hospitality:RW3[4]" class="px-2 text"></textarea>
+                <textarea name="Hotel_management_and_hospitality:RW3[4]" class="px-2 text"></textarea>
             </div>
         </div>
 

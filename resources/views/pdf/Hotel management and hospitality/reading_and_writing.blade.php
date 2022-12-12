@@ -22,61 +22,61 @@
     <main>
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][1] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][1] }}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][2] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][2] }}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][3] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][3] }}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][4] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][4] }}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][5] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][5] }}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][6] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][6] }}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][7] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][7] }}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][8] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][8] }}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][9] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][9] }}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW1'][10] }}
+                {{ $answers['Hotel_management_and_hospitality:RW1'][10] }}
             </mark>
         </p>
     </main>
@@ -94,7 +94,7 @@
     <main>
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW2'][1] }}
+                {{ $answers['Hotel_management_and_hospitality:RW2'][1] }}
             </mark>
         </p>
     </main>
@@ -112,25 +112,25 @@
     <main>
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {!! nl2br($answers['Hotel_managemente_and_hospitality:RW3'][1]) !!}
+                {!! nl2br($answers['Hotel_management_and_hospitality:RW3'][1]) !!}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {!! nl2br($answers['Hotel_managemente_and_hospitality:RW3'][2]) !!}
+                {!! nl2br($answers['Hotel_management_and_hospitality:RW3'][2]) !!}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {!! nl2br($answers['Hotel_managemente_and_hospitality:RW3'][3]) !!}
+                {!! nl2br($answers['Hotel_management_and_hospitality:RW3'][3]) !!}
             </mark>
         </p>
 
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {!! nl2br($answers['Hotel_managemente_and_hospitality:RW3'][4]) !!}
+                {!! nl2br($answers['Hotel_management_and_hospitality:RW3'][4]) !!}
             </mark>
         </p>
     </main>
@@ -148,7 +148,7 @@
     <main>
         <p style="padding: 0 4rem; color: #000;">
             <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW4'][1] }}
+                {{ $answers['Hotel_management_and_hospitality:RW4'][1] }}
             </mark>
         </p>
     </main>
@@ -166,15 +166,15 @@
     <main>
         <p style="padding: 0 4rem; color: #000;">
             Good morning, Mrs Sato, I was told by the receptionist that you wished to visit a picturesque shopping area and have an early dinner of local food before the concert at Colón Theatre. This is my recommendation: Santa Fe Avenue is only two <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW5'][1] }}
+                {{ $answers['Hotel_management_and_hospitality:RW5'][1] }}
             </mark> away from our hotel. This is a trendy, sophisticated avenue with traditional architecture and quality shops, especially the Grand Splendid Bookshop with its breath-taking baroque features. You may dine at The Gaucho Restaurant, which offers exquisite local dishes. After dinner you, will be very near Colón Theatre. I could make <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW5'][2] }}
+                {{ $answers['Hotel_management_and_hospitality:RW5'][2] }}
             </mark> at the restaurant right away. Everything is at a <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW5'][3] }}
+                {{ $answers['Hotel_management_and_hospitality:RW5'][3] }}
             </mark> distance and the weather will be perfect for an evening stroll. If you are carrying too many shopping bags, make a stop at the hotel to <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW5'][4] }}
+                {{ $answers['Hotel_management_and_hospitality:RW5'][4] }}
             </mark> your purchases with us. You will find your bags in your room when you return. Please, let me know if you need anything else. As for tomorrow bookings, it is all set. The guide will be <mark>
-                {{ $answers['Hotel_managemente_and_hospitality:RW5'][5] }}
+                {{ $answers['Hotel_management_and_hospitality:RW5'][5] }}
             </mark> you in the lobby at 9 am.
         </p>
     </main>
