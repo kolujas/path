@@ -142,6 +142,13 @@
                 'file' => 'reading_and_writing',
                 'time' => '01:30:00',
                 'questions' => 5,
+            ], 'Tourism:RW' => [
+                'initials' => 'RW',
+                'name' => 'Reading and Writing',
+                'folder' => 'Tourism',
+                'file' => 'reading_and_writing',
+                'time' => '01:30:00',
+                'questions' => 5,
             ], 'DEMO:L' => [
                 'initials' => 'L',
                 'name' => 'Listening',
