@@ -1061,22 +1061,20 @@ select {
 
 /* carrousel */
 
-* {box-sizing:border-box}
-
 /* Slideshow container */
-.slideshow-container {
+.carrousel .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mySlides {
+.carrousel .mySlides {
   display: none;
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.carrousel .prev, .carrousel .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -1092,18 +1090,18 @@ select {
 }
 
 /* Position the "next button" to the right */
-.next {
+.carrousel .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.carrousel .prev:hover, .carrousel .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
 /* Caption text */
-.text {
+.carrousel .text {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
@@ -1114,7 +1112,7 @@ select {
 }
 
 /* Number text (1/3 etc) */
-.numbertext {
+.carrousel .numbertext {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
@@ -1123,7 +1121,7 @@ select {
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.carrousel .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -1134,12 +1132,12 @@ select {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.carrousel .active, .carrousel .dot:hover {
   background-color: #717171;
 }
 
 /* Fading animation */
-.fade {
+.carrousel .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -1535,7 +1533,19 @@ select {
         height: 18rem;
         margin-left: 4rem;
     }
-    
+
+    /* ? Hotel management */
+    #Hotel_management_and_hospitality-RW img {
+        width: 100%;
+        height: 15rem;
+        object-fit: contain;
+    }
+
+    #Tourism-RW img {
+        width: 100%;
+        height: 15rem;
+        object-fit: contain;
+    }
 
     /* ? ejercicios */
     .card{

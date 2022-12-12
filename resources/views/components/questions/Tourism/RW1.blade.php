@@ -6,36 +6,40 @@
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
+        <div class="carrrousel">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides">
+                    <img src="{{asset('img/recursos/Tourism/1.jpg')}}" style="width:100%">
+                </div>
 
-        <!-- Slideshow container -->
-    <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="{{asset('img/recursos/Tourism/2.jpg')}}" style="width:100%">
+                </div>
 
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides">
-        <img src="{{asset('img/recursos/Tourism/1.jpg')}}" style="width:100%">
+                <div class="mySlides">
+                    <img src="{{asset('img/recursos/Tourism/3.jpg')}}" style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev">&#10094;</a>
+
+                <a class="next">&#10095;</a>
+            </div>
+
+            <br>
+
+            <!-- The dots/circles -->
+            <div class="dots" style="text-align:center">
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+            </div>
         </div>
-    
-        <div class="mySlides">
-        <img src="{{asset('img/recursos/Tourism/2.jpg')}}" style="width:100%">
-        </div>
-    
-        <div class="mySlides">
-        <img src="{{asset('img/recursos/Tourism/3.jpg')}}" style="width:100%">
-        </div>
-    
-        <!-- Next and previous buttons -->
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
-    </div>
-    <br>
-    
-    <!-- The dots/circles -->
-    <div class="dots" style="text-align:center">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-        
+
         <div class="row d-flex justify-content-center py-4 px-2 px-md-3">
             <p class="text-center complete col-12 mb-4">
                 <input name="Tourism:RW1[1]" class="input input-medium text-left w-75" type="text" />
