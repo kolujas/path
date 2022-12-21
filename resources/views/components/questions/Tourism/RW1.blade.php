@@ -6,7 +6,7 @@
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
-        <div class="carrrousel">
+        <div class="carrousel">
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <!-- Full-width images with number and caption text -->
@@ -22,6 +22,14 @@
                     <img src="{{asset('img/recursos/Tourism/3.jpg')}}" style="width:100%">
                 </div>
 
+                <div class="mySlides">
+                    <img src="{{asset('img/recursos/Tourism/4.jpg')}}" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="{{asset('img/recursos/Tourism/5.jpg')}}" style="width:100%">
+                </div>
+
                 <!-- Next and previous buttons -->
                 <a class="prev">&#10094;</a>
 
@@ -32,6 +40,10 @@
 
             <!-- The dots/circles -->
             <div class="dots" style="text-align:center">
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+
                 <span class="dot"></span>
 
                 <span class="dot"></span>

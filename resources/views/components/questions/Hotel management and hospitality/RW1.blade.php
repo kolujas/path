@@ -6,7 +6,6 @@
         </button>
     </a>
     <main class="dropdown-menu-content one-question-container px-xl-4">
-
         <div class="carrousel">
             <!-- Slideshow container -->
             <div class="slideshow-container">
